@@ -1,0 +1,129 @@
+apotekamodel {
+	
+entities {
+		farmkomp {
+			attributeSet {
+				IDFK,
+				NAZFK
+			}
+			keySet {
+				PK_farmkomp ( IDFK )
+			}
+			primaryKey PK_farmkomp
+		},
+		lek {
+			attributeSet {
+				IDLEK,
+				NAZLEK
+			}
+			keySet {
+				PK_lek ( IDLEK )
+			}
+			primaryKey PK_lek
+		},
+		apoteka {
+			attributeSet {
+				IDAPOT,
+				NAZAPOT,
+				ADRAPOT
+			}
+			keySet {
+				PK_apoteka ( IDAPOT )
+			}
+			primaryKey PK_apoteka
+		},
+		radnik {
+			attributeSet {
+				JMBG,
+				IMER,
+				PRZR,
+				PLTR,
+				TIPR
+			}
+			keySet {
+				PK_radnik ( JMBG )
+			}
+			primaryKey PK_radnik
+		},
+		ftehnicar {
+		},
+		finzenjer {
+			attributeSet {
+				BRLIC
+			}
+		},
+		komercijalista {
+		}
+	}
+	gerunds {
+		imaugov {
+			entitiesInRelationship {
+				farmkomp ( zero,
+				many ),
+				apoteka ( one,
+				many )
+			}
+			attributeSet {
+				DATSKLUG,
+				DATISUG
+			}
+		},
+		nudi {
+			entitiesInRelationship {
+				lek ( zero,
+				many ),
+				imaugov ( one,
+				many )
+			}
+		}
+	}
+	relationships {
+		podredj {
+			entitiesInRelationship {
+				farmkomp ( zero,
+				many ) kompanija,
+				farmkomp ( zero,
+				one ) podkompanija
+			}
+		},
+		IdentificationDependency ID1 {
+			weakEntity lek regularEntity farmkomp ( one,
+			many ) ""
+		},
+		radi {
+			entitiesInRelationship {
+				apoteka ( one,
+				many ),
+				radnik ( one,
+				one )
+			}
+		},
+		ISA "IS-A1" {
+			supertype radnik ( one,
+			one ) subtypes ( finzenjer,
+			ftehnicar,
+			komercijalista ) classificationAttribute TIPR
+		},
+		izdaje {
+			entitiesInRelationship {
+				ftehnicar ( zero,
+				many ),
+				nudi ( zero,
+				many )
+			}
+		},
+		nabavlja {
+			entitiesInRelationship {
+				komercijalista ( zero,
+				many ),
+				lek ( zero,
+				many )
+			}
+			attributeSet {
+				KOLNAR,
+				DATUM,
+				NABCENA
+			}
+		}
+	}
+}

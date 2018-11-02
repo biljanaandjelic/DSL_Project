@@ -1,0 +1,96 @@
+studsluzba {
+	
+entities {
+		student {
+			attributeSet {
+				BrInd,
+				ImeS,
+				PrzS,
+				God
+			}
+			keySet {
+				PK_student ( BrInd )
+			}
+			primaryKey PK_student
+		},
+		predmet {
+			attributeSet {
+				SifP,
+				NazP,
+				BrP
+			}
+			keySet {
+				PK_pred ( SifP )
+			}
+			primaryKey PK_pred
+		},
+		nastavnik {
+			attributeSet {
+				SifN,
+				ImeN,
+				PrzN,
+				Zva
+			}
+			keySet {
+				PK_nastavnik ( SifN )
+			}
+			primaryKey PK_nastavnik
+		},
+		katedra {
+			attributeSet {
+				NazK,
+				SifK
+			}
+			keySet {
+				PK_katedra ( SifK )
+			}
+			primaryKey PK_katedra
+		}
+	}
+	relationships {
+		slusa {
+			entitiesInRelationship {
+				student ( one,
+				many ),
+				predmet ( one,
+				many )
+			}
+		},
+		polozio {
+			entitiesInRelationship {
+				student ( zero,
+				many ),
+				predmet ( zero,
+				many )
+			}
+			attributeSet {
+				Datum,
+				Ocena
+			}
+		},
+		predaje {
+			entitiesInRelationship {
+				predmet ( zero,
+				many ),
+				nastavnik ( zero,
+				many )
+			}
+		},
+		radi {
+			entitiesInRelationship {
+				katedra ( zero,
+				many ),
+				nastavnik ( one,
+				one )
+			}
+		},
+		pripada {
+			entitiesInRelationship {
+				predmet ( one,
+				one ),
+				katedra ( one,
+				many )
+			}
+		}
+	}
+}

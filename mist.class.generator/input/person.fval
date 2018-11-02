@@ -1,0 +1,70 @@
+Person{
+	 name{
+	 	type String
+	 	isRequired Required
+	 	StringPattern '[A-Z][a-z]*'
+	 }	
+	 
+	 surname{
+	 	type String
+	 	isRequired Required
+	 	StringPattern '[A-Z][a-z]*'
+	 }
+	 
+	 nickname{
+	 	type String
+	 }
+
+	 
+	 identificationNumber{
+	 	type String
+	 	isRequired Required
+	 	StringPattern '[0-9]{13}'
+	 	Length 13
+	 }
+	 
+	 dateOfBirth{
+	 	type Date
+	 	isRequired Required
+	 	DatePattern 'dd/MM/yyyy'
+	 	AcceptableValuesDate {'12/12/1989', '20/03/1988'}
+	 }
+	 
+	 gender{
+	 	type String
+	 	isRequired Required
+	 	AcceptableValuesString {'Female', 'Male'}
+	 }
+	 
+	 age{
+	 	type Number
+	 	MinNumber 0
+		MaxNumber 170
+	 }
+	 
+	 yearsOfService{
+	 	type Number
+	 }
+	 
+	 dateOfEmployment{
+	 	type Date
+	 }
+	 
+	 Equals{
+	 	attributearray (name, surname)	
+	 }
+	 
+	 NotEquals {
+	 	attributearray ( name, nickname)
+	 }
+	 
+	 LessThan{
+	 	classattribute age
+	 	attributearray {(yearsOfService)}
+	 }
+	 
+	 GreaterThan{
+	 	classattribute dateOfBirth
+	 	attributearray (dateOfEmployment)
+	 }
+}

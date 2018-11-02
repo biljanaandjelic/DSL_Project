@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cls="http://class/1.0">
+  <cls:ClassModel>
+    <packages name="FacultySystem">
+      <elements xsi:type="cls:Class" name="Student" accessModifier="public">
+        <fields name="studentName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <fields name="studentSurname" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+        <fields name="studentID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="studentYear" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <methods name="Student" accessModifier="public" body="this.studentName = studentName;&#xA;this.studentSurname = studentSurname;&#xA;this.studentID = studentID;&#xA;this.studentYear = studentYear;&#xA;">
+          <parameters name="studentName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+          <parameters name="studentSurname" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+          <parameters name="studentID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="studentYear" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getStudentName" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.studentName;&#xA;"/>
+        <methods name="setStudentName" returnType="/1" accessModifier="public" body="this.studentName = studentName;&#xA;">
+          <parameters name="studentName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getStudentSurname" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.studentSurname;&#xA;"/>
+        <methods name="setStudentSurname" returnType="/1" accessModifier="public" body="this.studentSurname = studentSurname;&#xA;">
+          <parameters name="studentSurname" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+        </methods>
+        <methods name="getStudentID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.studentID;&#xA;"/>
+        <methods name="setStudentID" returnType="/1" accessModifier="public" body="this.studentID = studentID;&#xA;">
+          <parameters name="studentID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getStudentYear" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.studentYear;&#xA;"/>
+        <methods name="setStudentYear" returnType="/1" accessModifier="public" body="this.studentYear = studentYear;&#xA;">
+          <parameters name="studentYear" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Subject" accessModifier="public">
+        <fields name="subjectID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="subjectName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <methods name="Subject" accessModifier="public" body="this.subjectID = subjectID;&#xA;this.subjectName = subjectName;&#xA;">
+          <parameters name="subjectID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="subjectName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getSubjectID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.subjectID;&#xA;"/>
+        <methods name="setSubjectID" returnType="/1" accessModifier="public" body="this.subjectID = subjectID;&#xA;">
+          <parameters name="subjectID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getSubjectName" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.subjectName;&#xA;"/>
+        <methods name="setSubjectName" returnType="/1" accessModifier="public" body="this.subjectName = subjectName;&#xA;">
+          <parameters name="subjectName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="TeachingStuff" subtypes="/0/@packages.0/@elements.8 /0/@packages.0/@elements.7" accessModifier="public">
+        <fields name="teachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="teachingStuffTitle" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <fields name="chair" type="/0/@packages.0/@elements.4" accessModifier="protected"/>
+        <methods name="TeachingStuff" accessModifier="public" body="this.teachingStuffID = teachingStuffID;&#xA;this.teachingStuffTitle = teachingStuffTitle;&#xA;this.chair = chair;&#xA;">
+          <parameters name="teachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="teachingStuffTitle" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+          <parameters name="chair" type="/0/@packages.0/@elements.4" accessModifier="protected"/>
+        </methods>
+        <methods name="getTeachingStuffID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.teachingStuffID;&#xA;"/>
+        <methods name="setTeachingStuffID" returnType="/1" accessModifier="public" body="this.teachingStuffID = teachingStuffID;&#xA;">
+          <parameters name="teachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getTeachingStuffTitle" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.teachingStuffTitle;&#xA;"/>
+        <methods name="setTeachingStuffTitle" returnType="/1" accessModifier="public" body="this.teachingStuffTitle = teachingStuffTitle;&#xA;">
+          <parameters name="teachingStuffTitle" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getChair" returnType="/0/@packages.0/@elements.4" accessModifier="public" body="return this.Chair;&#xA;">
+          <parameters name="chair" type="/0/@packages.0/@elements.4" accessModifier="protected"/>
+        </methods>
+        <methods name="setChair" returnType="/1" accessModifier="public" body="this.Chair = Chair;&#xA;">
+          <parameters name="chair" type="/0/@packages.0/@elements.4" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Faculty" accessModifier="public">
+        <fields name="facultyID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="facultyName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <methods name="Faculty" accessModifier="public" body="this.facultyID = facultyID;&#xA;this.facultyName = facultyName;&#xA;">
+          <parameters name="facultyID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="facultyName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getFacultyID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.facultyID;&#xA;"/>
+        <methods name="setFacultyID" returnType="/1" accessModifier="public" body="this.facultyID = facultyID;&#xA;">
+          <parameters name="facultyID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getFacultyName" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.facultyName;&#xA;"/>
+        <methods name="setFacultyName" returnType="/1" accessModifier="public" body="this.facultyName = facultyName;&#xA;">
+          <parameters name="facultyName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Chair" accessModifier="public">
+        <fields name="chairName" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+        <fields name="faculty" type="/0/@packages.0/@elements.3" accessModifier="protected"/>
+        <methods name="Chair" accessModifier="public" body="this.chairName = chairName;&#xA;this.faculty = faculty;&#xA;">
+          <parameters name="chairName" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+          <parameters name="faculty" type="/0/@packages.0/@elements.3" accessModifier="protected"/>
+        </methods>
+        <methods name="getChairName" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.chairName;&#xA;"/>
+        <methods name="setChairName" returnType="/1" accessModifier="public" body="this.chairName = chairName;&#xA;">
+          <parameters name="chairName" type="/0/@packages.0/@elements.14" accessModifier="protected"/>
+        </methods>
+        <methods name="getFaculty" returnType="/0/@packages.0/@elements.3" accessModifier="public" body="return this.Faculty;&#xA;">
+          <parameters name="faculty" type="/0/@packages.0/@elements.3" accessModifier="protected"/>
+        </methods>
+        <methods name="setFaculty" returnType="/1" accessModifier="public" body="this.Faculty = Faculty;&#xA;">
+          <parameters name="faculty" type="/0/@packages.0/@elements.3" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="NonTeachingStuff" accessModifier="public">
+        <fields name="nonTeachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="nonTeachingStuffPosition" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <methods name="NonTeachingStuff" accessModifier="public" body="this.nonTeachingStuffID = nonTeachingStuffID;&#xA;this.nonTeachingStuffPosition = nonTeachingStuffPosition;&#xA;">
+          <parameters name="nonTeachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="nonTeachingStuffPosition" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getNonTeachingStuffID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.nonTeachingStuffID;&#xA;"/>
+        <methods name="setNonTeachingStuffID" returnType="/1" accessModifier="public" body="this.nonTeachingStuffID = nonTeachingStuffID;&#xA;">
+          <parameters name="nonTeachingStuffID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getNonTeachingStuffPosition" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.nonTeachingStuffPosition;&#xA;"/>
+        <methods name="setNonTeachingStuffPosition" returnType="/1" accessModifier="public" body="this.nonTeachingStuffPosition = nonTeachingStuffPosition;&#xA;">
+          <parameters name="nonTeachingStuffPosition" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Employee" accessModifier="public">
+        <fields name="employeeID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        <fields name="employeeName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <fields name="employeeSurname" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        <fields name="nonteachingstuff" type="/0/@packages.0/@elements.5" accessModifier="protected"/>
+        <fields name="teachingstuff" type="/0/@packages.0/@elements.2" accessModifier="protected"/>
+        <methods name="Employee" accessModifier="public" body="this.employeeID = employeeID;&#xA;this.employeeName = employeeName;&#xA;this.employeeSurname = employeeSurname;&#xA;this.nonteachingstuff = nonteachingstuff;&#xA;this.teachingstuff = teachingstuff;&#xA;">
+          <parameters name="employeeID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+          <parameters name="employeeName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+          <parameters name="employeeSurname" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+          <parameters name="nonteachingstuff" type="/0/@packages.0/@elements.5" accessModifier="protected"/>
+          <parameters name="teachingstuff" type="/0/@packages.0/@elements.2" accessModifier="protected"/>
+        </methods>
+        <methods name="getEmployeeID" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.employeeID;&#xA;"/>
+        <methods name="setEmployeeID" returnType="/1" accessModifier="public" body="this.employeeID = employeeID;&#xA;">
+          <parameters name="employeeID" type="/0/@packages.0/@elements.13" accessModifier="protected"/>
+        </methods>
+        <methods name="getEmployeeName" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.employeeName;&#xA;"/>
+        <methods name="setEmployeeName" returnType="/1" accessModifier="public" body="this.employeeName = employeeName;&#xA;">
+          <parameters name="employeeName" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getEmployeeSurname" returnType="/0/@packages.0/@elements.14" accessModifier="public" body="return this.employeeSurname;&#xA;"/>
+        <methods name="setEmployeeSurname" returnType="/1" accessModifier="public" body="this.employeeSurname = employeeSurname;&#xA;">
+          <parameters name="employeeSurname" type="/0/@packages.0/@elements.14" accessModifier="private"/>
+        </methods>
+        <methods name="getNonTeachingStuff" returnType="/0/@packages.0/@elements.5" accessModifier="public" body="return this.NonTeachingStuff;&#xA;">
+          <parameters name="nonteachingstuff" type="/0/@packages.0/@elements.5" accessModifier="protected"/>
+        </methods>
+        <methods name="setNonTeachingStuff" returnType="/1" accessModifier="public" body="this.NonTeachingStuff = NonTeachingStuff;&#xA;">
+          <parameters name="nonteachingstuff" type="/0/@packages.0/@elements.5" accessModifier="protected"/>
+        </methods>
+        <methods name="getTeachingStuff" returnType="/0/@packages.0/@elements.2" accessModifier="public" body="return this.TeachingStuff;&#xA;">
+          <parameters name="teachingstuff" type="/0/@packages.0/@elements.2" accessModifier="protected"/>
+        </methods>
+        <methods name="setTeachingStuff" returnType="/1" accessModifier="public" body="this.TeachingStuff = TeachingStuff;&#xA;">
+          <parameters name="teachingstuff" type="/0/@packages.0/@elements.2" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Teacher" supertypes="/0/@packages.0/@elements.2" accessModifier="public">
+        <methods name="Teacher" accessModifier="public" body=""/>
+      </elements>
+      <elements xsi:type="cls:Class" name="Asistant" supertypes="/0/@packages.0/@elements.2" accessModifier="public">
+        <methods name="Asistant" accessModifier="public" body=""/>
+      </elements>
+      <elements xsi:type="cls:Class" name="Takes">
+        <fields name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        <fields name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        <methods name="Takes" accessModifier="public" body="this.student = student;&#xA;this.subject = subject;&#xA;">
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="getStudent" returnType="/0/@packages.0/@elements.0" accessModifier="public" body="return this.Student;&#xA;">
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        </methods>
+        <methods name="setStudent" returnType="/1" accessModifier="public" body="this.Student = Student;&#xA;">
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        </methods>
+        <methods name="getSubject" returnType="/0/@packages.0/@elements.1" accessModifier="public" body="return this.Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="setSubject" returnType="/1" accessModifier="public" body="this.Subject = Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="Passes">
+        <fields name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        <fields name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        <fields name="grade" type="/0/@packages.0/@elements.13" accessModifier="private"/>
+        <fields name="examDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+        <methods name="Passes" accessModifier="public" body="this.subject = subject;&#xA;this.student = student;&#xA;this.grade = grade;&#xA;this.examDate = examDate;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+          <parameters name="grade" type="/0/@packages.0/@elements.13" accessModifier="private"/>
+          <parameters name="examDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+        </methods>
+        <methods name="getGrade" returnType="/0/@packages.0/@elements.13" accessModifier="public" body="return this.grade;&#xA;"/>
+        <methods name="setGrade" returnType="/1" accessModifier="public" body="this.grade = grade;&#xA;">
+          <parameters name="grade" type="/0/@packages.0/@elements.13" accessModifier="private"/>
+        </methods>
+        <methods name="getExamDate" returnType="/0/@packages.0/@elements.15" accessModifier="public" body="return this.examDate;&#xA;"/>
+        <methods name="setExamDate" returnType="/1" accessModifier="public" body="this.examDate = examDate;&#xA;">
+          <parameters name="examDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+        </methods>
+        <methods name="getSubject" returnType="/0/@packages.0/@elements.1" accessModifier="public" body="return this.Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="setSubject" returnType="/1" accessModifier="public" body="this.Subject = Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="getStudent" returnType="/0/@packages.0/@elements.0" accessModifier="public" body="return this.Student;&#xA;">
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        </methods>
+        <methods name="setStudent" returnType="/1" accessModifier="public" body="this.Student = Student;&#xA;">
+          <parameters name="student" type="/0/@packages.0/@elements.0" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="AssistsInLabs">
+        <fields name="asistant" type="/0/@packages.0/@elements.8" accessModifier="protected"/>
+        <fields name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        <methods name="AssistsInLabs" accessModifier="public" body="this.asistant = asistant;&#xA;this.subject = subject;&#xA;">
+          <parameters name="asistant" type="/0/@packages.0/@elements.8" accessModifier="protected"/>
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="getAsistant" returnType="/0/@packages.0/@elements.8" accessModifier="public" body="return this.Asistant;&#xA;">
+          <parameters name="asistant" type="/0/@packages.0/@elements.8" accessModifier="protected"/>
+        </methods>
+        <methods name="setAsistant" returnType="/1" accessModifier="public" body="this.Asistant = Asistant;&#xA;">
+          <parameters name="asistant" type="/0/@packages.0/@elements.8" accessModifier="protected"/>
+        </methods>
+        <methods name="getSubject" returnType="/0/@packages.0/@elements.1" accessModifier="public" body="return this.Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="setSubject" returnType="/1" accessModifier="public" body="this.Subject = Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Class" name="TeachesClasses">
+        <fields name="teacher" type="/0/@packages.0/@elements.7" accessModifier="protected"/>
+        <fields name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        <fields name="classDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+        <fields name="classTime" type="/0/@packages.0/@elements.16" accessModifier="private"/>
+        <fields name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        <methods name="TeachesClasses" accessModifier="public" body="this.teacher = teacher;&#xA;this.subject = subject;&#xA;this.classDate = classDate;&#xA;this.classTime = classTime;&#xA;this.subject = subject;&#xA;">
+          <parameters name="teacher" type="/0/@packages.0/@elements.7" accessModifier="protected"/>
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+          <parameters name="classDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+          <parameters name="classTime" type="/0/@packages.0/@elements.16" accessModifier="private"/>
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="getClassDate" returnType="/0/@packages.0/@elements.15" accessModifier="public" body="return this.classDate;&#xA;"/>
+        <methods name="setClassDate" returnType="/1" accessModifier="public" body="this.classDate = classDate;&#xA;">
+          <parameters name="classDate" type="/0/@packages.0/@elements.15" accessModifier="private"/>
+        </methods>
+        <methods name="getClassTime" returnType="/0/@packages.0/@elements.16" accessModifier="public" body="return this.classTime;&#xA;"/>
+        <methods name="setClassTime" returnType="/1" accessModifier="public" body="this.classTime = classTime;&#xA;">
+          <parameters name="classTime" type="/0/@packages.0/@elements.16" accessModifier="private"/>
+        </methods>
+        <methods name="getTeacher" returnType="/0/@packages.0/@elements.7" accessModifier="public" body="return this.Teacher;&#xA;">
+          <parameters name="teacher" type="/0/@packages.0/@elements.7" accessModifier="protected"/>
+        </methods>
+        <methods name="setTeacher" returnType="/1" accessModifier="public" body="this.Teacher = Teacher;&#xA;">
+          <parameters name="teacher" type="/0/@packages.0/@elements.7" accessModifier="protected"/>
+        </methods>
+        <methods name="getSubject" returnType="/0/@packages.0/@elements.1" accessModifier="public" body="return this.Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="setSubject" returnType="/1" accessModifier="public" body="this.Subject = Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="getSubject" returnType="/0/@packages.0/@elements.1" accessModifier="public" body="return this.Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+        <methods name="setSubject" returnType="/1" accessModifier="public" body="this.Subject = Subject;&#xA;">
+          <parameters name="subject" type="/0/@packages.0/@elements.1" accessModifier="protected"/>
+        </methods>
+      </elements>
+      <elements xsi:type="cls:Type" name="int"/>
+      <elements xsi:type="cls:Type" name="String"/>
+      <elements xsi:type="cls:Type" name="java.util.Date"/>
+      <elements xsi:type="cls:Type" name="java.util.Date"/>
+    </packages>
+  </cls:ClassModel>
+  <cls:Type name="void"/>
+</xmi:XMI>

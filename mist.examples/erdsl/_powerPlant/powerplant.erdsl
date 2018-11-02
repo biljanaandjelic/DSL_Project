@@ -1,0 +1,167 @@
+PowerGeneratorSystem {
+	domains {
+		int extends integer,
+		varchar2 extends string,
+		datetime extends date
+		
+	} 
+	entities { 
+		Facility {
+			attributeSet { 
+				facilityId int, 
+				facilityName varchar2(30)
+			}  
+			keySet {    
+				PK_facility (facilityId)
+			}  
+			primaryKey PK_facility
+		},
+		
+		PowerGenerator { 
+			attributeSet { 
+				generatorId int,
+				generatorMinPower int,
+				generatorMaxPower int,
+				generatorType varchar2(30)
+			}  
+			keySet {    
+				PK_generator (generatorId)
+			}  
+			primaryKey PK_generator
+		},
+		
+		FuelGenerator {
+		},
+		
+		RenewableEnergyGenerator {		 
+		},
+		
+		FuelType {
+		 	attributeSet { 
+		 		fuelId int,
+		 		fuelName varchar2(30)
+		 	}  
+		 	keySet {    
+		 		PK_fuel (fuelId)
+		 	}  
+		 	primaryKey PK_fuel
+		 },
+		 
+		 RenewableEnergyType {
+		  	attributeSet { 
+		  		reType varchar2(30),
+		  		reTypeReliability int
+		  	}  
+		  	keySet {    
+		  		PK_renewableEnergy (reType)
+		  	}  
+		  	primaryKey PK_renewableEnergy
+		  },
+		  
+		  Location {
+		   	attributeSet { 
+		   		locationID int,
+		   		locationName varchar2(30)
+		   	}  
+		   	keySet {    
+		   		PK_location (locationID)
+		   	}  
+		   	primaryKey PK_location
+		   },
+		   
+	   	   WeatherCondition {
+	   	    	attributeSet { 
+	   	    		wconDateTime datetime,
+	   	    		wconTemperature int,
+	   	    		wconAirPressure int,
+	   	    		wconHumidity int,
+	   	    		wconWindSpeed int
+	   	    	}  
+	   	    	keySet {    
+	   	    		PK_weatherCondition (wconDateTime)
+	   	    	}  
+	   	    	primaryKey PK_weatherCondition
+	   	    } ,
+	   	    
+	   	    Season {
+	   	    	attributeSet {
+	   	    		seasonName varchar2(30)
+	   	    	}  
+	   	    	keySet {    
+	   	    		PK_season (seasonName)
+	   	    	}  
+	   	    	primaryKey PK_season
+	   	    },
+	   	    
+	   	    ProducedPower {
+	   	    	attributeSet { 
+	   	    		ppDateTime datetime,
+	   	    		ppQuantity int
+	   	    	}  
+	   	    	keySet {    
+	   	    		PK_producedPower (ppDateTime)
+	   	    	}  
+	   	    	primaryKey PK_producedPower
+	   	    }
+	   	    
+	}  
+	relationships {
+		FacilityGen {
+			entitiesInRelationship { 
+				Facility (one, many),
+				PowerGenerator (one, one)	
+			} 
+		},
+		
+		ISA "IS-A" {
+			supertype PowerGenerator (one,one)
+			subtypes (FuelGenerator,RenewableEnergyGenerator) 
+			classificationAttribute generatorType
+		},
+		
+		FGFuelType {
+			entitiesInRelationship { 
+				FuelGenerator (one, many),
+				FuelType (zero, many)	
+			} 
+		},
+		
+		REGType {
+			entitiesInRelationship { 
+				RenewableEnergyGenerator (one, one),
+				RenewableEnergyType (zero, many)	
+			} 
+		},
+		
+		REGLocations {
+			entitiesInRelationship { 
+				Location (zero, many),
+				RenewableEnergyGenerator (one, one)	
+			} 
+		},
+		
+		IdentificationDependency WConAtLocation {
+			weakEntity WeatherCondition
+			regularEntity Location (zero,many)          
+		},
+		
+		WConInSeason {
+			entitiesInRelationship { 
+				WeatherCondition (one, one),
+				Season (zero, many)	
+			}
+		},
+		
+		IdentificationDependency REGProducedPower {
+			weakEntity ProducedPower
+			regularEntity RenewableEnergyGenerator (zero,many)          
+		},
+		
+		ProducedPowerWCon {
+			entitiesInRelationship { 
+				WeatherCondition (zero, many),
+				ProducedPower (one, one)	
+			} 
+		}
+	}
+}

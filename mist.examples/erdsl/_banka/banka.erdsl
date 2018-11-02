@@ -1,0 +1,198 @@
+bankamodel {
+	
+entities {
+		banka {
+			attributeSet {
+				NAZB,
+				ADRB,
+				BRTB
+			}
+			keySet {
+				PK_banka ( NAZB )
+			}
+			primaryKey PK_banka
+		},
+		filijala {
+			attributeSet {
+				ADRF,
+				IDF
+			}
+			keySet {
+				PK_filijala ( IDF )
+			}
+			primaryKey PK_filijala
+		},
+		sektor {
+			attributeSet {
+				IDSEK,
+				ADRSEK
+			}
+			keySet {
+				PK_sektor ( IDSEK )
+			}
+			primaryKey PK_sektor
+		},
+		radnik {
+			attributeSet {
+				JMBGR,
+				IMER,
+				PRZR,
+				ADRR,
+				TIPR
+			}
+			keySet {
+				PK_radnik ( JMBGR )
+			}
+			primaryKey PK_radnik
+		},
+		administrativni {
+		},
+		salterski {
+			attributeSet {
+				KOLPRSSALRAD
+			}
+		},
+		kredit {
+			attributeSet {
+				NAZKRE,
+				ROKOTPL,
+				VLTKRE,
+				IDKRE
+			}
+			keySet {
+				PK_kredit ( IDKRE )
+			}
+			primaryKey PK_kredit
+		},
+		fin_usluga {
+			attributeSet {
+				IDFU,
+				NAZFU
+			}
+			keySet {
+				PK_idfu ( IDFU )
+			}
+			primaryKey PK_idfu
+		},
+		klijent {
+			attributeSet {
+				IMEKL,
+				PRZKL,
+				ADRKL,
+				IDKL
+			}
+			keySet {
+				PK_klijent ( IDKL )
+			}
+			primaryKey PK_klijent
+		},
+		transakcija {
+			attributeSet {
+				IDTR,
+				KSTR,
+				VLTTR
+			}
+			keySet {
+				PK_transakcija ( IDTR )
+			}
+			primaryKey PK_transakcija
+		}
+	}
+	gerunds {
+		ima_sek {
+			entitiesInRelationship {
+				filijala ( one,
+				many ),
+				sektor ( one,
+				many )
+			}
+		},
+		zapos {
+			entitiesInRelationship {
+				banka ( one,
+				many ) "",
+				radnik ( one,
+				one )
+			}
+		},
+		posluje {
+			entitiesInRelationship {
+				klijent ( zero,
+				many ),
+				filijala ( zero,
+				many )
+			}
+		},
+		pruza {
+			entitiesInRelationship {
+				fin_usluga ( zero,
+				many ),
+				filijala ( zero,
+				many )
+			}
+		}
+	}
+	relationships {
+		IdentificationDependency ID1 {
+			weakEntity filijala regularEntity banka ( one,
+			many )
+		},
+		rasp {
+			entitiesInRelationship {
+				zapos ( one,
+				one ),
+				ima_sek ( one,
+				many )
+			}
+		},
+		rukov {
+			entitiesInRelationship {
+				radnik ( zero,
+				many ) rukovodilac,
+				radnik ( zero,
+				one ) rukovodjen
+			}
+		},
+		ISA "IS-A1" {
+			supertype radnik ( one,
+			many ) "" subtypes ( administrativni,
+			salterski ) classificationAttribute TIPR
+		},
+		odobr {
+			entitiesInRelationship {
+				kredit ( zero,
+				many ),
+				administrativni ( zero,
+				many )
+			}
+		},
+		koristi {
+			entitiesInRelationship {
+				pruza ( zero,
+				many ),
+				posluje ( zero,
+				many )
+			}
+		},
+		prima {
+			entitiesInRelationship {
+				klijent ( zero,
+				many ),
+				transakcija ( one,
+				one )
+			}
+		},
+		uplacuje {
+			entitiesInRelationship {
+				klijent ( zero,
+				many ),
+				transakcija ( one,
+				one )
+			}
+		},
+		IdentificationDependency ID2 {
+			weakEntity transakcija regularEntity filijala ( zero,
+			many )
+		}
+	}
+}

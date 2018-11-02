@@ -1,0 +1,120 @@
+filmovi {
+	
+entities {
+		film {
+			attributeSet {
+				IDF,
+				NAZF,
+				TRA
+			}
+			keySet {
+				PK_film ( IDF )
+			}
+			primaryKey PK_film
+		},
+		zanr {
+			attributeSet {
+				IDZ,
+				ZANR
+			}
+			keySet {
+				PK_zanr ( IDZ )
+			}
+			primaryKey PK_zanr
+		},
+		glumac {
+			attributeSet {
+				SIFG,
+				IMEG,
+				PRZG
+			}
+			keySet {
+				PK_glumac ( SIFG )
+			}
+			primaryKey PK_glumac
+		},
+		reziser {
+			attributeSet {
+				SIFR,
+				IMER,
+				PRZR
+			}
+			keySet {
+				PK_reziser ( SIFR )
+			}
+			primaryKey PK_reziser
+		},
+		festival {
+			attributeSet {
+				IDFest,
+				NAZFest
+			}
+			keySet {
+				PK_festival ( IDFest )
+			}
+			primaryKey PK_festival
+		},
+		nagrada {
+			attributeSet {
+				IDN,
+				NAZN
+			}
+			keySet {
+				PK_nagrada ( IDN )
+			}
+			primaryKey PK_nagrada
+		}
+	}
+	gerunds {
+		dodeljuje_se {
+			entitiesInRelationship {
+				festival ( zero,
+				many ),
+				nagrada ( one,
+				one )
+			}
+		},
+		ucestvuje {
+			entitiesInRelationship {
+				film ( zero,
+				many ),
+				festival ( one,
+				many )
+			}
+		}
+	}
+	relationships {
+		pripada {
+			entitiesInRelationship {
+				film ( one,
+				one ),
+				zanr ( zero,
+				many )
+			}
+		},
+		glumi {
+			entitiesInRelationship {
+				film ( zero,
+				many ),
+				glumac ( one,
+				many )
+			}
+		},
+		rezirao {
+			entitiesInRelationship {
+				film ( one,
+				one ),
+				reziser ( zero,
+				many )
+			}
+		},
+		dobio {
+			entitiesInRelationship {
+				ucestvuje ( zero,
+				many ),
+				dodeljuje_se ( zero,
+				one )
+			}
+		}
+	}
+}

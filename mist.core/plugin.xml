@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated er -->
+      <package
+            uri="http://www.example.org/er"
+            class="er.ErPackage"
+            genModel="model/er.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated classDiagram -->
+      <package
+            uri="http://class/1.0"
+            class="classDiagram.ClassDiagramPackage"
+            genModel="model/classDiagram.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated rdbms -->
+      <package
+            uri="http://rdbms/1.0"
+            class="rdbms.RdbmsPackage"
+            genModel="model/rdbms.genmodel"/>
+   </extension>
+
+</plugin>

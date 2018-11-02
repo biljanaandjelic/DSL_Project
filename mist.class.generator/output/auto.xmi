@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:ValidationClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" name="Automobil">
+  <classattribute name="marka">
+    <attributetype/>
+  </classattribute>
+  <classattribute name="datumProizvodje">
+    <attributetype vrsta="Date"/>
+    <attributerule xsi:type="formValidation:DatePattern" value="dd-MM-yyyy"/>
+    <attributerule xsi:type="formValidation:MinDate" value="01-01-1890"/>
+  </classattribute>
+  <classattribute name="boja">
+    <attributetype/>
+  </classattribute>
+  <classattribute name="duzina">
+    <attributetype vrsta="Number"/>
+  </classattribute>
+  <classattribute name="sirina">
+    <attributetype vrsta="Number"/>
+  </classattribute>
+  <classattribute name="snaga">
+    <attributetype vrsta="Number"/>
+  </classattribute>
+  <classattribute name="brojBrzina">
+    <attributetype vrsta="Number"/>
+  </classattribute>
+  <classattribute name="tip">
+    <attributetype/>
+  </classattribute>
+</formValidation:ValidationClass>

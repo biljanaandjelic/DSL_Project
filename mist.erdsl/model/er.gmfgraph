@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition">
+  <gmfgraph:Canvas name="er">
+    <figures name="Default">
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="EntityPrimaryKeyFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="ISASubtypesFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="ISAClassificationAttributeFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="CategorisationCategorisedEntityFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="IdentificationDependencyWeakEntityFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="RegularEntityEntityFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="CategoriesEntitiesFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="KeyKeyAttributesFigureTargetDecoration"/>
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="AttributeDomainDomainFigureTargetDecoration"/>
+      <descriptors name="EntityFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="EntityFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="EntityLabelFigure" text="Entity">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="EntityKeySetCompartmentFigure" outline="false"/>
+          <template/>
+          <template x="30"/>
+          <template x="30" y="30"/>
+          <template y="30"/>
+        </actualFigure>
+        <accessors accessor="getFigureEntityLabelFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+        <accessors accessor="getEntityKeySetCompartmentFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="AttributeFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AttributeFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <preferredSize dx="50" dy="5"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="AttributeLabelFigure" text="Attribute"/>
+        </actualFigure>
+        <accessors accessor="getFigureAttributeLabelFigure" figure="/0/@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="DomainFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DomainFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="DomainLabelFigure" text="Domain"/>
+        </actualFigure>
+        <accessors accessor="getFigureDomainLabelFigure" figure="/0/@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="RelationshipFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="RelationshipFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="RelationshipLabelFigure" text="Relationship"/>
+          <template y="30"/>
+          <template x="30"/>
+          <template x="60" y="30"/>
+          <template x="30" y="60"/>
+        </actualFigure>
+        <accessors accessor="getFigureRelationshipLabelFigure" figure="/0/@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="ISAFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ISAFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="ISALabelFigure" text="IS-A"/>
+          <template y="15"/>
+          <template x="15"/>
+          <template x="30" y="15"/>
+        </actualFigure>
+        <accessors accessor="getFigureISALabelFigure" figure="/0/@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="CategorisationFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="CategorisationFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="CategorisationLabelFigure" text="EX-OR"/>
+          <template/>
+          <template x="15" y="15"/>
+          <template x="30"/>
+        </actualFigure>
+        <accessors accessor="getFigureCategorisationLabelFigure" figure="/0/@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="IdentificationDependencyFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="IdentificationDependencyFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="IdentificationDependencyLabelFigure" text="IdentificationDependency"/>
+          <template y="30"/>
+          <template x="30"/>
+          <template x="60" y="30"/>
+          <template x="30" y="60"/>
+        </actualFigure>
+        <accessors accessor="getFigureIdentificationDependencyLabelFigure" figure="/0/@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="RegularEntityFigure">
+        <actualFigure xsi:type="gmfgraph:Ellipse" name="RegularEntityFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+          <preferredSize dx="7" dy="7"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="RegularEntityLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="RegularEntityLabelFigure" text="RegularEntity"/>
+      </descriptors>
+      <descriptors name="CategoriesFigure">
+        <actualFigure xsi:type="gmfgraph:Ellipse" name="CategoriesFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="255" blue="255"/>
+          <preferredSize dx="7" dy="7"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="CategoriesLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="CategoriesLabelFigure" text="Categories"/>
+      </descriptors>
+      <descriptors name="ERModelFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ERModelFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="ERModelLabelFigure" text="ERModel">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="ERModelEntitiesCompartmentFigure" outline="false"/>
+          <children xsi:type="gmfgraph:Rectangle" name="ERModelRelationshipsCompartmentFigure" outline="false"/>
+          <children xsi:type="gmfgraph:Rectangle" name="ERModelGerundsCompartmentFigure" outline="false"/>
+          <children xsi:type="gmfgraph:Rectangle" name="ERModelDomainsCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureERModelLabelFigure" figure="/0/@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+        <accessors accessor="getERModelEntitiesCompartmentFigure" figure="/0/@figures.0/@descriptors.11/@actualFigure/@children.1"/>
+        <accessors accessor="getERModelRelationshipsCompartmentFigure" figure="/0/@figures.0/@descriptors.11/@actualFigure/@children.2"/>
+        <accessors accessor="getERModelGerundsCompartmentFigure" figure="/0/@figures.0/@descriptors.11/@actualFigure/@children.3"/>
+        <accessors accessor="getERModelDomainsCompartmentFigure" figure="/0/@figures.0/@descriptors.11/@actualFigure/@children.4"/>
+      </descriptors>
+      <descriptors name="KeyFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="KeyFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <preferredSize dx="50" dy="25"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="KeyLabelFigure" text="Key"/>
+        </actualFigure>
+        <accessors accessor="getFigureKeyLabelFigure" figure="/0/@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="GerundFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="GerundFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Rectangle" name="GerundRelationshipCompartmentFigure" outline="false"/>
+          <template y="60"/>
+          <template/>
+          <template x="60"/>
+          <template x="60" y="60"/>
+        </actualFigure>
+        <accessors accessor="getGerundRelationshipCompartmentFigure" figure="/0/@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="AttributeDomainFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AttributeDomainFigure" lineWidth="0">
+          <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="178" blue="102"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="EntityEntityAttributesFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntityEntityAttributesFigure" lineWidth="0">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="EntityEntityAttributesExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="EntityEntityAttributesExternalLabel"/>
+      </descriptors>
+      <descriptors name="EntityPrimaryKeyFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntityPrimaryKeyFigure" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.0">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="EntityPrimaryKeyExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="EntityPrimaryKeyExternalLabel" text="primaryKey"/>
+      </descriptors>
+      <descriptors name="RelationshipRelationshipAttributesFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelationshipRelationshipAttributesFigure">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="RelationshipRelationshipAttributesExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="RelationshipRelationshipAttributesExternalLabel"/>
+      </descriptors>
+      <descriptors name="ISASubtypesFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ISASubtypesFigure" targetDecoration="/0/@figures.0/@figures.1">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ISASubtypesExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="ISASubtypesExternalLabel"/>
+      </descriptors>
+      <descriptors name="ISAClassificationAttributeFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ISAClassificationAttributeFigure" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ISAClassificationAttributeExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="ISAClassificationAttributeExternalLabel" text="classificationAttribute"/>
+      </descriptors>
+      <descriptors name="CategorisationCategorisedEntityFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CategorisationCategorisedEntityFigure" targetDecoration="/0/@figures.0/@figures.3">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="CategorisationCategorisedEntityExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="CategorisationCategorisedEntityExternalLabel"/>
+      </descriptors>
+      <descriptors name="IdentificationDependencyWeakEntityFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="IdentificationDependencyWeakEntityFigure" lineWidth="2" targetDecoration="/0/@figures.0/@figures.4">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="IdentificationDependencyWeakEntityExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="IdentificationDependencyWeakEntityExternalLabel" text="weakEntity"/>
+      </descriptors>
+      <descriptors name="RegularEntityEntityFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RegularEntityEntityFigure" targetDecoration="/0/@figures.0/@figures.5">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="RegularEntityEntityExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="RegularEntityEntityExternalLabel"/>
+      </descriptors>
+      <descriptors name="CategoriesEntitiesFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CategoriesEntitiesFigure" targetDecoration="/0/@figures.0/@figures.6">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="CategoriesEntitiesExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="CategoriesEntitiesExternalLabel"/>
+      </descriptors>
+      <descriptors name="KeyKeyAttributesFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="KeyKeyAttributesFigure" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.7">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="180" green="180" blue="180"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="KeyKeyAttributesExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="KeyKeyAttributesExternalLabel"/>
+      </descriptors>
+      <descriptors name="AttributeDomainDomainFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AttributeDomainDomainFigure" targetDecoration="/0/@figures.0/@figures.8">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="AttributeDomainDomainExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="AttributeDomainDomainExternalLabel"/>
+      </descriptors>
+    </figures>
+    <nodes name="Entity" figure="EntityFigure"/>
+    <nodes name="Attribute" figure="AttributeFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="50" dy="5"/>
+      </facets>
+    </nodes>
+    <nodes name="Domain" figure="DomainFigure"/>
+    <nodes name="Relationship" figure="RelationshipFigure"/>
+    <nodes name="ISA" figure="ISAFigure"/>
+    <nodes name="Categorisation" figure="CategorisationFigure"/>
+    <nodes name="IdentificationDependency" figure="IdentificationDependencyFigure"/>
+    <nodes name="RegularEntity" figure="RegularEntityFigure" affixedParentSide="NORTH">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="7" dy="7"/>
+      </facets>
+    </nodes>
+    <nodes name="Categories" figure="CategoriesFigure" affixedParentSide="NORTH">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="7" dy="7"/>
+      </facets>
+    </nodes>
+    <nodes name="ERModel" figure="ERModelFigure"/>
+    <nodes name="Key" figure="KeyFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="50" dy="25"/>
+      </facets>
+    </nodes>
+    <nodes name="Gerund" figure="GerundFigure"/>
+    <nodes name="AttributeDomain" figure="AttributeDomainFigure"/>
+    <connections name="EntityEntityAttributes" figure="EntityEntityAttributesFigure"/>
+    <connections name="EntityPrimaryKey" figure="EntityPrimaryKeyFigure"/>
+    <connections name="RelationshipRelationshipAttributes" figure="RelationshipRelationshipAttributesFigure"/>
+    <connections name="ISASubtypes" figure="ISASubtypesFigure"/>
+    <connections name="ISAClassificationAttribute" figure="ISAClassificationAttributeFigure"/>
+    <connections name="CategorisationCategorisedEntity" figure="CategorisationCategorisedEntityFigure"/>
+    <connections name="IdentificationDependencyWeakEntity" figure="IdentificationDependencyWeakEntityFigure"/>
+    <connections name="RegularEntityEntity" figure="RegularEntityEntityFigure"/>
+    <connections name="CategoriesEntities" figure="CategoriesEntitiesFigure"/>
+    <connections name="KeyKeyAttributes" figure="KeyKeyAttributesFigure"/>
+    <connections name="AttributeDomainDomain" figure="AttributeDomainDomainFigure"/>
+    <compartments name="EntityKeySetCompartment" figure="EntityFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.0/@accessors.1"/>
+    <compartments name="ERModelEntitiesCompartment" figure="ERModelFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.11/@accessors.1"/>
+    <compartments name="ERModelRelationshipsCompartment" figure="ERModelFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.11/@accessors.2"/>
+    <compartments name="ERModelGerundsCompartment" figure="ERModelFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.11/@accessors.3"/>
+    <compartments name="ERModelDomainsCompartment" figure="ERModelFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.11/@accessors.4"/>
+    <compartments name="GerundRelationshipCompartment" figure="GerundFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.13/@accessors.0"/>
+    <labels name="EntityLabel" figure="EntityFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.0/@accessors.0"/>
+    <labels name="AttributeLabel" figure="AttributeFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.1/@accessors.0"/>
+    <labels name="DomainLabel" figure="DomainFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.2/@accessors.0"/>
+    <labels name="RelationshipLabel" figure="RelationshipFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.3/@accessors.0"/>
+    <labels name="ISALabel" figure="ISAFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.4/@accessors.0"/>
+    <labels name="CategorisationLabel" figure="CategorisationFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.5/@accessors.0"/>
+    <labels name="IdentificationDependencyLabel" figure="IdentificationDependencyFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.6/@accessors.0"/>
+    <labels name="RegularEntityLabel" figure="RegularEntityLabelFigure" elementIcon="false"/>
+    <labels name="CategoriesLabel" figure="CategoriesLabelFigure" elementIcon="false"/>
+    <labels name="ERModelLabel" figure="ERModelFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.11/@accessors.0"/>
+    <labels name="KeyLabel" figure="KeyFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.12/@accessors.0"/>
+    <labels name="EntityEntityAttributesExternalLabel" figure="EntityEntityAttributesExternalLabelFigure" elementIcon="false"/>
+    <labels name="EntityPrimaryKeyExternalLabel" figure="EntityPrimaryKeyExternalLabelFigure" elementIcon="false"/>
+    <labels name="RelationshipRelationshipAttributesExternalLabel" figure="RelationshipRelationshipAttributesExternalLabelFigure" elementIcon="false"/>
+    <labels name="ISASubtypesExternalLabel" figure="ISASubtypesExternalLabelFigure" elementIcon="false"/>
+    <labels name="ISAClassificationAttributeExternalLabel" figure="ISAClassificationAttributeExternalLabelFigure" elementIcon="false"/>
+    <labels name="CategorisationCategorisedEntityExternalLabel" figure="CategorisationCategorisedEntityExternalLabelFigure" elementIcon="false"/>
+    <labels name="IdentificationDependencyWeakEntityExternalLabel" figure="IdentificationDependencyWeakEntityExternalLabelFigure" elementIcon="false"/>
+    <labels name="RegularEntityEntityExternalLabel" figure="RegularEntityEntityExternalLabelFigure" elementIcon="false"/>
+    <labels name="CategoriesEntitiesExternalLabel" figure="CategoriesEntitiesExternalLabelFigure" elementIcon="false"/>
+    <labels name="KeyKeyAttributesExternalLabel" figure="KeyKeyAttributesExternalLabelFigure" elementIcon="false"/>
+    <labels name="AttributeDomainDomainExternalLabel" figure="AttributeDomainDomainExternalLabelFigure" elementIcon="false"/>
+  </gmfgraph:Canvas>
+  <gmfgraph:Label name="GerundLabelFigure" text="Gerund">
+    <maximumSize dx="10000" dy="50"/>
+  </gmfgraph:Label>
+  <gmfgraph:Label name="AttributeDomainLabelFigure" text="AttributeDomain"/>
+</xmi:XMI>

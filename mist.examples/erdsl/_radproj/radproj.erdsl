@@ -1,0 +1,63 @@
+RadnikProjekat {
+	domains {
+		int extends integer,
+		varchar extends string
+	}
+entities {
+		radnik {
+			attributeSet {
+				MBR int,
+				IME varchar,
+				PRZ varchar,
+				PLT int,
+				GOD,
+				PRE
+			}
+			keySet {
+				PK_radnik ( MBR )
+			}
+			primaryKey PK_radnik
+		},
+		projekat {
+			attributeSet {
+				SPR,
+				NAP,
+				NAR
+			}
+			keySet {
+				PK_projekat ( SPR )
+			}
+			primaryKey PK_projekat
+		}
+	}
+	relationships {
+		radproj {
+			entitiesInRelationship {
+				radnik ( zero,
+				many ),
+				projekat ( zero,
+				many )
+			}
+			attributeSet {
+				BRC
+			}
+		}
+	,
+		jeSef {
+			entitiesInRelationship {
+				radnik ( zero,
+				many ) "je sef",
+				radnik ( zero,
+				one ) "ima sefa"
+			}
+		},
+		rukovodi {
+			entitiesInRelationship {
+				radnik ( zero,
+				many ),
+				projekat ( zero,
+				one )
+			}
+		}
+	}
+}

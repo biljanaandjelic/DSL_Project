@@ -1,0 +1,63 @@
+delovi {
+	
+entities {
+		deo {
+			attributeSet {
+				NAZDEO,
+				OZNDEO
+			,
+				TIPDEO
+			}
+			keySet {
+				PK_deo ( OZNDEO )
+			}
+			primaryKey PK_deo
+		},
+		dobavljani_dea {
+		},
+		proizvedeni_dea {
+			attributeSet {
+				ORGJED
+			}
+		},
+		dobavljac {
+			attributeSet {
+				IDDOB,
+				NAZDOB
+			}
+			keySet {
+				PK_dobavljac ( IDDOB )
+			}
+			primaryKey PK_dobavljac
+		}
+	}
+	relationships {
+		ima_komp {
+			entitiesInRelationship {
+				deo ( zero,
+				many ) komponenta,
+				deo ( zero,
+				many ) celina
+			}
+		},
+		dobavlja {
+			entitiesInRelationship {
+				dobavljac ( zero,
+				many ),
+				dobavljani_dea ( one,
+				one )
+			}
+		}
+	,
+	
+	
+	ISA   "IS-A1" {
+			supertype deo (one,many)
+			subtypes (dobavljani_dea,proizvedeni_dea)
+			classificationAttribute TIPDEO
+			/*supertype //deo ( zero,one )
+			subtypes ( dobavljani_deo,
+			proizvedeni_deo ) classificationAtrtibute TIPDEO*/
+		}
+	}
+}

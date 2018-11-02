@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated er -->
+      <package
+            uri="http://www.example.org/er"
+            class="er.ErPackage"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="org.xtext.example.domij.erdsl.commands.category"
+            name="GenerateXmiFromErDsl">
+      </category>
+      <command
+            categoryId="org.xtext.example.domij.erdsl.commands.category"
+            id="org.xtext.example.domij.erdsl.commands.sampleCommand"
+            name="GenerateXmiFromErDsl">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.xtext.example.domij.erdsl.handlers.GenerateXmiFromErDSlHandler"
+            commandId="org.xtext.example.domij.erdsl.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.xtext.example.domij.erdsl.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.menus"> 
+         
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="org.xtext.example.domij.erdsl.menus.sampleMenu"
+               label="GenerateXmiFromErDsl"
+               mnemonic="M">
+            <command
+                  commandId="org.xtext.example.domij.erdsl.commands.sampleCommand"
+                  id="org.xtext.example.domij.erdsl.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="org.xtext.example.domij.erdsl.commands.sampleCommand"
+               id="org.xtext.example.domij.erdsl.commands.sampleCommand"
+               mnemonic="M"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   
+   
+      
+   
+
+</plugin>

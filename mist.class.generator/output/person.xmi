@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:ValidationClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" name="Person">
+  <classattribute name="name">
+    <attributetype/>
+    <attributerule xsi:type="formValidation:Required" isRequired="true"/>
+    <attributerule xsi:type="formValidation:StringPattern" value="[A-Z][a-z]*"/>
+  </classattribute>
+  <classattribute name="surname">
+    <attributetype/>
+    <attributerule xsi:type="formValidation:Required" isRequired="true"/>
+    <attributerule xsi:type="formValidation:StringPattern" value="[A-Z][a-z]*"/>
+  </classattribute>
+  <classattribute name="nickname">
+    <attributetype/>
+  </classattribute>
+  <classattribute name="identificationNumber">
+    <attributetype/>
+    <attributerule xsi:type="formValidation:Required" isRequired="true"/>
+    <attributerule xsi:type="formValidation:StringPattern" value="[0-9]{13}"/>
+    <attributerule xsi:type="formValidation:Length" value="13"/>
+  </classattribute>
+  <classattribute name="dateOfBirth">
+    <attributetype vrsta="Date"/>
+    <attributerule xsi:type="formValidation:Required" isRequired="true"/>
+    <attributerule xsi:type="formValidation:DatePattern"/>
+    <attributerule xsi:type="formValidation:AcceptableValuesDate">
+      <values>12/12/1989</values>
+      <values>20/03/1988</values>
+    </attributerule>
+  </classattribute>
+  <classattribute name="gender">
+    <attributetype/>
+    <attributerule xsi:type="formValidation:Required" isRequired="true"/>
+    <attributerule xsi:type="formValidation:AcceptableValuesString">
+      <values>Female</values>
+      <values>Male</values>
+    </attributerule>
+  </classattribute>
+  <classattribute name="age">
+    <attributetype vrsta="Number"/>
+    <attributerule xsi:type="formValidation:MinNumber"/>
+    <attributerule xsi:type="formValidation:MaxNumber" value="170.0"/>
+  </classattribute>
+  <classattribute name="yearsOfService">
+    <attributetype vrsta="Number"/>
+  </classattribute>
+  <classattribute name="dateOfEmployment">
+    <attributetype vrsta="Date"/>
+  </classattribute>
+  <classrule xsi:type="formValidation:Equals">
+    <attributearray classattribute="//@classattribute.0 //@classattribute.1"/>
+  </classrule>
+  <classrule xsi:type="formValidation:NotEquals">
+    <attributearray classattribute="//@classattribute.0 //@classattribute.2"/>
+  </classrule>
+  <classrule xsi:type="formValidation:LessThan" classattribute="//@classattribute.6">
+    <attributearray classattribute="//@classattribute.7"/>
+  </classrule>
+  <classrule xsi:type="formValidation:GreaterThan" classattribute="//@classattribute.4">
+    <attributearray classattribute="//@classattribute.8"/>
+  </classrule>
+</formValidation:ValidationClass>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="erdsl" version="8.1.0">
+  <ownedViewpoints name="erdslview" modelFileExtension="erdsl">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ERDSLDiagram" domainClass="er.ERModel">
+      <defaultLayer name="Default">
+        <nodeMappings name="Relationship" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.2" semanticCandidatesExpression="feature:relationships" domainClass="er.Relationship">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="2" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.3" domainClass="er.Attribute">
+          <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <conditionnalStyles predicateExpression="[Entity.allInstances() -> select(e| not e.primaryKey.oclIsUndefined()) -> collect(e | e.primaryKey.keyAttributes) -> flatten() -> asSequence() -> includes(self)/]">
+            <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelFormat="bold_italic" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="IDRelationship" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.7" semanticCandidatesExpression="feature:relationships" domainClass="er.IdentificationDependency">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="4" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Gerund" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.0" semanticCandidatesExpression="feature:gerunds" domainClass="er.Gerund">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[self.relationship.name/]" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/mist.erdsl.design/images/gerund.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ISA" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.5" semanticCandidatesExpression="feature:relationships" domainClass="er.ISA">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="4" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Categorisation" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.6" domainClass="er.Categorisation">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="EntityToAttribute" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']" targetFinderExpression="feature:entityAttributes">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RelationshipToAttribute" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']" targetFinderExpression="feature:relationshipAttributes">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="GerundToAttribute" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']" targetFinderExpression="[self.relationship.relationshipAttributes/]">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IDRelationshipToWeakEntity" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='IDRelationship']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="feature:weakEntity">
+          <style sizeComputationExpression="4">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IDRelationshipToRegularEntity" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='IDRelationship']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[IdentificationDependency.allInstances() -> select(e | e.regularEntity = self)/]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ISAToSubtypes" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='ISA']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="feature:subtypes">
+          <style sizeComputationExpression="4">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ISAToSupertype" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='ISA']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[ISA.allInstances() -> select(e | e.supertype -> includes(self))/]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RelationshipToEntity" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[Relationship.allInstances() -> select(e | e.entities -> includes(self))/]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:role">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RelationshipToGerund" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[Relationship.allInstances() -> select(e | e.entities -> includes(self))/]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="GerundToEntity" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[Gerund.allInstances() -> select(g | g.relationship -> select(e1 | e1.entities -> includes(self)) -> size() &lt;> 0) /]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CategorisationToCategories" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Categorisation']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="[self.entities/]" sourceFinderExpression="[Categorisation.allInstances() -> select(e | e.categorisationEntities -> includes(self))/]" domainClass="er.Categories" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CategorisationToCategorizedEntity" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Categorisation']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" targetFinderExpression="feature:categorisedEntity">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="[if self.isPartial then '(zero,one)' else '(one,one)' endif/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="GerundToGerund" sourceMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" targetMapping="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" targetFinderExpression="[self.entity/]" sourceFinderExpression="[Gerund.allInstances() -> select(g | g.relationship -> select(e1 | e1.entities -> includes(self)) -> size() &lt;> 0) /]" domainClass="er.RegularEntity" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="['('.concat(self.min.toString()).concat(',').concat(self.max.toString()).concat(')')/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Entity" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.1" semanticCandidatesExpression="feature:entities" domainClass="er.Entity" childrenPresentation="List">
+          <subNodeMappings name="Key" labelDirectEdit="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdits']/@tools.4" semanticCandidatesExpression="feature:keySet" domainClass="er.Key">
+            <style xsi:type="style:DotDescription" labelSize="7" labelFormat="italic" showIcon="false" sizeComputationExpression="1" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" showIcon="false" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:ToolGroup" name="DirectEdits">
+            <tools xsi:type="tool:DirectEditLabel" name="RenameGerund" label="Rename Gerund">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.relationship/]">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameEntity">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameRelationship" label="Rename Gerund">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameAttribute" label="Rename Gerund">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameKey" label="Rename Gerund">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameISA" label="Rename ISA">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameCategorisation" label="Rename Categorisation">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DirectEditLabel" name="RenameID" label="Rename ID">
+              <mask mask="{0}"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="EntityTool" label="Entity" containerMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Entity" referenceName="entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newEntity"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="RelationshipTool" label="Relationship" edgeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToGerund']" extraSourceMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" extraTargetMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[(not source.oclIsTypeOf(Relationship)) and (self.oclIsTypeOf(Entity) or self.oclIsTypeOf(Gerund))/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Relationship" referenceName="relationships" variableName="newRel">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newRelationship"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newRel">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:source"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:target"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[(not source.oclIsTypeOf(Relationship)) and (self.oclIsTypeOf(Relationship))/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Gerund" referenceName="gerunds" variableName="newGerund">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="relationship" valueExpression="var:target"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[newGerund.eContainer()/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Relationship" referenceName="relationships" variableName="newRel">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newRelationship"/>
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newRel">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:source"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newGerund"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[(source.oclIsTypeOf(Relationship)) and (self.oclIsTypeOf(Relationship))/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Gerund" referenceName="gerunds" variableName="newGerund">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="relationship" valueExpression="var:target"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[newGerund.eContainer()/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Gerund" referenceName="gerunds" variableName="newGerundS">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="relationship" valueExpression="var:source"/>
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[newGerundS.eContainer()/]">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Relationship" referenceName="relationships" variableName="newRel">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newRelationship"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newRel">
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newGerundS"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="entities">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:newGerund"/>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AttributeTool" label="Attribute" precondition="[not container.oclIsTypeOf(ERModel)/]" nodeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']" extraMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(Entity)/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Attribute" referenceName="entityAttributes">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newAttribute"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(Relationship)/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Attribute" referenceName="relationshipAttributes">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newAttribute"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(Gerund)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.relationship/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Attribute" referenceName="relationshipAttributes">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newAttribute"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="KeyTool" label="Key" nodeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Key" referenceName="keySet" variableName="key">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newKey"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.keySet -> size() = 1/]">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="primaryKey" valueExpression="var:key"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ISATool" label="ISA" edgeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='ISAToSubtypes'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='ISAToSupertype']" extraSourceMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" extraTargetMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclIsTypeOf(Entity) or self.oclIsTypeOf(Gerund)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.ISA" referenceName="relationships" variableName="newISA">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['IS-A'.concat(ISA.allInstances() -> size().toString())/]"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newISA">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="supertype">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:source"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="subtypes" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclIsTypeOf(ISA)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="subtypes" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IDTool" label="ID" edgeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='IDRelationshipToRegularEntity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='IDRelationshipToWeakEntity']" extraSourceMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" extraTargetMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']" connectionStartPrecondition="[not self.oclIsTypeOf(IdentificationDependency)/]">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.IdentificationDependency" referenceName="relationships" variableName="newID">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['ID'.concat(IdentificationDependency.allInstances() -> size().toString())/]"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newID">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.RegularEntity" referenceName="regularEntity">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="entity" valueExpression="var:source"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="weakEntity" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CategorisationTool" label="Categorisation" edgeMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='CategorisationToCategories'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='CategorisationToCategorizedEntity']" extraSourceMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']" extraTargetMappings="//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity'] //@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Gerund']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclIsTypeOf(Entity) or self.oclIsTypeOf(Gerund)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Categorisation" referenceName="relationships" variableName="newCat">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['XOR'.concat(Categorisation.allInstances() -> size().toString())/]"/>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:newCat">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="categorisedEntity" valueExpression="var:source"/>
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="er.Categories" referenceName="categorisationEntities" variableName="newCategories">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="entities" valueExpression="var:target"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclIsTypeOf(Categorisation)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.categorisationEntities/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="entities" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,99 @@
+prodavnica {
+	
+entities {
+		proizvod {
+			attributeSet {
+				KODPR,
+				NAZPR,
+				KOLPR
+			}
+			keySet {
+				PK_proizvod ( KODPR )
+			}
+			primaryKey PK_proizvod
+		},
+		prodavac {
+			attributeSet {
+				SIFPROD,
+				IMEPROD,
+				PRZPROD
+			}
+			keySet {
+				PK_prodavac ( SIFPROD )
+			}
+			primaryKey PK_prodavac
+		},
+		uloga {
+			attributeSet {
+				SIFUL,
+				NAZUL
+			}
+			keySet {
+				PK_uloga ( SIFUL )
+			}
+			primaryKey PK_uloga
+		},
+		kasa {
+			attributeSet {
+				IDK
+			}
+			keySet {
+				PK_kasa ( IDK )
+			}
+			primaryKey PK_kasa
+		},
+		racun {
+			attributeSet {
+				IDR
+			}
+			keySet {
+				PK_racun ( IDR )
+			}
+			primaryKey PK_racun
+		},
+		stavka {
+			attributeSet {
+				RBS,
+				KOLP
+			}
+			keySet {
+				PK_stavka ( RBS )
+			}
+			primaryKey PK_stavka
+		}
+	}
+	relationships {
+		ima_ul {
+			entitiesInRelationship {
+				uloga ( zero,
+				many ),
+				prodavac ( one,
+				one )
+			}
+		},
+		IdentificationDependency ID1 {
+			weakEntity racun regularEntity kasa ( zero,
+			many )
+		},
+		IdentificationDependency ID2 {
+			weakEntity stavka regularEntity proizvod ( zero,
+			one )
+		},
+		obradjuje {
+			entitiesInRelationship {
+				prodavac ( one,
+				many ),
+				racun ( one,
+				one )
+			}
+		},
+		ima_stavku {
+			entitiesInRelationship {
+				racun ( zero,
+				many ),
+				stavka ( one,
+				one )
+			}
+		}
+	}
+}

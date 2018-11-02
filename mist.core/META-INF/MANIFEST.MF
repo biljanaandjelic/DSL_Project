@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MIST core
+Bundle-SymbolicName: rs.ac.uns.ftn.acs.mist;singleton:=true
+Bundle-Version: 0.1.1
+Bundle-ClassPath: .
+Bundle-Vendor: ACS
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: er,
+ er.impl,
+ er.util,
+ classDiagram,
+ classDiagram.impl,
+ classDiagram.util,
+ rdbms,
+ rdbms.impl,
+ rdbms.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy

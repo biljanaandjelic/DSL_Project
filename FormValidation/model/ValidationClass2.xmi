@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formValidation:ValidationClass
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:formValidation="http://www.example.org/formValidation"
+    xsi:schemaLocation="http://www.example.org/formValidation formValidation.ecore"
+    name="kkk">
+  <classattribute
+      name="atr1">
+    <attributetype
+        vrsta="Number"/>
+  </classattribute>
+  <classattribute
+      name="atr2">
+    <attributetype
+        vrsta="Number"/>
+  </classattribute>
+  <classattribute
+      name="atr3">
+    <attributetype
+        vrsta="Number"/>
+  </classattribute>
+  <classrule
+      xsi:type="formValidation:LessThan"
+      classattribute="//@classattribute.0">
+    <attributearray
+        classattribute="//@classattribute.1 //@classattribute.2"/>
+  </classrule>
+</formValidation:ValidationClass>

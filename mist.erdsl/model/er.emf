@@ -1,0 +1,218 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore#/")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://www.example.org/er", prefix="er")
+package er;
+
+@Ecore(constraints="existedKey invalidPrimaryKey invalidAttributInKey")
+@gmf.node(border.width="1", figure="polygon", polygon.x="0 30 30 0", polygon.y="0 0 30 30")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(existedKey="
+			keySet->forAll(k1:Key, k2:Key | k1.keyAttributes->intersection(k2.keyAttributes)->includesAll(k1.keyAttributes) and k1.keyAttributes->symmetricDifference(k2.keyAttributes)->isEmpty() implies k1=k2)", existedKey$message="'The key with attribute set already exists'", invalidPrimaryKey="
+			if(keySet->notEmpty()) then
+				if(not primaryKey->oclIsUndefined()) then
+					keySet->includes(primaryKey)
+				else
+					not primaryKey->oclIsUndefined()
+				endif
+			else
+				keySet->isEmpty()
+			endif", invalidAttributInKey="
+				if(not keySet.keyAttributes->isEmpty()) then
+					if(entityAttributes->notEmpty()) then
+						entityAttributes->includesAll(keySet.keyAttributes)
+					else
+						entityAttributes->notEmpty()
+					endif
+				else
+					keySet.keyAttributes->isEmpty()
+				endif")
+class Entity extends ModellingConcept, EntityConcept {
+
+  @gmf.link(style="solid", color="0,0,0", width="0")
+  val Attribute[*] entityAttributes;
+
+  @gmf.compartment(layout="list")
+  val Key[*] keySet;
+
+  @gmf.link(label.text="primaryKey", target.decoration="arrow", style="dash", color="0,0,0")
+  ref Key primaryKey;
+}
+
+@Ecore(constraints="existedName")
+@gmf.node(label="name", label.icon="false", border.color="0,0,0")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(existedName="
+			ModellingConcept.allInstances()->symmetricDifference(Gerund.allInstances())->forAll(m1:ModellingConcept, m2:ModellingConcept | m1.name = m2.name implies m1=m2)")
+abstract class ModellingConcept {
+  attr String[1] name;
+}
+
+@gmf.node(figure="polygon", polygon.x="0 30 60 30", polygon.y="30 0 30 60")
+abstract class RelationshipConcept extends ModellingConcept {
+}
+
+@gmf.node(border.width="1", phantom="true", size="50,5")
+class Attribute extends ModellingConcept {
+  val AttributeDomain[1] attributedomain;
+}
+
+@gmf.node(border.width="1")
+class Domain extends ModellingConcept {
+  attr PrimitiveDomain[1] primitiveDomain;
+}
+
+enum MinCardinality {
+  zero = 0;
+  one = 1;
+}
+
+enum MaxCardinality {
+  one = 1;
+  many = 2;
+}
+
+@gmf.node(border.width="1")
+class Relationship extends RelationshipConcept {
+
+  @gmf.affixed
+  val RegularEntity[2..*] entities;
+
+  @gmf.link(style="solid", color="0,0,0")
+  val Attribute[*] relationshipAttributes;
+}
+
+@Ecore(constraints="invalidClassificationAtrtibute SubTypeExistsAsSuperType duplicateSybtype")
+@gmf.node(label.text="IS-A", label.style="bold", border.width="2", figure="polygon", polygon.x="0 15 30", polygon.y="15 0 15")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(invalidClassificationAtrtibute="
+		if supertype.entity.oclIsTypeOf(Entity) then
+			supertype.entity.oclAsType(Entity).entityAttributes->includes(classificationAttribute) 
+		else 
+			supertype.entity.oclAsType(Gerund).relationship.relationshipAttributes->includes(classificationAttribute) 	
+		endif", SubTypeExistsAsSuperType="
+		if(supertype.entity.oclIsTypeOf(Entity)) then 
+			subtypes->excludes(supertype.entity.oclAsType(Entity))
+		else
+			not supertype.entity.oclIsTypeOf(Entity)
+		endif", duplicateSybtype="
+			ISA.allInstances().subtypes->forAll(e1:Entity | ISA.allInstances().subtypes->select(e2 | e1.name=e2.name)->size()<2)")
+class ISA extends RelationshipConcept {
+
+  @gmf.affixed
+  val RegularEntity[1] supertype;
+
+  @gmf.link(target.decoration="arrow", style="solid", color="0,0,0", border.width="5")
+  ref Entity[2..*] subtypes;
+
+  @gmf.link(label.text="classificationAttribute", target.decoration="arrow", style="dash", color="0,0,0")
+  ref Attribute[1] classificationAttribute;
+}
+
+@Ecore(constraints="invalidCategory")
+@gmf.node(label.text="EX-OR", border.width="2", figure="polygon", polygon.x="0 15 30", polygon.y="0 15 0")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(invalidCategory="
+			categorisationEntities.entities->excludes(categorisedEntity) and categorisationEntities.entities->
+			forAll(e1:EntityConcept, e2:EntityConcept | 
+						if(e1.oclIsTypeOf(Entity) and  e2.oclIsTypeOf(Entity)) then
+							e1.oclAsType(Entity).name = e2.oclAsType(Entity).name implies e1 = e2
+						else if(e1.oclIsTypeOf(Gerund) and  e2.oclIsTypeOf(Gerund)) then
+								e1.oclAsType(Gerund).relationship.name = e2.oclAsType(Gerund).relationship.name implies e1 = e2
+							 else
+							 	true
+							 endif
+						endif
+					)")
+class Categorisation extends RelationshipConcept {
+
+  @gmf.affixed
+  val Categories[1] categorisationEntities;
+  attr boolean[1] isPartial = false;
+
+  @gmf.link(target.decoration="arrow", style="solid", color="0,0,0")
+  ref EntityConcept[1] categorisedEntity;
+}
+
+@Ecore(constraints="invalidWeakEntity")
+@gmf.node(border.width="2", border.color="0,0,0")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(invalidWeakEntity="
+		if(regularEntity.entity.oclIsTypeOf(Entity)) then
+			regularEntity.entity.oclAsType(Entity) <> weakEntity
+		else
+			not regularEntity.entity.oclIsTypeOf(Entity)
+		endif")
+class IdentificationDependency extends RelationshipConcept {
+
+  @gmf.link(label.text="weakEntity", target.decoration="arrow", style="solid", width="2", color="0,0,0")
+  ref Entity[1] weakEntity;
+
+  @gmf.affixed
+  val RegularEntity[1] regularEntity;
+}
+
+@gmf.node(label.placement="external", label="min,max", label.pattern="({0},{1})", label.icon="false", border.color="0,0,0", color="255,255,255", border.width="1", figure="ellipse", size="7,7")
+class RegularEntity {
+
+  @gmf.link(target.decoration="arrow", style="solid", color="0,0,0")
+  ref EntityConcept[1] entity;
+  attr String role;
+  attr MinCardinality[1] min;
+  attr MaxCardinality[1] max;
+}
+
+@gmf.node(label.placement="external", label="min,max", label.pattern="({0},{1})", label.icon="false", border.color="0,0,0", color="255,255,255", border.width="1", figure="ellipse", size="7,7")
+class Categories {
+
+  @gmf.link(target.decoration="arrow", style="solid", color="0,0,0", border.width="2")
+  ref EntityConcept[2..*] entities;
+  attr MinCardinality[1] min;
+  attr MaxCardinality max;
+}
+
+@gmf.diagram(model.extension="erdsl", diagram.extension="erdsldiag")
+class ERModel extends ModellingConcept {
+
+  @gmf.compartment
+  val Entity[+] entities;
+
+  @gmf.compartment
+  val RelationshipConcept[+] relationships;
+
+  @gmf.compartment
+  val Gerund[*] gerunds;
+
+  @gmf.compartment
+  val Domain[*] domains;
+}
+
+abstract class EntityConcept {
+}
+
+@gmf.node(border.width="1", size="50,25")
+class Key extends ModellingConcept {
+
+  @gmf.link(target.decoration="arrow", style="dash", color="180,180,180")
+  ref Attribute[+] keyAttributes;
+}
+
+@gmf.node(label.placement="none", label.icon="false", border.width="1", border.color="0,0,0", figure="polygon", polygon.x="0 0 60 60", polygon.y="60 0 0 60")
+class Gerund extends EntityConcept {
+
+  @gmf.compartment(layout="list")
+  val Relationship[1] relationship;
+}
+
+@gmf.node(label.placement="none", label.icon="false", color="255,178,102", border.width="0")
+class AttributeDomain {
+
+  @gmf.link(target.decoration="arrow", style="solid", color="0,0,0")
+  ref Domain[1] domain;
+  attr String default;
+  attr int length;
+}
+
+enum PrimitiveDomain {
+  integer = 0;
+  string = 1;
+  real = 2;
+  boolean = 3;
+  date = 4;
+  time = 5;
+}
+

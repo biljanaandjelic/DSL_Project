@@ -1,0 +1,35 @@
+Automobil{
+	marka {
+		type String
+	}
+	
+	datumProizvodje{
+		type Date
+		DatePattern "dd-MM-yyyy"
+		MinDate "01-01-1890"
+	}
+	
+	boja{
+		type String
+	}
+	
+	duzina{
+		type Number
+	}
+	
+	sirina{
+		type Number
+	}
+	
+	snaga{
+		type Number
+	}
+	
+	brojBrzina{
+		type Number
+	}
+	
+	tip{
+		type String
+	}
+}

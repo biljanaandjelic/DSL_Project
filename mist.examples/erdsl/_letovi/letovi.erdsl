@@ -1,0 +1,72 @@
+letovi {
+	
+entities {
+		pilot {
+			attributeSet {
+				IDPLT,
+				IMEPLT,
+				PRZPLT
+			}
+			keySet {
+				PK_pilot ( IDPLT )
+			}
+			primaryKey PK_pilot
+		},
+		avion {
+			attributeSet {
+				IDTAV,
+				NAZTAV
+			}
+			keySet {
+				PK_avion ( IDTAV )
+			}
+			primaryKey PK_avion
+		},
+		let {
+			attributeSet {
+				IDLET,
+				OPLET
+			}
+			keySet {
+				PK_let ( IDLET )
+			}
+			primaryKey PK_let
+		}
+	}
+	gerunds {
+		obavlja {
+			entitiesInRelationship {
+				avion ( one,
+				many ),
+				let ( one,
+				one )
+			}
+		},
+		angaz {
+			entitiesInRelationship {
+				pilot ( zero,
+				many ),
+				avion ( one,
+				many )
+			}
+		}
+	}
+	relationships {
+		je_sef {
+			entitiesInRelationship {
+				pilot ( zero,
+				many ),
+				let ( one,
+				one )
+			}
+		},
+		pojavljuje {
+			entitiesInRelationship {
+				angaz ( zero,
+				many ),
+				obavlja ( one,
+				many )
+			}
+		}
+	}
+}

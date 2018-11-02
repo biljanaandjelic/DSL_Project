@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:er="http://www.example.org/er" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_ltQAAGg8EeS7DZTHDlgVHg" selectedViews="_qRdyEGg8EeS7DZTHDlgVHg" version="8.1.1">
+  <models xmi:type="er:ERModel" href="studsluzba.erdsl#/"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_qRdyEGg8EeS7DZTHDlgVHg" initialized="true">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_rR24EGg8EeS7DZTHDlgVHg" name="studsluzba">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_rSHWwGg8EeS7DZTHDlgVHg" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_rSHWwWg8EeS7DZTHDlgVHg" type="Sirius" element="_rR24EGg8EeS7DZTHDlgVHg" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_soO1IGg8EeS7DZTHDlgVHg" type="2003" element="_soDO8Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_soSfgGg8EeS7DZTHDlgVHg" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_soSfgWg8EeS7DZTHDlgVHg" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_725-wGg8EeS7DZTHDlgVHg" type="3010" element="_72g9MGg8EeS7DZTHDlgVHg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_725-wWg8EeS7DZTHDlgVHg"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_soSfgmg8EeS7DZTHDlgVHg"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_soSfg2g8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_soO1IWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_soO1Img8EeS7DZTHDlgVHg" x="264" y="144"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_t6Rr0Gg8EeS7DZTHDlgVHg" type="2003" element="_t6MzUGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_t6Rr02g8EeS7DZTHDlgVHg" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_t6Rr1Gg8EeS7DZTHDlgVHg" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_Fw9NEGg9EeS7DZTHDlgVHg" type="3010" element="_Fww_0Gg9EeS7DZTHDlgVHg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Fw9NEWg9EeS7DZTHDlgVHg"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_t6Rr1Wg8EeS7DZTHDlgVHg"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_t6Rr1mg8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_t6Rr0Wg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t6Rr0mg8EeS7DZTHDlgVHg" x="528" y="144"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_u_7FQGg8EeS7DZTHDlgVHg" type="2003" element="_u_1lsGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_u_7sUGg8EeS7DZTHDlgVHg" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_u_7sUWg8EeS7DZTHDlgVHg" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_PcBkMGg9EeS7DZTHDlgVHg" type="3010" element="_Pb0I0Gg9EeS7DZTHDlgVHg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PcBkMWg9EeS7DZTHDlgVHg"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_u_7sUmg8EeS7DZTHDlgVHg"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_u_7sU2g8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_u_7FQWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u_7FQmg8EeS7DZTHDlgVHg" x="768" y="144"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_v3MEcGg8EeS7DZTHDlgVHg" type="2003" element="_v3FWwGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_v3MrgGg8EeS7DZTHDlgVHg" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_v3MrgWg8EeS7DZTHDlgVHg" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_V7JjwGg9EeS7DZTHDlgVHg" type="3010" element="_V65FEGg9EeS7DZTHDlgVHg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_V7JjwWg9EeS7DZTHDlgVHg"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_v3Mrgmg8EeS7DZTHDlgVHg"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_v3Mrg2g8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_v3MEcWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v3MEcmg8EeS7DZTHDlgVHg" x="528" y="312"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0ZLB4Gg8EeS7DZTHDlgVHg" type="2001" element="_0Y4G8Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0ZLo8Gg8EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_0ZLo8Wg8EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-dYRwGg8EeS7DZTHDlgVHg" type="3016" element="_-dFW0Gg8EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-dYRwWg8EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-dYRwmg8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0ZLB4Wg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZLB4mg8EeS7DZTHDlgVHg" x="132" y="84" width="42" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0q8uYGg8EeS7DZTHDlgVHg" type="2001" element="_0qwhIGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0q8uY2g8EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_0q8uZGg8EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0q98gGg8EeS7DZTHDlgVHg" type="3016" element="_0qxIMGg8EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_0q98gWg8EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0q98gmg8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0q8uYWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0q8uYmg8EeS7DZTHDlgVHg" x="180" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0_lhoGg8EeS7DZTHDlgVHg" type="2001" element="_0_Z7cGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0_mIsGg8EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_0_mIsWg8EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0_n94Gg8EeS7DZTHDlgVHg" type="3016" element="_0_aigGg8EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_0_n94Wg8EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0_n94mg8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0_lhoWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0_lhomg8EeS7DZTHDlgVHg" x="216" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1R-SIGg8EeS7DZTHDlgVHg" type="2001" element="_1R3kcGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_1R-5MGg8EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_1R-5MWg8EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1R_gQGg8EeS7DZTHDlgVHg" type="3016" element="_1R3kcWg8EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_1R_gQWg8EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1R_gQmg8EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_1R-SIWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1R-SImg8EeS7DZTHDlgVHg" x="252" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__nAMQGg8EeS7DZTHDlgVHg" type="2001" element="__myw4Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="__nAzUGg8EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__nAzUWg8EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_HY9FoGg9EeS7DZTHDlgVHg" type="3016" element="_HY2X8Gg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_HY9FoWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HY9Fomg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__nAMQWg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nAMQmg8EeS7DZTHDlgVHg" x="552" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AGOe4Gg9EeS7DZTHDlgVHg" type="2001" element="_AGHxMGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_AGOe42g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_AGOe5Gg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AGPF8Gg9EeS7DZTHDlgVHg" type="3016" element="_AGIYQGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_AGPF8Wg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AGPF8mg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AGOe4Wg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AGOe4mg9EeS7DZTHDlgVHg" x="588" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AkM0UGg9EeS7DZTHDlgVHg" type="2001" element="_AjvhUGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_AkM0U2g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_AkM0VGg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AkNbYGg9EeS7DZTHDlgVHg" type="3016" element="_AjwIYGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_AkNbYWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkNbYmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AkM0UWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkM0Umg9EeS7DZTHDlgVHg" x="624" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IT0ycGg9EeS7DZTHDlgVHg" type="2001" element="_ITrBcGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_IT0yc2g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_IT0ydGg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ac0YIGg9EeS7DZTHDlgVHg" type="3016" element="_acscUGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ac0YIWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ac0YImg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_IT0ycWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IT0ycmg9EeS7DZTHDlgVHg" x="780" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JBQgMGg9EeS7DZTHDlgVHg" type="2001" element="_JBJygGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JBRHQmg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JBRHQ2g9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JBRuUGg9EeS7DZTHDlgVHg" type="3016" element="_JBKZkGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_JBRuUWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JBRuUmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_JBRHQGg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JBRHQWg9EeS7DZTHDlgVHg" x="816" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JTYyAGg9EeS7DZTHDlgVHg" type="2001" element="_JTQ2MGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JTZZEGg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JTZZEWg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JTanMGg9EeS7DZTHDlgVHg" type="3016" element="_JTRdQGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_JTanMWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTanMmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_JTYyAWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTYyAmg9EeS7DZTHDlgVHg" x="852" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JmR40Gg9EeS7DZTHDlgVHg" type="2001" element="_JmGSoGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JmSf4Gg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JmSf4Wg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JmTG8Gg9EeS7DZTHDlgVHg" type="3016" element="_JmG5sGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_JmTG8Wg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmTG8mg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_JmR40Wg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmR40mg9EeS7DZTHDlgVHg" x="888" y="84" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SsTpMGg9EeS7DZTHDlgVHg" type="2001" element="_SsKfQGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_SsUQQGg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_SsUQQWg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SsUQQmg9EeS7DZTHDlgVHg" type="3016" element="_SsLGUGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_SsUQQ2g9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SsUQRGg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SsTpMWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SsTpMmg9EeS7DZTHDlgVHg" x="552" y="372" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TS-AkGg9EeS7DZTHDlgVHg" type="2001" element="_TS2EwGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_TS-noGg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_TS-noWg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ZSsuYGg9EeS7DZTHDlgVHg" type="3016" element="_ZSkLgGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ZSsuYWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZSsuYmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TS-AkWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TS-Akmg9EeS7DZTHDlgVHg" x="516" y="372" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ch3ZEGg9EeS7DZTHDlgVHg" type="2001" element="_cgNzQGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_ch3ZE2g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ch3ZFGg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ch4nMGg9EeS7DZTHDlgVHg" type="3017" element="_cgNzQWg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ch4nMWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch4nMmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ch3ZEWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch3ZEmg9EeS7DZTHDlgVHg" x="396" y="144" width="50" height="50"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_nOvygGg9EeS7DZTHDlgVHg" type="2001" element="_nOhJAGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_nOvyg2g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_nOvyhGg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nOwZkGg9EeS7DZTHDlgVHg" type="3017" element="_nOhJAWg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_nOwZkWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOwZkmg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nOvygWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOvygmg9EeS7DZTHDlgVHg" x="396" y="60" width="50" height="50"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xqO58Gg9EeS7DZTHDlgVHg" type="2001" element="_xp1RUGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_xqQIEGg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xqQIEWg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xqRWMGg9EeS7DZTHDlgVHg" type="3017" element="_xp1RUWg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_xqR9QGg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqR9QWg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xqO58Wg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqO58mg9EeS7DZTHDlgVHg" x="648" y="144" width="50" height="50"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_27xsEGg9EeS7DZTHDlgVHg" type="2001" element="_266wcGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_27xsE2g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_27xsFGg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_27yTIGg9EeS7DZTHDlgVHg" type="3016" element="_267XgGg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_27yTIWg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_27yTImg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_27xsEWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_27xsEmg9EeS7DZTHDlgVHg" x="372" y="12" width="49" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3eO44Gg9EeS7DZTHDlgVHg" type="2001" element="_3eCEkGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_3eO442g9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3eO45Gg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3ePf8Gg9EeS7DZTHDlgVHg" type="3016" element="_3eCEkWg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_3ePf8Wg9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ePf8mg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3eO44Wg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3eO44mg9EeS7DZTHDlgVHg" x="420" y="12" width="49" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9011oGg9EeS7DZTHDlgVHg" type="2001" element="_90lW8Gg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_902csGg9EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_902csWg9EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_902csmg9EeS7DZTHDlgVHg" type="3017" element="_90lW8Wg9EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_902cs2g9EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_902ctGg9EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9011oWg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9011omg9EeS7DZTHDlgVHg" x="768" y="300" width="50" height="50"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XUqpgGg_EeS7DZTHDlgVHg" type="2001" element="_XTx4sGg_EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_XUqpg2g_EeS7DZTHDlgVHg" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_XUqphGg_EeS7DZTHDlgVHg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XUrQkGg_EeS7DZTHDlgVHg" type="3017" element="_XTx4sWg_EeS7DZTHDlgVHg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_XUrQkWg_EeS7DZTHDlgVHg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUrQkmg_EeS7DZTHDlgVHg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_XUqpgWg_EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUqpgmg_EeS7DZTHDlgVHg" x="528" y="216" width="50" height="50"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_rSHWwmg8EeS7DZTHDlgVHg"/>
+          <edges xmi:type="notation:Edge" xmi:id="_0ZOsQGg8EeS7DZTHDlgVHg" type="4001" element="_0ZHXgGg8EeS7DZTHDlgVHg" source="_soO1IGg8EeS7DZTHDlgVHg" target="_0ZLB4Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0ZPTUGg8EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZPTUWg8EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0ZP6YGg8EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZP6YWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0ZQhcGg8EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZQhcWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_0ZOsQWg8EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_0ZOsQmg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ZOsQ2g8EeS7DZTHDlgVHg" points="[-29, -14, 111, 50]$[-119, -55, 21, 9]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ZUL0Gg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ZUL0Wg8EeS7DZTHDlgVHg" id="(0.23809523809523808,0.8)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_0q_KoGg8EeS7DZTHDlgVHg" type="4001" element="_0q1ZoGg8EeS7DZTHDlgVHg" source="_soO1IGg8EeS7DZTHDlgVHg" target="_0q8uYGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0q_KpGg8EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0q_KpWg8EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0q_Kpmg8EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0q_Kp2g8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0q_KqGg8EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0q_KqWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_0q_KoWg8EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_0q_Komg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0q_Ko2g8EeS7DZTHDlgVHg" points="[348, 144, 348, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0q_xsGg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0q_xsWg8EeS7DZTHDlgVHg" id="(0.1,0.7666666666666667)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_0_ok8Gg8EeS7DZTHDlgVHg" type="4001" element="_0_gpIGg8EeS7DZTHDlgVHg" source="_soO1IGg8EeS7DZTHDlgVHg" target="_0_lhoGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_0_pMAGg8EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0_pMAWg8EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0_pMAmg8EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0_pMA2g8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0_pMBGg8EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0_pMBWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_0_ok8Wg8EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_0_ok8mg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0_ok82g8EeS7DZTHDlgVHg" points="[348, 144, 348, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0_pzEGg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0_pzEWg8EeS7DZTHDlgVHg" id="(0.43333333333333335,0.8333333333333334)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_1SAHUGg8EeS7DZTHDlgVHg" type="4001" element="_1R6AsGg8EeS7DZTHDlgVHg" source="_soO1IGg8EeS7DZTHDlgVHg" target="_1R-SIGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_1SAHVGg8EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1SAHVWg8EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1SAuYGg8EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1SAuYWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1SAuYmg8EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1SAuY2g8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_1SAHUWg8EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_1SAHUmg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1SAHU2g8EeS7DZTHDlgVHg" points="[348, 144, 348, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1SAuZGg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1SAuZWg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__nCBcGg8EeS7DZTHDlgVHg" type="4001" element="__m10MGg8EeS7DZTHDlgVHg" source="_t6Rr0Gg8EeS7DZTHDlgVHg" target="__nAMQGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="__nCBdGg8EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nCBdWg8EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__nCogGg8EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nCogWg8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__nCogmg8EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nCog2g8EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__nCBcWg8EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__nCBcmg8EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__nCBc2g8EeS7DZTHDlgVHg" points="[528, 144, 528, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__nCohGg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__nCohWg8EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_AGPtAGg9EeS7DZTHDlgVHg" type="4001" element="_AGLbkGg9EeS7DZTHDlgVHg" source="_t6Rr0Gg8EeS7DZTHDlgVHg" target="_AGOe4Gg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_AGPtBGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AGPtBWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AGPtBmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AGPtB2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AGPtCGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AGPtCWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_AGPtAWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_AGPtAmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AGPtA2g9EeS7DZTHDlgVHg" points="[528, 144, 528, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AGQUEGg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AGQUEWg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_AkOCcGg9EeS7DZTHDlgVHg" type="4001" element="_AkB1MGg9EeS7DZTHDlgVHg" source="_t6Rr0Gg8EeS7DZTHDlgVHg" target="_AkM0UGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_AkOCdGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkOCdWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AkOCdmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkOCd2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AkOCeGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AkOCeWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_AkOCcWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_AkOCcmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AkOCc2g9EeS7DZTHDlgVHg" points="[528, 144, 528, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AkOpgGg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AkOpgWg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_IT2AkGg9EeS7DZTHDlgVHg" type="4001" element="_ITv58Gg9EeS7DZTHDlgVHg" source="_u_7FQGg8EeS7DZTHDlgVHg" target="_IT0ycGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_IT2AlGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IT2AlWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IT2Almg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IT2Al2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IT2noGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IT2noWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_IT2AkWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_IT2Akmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IT2Ak2g9EeS7DZTHDlgVHg" points="[696, 144, 696, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IT2nomg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IT2no2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_JBSVYGg9EeS7DZTHDlgVHg" type="4001" element="_JBNc4Gg9EeS7DZTHDlgVHg" source="_u_7FQGg8EeS7DZTHDlgVHg" target="_JBQgMGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JBSVZGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JBSVZWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JBSVZmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JBSVZ2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JBS8cGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JBS8cWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_JBSVYWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_JBSVYmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JBSVY2g9EeS7DZTHDlgVHg" points="[696, 144, 696, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JBS8cmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JBS8c2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_JTb1UGg9EeS7DZTHDlgVHg" type="4001" element="_JTUgkGg9EeS7DZTHDlgVHg" source="_u_7FQGg8EeS7DZTHDlgVHg" target="_JTYyAGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JTb1VGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTb1VWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JTb1Vmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTb1V2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JTb1WGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTb1WWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_JTb1UWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_JTb1Umg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JTb1U2g9EeS7DZTHDlgVHg" points="[696, 144, 696, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JTccYGg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JTccYWg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_JmTuAGg9EeS7DZTHDlgVHg" type="4001" element="_JmOOcGg9EeS7DZTHDlgVHg" source="_u_7FQGg8EeS7DZTHDlgVHg" target="_JmR40Gg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_JmWKQGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmWKQWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JmWKQmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmWKQ2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JmWKRGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmWKRWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_JmTuAWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_JmTuAmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JmTuA2g9EeS7DZTHDlgVHg" points="[696, 144, 696, 144]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmWxUGg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmWxUWg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_SsU3UGg9EeS7DZTHDlgVHg" type="4001" element="_SsP-0Gg9EeS7DZTHDlgVHg" source="_v3MEcGg8EeS7DZTHDlgVHg" target="_SsTpMGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_SsVeYGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SsVeYWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SsVeYmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SsVeY2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SsVeZGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SsVeZWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_SsU3UWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_SsU3Umg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SsU3U2g9EeS7DZTHDlgVHg" points="[528, 288, 528, 288]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SsVeZmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SsVeZ2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_TTBD4Gg9EeS7DZTHDlgVHg" type="4001" element="_TS6WMGg9EeS7DZTHDlgVHg" source="_v3MEcGg8EeS7DZTHDlgVHg" target="_TS-AkGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_TTBD5Gg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TTBD5Wg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_TTBD5mg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TTBD52g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_TTBq8Gg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TTBq8Wg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_TTBD4Wg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_TTBD4mg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TTBD42g9EeS7DZTHDlgVHg" points="[528, 288, 528, 288]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TTBq8mg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TTBq82g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ch6cYGg9EeS7DZTHDlgVHg" type="4001" element="_chKOcGg9EeS7DZTHDlgVHg" source="_ch3ZEGg9EeS7DZTHDlgVHg" target="_soO1IGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_ch6cZGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch6cZWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ch6cZmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch6cZ2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ch7DcGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch7DcWg9EeS7DZTHDlgVHg" x="-28" y="-5"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ch6cYWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ch6cYmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ch6cY2g9EeS7DZTHDlgVHg" points="[-25, 0, 103, 6]$[-49, 0, 79, 6]$[-99, 0, 29, 6]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ch7Dcmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ch7Dc2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ch7DdGg9EeS7DZTHDlgVHg" type="4001" element="_chPuAGg9EeS7DZTHDlgVHg" source="_ch3ZEGg9EeS7DZTHDlgVHg" target="_t6Rr0Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_ch7qgGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch7qgWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ch7qgmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch7qg2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ch8RkGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ch8RkWg9EeS7DZTHDlgVHg" x="-23" y="6"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ch7DdWg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ch7Ddmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ch7Dd2g9EeS7DZTHDlgVHg" points="[25, -1, -92, 8]$[107, -1, -10, 8]"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ch8Rkmg9EeS7DZTHDlgVHg" id="(0.23404255319148937,0.425)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_nOxnsGg9EeS7DZTHDlgVHg" type="4001" element="_nOqS8Gg9EeS7DZTHDlgVHg" source="_nOvygGg9EeS7DZTHDlgVHg" target="_soO1IGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_nOyOwGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOyOwWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nOyOwmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOyOw2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nOy10Gg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOy10Wg9EeS7DZTHDlgVHg" x="5" y="-36"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_nOxnsWg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_nOxnsmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nOxns2g9EeS7DZTHDlgVHg" points="[-25, -1, 91, -79]$[-88, -1, 28, -79]$[-88, 59, 28, -19]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nOy10mg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nOy102g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_nOzc4Gg9EeS7DZTHDlgVHg" type="4001" element="_nOq6AGg9EeS7DZTHDlgVHg" source="_nOvygGg9EeS7DZTHDlgVHg" target="_t6Rr0Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_nOzc5Gg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOzc5Wg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nO0rAGg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nO0rAWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nO1SEGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nO1SEWg9EeS7DZTHDlgVHg" x="4" y="37"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_nOzc4Wg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_nOzc4mg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nOzc42g9EeS7DZTHDlgVHg" points="[32, 14, -104, -79]$[126, 14, -10, -79]$[126, 74, -10, -19]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nO1SEmg9EeS7DZTHDlgVHg" id="(0.36666666666666664,0.2)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xqSkUGg9EeS7DZTHDlgVHg" type="4001" element="_xqD60Gg9EeS7DZTHDlgVHg" source="_xqO58Gg9EeS7DZTHDlgVHg" target="_t6Rr0Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_xqTLYGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTLYWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xqTLYmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTLY2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xqTLZGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTLZWg9EeS7DZTHDlgVHg" x="-29" y="-6"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xqSkUWg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xqSkUmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xqSkU2g9EeS7DZTHDlgVHg" points="[-25, -1, 98, 5]$[-100, -1, 23, 5]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xqTLZmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xqTLZ2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xqTycGg9EeS7DZTHDlgVHg" type="4001" element="_xqEh4Gg9EeS7DZTHDlgVHg" source="_xqO58Gg9EeS7DZTHDlgVHg" target="_u_7FQGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_xqTydGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTydWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xqTydmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTyd2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xqTyeGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xqTyeWg9EeS7DZTHDlgVHg" x="-25" y="6"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xqTycWg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xqTycmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xqTyc2g9EeS7DZTHDlgVHg" points="[25, -1, -103, 5]$[95, -1, -33, 5]"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_27y6MGg9EeS7DZTHDlgVHg" type="4001" element="_269MsGg9EeS7DZTHDlgVHg" source="_nOvygGg9EeS7DZTHDlgVHg" target="_27xsEGg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_27y6NGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_27y6NWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_27zhQGg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_27zhQWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_270IUGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_270IUWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_27y6MWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_27y6Mmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_27y6M2g9EeS7DZTHDlgVHg" points="[396, 60, 396, 60]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_270IUmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_270IU2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_3eQHAGg9EeS7DZTHDlgVHg" type="4001" element="_3eFH4Gg9EeS7DZTHDlgVHg" source="_nOvygGg9EeS7DZTHDlgVHg" target="_3eO44Gg9EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_3eQHBGg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3eQHBWg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3eQHBmg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3eQHB2g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3eQuEGg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3eQuEWg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_3eQHAWg9EeS7DZTHDlgVHg"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_3eQHAmg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3eQHA2g9EeS7DZTHDlgVHg" points="[396, 60, 396, 60]$[0, 0, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3eQuEmg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3eQuE2g9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_903q0Gg9EeS7DZTHDlgVHg" type="4001" element="_90vvAGg9EeS7DZTHDlgVHg" source="_9011oGg9EeS7DZTHDlgVHg" target="_v3MEcGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_903q1Gg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_903q1Wg9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_903q1mg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_903q12g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_903q2Gg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_903q2Wg9EeS7DZTHDlgVHg" x="-28" y="18"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_903q0Wg9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_903q0mg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_903q02g9EeS7DZTHDlgVHg" points="[-25, -1, 211, -7]$[-207, -1, 29, -7]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_904R4Gg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_904R4Wg9EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_904R4mg9EeS7DZTHDlgVHg" type="4001" element="_90vvB2g9EeS7DZTHDlgVHg" source="_9011oGg9EeS7DZTHDlgVHg" target="_u_7FQGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_904R5mg9EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_904R52g9EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_904R6Gg9EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_904R6Wg9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_904R6mg9EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_904R62g9EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_904R42g9EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_904R5Gg9EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_904R5Wg9EeS7DZTHDlgVHg" points="[6, -11, -9, 149]$[6, -141, -9, 19]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_904R7Gg9EeS7DZTHDlgVHg" id="(0.36666666666666664,0.225)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_XUr3oGg_EeS7DZTHDlgVHg" type="4001" element="_XUaK0Gg_EeS7DZTHDlgVHg" source="_XUqpgGg_EeS7DZTHDlgVHg" target="_t6Rr0Gg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_XUsesGg_EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUsesWg_EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XUsesmg_EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUses2g_EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XUsetGg_EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUsetWg_EeS7DZTHDlgVHg" x="-23" y="25"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_XUr3oWg_EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_XUr3omg_EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XUr3o2g_EeS7DZTHDlgVHg" points="[-1, -25, 2, 53]$[-1, -59, 2, 19]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XUtFwGg_EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XUtFwWg_EeS7DZTHDlgVHg" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_XUtFwmg_EeS7DZTHDlgVHg" type="4001" element="_XUax4Gg_EeS7DZTHDlgVHg" source="_XUqpgGg_EeS7DZTHDlgVHg" target="_v3MEcGg8EeS7DZTHDlgVHg">
+            <children xmi:type="notation:Node" xmi:id="_XUtFxmg_EeS7DZTHDlgVHg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUtFx2g_EeS7DZTHDlgVHg" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XUtFyGg_EeS7DZTHDlgVHg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUtFyWg_EeS7DZTHDlgVHg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_XUtFymg_EeS7DZTHDlgVHg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XUtFy2g_EeS7DZTHDlgVHg" x="-23" y="-29"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_XUtFw2g_EeS7DZTHDlgVHg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_XUtFxGg_EeS7DZTHDlgVHg" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XUtFxWg_EeS7DZTHDlgVHg" points="[-10, 39, -3, -53]$[-10, 85, -3, -7]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XUts0Gg_EeS7DZTHDlgVHg" id="(0.6808510638297872,0.225)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XUts0Wg_EeS7DZTHDlgVHg" id="(0.4666666666666667,0.2)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_soDO8Gg8EeS7DZTHDlgVHg" name="student" outgoingEdges="_0ZHXgGg8EeS7DZTHDlgVHg _0q1ZoGg8EeS7DZTHDlgVHg _0_gpIGg8EeS7DZTHDlgVHg _1R6AsGg8EeS7DZTHDlgVHg" incomingEdges="_chKOcGg9EeS7DZTHDlgVHg _nOqS8Gg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <semanticElements xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_soD2AGg8EeS7DZTHDlgVHg" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_soD2AWg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_soD2Amg8EeS7DZTHDlgVHg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_soD2A2g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_soD2BGg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_72g9MGg8EeS7DZTHDlgVHg" name="PK_student">
+          <target xmi:type="er:Key" href="studsluzba.erdsl#//@entities.0/@keySet.0"/>
+          <semanticElements xmi:type="er:Key" href="studsluzba.erdsl#//@entities.0/@keySet.0"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_72jZcGg8EeS7DZTHDlgVHg" labelSize="7" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_72jZcWg8EeS7DZTHDlgVHg"/>
+            <description xmi:type="style:DotDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_72jZcmg8EeS7DZTHDlgVHg"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_72jZc2g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_t6MzUGg8EeS7DZTHDlgVHg" name="predmet" outgoingEdges="__m10MGg8EeS7DZTHDlgVHg _AGLbkGg9EeS7DZTHDlgVHg _AkB1MGg9EeS7DZTHDlgVHg" incomingEdges="_chPuAGg9EeS7DZTHDlgVHg _nOq6AGg9EeS7DZTHDlgVHg _xqD60Gg9EeS7DZTHDlgVHg _XUaK0Gg_EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.1"/>
+        <semanticElements xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_t6MzUWg8EeS7DZTHDlgVHg" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_t6MzUmg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_t6MzU2g8EeS7DZTHDlgVHg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_t6MzVGg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_t6MzVWg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Fww_0Gg9EeS7DZTHDlgVHg" name="PK_pred">
+          <target xmi:type="er:Key" href="studsluzba.erdsl#//@entities.1/@keySet.0"/>
+          <semanticElements xmi:type="er:Key" href="studsluzba.erdsl#//@entities.1/@keySet.0"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_Fwxm4Gg9EeS7DZTHDlgVHg" labelSize="7" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Fwxm4Wg9EeS7DZTHDlgVHg"/>
+            <description xmi:type="style:DotDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Fwxm4mg9EeS7DZTHDlgVHg"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Fwxm42g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_u_1lsGg8EeS7DZTHDlgVHg" name="nastavnik" outgoingEdges="_ITv58Gg9EeS7DZTHDlgVHg _JBNc4Gg9EeS7DZTHDlgVHg _JTUgkGg9EeS7DZTHDlgVHg _JmOOcGg9EeS7DZTHDlgVHg" incomingEdges="_xqEh4Gg9EeS7DZTHDlgVHg _90vvB2g9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <semanticElements xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_u_1lsWg8EeS7DZTHDlgVHg" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_u_1lsmg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_u_1ls2g8EeS7DZTHDlgVHg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_u_1ltGg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_u_1ltWg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Pb0I0Gg9EeS7DZTHDlgVHg" name="PK_nastavnik">
+          <target xmi:type="er:Key" href="studsluzba.erdsl#//@entities.2/@keySet.0"/>
+          <semanticElements xmi:type="er:Key" href="studsluzba.erdsl#//@entities.2/@keySet.0"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_Pb0I0Wg9EeS7DZTHDlgVHg" labelSize="7" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Pb0I0mg9EeS7DZTHDlgVHg"/>
+            <description xmi:type="style:DotDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Pb0I02g9EeS7DZTHDlgVHg"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Pb0I1Gg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_v3FWwGg8EeS7DZTHDlgVHg" name="katedra" outgoingEdges="_SsP-0Gg9EeS7DZTHDlgVHg _TS6WMGg9EeS7DZTHDlgVHg" incomingEdges="_90vvAGg9EeS7DZTHDlgVHg _XUax4Gg_EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.3"/>
+        <semanticElements xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_v3F90Gg8EeS7DZTHDlgVHg" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_v3F90Wg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_v3F90mg8EeS7DZTHDlgVHg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_v3F902g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_v3F91Gg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_V65FEGg9EeS7DZTHDlgVHg" name="PK_katedra">
+          <target xmi:type="er:Key" href="studsluzba.erdsl#//@entities.3/@keySet.0"/>
+          <semanticElements xmi:type="er:Key" href="studsluzba.erdsl#//@entities.3/@keySet.0"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_V65FEWg9EeS7DZTHDlgVHg" labelSize="7" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_V65FEmg9EeS7DZTHDlgVHg"/>
+            <description xmi:type="style:DotDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_V65FE2g9EeS7DZTHDlgVHg"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_V65FFGg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='Key']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_0Y4G8Gg8EeS7DZTHDlgVHg" name="BrInd" incomingEdges="_0ZHXgGg8EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.0"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_-dFW0Gg8EeS7DZTHDlgVHg" labelFormat="bold_italic" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-dFW0Wg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@conditionnalStyles.0/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_-dFW0mg8EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_-dFW02g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_0qwhIGg8EeS7DZTHDlgVHg" name="ImeS" incomingEdges="_0q1ZoGg8EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.1"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_0qxIMGg8EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0qxIMWg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_0qxIMmg8EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_0qxIM2g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_0_Z7cGg8EeS7DZTHDlgVHg" name="PrzS" incomingEdges="_0_gpIGg8EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.2"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_0_aigGg8EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0_aigWg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_0_aigmg8EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_0_aig2g8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_1R3kcGg8EeS7DZTHDlgVHg" name="God" incomingEdges="_1R6AsGg8EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.3"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.0/@entityAttributes.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_1R3kcWg8EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_1R4LgGg8EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_1R4LgWg8EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_1R4Lgmg8EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__myw4Gg8EeS7DZTHDlgVHg" name="SifP" incomingEdges="__m10MGg8EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.0"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_HY2X8Gg9EeS7DZTHDlgVHg" labelFormat="bold_italic" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_HY2X8Wg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@conditionnalStyles.0/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_HY2X8mg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_HY2X82g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AGHxMGg9EeS7DZTHDlgVHg" name="NazP" incomingEdges="_AGLbkGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.1"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_AGIYQGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AGIYQWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AGIYQmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_AGIYQ2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AjvhUGg9EeS7DZTHDlgVHg" name="BrP" incomingEdges="_AkB1MGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.2"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.1/@entityAttributes.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_AjwIYGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AjwIYWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AjwIYmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_AjwIY2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ITrBcGg9EeS7DZTHDlgVHg" name="SifN" incomingEdges="_ITv58Gg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.0"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_acscUGg9EeS7DZTHDlgVHg" labelFormat="bold_italic" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_acscUWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@conditionnalStyles.0/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_acscUmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_acscU2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_JBJygGg9EeS7DZTHDlgVHg" name="ImeN" incomingEdges="_JBNc4Gg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.1"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_JBKZkGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JBKZkWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_JBKZkmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_JBKZk2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_JTQ2MGg9EeS7DZTHDlgVHg" name="PrzN" incomingEdges="_JTUgkGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.2"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_JTRdQGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JTRdQWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_JTRdQmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_JTRdQ2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_JmGSoGg9EeS7DZTHDlgVHg" name="Zva" incomingEdges="_JmOOcGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.3"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.2/@entityAttributes.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_JmG5sGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JmG5sWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_JmG5smg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_JmG5s2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_SsKfQGg9EeS7DZTHDlgVHg" name="NazK" incomingEdges="_SsP-0Gg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.3/@entityAttributes.0"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.3/@entityAttributes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_SsLGUGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_SsLGUWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_SsLGUmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_SsLGU2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_TS2EwGg9EeS7DZTHDlgVHg" name="SifK" incomingEdges="_TS6WMGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.3/@entityAttributes.1"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@entities.3/@entityAttributes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_ZSkLgGg9EeS7DZTHDlgVHg" labelFormat="bold_italic" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_ZSkLgWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@conditionnalStyles.0/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_ZSkLgmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_ZSkLg2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_266wcGg9EeS7DZTHDlgVHg" name="Datum" incomingEdges="_269MsGg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@relationships.1/@relationshipAttributes.0"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@relationships.1/@relationshipAttributes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_267XgGg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_267XgWg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_267Xgmg9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_267Xg2g9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_3eCEkGg9EeS7DZTHDlgVHg" name="Ocena" incomingEdges="_3eFH4Gg9EeS7DZTHDlgVHg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="er:Attribute" href="studsluzba.erdsl#//@relationships.1/@relationshipAttributes.1"/>
+        <semanticElements xmi:type="er:Attribute" href="studsluzba.erdsl#//@relationships.1/@relationshipAttributes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_3eCEkWg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_3eCEkmg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_3eCEk2g9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_3eCElGg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Attribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0ZHXgGg8EeS7DZTHDlgVHg" sourceNode="_soDO8Gg8EeS7DZTHDlgVHg" targetNode="_0Y4G8Gg8EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0ZHXgWg8EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_0ZHXgmg8EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0ZHXg2g8EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0ZHXhGg8EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0q1ZoGg8EeS7DZTHDlgVHg" sourceNode="_soDO8Gg8EeS7DZTHDlgVHg" targetNode="_0qwhIGg8EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0q2AsGg8EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_0q2AsWg8EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0q2Asmg8EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0q2As2g8EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0_gpIGg8EeS7DZTHDlgVHg" sourceNode="_soDO8Gg8EeS7DZTHDlgVHg" targetNode="_0_Z7cGg8EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0_gpIWg8EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_0_gpImg8EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0_gpI2g8EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0_gpJGg8EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_1R6AsGg8EeS7DZTHDlgVHg" sourceNode="_soDO8Gg8EeS7DZTHDlgVHg" targetNode="_1R3kcGg8EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_1R6nwGg8EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_1R6nwWg8EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_1R6nwmg8EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_1R6nw2g8EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="__m10MGg8EeS7DZTHDlgVHg" sourceNode="_t6MzUGg8EeS7DZTHDlgVHg" targetNode="__myw4Gg8EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__m10MWg8EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__m10Mmg8EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="__m10M2g8EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__m10NGg8EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_AGLbkGg9EeS7DZTHDlgVHg" sourceNode="_t6MzUGg8EeS7DZTHDlgVHg" targetNode="_AGHxMGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_AGLbkWg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_AGLbkmg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_AGLbk2g9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AGLblGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_AkB1MGg9EeS7DZTHDlgVHg" sourceNode="_t6MzUGg8EeS7DZTHDlgVHg" targetNode="_AjvhUGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_AkB1MWg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_AkB1Mmg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_AkB1M2g9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AkB1NGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ITv58Gg9EeS7DZTHDlgVHg" sourceNode="_u_1lsGg8EeS7DZTHDlgVHg" targetNode="_ITrBcGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ITwhAGg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_ITwhAWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ITwhAmg9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_ITwhA2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JBNc4Gg9EeS7DZTHDlgVHg" sourceNode="_u_1lsGg8EeS7DZTHDlgVHg" targetNode="_JBJygGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_JBOD8Gg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_JBOD8Wg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_JBOD8mg9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JBOD82g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JTUgkGg9EeS7DZTHDlgVHg" sourceNode="_u_1lsGg8EeS7DZTHDlgVHg" targetNode="_JTQ2MGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_JTUgkWg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_JTUgkmg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_JTUgk2g9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JTUglGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JmOOcGg9EeS7DZTHDlgVHg" sourceNode="_u_1lsGg8EeS7DZTHDlgVHg" targetNode="_JmGSoGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_JmO1gGg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_JmO1gWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_JmO1gmg9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_JmO1g2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_SsP-0Gg9EeS7DZTHDlgVHg" sourceNode="_v3FWwGg8EeS7DZTHDlgVHg" targetNode="_SsKfQGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_SsQl4Gg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_SsQl4Wg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_SsQl4mg9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_SsQl42g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_TS6WMGg9EeS7DZTHDlgVHg" sourceNode="_v3FWwGg8EeS7DZTHDlgVHg" targetNode="_TS2EwGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Entity" href="studsluzba.erdsl#//@entities.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_TS6WMWg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_TS6WMmg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_TS6WM2g9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_TS6WNGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='EntityToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_cgNzQGg9EeS7DZTHDlgVHg" name="slusa" outgoingEdges="_chKOcGg9EeS7DZTHDlgVHg _chPuAGg9EeS7DZTHDlgVHg" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.0"/>
+        <semanticElements xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_cgNzQWg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_cgNzQmg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_cgNzQ2g9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_cgNzRGg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_nOhJAGg9EeS7DZTHDlgVHg" name="polozio" outgoingEdges="_nOqS8Gg9EeS7DZTHDlgVHg _nOq6AGg9EeS7DZTHDlgVHg _269MsGg9EeS7DZTHDlgVHg _3eFH4Gg9EeS7DZTHDlgVHg" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.1"/>
+        <semanticElements xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_nOhJAWg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nOhJAmg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_nOhJA2g9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_nOhJBGg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xp1RUGg9EeS7DZTHDlgVHg" name="predaje" outgoingEdges="_xqD60Gg9EeS7DZTHDlgVHg _xqEh4Gg9EeS7DZTHDlgVHg" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.2"/>
+        <semanticElements xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_xp1RUWg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xp1RUmg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xp1RU2g9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_xp1RVGg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_90lW8Gg9EeS7DZTHDlgVHg" name="radi" outgoingEdges="_90vvAGg9EeS7DZTHDlgVHg _90vvB2g9EeS7DZTHDlgVHg" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.3"/>
+        <semanticElements xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_90lW8Wg9EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_90lW8mg9EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_90lW82g9EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_90lW9Gg9EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XTx4sGg_EeS7DZTHDlgVHg" name="pripada" outgoingEdges="_XUaK0Gg_EeS7DZTHDlgVHg _XUax4Gg_EeS7DZTHDlgVHg" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.4"/>
+        <semanticElements xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.4"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_XTx4sWg_EeS7DZTHDlgVHg" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XTx4smg_EeS7DZTHDlgVHg"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_XTx4s2g_EeS7DZTHDlgVHg"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_XTx4tGg_EeS7DZTHDlgVHg" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@nodeMappings[name='Relationship']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_chKOcGg9EeS7DZTHDlgVHg" sourceNode="_cgNzQGg9EeS7DZTHDlgVHg" targetNode="_soDO8Gg8EeS7DZTHDlgVHg" endLabel="(one,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.0/@entities.0"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.0/@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_chK1gGg9EeS7DZTHDlgVHg" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_chK1gWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_chK1gmg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_chK1g2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_chK1hGg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_chK1hWg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_chPuAGg9EeS7DZTHDlgVHg" sourceNode="_cgNzQGg9EeS7DZTHDlgVHg" targetNode="_t6MzUGg8EeS7DZTHDlgVHg" endLabel="(one,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.0/@entities.1"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.0/@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_chQVEGg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_chQVEWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_chQVEmg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_chQVE2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_chQVFGg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_chQVFWg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nOqS8Gg9EeS7DZTHDlgVHg" sourceNode="_nOhJAGg9EeS7DZTHDlgVHg" targetNode="_soDO8Gg8EeS7DZTHDlgVHg" endLabel="(zero,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.1/@entities.0"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.1/@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nOqS8Wg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_nOqS8mg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_nOqS82g9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nOqS9Gg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_nOqS9Wg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nOqS9mg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nOq6AGg9EeS7DZTHDlgVHg" sourceNode="_nOhJAGg9EeS7DZTHDlgVHg" targetNode="_t6MzUGg8EeS7DZTHDlgVHg" endLabel="(zero,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.1/@entities.1"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.1/@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nOq6AWg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_nOq6Amg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_nOq6A2g9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nOq6BGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_nOq6BWg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nOq6Bmg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xqD60Gg9EeS7DZTHDlgVHg" sourceNode="_xp1RUGg9EeS7DZTHDlgVHg" targetNode="_t6MzUGg8EeS7DZTHDlgVHg" endLabel="(zero,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.2/@entities.0"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.2/@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xqD60Wg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_xqD60mg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xqD602g9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xqD61Gg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_xqD61Wg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xqD61mg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xqEh4Gg9EeS7DZTHDlgVHg" sourceNode="_xp1RUGg9EeS7DZTHDlgVHg" targetNode="_u_1lsGg8EeS7DZTHDlgVHg" endLabel="(zero,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.2/@entities.1"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.2/@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xqEh4Wg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_xqEh4mg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xqEh42g9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xqEh5Gg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_xqEh5Wg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xqEh5mg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_269MsGg9EeS7DZTHDlgVHg" sourceNode="_nOhJAGg9EeS7DZTHDlgVHg" targetNode="_266wcGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_269zwGg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_269zwWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_269zwmg9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_269zw2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_3eFH4Gg9EeS7DZTHDlgVHg" sourceNode="_nOhJAGg9EeS7DZTHDlgVHg" targetNode="_3eCEkGg9EeS7DZTHDlgVHg">
+        <target xmi:type="er:Relationship" href="studsluzba.erdsl#//@relationships.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_3eFH4Wg9EeS7DZTHDlgVHg" targetArrow="NoDecoration" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToAttribute']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_3eFH4mg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_3eFH42g9EeS7DZTHDlgVHg">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_3eFH5Gg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToAttribute']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_90vvAGg9EeS7DZTHDlgVHg" sourceNode="_90lW8Gg9EeS7DZTHDlgVHg" targetNode="_v3FWwGg8EeS7DZTHDlgVHg" endLabel="(zero,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.3/@entities.0"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.3/@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_90vvAWg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvAmg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_90vvA2g9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvBGg9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_90vvBWg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvBmg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_90vvB2g9EeS7DZTHDlgVHg" sourceNode="_90lW8Gg9EeS7DZTHDlgVHg" targetNode="_u_1lsGg8EeS7DZTHDlgVHg" endLabel="(one,one)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.3/@entities.1"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.3/@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_90vvCGg9EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvCWg9EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_90vvCmg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvC2g9EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_90vvDGg9EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_90vvDWg9EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_XUaK0Gg_EeS7DZTHDlgVHg" sourceNode="_XTx4sGg_EeS7DZTHDlgVHg" targetNode="_t6MzUGg8EeS7DZTHDlgVHg" endLabel="(one,one)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.4/@entities.0"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.4/@entities.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_XUaK0Wg_EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_XUaK0mg_EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_XUaK02g_EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XUaK1Gg_EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_XUaK1Wg_EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XUaK1mg_EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_XUax4Gg_EeS7DZTHDlgVHg" sourceNode="_XTx4sGg_EeS7DZTHDlgVHg" targetNode="_v3FWwGg8EeS7DZTHDlgVHg" endLabel="(one,many)">
+        <target xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.4/@entities.1"/>
+        <semanticElements xmi:type="er:RegularEntity" href="studsluzba.erdsl#//@relationships.4/@entities.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_XUax4Wg_EeS7DZTHDlgVHg" size="2" routingStyle="manhattan">
+          <customFeatures>routingStyle</customFeatures>
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_XUax4mg_EeS7DZTHDlgVHg"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_XUax42g_EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XUax5Gg_EeS7DZTHDlgVHg"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_XUax5Wg_EeS7DZTHDlgVHg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XUax5mg_EeS7DZTHDlgVHg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer/@edgeMappings[name='RelationshipToEntity']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_rR24EWg8EeS7DZTHDlgVHg"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']/@ownedRepresentations[name='ERDSLDiagram']/@defaultLayer"/>
+      <target xmi:type="er:ERModel" href="studsluzba.erdsl#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/mist.erdsl.design/description/erdsl.odesign#//@ownedViewpoints[name='erdslview']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

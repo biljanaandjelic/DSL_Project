@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<er:ERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:er="http://www.example.org/er">
+  <diagrams name="modelStudSluzbe">
+    <entities name="Student" primaryKey="//@diagrams.0/@entities.0/@keySet.0">
+      <entityAttributes name="imeS"/>
+      <entityAttributes name="prezS"/>
+      <entityAttributes name="brIndeks"/>
+      <entityAttributes name="godStd"/>
+      <keySet name="key1" keyAttributes="//@diagrams.0/@entities.0/@entityAttributes.2"/>
+      <keySet name="key2" keyAttributes="//@diagrams.0/@entities.0/@entityAttributes.0 //@diagrams.0/@entities.0/@entityAttributes.1"/>
+      <keySet name="key31" keyAttributes="//@diagrams.0/@entities.0/@entityAttributes.2 //@diagrams.0/@entities.0/@entityAttributes.3"/>
+    </entities>
+    <entities name="Predmet" primaryKey="//@diagrams.0/@entities.1/@keySet.0">
+      <entityAttributes name="sifP"/>
+      <entityAttributes name="nazivP"/>
+      <keySet name="key3" keyAttributes="//@diagrams.0/@entities.1/@entityAttributes.0"/>
+    </entities>
+    <entities name="NastavnoOsoblje">
+      <entityAttributes name="zvanje"/>
+    </entities>
+    <entities name="Fakultet" primaryKey="//@diagrams.0/@entities.3/@keySet.0">
+      <entityAttributes name="sifF"/>
+      <entityAttributes name="nazivF"/>
+      <keySet name="key4" keyAttributes="//@diagrams.0/@entities.3/@entityAttributes.0"/>
+    </entities>
+    <entities name="Katedra" primaryKey="//@diagrams.0/@entities.4/@keySet.0">
+      <entityAttributes name="nazivK"/>
+      <keySet name="key5" keyAttributes="//@diagrams.0/@entities.4/@entityAttributes.0"/>
+    </entities>
+    <entities name="NenastavnoOsoblje">
+      <entityAttributes name="radnoMesto"/>
+    </entities>
+    <entities name="Zaposleni" primaryKey="//@diagrams.0/@entities.6/@keySet.0">
+      <entityAttributes name="imeZ"/>
+      <entityAttributes name="prezZ"/>
+      <entityAttributes name="sifZ"/>
+      <keySet name="key6" keyAttributes="//@diagrams.0/@entities.6/@entityAttributes.2"/>
+    </entities>
+    <entities name="Nastavnik"/>
+    <entities name="Asistent"/>
+    <relationships xsi:type="er:Categorisation" name="catZap" isPartial="true" categorisedEntity="//@diagrams.0/@entities.6">
+      <categorisationEntities entities="//@diagrams.0/@entities.2 //@diagrams.0/@entities.5">
+        <cardinality min="one"/>
+      </categorisationEntities>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="Slusa">
+      <entities entity="//@diagrams.0/@entities.0">
+        <cardinality max="many"/>
+      </entities>
+      <entities entity="//@diagrams.0/@entities.1">
+        <cardinality min="one" max="many"/>
+      </entities>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="Polaze">
+      <entities entity="//@diagrams.0/@entities.1">
+        <cardinality max="many"/>
+      </entities>
+      <entities entity="//@diagrams.0/@entities.0">
+        <cardinality min="one" max="many"/>
+      </entities>
+      <relationshipAttributes name="ocena"/>
+      <relationshipAttributes name="datPol"/>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="Predaje">
+      <entities entity="//@diagrams.0/@entities.7">
+        <cardinality min="one" max="many"/>
+      </entities>
+      <entities entity="//@diagrams.0/@entities.1">
+        <cardinality min="one" max="many"/>
+      </entities>
+      <relationshipAttributes name="a1"/>
+      <relationshipAttributes name="a2"/>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="PredajeVezbe">
+      <entities entity="//@diagrams.0/@entities.7">
+        <cardinality max="many"/>
+      </entities>
+      <entities entity="//@diagrams.0/@gerunds.0">
+        <cardinality/>
+      </entities>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="DrziVezbe">
+      <entities entity="//@diagrams.0/@entities.8">
+        <cardinality max="many"/>
+      </entities>
+      <entities entity="//@diagrams.0/@entities.1">
+        <cardinality max="many"/>
+      </entities>
+    </relationships>
+    <relationships xsi:type="er:ISA" name="aayy" subtypes="//@diagrams.0/@entities.7 //@diagrams.0/@entities.8 //@diagrams.0/@entities.1" classificationAttribute="//@diagrams.0/@relationships.3/@relationshipAttributes.1">
+      <supertype entity="//@diagrams.0/@gerunds.0">
+        <cardinality min="one" max="many"/>
+      </supertype>
+    </relationships>
+    <relationships xsi:type="er:ISA" name="isaNas" subtypes="//@diagrams.0/@entities.7 //@diagrams.0/@entities.8" classificationAttribute="//@diagrams.0/@entities.2/@entityAttributes.0">
+      <supertype entity="//@diagrams.0/@entities.2">
+        <cardinality min="one"/>
+      </supertype>
+    </relationships>
+    <relationships xsi:type="er:IdentificationDependency" name="Pripada1" weakEntity="//@diagrams.0/@entities.4">
+      <regularEntity entity="//@diagrams.0/@gerunds.0">
+        <cardinality min="one" max="many"/>
+      </regularEntity>
+    </relationships>
+    <relationships xsi:type="er:IdentificationDependency" name="Pripada" weakEntity="//@diagrams.0/@entities.4">
+      <regularEntity entity="//@diagrams.0/@gerunds.0">
+        <cardinality min="one" max="many"/>
+      </regularEntity>
+    </relationships>
+    <relationships xsi:type="er:Relationship" name="Radi">
+      <entities entity="//@diagrams.0/@entities.2">
+        <cardinality min="one"/>
+      </entities>
+      <entities entity="//@diagrams.0/@entities.4">
+        <cardinality min="one" max="many"/>
+      </entities>
+    </relationships>
+    <gerunds name="Predaje" relationship="//@diagrams.0/@relationships.3"/>
+  </diagrams>
+</er:ERModel>

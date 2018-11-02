@@ -1,0 +1,105 @@
+cdteka {
+	
+entities {
+		cdklub {
+			attributeSet {
+				NAZKLUB,
+				ADRKLUB,
+				BRTEL
+			}
+			keySet {
+				PK_cdklub ( NAZKLUB )
+			}
+			primaryKey PK_cdklub
+		},
+		CD {
+			attributeSet {
+				IDCD,
+				NAZCD
+			}
+			keySet {
+				PK_cd ( IDCD )
+			}
+			primaryKey PK_cd
+		},
+		kategorija {
+			attributeSet {
+				NAZKATCD
+			}
+			keySet {
+				PK_kategorija ( NAZKATCD )
+			}
+			primaryKey PK_kategorija
+		},
+		clan {
+			attributeSet {
+				CLBROJ,
+				IMECL,
+				PRZCL,
+				ADRCL,
+				BRTELCL
+			}
+			keySet {
+				PK_clan ( CLBROJ )
+			}
+			primaryKey PK_clan
+		},
+		kategorija_clana {
+			attributeSet {
+				NAZKATCL,
+				VISCLAN
+			}
+			keySet {
+				PK_kategorija_clana ( NAZKATCL )
+			}
+			primaryKey PK_kategorija_clana
+		},
+		pozajmica {
+			attributeSet {
+				DATUMPO
+			}
+			keySet {
+				PK_pozajmica ( DATUMPO )
+			}
+			primaryKey PK_pozajmica
+		}
+	}
+	relationships {
+		IdentificationDependency ID {
+			weakEntity CD regularEntity cdklub ( one,
+			many )
+		},
+		pripada {
+			entitiesInRelationship {
+				kategorija ( zero,
+				many ),
+				CD ( one,
+				one )
+			}
+		},
+		je_clan {
+			entitiesInRelationship {
+				cdklub ( one,
+				many ),
+				clan ( one,
+				one )
+			}
+		},
+		pripata_kat {
+			entitiesInRelationship {
+				kategorija_clana ( zero,
+				many ),
+				clan ( one,
+				one )
+			}
+		},
+		IdentificationDependency ID2 {
+			weakEntity pozajmica regularEntity clan ( zero,
+			many )
+		},
+		IdentificationDependency ID3 {
+			weakEntity pozajmica regularEntity CD ( zero,
+			many )
+		}
+	}
+}

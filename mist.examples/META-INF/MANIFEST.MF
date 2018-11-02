@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MIST Examples
+Bundle-SymbolicName: mist.examples
+Bundle-Version: 0.1.0
+Require-Bundle: rs.ac.uns.ftn.acs.mist.class.generate;bundle-version="0.1.0",
+ rs.ac.uns.ftn.acs.mist.rdbms.generate;bundle-version="0.1.0",
+ org.eclipse.m2m.atl;bundle-version="3.5.0",
+ org.eclipse.m2m.atl.drivers.emf4atl;bundle-version="3.5.0",
+ org.eclipse.m2m.atl.engine;bundle-version="3.5.0",
+ org.eclipse.m2m.atl.engine.emfvm;bundle-version="3.5.0",
+ org.eclipse.m2m.atl.engine.emfvm.launch;bundle-version="3.5.0",
+ org.eclipse.xtext;bundle-version="2.7.2",
+ mist.erdsl;bundle-version="0.1.0"

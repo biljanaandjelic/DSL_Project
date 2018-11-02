@@ -1,0 +1,69 @@
+casealat {
+	
+entities {
+		shema {
+			attributeSet {
+				NAZIVS
+			}
+			keySet {
+				PK_shema ( NAZIVS )
+			}
+			primaryKey PK_shema
+		},
+		obelezje {
+			attributeSet {
+				MNEM,
+				NAZIVO
+			}
+			keySet {
+				PK_obelezje ( MNEM )
+			}
+			primaryKey PK_obelezje
+		},
+		kljuc {
+			attributeSet {
+				RBK,
+				PRIM
+			}
+			keySet {
+				PK_kljuc ( RBK )
+			}
+			primaryKey PK_kljuc
+		}
+	}
+	gerunds {
+		poseduje {
+			entitiesInRelationship {
+				shema ( one,
+				many ),
+				obelezje ( one,
+				many )
+			}
+			attributeSet {
+				NULL
+			}
+		}
+	}
+	relationships {
+		IdentificationDependency ID1 {
+			weakEntity kljuc regularEntity shema ( one,
+			many )
+		},
+		kljuc_ob {
+			entitiesInRelationship {
+				kljuc ( one,
+				many ),
+				poseduje ( zero,
+				many )
+			}
+		},
+		ref_int {
+			entitiesInRelationship {
+				shema ( zero,
+				many ) referencirajuca,
+				shema ( zero,
+				many ) referencirana
+			}
+		}
+	}
+}
