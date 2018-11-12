@@ -11,12 +11,18 @@
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EVrsta/Number"/>
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EVrsta/Date"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="formValidation.ecore#//NUIComponent">
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//NUIComponent/TextInput"/>
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//NUIComponent/TextArea"/>
+    </genEnums>
     <genClasses ecoreClass="formValidation.ecore#//ValidationClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classrule"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule"/>
+    <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeRule/message"/>
+    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//ClassAttribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributetype"/>
