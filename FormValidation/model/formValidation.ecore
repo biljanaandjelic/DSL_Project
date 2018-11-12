@@ -173,4 +173,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
         eType="#//ClassAttribute"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UIComponent"/>
 </ecore:EPackage>

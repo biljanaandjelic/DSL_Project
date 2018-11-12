@@ -362,6 +362,15 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Q9DA4UgJEeikVYSKqkXlJQ" fontName="Segoe UI" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q9DA4kgJEeikVYSKqkXlJQ" x="-1128" y="-60" width="120" height="100"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_eL9N0OacEeiad6DmCdstew" type="2003" element="_eIEzYOacEeiad6DmCdstew">
+            <children xmi:type="notation:Node" xmi:id="_eMziYOacEeiad6DmCdstew" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eM0wgOacEeiad6DmCdstew" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eM0wgeacEeiad6DmCdstew"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eM0wguacEeiad6DmCdstew"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eL9N0eacEeiad6DmCdstew" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eL9N0uacEeiad6DmCdstew" x="-696" y="-120" width="120" height="100"/>
+          </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_7rPnQkf0EeikVYSKqkXlJQ"/>
           <edges xmi:type="notation:Edge" xmi:id="_A8kdUEf9EeikVYSKqkXlJQ" type="4001" element="_A8SJcEf9EeikVYSKqkXlJQ" source="_2PELE0f3EeikVYSKqkXlJQ" target="_W7dzAEf8EeikVYSKqkXlJQ">
             <children xmi:type="notation:Node" xmi:id="_A8lrcEf9EeikVYSKqkXlJQ" type="6001">
@@ -1738,6 +1747,17 @@
           </endLabelStyle>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_eIEzYOacEeiad6DmCdstew" name="UIComponent" tooltipText="" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="formValidation.ecore#//UIComponent"/>
+        <semanticElements xmi:type="ecore:EClass" href="formValidation.ecore#//UIComponent"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_eIHPoOacEeiad6DmCdstew" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_7p48Ykf0EeikVYSKqkXlJQ"/>
