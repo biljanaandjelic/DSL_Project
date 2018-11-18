@@ -25,7 +25,7 @@
         eType="#//ClassRule" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -180,4 +180,5 @@
     <eLiterals name="TextInput"/>
     <eLiterals name="TextArea" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependancy"/>
 </ecore:EPackage>
