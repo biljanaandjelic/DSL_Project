@@ -15,6 +15,15 @@
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EOrientation/Vertical"/>
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EOrientation/Horizontal"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="formValidation.ecore#//ERequiredField">
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//ERequiredField/Asterix"/>
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//ERequiredField/Highlighting"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="formValidation.ecore#//EPosition">
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EPosition/Above"/>
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EPosition/Left"/>
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EPosition/Right"/>
+    </genEnums>
     <genClasses ecoreClass="formValidation.ecore#//ValidationClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
@@ -138,6 +147,10 @@
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//Grid">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/numOfColumns"/>
+    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//PresentRequiredAttributes"/>
+    <genClasses ecoreClass="formValidation.ecore#//LabelPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//LabelPosition/position"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

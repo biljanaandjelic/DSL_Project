@@ -231,4 +231,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PresentRequiredAttributes"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ERequiredField">
+    <eLiterals name="Asterix"/>
+    <eLiterals name="Highlighting" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabelPosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
+    <eLiterals name="Above"/>
+    <eLiterals name="Left" value="1"/>
+    <eLiterals name="Right" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>
