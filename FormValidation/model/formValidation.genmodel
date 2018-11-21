@@ -19,6 +19,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classrule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/label"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeRule/errorMessage"/>
@@ -28,6 +29,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributetype"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributerule"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/uicomponent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/label"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AttributeType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeType/vrsta"/>
@@ -96,7 +98,11 @@
     <genClasses ecoreClass="formValidation.ecore#//UIComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//UIComponent/tooltip"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//Dependancy"/>
+    <genClasses ecoreClass="formValidation.ecore#//DependOn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//DependOn/independent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//DependOn/dependent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//DependOn/condition"/>
+    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//NumericUIComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//NumericUIComponent/defaultValue"/>
     </genClasses>
@@ -121,7 +127,9 @@
     <genClasses ecoreClass="formValidation.ecore#//TextArea">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TextArea/numOfRows"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//FormLayout"/>
+    <genClasses ecoreClass="formValidation.ecore#//FormLayout">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//FormLayout/classattribute"/>
+    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//FieldSet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//FieldSet/legend"/>
     </genClasses>

@@ -180,8 +180,8 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createUIComponentAdapter();
 			}
 			@Override
-			public Adapter caseDependancy(Dependancy object) {
-				return createDependancyAdapter();
+			public Adapter caseDependOn(DependOn object) {
+				return createDependOnAdapter();
 			}
 			@Override
 			public Adapter caseNumericUIComponent(NumericUIComponent object) {
@@ -668,16 +668,16 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.Dependancy <em>Dependancy</em>}'.
+	 * Creates a new adapter for an object of class '{@link formValidation.DependOn <em>Depend On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see formValidation.Dependancy
+	 * @see formValidation.DependOn
 	 * @generated
 	 */
-	public Adapter createDependancyAdapter() {
+	public Adapter createDependOnAdapter() {
 		return null;
 	}
 

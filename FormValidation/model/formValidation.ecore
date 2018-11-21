@@ -23,6 +23,7 @@
         eType="#//ClassAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -44,6 +45,7 @@
         eType="#//AttributeRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uicomponent" eType="#//UIComponent"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vrsta" eType="#//EVrsta"/>
@@ -180,7 +182,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dependancy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DependOn">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="independent" eType="#//AttributeArray"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependent" eType="#//AttributeArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NumericUIComponent" abstract="true"
       eSuperTypes="#//UIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -212,7 +218,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
+        eType="#//ClassAttribute"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldSet" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="legend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

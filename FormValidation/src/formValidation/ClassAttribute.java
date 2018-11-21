@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link formValidation.ClassAttribute#getName <em>Name</em>}</li>
  *   <li>{@link formValidation.ClassAttribute#getAttributetype <em>Attributetype</em>}</li>
  *   <li>{@link formValidation.ClassAttribute#getAttributerule <em>Attributerule</em>}</li>
+ *   <li>{@link formValidation.ClassAttribute#getUicomponent <em>Uicomponent</em>}</li>
+ *   <li>{@link formValidation.ClassAttribute#getLabel <em>Label</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getClassAttribute()
@@ -93,5 +95,57 @@ public interface ClassAttribute extends EObject {
 	 * @generated
 	 */
 	EList<AttributeRule> getAttributerule();
+
+	/**
+	 * Returns the value of the '<em><b>Uicomponent</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uicomponent</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uicomponent</em>' containment reference.
+	 * @see #setUicomponent(UIComponent)
+	 * @see formValidation.FormValidationPackage#getClassAttribute_Uicomponent()
+	 * @model containment="true"
+	 * @generated
+	 */
+	UIComponent getUicomponent();
+
+	/**
+	 * Sets the value of the '{@link formValidation.ClassAttribute#getUicomponent <em>Uicomponent</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uicomponent</em>' containment reference.
+	 * @see #getUicomponent()
+	 * @generated
+	 */
+	void setUicomponent(UIComponent value);
+
+	/**
+	 * Returns the value of the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Label</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see #setLabel(String)
+	 * @see formValidation.FormValidationPackage#getClassAttribute_Label()
+	 * @model
+	 * @generated
+	 */
+	String getLabel();
+
+	/**
+	 * Sets the value of the '{@link formValidation.ClassAttribute#getLabel <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Label</em>' attribute.
+	 * @see #getLabel()
+	 * @generated
+	 */
+	void setLabel(String value);
 
 } // ClassAttribute

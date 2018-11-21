@@ -263,9 +263,9 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FormValidationPackage.DEPENDANCY: {
-				Dependancy dependancy = (Dependancy)theEObject;
-				T result = caseDependancy(dependancy);
+			case FormValidationPackage.DEPEND_ON: {
+				DependOn dependOn = (DependOn)theEObject;
+				T result = caseDependOn(dependOn);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -840,17 +840,17 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dependancy</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Depend On</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dependancy</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Depend On</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDependancy(Dependancy object) {
+	public T caseDependOn(DependOn object) {
 		return null;
 	}
 

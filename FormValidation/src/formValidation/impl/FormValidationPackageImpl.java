@@ -13,7 +13,7 @@ import formValidation.ClassAttribute;
 import formValidation.ClassRule;
 import formValidation.DatePattern;
 import formValidation.DateUIComponent;
-import formValidation.Dependancy;
+import formValidation.DependOn;
 import formValidation.DropDownList;
 import formValidation.EOrientation;
 import formValidation.EVrsta;
@@ -275,7 +275,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dependancyEClass = null;
+	private EClass dependOnEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -531,6 +531,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getValidationClass_Label() {
+		return (EAttribute)validationClassEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAttributeRule() {
 		return attributeRuleEClass;
 	}
@@ -578,6 +587,24 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 */
 	public EReference getClassAttribute_Attributerule() {
 		return (EReference)classAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getClassAttribute_Uicomponent() {
+		return (EReference)classAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClassAttribute_Label() {
+		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1008,8 +1035,35 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDependancy() {
-		return dependancyEClass;
+	public EClass getDependOn() {
+		return dependOnEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDependOn_Independent() {
+		return (EReference)dependOnEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDependOn_Dependent() {
+		return (EReference)dependOnEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDependOn_Condition() {
+		return (EAttribute)dependOnEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1152,6 +1206,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTextUIComponent_PlaceHolder() {
+		return (EAttribute)textUIComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTextInput() {
 		return textInputEClass;
 	}
@@ -1181,6 +1244,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 */
 	public EClass getFormLayout() {
 		return formLayoutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFormLayout_Classattribute() {
+		return (EReference)formLayoutEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1287,6 +1359,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(validationClassEClass, VALIDATION_CLASS__NAME);
 		createEReference(validationClassEClass, VALIDATION_CLASS__CLASSATTRIBUTE);
 		createEReference(validationClassEClass, VALIDATION_CLASS__CLASSRULE);
+		createEAttribute(validationClassEClass, VALIDATION_CLASS__LABEL);
 
 		attributeRuleEClass = createEClass(ATTRIBUTE_RULE);
 		createEAttribute(attributeRuleEClass, ATTRIBUTE_RULE__ERROR_MESSAGE);
@@ -1295,6 +1368,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__NAME);
 		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTETYPE);
 		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTERULE);
+		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__UICOMPONENT);
+		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__LABEL);
 
 		attributeTypeEClass = createEClass(ATTRIBUTE_TYPE);
 		createEAttribute(attributeTypeEClass, ATTRIBUTE_TYPE__VRSTA);
@@ -1368,7 +1443,10 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		uiComponentEClass = createEClass(UI_COMPONENT);
 		createEAttribute(uiComponentEClass, UI_COMPONENT__TOOLTIP);
 
-		dependancyEClass = createEClass(DEPENDANCY);
+		dependOnEClass = createEClass(DEPEND_ON);
+		createEReference(dependOnEClass, DEPEND_ON__INDEPENDENT);
+		createEReference(dependOnEClass, DEPEND_ON__DEPENDENT);
+		createEAttribute(dependOnEClass, DEPEND_ON__CONDITION);
 
 		numericUIComponentEClass = createEClass(NUMERIC_UI_COMPONENT);
 		createEAttribute(numericUIComponentEClass, NUMERIC_UI_COMPONENT__DEFAULT_VALUE);
@@ -1396,6 +1474,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		dateUIComponentEClass = createEClass(DATE_UI_COMPONENT);
 
 		textUIComponentEClass = createEClass(TEXT_UI_COMPONENT);
+		createEAttribute(textUIComponentEClass, TEXT_UI_COMPONENT__PLACE_HOLDER);
 
 		textInputEClass = createEClass(TEXT_INPUT);
 
@@ -1403,6 +1482,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(textAreaEClass, TEXT_AREA__NUM_OF_ROWS);
 
 		formLayoutEClass = createEClass(FORM_LAYOUT);
+		createEReference(formLayoutEClass, FORM_LAYOUT__CLASSATTRIBUTE);
 
 		fieldSetEClass = createEClass(FIELD_SET);
 		createEAttribute(fieldSetEClass, FIELD_SET__LEGEND);
@@ -1493,6 +1573,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getValidationClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getValidationClass_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getValidationClass_Classrule(), this.getClassRule(), null, "classrule", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValidationClass_Label(), ecorePackage.getEString(), "label", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeRuleEClass, AttributeRule.class, "AttributeRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttributeRule_ErrorMessage(), ecorePackage.getEString(), "errorMessage", null, 0, 1, AttributeRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1501,6 +1582,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getClassAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClassAttribute_Attributetype(), this.getAttributeType(), null, "attributetype", null, 1, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClassAttribute_Attributerule(), this.getAttributeRule(), null, "attributerule", null, 0, -1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassAttribute_Uicomponent(), this.getUIComponent(), null, "uicomponent", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassAttribute_Label(), ecorePackage.getEString(), "label", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeTypeEClass, AttributeType.class, "AttributeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttributeType_Vrsta(), this.getEVrsta(), "vrsta", null, 0, 1, AttributeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1574,7 +1657,10 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEClass(uiComponentEClass, UIComponent.class, "UIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUIComponent_Tooltip(), ecorePackage.getEString(), "tooltip", null, 0, 1, UIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dependancyEClass, Dependancy.class, "Dependancy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(dependOnEClass, DependOn.class, "DependOn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDependOn_Independent(), this.getAttributeArray(), null, "independent", null, 0, 1, DependOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDependOn_Dependent(), this.getAttributeArray(), null, "dependent", null, 0, 1, DependOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDependOn_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, DependOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(numericUIComponentEClass, NumericUIComponent.class, "NumericUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNumericUIComponent_DefaultValue(), ecorePackage.getEDouble(), "defaultValue", null, 0, 1, NumericUIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1602,6 +1688,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEClass(dateUIComponentEClass, DateUIComponent.class, "DateUIComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(textUIComponentEClass, TextUIComponent.class, "TextUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextUIComponent_PlaceHolder(), ecorePackage.getEString(), "placeHolder", null, 0, 1, TextUIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textInputEClass, TextInput.class, "TextInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1609,6 +1696,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getTextArea_NumOfRows(), ecorePackage.getEInt(), "numOfRows", "1", 0, 1, TextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(formLayoutEClass, FormLayout.class, "FormLayout", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFormLayout_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, -1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fieldSetEClass, FieldSet.class, "FieldSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFieldSet_Legend(), ecorePackage.getEString(), "legend", null, 0, 1, FieldSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

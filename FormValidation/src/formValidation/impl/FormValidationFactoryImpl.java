@@ -78,7 +78,7 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.EQUALS: return createEquals();
 			case FormValidationPackage.LESS_THAN: return createLessThan();
 			case FormValidationPackage.ATTRIBUTE_ARRAY: return createAttributeArray();
-			case FormValidationPackage.DEPENDANCY: return createDependancy();
+			case FormValidationPackage.DEPEND_ON: return createDependOn();
 			case FormValidationPackage.INPUT_NUMBER: return createInputNumber();
 			case FormValidationPackage.SCROLLBAR: return createScrollbar();
 			case FormValidationPackage.RADIO_BUTTON: return createRadioButton();
@@ -345,9 +345,9 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Dependancy createDependancy() {
-		DependancyImpl dependancy = new DependancyImpl();
-		return dependancy;
+	public DependOn createDependOn() {
+		DependOnImpl dependOn = new DependOnImpl();
+		return dependOn;
 	}
 
 	/**

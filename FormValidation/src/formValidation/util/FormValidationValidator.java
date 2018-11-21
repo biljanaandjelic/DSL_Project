@@ -142,8 +142,8 @@ public class FormValidationValidator extends EObjectValidator {
 				return validateAttributeArray((AttributeArray)value, diagnostics, context);
 			case FormValidationPackage.UI_COMPONENT:
 				return validateUIComponent((UIComponent)value, diagnostics, context);
-			case FormValidationPackage.DEPENDANCY:
-				return validateDependancy((Dependancy)value, diagnostics, context);
+			case FormValidationPackage.DEPEND_ON:
+				return validateDependOn((DependOn)value, diagnostics, context);
 			case FormValidationPackage.NUMERIC_UI_COMPONENT:
 				return validateNumericUIComponent((NumericUIComponent)value, diagnostics, context);
 			case FormValidationPackage.INPUT_NUMBER:
@@ -1249,8 +1249,8 @@ public class FormValidationValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDependancy(Dependancy dependancy, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(dependancy, diagnostics, context);
+	public boolean validateDependOn(DependOn dependOn, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dependOn, diagnostics, context);
 	}
 
 	/**

@@ -97,13 +97,22 @@ public interface FormValidationPackage extends EPackage {
 	int VALIDATION_CLASS__CLASSRULE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_CLASS__LABEL = 3;
+
+	/**
 	 * The number of structural features of the '<em>Validation Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALIDATION_CLASS_FEATURE_COUNT = 3;
+	int VALIDATION_CLASS_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Validation Class</em>' class.
@@ -189,13 +198,31 @@ public interface FormValidationPackage extends EPackage {
 	int CLASS_ATTRIBUTE__ATTRIBUTERULE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Uicomponent</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_ATTRIBUTE__UICOMPONENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_ATTRIBUTE__LABEL = 4;
+
+	/**
 	 * The number of structural features of the '<em>Class Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_ATTRIBUTE_FEATURE_COUNT = 3;
+	int CLASS_ATTRIBUTE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Class Attribute</em>' class.
@@ -1258,32 +1285,59 @@ public interface FormValidationPackage extends EPackage {
 	int UI_COMPONENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link formValidation.impl.DependancyImpl <em>Dependancy</em>}' class.
+	 * The meta object id for the '{@link formValidation.impl.DependOnImpl <em>Depend On</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see formValidation.impl.DependancyImpl
-	 * @see formValidation.impl.FormValidationPackageImpl#getDependancy()
+	 * @see formValidation.impl.DependOnImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getDependOn()
 	 * @generated
 	 */
-	int DEPENDANCY = 28;
+	int DEPEND_ON = 28;
 
 	/**
-	 * The number of structural features of the '<em>Dependancy</em>' class.
+	 * The feature id for the '<em><b>Independent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDANCY_FEATURE_COUNT = 0;
+	int DEPEND_ON__INDEPENDENT = 0;
 
 	/**
-	 * The number of operations of the '<em>Dependancy</em>' class.
+	 * The feature id for the '<em><b>Dependent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPENDANCY_OPERATION_COUNT = 0;
+	int DEPEND_ON__DEPENDENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPEND_ON__CONDITION = 2;
+
+	/**
+	 * The number of structural features of the '<em>Depend On</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPEND_ON_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Depend On</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPEND_ON_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link formValidation.impl.NumericUIComponentImpl <em>Numeric UI Component</em>}' class.
@@ -1820,13 +1874,22 @@ public interface FormValidationPackage extends EPackage {
 	int TEXT_UI_COMPONENT__TOOLTIP = UI_COMPONENT__TOOLTIP;
 
 	/**
+	 * The feature id for the '<em><b>Place Holder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_UI_COMPONENT__PLACE_HOLDER = UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Text UI Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_UI_COMPONENT_FEATURE_COUNT = UI_COMPONENT_FEATURE_COUNT + 0;
+	int TEXT_UI_COMPONENT_FEATURE_COUNT = UI_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text UI Component</em>' class.
@@ -1855,6 +1918,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_INPUT__TOOLTIP = TEXT_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Place Holder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_INPUT__PLACE_HOLDER = TEXT_UI_COMPONENT__PLACE_HOLDER;
 
 	/**
 	 * The number of structural features of the '<em>Text Input</em>' class.
@@ -1894,6 +1966,15 @@ public interface FormValidationPackage extends EPackage {
 	int TEXT_AREA__TOOLTIP = TEXT_UI_COMPONENT__TOOLTIP;
 
 	/**
+	 * The feature id for the '<em><b>Place Holder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_AREA__PLACE_HOLDER = TEXT_UI_COMPONENT__PLACE_HOLDER;
+
+	/**
 	 * The feature id for the '<em><b>Num Of Rows</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1931,13 +2012,22 @@ public interface FormValidationPackage extends EPackage {
 	int FORM_LAYOUT = 43;
 
 	/**
+	 * The feature id for the '<em><b>Classattribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_LAYOUT__CLASSATTRIBUTE = 0;
+
+	/**
 	 * The number of structural features of the '<em>Form Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORM_LAYOUT_FEATURE_COUNT = 0;
+	int FORM_LAYOUT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Form Layout</em>' class.
@@ -1957,6 +2047,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int FIELD_SET = 44;
+
+	/**
+	 * The feature id for the '<em><b>Classattribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_SET__CLASSATTRIBUTE = FORM_LAYOUT__CLASSATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' attribute.
@@ -1996,6 +2095,15 @@ public interface FormValidationPackage extends EPackage {
 	int TAB = 45;
 
 	/**
+	 * The feature id for the '<em><b>Classattribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB__CLASSATTRIBUTE = FORM_LAYOUT__CLASSATTRIBUTE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2031,6 +2139,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int GRID = 46;
+
+	/**
+	 * The feature id for the '<em><b>Classattribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__CLASSATTRIBUTE = FORM_LAYOUT__CLASSATTRIBUTE;
 
 	/**
 	 * The feature id for the '<em><b>Num Of Columns</b></em>' attribute.
@@ -2125,6 +2242,17 @@ public interface FormValidationPackage extends EPackage {
 	EReference getValidationClass_Classrule();
 
 	/**
+	 * Returns the meta object for the attribute '{@link formValidation.ValidationClass#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see formValidation.ValidationClass#getLabel()
+	 * @see #getValidationClass()
+	 * @generated
+	 */
+	EAttribute getValidationClass_Label();
+
+	/**
 	 * Returns the meta object for class '{@link formValidation.AttributeRule <em>Attribute Rule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2187,6 +2315,28 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClassAttribute_Attributerule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link formValidation.ClassAttribute#getUicomponent <em>Uicomponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Uicomponent</em>'.
+	 * @see formValidation.ClassAttribute#getUicomponent()
+	 * @see #getClassAttribute()
+	 * @generated
+	 */
+	EReference getClassAttribute_Uicomponent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.ClassAttribute#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see formValidation.ClassAttribute#getLabel()
+	 * @see #getClassAttribute()
+	 * @generated
+	 */
+	EAttribute getClassAttribute_Label();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.AttributeType <em>Attribute Type</em>}'.
@@ -2681,14 +2831,47 @@ public interface FormValidationPackage extends EPackage {
 	EAttribute getUIComponent_Tooltip();
 
 	/**
-	 * Returns the meta object for class '{@link formValidation.Dependancy <em>Dependancy</em>}'.
+	 * Returns the meta object for class '{@link formValidation.DependOn <em>Depend On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dependancy</em>'.
-	 * @see formValidation.Dependancy
+	 * @return the meta object for class '<em>Depend On</em>'.
+	 * @see formValidation.DependOn
 	 * @generated
 	 */
-	EClass getDependancy();
+	EClass getDependOn();
+
+	/**
+	 * Returns the meta object for the reference '{@link formValidation.DependOn#getIndependent <em>Independent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Independent</em>'.
+	 * @see formValidation.DependOn#getIndependent()
+	 * @see #getDependOn()
+	 * @generated
+	 */
+	EReference getDependOn_Independent();
+
+	/**
+	 * Returns the meta object for the reference '{@link formValidation.DependOn#getDependent <em>Dependent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Dependent</em>'.
+	 * @see formValidation.DependOn#getDependent()
+	 * @see #getDependOn()
+	 * @generated
+	 */
+	EReference getDependOn_Dependent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.DependOn#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see formValidation.DependOn#getCondition()
+	 * @see #getDependOn()
+	 * @generated
+	 */
+	EAttribute getDependOn_Condition();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.NumericUIComponent <em>Numeric UI Component</em>}'.
@@ -2844,6 +3027,17 @@ public interface FormValidationPackage extends EPackage {
 	EClass getTextUIComponent();
 
 	/**
+	 * Returns the meta object for the attribute '{@link formValidation.TextUIComponent#getPlaceHolder <em>Place Holder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Place Holder</em>'.
+	 * @see formValidation.TextUIComponent#getPlaceHolder()
+	 * @see #getTextUIComponent()
+	 * @generated
+	 */
+	EAttribute getTextUIComponent_PlaceHolder();
+
+	/**
 	 * Returns the meta object for class '{@link formValidation.TextInput <em>Text Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2883,6 +3077,17 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFormLayout();
+
+	/**
+	 * Returns the meta object for the reference list '{@link formValidation.FormLayout#getClassattribute <em>Classattribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Classattribute</em>'.
+	 * @see formValidation.FormLayout#getClassattribute()
+	 * @see #getFormLayout()
+	 * @generated
+	 */
+	EReference getFormLayout_Classattribute();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.FieldSet <em>Field Set</em>}'.
@@ -3025,6 +3230,14 @@ public interface FormValidationPackage extends EPackage {
 		EReference VALIDATION_CLASS__CLASSRULE = eINSTANCE.getValidationClass_Classrule();
 
 		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VALIDATION_CLASS__LABEL = eINSTANCE.getValidationClass_Label();
+
+		/**
 		 * The meta object literal for the '{@link formValidation.impl.AttributeRuleImpl <em>Attribute Rule</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3075,6 +3288,22 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLASS_ATTRIBUTE__ATTRIBUTERULE = eINSTANCE.getClassAttribute_Attributerule();
+
+		/**
+		 * The meta object literal for the '<em><b>Uicomponent</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLASS_ATTRIBUTE__UICOMPONENT = eINSTANCE.getClassAttribute_Uicomponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS_ATTRIBUTE__LABEL = eINSTANCE.getClassAttribute_Label();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.AttributeTypeImpl <em>Attribute Type</em>}' class.
@@ -3503,14 +3732,38 @@ public interface FormValidationPackage extends EPackage {
 		EAttribute UI_COMPONENT__TOOLTIP = eINSTANCE.getUIComponent_Tooltip();
 
 		/**
-		 * The meta object literal for the '{@link formValidation.impl.DependancyImpl <em>Dependancy</em>}' class.
+		 * The meta object literal for the '{@link formValidation.impl.DependOnImpl <em>Depend On</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see formValidation.impl.DependancyImpl
-		 * @see formValidation.impl.FormValidationPackageImpl#getDependancy()
+		 * @see formValidation.impl.DependOnImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getDependOn()
 		 * @generated
 		 */
-		EClass DEPENDANCY = eINSTANCE.getDependancy();
+		EClass DEPEND_ON = eINSTANCE.getDependOn();
+
+		/**
+		 * The meta object literal for the '<em><b>Independent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPEND_ON__INDEPENDENT = eINSTANCE.getDependOn_Independent();
+
+		/**
+		 * The meta object literal for the '<em><b>Dependent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPEND_ON__DEPENDENT = eINSTANCE.getDependOn_Dependent();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEPEND_ON__CONDITION = eINSTANCE.getDependOn_Condition();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.NumericUIComponentImpl <em>Numeric UI Component</em>}' class.
@@ -3657,6 +3910,14 @@ public interface FormValidationPackage extends EPackage {
 		EClass TEXT_UI_COMPONENT = eINSTANCE.getTextUIComponent();
 
 		/**
+		 * The meta object literal for the '<em><b>Place Holder</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_UI_COMPONENT__PLACE_HOLDER = eINSTANCE.getTextUIComponent_PlaceHolder();
+
+		/**
 		 * The meta object literal for the '{@link formValidation.impl.TextInputImpl <em>Text Input</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3693,6 +3954,14 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FORM_LAYOUT = eINSTANCE.getFormLayout();
+
+		/**
+		 * The meta object literal for the '<em><b>Classattribute</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORM_LAYOUT__CLASSATTRIBUTE = eINSTANCE.getFormLayout_Classattribute();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.FieldSetImpl <em>Field Set</em>}' class.

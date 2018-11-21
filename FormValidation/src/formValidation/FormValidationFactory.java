@@ -211,13 +211,13 @@ public interface FormValidationFactory extends EFactory {
 	AttributeArray createAttributeArray();
 
 	/**
-	 * Returns a new object of class '<em>Dependancy</em>'.
+	 * Returns a new object of class '<em>Depend On</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dependancy</em>'.
+	 * @return a new object of class '<em>Depend On</em>'.
 	 * @generated
 	 */
-	Dependancy createDependancy();
+	DependOn createDependOn();
 
 	/**
 	 * Returns a new object of class '<em>Input Number</em>'.
