@@ -78,6 +78,19 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.EQUALS: return createEquals();
 			case FormValidationPackage.LESS_THAN: return createLessThan();
 			case FormValidationPackage.ATTRIBUTE_ARRAY: return createAttributeArray();
+			case FormValidationPackage.DEPENDANCY: return createDependancy();
+			case FormValidationPackage.INPUT_NUMBER: return createInputNumber();
+			case FormValidationPackage.SCROLLBAR: return createScrollbar();
+			case FormValidationPackage.RADIO_BUTTON: return createRadioButton();
+			case FormValidationPackage.DROP_DOWN_LIST: return createDropDownList();
+			case FormValidationPackage.CHECK_BOX: return createCheckBox();
+			case FormValidationPackage.MULTI_SELECTED_DROP_DOWN_LIST: return createMultiSelectedDropDownList();
+			case FormValidationPackage.DATE_UI_COMPONENT: return createDateUIComponent();
+			case FormValidationPackage.TEXT_INPUT: return createTextInput();
+			case FormValidationPackage.TEXT_AREA: return createTextArea();
+			case FormValidationPackage.FIELD_SET: return createFieldSet();
+			case FormValidationPackage.TAB: return createTab();
+			case FormValidationPackage.GRID: return createGrid();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -93,6 +106,8 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 		switch (eDataType.getClassifierID()) {
 			case FormValidationPackage.EVRSTA:
 				return createEVrstaFromString(eDataType, initialValue);
+			case FormValidationPackage.EORIENTATION:
+				return createEOrientationFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -108,6 +123,8 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 		switch (eDataType.getClassifierID()) {
 			case FormValidationPackage.EVRSTA:
 				return convertEVrstaToString(eDataType, instanceValue);
+			case FormValidationPackage.EORIENTATION:
+				return convertEOrientationToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -328,6 +345,136 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Dependancy createDependancy() {
+		DependancyImpl dependancy = new DependancyImpl();
+		return dependancy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputNumber createInputNumber() {
+		InputNumberImpl inputNumber = new InputNumberImpl();
+		return inputNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Scrollbar createScrollbar() {
+		ScrollbarImpl scrollbar = new ScrollbarImpl();
+		return scrollbar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RadioButton createRadioButton() {
+		RadioButtonImpl radioButton = new RadioButtonImpl();
+		return radioButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DropDownList createDropDownList() {
+		DropDownListImpl dropDownList = new DropDownListImpl();
+		return dropDownList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CheckBox createCheckBox() {
+		CheckBoxImpl checkBox = new CheckBoxImpl();
+		return checkBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultiSelectedDropDownList createMultiSelectedDropDownList() {
+		MultiSelectedDropDownListImpl multiSelectedDropDownList = new MultiSelectedDropDownListImpl();
+		return multiSelectedDropDownList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DateUIComponent createDateUIComponent() {
+		DateUIComponentImpl dateUIComponent = new DateUIComponentImpl();
+		return dateUIComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextInput createTextInput() {
+		TextInputImpl textInput = new TextInputImpl();
+		return textInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextArea createTextArea() {
+		TextAreaImpl textArea = new TextAreaImpl();
+		return textArea;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FieldSet createFieldSet() {
+		FieldSetImpl fieldSet = new FieldSetImpl();
+		return fieldSet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tab createTab() {
+		TabImpl tab = new TabImpl();
+		return tab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Grid createGrid() {
+		GridImpl grid = new GridImpl();
+		return grid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EVrsta createEVrstaFromString(EDataType eDataType, String initialValue) {
 		EVrsta result = EVrsta.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -340,6 +487,26 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * @generated
 	 */
 	public String convertEVrstaToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOrientation createEOrientationFromString(EDataType eDataType, String initialValue) {
+		EOrientation result = EOrientation.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEOrientationToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

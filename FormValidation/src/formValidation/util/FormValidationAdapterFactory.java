@@ -176,6 +176,86 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createAttributeArrayAdapter();
 			}
 			@Override
+			public Adapter caseUIComponent(UIComponent object) {
+				return createUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseDependancy(Dependancy object) {
+				return createDependancyAdapter();
+			}
+			@Override
+			public Adapter caseNumericUIComponent(NumericUIComponent object) {
+				return createNumericUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseInputNumber(InputNumber object) {
+				return createInputNumberAdapter();
+			}
+			@Override
+			public Adapter caseScrollbar(Scrollbar object) {
+				return createScrollbarAdapter();
+			}
+			@Override
+			public Adapter caseEnumerationUIComponent(EnumerationUIComponent object) {
+				return createEnumerationUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseSingleValue(SingleValue object) {
+				return createSingleValueAdapter();
+			}
+			@Override
+			public Adapter caseMultipleValues(MultipleValues object) {
+				return createMultipleValuesAdapter();
+			}
+			@Override
+			public Adapter caseRadioButton(RadioButton object) {
+				return createRadioButtonAdapter();
+			}
+			@Override
+			public Adapter caseDropDownList(DropDownList object) {
+				return createDropDownListAdapter();
+			}
+			@Override
+			public Adapter caseCheckBox(CheckBox object) {
+				return createCheckBoxAdapter();
+			}
+			@Override
+			public Adapter caseMultiSelectedDropDownList(MultiSelectedDropDownList object) {
+				return createMultiSelectedDropDownListAdapter();
+			}
+			@Override
+			public Adapter caseDateUIComponent(DateUIComponent object) {
+				return createDateUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseTextUIComponent(TextUIComponent object) {
+				return createTextUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseTextInput(TextInput object) {
+				return createTextInputAdapter();
+			}
+			@Override
+			public Adapter caseTextArea(TextArea object) {
+				return createTextAreaAdapter();
+			}
+			@Override
+			public Adapter caseFormLayout(FormLayout object) {
+				return createFormLayoutAdapter();
+			}
+			@Override
+			public Adapter caseFieldSet(FieldSet object) {
+				return createFieldSetAdapter();
+			}
+			@Override
+			public Adapter caseTab(Tab object) {
+				return createTabAdapter();
+			}
+			@Override
+			public Adapter caseGrid(Grid object) {
+				return createGridAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -570,6 +650,286 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAttributeArrayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.UIComponent <em>UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.UIComponent
+	 * @generated
+	 */
+	public Adapter createUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Dependancy <em>Dependancy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Dependancy
+	 * @generated
+	 */
+	public Adapter createDependancyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.NumericUIComponent <em>Numeric UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.NumericUIComponent
+	 * @generated
+	 */
+	public Adapter createNumericUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.InputNumber <em>Input Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.InputNumber
+	 * @generated
+	 */
+	public Adapter createInputNumberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Scrollbar <em>Scrollbar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Scrollbar
+	 * @generated
+	 */
+	public Adapter createScrollbarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.EnumerationUIComponent <em>Enumeration UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.EnumerationUIComponent
+	 * @generated
+	 */
+	public Adapter createEnumerationUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.SingleValue <em>Single Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.SingleValue
+	 * @generated
+	 */
+	public Adapter createSingleValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.MultipleValues <em>Multiple Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.MultipleValues
+	 * @generated
+	 */
+	public Adapter createMultipleValuesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.RadioButton <em>Radio Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.RadioButton
+	 * @generated
+	 */
+	public Adapter createRadioButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.DropDownList <em>Drop Down List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.DropDownList
+	 * @generated
+	 */
+	public Adapter createDropDownListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.CheckBox <em>Check Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.CheckBox
+	 * @generated
+	 */
+	public Adapter createCheckBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.MultiSelectedDropDownList <em>Multi Selected Drop Down List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.MultiSelectedDropDownList
+	 * @generated
+	 */
+	public Adapter createMultiSelectedDropDownListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.DateUIComponent <em>Date UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.DateUIComponent
+	 * @generated
+	 */
+	public Adapter createDateUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.TextUIComponent <em>Text UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.TextUIComponent
+	 * @generated
+	 */
+	public Adapter createTextUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.TextInput <em>Text Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.TextInput
+	 * @generated
+	 */
+	public Adapter createTextInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.TextArea <em>Text Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.TextArea
+	 * @generated
+	 */
+	public Adapter createTextAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.FormLayout <em>Form Layout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.FormLayout
+	 * @generated
+	 */
+	public Adapter createFormLayoutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.FieldSet <em>Field Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.FieldSet
+	 * @generated
+	 */
+	public Adapter createFieldSetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Tab <em>Tab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Tab
+	 * @generated
+	 */
+	public Adapter createTabAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Grid <em>Grid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Grid
+	 * @generated
+	 */
+	public Adapter createGridAdapter() {
 		return null;
 	}
 

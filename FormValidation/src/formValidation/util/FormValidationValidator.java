@@ -140,8 +140,50 @@ public class FormValidationValidator extends EObjectValidator {
 				return validateLessThan((LessThan)value, diagnostics, context);
 			case FormValidationPackage.ATTRIBUTE_ARRAY:
 				return validateAttributeArray((AttributeArray)value, diagnostics, context);
+			case FormValidationPackage.UI_COMPONENT:
+				return validateUIComponent((UIComponent)value, diagnostics, context);
+			case FormValidationPackage.DEPENDANCY:
+				return validateDependancy((Dependancy)value, diagnostics, context);
+			case FormValidationPackage.NUMERIC_UI_COMPONENT:
+				return validateNumericUIComponent((NumericUIComponent)value, diagnostics, context);
+			case FormValidationPackage.INPUT_NUMBER:
+				return validateInputNumber((InputNumber)value, diagnostics, context);
+			case FormValidationPackage.SCROLLBAR:
+				return validateScrollbar((Scrollbar)value, diagnostics, context);
+			case FormValidationPackage.ENUMERATION_UI_COMPONENT:
+				return validateEnumerationUIComponent((EnumerationUIComponent)value, diagnostics, context);
+			case FormValidationPackage.SINGLE_VALUE:
+				return validateSingleValue((SingleValue)value, diagnostics, context);
+			case FormValidationPackage.MULTIPLE_VALUES:
+				return validateMultipleValues((MultipleValues)value, diagnostics, context);
+			case FormValidationPackage.RADIO_BUTTON:
+				return validateRadioButton((RadioButton)value, diagnostics, context);
+			case FormValidationPackage.DROP_DOWN_LIST:
+				return validateDropDownList((DropDownList)value, diagnostics, context);
+			case FormValidationPackage.CHECK_BOX:
+				return validateCheckBox((CheckBox)value, diagnostics, context);
+			case FormValidationPackage.MULTI_SELECTED_DROP_DOWN_LIST:
+				return validateMultiSelectedDropDownList((MultiSelectedDropDownList)value, diagnostics, context);
+			case FormValidationPackage.DATE_UI_COMPONENT:
+				return validateDateUIComponent((DateUIComponent)value, diagnostics, context);
+			case FormValidationPackage.TEXT_UI_COMPONENT:
+				return validateTextUIComponent((TextUIComponent)value, diagnostics, context);
+			case FormValidationPackage.TEXT_INPUT:
+				return validateTextInput((TextInput)value, diagnostics, context);
+			case FormValidationPackage.TEXT_AREA:
+				return validateTextArea((TextArea)value, diagnostics, context);
+			case FormValidationPackage.FORM_LAYOUT:
+				return validateFormLayout((FormLayout)value, diagnostics, context);
+			case FormValidationPackage.FIELD_SET:
+				return validateFieldSet((FieldSet)value, diagnostics, context);
+			case FormValidationPackage.TAB:
+				return validateTab((Tab)value, diagnostics, context);
+			case FormValidationPackage.GRID:
+				return validateGrid((Grid)value, diagnostics, context);
 			case FormValidationPackage.EVRSTA:
 				return validateEVrsta((EVrsta)value, diagnostics, context);
+			case FormValidationPackage.EORIENTATION:
+				return validateEOrientation((EOrientation)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -1198,7 +1240,196 @@ public class FormValidationValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateUIComponent(UIComponent uiComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(uiComponent, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDependancy(Dependancy dependancy, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dependancy, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNumericUIComponent(NumericUIComponent numericUIComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(numericUIComponent, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateInputNumber(InputNumber inputNumber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(inputNumber, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateScrollbar(Scrollbar scrollbar, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(scrollbar, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEnumerationUIComponent(EnumerationUIComponent enumerationUIComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(enumerationUIComponent, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSingleValue(SingleValue singleValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(singleValue, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultipleValues(MultipleValues multipleValues, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(multipleValues, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRadioButton(RadioButton radioButton, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(radioButton, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDropDownList(DropDownList dropDownList, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dropDownList, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCheckBox(CheckBox checkBox, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(checkBox, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultiSelectedDropDownList(MultiSelectedDropDownList multiSelectedDropDownList, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(multiSelectedDropDownList, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDateUIComponent(DateUIComponent dateUIComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dateUIComponent, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTextUIComponent(TextUIComponent textUIComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(textUIComponent, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTextInput(TextInput textInput, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(textInput, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTextArea(TextArea textArea, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(textArea, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFormLayout(FormLayout formLayout, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(formLayout, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFieldSet(FieldSet fieldSet, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fieldSet, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTab(Tab tab, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tab, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGrid(Grid grid, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(grid, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateEVrsta(EVrsta eVrsta, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEOrientation(EOrientation eOrientation, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

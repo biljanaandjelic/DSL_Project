@@ -257,6 +257,164 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FormValidationPackage.UI_COMPONENT: {
+				UIComponent uiComponent = (UIComponent)theEObject;
+				T result = caseUIComponent(uiComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.DEPENDANCY: {
+				Dependancy dependancy = (Dependancy)theEObject;
+				T result = caseDependancy(dependancy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.NUMERIC_UI_COMPONENT: {
+				NumericUIComponent numericUIComponent = (NumericUIComponent)theEObject;
+				T result = caseNumericUIComponent(numericUIComponent);
+				if (result == null) result = caseUIComponent(numericUIComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.INPUT_NUMBER: {
+				InputNumber inputNumber = (InputNumber)theEObject;
+				T result = caseInputNumber(inputNumber);
+				if (result == null) result = caseNumericUIComponent(inputNumber);
+				if (result == null) result = caseUIComponent(inputNumber);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.SCROLLBAR: {
+				Scrollbar scrollbar = (Scrollbar)theEObject;
+				T result = caseScrollbar(scrollbar);
+				if (result == null) result = caseNumericUIComponent(scrollbar);
+				if (result == null) result = caseUIComponent(scrollbar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.ENUMERATION_UI_COMPONENT: {
+				EnumerationUIComponent enumerationUIComponent = (EnumerationUIComponent)theEObject;
+				T result = caseEnumerationUIComponent(enumerationUIComponent);
+				if (result == null) result = caseNumericUIComponent(enumerationUIComponent);
+				if (result == null) result = caseUIComponent(enumerationUIComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.SINGLE_VALUE: {
+				SingleValue singleValue = (SingleValue)theEObject;
+				T result = caseSingleValue(singleValue);
+				if (result == null) result = caseEnumerationUIComponent(singleValue);
+				if (result == null) result = caseNumericUIComponent(singleValue);
+				if (result == null) result = caseUIComponent(singleValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.MULTIPLE_VALUES: {
+				MultipleValues multipleValues = (MultipleValues)theEObject;
+				T result = caseMultipleValues(multipleValues);
+				if (result == null) result = caseEnumerationUIComponent(multipleValues);
+				if (result == null) result = caseNumericUIComponent(multipleValues);
+				if (result == null) result = caseUIComponent(multipleValues);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.RADIO_BUTTON: {
+				RadioButton radioButton = (RadioButton)theEObject;
+				T result = caseRadioButton(radioButton);
+				if (result == null) result = caseSingleValue(radioButton);
+				if (result == null) result = caseEnumerationUIComponent(radioButton);
+				if (result == null) result = caseNumericUIComponent(radioButton);
+				if (result == null) result = caseUIComponent(radioButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.DROP_DOWN_LIST: {
+				DropDownList dropDownList = (DropDownList)theEObject;
+				T result = caseDropDownList(dropDownList);
+				if (result == null) result = caseSingleValue(dropDownList);
+				if (result == null) result = caseEnumerationUIComponent(dropDownList);
+				if (result == null) result = caseNumericUIComponent(dropDownList);
+				if (result == null) result = caseUIComponent(dropDownList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.CHECK_BOX: {
+				CheckBox checkBox = (CheckBox)theEObject;
+				T result = caseCheckBox(checkBox);
+				if (result == null) result = caseMultipleValues(checkBox);
+				if (result == null) result = caseEnumerationUIComponent(checkBox);
+				if (result == null) result = caseNumericUIComponent(checkBox);
+				if (result == null) result = caseUIComponent(checkBox);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.MULTI_SELECTED_DROP_DOWN_LIST: {
+				MultiSelectedDropDownList multiSelectedDropDownList = (MultiSelectedDropDownList)theEObject;
+				T result = caseMultiSelectedDropDownList(multiSelectedDropDownList);
+				if (result == null) result = caseMultipleValues(multiSelectedDropDownList);
+				if (result == null) result = caseEnumerationUIComponent(multiSelectedDropDownList);
+				if (result == null) result = caseNumericUIComponent(multiSelectedDropDownList);
+				if (result == null) result = caseUIComponent(multiSelectedDropDownList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.DATE_UI_COMPONENT: {
+				DateUIComponent dateUIComponent = (DateUIComponent)theEObject;
+				T result = caseDateUIComponent(dateUIComponent);
+				if (result == null) result = caseUIComponent(dateUIComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.TEXT_UI_COMPONENT: {
+				TextUIComponent textUIComponent = (TextUIComponent)theEObject;
+				T result = caseTextUIComponent(textUIComponent);
+				if (result == null) result = caseUIComponent(textUIComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.TEXT_INPUT: {
+				TextInput textInput = (TextInput)theEObject;
+				T result = caseTextInput(textInput);
+				if (result == null) result = caseTextUIComponent(textInput);
+				if (result == null) result = caseUIComponent(textInput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.TEXT_AREA: {
+				TextArea textArea = (TextArea)theEObject;
+				T result = caseTextArea(textArea);
+				if (result == null) result = caseTextUIComponent(textArea);
+				if (result == null) result = caseUIComponent(textArea);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.FORM_LAYOUT: {
+				FormLayout formLayout = (FormLayout)theEObject;
+				T result = caseFormLayout(formLayout);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.FIELD_SET: {
+				FieldSet fieldSet = (FieldSet)theEObject;
+				T result = caseFieldSet(fieldSet);
+				if (result == null) result = caseFormLayout(fieldSet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.TAB: {
+				Tab tab = (Tab)theEObject;
+				T result = caseTab(tab);
+				if (result == null) result = caseFormLayout(tab);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FormValidationPackage.GRID: {
+				Grid grid = (Grid)theEObject;
+				T result = caseGrid(grid);
+				if (result == null) result = caseFormLayout(grid);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -663,6 +821,306 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAttributeArray(AttributeArray object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>UI Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>UI Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUIComponent(UIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dependancy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dependancy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDependancy(Dependancy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Numeric UI Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Numeric UI Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNumericUIComponent(NumericUIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Number</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputNumber(InputNumber object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Scrollbar</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Scrollbar</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScrollbar(Scrollbar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enumeration UI Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enumeration UI Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnumerationUIComponent(EnumerationUIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Single Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Single Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSingleValue(SingleValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Multiple Values</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multiple Values</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultipleValues(MultipleValues object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Radio Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Radio Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRadioButton(RadioButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Drop Down List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Drop Down List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDropDownList(DropDownList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Check Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Check Box</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCheckBox(CheckBox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Multi Selected Drop Down List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multi Selected Drop Down List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultiSelectedDropDownList(MultiSelectedDropDownList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date UI Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date UI Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDateUIComponent(DateUIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text UI Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text UI Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextUIComponent(TextUIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Input</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextInput(TextInput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Area</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextArea(TextArea object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Form Layout</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFormLayout(FormLayout object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Field Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Field Set</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFieldSet(FieldSet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tab</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tab</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTab(Tab object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Grid</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Grid</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGrid(Grid object) {
 		return null;
 	}
 

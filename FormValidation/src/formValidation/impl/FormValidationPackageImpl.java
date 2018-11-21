@@ -8,15 +8,25 @@ import formValidation.AcceptableValuesString;
 import formValidation.AttributeArray;
 import formValidation.AttributeRule;
 import formValidation.AttributeType;
+import formValidation.CheckBox;
 import formValidation.ClassAttribute;
 import formValidation.ClassRule;
 import formValidation.DatePattern;
+import formValidation.DateUIComponent;
+import formValidation.Dependancy;
+import formValidation.DropDownList;
+import formValidation.EOrientation;
 import formValidation.EVrsta;
 import formValidation.Email;
+import formValidation.EnumerationUIComponent;
 import formValidation.Equals;
+import formValidation.FieldSet;
+import formValidation.FormLayout;
 import formValidation.FormValidationFactory;
 import formValidation.FormValidationPackage;
 import formValidation.GreaterThan;
+import formValidation.Grid;
+import formValidation.InputNumber;
 import formValidation.Length;
 import formValidation.LessThan;
 import formValidation.Max;
@@ -27,10 +37,21 @@ import formValidation.Min;
 import formValidation.MinDate;
 import formValidation.MinLength;
 import formValidation.MinNumber;
+import formValidation.MultiSelectedDropDownList;
+import formValidation.MultipleValues;
 import formValidation.NotEquals;
+import formValidation.NumericUIComponent;
 import formValidation.Pattern;
+import formValidation.RadioButton;
 import formValidation.Required;
+import formValidation.Scrollbar;
+import formValidation.SingleValue;
 import formValidation.StringPattern;
+import formValidation.Tab;
+import formValidation.TextArea;
+import formValidation.TextInput;
+import formValidation.TextUIComponent;
+import formValidation.UIComponent;
 import formValidation.ValidationClass;
 
 import formValidation.util.FormValidationValidator;
@@ -247,7 +268,154 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass uiComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dependancyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass numericUIComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputNumberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scrollbarEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumerationUIComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass singleValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multipleValuesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass radioButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dropDownListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass checkBoxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiSelectedDropDownListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateUIComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textUIComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textAreaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass formLayoutEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fieldSetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tabEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gridEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum eVrstaEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eOrientationEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -365,6 +533,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 */
 	public EClass getAttributeRule() {
 		return attributeRuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttributeRule_ErrorMessage() {
+		return (EAttribute)attributeRuleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -813,8 +990,269 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getUIComponent() {
+		return uiComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUIComponent_Tooltip() {
+		return (EAttribute)uiComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDependancy() {
+		return dependancyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNumericUIComponent() {
+		return numericUIComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNumericUIComponent_DefaultValue() {
+		return (EAttribute)numericUIComponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputNumber() {
+		return inputNumberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScrollbar() {
+		return scrollbarEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnumerationUIComponent() {
+		return enumerationUIComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSingleValue() {
+		return singleValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultipleValues() {
+		return multipleValuesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRadioButton() {
+		return radioButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRadioButton_Orientation() {
+		return (EAttribute)radioButtonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDropDownList() {
+		return dropDownListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCheckBox() {
+		return checkBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCheckBox_Orientation() {
+		return (EAttribute)checkBoxEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiSelectedDropDownList() {
+		return multiSelectedDropDownListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDateUIComponent() {
+		return dateUIComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextUIComponent() {
+		return textUIComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextInput() {
+		return textInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextArea() {
+		return textAreaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTextArea_NumOfRows() {
+		return (EAttribute)textAreaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFormLayout() {
+		return formLayoutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFieldSet() {
+		return fieldSetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFieldSet_Legend() {
+		return (EAttribute)fieldSetEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTab() {
+		return tabEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTab_Name() {
+		return (EAttribute)tabEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGrid() {
+		return gridEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGrid_NumOfColumns() {
+		return (EAttribute)gridEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEVrsta() {
 		return eVrstaEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEOrientation() {
+		return eOrientationEEnum;
 	}
 
 	/**
@@ -851,6 +1289,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEReference(validationClassEClass, VALIDATION_CLASS__CLASSRULE);
 
 		attributeRuleEClass = createEClass(ATTRIBUTE_RULE);
+		createEAttribute(attributeRuleEClass, ATTRIBUTE_RULE__ERROR_MESSAGE);
 
 		classAttributeEClass = createEClass(CLASS_ATTRIBUTE);
 		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__NAME);
@@ -926,8 +1365,57 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		attributeArrayEClass = createEClass(ATTRIBUTE_ARRAY);
 		createEReference(attributeArrayEClass, ATTRIBUTE_ARRAY__CLASSATTRIBUTE);
 
+		uiComponentEClass = createEClass(UI_COMPONENT);
+		createEAttribute(uiComponentEClass, UI_COMPONENT__TOOLTIP);
+
+		dependancyEClass = createEClass(DEPENDANCY);
+
+		numericUIComponentEClass = createEClass(NUMERIC_UI_COMPONENT);
+		createEAttribute(numericUIComponentEClass, NUMERIC_UI_COMPONENT__DEFAULT_VALUE);
+
+		inputNumberEClass = createEClass(INPUT_NUMBER);
+
+		scrollbarEClass = createEClass(SCROLLBAR);
+
+		enumerationUIComponentEClass = createEClass(ENUMERATION_UI_COMPONENT);
+
+		singleValueEClass = createEClass(SINGLE_VALUE);
+
+		multipleValuesEClass = createEClass(MULTIPLE_VALUES);
+
+		radioButtonEClass = createEClass(RADIO_BUTTON);
+		createEAttribute(radioButtonEClass, RADIO_BUTTON__ORIENTATION);
+
+		dropDownListEClass = createEClass(DROP_DOWN_LIST);
+
+		checkBoxEClass = createEClass(CHECK_BOX);
+		createEAttribute(checkBoxEClass, CHECK_BOX__ORIENTATION);
+
+		multiSelectedDropDownListEClass = createEClass(MULTI_SELECTED_DROP_DOWN_LIST);
+
+		dateUIComponentEClass = createEClass(DATE_UI_COMPONENT);
+
+		textUIComponentEClass = createEClass(TEXT_UI_COMPONENT);
+
+		textInputEClass = createEClass(TEXT_INPUT);
+
+		textAreaEClass = createEClass(TEXT_AREA);
+		createEAttribute(textAreaEClass, TEXT_AREA__NUM_OF_ROWS);
+
+		formLayoutEClass = createEClass(FORM_LAYOUT);
+
+		fieldSetEClass = createEClass(FIELD_SET);
+		createEAttribute(fieldSetEClass, FIELD_SET__LEGEND);
+
+		tabEClass = createEClass(TAB);
+		createEAttribute(tabEClass, TAB__NAME);
+
+		gridEClass = createEClass(GRID);
+		createEAttribute(gridEClass, GRID__NUM_OF_COLUMNS);
+
 		// Create enums
 		eVrstaEEnum = createEEnum(EVRSTA);
+		eOrientationEEnum = createEEnum(EORIENTATION);
 	}
 
 	/**
@@ -982,6 +1470,23 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		greaterThanEClass.getESuperTypes().add(this.getClassRule());
 		equalsEClass.getESuperTypes().add(this.getClassRule());
 		lessThanEClass.getESuperTypes().add(this.getClassRule());
+		numericUIComponentEClass.getESuperTypes().add(this.getUIComponent());
+		inputNumberEClass.getESuperTypes().add(this.getNumericUIComponent());
+		scrollbarEClass.getESuperTypes().add(this.getNumericUIComponent());
+		enumerationUIComponentEClass.getESuperTypes().add(this.getNumericUIComponent());
+		singleValueEClass.getESuperTypes().add(this.getEnumerationUIComponent());
+		multipleValuesEClass.getESuperTypes().add(this.getEnumerationUIComponent());
+		radioButtonEClass.getESuperTypes().add(this.getSingleValue());
+		dropDownListEClass.getESuperTypes().add(this.getSingleValue());
+		checkBoxEClass.getESuperTypes().add(this.getMultipleValues());
+		multiSelectedDropDownListEClass.getESuperTypes().add(this.getMultipleValues());
+		dateUIComponentEClass.getESuperTypes().add(this.getUIComponent());
+		textUIComponentEClass.getESuperTypes().add(this.getUIComponent());
+		textInputEClass.getESuperTypes().add(this.getTextUIComponent());
+		textAreaEClass.getESuperTypes().add(this.getTextUIComponent());
+		fieldSetEClass.getESuperTypes().add(this.getFormLayout());
+		tabEClass.getESuperTypes().add(this.getFormLayout());
+		gridEClass.getESuperTypes().add(this.getFormLayout());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(validationClassEClass, ValidationClass.class, "ValidationClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -990,6 +1495,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEReference(getValidationClass_Classrule(), this.getClassRule(), null, "classrule", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeRuleEClass, AttributeRule.class, "AttributeRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttributeRule_ErrorMessage(), ecorePackage.getEString(), "errorMessage", null, 0, 1, AttributeRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classAttributeEClass, ClassAttribute.class, "ClassAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getClassAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1065,11 +1571,63 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEClass(attributeArrayEClass, AttributeArray.class, "AttributeArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttributeArray_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, -1, AttributeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(uiComponentEClass, UIComponent.class, "UIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUIComponent_Tooltip(), ecorePackage.getEString(), "tooltip", null, 0, 1, UIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dependancyEClass, Dependancy.class, "Dependancy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(numericUIComponentEClass, NumericUIComponent.class, "NumericUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNumericUIComponent_DefaultValue(), ecorePackage.getEDouble(), "defaultValue", null, 0, 1, NumericUIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputNumberEClass, InputNumber.class, "InputNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(scrollbarEClass, Scrollbar.class, "Scrollbar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(enumerationUIComponentEClass, EnumerationUIComponent.class, "EnumerationUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(singleValueEClass, SingleValue.class, "SingleValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(multipleValuesEClass, MultipleValues.class, "MultipleValues", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRadioButton_Orientation(), this.getEOrientation(), "orientation", null, 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dropDownListEClass, DropDownList.class, "DropDownList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(checkBoxEClass, CheckBox.class, "CheckBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCheckBox_Orientation(), this.getEOrientation(), "orientation", null, 0, 1, CheckBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multiSelectedDropDownListEClass, MultiSelectedDropDownList.class, "MultiSelectedDropDownList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dateUIComponentEClass, DateUIComponent.class, "DateUIComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textUIComponentEClass, TextUIComponent.class, "TextUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textInputEClass, TextInput.class, "TextInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textAreaEClass, TextArea.class, "TextArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextArea_NumOfRows(), ecorePackage.getEInt(), "numOfRows", "1", 0, 1, TextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(formLayoutEClass, FormLayout.class, "FormLayout", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fieldSetEClass, FieldSet.class, "FieldSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFieldSet_Legend(), ecorePackage.getEString(), "legend", null, 0, 1, FieldSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tabEClass, Tab.class, "Tab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTab_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGrid_NumOfColumns(), ecorePackage.getEInt(), "numOfColumns", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(eVrstaEEnum, EVrsta.class, "EVrsta");
 		addEEnumLiteral(eVrstaEEnum, EVrsta.STRING);
 		addEEnumLiteral(eVrstaEEnum, EVrsta.NUMBER);
 		addEEnumLiteral(eVrstaEEnum, EVrsta.DATE);
+
+		initEEnum(eOrientationEEnum, EOrientation.class, "EOrientation");
+		addEEnumLiteral(eOrientationEEnum, EOrientation.VERTICAL);
+		addEEnumLiteral(eOrientationEEnum, EOrientation.HORIZONTAL);
 
 		// Create resource
 		createResource(eNS_URI);

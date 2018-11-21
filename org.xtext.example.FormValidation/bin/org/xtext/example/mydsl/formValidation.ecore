@@ -24,7 +24,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueAttributeRules appropriateAttributeRules comparedMinMax compareMinMaxLength"/>
@@ -172,5 +174,48 @@
   <eClassifiers xsi:type="ecore:EClass" name="AttributeArray">
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
         eType="#//ClassAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependancy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NumericUIComponent" abstract="true"
+      eSuperTypes="#//UIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputNumber" eSuperTypes="#//NumericUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scrollbar" eSuperTypes="#//NumericUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationUIComponent" abstract="true"
+      eSuperTypes="#//NumericUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SingleValue" abstract="true" eSuperTypes="#//EnumerationUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleValues" abstract="true" eSuperTypes="#//EnumerationUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioButton" eSuperTypes="#//SingleValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="#//EOrientation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EOrientation">
+    <eLiterals name="Vertical"/>
+    <eLiterals name="Horizontal" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DropDownList" eSuperTypes="#//SingleValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckBox" eSuperTypes="#//MultipleValues">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="#//EOrientation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiSelectedDropDownList" eSuperTypes="#//MultipleValues"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateUIComponent" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextUIComponent" abstract="true" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextInput" eSuperTypes="#//TextUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextArea" eSuperTypes="#//TextUIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldSet" eSuperTypes="#//FormLayout">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="legend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tab" eSuperTypes="#//FormLayout">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

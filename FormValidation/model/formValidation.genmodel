@@ -27,6 +27,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributetype"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributerule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/uicomponent"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AttributeType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeType/vrsta"/>
@@ -113,7 +114,9 @@
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//MultiSelectedDropDownList"/>
     <genClasses ecoreClass="formValidation.ecore#//DateUIComponent"/>
-    <genClasses ecoreClass="formValidation.ecore#//TextUIComponent"/>
+    <genClasses ecoreClass="formValidation.ecore#//TextUIComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TextUIComponent/placeHolder"/>
+    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//TextInput"/>
     <genClasses ecoreClass="formValidation.ecore#//TextArea">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TextArea/numOfRows"/>

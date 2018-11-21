@@ -125,13 +125,22 @@ public interface FormValidationPackage extends EPackage {
 	int ATTRIBUTE_RULE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_RULE__ERROR_MESSAGE = 0;
+
+	/**
 	 * The number of structural features of the '<em>Attribute Rule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_RULE_FEATURE_COUNT = 0;
+	int ATTRIBUTE_RULE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Attribute Rule</em>' class.
@@ -245,6 +254,15 @@ public interface FormValidationPackage extends EPackage {
 	int MIN = 4;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MIN__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The number of structural features of the '<em>Min</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -273,6 +291,15 @@ public interface FormValidationPackage extends EPackage {
 	int MAX = 5;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAX__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The number of structural features of the '<em>Max</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +326,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int REQUIRED = 6;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIRED__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Is Required</b></em>' attribute.
@@ -338,6 +374,15 @@ public interface FormValidationPackage extends EPackage {
 	int EMAIL = 7;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Is Email</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,6 +420,15 @@ public interface FormValidationPackage extends EPackage {
 	int ACCEPTABLE_VALUES = 8;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPTABLE_VALUES__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The number of structural features of the '<em>Acceptable Values</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,6 +457,15 @@ public interface FormValidationPackage extends EPackage {
 	int PATTERN = 9;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATTERN__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The number of structural features of the '<em>Pattern</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -429,6 +492,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int MIN_LENGTH = 10;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MIN_LENGTH__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -468,6 +540,15 @@ public interface FormValidationPackage extends EPackage {
 	int MAX_LENGTH = 11;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAX_LENGTH__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,6 +584,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int LENGTH = 12;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LENGTH__ERROR_MESSAGE = ATTRIBUTE_RULE__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -542,6 +632,15 @@ public interface FormValidationPackage extends EPackage {
 	int MIN_NUMBER = 13;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MIN_NUMBER__ERROR_MESSAGE = MIN__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -577,6 +676,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int MIN_DATE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MIN_DATE__ERROR_MESSAGE = MIN__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -616,6 +724,15 @@ public interface FormValidationPackage extends EPackage {
 	int MAX_NUMBER = 15;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAX_NUMBER__ERROR_MESSAGE = MAX__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -651,6 +768,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int MAX_DATE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAX_DATE__ERROR_MESSAGE = MAX__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -690,6 +816,15 @@ public interface FormValidationPackage extends EPackage {
 	int ACCEPTABLE_VALUES_STRING = 17;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPTABLE_VALUES_STRING__ERROR_MESSAGE = ACCEPTABLE_VALUES__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,6 +860,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int ACCEPTABLE_VALUES_DATE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPTABLE_VALUES_DATE__ERROR_MESSAGE = ACCEPTABLE_VALUES__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute list.
@@ -764,6 +908,15 @@ public interface FormValidationPackage extends EPackage {
 	int STRING_PATTERN = 19;
 
 	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_PATTERN__ERROR_MESSAGE = PATTERN__ERROR_MESSAGE;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -799,6 +952,15 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	int DATE_PATTERN = 20;
+
+	/**
+	 * The feature id for the '<em><b>Error Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_PATTERN__ERROR_MESSAGE = PATTERN__ERROR_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1059,6 +1221,845 @@ public interface FormValidationPackage extends EPackage {
 	int ATTRIBUTE_ARRAY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link formValidation.impl.UIComponentImpl <em>UI Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.UIComponentImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getUIComponent()
+	 * @generated
+	 */
+	int UI_COMPONENT = 27;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI_COMPONENT__TOOLTIP = 0;
+
+	/**
+	 * The number of structural features of the '<em>UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI_COMPONENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI_COMPONENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.DependancyImpl <em>Dependancy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.DependancyImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getDependancy()
+	 * @generated
+	 */
+	int DEPENDANCY = 28;
+
+	/**
+	 * The number of structural features of the '<em>Dependancy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDANCY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Dependancy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPENDANCY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.NumericUIComponentImpl <em>Numeric UI Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.NumericUIComponentImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getNumericUIComponent()
+	 * @generated
+	 */
+	int NUMERIC_UI_COMPONENT = 29;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_UI_COMPONENT__TOOLTIP = UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_UI_COMPONENT__DEFAULT_VALUE = UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Numeric UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_UI_COMPONENT_FEATURE_COUNT = UI_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Numeric UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_UI_COMPONENT_OPERATION_COUNT = UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.InputNumberImpl <em>Input Number</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.InputNumberImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getInputNumber()
+	 * @generated
+	 */
+	int INPUT_NUMBER = 30;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_NUMBER__TOOLTIP = NUMERIC_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_NUMBER__DEFAULT_VALUE = NUMERIC_UI_COMPONENT__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Input Number</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_NUMBER_FEATURE_COUNT = NUMERIC_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Input Number</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_NUMBER_OPERATION_COUNT = NUMERIC_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.ScrollbarImpl <em>Scrollbar</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.ScrollbarImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getScrollbar()
+	 * @generated
+	 */
+	int SCROLLBAR = 31;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCROLLBAR__TOOLTIP = NUMERIC_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCROLLBAR__DEFAULT_VALUE = NUMERIC_UI_COMPONENT__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Scrollbar</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCROLLBAR_FEATURE_COUNT = NUMERIC_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Scrollbar</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCROLLBAR_OPERATION_COUNT = NUMERIC_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.EnumerationUIComponentImpl <em>Enumeration UI Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.EnumerationUIComponentImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getEnumerationUIComponent()
+	 * @generated
+	 */
+	int ENUMERATION_UI_COMPONENT = 32;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_UI_COMPONENT__TOOLTIP = NUMERIC_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_UI_COMPONENT__DEFAULT_VALUE = NUMERIC_UI_COMPONENT__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Enumeration UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_UI_COMPONENT_FEATURE_COUNT = NUMERIC_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Enumeration UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_UI_COMPONENT_OPERATION_COUNT = NUMERIC_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.SingleValueImpl <em>Single Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.SingleValueImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getSingleValue()
+	 * @generated
+	 */
+	int SINGLE_VALUE = 33;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_VALUE__TOOLTIP = ENUMERATION_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_VALUE__DEFAULT_VALUE = ENUMERATION_UI_COMPONENT__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Single Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_VALUE_FEATURE_COUNT = ENUMERATION_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Single Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINGLE_VALUE_OPERATION_COUNT = ENUMERATION_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.MultipleValuesImpl <em>Multiple Values</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.MultipleValuesImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getMultipleValues()
+	 * @generated
+	 */
+	int MULTIPLE_VALUES = 34;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_VALUES__TOOLTIP = ENUMERATION_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_VALUES__DEFAULT_VALUE = ENUMERATION_UI_COMPONENT__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Multiple Values</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_VALUES_FEATURE_COUNT = ENUMERATION_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Multiple Values</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLE_VALUES_OPERATION_COUNT = ENUMERATION_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.RadioButtonImpl <em>Radio Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.RadioButtonImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getRadioButton()
+	 * @generated
+	 */
+	int RADIO_BUTTON = 35;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON__TOOLTIP = SINGLE_VALUE__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON__DEFAULT_VALUE = SINGLE_VALUE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Orientation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON__ORIENTATION = SINGLE_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Radio Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON_FEATURE_COUNT = SINGLE_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Radio Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON_OPERATION_COUNT = SINGLE_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.DropDownListImpl <em>Drop Down List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.DropDownListImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getDropDownList()
+	 * @generated
+	 */
+	int DROP_DOWN_LIST = 36;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DROP_DOWN_LIST__TOOLTIP = SINGLE_VALUE__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DROP_DOWN_LIST__DEFAULT_VALUE = SINGLE_VALUE__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Drop Down List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DROP_DOWN_LIST_FEATURE_COUNT = SINGLE_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Drop Down List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DROP_DOWN_LIST_OPERATION_COUNT = SINGLE_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.CheckBoxImpl <em>Check Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.CheckBoxImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getCheckBox()
+	 * @generated
+	 */
+	int CHECK_BOX = 37;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOX__TOOLTIP = MULTIPLE_VALUES__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOX__DEFAULT_VALUE = MULTIPLE_VALUES__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Orientation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOX__ORIENTATION = MULTIPLE_VALUES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Check Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOX_FEATURE_COUNT = MULTIPLE_VALUES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Check Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOX_OPERATION_COUNT = MULTIPLE_VALUES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.MultiSelectedDropDownListImpl <em>Multi Selected Drop Down List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.MultiSelectedDropDownListImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getMultiSelectedDropDownList()
+	 * @generated
+	 */
+	int MULTI_SELECTED_DROP_DOWN_LIST = 38;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_SELECTED_DROP_DOWN_LIST__TOOLTIP = MULTIPLE_VALUES__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_SELECTED_DROP_DOWN_LIST__DEFAULT_VALUE = MULTIPLE_VALUES__DEFAULT_VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Multi Selected Drop Down List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_SELECTED_DROP_DOWN_LIST_FEATURE_COUNT = MULTIPLE_VALUES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Multi Selected Drop Down List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_SELECTED_DROP_DOWN_LIST_OPERATION_COUNT = MULTIPLE_VALUES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.DateUIComponentImpl <em>Date UI Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.DateUIComponentImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getDateUIComponent()
+	 * @generated
+	 */
+	int DATE_UI_COMPONENT = 39;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_UI_COMPONENT__TOOLTIP = UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The number of structural features of the '<em>Date UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_UI_COMPONENT_FEATURE_COUNT = UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Date UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_UI_COMPONENT_OPERATION_COUNT = UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.TextUIComponentImpl <em>Text UI Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.TextUIComponentImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getTextUIComponent()
+	 * @generated
+	 */
+	int TEXT_UI_COMPONENT = 40;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_UI_COMPONENT__TOOLTIP = UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The number of structural features of the '<em>Text UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_UI_COMPONENT_FEATURE_COUNT = UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Text UI Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_UI_COMPONENT_OPERATION_COUNT = UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.TextInputImpl <em>Text Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.TextInputImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getTextInput()
+	 * @generated
+	 */
+	int TEXT_INPUT = 41;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_INPUT__TOOLTIP = TEXT_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The number of structural features of the '<em>Text Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_INPUT_FEATURE_COUNT = TEXT_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Text Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_INPUT_OPERATION_COUNT = TEXT_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.TextAreaImpl <em>Text Area</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.TextAreaImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getTextArea()
+	 * @generated
+	 */
+	int TEXT_AREA = 42;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_AREA__TOOLTIP = TEXT_UI_COMPONENT__TOOLTIP;
+
+	/**
+	 * The feature id for the '<em><b>Num Of Rows</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_AREA__NUM_OF_ROWS = TEXT_UI_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_AREA_FEATURE_COUNT = TEXT_UI_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Text Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_AREA_OPERATION_COUNT = TEXT_UI_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.FormLayoutImpl <em>Form Layout</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.FormLayoutImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getFormLayout()
+	 * @generated
+	 */
+	int FORM_LAYOUT = 43;
+
+	/**
+	 * The number of structural features of the '<em>Form Layout</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_LAYOUT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Form Layout</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_LAYOUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.FieldSetImpl <em>Field Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.FieldSetImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getFieldSet()
+	 * @generated
+	 */
+	int FIELD_SET = 44;
+
+	/**
+	 * The feature id for the '<em><b>Legend</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_SET__LEGEND = FORM_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Field Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_SET_FEATURE_COUNT = FORM_LAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Field Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_SET_OPERATION_COUNT = FORM_LAYOUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.TabImpl <em>Tab</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.TabImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getTab()
+	 * @generated
+	 */
+	int TAB = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB__NAME = FORM_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_FEATURE_COUNT = FORM_LAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAB_OPERATION_COUNT = FORM_LAYOUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link formValidation.impl.GridImpl <em>Grid</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.impl.GridImpl
+	 * @see formValidation.impl.FormValidationPackageImpl#getGrid()
+	 * @generated
+	 */
+	int GRID = 46;
+
+	/**
+	 * The feature id for the '<em><b>Num Of Columns</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__NUM_OF_COLUMNS = FORM_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Grid</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID_FEATURE_COUNT = FORM_LAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Grid</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID_OPERATION_COUNT = FORM_LAYOUT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link formValidation.EVrsta <em>EVrsta</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1066,7 +2067,18 @@ public interface FormValidationPackage extends EPackage {
 	 * @see formValidation.impl.FormValidationPackageImpl#getEVrsta()
 	 * @generated
 	 */
-	int EVRSTA = 27;
+	int EVRSTA = 47;
+
+
+	/**
+	 * The meta object id for the '{@link formValidation.EOrientation <em>EOrientation</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see formValidation.EOrientation
+	 * @see formValidation.impl.FormValidationPackageImpl#getEOrientation()
+	 * @generated
+	 */
+	int EORIENTATION = 48;
 
 
 	/**
@@ -1121,6 +2133,17 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAttributeRule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.AttributeRule#getErrorMessage <em>Error Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Error Message</em>'.
+	 * @see formValidation.AttributeRule#getErrorMessage()
+	 * @see #getAttributeRule()
+	 * @generated
+	 */
+	EAttribute getAttributeRule_ErrorMessage();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.ClassAttribute <em>Class Attribute</em>}'.
@@ -1637,6 +2660,294 @@ public interface FormValidationPackage extends EPackage {
 	EReference getAttributeArray_Classattribute();
 
 	/**
+	 * Returns the meta object for class '{@link formValidation.UIComponent <em>UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>UI Component</em>'.
+	 * @see formValidation.UIComponent
+	 * @generated
+	 */
+	EClass getUIComponent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.UIComponent#getTooltip <em>Tooltip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tooltip</em>'.
+	 * @see formValidation.UIComponent#getTooltip()
+	 * @see #getUIComponent()
+	 * @generated
+	 */
+	EAttribute getUIComponent_Tooltip();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.Dependancy <em>Dependancy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dependancy</em>'.
+	 * @see formValidation.Dependancy
+	 * @generated
+	 */
+	EClass getDependancy();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.NumericUIComponent <em>Numeric UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Numeric UI Component</em>'.
+	 * @see formValidation.NumericUIComponent
+	 * @generated
+	 */
+	EClass getNumericUIComponent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.NumericUIComponent#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Value</em>'.
+	 * @see formValidation.NumericUIComponent#getDefaultValue()
+	 * @see #getNumericUIComponent()
+	 * @generated
+	 */
+	EAttribute getNumericUIComponent_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.InputNumber <em>Input Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Number</em>'.
+	 * @see formValidation.InputNumber
+	 * @generated
+	 */
+	EClass getInputNumber();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.Scrollbar <em>Scrollbar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Scrollbar</em>'.
+	 * @see formValidation.Scrollbar
+	 * @generated
+	 */
+	EClass getScrollbar();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.EnumerationUIComponent <em>Enumeration UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enumeration UI Component</em>'.
+	 * @see formValidation.EnumerationUIComponent
+	 * @generated
+	 */
+	EClass getEnumerationUIComponent();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.SingleValue <em>Single Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Single Value</em>'.
+	 * @see formValidation.SingleValue
+	 * @generated
+	 */
+	EClass getSingleValue();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.MultipleValues <em>Multiple Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multiple Values</em>'.
+	 * @see formValidation.MultipleValues
+	 * @generated
+	 */
+	EClass getMultipleValues();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.RadioButton <em>Radio Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Radio Button</em>'.
+	 * @see formValidation.RadioButton
+	 * @generated
+	 */
+	EClass getRadioButton();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.RadioButton#getOrientation <em>Orientation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Orientation</em>'.
+	 * @see formValidation.RadioButton#getOrientation()
+	 * @see #getRadioButton()
+	 * @generated
+	 */
+	EAttribute getRadioButton_Orientation();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.DropDownList <em>Drop Down List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Drop Down List</em>'.
+	 * @see formValidation.DropDownList
+	 * @generated
+	 */
+	EClass getDropDownList();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.CheckBox <em>Check Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Check Box</em>'.
+	 * @see formValidation.CheckBox
+	 * @generated
+	 */
+	EClass getCheckBox();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.CheckBox#getOrientation <em>Orientation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Orientation</em>'.
+	 * @see formValidation.CheckBox#getOrientation()
+	 * @see #getCheckBox()
+	 * @generated
+	 */
+	EAttribute getCheckBox_Orientation();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.MultiSelectedDropDownList <em>Multi Selected Drop Down List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multi Selected Drop Down List</em>'.
+	 * @see formValidation.MultiSelectedDropDownList
+	 * @generated
+	 */
+	EClass getMultiSelectedDropDownList();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.DateUIComponent <em>Date UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date UI Component</em>'.
+	 * @see formValidation.DateUIComponent
+	 * @generated
+	 */
+	EClass getDateUIComponent();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.TextUIComponent <em>Text UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text UI Component</em>'.
+	 * @see formValidation.TextUIComponent
+	 * @generated
+	 */
+	EClass getTextUIComponent();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.TextInput <em>Text Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Input</em>'.
+	 * @see formValidation.TextInput
+	 * @generated
+	 */
+	EClass getTextInput();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.TextArea <em>Text Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Area</em>'.
+	 * @see formValidation.TextArea
+	 * @generated
+	 */
+	EClass getTextArea();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.TextArea#getNumOfRows <em>Num Of Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Of Rows</em>'.
+	 * @see formValidation.TextArea#getNumOfRows()
+	 * @see #getTextArea()
+	 * @generated
+	 */
+	EAttribute getTextArea_NumOfRows();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.FormLayout <em>Form Layout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Form Layout</em>'.
+	 * @see formValidation.FormLayout
+	 * @generated
+	 */
+	EClass getFormLayout();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.FieldSet <em>Field Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Field Set</em>'.
+	 * @see formValidation.FieldSet
+	 * @generated
+	 */
+	EClass getFieldSet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.FieldSet#getLegend <em>Legend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Legend</em>'.
+	 * @see formValidation.FieldSet#getLegend()
+	 * @see #getFieldSet()
+	 * @generated
+	 */
+	EAttribute getFieldSet_Legend();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.Tab <em>Tab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tab</em>'.
+	 * @see formValidation.Tab
+	 * @generated
+	 */
+	EClass getTab();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.Tab#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see formValidation.Tab#getName()
+	 * @see #getTab()
+	 * @generated
+	 */
+	EAttribute getTab_Name();
+
+	/**
+	 * Returns the meta object for class '{@link formValidation.Grid <em>Grid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Grid</em>'.
+	 * @see formValidation.Grid
+	 * @generated
+	 */
+	EClass getGrid();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.Grid#getNumOfColumns <em>Num Of Columns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Of Columns</em>'.
+	 * @see formValidation.Grid#getNumOfColumns()
+	 * @see #getGrid()
+	 * @generated
+	 */
+	EAttribute getGrid_NumOfColumns();
+
+	/**
 	 * Returns the meta object for enum '{@link formValidation.EVrsta <em>EVrsta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1645,6 +2956,16 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEVrsta();
+
+	/**
+	 * Returns the meta object for enum '{@link formValidation.EOrientation <em>EOrientation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EOrientation</em>'.
+	 * @see formValidation.EOrientation
+	 * @generated
+	 */
+	EEnum getEOrientation();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1712,6 +3033,14 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ATTRIBUTE_RULE = eINSTANCE.getAttributeRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Error Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE_RULE__ERROR_MESSAGE = eINSTANCE.getAttributeRule_ErrorMessage();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.ClassAttributeImpl <em>Class Attribute</em>}' class.
@@ -2156,6 +3485,270 @@ public interface FormValidationPackage extends EPackage {
 		EReference ATTRIBUTE_ARRAY__CLASSATTRIBUTE = eINSTANCE.getAttributeArray_Classattribute();
 
 		/**
+		 * The meta object literal for the '{@link formValidation.impl.UIComponentImpl <em>UI Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.UIComponentImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getUIComponent()
+		 * @generated
+		 */
+		EClass UI_COMPONENT = eINSTANCE.getUIComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Tooltip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UI_COMPONENT__TOOLTIP = eINSTANCE.getUIComponent_Tooltip();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.DependancyImpl <em>Dependancy</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.DependancyImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getDependancy()
+		 * @generated
+		 */
+		EClass DEPENDANCY = eINSTANCE.getDependancy();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.NumericUIComponentImpl <em>Numeric UI Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.NumericUIComponentImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getNumericUIComponent()
+		 * @generated
+		 */
+		EClass NUMERIC_UI_COMPONENT = eINSTANCE.getNumericUIComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMERIC_UI_COMPONENT__DEFAULT_VALUE = eINSTANCE.getNumericUIComponent_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.InputNumberImpl <em>Input Number</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.InputNumberImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getInputNumber()
+		 * @generated
+		 */
+		EClass INPUT_NUMBER = eINSTANCE.getInputNumber();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.ScrollbarImpl <em>Scrollbar</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.ScrollbarImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getScrollbar()
+		 * @generated
+		 */
+		EClass SCROLLBAR = eINSTANCE.getScrollbar();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.EnumerationUIComponentImpl <em>Enumeration UI Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.EnumerationUIComponentImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getEnumerationUIComponent()
+		 * @generated
+		 */
+		EClass ENUMERATION_UI_COMPONENT = eINSTANCE.getEnumerationUIComponent();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.SingleValueImpl <em>Single Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.SingleValueImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getSingleValue()
+		 * @generated
+		 */
+		EClass SINGLE_VALUE = eINSTANCE.getSingleValue();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.MultipleValuesImpl <em>Multiple Values</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.MultipleValuesImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getMultipleValues()
+		 * @generated
+		 */
+		EClass MULTIPLE_VALUES = eINSTANCE.getMultipleValues();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.RadioButtonImpl <em>Radio Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.RadioButtonImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getRadioButton()
+		 * @generated
+		 */
+		EClass RADIO_BUTTON = eINSTANCE.getRadioButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Orientation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RADIO_BUTTON__ORIENTATION = eINSTANCE.getRadioButton_Orientation();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.DropDownListImpl <em>Drop Down List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.DropDownListImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getDropDownList()
+		 * @generated
+		 */
+		EClass DROP_DOWN_LIST = eINSTANCE.getDropDownList();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.CheckBoxImpl <em>Check Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.CheckBoxImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getCheckBox()
+		 * @generated
+		 */
+		EClass CHECK_BOX = eINSTANCE.getCheckBox();
+
+		/**
+		 * The meta object literal for the '<em><b>Orientation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHECK_BOX__ORIENTATION = eINSTANCE.getCheckBox_Orientation();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.MultiSelectedDropDownListImpl <em>Multi Selected Drop Down List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.MultiSelectedDropDownListImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getMultiSelectedDropDownList()
+		 * @generated
+		 */
+		EClass MULTI_SELECTED_DROP_DOWN_LIST = eINSTANCE.getMultiSelectedDropDownList();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.DateUIComponentImpl <em>Date UI Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.DateUIComponentImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getDateUIComponent()
+		 * @generated
+		 */
+		EClass DATE_UI_COMPONENT = eINSTANCE.getDateUIComponent();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.TextUIComponentImpl <em>Text UI Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.TextUIComponentImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getTextUIComponent()
+		 * @generated
+		 */
+		EClass TEXT_UI_COMPONENT = eINSTANCE.getTextUIComponent();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.TextInputImpl <em>Text Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.TextInputImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getTextInput()
+		 * @generated
+		 */
+		EClass TEXT_INPUT = eINSTANCE.getTextInput();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.TextAreaImpl <em>Text Area</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.TextAreaImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getTextArea()
+		 * @generated
+		 */
+		EClass TEXT_AREA = eINSTANCE.getTextArea();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Of Rows</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_AREA__NUM_OF_ROWS = eINSTANCE.getTextArea_NumOfRows();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.FormLayoutImpl <em>Form Layout</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.FormLayoutImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getFormLayout()
+		 * @generated
+		 */
+		EClass FORM_LAYOUT = eINSTANCE.getFormLayout();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.FieldSetImpl <em>Field Set</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.FieldSetImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getFieldSet()
+		 * @generated
+		 */
+		EClass FIELD_SET = eINSTANCE.getFieldSet();
+
+		/**
+		 * The meta object literal for the '<em><b>Legend</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FIELD_SET__LEGEND = eINSTANCE.getFieldSet_Legend();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.TabImpl <em>Tab</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.TabImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getTab()
+		 * @generated
+		 */
+		EClass TAB = eINSTANCE.getTab();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAB__NAME = eINSTANCE.getTab_Name();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.impl.GridImpl <em>Grid</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.impl.GridImpl
+		 * @see formValidation.impl.FormValidationPackageImpl#getGrid()
+		 * @generated
+		 */
+		EClass GRID = eINSTANCE.getGrid();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Of Columns</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRID__NUM_OF_COLUMNS = eINSTANCE.getGrid_NumOfColumns();
+
+		/**
 		 * The meta object literal for the '{@link formValidation.EVrsta <em>EVrsta</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2164,6 +3757,16 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EVRSTA = eINSTANCE.getEVrsta();
+
+		/**
+		 * The meta object literal for the '{@link formValidation.EOrientation <em>EOrientation</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see formValidation.EOrientation
+		 * @see formValidation.impl.FormValidationPackageImpl#getEOrientation()
+		 * @generated
+		 */
+		EEnum EORIENTATION = eINSTANCE.getEOrientation();
 
 	}
 

@@ -42,6 +42,8 @@
         eType="#//AttributeType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributerule" upperBound="-1"
         eType="#//AttributeRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uicomponent" eType="#//UIComponent"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vrsta" eType="#//EVrsta"/>
@@ -202,7 +204,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiSelectedDropDownList" eSuperTypes="#//MultipleValues"/>
   <eClassifiers xsi:type="ecore:EClass" name="DateUIComponent" eSuperTypes="#//UIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextUIComponent" abstract="true" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextUIComponent" abstract="true" eSuperTypes="#//UIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="placeHolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextInput" eSuperTypes="#//TextUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="TextArea" eSuperTypes="#//TextUIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
