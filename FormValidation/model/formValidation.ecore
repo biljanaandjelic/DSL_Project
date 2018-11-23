@@ -24,10 +24,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="screens" eType="#//Screens"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueAttributeRules appropriateAttributeRules comparedMinMax compareMinMaxLength"/>
@@ -46,6 +46,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="uicomponent" eType="#//UIComponent"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalsettings" upperBound="-1"
+        eType="#//AdditionalSettings" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vrsta" eType="#//EVrsta"/>
@@ -219,8 +221,9 @@
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
-        eType="#//ClassAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
+        eType="#//FormLayout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldSet" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="legend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -231,12 +234,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentRequiredAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PresentRequiredAttributes" eSuperTypes="#//AdditionalSettings">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ERequiredField">
     <eLiterals name="Asterix"/>
     <eLiterals name="Highlighting" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LabelPosition">
+  <eClassifiers xsi:type="ecore:EClass" name="LabelPosition" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
@@ -244,4 +249,25 @@
     <eLiterals name="Left" value="1"/>
     <eLiterals name="Right" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TelInput" eSuperTypes="#//TextUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmailInput" eSuperTypes="#//TextUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass53"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Password" eSuperTypes="#//TextUIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Screens" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="progressbar" eType="#//ProgressBar"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalSettings" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SingleFiledPerScreen" eSuperTypes="#//Screens"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ManyQuestionsPerScreen" eSuperTypes="#//Screens">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
+        eType="#//FormLayout" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProgressBar"/>
 </ecore:EPackage>
