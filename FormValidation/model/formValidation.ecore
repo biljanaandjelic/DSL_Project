@@ -27,7 +27,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="screens" eType="#//Screens"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
+        eType="#//ErrorMessage" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueAttributeRules appropriateAttributeRules comparedMinMax compareMinMaxLength"/>
@@ -43,19 +46,22 @@
         eType="#//AttributeType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributerule" upperBound="-1"
         eType="#//AttributeRule" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="uicomponent" eType="#//UIComponent"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalsettings" upperBound="-1"
         eType="#//AdditionalSettings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maser" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vrsta" eType="#//EVrsta"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uiComponent" eType="#//UIComponent"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EVrsta">
+  <eClassifiers xsi:type="ecore:EEnum" name="EDataType">
     <eLiterals name="String"/>
     <eLiterals name="Number" value="1"/>
     <eLiterals name="Date" value="2"/>
+    <eLiterals name="Blob" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Min" abstract="true" eSuperTypes="#//AttributeRule"/>
   <eClassifiers xsi:type="ecore:EClass" name="Max" abstract="true" eSuperTypes="#//AttributeRule"/>
@@ -127,7 +133,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="dd/MM/yyyy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassRule" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassRule" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorMessage" eType="#//ErrorMessage"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NotEquals" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="areEqualTypes differentDataInArray"/>
@@ -181,7 +190,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
         eType="#//ClassAttribute"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true" eSuperTypes="#//FileInput">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DependOn">
@@ -251,10 +260,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TelInput" eSuperTypes="#//TextUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="EmailInput" eSuperTypes="#//TextUIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NewEClass53"/>
   <eClassifiers xsi:type="ecore:EClass" name="Password" eSuperTypes="#//TextUIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
@@ -266,8 +276,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalSettings" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingleFiledPerScreen" eSuperTypes="#//Screens"/>
   <eClassifiers xsi:type="ecore:EClass" name="ManyQuestionsPerScreen" eSuperTypes="#//Screens">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
-        eType="#//FormLayout" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfScreens" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProgressBar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumButtons" eSuperTypes="#//EnumerationUIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileInput"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//DataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonPrimitivDataType" eSuperTypes="#//DataType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ValidationClass"/>
+  </eClassifiers>
 </ecore:EPackage>
