@@ -24,8 +24,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="screens" eType="#//Screens"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
@@ -190,7 +188,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
         eType="#//ClassAttribute"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true" eSuperTypes="#//FileInput">
+  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DependOn">
@@ -269,19 +267,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Screens" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="progressbar" eType="#//ProgressBar"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalSettings" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SingleFiledPerScreen" eSuperTypes="#//Screens"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ManyQuestionsPerScreen" eSuperTypes="#//Screens">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfScreens" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProgressBar"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnumButtons" eSuperTypes="#//EnumerationUIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FileInput"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDataType"/>

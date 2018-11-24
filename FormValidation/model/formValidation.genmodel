@@ -30,7 +30,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classrule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/label"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/screens"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//AttributeRule/attributeRuleErrorMessage"/>
@@ -171,17 +170,8 @@
     <genClasses ecoreClass="formValidation.ecore#//Password">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Password/visible"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//Screens">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//Screens/progressbar"/>
-    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AdditionalSettings"/>
-    <genClasses ecoreClass="formValidation.ecore#//SingleFiledPerScreen"/>
-    <genClasses ecoreClass="formValidation.ecore#//ManyQuestionsPerScreen">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ManyQuestionsPerScreen/numberOfScreens"/>
-    </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//ProgressBar"/>
     <genClasses ecoreClass="formValidation.ecore#//EnumButtons"/>
-    <genClasses ecoreClass="formValidation.ecore#//FileInput"/>
     <genClasses ecoreClass="formValidation.ecore#//DataType"/>
     <genClasses ecoreClass="formValidation.ecore#//PrimitiveDataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//PrimitiveDataType/type"/>
