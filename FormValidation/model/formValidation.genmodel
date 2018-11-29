@@ -198,5 +198,6 @@
     <genClasses ecoreClass="formValidation.ecore#//FormSettings">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//FormSettings/autoComplete"/>
     </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//ConceptFromVersion1"/>
   </genPackages>
 </genmodel:GenModel>

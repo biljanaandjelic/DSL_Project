@@ -304,4 +304,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="FormSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConceptFromVersion1"/>
 </ecore:EPackage>
