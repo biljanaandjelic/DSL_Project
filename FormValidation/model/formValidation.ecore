@@ -24,21 +24,27 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="screens" eType="#//Screens"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
+        eType="#//FormLayout" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalSettings" upperBound="-1"
+        eType="#//AdditionalSettings" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
         eType="#//ErrorMessage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="uniqueAttributeRules appropriateAttributeRules comparedMinMax compareMinMaxLength"/>
+      <details key="constraints" value="uniqueAttributeRules compareMinMaxLength"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="invariant&#xA;appropriateAttributeRules('Each data type has appropriate rulles that can be applay to it.'):&#xA;if attributetype.vrsta = EVrsta::Number&#xA;then&#xA;attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))&#xA;else&#xA;if attributetype.vrsta = EVrsta::_'String'&#xA;then&#xA;attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or&#xA;a1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString)&#xA;or a1.oclIsKindOf(Email)&#xA;)&#xA;else&#xA;attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)&#xA;or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))&#xA;endif&#xA;endif&#xA;;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="invariant&#xA;comparedMinMax('Max value should be greater than min value'):&#xA;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule |&#xA;if a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)&#xA;then&#xA;a1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value&#xA;else&#xA;true&#xA;endif&#xA;);"/>
+      </eAnnotations>
       <details key="uniqueAttributeRules" value="&#xA;&#x9;&#x9;&#x9; attributerule->forAll(a1: AttributeRule, a2: AttributeRule |if  a1 &lt;> a2 then&#xA;&#x9;&#x9;&#x9; &#x9;not a1.oclIsTypeOf(a2.oclType()) else true endif&#xA;&#x9;&#x9;&#x9; )"/>
-      <details key="appropriateAttributeRules" value="Tuple {&#xA;&#x9;message : String = 'Each data type has appropriate rulles that can be applay to it.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;if attributetype.vrsta = EVrsta::Number&#xA;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;  if attributetype.vrsta = EVrsta::_'String'&#xA;&#x9;&#x9;  then&#xA;&#x9;&#x9;   attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or &#xA;&#x9;&#x9;   &#x9;a1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString)&#xA;&#x9;&#x9;   &#x9;or a1.oclIsKindOf(Email)&#xA;&#x9;&#x9;   )&#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;  attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required) &#xA;&#x9;&#x9;  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))&#xA;&#x9;&#x9;  endif&#xA;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#xA;}.status"/>
-      <details key="comparedMinMax" value="Tuple {&#xA;&#x9;message : String = 'Max value should be greater than min value',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value &#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
       <details key="compareMinMaxLength" value="Tuple {&#xA;&#x9;message : String = 'Maxlength value should be greater than maxlength',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -47,8 +53,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributerule" upperBound="-1"
         eType="#//AttributeRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalsettings" upperBound="-1"
-        eType="#//AdditionalSettings" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maser" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
@@ -139,10 +143,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NotEquals" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="areEqualTypes differentDataInArray"/>
+      <details key="constraints" value="differentDataInArray"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In equal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute | &#xA;&#x9;&#x9;&#x9;&#x9;if a1&lt;>a2 then &#xA;&#x9;&#x9;&#x9;&#x9;a1.attributetype.vrsta = a2.attributetype.vrsta&#xA;&#x9;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;)&#xA;}.status"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="invariant&#xA;areEqualTypes('In equal rule all data types should be same.'):&#xA;attributearray.classattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;if a1&lt;>a2 then&#xA;a1.attributetype.vrsta = a2.attributetype.vrsta&#xA;else true&#xA;endif&#xA;);"/>
+      </eAnnotations>
       <details key="differentDataInArray" value="Tuple {&#xA;&#x9;message : String = 'All attributes should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.classattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; &#x9;if a1&lt;>a2 then&#xA;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9; )&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
@@ -150,13 +156,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="acceptbleDataType differentAttributes differentAttributesInArray equalTypes"/>
+      <details key="constraints" value="differentAttributes differentAttributesInArray"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="acceptbleDataType" value="Tuple {&#xA;&#x9;message : String = 'It is possible to compare just attibutes type of date or type of number.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;classattribute.attributetype.vrsta = EVrsta::Number or classattribute.attributetype.vrsta = EVrsta::Date&#xA;}.status"/>
       <details key="differentAttributes" value="Tuple {&#xA;&#x9;message : String = 'First attribute and attributes from array should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute | classattribute.name &lt;> a1.name)&#xA;}.status"/>
       <details key="differentAttributesInArray" value="Tuple {&#xA;&#x9;message : String = 'Attributes in array must be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9; attributearray.classattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute | if a1&lt;>a2 then&#xA;&#x9;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9;&#x9; )&#xA;}.status"/>
-      <details key="equalTypes" value="Tuple {&#xA;&#x9;message : String = 'Data type should be same',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute | a1.attributetype.vrsta = classattribute.attributetype.vrsta)&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" eType="#//ClassAttribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
@@ -164,23 +168,23 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Equals" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="collectionSize areEqualTypes"/>
+      <details key="constraints" value="collectionSize"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="collectionSize" value="&#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> size() >= 2"/>
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In equal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute | a1.attributetype.vrsta = a2.attributetype.vrsta)&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LessThan" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="acceptbleDataType differentAttributes equalTypes"/>
+      <details key="constraints" value="differentAttributes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="acceptbleDataType" value="Tuple {&#xA;&#x9;message : String = 'It is possible to compare just attibutes type of date or type of number.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;classattribute.attributetype.vrsta = EVrsta::Number or classattribute.attributetype.vrsta = EVrsta::Date&#xA;}.status"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="invariant&#xA;acceptbleDataType('It is possible to compare just attibutes type of date or type of number.'):&#xA;classattribute.attributetype.vrsta = EVrsta::Number or classattribute.attributetype.vrsta = EVrsta::Date;"/>
+      </eAnnotations>
       <details key="differentAttributes" value="&#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute | classattribute.name &lt;> a1.name)"/>
-      <details key="equalTypes" value="&#xA;&#x9;&#x9;&#x9;attributearray.classattribute -> forAll(a1: ClassAttribute | a1.attributetype.vrsta = classattribute.attributetype.vrsta)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" eType="#//ClassAttribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
@@ -190,13 +194,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
         eType="#//ClassAttribute"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true" eSuperTypes="#//FileInput">
+  <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DependOn">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="independent" eType="#//AttributeArray"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependent" eType="#//AttributeArray"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NumericUIComponent" abstract="true"
       eSuperTypes="#//UIComponent">
@@ -205,7 +204,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="InputNumber" eSuperTypes="#//NumericUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="Scrollbar" eSuperTypes="#//NumericUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnumerationUIComponent" abstract="true"
-      eSuperTypes="#//NumericUIComponent"/>
+      eSuperTypes="#//UIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingleValue" abstract="true" eSuperTypes="#//EnumerationUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="MultipleValues" abstract="true" eSuperTypes="#//EnumerationUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="RadioButton" eSuperTypes="#//SingleValue">
@@ -230,9 +229,10 @@
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
-        eType="#//FormLayout"/>
+        eType="#//FormLayout" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldSet" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="legend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -242,15 +242,19 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//EGridOrder"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expandLast" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentRequiredAttributes" eSuperTypes="#//AdditionalSettings">
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ERequiredField">
     <eLiterals name="Asterix"/>
     <eLiterals name="Highlighting" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LabelPosition" eSuperTypes="#//AdditionalSettings">
+  <eClassifiers xsi:type="ecore:EClass" name="LabelSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
@@ -261,32 +265,43 @@
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TelInput" eSuperTypes="#//TextUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="EmailInput" eSuperTypes="#//TextUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="Password" eSuperTypes="#//TextUIComponent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Screens" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="progressbar" eType="#//ProgressBar"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalSettings" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SingleFiledPerScreen" eSuperTypes="#//Screens"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ManyQuestionsPerScreen" eSuperTypes="#//Screens">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfScreens" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProgressBar"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnumButtons" eSuperTypes="#//EnumerationUIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FileInput"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileInput" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NonPrimitivDataType" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ValidationClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RefEntity" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validationclass" upperBound="-1"
+        eType="#//ValidationClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EGridOrder">
+    <eLiterals name="FirstRow"/>
+    <eLiterals name="FirstColumn" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorMessageSettings" eSuperTypes="#//AdditionalSettings">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableOverview">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FormSettings" eSuperTypes="#//AdditionalSettings">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
 </ecore:EPackage>

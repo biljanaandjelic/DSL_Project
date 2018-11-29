@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formValidation:BusinessModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:formValidation="http://www.example.org/formValidation"
+    xsi:schemaLocation="http://www.example.org/formValidation formValidation.ecore">
+  <validationclass
+      name="journOnTrip"
+      label="Journay on Trip">
+    <classattribute
+        name="locationName"
+        label="Location name"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextInput"
+            tooltip="Please, insert your desired location "
+            placeHolder="Location"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="address"
+        label="Address">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextArea"
+            numOfRows="3"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="description"
+        label="Description">
+      <attributetype>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="arrivalDate"
+        label="Arrival date">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DateUIComponent"
+            tooltip="Select arrival date"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Date"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="arrivalTime"
+        label="Arrival time">
+      <attributetype>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="timezone"
+        label="Timezone">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DropDownList"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:AcceptableValuesString">
+        <values>TimeZ1	</values>
+        <values>TimeZ</values>
+        <values>TimeZ3</values>
+        <values>TimeZ4</values>
+      </attributerule>
+    </classattribute>
+    <classattribute
+        name="departureDate"
+        label="Departure date">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DateUIComponent"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Date"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="departureTime"
+        label="Departure time">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextInput"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="numOfguests"
+        label="Number of guests">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:InputNumber"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="numOfRooms"
+        label="Number of rooms">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:InputNumber"
+            defaultValue="1.0"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="confirmationNo"
+        label="Confirmation #">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:InputNumber"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="roomDescription"
+        label="Room description">
+      <attributetype>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classrule
+        xsi:type="formValidation:GreaterThan"
+        classattribute="//@validationclass.0/@classattribute.3">
+      <errorMessage
+          message="Departure time isn't greater then arrival time."
+          color="red"/>
+      <attributearray
+          classattribute="//@validationclass.0/@classattribute.6"/>
+    </classrule>
+    <formlayout
+        xsi:type="formValidation:Tab"
+        name="Where are you staying?">
+      <formlayout
+          xsi:type="formValidation:Grid"
+          numOfColumns="3">
+        <attributearray
+            classattribute="//@validationclass.0/@classattribute.0 //@validationclass.0/@classattribute.1 //@validationclass.0/@classattribute.2"/>
+      </formlayout>
+    </formlayout>
+    <formlayout
+        xsi:type="formValidation:Tab"
+        name="How long are you staying?">
+      <formlayout
+          xsi:type="formValidation:Grid"
+          numOfColumns="3">
+        <attributearray
+            classattribute="//@validationclass.0/@classattribute.3 //@validationclass.0/@classattribute.4 //@validationclass.0/@classattribute.5 //@validationclass.0/@classattribute.6 //@validationclass.0/@classattribute.7"/>
+      </formlayout>
+    </formlayout>
+    <formlayout
+        xsi:type="formValidation:Tab"
+        name="Stay details">
+      <formlayout
+          xsi:type="formValidation:Grid"
+          numOfColumns="3">
+        <attributearray
+            classattribute="//@validationclass.0/@classattribute.8 //@validationclass.0/@classattribute.9 //@validationclass.0/@classattribute.10 //@validationclass.0/@classattribute.11"/>
+      </formlayout>
+    </formlayout>
+  </validationclass>
+</formValidation:BusinessModel>

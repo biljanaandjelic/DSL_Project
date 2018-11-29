@@ -25,12 +25,17 @@
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EPosition/Left"/>
       <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EPosition/Right"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="formValidation.ecore#//EGridOrder">
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EGridOrder/FirstRow"/>
+      <genEnumLiterals ecoreEnumLiteral="formValidation.ecore#//EGridOrder/FirstColumn"/>
+    </genEnums>
     <genClasses ecoreClass="formValidation.ecore#//ValidationClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classrule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/label"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/screens"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/formlayout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/additionalSettings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//AttributeRule/attributeRuleErrorMessage"/>
@@ -40,7 +45,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributetype"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributerule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/label"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/additionalsettings"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/maser"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AttributeType">
@@ -113,11 +117,6 @@
     <genClasses ecoreClass="formValidation.ecore#//UIComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//UIComponent/tooltip"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//DependOn">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//DependOn/independent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//DependOn/dependent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//DependOn/condition"/>
-    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//NumericUIComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//NumericUIComponent/defaultValue"/>
     </genClasses>
@@ -143,8 +142,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TextArea/numOfRows"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//FormLayout">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//FormLayout/attributearray"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//FormLayout/formlayout"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//FormLayout/attributearray"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//FormLayout/formlayout"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//FieldSet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//FieldSet/legend"/>
@@ -154,40 +153,50 @@
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//Grid">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/numOfColumns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/numOfRows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/expandLast"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//PresentRequiredAttributes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//PresentRequiredAttributes/presentation"/>
+    <genClasses ecoreClass="formValidation.ecore#//AttributeSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeSettings/presentation"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//LabelPosition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//LabelPosition/position"/>
+    <genClasses ecoreClass="formValidation.ecore#//LabelSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//LabelSettings/position"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//ErrorMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ErrorMessage/message"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ErrorMessage/position"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ErrorMessage/color"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//TelInput"/>
     <genClasses ecoreClass="formValidation.ecore#//EmailInput"/>
     <genClasses ecoreClass="formValidation.ecore#//Password">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Password/visible"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//Screens">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//Screens/progressbar"/>
-    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AdditionalSettings"/>
-    <genClasses ecoreClass="formValidation.ecore#//SingleFiledPerScreen"/>
-    <genClasses ecoreClass="formValidation.ecore#//ManyQuestionsPerScreen">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ManyQuestionsPerScreen/numberOfScreens"/>
-    </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//ProgressBar"/>
     <genClasses ecoreClass="formValidation.ecore#//EnumButtons"/>
     <genClasses ecoreClass="formValidation.ecore#//FileInput"/>
-    <genClasses ecoreClass="formValidation.ecore#//DataType"/>
+    <genClasses ecoreClass="formValidation.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//DataType/isCollection"/>
+    </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//PrimitiveDataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//PrimitiveDataType/type"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//NonPrimitivDataType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//NonPrimitivDataType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//RefEntity"/>
+    <genClasses ecoreClass="formValidation.ecore#//BusinessModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//BusinessModel/validationclass"/>
+    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//ErrorMessageSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ErrorMessageSettings/color"/>
+    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//TableOverview">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TableOverview/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//TableOverview/height"/>
+    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//FormSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//FormSettings/autoComplete"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
