@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formValidation:BusinessModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:formValidation="http://www.example.org/formValidation"
+    xsi:schemaLocation="http://www.example.org/formValidation formValidation.ecore">
+  <validationclass
+      name="podOStudentu"
+      label="Podaci o studentu">
+    <classattribute
+        name="datumRodjenja"
+        label="Datum rođenja"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DateUIComponent"
+            tooltip=""/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Date"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:DatePattern"
+          value="dd.mm.yyyy"/>
+    </classattribute>
+    <classattribute
+        name="mestoRodjenja"
+        label="Mesto rođenja"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DropDownList"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="opstinaRodjenja"
+        label="Opština rođenja"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DropDownList"/>
+        <datatype
+            xsi:type="formValidation:NonPrimitivDataType"
+            type="//@validationclass.1"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="drzavaRođenja"
+        label="Država rođenja"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:DropDownList"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="adresaStanovanjaZaVrijemeStudija"
+        label="Adresa stanovanja(za vrijeme studija)"
+        maser="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextInput"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="opstinaStanovanjaZaVrijemeStudija"
+        label="Opstina stanovanja(Za vrijeme studija)"
+        maser="true">
+      <attributetype/>
+    </classattribute>
+  </validationclass>
+  <validationclass
+      name="opstina"
+      label="Opstina">
+    <classattribute
+        name="naziv"
+        label="Naziv"
+        maser="true"/>
+    <classattribute
+        name="kod"
+        label="kod"
+        maser="true"/>
+  </validationclass>
+  <validationclass
+      name="drzava"
+      label="Drzava">
+    <classattribute
+        name="naziv"
+        label="Naziv"
+        maser="true">
+      <attributetype>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="kod"
+        label="Kod"
+        maser="true"/>
+  </validationclass>
+</formValidation:BusinessModel>

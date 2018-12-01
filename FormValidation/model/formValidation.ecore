@@ -28,10 +28,12 @@
         eType="#//FormLayout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalSettings" upperBound="-1"
         eType="#//AdditionalSettings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overviewsettings" upperBound="-1"
+        eType="#//OverviewSettings" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
-        eType="#//ErrorMessage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeruleerrormessage"
+        eType="#//AttributeRuleErrorMessage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -138,8 +140,8 @@
         defaultValueLiteral="dd/MM/yyyy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassRule" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="errorMessage" eType="#//ErrorMessage"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classRuleErrorMessage"
+        eType="#//ClassRuleErrorMessage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NotEquals" eSuperTypes="#//ClassRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -200,9 +202,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="NumericUIComponent" abstract="true"
       eSuperTypes="#//UIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="componentType" eType="#//EUINumberComponentType"
+        defaultValueLiteral="SimpleInput"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputNumber" eSuperTypes="#//NumericUIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Scrollbar" eSuperTypes="#//NumericUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnumerationUIComponent" abstract="true"
       eSuperTypes="#//UIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingleValue" abstract="true" eSuperTypes="#//EnumerationUIComponent"/>
@@ -219,7 +221,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="#//EOrientation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiSelectedDropDownList" eSuperTypes="#//MultipleValues"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DateUIComponent" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateUIComponent" eSuperTypes="#//UIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDateUIType"
+        defaultValueLiteral="OnlyDate"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextUIComponent" abstract="true" eSuperTypes="#//UIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="placeHolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -261,10 +266,10 @@
     <eLiterals name="Above"/>
     <eLiterals name="Left" value="1"/>
     <eLiterals name="Right" value="2"/>
+    <eLiterals name="Below" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage">
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TelInput" eSuperTypes="#//TextUIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="EmailInput" eSuperTypes="#//TextUIComponent"/>
@@ -273,8 +278,10 @@
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalSettings" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EnumButtons" eSuperTypes="#//EnumerationUIComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FileInput" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileInput" eSuperTypes="#//UIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="buttonPosition" eType="#//EPosition"
+        defaultValueLiteral="Right"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="false"/>
@@ -285,7 +292,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="NonPrimitivDataType" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ValidationClass"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RefEntity" eSuperTypes="#//UIComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RefEntity" eSuperTypes="#//UIComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSingeValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="validationclass" upperBound="-1"
         eType="#//ValidationClass" containment="true"/>
@@ -297,12 +307,46 @@
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessageSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TableOverview">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FormSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConceptFromVersion1"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EUINumberComponentType">
+    <eLiterals name="NumberScroller"/>
+    <eLiterals name="SimpleInput" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeRuleErrorMessage" eSuperTypes="#//ErrorMessage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassRuleErrorMessage" eSuperTypes="#//ErrorMessage"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EDateUIType">
+    <eLiterals name="OnlyDate" value="1"/>
+    <eLiterals name="OnlyTime" value="2"/>
+    <eLiterals name="DateTime" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pagination">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Description"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="possibleNumberOfShownRows"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultNumOfShownRows"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableOverview">
+    <eOperations name="newOperation1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paging" upperBound="-1"
+        eType="#//Pagination" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OverviewSettings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableoverview" upperBound="-1"
+        eType="#//TableOverview" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NoteSettings" eSuperTypes="#//AdditionalSettings">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"
+        defaultValueLiteral="Right"/>
+  </eClassifiers>
 </ecore:EPackage>
