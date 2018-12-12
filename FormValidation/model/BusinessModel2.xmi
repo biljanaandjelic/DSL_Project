@@ -11,17 +11,19 @@
     <classattribute
         name="naziv"
         label="Naziv"
-        isClassRepresenting="true"/>
-    <classattribute
-        name="broj"
-        label="Broj"
-        isClassRepresenting="true"/>
-  </validationclass>
-  <validationclass
-      name="formular"
-      label="Formular">
-    <classattribute
-        name="jedinstvenBrojKorisnikaJavnihSredstava"
-        label="JBKJS"/>
+        isClassRepresenting="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextInput"/>
+        <datatype
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classrule
+        xsi:type="formValidation:GreaterThan">
+      <attributearray/>
+    </classrule>
   </validationclass>
 </formValidation:BusinessModel>
