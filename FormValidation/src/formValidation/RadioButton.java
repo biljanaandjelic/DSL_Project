@@ -16,10 +16,10 @@ package formValidation;
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getRadioButton()
- * @model
+ * @model annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Role'"
  * @generated
  */
-public interface RadioButton extends SingleValue {
+public interface RadioButton extends SelectingUIComponent {
 	/**
 	 * Returns the value of the '<em><b>Orientation</b></em>' attribute.
 	 * The literals are from the enumeration {@link formValidation.EOrientation}.

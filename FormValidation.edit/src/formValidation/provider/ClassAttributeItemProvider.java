@@ -64,6 +64,9 @@ public class ClassAttributeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
+			addMaserPropertyDescriptor(object);
+			addIsClassRepresentingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +89,72 @@ public class ClassAttributeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ClassAttribute_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassAttribute_label_feature", "_UI_ClassAttribute_type"),
+				 FormValidationPackage.Literals.CLASS_ATTRIBUTE__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Maser feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMaserPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ClassAttribute_maser_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassAttribute_maser_feature", "_UI_ClassAttribute_type"),
+				 FormValidationPackage.Literals.CLASS_ATTRIBUTE__MASER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Class Representing feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsClassRepresentingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ClassAttribute_isClassRepresenting_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassAttribute_isClassRepresenting_feature", "_UI_ClassAttribute_type"),
+				 FormValidationPackage.Literals.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -160,6 +229,9 @@ public class ClassAttributeItemProvider
 
 		switch (notification.getFeatureID(ClassAttribute.class)) {
 			case FormValidationPackage.CLASS_ATTRIBUTE__NAME:
+			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FormValidationPackage.CLASS_ATTRIBUTE__ATTRIBUTETYPE:

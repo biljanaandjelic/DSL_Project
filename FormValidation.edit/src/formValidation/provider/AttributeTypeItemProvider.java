@@ -4,7 +4,7 @@ package formValidation.provider;
 
 
 import formValidation.AttributeType;
-import formValidation.EVrsta;
+import formValidation.FormValidationFactory;
 import formValidation.FormValidationPackage;
 
 import java.util.Collection;
@@ -15,14 +15,13 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -61,31 +60,39 @@ public class AttributeTypeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVrstaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Vrsta feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVrstaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AttributeType_vrsta_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeType_vrsta_feature", "_UI_AttributeType_type"),
-				 FormValidationPackage.Literals.ATTRIBUTE_TYPE__VRSTA,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT);
+			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -107,11 +114,7 @@ public class AttributeTypeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		EVrsta labelValue = ((AttributeType)object).getVrsta();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_AttributeType_type") :
-			getString("_UI_AttributeType_type") + " " + label;
+		return getString("_UI_AttributeType_type");
 	}
 	
 
@@ -127,8 +130,9 @@ public class AttributeTypeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AttributeType.class)) {
-			case FormValidationPackage.ATTRIBUTE_TYPE__VRSTA:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -144,6 +148,86 @@ public class AttributeTypeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createNumericUIComponent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createRadioButton()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createDropDownList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createCheckBox()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createDateUIComponent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createTextInput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createTextArea()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createTelInput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createEmailInput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createPassword()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createFileInput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createRefEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createLoadValues()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT,
+				 FormValidationFactory.eINSTANCE.createAutocompleteComponent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE,
+				 FormValidationFactory.eINSTANCE.createPrimitiveDataType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE,
+				 FormValidationFactory.eINSTANCE.createNonPrimitiveDataType()));
 	}
 
 	/**

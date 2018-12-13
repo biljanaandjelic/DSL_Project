@@ -6,8 +6,6 @@ import formValidation.AttributeRule;
 import formValidation.AttributeType;
 import formValidation.ClassAttribute;
 import formValidation.FormValidationPackage;
-
-import formValidation.UIComponent;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -35,8 +33,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getAttributetype <em>Attributetype</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getAttributerule <em>Attributerule</em>}</li>
- *   <li>{@link formValidation.impl.ClassAttributeImpl#getUicomponent <em>Uicomponent</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link formValidation.impl.ClassAttributeImpl#isMaser <em>Maser</em>}</li>
+ *   <li>{@link formValidation.impl.ClassAttributeImpl#isIsClassRepresenting <em>Is Class Representing</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,16 +82,6 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	protected EList<AttributeRule> attributerule;
 
 	/**
-	 * The cached value of the '{@link #getUicomponent() <em>Uicomponent</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUicomponent()
-	 * @generated
-	 * @ordered
-	 */
-	protected UIComponent uicomponent;
-
-	/**
 	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +100,46 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isMaser() <em>Maser</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMaser()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean MASER_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isMaser() <em>Maser</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMaser()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean maser = MASER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsClassRepresenting() <em>Is Class Representing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsClassRepresenting()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_CLASS_REPRESENTING_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsClassRepresenting() <em>Is Class Representing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsClassRepresenting()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isClassRepresenting = IS_CLASS_REPRESENTING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,49 +241,6 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UIComponent getUicomponent() {
-		return uicomponent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetUicomponent(UIComponent newUicomponent, NotificationChain msgs) {
-		UIComponent oldUicomponent = uicomponent;
-		uicomponent = newUicomponent;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT, oldUicomponent, newUicomponent);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUicomponent(UIComponent newUicomponent) {
-		if (newUicomponent != uicomponent) {
-			NotificationChain msgs = null;
-			if (uicomponent != null)
-				msgs = ((InternalEObject)uicomponent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT, null, msgs);
-			if (newUicomponent != null)
-				msgs = ((InternalEObject)newUicomponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT, null, msgs);
-			msgs = basicSetUicomponent(newUicomponent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT, newUicomponent, newUicomponent));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getLabel() {
 		return label;
 	}
@@ -276,6 +262,48 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isMaser() {
+		return maser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaser(boolean newMaser) {
+		boolean oldMaser = maser;
+		maser = newMaser;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__MASER, oldMaser, maser));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsClassRepresenting() {
+		return isClassRepresenting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsClassRepresenting(boolean newIsClassRepresenting) {
+		boolean oldIsClassRepresenting = isClassRepresenting;
+		isClassRepresenting = newIsClassRepresenting;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING, oldIsClassRepresenting, isClassRepresenting));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -283,8 +311,6 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				return basicSetAttributetype(null, msgs);
 			case FormValidationPackage.CLASS_ATTRIBUTE__ATTRIBUTERULE:
 				return ((InternalEList<?>)getAttributerule()).basicRemove(otherEnd, msgs);
-			case FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT:
-				return basicSetUicomponent(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -303,10 +329,12 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				return getAttributetype();
 			case FormValidationPackage.CLASS_ATTRIBUTE__ATTRIBUTERULE:
 				return getAttributerule();
-			case FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT:
-				return getUicomponent();
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				return getLabel();
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+				return isMaser();
+			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
+				return isIsClassRepresenting();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -330,11 +358,14 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				getAttributerule().clear();
 				getAttributerule().addAll((Collection<? extends AttributeRule>)newValue);
 				return;
-			case FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT:
-				setUicomponent((UIComponent)newValue);
-				return;
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				setLabel((String)newValue);
+				return;
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+				setMaser((Boolean)newValue);
+				return;
+			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
+				setIsClassRepresenting((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -357,11 +388,14 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 			case FormValidationPackage.CLASS_ATTRIBUTE__ATTRIBUTERULE:
 				getAttributerule().clear();
 				return;
-			case FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT:
-				setUicomponent((UIComponent)null);
-				return;
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				setLabel(LABEL_EDEFAULT);
+				return;
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+				setMaser(MASER_EDEFAULT);
+				return;
+			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
+				setIsClassRepresenting(IS_CLASS_REPRESENTING_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -381,10 +415,12 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				return attributetype != null;
 			case FormValidationPackage.CLASS_ATTRIBUTE__ATTRIBUTERULE:
 				return attributerule != null && !attributerule.isEmpty();
-			case FormValidationPackage.CLASS_ATTRIBUTE__UICOMPONENT:
-				return uicomponent != null;
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+				return maser != MASER_EDEFAULT;
+			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
+				return isClassRepresenting != IS_CLASS_REPRESENTING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -403,6 +439,10 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 		result.append(name);
 		result.append(", label: ");
 		result.append(label);
+		result.append(", maser: ");
+		result.append(maser);
+		result.append(", isClassRepresenting: ");
+		result.append(isClassRepresenting);
 		result.append(')');
 		return result.toString();
 	}

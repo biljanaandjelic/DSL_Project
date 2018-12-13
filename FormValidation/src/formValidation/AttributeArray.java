@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getAttributeArray()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='containDifferentAttributes'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot containDifferentAttributes='\n\t\tclassattribute -> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t\tif a1 <> a2 \n\t\t\tthen a1.name <> a2.name\n\t\t\telse true \n\t\t\tendif\n\t\t)'"
  * @generated
  */
 public interface AttributeArray extends EObject {

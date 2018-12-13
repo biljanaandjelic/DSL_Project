@@ -78,19 +78,36 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.EQUALS: return createEquals();
 			case FormValidationPackage.LESS_THAN: return createLessThan();
 			case FormValidationPackage.ATTRIBUTE_ARRAY: return createAttributeArray();
-			case FormValidationPackage.DEPEND_ON: return createDependOn();
-			case FormValidationPackage.INPUT_NUMBER: return createInputNumber();
-			case FormValidationPackage.SCROLLBAR: return createScrollbar();
+			case FormValidationPackage.NUMERIC_UI_COMPONENT: return createNumericUIComponent();
 			case FormValidationPackage.RADIO_BUTTON: return createRadioButton();
 			case FormValidationPackage.DROP_DOWN_LIST: return createDropDownList();
 			case FormValidationPackage.CHECK_BOX: return createCheckBox();
-			case FormValidationPackage.MULTI_SELECTED_DROP_DOWN_LIST: return createMultiSelectedDropDownList();
 			case FormValidationPackage.DATE_UI_COMPONENT: return createDateUIComponent();
 			case FormValidationPackage.TEXT_INPUT: return createTextInput();
 			case FormValidationPackage.TEXT_AREA: return createTextArea();
 			case FormValidationPackage.FIELD_SET: return createFieldSet();
 			case FormValidationPackage.TAB: return createTab();
 			case FormValidationPackage.GRID: return createGrid();
+			case FormValidationPackage.ATTRIBUTE_SETTINGS: return createAttributeSettings();
+			case FormValidationPackage.LABEL_SETTINGS: return createLabelSettings();
+			case FormValidationPackage.ERROR_MESSAGE: return createErrorMessage();
+			case FormValidationPackage.TEL_INPUT: return createTelInput();
+			case FormValidationPackage.EMAIL_INPUT: return createEmailInput();
+			case FormValidationPackage.PASSWORD: return createPassword();
+			case FormValidationPackage.FILE_INPUT: return createFileInput();
+			case FormValidationPackage.PRIMITIVE_DATA_TYPE: return createPrimitiveDataType();
+			case FormValidationPackage.NON_PRIMITIVE_DATA_TYPE: return createNonPrimitiveDataType();
+			case FormValidationPackage.REF_ENTITY: return createRefEntity();
+			case FormValidationPackage.BUSINESS_MODEL: return createBusinessModel();
+			case FormValidationPackage.ERROR_MESSAGE_SETTINGS: return createErrorMessageSettings();
+			case FormValidationPackage.FORM_SETTINGS: return createFormSettings();
+			case FormValidationPackage.PAGINATION: return createPagination();
+			case FormValidationPackage.TABLE_OVERVIEW: return createTableOverview();
+			case FormValidationPackage.OVERVIEW_SETTINGS: return createOverviewSettings();
+			case FormValidationPackage.NOTE_SETTINGS: return createNoteSettings();
+			case FormValidationPackage.LOAD_VALUES: return createLoadValues();
+			case FormValidationPackage.AUTOCOMPLETE_COMPONENT: return createAutocompleteComponent();
+			case FormValidationPackage.COLOR: return createColor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -104,10 +121,20 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case FormValidationPackage.EVRSTA:
-				return createEVrstaFromString(eDataType, initialValue);
+			case FormValidationPackage.EDATA_TYPE:
+				return createEDataTypeFromString(eDataType, initialValue);
 			case FormValidationPackage.EORIENTATION:
 				return createEOrientationFromString(eDataType, initialValue);
+			case FormValidationPackage.EREQUIRED_FIELD:
+				return createERequiredFieldFromString(eDataType, initialValue);
+			case FormValidationPackage.EPOSITION:
+				return createEPositionFromString(eDataType, initialValue);
+			case FormValidationPackage.EGRID_ORDER:
+				return createEGridOrderFromString(eDataType, initialValue);
+			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
+				return createEUINumberComponentTypeFromString(eDataType, initialValue);
+			case FormValidationPackage.EDATE_UI_TYPE:
+				return createEDateUITypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -121,10 +148,20 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case FormValidationPackage.EVRSTA:
-				return convertEVrstaToString(eDataType, instanceValue);
+			case FormValidationPackage.EDATA_TYPE:
+				return convertEDataTypeToString(eDataType, instanceValue);
 			case FormValidationPackage.EORIENTATION:
 				return convertEOrientationToString(eDataType, instanceValue);
+			case FormValidationPackage.EREQUIRED_FIELD:
+				return convertERequiredFieldToString(eDataType, instanceValue);
+			case FormValidationPackage.EPOSITION:
+				return convertEPositionToString(eDataType, instanceValue);
+			case FormValidationPackage.EGRID_ORDER:
+				return convertEGridOrderToString(eDataType, instanceValue);
+			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
+				return convertEUINumberComponentTypeToString(eDataType, instanceValue);
+			case FormValidationPackage.EDATE_UI_TYPE:
+				return convertEDateUITypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -345,29 +382,9 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DependOn createDependOn() {
-		DependOnImpl dependOn = new DependOnImpl();
-		return dependOn;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputNumber createInputNumber() {
-		InputNumberImpl inputNumber = new InputNumberImpl();
-		return inputNumber;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Scrollbar createScrollbar() {
-		ScrollbarImpl scrollbar = new ScrollbarImpl();
-		return scrollbar;
+	public NumericUIComponent createNumericUIComponent() {
+		NumericUIComponentImpl numericUIComponent = new NumericUIComponentImpl();
+		return numericUIComponent;
 	}
 
 	/**
@@ -398,16 +415,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	public CheckBox createCheckBox() {
 		CheckBoxImpl checkBox = new CheckBoxImpl();
 		return checkBox;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultiSelectedDropDownList createMultiSelectedDropDownList() {
-		MultiSelectedDropDownListImpl multiSelectedDropDownList = new MultiSelectedDropDownListImpl();
-		return multiSelectedDropDownList;
 	}
 
 	/**
@@ -475,8 +482,208 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EVrsta createEVrstaFromString(EDataType eDataType, String initialValue) {
-		EVrsta result = EVrsta.get(initialValue);
+	public AttributeSettings createAttributeSettings() {
+		AttributeSettingsImpl attributeSettings = new AttributeSettingsImpl();
+		return attributeSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LabelSettings createLabelSettings() {
+		LabelSettingsImpl labelSettings = new LabelSettingsImpl();
+		return labelSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ErrorMessage createErrorMessage() {
+		ErrorMessageImpl errorMessage = new ErrorMessageImpl();
+		return errorMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TelInput createTelInput() {
+		TelInputImpl telInput = new TelInputImpl();
+		return telInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmailInput createEmailInput() {
+		EmailInputImpl emailInput = new EmailInputImpl();
+		return emailInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Password createPassword() {
+		PasswordImpl password = new PasswordImpl();
+		return password;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FileInput createFileInput() {
+		FileInputImpl fileInput = new FileInputImpl();
+		return fileInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrimitiveDataType createPrimitiveDataType() {
+		PrimitiveDataTypeImpl primitiveDataType = new PrimitiveDataTypeImpl();
+		return primitiveDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NonPrimitiveDataType createNonPrimitiveDataType() {
+		NonPrimitiveDataTypeImpl nonPrimitiveDataType = new NonPrimitiveDataTypeImpl();
+		return nonPrimitiveDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RefEntity createRefEntity() {
+		RefEntityImpl refEntity = new RefEntityImpl();
+		return refEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BusinessModel createBusinessModel() {
+		BusinessModelImpl businessModel = new BusinessModelImpl();
+		return businessModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ErrorMessageSettings createErrorMessageSettings() {
+		ErrorMessageSettingsImpl errorMessageSettings = new ErrorMessageSettingsImpl();
+		return errorMessageSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FormSettings createFormSettings() {
+		FormSettingsImpl formSettings = new FormSettingsImpl();
+		return formSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pagination createPagination() {
+		PaginationImpl pagination = new PaginationImpl();
+		return pagination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableOverview createTableOverview() {
+		TableOverviewImpl tableOverview = new TableOverviewImpl();
+		return tableOverview;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OverviewSettings createOverviewSettings() {
+		OverviewSettingsImpl overviewSettings = new OverviewSettingsImpl();
+		return overviewSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NoteSettings createNoteSettings() {
+		NoteSettingsImpl noteSettings = new NoteSettingsImpl();
+		return noteSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LoadValues createLoadValues() {
+		LoadValuesImpl loadValues = new LoadValuesImpl();
+		return loadValues;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AutocompleteComponent createAutocompleteComponent() {
+		AutocompleteComponentImpl autocompleteComponent = new AutocompleteComponentImpl();
+		return autocompleteComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Color createColor() {
+		ColorImpl color = new ColorImpl();
+		return color;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public formValidation.EDataType createEDataTypeFromString(EDataType eDataType, String initialValue) {
+		formValidation.EDataType result = formValidation.EDataType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -486,7 +693,7 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEVrstaToString(EDataType eDataType, Object instanceValue) {
+	public String convertEDataTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -507,6 +714,106 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * @generated
 	 */
 	public String convertEOrientationToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ERequiredField createERequiredFieldFromString(EDataType eDataType, String initialValue) {
+		ERequiredField result = ERequiredField.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertERequiredFieldToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EPosition createEPositionFromString(EDataType eDataType, String initialValue) {
+		EPosition result = EPosition.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEPositionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EGridOrder createEGridOrderFromString(EDataType eDataType, String initialValue) {
+		EGridOrder result = EGridOrder.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEGridOrderToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EUINumberComponentType createEUINumberComponentTypeFromString(EDataType eDataType, String initialValue) {
+		EUINumberComponentType result = EUINumberComponentType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEUINumberComponentTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDateUIType createEDateUITypeFromString(EDataType eDataType, String initialValue) {
+		EDateUIType result = EDateUIType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEDateUITypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link formValidation.UIComponent#getTooltip <em>Tooltip</em>}</li>
+ *   <li>{@link formValidation.UIComponent#getNote <em>Note</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getUIComponent()
@@ -46,5 +47,31 @@ public interface UIComponent extends EObject {
 	 * @generated
 	 */
 	void setTooltip(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Note</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Note</em>' attribute.
+	 * @see #setNote(String)
+	 * @see formValidation.FormValidationPackage#getUIComponent_Note()
+	 * @model
+	 * @generated
+	 */
+	String getNote();
+
+	/**
+	 * Sets the value of the '{@link formValidation.UIComponent#getNote <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Note</em>' attribute.
+	 * @see #getNote()
+	 * @generated
+	 */
+	void setNote(String value);
 
 } // UIComponent

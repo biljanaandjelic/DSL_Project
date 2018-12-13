@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RadioButtonImpl extends SingleValueImpl implements RadioButton {
+public class RadioButtonImpl extends SelectingUIComponentImpl implements RadioButton {
 	/**
 	 * The default value of the '{@link #getOrientation() <em>Orientation</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -3,19 +3,13 @@
  */
 package org.xtext.example.mydsl.validation;
 
-import com.google.common.base.Objects;
 import formValidation.AcceptableValuesString;
 import formValidation.AttributeRule;
-import formValidation.AttributeType;
 import formValidation.ClassAttribute;
 import formValidation.DatePattern;
-import formValidation.EVrsta;
 import formValidation.FormValidationPackage;
-import formValidation.Length;
 import formValidation.MaxDate;
-import formValidation.MaxLength;
 import formValidation.MinDate;
-import formValidation.MinLength;
 import formValidation.StringPattern;
 import formValidation.ValidationClass;
 import formValidation.impl.MinDateImpl;
@@ -61,135 +55,16 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   
   @Check
   public void checkStringRule(final ClassAttribute classAttribute) {
-    boolean isLength = false;
-    boolean isMaxOrMin = false;
-    AttributeType _attributetype = classAttribute.getAttributetype();
-    EVrsta _vrsta = _attributetype.getVrsta();
-    boolean _equals = Objects.equal(_vrsta, EVrsta.STRING);
-    if (_equals) {
-      EList<AttributeRule> _attributerule = classAttribute.getAttributerule();
-      for (final AttributeRule attrRule : _attributerule) {
-        if ((attrRule instanceof Length)) {
-          isLength = true;
-        } else {
-          if ((attrRule instanceof MaxLength)) {
-            isMaxOrMin = true;
-          } else {
-            if ((attrRule instanceof MinLength)) {
-              isMaxOrMin = true;
-            }
-          }
-        }
-      }
-      if ((isLength && isMaxOrMin)) {
-        this.error("It must not be set length rule at same time as minlength or maxlength. Please chose suitable rule.", 
-          FormValidationPackage.Literals.CLASS_ATTRIBUTE__ATTRIBUTERULE);
-      }
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field vrsta is undefined for the type AttributeType"
+      + "\n== cannot be resolved");
   }
   
   @Check
   public void checkStringAcceptableValuse(final ClassAttribute classAttribute) {
-    int length = (-1);
-    int minLength = (-1);
-    int maxLength = (-1);
-    AttributeType _attributetype = classAttribute.getAttributetype();
-    EVrsta _vrsta = _attributetype.getVrsta();
-    boolean _equals = Objects.equal(_vrsta, EVrsta.STRING);
-    if (_equals) {
-      EList<AttributeRule> _attributerule = classAttribute.getAttributerule();
-      for (final AttributeRule rule : _attributerule) {
-        if ((rule instanceof Length)) {
-          int _value = ((Length)rule).getValue();
-          length = _value;
-        } else {
-          if ((rule instanceof MinLength)) {
-            int _value_1 = ((MinLength)rule).getValue();
-            minLength = _value_1;
-          } else {
-            if ((rule instanceof MaxLength)) {
-              int _value_2 = ((MaxLength)rule).getValue();
-              maxLength = _value_2;
-            }
-          }
-        }
-      }
-    }
-    if ((length != (-1))) {
-      EList<AttributeRule> _attributerule_1 = classAttribute.getAttributerule();
-      for (final AttributeRule rule_1 : _attributerule_1) {
-        if ((rule_1 instanceof AcceptableValuesString)) {
-          final AcceptableValuesString accValues = ((AcceptableValuesString) rule_1);
-          EList<String> _values = accValues.getValues();
-          for (final String value : _values) {
-            int _length = value.length();
-            boolean _notEquals = (_length != length);
-            if (_notEquals) {
-              this.error("Values from acceptable values must be specific length", rule_1, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
-            }
-          }
-        }
-      }
-    } else {
-      if (((minLength != (-1)) && (maxLength != (-1)))) {
-        EList<AttributeRule> _attributerule_2 = classAttribute.getAttributerule();
-        for (final AttributeRule rule_2 : _attributerule_2) {
-          if ((rule_2 instanceof AcceptableValuesString)) {
-            final AcceptableValuesString accValues_1 = ((AcceptableValuesString) rule_2);
-            EList<String> _values_1 = accValues_1.getValues();
-            for (final String value_1 : _values_1) {
-              boolean _or = false;
-              int _length_1 = value_1.length();
-              boolean _greaterThan = (_length_1 > maxLength);
-              if (_greaterThan) {
-                _or = true;
-              } else {
-                int _length_2 = value_1.length();
-                boolean _lessThan = (_length_2 < minLength);
-                _or = _lessThan;
-              }
-              if (_or) {
-                this.error("Length of value from acceptable values must be between specific min length and max length", rule_2, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
-              }
-            }
-          }
-        }
-      } else {
-        if ((minLength != (-1))) {
-          EList<AttributeRule> _attributerule_3 = classAttribute.getAttributerule();
-          for (final AttributeRule rule_3 : _attributerule_3) {
-            if ((rule_3 instanceof AcceptableValuesString)) {
-              final AcceptableValuesString accValues_2 = ((AcceptableValuesString) rule_3);
-              EList<String> _values_2 = accValues_2.getValues();
-              for (final String value_2 : _values_2) {
-                int _length_3 = value_2.length();
-                boolean _lessThan_1 = (_length_3 < minLength);
-                if (_lessThan_1) {
-                  this.error("Length of value from acceptable values must be longer.", rule_3, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
-                }
-              }
-            }
-          }
-        } else {
-          if ((maxLength != (-1))) {
-            EList<AttributeRule> _attributerule_4 = classAttribute.getAttributerule();
-            for (final AttributeRule rule_4 : _attributerule_4) {
-              if ((rule_4 instanceof AcceptableValuesString)) {
-                final AcceptableValuesString accValues_3 = ((AcceptableValuesString) rule_4);
-                EList<String> _values_3 = accValues_3.getValues();
-                for (final String value_3 : _values_3) {
-                  int _length_4 = value_3.length();
-                  boolean _lessThan_2 = (_length_4 < minLength);
-                  if (_lessThan_2) {
-                    this.error("Length of values from acceptable values must be shorter", accValues_3, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field vrsta is undefined for the type AttributeType"
+      + "\n== cannot be resolved");
   }
   
   @Check
@@ -305,14 +180,9 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   }
   
   public boolean isDateType(final ClassAttribute attribute) {
-    boolean flag = false;
-    AttributeType _attributetype = attribute.getAttributetype();
-    EVrsta _vrsta = _attributetype.getVrsta();
-    boolean _equals = Objects.equal(_vrsta, EVrsta.DATE);
-    if (_equals) {
-      flag = true;
-    }
-    return flag;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field vrsta is undefined for the type AttributeType"
+      + "\n== cannot be resolved");
   }
   
   public String getMaxDate(final ClassAttribute attribute) {
@@ -414,14 +284,9 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   }
   
   public boolean isStrngType(final ClassAttribute attr) {
-    AttributeType _attributetype = attr.getAttributetype();
-    EVrsta _vrsta = _attributetype.getVrsta();
-    boolean _equals = Objects.equal(_vrsta, EVrsta.STRING);
-    if (_equals) {
-      return true;
-    } else {
-      return false;
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field vrsta is undefined for the type AttributeType"
+      + "\n== cannot be resolved");
   }
   
   public boolean containsStringPattern(final ClassAttribute attr) {

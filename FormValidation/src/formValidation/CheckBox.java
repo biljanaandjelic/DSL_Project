@@ -19,7 +19,7 @@ package formValidation;
  * @model
  * @generated
  */
-public interface CheckBox extends MultipleValues {
+public interface CheckBox extends SelectingUIComponent {
 	/**
 	 * Returns the value of the '<em><b>Orientation</b></em>' attribute.
 	 * The literals are from the enumeration {@link formValidation.EOrientation}.

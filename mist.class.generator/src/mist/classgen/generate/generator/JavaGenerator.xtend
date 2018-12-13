@@ -64,7 +64,7 @@ class JavaGenerator{
     
     def generate(ClassAttribute attribute){
     	'''<div> «generateInputLabel(attribute.name)» </div>
-    		<input id="«attribute.name»id" class="form-control" type="«IF attribute.attributetype.vrsta == EVrsta.STRING»text" «ELSE»«attribute.attributetype.vrsta»"«ENDIF»
+    		<input id="«attribute.name»id" class="form-control" type="«IF attribute.attributetype.attributeDataType == EVrsta.STRING»text" «ELSE»«attribute.attributetype.attributeDataType»"«ENDIF»
     		«FOR rule : attribute.attributerule  »
     			«generateAttributeRules(rule,attribute.name)»
     		«ENDFOR»

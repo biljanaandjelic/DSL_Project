@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formValidation:BusinessModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:formValidation="http://www.example.org/formValidation"
+    xsi:schemaLocation="http://www.example.org/formValidation formValidation.ecore">
+  <validationclasses
+      name="organizacionaJedinica"
+      label="Organizaciona jedinica">
+    <classattribute
+        name="naziv"
+        label="Naziv">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="broj"
+        label="Broj organizacione jedinice">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+  <validationclasses
+      name="registracionaForma"
+      label="Registraciona forma">
+    <classattribute
+        name="jedinstvenBrojKorisnikaJavnihSredstava"
+        label="Jedinstven broj korisnika javnih sredstava">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="nazivPravnogLicaOrgana"
+        label="Naziv pravnog lica/organa">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+</formValidation:BusinessModel>

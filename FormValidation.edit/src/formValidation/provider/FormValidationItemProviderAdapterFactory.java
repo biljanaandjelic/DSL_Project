@@ -555,6 +555,696 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.NumericUIComponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NumericUIComponentItemProvider numericUIComponentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.NumericUIComponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNumericUIComponentAdapter() {
+		if (numericUIComponentItemProvider == null) {
+			numericUIComponentItemProvider = new NumericUIComponentItemProvider(this);
+		}
+
+		return numericUIComponentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.RadioButton} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RadioButtonItemProvider radioButtonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.RadioButton}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRadioButtonAdapter() {
+		if (radioButtonItemProvider == null) {
+			radioButtonItemProvider = new RadioButtonItemProvider(this);
+		}
+
+		return radioButtonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.DropDownList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DropDownListItemProvider dropDownListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.DropDownList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDropDownListAdapter() {
+		if (dropDownListItemProvider == null) {
+			dropDownListItemProvider = new DropDownListItemProvider(this);
+		}
+
+		return dropDownListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.CheckBox} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CheckBoxItemProvider checkBoxItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.CheckBox}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCheckBoxAdapter() {
+		if (checkBoxItemProvider == null) {
+			checkBoxItemProvider = new CheckBoxItemProvider(this);
+		}
+
+		return checkBoxItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.DateUIComponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DateUIComponentItemProvider dateUIComponentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.DateUIComponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDateUIComponentAdapter() {
+		if (dateUIComponentItemProvider == null) {
+			dateUIComponentItemProvider = new DateUIComponentItemProvider(this);
+		}
+
+		return dateUIComponentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.TextInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextInputItemProvider textInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.TextInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextInputAdapter() {
+		if (textInputItemProvider == null) {
+			textInputItemProvider = new TextInputItemProvider(this);
+		}
+
+		return textInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.TextArea} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextAreaItemProvider textAreaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.TextArea}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextAreaAdapter() {
+		if (textAreaItemProvider == null) {
+			textAreaItemProvider = new TextAreaItemProvider(this);
+		}
+
+		return textAreaItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.FieldSet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FieldSetItemProvider fieldSetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.FieldSet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFieldSetAdapter() {
+		if (fieldSetItemProvider == null) {
+			fieldSetItemProvider = new FieldSetItemProvider(this);
+		}
+
+		return fieldSetItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.Tab} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TabItemProvider tabItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.Tab}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTabAdapter() {
+		if (tabItemProvider == null) {
+			tabItemProvider = new TabItemProvider(this);
+		}
+
+		return tabItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.Grid} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GridItemProvider gridItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.Grid}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGridAdapter() {
+		if (gridItemProvider == null) {
+			gridItemProvider = new GridItemProvider(this);
+		}
+
+		return gridItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.AttributeSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttributeSettingsItemProvider attributeSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.AttributeSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttributeSettingsAdapter() {
+		if (attributeSettingsItemProvider == null) {
+			attributeSettingsItemProvider = new AttributeSettingsItemProvider(this);
+		}
+
+		return attributeSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.LabelSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LabelSettingsItemProvider labelSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.LabelSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLabelSettingsAdapter() {
+		if (labelSettingsItemProvider == null) {
+			labelSettingsItemProvider = new LabelSettingsItemProvider(this);
+		}
+
+		return labelSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.ErrorMessage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ErrorMessageItemProvider errorMessageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.ErrorMessage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createErrorMessageAdapter() {
+		if (errorMessageItemProvider == null) {
+			errorMessageItemProvider = new ErrorMessageItemProvider(this);
+		}
+
+		return errorMessageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.TelInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TelInputItemProvider telInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.TelInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTelInputAdapter() {
+		if (telInputItemProvider == null) {
+			telInputItemProvider = new TelInputItemProvider(this);
+		}
+
+		return telInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.EmailInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EmailInputItemProvider emailInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.EmailInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEmailInputAdapter() {
+		if (emailInputItemProvider == null) {
+			emailInputItemProvider = new EmailInputItemProvider(this);
+		}
+
+		return emailInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.Password} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PasswordItemProvider passwordItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.Password}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPasswordAdapter() {
+		if (passwordItemProvider == null) {
+			passwordItemProvider = new PasswordItemProvider(this);
+		}
+
+		return passwordItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.FileInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileInputItemProvider fileInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.FileInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileInputAdapter() {
+		if (fileInputItemProvider == null) {
+			fileInputItemProvider = new FileInputItemProvider(this);
+		}
+
+		return fileInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.PrimitiveDataType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PrimitiveDataTypeItemProvider primitiveDataTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.PrimitiveDataType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPrimitiveDataTypeAdapter() {
+		if (primitiveDataTypeItemProvider == null) {
+			primitiveDataTypeItemProvider = new PrimitiveDataTypeItemProvider(this);
+		}
+
+		return primitiveDataTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.NonPrimitiveDataType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NonPrimitiveDataTypeItemProvider nonPrimitiveDataTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.NonPrimitiveDataType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNonPrimitiveDataTypeAdapter() {
+		if (nonPrimitiveDataTypeItemProvider == null) {
+			nonPrimitiveDataTypeItemProvider = new NonPrimitiveDataTypeItemProvider(this);
+		}
+
+		return nonPrimitiveDataTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.RefEntity} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RefEntityItemProvider refEntityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.RefEntity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRefEntityAdapter() {
+		if (refEntityItemProvider == null) {
+			refEntityItemProvider = new RefEntityItemProvider(this);
+		}
+
+		return refEntityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.BusinessModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BusinessModelItemProvider businessModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.BusinessModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBusinessModelAdapter() {
+		if (businessModelItemProvider == null) {
+			businessModelItemProvider = new BusinessModelItemProvider(this);
+		}
+
+		return businessModelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.ErrorMessageSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ErrorMessageSettingsItemProvider errorMessageSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.ErrorMessageSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createErrorMessageSettingsAdapter() {
+		if (errorMessageSettingsItemProvider == null) {
+			errorMessageSettingsItemProvider = new ErrorMessageSettingsItemProvider(this);
+		}
+
+		return errorMessageSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.FormSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FormSettingsItemProvider formSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.FormSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFormSettingsAdapter() {
+		if (formSettingsItemProvider == null) {
+			formSettingsItemProvider = new FormSettingsItemProvider(this);
+		}
+
+		return formSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.Pagination} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PaginationItemProvider paginationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.Pagination}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPaginationAdapter() {
+		if (paginationItemProvider == null) {
+			paginationItemProvider = new PaginationItemProvider(this);
+		}
+
+		return paginationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.TableOverview} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableOverviewItemProvider tableOverviewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.TableOverview}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableOverviewAdapter() {
+		if (tableOverviewItemProvider == null) {
+			tableOverviewItemProvider = new TableOverviewItemProvider(this);
+		}
+
+		return tableOverviewItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.OverviewSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OverviewSettingsItemProvider overviewSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.OverviewSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOverviewSettingsAdapter() {
+		if (overviewSettingsItemProvider == null) {
+			overviewSettingsItemProvider = new OverviewSettingsItemProvider(this);
+		}
+
+		return overviewSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.NoteSettings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NoteSettingsItemProvider noteSettingsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.NoteSettings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNoteSettingsAdapter() {
+		if (noteSettingsItemProvider == null) {
+			noteSettingsItemProvider = new NoteSettingsItemProvider(this);
+		}
+
+		return noteSettingsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.LoadValues} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LoadValuesItemProvider loadValuesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.LoadValues}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLoadValuesAdapter() {
+		if (loadValuesItemProvider == null) {
+			loadValuesItemProvider = new LoadValuesItemProvider(this);
+		}
+
+		return loadValuesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.AutocompleteComponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AutocompleteComponentItemProvider autocompleteComponentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.AutocompleteComponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAutocompleteComponentAdapter() {
+		if (autocompleteComponentItemProvider == null) {
+			autocompleteComponentItemProvider = new AutocompleteComponentItemProvider(this);
+		}
+
+		return autocompleteComponentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link formValidation.Color} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColorItemProvider colorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link formValidation.Color}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColorAdapter() {
+		if (colorItemProvider == null) {
+			colorItemProvider = new ColorItemProvider(this);
+		}
+
+		return colorItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -674,6 +1364,36 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 		if (equalsItemProvider != null) equalsItemProvider.dispose();
 		if (lessThanItemProvider != null) lessThanItemProvider.dispose();
 		if (attributeArrayItemProvider != null) attributeArrayItemProvider.dispose();
+		if (numericUIComponentItemProvider != null) numericUIComponentItemProvider.dispose();
+		if (radioButtonItemProvider != null) radioButtonItemProvider.dispose();
+		if (dropDownListItemProvider != null) dropDownListItemProvider.dispose();
+		if (checkBoxItemProvider != null) checkBoxItemProvider.dispose();
+		if (dateUIComponentItemProvider != null) dateUIComponentItemProvider.dispose();
+		if (textInputItemProvider != null) textInputItemProvider.dispose();
+		if (textAreaItemProvider != null) textAreaItemProvider.dispose();
+		if (fieldSetItemProvider != null) fieldSetItemProvider.dispose();
+		if (tabItemProvider != null) tabItemProvider.dispose();
+		if (gridItemProvider != null) gridItemProvider.dispose();
+		if (attributeSettingsItemProvider != null) attributeSettingsItemProvider.dispose();
+		if (labelSettingsItemProvider != null) labelSettingsItemProvider.dispose();
+		if (errorMessageItemProvider != null) errorMessageItemProvider.dispose();
+		if (telInputItemProvider != null) telInputItemProvider.dispose();
+		if (emailInputItemProvider != null) emailInputItemProvider.dispose();
+		if (passwordItemProvider != null) passwordItemProvider.dispose();
+		if (fileInputItemProvider != null) fileInputItemProvider.dispose();
+		if (primitiveDataTypeItemProvider != null) primitiveDataTypeItemProvider.dispose();
+		if (nonPrimitiveDataTypeItemProvider != null) nonPrimitiveDataTypeItemProvider.dispose();
+		if (refEntityItemProvider != null) refEntityItemProvider.dispose();
+		if (businessModelItemProvider != null) businessModelItemProvider.dispose();
+		if (errorMessageSettingsItemProvider != null) errorMessageSettingsItemProvider.dispose();
+		if (formSettingsItemProvider != null) formSettingsItemProvider.dispose();
+		if (paginationItemProvider != null) paginationItemProvider.dispose();
+		if (tableOverviewItemProvider != null) tableOverviewItemProvider.dispose();
+		if (overviewSettingsItemProvider != null) overviewSettingsItemProvider.dispose();
+		if (noteSettingsItemProvider != null) noteSettingsItemProvider.dispose();
+		if (loadValuesItemProvider != null) loadValuesItemProvider.dispose();
+		if (autocompleteComponentItemProvider != null) autocompleteComponentItemProvider.dispose();
+		if (colorItemProvider != null) colorItemProvider.dispose();
 	}
 
 }

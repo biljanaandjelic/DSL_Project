@@ -19,11 +19,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link formValidation.ValidationClass#getClassattribute <em>Classattribute</em>}</li>
  *   <li>{@link formValidation.ValidationClass#getClassrule <em>Classrule</em>}</li>
  *   <li>{@link formValidation.ValidationClass#getLabel <em>Label</em>}</li>
+ *   <li>{@link formValidation.ValidationClass#getFormlayout <em>Formlayout</em>}</li>
+ *   <li>{@link formValidation.ValidationClass#getAdditionalSettings <em>Additional Settings</em>}</li>
+ *   <li>{@link formValidation.ValidationClass#getOverviewsettings <em>Overviewsettings</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getValidationClass()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='differentClassAttributes'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot differentClassAttributes='Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='differentClassAttributes nameFormat'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot differentClassAttributes='Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z]*\')'"
  * @generated
  */
 public interface ValidationClass extends EObject {
@@ -110,5 +113,53 @@ public interface ValidationClass extends EObject {
 	 * @generated
 	 */
 	void setLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Formlayout</b></em>' containment reference list.
+	 * The list contents are of type {@link formValidation.FormLayout}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Formlayout</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Formlayout</em>' containment reference list.
+	 * @see formValidation.FormValidationPackage#getValidationClass_Formlayout()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FormLayout> getFormlayout();
+
+	/**
+	 * Returns the value of the '<em><b>Additional Settings</b></em>' containment reference list.
+	 * The list contents are of type {@link formValidation.AdditionalSettings}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Additional Settings</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Additional Settings</em>' containment reference list.
+	 * @see formValidation.FormValidationPackage#getValidationClass_AdditionalSettings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AdditionalSettings> getAdditionalSettings();
+
+	/**
+	 * Returns the value of the '<em><b>Overviewsettings</b></em>' containment reference list.
+	 * The list contents are of type {@link formValidation.OverviewSettings}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Overviewsettings</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Overviewsettings</em>' containment reference list.
+	 * @see formValidation.FormValidationPackage#getValidationClass_Overviewsettings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OverviewSettings> getOverviewsettings();
 
 } // ValidationClass

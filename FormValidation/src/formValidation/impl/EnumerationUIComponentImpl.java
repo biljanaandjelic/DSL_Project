@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class EnumerationUIComponentImpl extends NumericUIComponentImpl implements EnumerationUIComponent {
+public abstract class EnumerationUIComponentImpl extends UIComponentImpl implements EnumerationUIComponent {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

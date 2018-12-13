@@ -180,32 +180,12 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createUIComponentAdapter();
 			}
 			@Override
-			public Adapter caseDependOn(DependOn object) {
-				return createDependOnAdapter();
-			}
-			@Override
 			public Adapter caseNumericUIComponent(NumericUIComponent object) {
 				return createNumericUIComponentAdapter();
 			}
 			@Override
-			public Adapter caseInputNumber(InputNumber object) {
-				return createInputNumberAdapter();
-			}
-			@Override
-			public Adapter caseScrollbar(Scrollbar object) {
-				return createScrollbarAdapter();
-			}
-			@Override
 			public Adapter caseEnumerationUIComponent(EnumerationUIComponent object) {
 				return createEnumerationUIComponentAdapter();
-			}
-			@Override
-			public Adapter caseSingleValue(SingleValue object) {
-				return createSingleValueAdapter();
-			}
-			@Override
-			public Adapter caseMultipleValues(MultipleValues object) {
-				return createMultipleValuesAdapter();
 			}
 			@Override
 			public Adapter caseRadioButton(RadioButton object) {
@@ -218,10 +198,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCheckBox(CheckBox object) {
 				return createCheckBoxAdapter();
-			}
-			@Override
-			public Adapter caseMultiSelectedDropDownList(MultiSelectedDropDownList object) {
-				return createMultiSelectedDropDownListAdapter();
 			}
 			@Override
 			public Adapter caseDateUIComponent(DateUIComponent object) {
@@ -254,6 +230,98 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGrid(Grid object) {
 				return createGridAdapter();
+			}
+			@Override
+			public Adapter caseAttributeSettings(AttributeSettings object) {
+				return createAttributeSettingsAdapter();
+			}
+			@Override
+			public Adapter caseLabelSettings(LabelSettings object) {
+				return createLabelSettingsAdapter();
+			}
+			@Override
+			public Adapter caseErrorMessage(ErrorMessage object) {
+				return createErrorMessageAdapter();
+			}
+			@Override
+			public Adapter caseTelInput(TelInput object) {
+				return createTelInputAdapter();
+			}
+			@Override
+			public Adapter caseEmailInput(EmailInput object) {
+				return createEmailInputAdapter();
+			}
+			@Override
+			public Adapter casePassword(Password object) {
+				return createPasswordAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalSettings(AdditionalSettings object) {
+				return createAdditionalSettingsAdapter();
+			}
+			@Override
+			public Adapter caseFileInput(FileInput object) {
+				return createFileInputAdapter();
+			}
+			@Override
+			public Adapter caseAttributeDataType(AttributeDataType object) {
+				return createAttributeDataTypeAdapter();
+			}
+			@Override
+			public Adapter casePrimitiveDataType(PrimitiveDataType object) {
+				return createPrimitiveDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseNonPrimitiveDataType(NonPrimitiveDataType object) {
+				return createNonPrimitiveDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseRefEntity(RefEntity object) {
+				return createRefEntityAdapter();
+			}
+			@Override
+			public Adapter caseBusinessModel(BusinessModel object) {
+				return createBusinessModelAdapter();
+			}
+			@Override
+			public Adapter caseErrorMessageSettings(ErrorMessageSettings object) {
+				return createErrorMessageSettingsAdapter();
+			}
+			@Override
+			public Adapter caseFormSettings(FormSettings object) {
+				return createFormSettingsAdapter();
+			}
+			@Override
+			public Adapter casePagination(Pagination object) {
+				return createPaginationAdapter();
+			}
+			@Override
+			public Adapter caseTableOverview(TableOverview object) {
+				return createTableOverviewAdapter();
+			}
+			@Override
+			public Adapter caseOverviewSettings(OverviewSettings object) {
+				return createOverviewSettingsAdapter();
+			}
+			@Override
+			public Adapter caseNoteSettings(NoteSettings object) {
+				return createNoteSettingsAdapter();
+			}
+			@Override
+			public Adapter caseSelectingUIComponent(SelectingUIComponent object) {
+				return createSelectingUIComponentAdapter();
+			}
+			@Override
+			public Adapter caseLoadValues(LoadValues object) {
+				return createLoadValuesAdapter();
+			}
+			@Override
+			public Adapter caseAutocompleteComponent(AutocompleteComponent object) {
+				return createAutocompleteComponentAdapter();
+			}
+			@Override
+			public Adapter caseColor(Color object) {
+				return createColorAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -668,20 +736,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.DependOn <em>Depend On</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.DependOn
-	 * @generated
-	 */
-	public Adapter createDependOnAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link formValidation.NumericUIComponent <em>Numeric UI Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -696,34 +750,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.InputNumber <em>Input Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.InputNumber
-	 * @generated
-	 */
-	public Adapter createInputNumberAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.Scrollbar <em>Scrollbar</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.Scrollbar
-	 * @generated
-	 */
-	public Adapter createScrollbarAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link formValidation.EnumerationUIComponent <em>Enumeration UI Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -734,34 +760,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEnumerationUIComponentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.SingleValue <em>Single Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.SingleValue
-	 * @generated
-	 */
-	public Adapter createSingleValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.MultipleValues <em>Multiple Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.MultipleValues
-	 * @generated
-	 */
-	public Adapter createMultipleValuesAdapter() {
 		return null;
 	}
 
@@ -804,20 +802,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCheckBoxAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.MultiSelectedDropDownList <em>Multi Selected Drop Down List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.MultiSelectedDropDownList
-	 * @generated
-	 */
-	public Adapter createMultiSelectedDropDownListAdapter() {
 		return null;
 	}
 
@@ -930,6 +914,328 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGridAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.AttributeSettings <em>Attribute Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.AttributeSettings
+	 * @generated
+	 */
+	public Adapter createAttributeSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.LabelSettings <em>Label Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.LabelSettings
+	 * @generated
+	 */
+	public Adapter createLabelSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.ErrorMessage <em>Error Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.ErrorMessage
+	 * @generated
+	 */
+	public Adapter createErrorMessageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.TelInput <em>Tel Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.TelInput
+	 * @generated
+	 */
+	public Adapter createTelInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.EmailInput <em>Email Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.EmailInput
+	 * @generated
+	 */
+	public Adapter createEmailInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Password <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Password
+	 * @generated
+	 */
+	public Adapter createPasswordAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.AdditionalSettings <em>Additional Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.AdditionalSettings
+	 * @generated
+	 */
+	public Adapter createAdditionalSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.FileInput <em>File Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.FileInput
+	 * @generated
+	 */
+	public Adapter createFileInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.AttributeDataType <em>Attribute Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.AttributeDataType
+	 * @generated
+	 */
+	public Adapter createAttributeDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.PrimitiveDataType <em>Primitive Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.PrimitiveDataType
+	 * @generated
+	 */
+	public Adapter createPrimitiveDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.NonPrimitiveDataType <em>Non Primitive Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.NonPrimitiveDataType
+	 * @generated
+	 */
+	public Adapter createNonPrimitiveDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.RefEntity <em>Ref Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.RefEntity
+	 * @generated
+	 */
+	public Adapter createRefEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.BusinessModel <em>Business Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.BusinessModel
+	 * @generated
+	 */
+	public Adapter createBusinessModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.ErrorMessageSettings <em>Error Message Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.ErrorMessageSettings
+	 * @generated
+	 */
+	public Adapter createErrorMessageSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.FormSettings <em>Form Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.FormSettings
+	 * @generated
+	 */
+	public Adapter createFormSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Pagination <em>Pagination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Pagination
+	 * @generated
+	 */
+	public Adapter createPaginationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.TableOverview <em>Table Overview</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.TableOverview
+	 * @generated
+	 */
+	public Adapter createTableOverviewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.OverviewSettings <em>Overview Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.OverviewSettings
+	 * @generated
+	 */
+	public Adapter createOverviewSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.NoteSettings <em>Note Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.NoteSettings
+	 * @generated
+	 */
+	public Adapter createNoteSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.SelectingUIComponent <em>Selecting UI Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.SelectingUIComponent
+	 * @generated
+	 */
+	public Adapter createSelectingUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.LoadValues <em>Load Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.LoadValues
+	 * @generated
+	 */
+	public Adapter createLoadValuesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.AutocompleteComponent <em>Autocomplete Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.AutocompleteComponent
+	 * @generated
+	 */
+	public Adapter createAutocompleteComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link formValidation.Color <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see formValidation.Color
+	 * @generated
+	 */
+	public Adapter createColorAdapter() {
 		return null;
 	}
 

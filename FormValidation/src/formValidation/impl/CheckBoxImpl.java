@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CheckBoxImpl extends MultipleValuesImpl implements CheckBox {
+public class CheckBoxImpl extends SelectingUIComponentImpl implements CheckBox {
 	/**
 	 * The default value of the '{@link #getOrientation() <em>Orientation</em>}' attribute.
 	 * <!-- begin-user-doc -->

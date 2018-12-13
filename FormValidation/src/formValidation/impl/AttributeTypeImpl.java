@@ -2,14 +2,17 @@
  */
 package formValidation.impl;
 
+import formValidation.AttributeDataType;
 import formValidation.AttributeType;
-import formValidation.EVrsta;
 import formValidation.FormValidationPackage;
 
+import formValidation.UIComponent;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,31 +24,32 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.AttributeTypeImpl#getVrsta <em>Vrsta</em>}</li>
+ *   <li>{@link formValidation.impl.AttributeTypeImpl#getUiComponent <em>Ui Component</em>}</li>
+ *   <li>{@link formValidation.impl.AttributeTypeImpl#getAttributeDataType <em>Attribute Data Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements AttributeType {
 	/**
-	 * The default value of the '{@link #getVrsta() <em>Vrsta</em>}' attribute.
+	 * The cached value of the '{@link #getUiComponent() <em>Ui Component</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVrsta()
+	 * @see #getUiComponent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EVrsta VRSTA_EDEFAULT = EVrsta.STRING;
+	protected UIComponent uiComponent;
 
 	/**
-	 * The cached value of the '{@link #getVrsta() <em>Vrsta</em>}' attribute.
+	 * The cached value of the '{@link #getAttributeDataType() <em>Attribute Data Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVrsta()
+	 * @see #getAttributeDataType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EVrsta vrsta = VRSTA_EDEFAULT;
+	protected AttributeDataType attributeDataType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,8 +75,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EVrsta getVrsta() {
-		return vrsta;
+	public UIComponent getUiComponent() {
+		return uiComponent;
 	}
 
 	/**
@@ -80,11 +84,92 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVrsta(EVrsta newVrsta) {
-		EVrsta oldVrsta = vrsta;
-		vrsta = newVrsta == null ? VRSTA_EDEFAULT : newVrsta;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__VRSTA, oldVrsta, vrsta));
+	public NotificationChain basicSetUiComponent(UIComponent newUiComponent, NotificationChain msgs) {
+		UIComponent oldUiComponent = uiComponent;
+		uiComponent = newUiComponent;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT, oldUiComponent, newUiComponent);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUiComponent(UIComponent newUiComponent) {
+		if (newUiComponent != uiComponent) {
+			NotificationChain msgs = null;
+			if (uiComponent != null)
+				msgs = ((InternalEObject)uiComponent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT, null, msgs);
+			if (newUiComponent != null)
+				msgs = ((InternalEObject)newUiComponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT, null, msgs);
+			msgs = basicSetUiComponent(newUiComponent, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT, newUiComponent, newUiComponent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AttributeDataType getAttributeDataType() {
+		return attributeDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAttributeDataType(AttributeDataType newAttributeDataType, NotificationChain msgs) {
+		AttributeDataType oldAttributeDataType = attributeDataType;
+		attributeDataType = newAttributeDataType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, oldAttributeDataType, newAttributeDataType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeDataType(AttributeDataType newAttributeDataType) {
+		if (newAttributeDataType != attributeDataType) {
+			NotificationChain msgs = null;
+			if (attributeDataType != null)
+				msgs = ((InternalEObject)attributeDataType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, null, msgs);
+			if (newAttributeDataType != null)
+				msgs = ((InternalEObject)newAttributeDataType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, null, msgs);
+			msgs = basicSetAttributeDataType(newAttributeDataType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, newAttributeDataType, newAttributeDataType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+				return basicSetUiComponent(null, msgs);
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				return basicSetAttributeDataType(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -95,8 +180,10 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_TYPE__VRSTA:
-				return getVrsta();
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+				return getUiComponent();
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				return getAttributeDataType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +196,11 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_TYPE__VRSTA:
-				setVrsta((EVrsta)newValue);
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+				setUiComponent((UIComponent)newValue);
+				return;
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				setAttributeDataType((AttributeDataType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +214,11 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_TYPE__VRSTA:
-				setVrsta(VRSTA_EDEFAULT);
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+				setUiComponent((UIComponent)null);
+				return;
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				setAttributeDataType((AttributeDataType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,26 +232,12 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_TYPE__VRSTA:
-				return vrsta != VRSTA_EDEFAULT;
+			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
+				return uiComponent != null;
+			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+				return attributeDataType != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (vrsta: ");
-		result.append(vrsta);
-		result.append(')');
-		return result.toString();
 	}
 
 } //AttributeTypeImpl

@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.TabImpl#getName <em>Name</em>}</li>
+ *   <li>{@link formValidation.impl.TabImpl#getLabel <em>Label</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TabImpl extends FormLayoutImpl implements Tab {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String LABEL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String label = LABEL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getLabel() {
+		return label;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.TAB__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.TAB__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.TAB__NAME:
-				return getName();
+			case FormValidationPackage.TAB__LABEL:
+				return getLabel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.TAB__NAME:
-				setName((String)newValue);
+			case FormValidationPackage.TAB__LABEL:
+				setLabel((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.TAB__NAME:
-				setName(NAME_EDEFAULT);
+			case FormValidationPackage.TAB__LABEL:
+				setLabel(LABEL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.TAB__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case FormValidationPackage.TAB__LABEL:
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class TabImpl extends FormLayoutImpl implements Tab {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (label: ");
+		result.append(label);
 		result.append(')');
 		return result.toString();
 	}

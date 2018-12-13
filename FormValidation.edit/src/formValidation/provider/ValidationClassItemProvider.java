@@ -64,6 +64,7 @@ public class ValidationClassItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +92,28 @@ public class ValidationClassItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValidationClass_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValidationClass_label_feature", "_UI_ValidationClass_type"),
+				 FormValidationPackage.Literals.VALIDATION_CLASS__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -104,6 +127,9 @@ public class ValidationClassItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FormValidationPackage.Literals.VALIDATION_CLASS__CLASSATTRIBUTE);
 			childrenFeatures.add(FormValidationPackage.Literals.VALIDATION_CLASS__CLASSRULE);
+			childrenFeatures.add(FormValidationPackage.Literals.VALIDATION_CLASS__FORMLAYOUT);
+			childrenFeatures.add(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS);
+			childrenFeatures.add(FormValidationPackage.Literals.VALIDATION_CLASS__OVERVIEWSETTINGS);
 		}
 		return childrenFeatures;
 	}
@@ -160,10 +186,14 @@ public class ValidationClassItemProvider
 
 		switch (notification.getFeatureID(ValidationClass.class)) {
 			case FormValidationPackage.VALIDATION_CLASS__NAME:
+			case FormValidationPackage.VALIDATION_CLASS__LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FormValidationPackage.VALIDATION_CLASS__CLASSATTRIBUTE:
 			case FormValidationPackage.VALIDATION_CLASS__CLASSRULE:
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -205,6 +235,51 @@ public class ValidationClassItemProvider
 			(createChildParameter
 				(FormValidationPackage.Literals.VALIDATION_CLASS__CLASSRULE,
 				 FormValidationFactory.eINSTANCE.createLessThan()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__FORMLAYOUT,
+				 FormValidationFactory.eINSTANCE.createFieldSet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__FORMLAYOUT,
+				 FormValidationFactory.eINSTANCE.createTab()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__FORMLAYOUT,
+				 FormValidationFactory.eINSTANCE.createGrid()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS,
+				 FormValidationFactory.eINSTANCE.createAttributeSettings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS,
+				 FormValidationFactory.eINSTANCE.createLabelSettings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS,
+				 FormValidationFactory.eINSTANCE.createErrorMessageSettings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS,
+				 FormValidationFactory.eINSTANCE.createFormSettings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__ADDITIONAL_SETTINGS,
+				 FormValidationFactory.eINSTANCE.createNoteSettings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FormValidationPackage.Literals.VALIDATION_CLASS__OVERVIEWSETTINGS,
+				 FormValidationFactory.eINSTANCE.createOverviewSettings()));
 	}
 
 	/**

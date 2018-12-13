@@ -12,7 +12,7 @@ package formValidation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link formValidation.Tab#getName <em>Name</em>}</li>
+ *   <li>{@link formValidation.Tab#getLabel <em>Label</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getTab()
@@ -21,29 +21,29 @@ package formValidation;
  */
 public interface Tab extends FormLayout {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Label</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see formValidation.FormValidationPackage#getTab_Name()
+	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see #setLabel(String)
+	 * @see formValidation.FormValidationPackage#getTab_Label()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getLabel();
 
 	/**
-	 * Sets the value of the '{@link formValidation.Tab#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link formValidation.Tab#getLabel <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Label</em>' attribute.
+	 * @see #getLabel()
 	 * @generated
 	 */
-	void setName(String value);
+	void setLabel(String value);
 
 } // Tab

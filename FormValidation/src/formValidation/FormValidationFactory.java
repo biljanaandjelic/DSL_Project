@@ -211,31 +211,13 @@ public interface FormValidationFactory extends EFactory {
 	AttributeArray createAttributeArray();
 
 	/**
-	 * Returns a new object of class '<em>Depend On</em>'.
+	 * Returns a new object of class '<em>Numeric UI Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Depend On</em>'.
+	 * @return a new object of class '<em>Numeric UI Component</em>'.
 	 * @generated
 	 */
-	DependOn createDependOn();
-
-	/**
-	 * Returns a new object of class '<em>Input Number</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Number</em>'.
-	 * @generated
-	 */
-	InputNumber createInputNumber();
-
-	/**
-	 * Returns a new object of class '<em>Scrollbar</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scrollbar</em>'.
-	 * @generated
-	 */
-	Scrollbar createScrollbar();
+	NumericUIComponent createNumericUIComponent();
 
 	/**
 	 * Returns a new object of class '<em>Radio Button</em>'.
@@ -263,15 +245,6 @@ public interface FormValidationFactory extends EFactory {
 	 * @generated
 	 */
 	CheckBox createCheckBox();
-
-	/**
-	 * Returns a new object of class '<em>Multi Selected Drop Down List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multi Selected Drop Down List</em>'.
-	 * @generated
-	 */
-	MultiSelectedDropDownList createMultiSelectedDropDownList();
 
 	/**
 	 * Returns a new object of class '<em>Date UI Component</em>'.
@@ -326,6 +299,186 @@ public interface FormValidationFactory extends EFactory {
 	 * @generated
 	 */
 	Grid createGrid();
+
+	/**
+	 * Returns a new object of class '<em>Attribute Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attribute Settings</em>'.
+	 * @generated
+	 */
+	AttributeSettings createAttributeSettings();
+
+	/**
+	 * Returns a new object of class '<em>Label Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Label Settings</em>'.
+	 * @generated
+	 */
+	LabelSettings createLabelSettings();
+
+	/**
+	 * Returns a new object of class '<em>Error Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Error Message</em>'.
+	 * @generated
+	 */
+	ErrorMessage createErrorMessage();
+
+	/**
+	 * Returns a new object of class '<em>Tel Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tel Input</em>'.
+	 * @generated
+	 */
+	TelInput createTelInput();
+
+	/**
+	 * Returns a new object of class '<em>Email Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Email Input</em>'.
+	 * @generated
+	 */
+	EmailInput createEmailInput();
+
+	/**
+	 * Returns a new object of class '<em>Password</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Password</em>'.
+	 * @generated
+	 */
+	Password createPassword();
+
+	/**
+	 * Returns a new object of class '<em>File Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>File Input</em>'.
+	 * @generated
+	 */
+	FileInput createFileInput();
+
+	/**
+	 * Returns a new object of class '<em>Primitive Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Primitive Data Type</em>'.
+	 * @generated
+	 */
+	PrimitiveDataType createPrimitiveDataType();
+
+	/**
+	 * Returns a new object of class '<em>Non Primitive Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Non Primitive Data Type</em>'.
+	 * @generated
+	 */
+	NonPrimitiveDataType createNonPrimitiveDataType();
+
+	/**
+	 * Returns a new object of class '<em>Ref Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ref Entity</em>'.
+	 * @generated
+	 */
+	RefEntity createRefEntity();
+
+	/**
+	 * Returns a new object of class '<em>Business Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Business Model</em>'.
+	 * @generated
+	 */
+	BusinessModel createBusinessModel();
+
+	/**
+	 * Returns a new object of class '<em>Error Message Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Error Message Settings</em>'.
+	 * @generated
+	 */
+	ErrorMessageSettings createErrorMessageSettings();
+
+	/**
+	 * Returns a new object of class '<em>Form Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Form Settings</em>'.
+	 * @generated
+	 */
+	FormSettings createFormSettings();
+
+	/**
+	 * Returns a new object of class '<em>Pagination</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pagination</em>'.
+	 * @generated
+	 */
+	Pagination createPagination();
+
+	/**
+	 * Returns a new object of class '<em>Table Overview</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Overview</em>'.
+	 * @generated
+	 */
+	TableOverview createTableOverview();
+
+	/**
+	 * Returns a new object of class '<em>Overview Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Overview Settings</em>'.
+	 * @generated
+	 */
+	OverviewSettings createOverviewSettings();
+
+	/**
+	 * Returns a new object of class '<em>Note Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Note Settings</em>'.
+	 * @generated
+	 */
+	NoteSettings createNoteSettings();
+
+	/**
+	 * Returns a new object of class '<em>Load Values</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Load Values</em>'.
+	 * @generated
+	 */
+	LoadValues createLoadValues();
+
+	/**
+	 * Returns a new object of class '<em>Autocomplete Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Autocomplete Component</em>'.
+	 * @generated
+	 */
+	AutocompleteComponent createAutocompleteComponent();
+
+	/**
+	 * Returns a new object of class '<em>Color</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Color</em>'.
+	 * @generated
+	 */
+	Color createColor();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -13,5 +13,5 @@ package formValidation;
  * @model abstract="true"
  * @generated
  */
-public interface EnumerationUIComponent extends NumericUIComponent {
+public interface EnumerationUIComponent extends UIComponent {
 } // EnumerationUIComponent

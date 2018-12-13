@@ -2,9 +2,12 @@
  */
 package formValidation.impl;
 
+import formValidation.AdditionalSettings;
 import formValidation.ClassAttribute;
 import formValidation.ClassRule;
+import formValidation.FormLayout;
 import formValidation.FormValidationPackage;
+import formValidation.OverviewSettings;
 import formValidation.ValidationClass;
 
 import java.util.Collection;
@@ -35,6 +38,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link formValidation.impl.ValidationClassImpl#getClassattribute <em>Classattribute</em>}</li>
  *   <li>{@link formValidation.impl.ValidationClassImpl#getClassrule <em>Classrule</em>}</li>
  *   <li>{@link formValidation.impl.ValidationClassImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link formValidation.impl.ValidationClassImpl#getFormlayout <em>Formlayout</em>}</li>
+ *   <li>{@link formValidation.impl.ValidationClassImpl#getAdditionalSettings <em>Additional Settings</em>}</li>
+ *   <li>{@link formValidation.impl.ValidationClassImpl#getOverviewsettings <em>Overviewsettings</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +105,36 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFormlayout() <em>Formlayout</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormlayout()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FormLayout> formlayout;
+
+	/**
+	 * The cached value of the '{@link #getAdditionalSettings() <em>Additional Settings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdditionalSettings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AdditionalSettings> additionalSettings;
+
+	/**
+	 * The cached value of the '{@link #getOverviewsettings() <em>Overviewsettings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOverviewsettings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OverviewSettings> overviewsettings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,6 +226,42 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FormLayout> getFormlayout() {
+		if (formlayout == null) {
+			formlayout = new EObjectContainmentEList<FormLayout>(FormLayout.class, this, FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT);
+		}
+		return formlayout;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AdditionalSettings> getAdditionalSettings() {
+		if (additionalSettings == null) {
+			additionalSettings = new EObjectContainmentEList<AdditionalSettings>(AdditionalSettings.class, this, FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS);
+		}
+		return additionalSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<OverviewSettings> getOverviewsettings() {
+		if (overviewsettings == null) {
+			overviewsettings = new EObjectContainmentEList<OverviewSettings>(OverviewSettings.class, this, FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS);
+		}
+		return overviewsettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -197,6 +269,12 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				return ((InternalEList<?>)getClassattribute()).basicRemove(otherEnd, msgs);
 			case FormValidationPackage.VALIDATION_CLASS__CLASSRULE:
 				return ((InternalEList<?>)getClassrule()).basicRemove(otherEnd, msgs);
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+				return ((InternalEList<?>)getFormlayout()).basicRemove(otherEnd, msgs);
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+				return ((InternalEList<?>)getAdditionalSettings()).basicRemove(otherEnd, msgs);
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
+				return ((InternalEList<?>)getOverviewsettings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -217,6 +295,12 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				return getClassrule();
 			case FormValidationPackage.VALIDATION_CLASS__LABEL:
 				return getLabel();
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+				return getFormlayout();
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+				return getAdditionalSettings();
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
+				return getOverviewsettings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +328,18 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 			case FormValidationPackage.VALIDATION_CLASS__LABEL:
 				setLabel((String)newValue);
 				return;
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+				getFormlayout().clear();
+				getFormlayout().addAll((Collection<? extends FormLayout>)newValue);
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+				getAdditionalSettings().clear();
+				getAdditionalSettings().addAll((Collection<? extends AdditionalSettings>)newValue);
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
+				getOverviewsettings().clear();
+				getOverviewsettings().addAll((Collection<? extends OverviewSettings>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -268,6 +364,15 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 			case FormValidationPackage.VALIDATION_CLASS__LABEL:
 				setLabel(LABEL_EDEFAULT);
 				return;
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+				getFormlayout().clear();
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+				getAdditionalSettings().clear();
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
+				getOverviewsettings().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +393,12 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				return classrule != null && !classrule.isEmpty();
 			case FormValidationPackage.VALIDATION_CLASS__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case FormValidationPackage.VALIDATION_CLASS__FORMLAYOUT:
+				return formlayout != null && !formlayout.isEmpty();
+			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
+				return additionalSettings != null && !additionalSettings.isEmpty();
+			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
+				return overviewsettings != null && !overviewsettings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
