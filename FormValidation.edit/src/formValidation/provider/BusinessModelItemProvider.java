@@ -77,7 +77,7 @@ public class BusinessModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FormValidationPackage.Literals.BUSINESS_MODEL__VALIDATIONCLASS);
+			childrenFeatures.add(FormValidationPackage.Literals.BUSINESS_MODEL__VALIDATIONCLASSES);
 		}
 		return childrenFeatures;
 	}
@@ -130,7 +130,7 @@ public class BusinessModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BusinessModel.class)) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,7 +150,7 @@ public class BusinessModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FormValidationPackage.Literals.BUSINESS_MODEL__VALIDATIONCLASS,
+				(FormValidationPackage.Literals.BUSINESS_MODEL__VALIDATIONCLASSES,
 				 FormValidationFactory.eINSTANCE.createValidationClass()));
 	}
 

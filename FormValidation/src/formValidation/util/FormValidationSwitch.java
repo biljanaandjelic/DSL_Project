@@ -111,13 +111,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FormValidationPackage.EMAIL: {
-				Email email = (Email)theEObject;
-				T result = caseEmail(email);
-				if (result == null) result = caseAttributeRule(email);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FormValidationPackage.ACCEPTABLE_VALUES: {
 				AcceptableValues acceptableValues = (AcceptableValues)theEObject;
 				T result = caseAcceptableValues(acceptableValues);
@@ -621,21 +614,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRequired(Required object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Email</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Email</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEmail(Email object) {
 		return null;
 	}
 

@@ -61,7 +61,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.CLASS_ATTRIBUTE: return createClassAttribute();
 			case FormValidationPackage.ATTRIBUTE_TYPE: return createAttributeType();
 			case FormValidationPackage.REQUIRED: return createRequired();
-			case FormValidationPackage.EMAIL: return createEmail();
 			case FormValidationPackage.MIN_LENGTH: return createMinLength();
 			case FormValidationPackage.MAX_LENGTH: return createMaxLength();
 			case FormValidationPackage.LENGTH: return createLength();
@@ -205,16 +204,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	public Required createRequired() {
 		RequiredImpl required = new RequiredImpl();
 		return required;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Email createEmail() {
-		EmailImpl email = new EmailImpl();
-		return email;
 	}
 
 	/**

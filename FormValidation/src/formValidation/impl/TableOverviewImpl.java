@@ -5,9 +5,6 @@ package formValidation.impl;
 import formValidation.FormValidationPackage;
 import formValidation.Pagination;
 import formValidation.TableOverview;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -252,17 +249,6 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void newOperation1() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -370,21 +356,6 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case FormValidationPackage.TABLE_OVERVIEW___NEW_OPERATION1:
-				newOperation1();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link formValidation.impl.FormLayoutImpl#getAttributearray <em>Attributearray</em>}</li>
- *   <li>{@link formValidation.impl.FormLayoutImpl#getFormlayout <em>Formlayout</em>}</li>
+ *   <li>{@link formValidation.impl.FormLayoutImpl#getLayouts <em>Layouts</em>}</li>
  *   <li>{@link formValidation.impl.FormLayoutImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -44,14 +44,14 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	 */
 	protected AttributeArray attributearray;
 	/**
-	 * The cached value of the '{@link #getFormlayout() <em>Formlayout</em>}' containment reference list.
+	 * The cached value of the '{@link #getLayouts() <em>Layouts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFormlayout()
+	 * @see #getLayouts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FormLayout> formlayout;
+	protected EList<FormLayout> layouts;
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -137,11 +137,11 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FormLayout> getFormlayout() {
-		if (formlayout == null) {
-			formlayout = new EObjectContainmentEList<FormLayout>(FormLayout.class, this, FormValidationPackage.FORM_LAYOUT__FORMLAYOUT);
+	public EList<FormLayout> getLayouts() {
+		if (layouts == null) {
+			layouts = new EObjectContainmentEList<FormLayout>(FormLayout.class, this, FormValidationPackage.FORM_LAYOUT__LAYOUTS);
 		}
-		return formlayout;
+		return layouts;
 	}
 
 	/**
@@ -175,8 +175,8 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
 				return basicSetAttributearray(null, msgs);
-			case FormValidationPackage.FORM_LAYOUT__FORMLAYOUT:
-				return ((InternalEList<?>)getFormlayout()).basicRemove(otherEnd, msgs);
+			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
+				return ((InternalEList<?>)getLayouts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -191,8 +191,8 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
 				return getAttributearray();
-			case FormValidationPackage.FORM_LAYOUT__FORMLAYOUT:
-				return getFormlayout();
+			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
+				return getLayouts();
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				return getName();
 		}
@@ -211,9 +211,9 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
 				setAttributearray((AttributeArray)newValue);
 				return;
-			case FormValidationPackage.FORM_LAYOUT__FORMLAYOUT:
-				getFormlayout().clear();
-				getFormlayout().addAll((Collection<? extends FormLayout>)newValue);
+			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
+				getLayouts().clear();
+				getLayouts().addAll((Collection<? extends FormLayout>)newValue);
 				return;
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				setName((String)newValue);
@@ -233,8 +233,8 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
 				setAttributearray((AttributeArray)null);
 				return;
-			case FormValidationPackage.FORM_LAYOUT__FORMLAYOUT:
-				getFormlayout().clear();
+			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
+				getLayouts().clear();
 				return;
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				setName(NAME_EDEFAULT);
@@ -253,8 +253,8 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
 				return attributearray != null;
-			case FormValidationPackage.FORM_LAYOUT__FORMLAYOUT:
-				return formlayout != null && !formlayout.isEmpty();
+			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
+				return layouts != null && !layouts.isEmpty();
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

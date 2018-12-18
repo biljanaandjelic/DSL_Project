@@ -47,5 +47,177 @@
             xsi:type="formValidation:PrimitiveDataType"/>
       </attributetype>
     </classattribute>
+    <classattribute
+        name="maticniBroj"
+        label="Maticni broj">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+      <attributerule
+          xsi:type="formValidation:StringPattern"
+          value="[0-9]{13}"/>
+    </classattribute>
+    <classattribute
+        name="poreskiIdentifikacioniBroj"
+        label="Poreski identifikacioni broj">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:MaxNumber"
+          value="1.0E9"/>
+      <attributerule
+          xsi:type="formValidation:MinNumber"
+          value="1.00000008E8"/>
+    </classattribute>
+    <classattribute
+        name="adresaSedista"
+        label="Adresa sedista">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="adresaElektronskePoste"
+        label="Adresa elektronske poste">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:EmailInput"/>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="brojTelefona"
+        label="Broj telefona">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="imeIPrezime"
+        label="Ime i prezime">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:TextInput"/>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="brojIdentifikacioneIsprave"
+        label="Broj identifikacione isprave">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:StringPattern"
+          value="[0-9]{9}"/>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="brojTelefonaAdministratora"
+        label="Broj telefona">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute
+        name="adresaElektronskePosteAdministratora"
+        label="Adresa elektronske poste administratora">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="brojOrganizacioneJedinice"
+        label="Broj organizacione jedinice">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:NonPrimitiveDataType"
+            type="//@validationclasses.0"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <formlayout
+        xsi:type="formValidation:FieldSet"
+        name="podaciOPravnomLicuOrganu"
+        legend="Podaci o pravnom licu/organu">
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid1.1"
+          numOfColumns="1">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.0"/>
+      </layouts>
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid1.2"
+          numOfColumns="1">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.1"/>
+      </layouts>
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid1.3"
+          numOfColumns="2">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.2 //@validationclasses.1/@classattribute.3"/>
+      </layouts>
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid1.4"
+          numOfColumns="1">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.4"/>
+      </layouts>
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid1.5">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.6"/>
+      </layouts>
+    </formlayout>
+    <formlayout
+        xsi:type="formValidation:FieldSet"
+        name="podaciOAdministratoru"
+        legend="Podaci o administratoru">
+      <attributearray
+          attributes="//@validationclasses.1/@classattribute.7 //@validationclasses.1/@classattribute.8"/>
+      <layouts
+          xsi:type="formValidation:Grid"
+          name="grid2.1"
+          numOfColumns="2">
+        <attributearray
+            attributes="//@validationclasses.1/@classattribute.10 //@validationclasses.1/@classattribute.9"/>
+      </layouts>
+    </formlayout>
+    <formlayout
+        xsi:type="formValidation:Tab"
+        name="podaciOOrganiyacionojJediniciUpraveZaTrezor"
+        label="Подаци о организационој  јединици Управе за трезор">
+      <attributearray
+          attributes="//@validationclasses.1/@classattribute.11"/>
+    </formlayout>
   </validationclasses>
 </formValidation:BusinessModel>

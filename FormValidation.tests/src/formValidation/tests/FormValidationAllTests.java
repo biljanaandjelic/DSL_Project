@@ -31,7 +31,6 @@ public class FormValidationAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new FormValidationAllTests("FormValidation Tests");
-		suite.addTest(FormValidationTests.suite());
 		return suite;
 	}
 

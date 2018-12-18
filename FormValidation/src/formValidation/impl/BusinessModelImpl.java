@@ -28,22 +28,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.BusinessModelImpl#getValidationclass <em>Validationclass</em>}</li>
+ *   <li>{@link formValidation.impl.BusinessModelImpl#getValidationclasses <em>Validationclasses</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BusinessModelImpl extends MinimalEObjectImpl.Container implements BusinessModel {
 	/**
-	 * The cached value of the '{@link #getValidationclass() <em>Validationclass</em>}' containment reference list.
+	 * The cached value of the '{@link #getValidationclasses() <em>Validationclasses</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValidationclass()
+	 * @see #getValidationclasses()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ValidationClass> validationclass;
-
+	protected EList<ValidationClass> validationclasses;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,11 +67,11 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ValidationClass> getValidationclass() {
-		if (validationclass == null) {
-			validationclass = new EObjectContainmentEList<ValidationClass>(ValidationClass.class, this, FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS);
+	public EList<ValidationClass> getValidationclasses() {
+		if (validationclasses == null) {
+			validationclasses = new EObjectContainmentEList<ValidationClass>(ValidationClass.class, this, FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES);
 		}
-		return validationclass;
+		return validationclasses;
 	}
 
 	/**
@@ -83,8 +82,8 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
-				return ((InternalEList<?>)getValidationclass()).basicRemove(otherEnd, msgs);
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
+				return ((InternalEList<?>)getValidationclasses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +96,8 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
-				return getValidationclass();
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
+				return getValidationclasses();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +111,9 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
-				getValidationclass().clear();
-				getValidationclass().addAll((Collection<? extends ValidationClass>)newValue);
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
+				getValidationclasses().clear();
+				getValidationclasses().addAll((Collection<? extends ValidationClass>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +127,8 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
-				getValidationclass().clear();
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
+				getValidationclasses().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +142,8 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASS:
-				return validationclass != null && !validationclass.isEmpty();
+			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
+				return validationclasses != null && !validationclasses.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

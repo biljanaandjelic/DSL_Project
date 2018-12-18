@@ -57,25 +57,25 @@ public class AttributeArrayItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addClassattributePropertyDescriptor(object);
+			addAttributesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Classattribute feature.
+	 * This adds a property descriptor for the Attributes feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassattributePropertyDescriptor(Object object) {
+	protected void addAttributesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AttributeArray_classattribute_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeArray_classattribute_feature", "_UI_AttributeArray_type"),
-				 FormValidationPackage.Literals.ATTRIBUTE_ARRAY__CLASSATTRIBUTE,
+				 getString("_UI_AttributeArray_attributes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeArray_attributes_feature", "_UI_AttributeArray_type"),
+				 FormValidationPackage.Literals.ATTRIBUTE_ARRAY__ATTRIBUTES,
 				 true,
 				 false,
 				 true,

@@ -41,7 +41,7 @@
     </genEnums>
     <genClasses ecoreClass="formValidation.ecore#//ValidationClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/classrule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/label"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/formlayout"/>
@@ -49,14 +49,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/overviewsettings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//AttributeRule/errorMessage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//AttributeRule/attributeRuleErrorMessage"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//ClassAttribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributetype"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassAttribute/attributerule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/maser"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/master"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ClassAttribute/isClassRepresenting"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AttributeType">
@@ -66,9 +66,6 @@
     <genClasses image="false" ecoreClass="formValidation.ecore#//Min"/>
     <genClasses image="false" ecoreClass="formValidation.ecore#//Max"/>
     <genClasses ecoreClass="formValidation.ecore#//Required"/>
-    <genClasses ecoreClass="formValidation.ecore#//Email">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Email/isEmail"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AcceptableValues"/>
     <genClasses image="false" ecoreClass="formValidation.ecore#//Pattern"/>
     <genClasses ecoreClass="formValidation.ecore#//MinLength">
@@ -105,20 +102,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//DatePattern/value"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//ClassRule">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassRule/errorMessage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ClassRule/classRuleErrorMessage"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//NotEquals">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//NotEquals/attributearray"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//GreaterThan">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//GreaterThan/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//GreaterThan/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//GreaterThan/attributearray"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//Equals">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//Equals/attributearray"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//LessThan">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//LessThan/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference formValidation.ecore#//LessThan/classattribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//LessThan/attributearray"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//AttributeArray">

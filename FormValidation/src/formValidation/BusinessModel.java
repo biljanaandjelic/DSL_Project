@@ -15,29 +15,29 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link formValidation.BusinessModel#getValidationclass <em>Validationclass</em>}</li>
+ *   <li>{@link formValidation.BusinessModel#getValidationclasses <em>Validationclasses</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getBusinessModel()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueClassName'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot uniqueClassName='Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclass -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot uniqueClassName='Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclasses -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status'"
  * @generated
  */
 public interface BusinessModel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Validationclass</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Validationclasses</b></em>' containment reference list.
 	 * The list contents are of type {@link formValidation.ValidationClass}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Validationclass</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Validationclasses</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Validationclass</em>' containment reference list.
-	 * @see formValidation.FormValidationPackage#getBusinessModel_Validationclass()
+	 * @return the value of the '<em>Validationclasses</em>' containment reference list.
+	 * @see formValidation.FormValidationPackage#getBusinessModel_Validationclasses()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ValidationClass> getValidationclass();
+	EList<ValidationClass> getValidationclasses();
 
 } // BusinessModel

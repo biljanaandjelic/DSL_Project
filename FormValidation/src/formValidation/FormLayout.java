@@ -15,14 +15,14 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link formValidation.FormLayout#getAttributearray <em>Attributearray</em>}</li>
- *   <li>{@link formValidation.FormLayout#getFormlayout <em>Formlayout</em>}</li>
+ *   <li>{@link formValidation.FormLayout#getLayouts <em>Layouts</em>}</li>
  *   <li>{@link formValidation.FormLayout#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getFormLayout()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='checkFormLayout uniqueFormLayoutName nameFormat'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.classattribute.oclAsSet() -> intersection(fL2.attributearray.classattribute.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')'"
  * @generated
  */
 public interface FormLayout extends EObject {
@@ -54,20 +54,20 @@ public interface FormLayout extends EObject {
 	void setAttributearray(AttributeArray value);
 
 	/**
-	 * Returns the value of the '<em><b>Formlayout</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Layouts</b></em>' containment reference list.
 	 * The list contents are of type {@link formValidation.FormLayout}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Formlayout</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Layouts</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Formlayout</em>' containment reference list.
-	 * @see formValidation.FormValidationPackage#getFormLayout_Formlayout()
+	 * @return the value of the '<em>Layouts</em>' containment reference list.
+	 * @see formValidation.FormValidationPackage#getFormLayout_Layouts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FormLayout> getFormlayout();
+	EList<FormLayout> getLayouts();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -24,22 +24,21 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.AttributeArrayImpl#getClassattribute <em>Classattribute</em>}</li>
+ *   <li>{@link formValidation.impl.AttributeArrayImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements AttributeArray {
 	/**
-	 * The cached value of the '{@link #getClassattribute() <em>Classattribute</em>}' reference list.
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClassattribute()
+	 * @see #getAttributes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ClassAttribute> classattribute;
-
+	protected EList<ClassAttribute> attributes;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,11 +63,11 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ClassAttribute> getClassattribute() {
-		if (classattribute == null) {
-			classattribute = new EObjectResolvingEList<ClassAttribute>(ClassAttribute.class, this, FormValidationPackage.ATTRIBUTE_ARRAY__CLASSATTRIBUTE);
+	public EList<ClassAttribute> getAttributes() {
+		if (attributes == null) {
+			attributes = new EObjectResolvingEList<ClassAttribute>(ClassAttribute.class, this, FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES);
 		}
-		return classattribute;
+		return attributes;
 	}
 
 	/**
@@ -79,8 +78,8 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_ARRAY__CLASSATTRIBUTE:
-				return getClassattribute();
+			case FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES:
+				return getAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -94,9 +93,9 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_ARRAY__CLASSATTRIBUTE:
-				getClassattribute().clear();
-				getClassattribute().addAll((Collection<? extends ClassAttribute>)newValue);
+			case FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES:
+				getAttributes().clear();
+				getAttributes().addAll((Collection<? extends ClassAttribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -110,8 +109,8 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_ARRAY__CLASSATTRIBUTE:
-				getClassattribute().clear();
+			case FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES:
+				getAttributes().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -125,8 +124,8 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_ARRAY__CLASSATTRIBUTE:
-				return classattribute != null && !classattribute.isEmpty();
+			case FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES:
+				return attributes != null && !attributes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

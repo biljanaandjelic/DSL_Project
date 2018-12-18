@@ -164,29 +164,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.Email} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EmailItemProvider emailItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link formValidation.Email}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEmailAdapter() {
-		if (emailItemProvider == null) {
-			emailItemProvider = new EmailItemProvider(this);
-		}
-
-		return emailItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link formValidation.MinLength} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1347,7 +1324,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 		if (classAttributeItemProvider != null) classAttributeItemProvider.dispose();
 		if (attributeTypeItemProvider != null) attributeTypeItemProvider.dispose();
 		if (requiredItemProvider != null) requiredItemProvider.dispose();
-		if (emailItemProvider != null) emailItemProvider.dispose();
 		if (minLengthItemProvider != null) minLengthItemProvider.dispose();
 		if (maxLengthItemProvider != null) maxLengthItemProvider.dispose();
 		if (lengthItemProvider != null) lengthItemProvider.dispose();

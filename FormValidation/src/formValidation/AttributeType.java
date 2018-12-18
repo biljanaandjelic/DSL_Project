@@ -59,7 +59,7 @@ public interface AttributeType extends EObject {
 	 * @return the value of the '<em>Attribute Data Type</em>' containment reference.
 	 * @see #setAttributeDataType(AttributeDataType)
 	 * @see formValidation.FormValidationPackage#getAttributeType_AttributeDataType()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	AttributeDataType getAttributeDataType();

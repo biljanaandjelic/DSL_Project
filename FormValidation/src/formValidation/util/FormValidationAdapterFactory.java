@@ -96,10 +96,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createRequiredAdapter();
 			}
 			@Override
-			public Adapter caseEmail(Email object) {
-				return createEmailAdapter();
-			}
-			@Override
 			public Adapter caseAcceptableValues(AcceptableValues object) {
 				return createAcceptableValuesAdapter();
 			}
@@ -438,20 +434,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRequiredAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.Email <em>Email</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.Email
-	 * @generated
-	 */
-	public Adapter createEmailAdapter() {
 		return null;
 	}
 

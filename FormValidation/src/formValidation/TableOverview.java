@@ -147,12 +147,4 @@ public interface TableOverview extends EObject {
 	 */
 	void setTitle(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void newOperation1();
-
 } // TableOverview

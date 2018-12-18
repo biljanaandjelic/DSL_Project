@@ -266,11 +266,6 @@ public class ClassAttributeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(FormValidationPackage.Literals.CLASS_ATTRIBUTE__ATTRIBUTERULE,
-				 FormValidationFactory.eINSTANCE.createEmail()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE__ATTRIBUTERULE,
 				 FormValidationFactory.eINSTANCE.createMinLength()));
 
 		newChildDescriptors.add
