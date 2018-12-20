@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getAttributetype <em>Attributetype</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getAttributerule <em>Attributerule</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link formValidation.impl.ClassAttributeImpl#isMaser <em>Maser</em>}</li>
+ *   <li>{@link formValidation.impl.ClassAttributeImpl#isMaster <em>Master</em>}</li>
  *   <li>{@link formValidation.impl.ClassAttributeImpl#isIsClassRepresenting <em>Is Class Representing</em>}</li>
  * </ul>
  *
@@ -102,24 +102,24 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	protected String label = LABEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isMaser() <em>Maser</em>}' attribute.
+	 * The default value of the '{@link #isMaster() <em>Master</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isMaser()
+	 * @see #isMaster()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean MASER_EDEFAULT = true;
+	protected static final boolean MASTER_EDEFAULT = true;
 
 	/**
-	 * The cached value of the '{@link #isMaser() <em>Maser</em>}' attribute.
+	 * The cached value of the '{@link #isMaster() <em>Master</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isMaser()
+	 * @see #isMaster()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean maser = MASER_EDEFAULT;
+	protected boolean master = MASTER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isIsClassRepresenting() <em>Is Class Representing</em>}' attribute.
@@ -262,8 +262,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isMaser() {
-		return maser;
+	public boolean isMaster() {
+		return master;
 	}
 
 	/**
@@ -271,11 +271,11 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaser(boolean newMaser) {
-		boolean oldMaser = maser;
-		maser = newMaser;
+	public void setMaster(boolean newMaster) {
+		boolean oldMaster = master;
+		master = newMaster;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__MASER, oldMaser, maser));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_ATTRIBUTE__MASTER, oldMaster, master));
 	}
 
 	/**
@@ -331,8 +331,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				return getAttributerule();
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				return getLabel();
-			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
-				return isMaser();
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASTER:
+				return isMaster();
 			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				return isIsClassRepresenting();
 		}
@@ -361,8 +361,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				setLabel((String)newValue);
 				return;
-			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
-				setMaser((Boolean)newValue);
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASTER:
+				setMaster((Boolean)newValue);
 				return;
 			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				setIsClassRepresenting((Boolean)newValue);
@@ -391,8 +391,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				setLabel(LABEL_EDEFAULT);
 				return;
-			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
-				setMaser(MASER_EDEFAULT);
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASTER:
+				setMaster(MASTER_EDEFAULT);
 				return;
 			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				setIsClassRepresenting(IS_CLASS_REPRESENTING_EDEFAULT);
@@ -417,8 +417,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 				return attributerule != null && !attributerule.isEmpty();
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
-				return maser != MASER_EDEFAULT;
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASTER:
+				return master != MASTER_EDEFAULT;
 			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				return isClassRepresenting != IS_CLASS_REPRESENTING_EDEFAULT;
 		}
@@ -439,8 +439,8 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 		result.append(name);
 		result.append(", label: ");
 		result.append(label);
-		result.append(", maser: ");
-		result.append(maser);
+		result.append(", master: ");
+		result.append(master);
 		result.append(", isClassRepresenting: ");
 		result.append(isClassRepresenting);
 		result.append(')');

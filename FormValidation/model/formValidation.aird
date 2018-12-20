@@ -2365,7 +2365,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_zVbnUEf-EeikVYSKqkXlJQ" name="value : Float = 0.0" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_zVbnUEf-EeikVYSKqkXlJQ" name="value : EFloat = 0.0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//MinNumber/value"/>
           <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//MinNumber/value"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_1oBVAEf-EeikVYSKqkXlJQ" labelAlignment="LEFT">
@@ -2431,7 +2431,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Ia5lMEf_EeikVYSKqkXlJQ" name="value : Float = 0.0" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Ia5lMEf_EeikVYSKqkXlJQ" name="value : EFloat = 0.0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//MaxNumber/value"/>
           <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//MaxNumber/value"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_KdCcEEf_EeikVYSKqkXlJQ" labelAlignment="LEFT">

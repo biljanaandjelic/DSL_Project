@@ -234,13 +234,13 @@ public interface FormValidationPackage extends EPackage {
 	int CLASS_ATTRIBUTE__LABEL = 3;
 
 	/**
-	 * The feature id for the '<em><b>Maser</b></em>' attribute.
+	 * The feature id for the '<em><b>Master</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_ATTRIBUTE__MASER = 4;
+	int CLASS_ATTRIBUTE__MASTER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Is Class Representing</b></em>' attribute.
@@ -3408,15 +3408,15 @@ public interface FormValidationPackage extends EPackage {
 	EAttribute getClassAttribute_Label();
 
 	/**
-	 * Returns the meta object for the attribute '{@link formValidation.ClassAttribute#isMaser <em>Maser</em>}'.
+	 * Returns the meta object for the attribute '{@link formValidation.ClassAttribute#isMaster <em>Master</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Maser</em>'.
-	 * @see formValidation.ClassAttribute#isMaser()
+	 * @return the meta object for the attribute '<em>Master</em>'.
+	 * @see formValidation.ClassAttribute#isMaster()
 	 * @see #getClassAttribute()
 	 * @generated
 	 */
-	EAttribute getClassAttribute_Maser();
+	EAttribute getClassAttribute_Master();
 
 	/**
 	 * Returns the meta object for the attribute '{@link formValidation.ClassAttribute#isIsClassRepresenting <em>Is Class Representing</em>}'.
@@ -4975,12 +4975,12 @@ public interface FormValidationPackage extends EPackage {
 		EAttribute CLASS_ATTRIBUTE__LABEL = eINSTANCE.getClassAttribute_Label();
 
 		/**
-		 * The meta object literal for the '<em><b>Maser</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Master</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CLASS_ATTRIBUTE__MASER = eINSTANCE.getClassAttribute_Maser();
+		EAttribute CLASS_ATTRIBUTE__MASTER = eINSTANCE.getClassAttribute_Master();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Class Representing</b></em>' attribute feature.

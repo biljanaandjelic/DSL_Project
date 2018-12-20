@@ -32,7 +32,7 @@ public interface MaxLength extends AttributeRule {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(int)
 	 * @see formValidation.FormValidationPackage#getMaxLength_Value()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @model
 	 * @generated
 	 */
 	int getValue();

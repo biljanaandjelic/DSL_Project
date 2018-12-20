@@ -798,7 +798,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassAttribute_Maser() {
+	public EAttribute getClassAttribute_Master() {
 		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2053,7 +2053,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTETYPE);
 		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTERULE);
 		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__LABEL);
-		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__MASER);
+		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__MASTER);
 		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING);
 
 		attributeTypeEClass = createEClass(ATTRIBUTE_TYPE);
@@ -2349,7 +2349,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEReference(getClassAttribute_Attributetype(), this.getAttributeType(), null, "attributetype", null, 1, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClassAttribute_Attributerule(), this.getAttributeRule(), null, "attributerule", null, 0, -1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassAttribute_Label(), ecorePackage.getEString(), "label", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassAttribute_Maser(), ecorePackage.getEBoolean(), "maser", "true", 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClassAttribute_Master(), ecorePackage.getEBoolean(), "master", "true", 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassAttribute_IsClassRepresenting(), ecorePackage.getEBoolean(), "isClassRepresenting", "false", 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeTypeEClass, AttributeType.class, "AttributeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2370,7 +2370,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getMinLength_Value(), theXMLTypePackage.getInt(), "value", null, 0, 1, MinLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(maxLengthEClass, MaxLength.class, "MaxLength", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMaxLength_Value(), theXMLTypePackage.getInt(), "value", null, 0, 1, MaxLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMaxLength_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MaxLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lengthEClass, Length.class, "Length", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLength_Value(), theXMLTypePackage.getInt(), "value", null, 0, 1, Length.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

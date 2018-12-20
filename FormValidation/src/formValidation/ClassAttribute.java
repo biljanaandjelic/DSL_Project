@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link formValidation.ClassAttribute#getAttributetype <em>Attributetype</em>}</li>
  *   <li>{@link formValidation.ClassAttribute#getAttributerule <em>Attributerule</em>}</li>
  *   <li>{@link formValidation.ClassAttribute#getLabel <em>Label</em>}</li>
- *   <li>{@link formValidation.ClassAttribute#isMaser <em>Maser</em>}</li>
+ *   <li>{@link formValidation.ClassAttribute#isMaster <em>Master</em>}</li>
  *   <li>{@link formValidation.ClassAttribute#isIsClassRepresenting <em>Is Class Representing</em>}</li>
  * </ul>
  *
@@ -124,31 +124,31 @@ public interface ClassAttribute extends EObject {
 	void setLabel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Maser</b></em>' attribute.
+	 * Returns the value of the '<em><b>Master</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Maser</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Master</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maser</em>' attribute.
-	 * @see #setMaser(boolean)
-	 * @see formValidation.FormValidationPackage#getClassAttribute_Maser()
+	 * @return the value of the '<em>Master</em>' attribute.
+	 * @see #setMaster(boolean)
+	 * @see formValidation.FormValidationPackage#getClassAttribute_Master()
 	 * @model default="true"
 	 * @generated
 	 */
-	boolean isMaser();
+	boolean isMaster();
 
 	/**
-	 * Sets the value of the '{@link formValidation.ClassAttribute#isMaser <em>Maser</em>}' attribute.
+	 * Sets the value of the '{@link formValidation.ClassAttribute#isMaster <em>Master</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maser</em>' attribute.
-	 * @see #isMaser()
+	 * @param value the new value of the '<em>Master</em>' attribute.
+	 * @see #isMaster()
 	 * @generated
 	 */
-	void setMaser(boolean value);
+	void setMaster(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Class Representing</b></em>' attribute.

@@ -65,7 +65,7 @@ public class ClassAttributeItemProvider
 
 			addNamePropertyDescriptor(object);
 			addLabelPropertyDescriptor(object);
-			addMaserPropertyDescriptor(object);
+			addMasterPropertyDescriptor(object);
 			addIsClassRepresentingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -116,19 +116,19 @@ public class ClassAttributeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Maser feature.
+	 * This adds a property descriptor for the Master feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMaserPropertyDescriptor(Object object) {
+	protected void addMasterPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ClassAttribute_maser_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ClassAttribute_maser_feature", "_UI_ClassAttribute_type"),
-				 FormValidationPackage.Literals.CLASS_ATTRIBUTE__MASER,
+				 getString("_UI_ClassAttribute_master_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassAttribute_master_feature", "_UI_ClassAttribute_type"),
+				 FormValidationPackage.Literals.CLASS_ATTRIBUTE__MASTER,
 				 true,
 				 false,
 				 false,
@@ -230,7 +230,7 @@ public class ClassAttributeItemProvider
 		switch (notification.getFeatureID(ClassAttribute.class)) {
 			case FormValidationPackage.CLASS_ATTRIBUTE__NAME:
 			case FormValidationPackage.CLASS_ATTRIBUTE__LABEL:
-			case FormValidationPackage.CLASS_ATTRIBUTE__MASER:
+			case FormValidationPackage.CLASS_ATTRIBUTE__MASTER:
 			case FormValidationPackage.CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
