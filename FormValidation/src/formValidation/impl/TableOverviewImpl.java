@@ -5,21 +5,13 @@ package formValidation.impl;
 import formValidation.FormValidationPackage;
 import formValidation.Pagination;
 import formValidation.TableOverview;
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,14 +72,14 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 	protected int height = HEIGHT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPaging() <em>Paging</em>}' containment reference list.
+	 * The cached value of the '{@link #getPaging() <em>Paging</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaging()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pagination> paging;
+	protected Pagination paging;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -195,11 +187,42 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Pagination> getPaging() {
-		if (paging == null) {
-			paging = new EObjectContainmentEList<Pagination>(Pagination.class, this, FormValidationPackage.TABLE_OVERVIEW__PAGING);
-		}
+	public Pagination getPaging() {
 		return paging;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPaging(Pagination newPaging, NotificationChain msgs) {
+		Pagination oldPaging = paging;
+		paging = newPaging;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.TABLE_OVERVIEW__PAGING, oldPaging, newPaging);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPaging(Pagination newPaging) {
+		if (newPaging != paging) {
+			NotificationChain msgs = null;
+			if (paging != null)
+				msgs = ((InternalEObject)paging).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.TABLE_OVERVIEW__PAGING, null, msgs);
+			if (newPaging != null)
+				msgs = ((InternalEObject)newPaging).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.TABLE_OVERVIEW__PAGING, null, msgs);
+			msgs = basicSetPaging(newPaging, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.TABLE_OVERVIEW__PAGING, newPaging, newPaging));
 	}
 
 	/**
@@ -253,7 +276,7 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FormValidationPackage.TABLE_OVERVIEW__PAGING:
-				return ((InternalEList<?>)getPaging()).basicRemove(otherEnd, msgs);
+				return basicSetPaging(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -296,8 +319,7 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 				setHeight((Integer)newValue);
 				return;
 			case FormValidationPackage.TABLE_OVERVIEW__PAGING:
-				getPaging().clear();
-				getPaging().addAll((Collection<? extends Pagination>)newValue);
+				setPaging((Pagination)newValue);
 				return;
 			case FormValidationPackage.TABLE_OVERVIEW__WIDTH:
 				setWidth((Integer)newValue);
@@ -324,7 +346,7 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 				setHeight(HEIGHT_EDEFAULT);
 				return;
 			case FormValidationPackage.TABLE_OVERVIEW__PAGING:
-				getPaging().clear();
+				setPaging((Pagination)null);
 				return;
 			case FormValidationPackage.TABLE_OVERVIEW__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
@@ -349,7 +371,7 @@ public class TableOverviewImpl extends MinimalEObjectImpl.Container implements T
 			case FormValidationPackage.TABLE_OVERVIEW__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
 			case FormValidationPackage.TABLE_OVERVIEW__PAGING:
-				return paging != null && !paging.isEmpty();
+				return paging != null;
 			case FormValidationPackage.TABLE_OVERVIEW__WIDTH:
 				return width != WIDTH_EDEFAULT;
 			case FormValidationPackage.TABLE_OVERVIEW__TITLE:

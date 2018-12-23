@@ -47,6 +47,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/formlayout"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/additionalSettings"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//ValidationClass/overviewsettings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ValidationClass/attr"/>
     </genClasses>
     <genClasses image="false" ecoreClass="formValidation.ecore#//AttributeRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//AttributeRule/attributeRuleErrorMessage"/>

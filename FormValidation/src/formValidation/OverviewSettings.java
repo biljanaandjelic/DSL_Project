@@ -2,8 +2,6 @@
  */
 package formValidation;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,19 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface OverviewSettings extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Tableoverview</b></em>' containment reference list.
-	 * The list contents are of type {@link formValidation.TableOverview}.
+	 * Returns the value of the '<em><b>Tableoverview</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tableoverview</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tableoverview</em>' containment reference list.
+	 * @return the value of the '<em>Tableoverview</em>' containment reference.
+	 * @see #setTableoverview(TableOverview)
 	 * @see formValidation.FormValidationPackage#getOverviewSettings_Tableoverview()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TableOverview> getTableoverview();
+	TableOverview getTableoverview();
+
+	/**
+	 * Sets the value of the '{@link formValidation.OverviewSettings#getTableoverview <em>Tableoverview</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tableoverview</em>' containment reference.
+	 * @see #getTableoverview()
+	 * @generated
+	 */
+	void setTableoverview(TableOverview value);
 
 } // OverviewSettings

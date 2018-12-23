@@ -5,20 +5,13 @@ package formValidation.impl;
 import formValidation.FormValidationPackage;
 import formValidation.OverviewSettings;
 import formValidation.TableOverview;
-
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,14 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implements OverviewSettings {
 	/**
-	 * The cached value of the '{@link #getTableoverview() <em>Tableoverview</em>}' containment reference list.
+	 * The cached value of the '{@link #getTableoverview() <em>Tableoverview</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTableoverview()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TableOverview> tableoverview;
+	protected TableOverview tableoverview;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,11 +61,42 @@ public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TableOverview> getTableoverview() {
-		if (tableoverview == null) {
-			tableoverview = new EObjectContainmentEList<TableOverview>(TableOverview.class, this, FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW);
-		}
+	public TableOverview getTableoverview() {
 		return tableoverview;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTableoverview(TableOverview newTableoverview, NotificationChain msgs) {
+		TableOverview oldTableoverview = tableoverview;
+		tableoverview = newTableoverview;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW, oldTableoverview, newTableoverview);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTableoverview(TableOverview newTableoverview) {
+		if (newTableoverview != tableoverview) {
+			NotificationChain msgs = null;
+			if (tableoverview != null)
+				msgs = ((InternalEObject)tableoverview).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW, null, msgs);
+			if (newTableoverview != null)
+				msgs = ((InternalEObject)newTableoverview).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW, null, msgs);
+			msgs = basicSetTableoverview(newTableoverview, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW, newTableoverview, newTableoverview));
 	}
 
 	/**
@@ -84,7 +108,7 @@ public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implement
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW:
-				return ((InternalEList<?>)getTableoverview()).basicRemove(otherEnd, msgs);
+				return basicSetTableoverview(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -113,8 +137,7 @@ public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW:
-				getTableoverview().clear();
-				getTableoverview().addAll((Collection<? extends TableOverview>)newValue);
+				setTableoverview((TableOverview)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,7 +152,7 @@ public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW:
-				getTableoverview().clear();
+				setTableoverview((TableOverview)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -144,7 +167,7 @@ public class OverviewSettingsImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FormValidationPackage.OVERVIEW_SETTINGS__TABLEOVERVIEW:
-				return tableoverview != null && !tableoverview.isEmpty();
+				return tableoverview != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -735,6 +735,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getValidationClass_Attr() {
+		return (EAttribute)validationClassEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAttributeRule() {
 		return attributeRuleEClass;
 	}
@@ -2044,6 +2053,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEReference(validationClassEClass, VALIDATION_CLASS__FORMLAYOUT);
 		createEReference(validationClassEClass, VALIDATION_CLASS__ADDITIONAL_SETTINGS);
 		createEReference(validationClassEClass, VALIDATION_CLASS__OVERVIEWSETTINGS);
+		createEAttribute(validationClassEClass, VALIDATION_CLASS__ATTR);
 
 		attributeRuleEClass = createEClass(ATTRIBUTE_RULE);
 		createEReference(attributeRuleEClass, ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE);
@@ -2339,7 +2349,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getValidationClass_Label(), ecorePackage.getEString(), "label", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getValidationClass_Formlayout(), this.getFormLayout(), null, "formlayout", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getValidationClass_AdditionalSettings(), this.getAdditionalSettings(), null, "additionalSettings", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_Overviewsettings(), this.getOverviewSettings(), null, "overviewsettings", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getValidationClass_Overviewsettings(), this.getOverviewSettings(), null, "overviewsettings", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValidationClass_Attr(), ecorePackage.getEString(), "attr", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeRuleEClass, AttributeRule.class, "AttributeRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttributeRule_AttributeRuleErrorMessage(), this.getErrorMessage(), null, "attributeRuleErrorMessage", null, 0, 1, AttributeRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2376,13 +2387,13 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getLength_Value(), theXMLTypePackage.getInt(), "value", null, 0, 1, Length.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(minNumberEClass, MinNumber.class, "MinNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMinNumber_Value(), theXMLTypePackage.getFloat(), "value", null, 0, 1, MinNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMinNumber_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, MinNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(minDateEClass, MinDate.class, "MinDate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMinDate_Value(), ecorePackage.getEString(), "value", null, 0, 1, MinDate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(maxNumberEClass, MaxNumber.class, "MaxNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMaxNumber_Value(), theXMLTypePackage.getFloat(), "value", null, 0, 1, MaxNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMaxNumber_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, MaxNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(maxDateEClass, MaxDate.class, "MaxDate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMaxDate_Value(), ecorePackage.getEString(), "value", null, 0, 1, MaxDate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2516,12 +2527,12 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEClass(tableOverviewEClass, TableOverview.class, "TableOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTableOverview_Name(), ecorePackage.getEString(), "name", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTableOverview_Height(), ecorePackage.getEInt(), "height", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTableOverview_Paging(), this.getPagination(), null, "paging", null, 0, -1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTableOverview_Paging(), this.getPagination(), null, "paging", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTableOverview_Width(), ecorePackage.getEInt(), "width", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTableOverview_Title(), ecorePackage.getEString(), "title", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(overviewSettingsEClass, OverviewSettings.class, "OverviewSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOverviewSettings_Tableoverview(), this.getTableOverview(), null, "tableoverview", null, 0, -1, OverviewSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOverviewSettings_Tableoverview(), this.getTableOverview(), null, "tableoverview", null, 0, 1, OverviewSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(noteSettingsEClass, NoteSettings.class, "NoteSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNoteSettings_Position(), this.getEPosition(), "position", "Right", 0, 1, NoteSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -124,7 +124,7 @@ public interface FormValidationPackage extends EPackage {
 	int VALIDATION_CLASS__ADDITIONAL_SETTINGS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Overviewsettings</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Overviewsettings</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,13 +133,22 @@ public interface FormValidationPackage extends EPackage {
 	int VALIDATION_CLASS__OVERVIEWSETTINGS = 6;
 
 	/**
+	 * The feature id for the '<em><b>Attr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_CLASS__ATTR = 7;
+
+	/**
 	 * The number of structural features of the '<em>Validation Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALIDATION_CLASS_FEATURE_COUNT = 7;
+	int VALIDATION_CLASS_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Validation Class</em>' class.
@@ -2899,7 +2908,7 @@ public interface FormValidationPackage extends EPackage {
 	int TABLE_OVERVIEW__HEIGHT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Paging</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Paging</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2954,7 +2963,7 @@ public interface FormValidationPackage extends EPackage {
 	int OVERVIEW_SETTINGS = 57;
 
 	/**
-	 * The feature id for the '<em><b>Tableoverview</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tableoverview</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3322,15 +3331,26 @@ public interface FormValidationPackage extends EPackage {
 	EReference getValidationClass_AdditionalSettings();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link formValidation.ValidationClass#getOverviewsettings <em>Overviewsettings</em>}'.
+	 * Returns the meta object for the containment reference '{@link formValidation.ValidationClass#getOverviewsettings <em>Overviewsettings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Overviewsettings</em>'.
+	 * @return the meta object for the containment reference '<em>Overviewsettings</em>'.
 	 * @see formValidation.ValidationClass#getOverviewsettings()
 	 * @see #getValidationClass()
 	 * @generated
 	 */
 	EReference getValidationClass_Overviewsettings();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.ValidationClass#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attr</em>'.
+	 * @see formValidation.ValidationClass#getAttr()
+	 * @see #getValidationClass()
+	 * @generated
+	 */
+	EAttribute getValidationClass_Attr();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.AttributeRule <em>Attribute Rule</em>}'.
@@ -4597,10 +4617,10 @@ public interface FormValidationPackage extends EPackage {
 	EAttribute getTableOverview_Height();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link formValidation.TableOverview#getPaging <em>Paging</em>}'.
+	 * Returns the meta object for the containment reference '{@link formValidation.TableOverview#getPaging <em>Paging</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Paging</em>'.
+	 * @return the meta object for the containment reference '<em>Paging</em>'.
 	 * @see formValidation.TableOverview#getPaging()
 	 * @see #getTableOverview()
 	 * @generated
@@ -4640,10 +4660,10 @@ public interface FormValidationPackage extends EPackage {
 	EClass getOverviewSettings();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link formValidation.OverviewSettings#getTableoverview <em>Tableoverview</em>}'.
+	 * Returns the meta object for the containment reference '{@link formValidation.OverviewSettings#getTableoverview <em>Tableoverview</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tableoverview</em>'.
+	 * @return the meta object for the containment reference '<em>Tableoverview</em>'.
 	 * @see formValidation.OverviewSettings#getTableoverview()
 	 * @see #getOverviewSettings()
 	 * @generated
@@ -4907,12 +4927,20 @@ public interface FormValidationPackage extends EPackage {
 		EReference VALIDATION_CLASS__ADDITIONAL_SETTINGS = eINSTANCE.getValidationClass_AdditionalSettings();
 
 		/**
-		 * The meta object literal for the '<em><b>Overviewsettings</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Overviewsettings</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference VALIDATION_CLASS__OVERVIEWSETTINGS = eINSTANCE.getValidationClass_Overviewsettings();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VALIDATION_CLASS__ATTR = eINSTANCE.getValidationClass_Attr();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.AttributeRuleImpl <em>Attribute Rule</em>}' class.
@@ -5987,7 +6015,7 @@ public interface FormValidationPackage extends EPackage {
 		EAttribute TABLE_OVERVIEW__HEIGHT = eINSTANCE.getTableOverview_Height();
 
 		/**
-		 * The meta object literal for the '<em><b>Paging</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Paging</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6021,7 +6049,7 @@ public interface FormValidationPackage extends EPackage {
 		EClass OVERVIEW_SETTINGS = eINSTANCE.getOverviewSettings();
 
 		/**
-		 * The meta object literal for the '<em><b>Tableoverview</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tableoverview</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

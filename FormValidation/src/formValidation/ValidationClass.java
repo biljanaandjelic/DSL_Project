@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link formValidation.ValidationClass#getFormlayout <em>Formlayout</em>}</li>
  *   <li>{@link formValidation.ValidationClass#getAdditionalSettings <em>Additional Settings</em>}</li>
  *   <li>{@link formValidation.ValidationClass#getOverviewsettings <em>Overviewsettings</em>}</li>
+ *   <li>{@link formValidation.ValidationClass#getAttr <em>Attr</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getValidationClass()
@@ -147,19 +148,55 @@ public interface ValidationClass extends EObject {
 	EList<AdditionalSettings> getAdditionalSettings();
 
 	/**
-	 * Returns the value of the '<em><b>Overviewsettings</b></em>' containment reference list.
-	 * The list contents are of type {@link formValidation.OverviewSettings}.
+	 * Returns the value of the '<em><b>Overviewsettings</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Overviewsettings</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Overviewsettings</em>' containment reference list.
+	 * @return the value of the '<em>Overviewsettings</em>' containment reference.
+	 * @see #setOverviewsettings(OverviewSettings)
 	 * @see formValidation.FormValidationPackage#getValidationClass_Overviewsettings()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<OverviewSettings> getOverviewsettings();
+	OverviewSettings getOverviewsettings();
+
+	/**
+	 * Sets the value of the '{@link formValidation.ValidationClass#getOverviewsettings <em>Overviewsettings</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Overviewsettings</em>' containment reference.
+	 * @see #getOverviewsettings()
+	 * @generated
+	 */
+	void setOverviewsettings(OverviewSettings value);
+
+	/**
+	 * Returns the value of the '<em><b>Attr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attr</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attr</em>' attribute.
+	 * @see #setAttr(String)
+	 * @see formValidation.FormValidationPackage#getValidationClass_Attr()
+	 * @model
+	 * @generated
+	 */
+	String getAttr();
+
+	/**
+	 * Sets the value of the '{@link formValidation.ValidationClass#getAttr <em>Attr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attr</em>' attribute.
+	 * @see #getAttr()
+	 * @generated
+	 */
+	void setAttr(String value);
 
 } // ValidationClass

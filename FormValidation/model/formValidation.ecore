@@ -29,8 +29,9 @@
         eType="#//FormLayout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalSettings" upperBound="-1"
         eType="#//AdditionalSettings" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="overviewsettings" upperBound="-1"
-        eType="#//OverviewSettings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overviewsettings" eType="#//OverviewSettings"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
@@ -360,14 +361,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="TableOverview">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paging" upperBound="-1"
-        eType="#//Pagination" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paging" eType="#//Pagination"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OverviewSettings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tableoverview" upperBound="-1"
-        eType="#//TableOverview" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableoverview" eType="#//TableOverview"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NoteSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"

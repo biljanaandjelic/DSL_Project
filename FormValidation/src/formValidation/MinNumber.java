@@ -31,7 +31,7 @@ public interface MinNumber extends Min {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(float)
 	 * @see formValidation.FormValidationPackage#getMinNumber_Value()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float"
+	 * @model
 	 * @generated
 	 */
 	float getValue();

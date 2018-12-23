@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link formValidation.impl.ValidationClassImpl#getFormlayout <em>Formlayout</em>}</li>
  *   <li>{@link formValidation.impl.ValidationClassImpl#getAdditionalSettings <em>Additional Settings</em>}</li>
  *   <li>{@link formValidation.impl.ValidationClassImpl#getOverviewsettings <em>Overviewsettings</em>}</li>
+ *   <li>{@link formValidation.impl.ValidationClassImpl#getAttr <em>Attr</em>}</li>
  * </ul>
  *
  * @generated
@@ -127,14 +128,34 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 	protected EList<AdditionalSettings> additionalSettings;
 
 	/**
-	 * The cached value of the '{@link #getOverviewsettings() <em>Overviewsettings</em>}' containment reference list.
+	 * The cached value of the '{@link #getOverviewsettings() <em>Overviewsettings</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOverviewsettings()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OverviewSettings> overviewsettings;
+	protected OverviewSettings overviewsettings;
+
+	/**
+	 * The default value of the '{@link #getAttr() <em>Attr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAttr() <em>Attr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttr()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attr = ATTR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,11 +271,63 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OverviewSettings> getOverviewsettings() {
-		if (overviewsettings == null) {
-			overviewsettings = new EObjectContainmentEList<OverviewSettings>(OverviewSettings.class, this, FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS);
-		}
+	public OverviewSettings getOverviewsettings() {
 		return overviewsettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOverviewsettings(OverviewSettings newOverviewsettings, NotificationChain msgs) {
+		OverviewSettings oldOverviewsettings = overviewsettings;
+		overviewsettings = newOverviewsettings;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS, oldOverviewsettings, newOverviewsettings);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOverviewsettings(OverviewSettings newOverviewsettings) {
+		if (newOverviewsettings != overviewsettings) {
+			NotificationChain msgs = null;
+			if (overviewsettings != null)
+				msgs = ((InternalEObject)overviewsettings).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS, null, msgs);
+			if (newOverviewsettings != null)
+				msgs = ((InternalEObject)newOverviewsettings).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS, null, msgs);
+			msgs = basicSetOverviewsettings(newOverviewsettings, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS, newOverviewsettings, newOverviewsettings));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttr() {
+		return attr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttr(String newAttr) {
+		String oldAttr = attr;
+		attr = newAttr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.VALIDATION_CLASS__ATTR, oldAttr, attr));
 	}
 
 	/**
@@ -274,7 +347,7 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
 				return ((InternalEList<?>)getAdditionalSettings()).basicRemove(otherEnd, msgs);
 			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
-				return ((InternalEList<?>)getOverviewsettings()).basicRemove(otherEnd, msgs);
+				return basicSetOverviewsettings(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -301,6 +374,8 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				return getAdditionalSettings();
 			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
 				return getOverviewsettings();
+			case FormValidationPackage.VALIDATION_CLASS__ATTR:
+				return getAttr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -337,8 +412,10 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				getAdditionalSettings().addAll((Collection<? extends AdditionalSettings>)newValue);
 				return;
 			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
-				getOverviewsettings().clear();
-				getOverviewsettings().addAll((Collection<? extends OverviewSettings>)newValue);
+				setOverviewsettings((OverviewSettings)newValue);
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__ATTR:
+				setAttr((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -371,7 +448,10 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 				getAdditionalSettings().clear();
 				return;
 			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
-				getOverviewsettings().clear();
+				setOverviewsettings((OverviewSettings)null);
+				return;
+			case FormValidationPackage.VALIDATION_CLASS__ATTR:
+				setAttr(ATTR_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -398,7 +478,9 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 			case FormValidationPackage.VALIDATION_CLASS__ADDITIONAL_SETTINGS:
 				return additionalSettings != null && !additionalSettings.isEmpty();
 			case FormValidationPackage.VALIDATION_CLASS__OVERVIEWSETTINGS:
-				return overviewsettings != null && !overviewsettings.isEmpty();
+				return overviewsettings != null;
+			case FormValidationPackage.VALIDATION_CLASS__ATTR:
+				return ATTR_EDEFAULT == null ? attr != null : !ATTR_EDEFAULT.equals(attr);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -417,6 +499,8 @@ public class ValidationClassImpl extends MinimalEObjectImpl.Container implements
 		result.append(name);
 		result.append(", label: ");
 		result.append(label);
+		result.append(", attr: ");
+		result.append(attr);
 		result.append(')');
 		return result.toString();
 	}

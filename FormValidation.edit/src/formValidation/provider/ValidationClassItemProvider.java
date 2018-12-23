@@ -65,6 +65,7 @@ public class ValidationClassItemProvider
 
 			addNamePropertyDescriptor(object);
 			addLabelPropertyDescriptor(object);
+			addAttrPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,6 +106,28 @@ public class ValidationClassItemProvider
 				 getString("_UI_ValidationClass_label_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ValidationClass_label_feature", "_UI_ValidationClass_type"),
 				 FormValidationPackage.Literals.VALIDATION_CLASS__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Attr feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAttrPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ValidationClass_attr_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ValidationClass_attr_feature", "_UI_ValidationClass_type"),
+				 FormValidationPackage.Literals.VALIDATION_CLASS__ATTR,
 				 true,
 				 false,
 				 false,
@@ -187,6 +210,7 @@ public class ValidationClassItemProvider
 		switch (notification.getFeatureID(ValidationClass.class)) {
 			case FormValidationPackage.VALIDATION_CLASS__NAME:
 			case FormValidationPackage.VALIDATION_CLASS__LABEL:
+			case FormValidationPackage.VALIDATION_CLASS__ATTR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FormValidationPackage.VALIDATION_CLASS__CLASSATTRIBUTE:
