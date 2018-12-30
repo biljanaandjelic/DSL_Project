@@ -5,6 +5,9 @@ package org.xtext.example.mydsl;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+
+import formValidation.impl.FormValidationPackageImpl;
+
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.ISetup;
@@ -17,6 +20,7 @@ public class FormValDSLStandaloneSetupGenerated implements ISetup {
 
 	@Override
 	public Injector createInjectorAndDoEMFRegistration() {
+		FormValidationPackageImpl.init();
 		TerminalsStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();

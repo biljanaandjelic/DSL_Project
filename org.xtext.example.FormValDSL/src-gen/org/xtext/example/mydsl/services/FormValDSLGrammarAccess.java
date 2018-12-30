@@ -1892,11 +1892,11 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//	/ *'}'* /;
 		@Override public ParserRule getRule() { return rule; }
 		
-		/// *'NonPrimitiveDataType'* / / *'{'
+		/// *'{'
 		//		'type'* / type=[ValidationClass|EString] isCollection?='Collection'?
 		public Group getGroup() { return cGroup; }
 		
-		/// *'NonPrimitiveDataType'* / / *'{'
+		/// *'{'
 		//		'type'* / type=[ValidationClass|EString]
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 		
@@ -1925,18 +1925,17 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ErrorMessage:
 		//	{ErrorMessage}
-		//	/ *'ErrorMessage'* /
 		//	'{' ('Error message' message=EString)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ErrorMessage} / *'ErrorMessage'* / '{' ('Error message' message=EString)? '}'
+		//{ErrorMessage} '{' ('Error message' message=EString)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{ErrorMessage}
 		public Action getErrorMessageAction_0() { return cErrorMessageAction_0; }
 		
-		/// *'ErrorMessage'* / '{'
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//('Error message' message=EString)?
@@ -2078,13 +2077,11 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//Length:
 		//	{Length}
 		//	'Length'
-		//	/ *'{'* /
 		//	value=Int0?
-		//	attributeRuleErrorMessage=ErrorMessage?
-		//	/ *'}'* /;
+		//	attributeRuleErrorMessage=ErrorMessage?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Length} 'Length' / *'{'* / value=Int0? attributeRuleErrorMessage=ErrorMessage?
+		//{Length} 'Length' value=Int0? attributeRuleErrorMessage=ErrorMessage?
 		public Group getGroup() { return cGroup; }
 		
 		//{Length}
@@ -2093,7 +2090,7 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'Length'
 		public Keyword getLengthKeyword_1() { return cLengthKeyword_1; }
 		
-		/// *'{'* / value=Int0?
+		//value=Int0?
 		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 		
 		//Int0
@@ -2858,76 +2855,65 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.FormValDSL.AttributeArray");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cAttributeArrayAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cAttributesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cAttributesAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cAttributesClassAttributeCrossReference_2_2_0 = (CrossReference)cAttributesAssignment_2_2.eContents().get(0);
-		private final RuleCall cAttributesClassAttributeEStringParserRuleCall_2_2_0_1 = (RuleCall)cAttributesClassAttributeCrossReference_2_2_0.eContents().get(1);
-		private final Group cGroup_2_3 = (Group)cGroup_2.eContents().get(3);
-		private final Keyword cCommaKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_2_3_1 = (Assignment)cGroup_2_3.eContents().get(1);
-		private final CrossReference cAttributesClassAttributeCrossReference_2_3_1_0 = (CrossReference)cAttributesAssignment_2_3_1.eContents().get(0);
-		private final RuleCall cAttributesClassAttributeEStringParserRuleCall_2_3_1_0_1 = (RuleCall)cAttributesClassAttributeCrossReference_2_3_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cAttributesKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cAttributesAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cAttributesClassAttributeCrossReference_1_2_0 = (CrossReference)cAttributesAssignment_1_2.eContents().get(0);
+		private final RuleCall cAttributesClassAttributeEStringParserRuleCall_1_2_0_1 = (RuleCall)cAttributesClassAttributeCrossReference_1_2_0.eContents().get(1);
+		private final Group cGroup_1_3 = (Group)cGroup_1.eContents().get(3);
+		private final Keyword cCommaKeyword_1_3_0 = (Keyword)cGroup_1_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_1_3_1 = (Assignment)cGroup_1_3.eContents().get(1);
+		private final CrossReference cAttributesClassAttributeCrossReference_1_3_1_0 = (CrossReference)cAttributesAssignment_1_3_1.eContents().get(0);
+		private final RuleCall cAttributesClassAttributeEStringParserRuleCall_1_3_1_0_1 = (RuleCall)cAttributesClassAttributeCrossReference_1_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		
 		//AttributeArray:
-		//	{AttributeArray}
-		//	/ *'AttributeArray'* /
-		//	'{' ('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])* ')')?
-		//	'}';
+		//	{AttributeArray} ('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])*
+		//	')');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{AttributeArray} / *'AttributeArray'* / '{' ('attributes' '(' attributes+=[ClassAttribute|EString] (","
-		//attributes+=[ClassAttribute|EString])* ')')? '}'
+		//{AttributeArray} ('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])* ')')
 		public Group getGroup() { return cGroup; }
 		
 		//{AttributeArray}
 		public Action getAttributeArrayAction_0() { return cAttributeArrayAction_0; }
 		
-		/// *'AttributeArray'* / '{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])* ')')?
-		public Group getGroup_2() { return cGroup_2; }
+		//('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])* ')')
+		public Group getGroup_1() { return cGroup_1; }
 		
 		//'attributes'
-		public Keyword getAttributesKeyword_2_0() { return cAttributesKeyword_2_0; }
+		public Keyword getAttributesKeyword_1_0() { return cAttributesKeyword_1_0; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_2_1() { return cLeftParenthesisKeyword_2_1; }
+		public Keyword getLeftParenthesisKeyword_1_1() { return cLeftParenthesisKeyword_1_1; }
 		
 		//attributes+=[ClassAttribute|EString]
-		public Assignment getAttributesAssignment_2_2() { return cAttributesAssignment_2_2; }
+		public Assignment getAttributesAssignment_1_2() { return cAttributesAssignment_1_2; }
 		
 		//[ClassAttribute|EString]
-		public CrossReference getAttributesClassAttributeCrossReference_2_2_0() { return cAttributesClassAttributeCrossReference_2_2_0; }
+		public CrossReference getAttributesClassAttributeCrossReference_1_2_0() { return cAttributesClassAttributeCrossReference_1_2_0; }
 		
 		//EString
-		public RuleCall getAttributesClassAttributeEStringParserRuleCall_2_2_0_1() { return cAttributesClassAttributeEStringParserRuleCall_2_2_0_1; }
+		public RuleCall getAttributesClassAttributeEStringParserRuleCall_1_2_0_1() { return cAttributesClassAttributeEStringParserRuleCall_1_2_0_1; }
 		
 		//("," attributes+=[ClassAttribute|EString])*
-		public Group getGroup_2_3() { return cGroup_2_3; }
+		public Group getGroup_1_3() { return cGroup_1_3; }
 		
 		//","
-		public Keyword getCommaKeyword_2_3_0() { return cCommaKeyword_2_3_0; }
+		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 		
 		//attributes+=[ClassAttribute|EString]
-		public Assignment getAttributesAssignment_2_3_1() { return cAttributesAssignment_2_3_1; }
+		public Assignment getAttributesAssignment_1_3_1() { return cAttributesAssignment_1_3_1; }
 		
 		//[ClassAttribute|EString]
-		public CrossReference getAttributesClassAttributeCrossReference_2_3_1_0() { return cAttributesClassAttributeCrossReference_2_3_1_0; }
+		public CrossReference getAttributesClassAttributeCrossReference_1_3_1_0() { return cAttributesClassAttributeCrossReference_1_3_1_0; }
 		
 		//EString
-		public RuleCall getAttributesClassAttributeEStringParserRuleCall_2_3_1_0_1() { return cAttributesClassAttributeEStringParserRuleCall_2_3_1_0_1; }
+		public RuleCall getAttributesClassAttributeEStringParserRuleCall_1_3_1_0_1() { return cAttributesClassAttributeEStringParserRuleCall_1_3_1_0_1; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_2_4() { return cRightParenthesisKeyword_2_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		public Keyword getRightParenthesisKeyword_1_4() { return cRightParenthesisKeyword_1_4; }
 	}
 	public class FieldSetElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.FormValDSL.FieldSet");
@@ -4568,7 +4554,6 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//ErrorMessage:
 	//	{ErrorMessage}
-	//	/ *'ErrorMessage'* /
 	//	'{' ('Error message' message=EString)?
 	//	'}';
 	public ErrorMessageElements getErrorMessageAccess() {
@@ -4626,10 +4611,8 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	//Length:
 	//	{Length}
 	//	'Length'
-	//	/ *'{'* /
 	//	value=Int0?
-	//	attributeRuleErrorMessage=ErrorMessage?
-	//	/ *'}'* /;
+	//	attributeRuleErrorMessage=ErrorMessage?;
 	public LengthElements getLengthAccess() {
 		return pLength;
 	}
@@ -4834,10 +4817,8 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AttributeArray:
-	//	{AttributeArray}
-	//	/ *'AttributeArray'* /
-	//	'{' ('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])* ')')?
-	//	'}';
+	//	{AttributeArray} ('attributes' '(' attributes+=[ClassAttribute|EString] ("," attributes+=[ClassAttribute|EString])*
+	//	')');
 	public AttributeArrayElements getAttributeArrayAccess() {
 		return pAttributeArray;
 	}

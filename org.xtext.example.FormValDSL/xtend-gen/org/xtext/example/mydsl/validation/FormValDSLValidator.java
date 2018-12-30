@@ -3,6 +3,15 @@
  */
 package org.xtext.example.mydsl.validation;
 
+import formValidation.ClassAttribute;
+import formValidation.FormLayout;
+import formValidation.FormValidationPackage;
+import formValidation.ValidationClass;
+import java.util.ArrayList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EValidator;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.Conversions;
 import org.xtext.example.mydsl.validation.AbstractFormValDSLValidator;
 
 /**
@@ -12,4 +21,57 @@ import org.xtext.example.mydsl.validation.AbstractFormValDSLValidator;
  */
 @SuppressWarnings("all")
 public class FormValDSLValidator extends AbstractFormValDSLValidator {
+  public final static String INVALID_NAME = "invalidName";
+  
+  public final static ArrayList<String> keyWords = CollectionLiterals.<String>newArrayList("LessThan", "GreaterThan", "NotEquals", "Equals", "OverviewSettings", "LabelSettings", "AttributeSettings", 
+    "ErrorMessageSettings", "FormSettings", "NoteSettings", "Required", "MinNumber", "MaxNumber", "MinDate", "MaxDate", 
+    "StringPattern", "DatePattern", "AcceptableValuesString", "AcceptableValuesDate", "MaxLength", "MinLength", 
+    "Length", "FieldSet", "Grid", "Tab", "TextInput", "TextArea", "Password", "TelInput", "EmailInput", 
+    "NumericUIComponent", "FileInput", "RadioButton", "DropDownList", "CheckBox", "LoadValues", 
+    "AutocompleteComponent");
+  
+  public void doesClassContainAtLastOneAttribute(final ValidationClass validationClass) {
+    EList<ClassAttribute> _classattribute = validationClass.getClassattribute();
+    int _length = ((Object[])Conversions.unwrapArray(_classattribute, Object.class)).length;
+    boolean _equals = (_length == 0);
+    if (_equals) {
+      this.error("Class must contains at last one attribute", FormValidationPackage.Literals.VALIDATION_CLASS__NAME, EValidator.URI_ATTRIBUTE);
+    }
+  }
+  
+  public void isAppropriateName(final ValidationClass validationClass) {
+    EList<ClassAttribute> _classattribute = validationClass.getClassattribute();
+    for (final ClassAttribute attr : _classattribute) {
+      {
+        String _name = attr.getName();
+        boolean _contains = FormValDSLValidator.keyWords.contains(_name);
+        if (_contains) {
+          this.error("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+        }
+        String _label = attr.getLabel();
+        boolean _contains_1 = FormValDSLValidator.keyWords.contains(_label);
+        if (_contains_1) {
+          this.warning("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+        }
+      }
+    }
+    String _name = validationClass.getName();
+    boolean _contains = FormValDSLValidator.keyWords.contains(_name);
+    if (_contains) {
+      this.error("Class name is key word", FormValidationPackage.Literals.VALIDATION_CLASS__NAME);
+    }
+    String _label = validationClass.getLabel();
+    boolean _contains_1 = FormValDSLValidator.keyWords.contains(_label);
+    if (_contains_1) {
+      this.warning("Class label is key word", FormValidationPackage.Literals.VALIDATION_CLASS__LABEL);
+    }
+    EList<FormLayout> _formlayout = validationClass.getFormlayout();
+    for (final FormLayout layout : _formlayout) {
+      String _name_1 = layout.getName();
+      boolean _contains_2 = FormValDSLValidator.keyWords.contains(_name_1);
+      if (_contains_2) {
+        this.warning("Layout name is key word.", FormValidationPackage.Literals.FORM_LAYOUT__NAME);
+      }
+    }
+  }
 }

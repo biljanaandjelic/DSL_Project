@@ -1,0 +1,194 @@
+organizacionaJedinica{
+	label "Организациона јединица"
+	broj{
+		Label "Број"
+		Data type Number
+		NumericUIComponent {}
+		Master
+		Required
+		{
+			Error message "Број органиѕационе јединице је обавеѕно поље."
+		}
+	}
+	naziv{
+		Label "Назив"
+		Data type String
+		TextInput{
+			Note "Унесите назив тако да почиње великом словом."
+		}
+	}
+}
+
+validationClass{
+	jedinstvenBrojKorisnikaJavnihSredstava{
+		Label "ЈБКЈС"
+		Data type String
+		Master
+		ClassRepresenting
+		Required 
+		{
+			Error message "Јединствен број корисника јавних средстава је обавезно поље." 
+		}
+	}
+	nazicPravnogLica{
+		Label "Назив правног лица"
+		Data type String
+		TextInput {}
+		Master
+		ClassRepresenting
+		Required 
+		{
+			Error message "Назив правног лица је обавезно поље." 
+		}
+	}
+	jedinstveniMaticniBrojGradjanina{
+		Label "Матични број"
+		Data type String
+		TextInput{
+			Place holder "0000000000000"
+		}
+		Master
+		Required 
+		StringPattern "[0-9]{13}"
+	}
+	poreskiIdentifikacioniBroj{
+		Label "Порески идентификациони број"
+		Data type Number
+		NumericUIComponent{}
+		Master
+		Required
+	}
+	adresaSedista{
+		Label "Адреса сједишта"
+		Data type String
+		TextArea {}
+		Required
+	}
+	adresaElektronskePoste{
+		Label "Адреса електронске поште"
+		Data type String
+		EmailInput {
+			Note "Унесите званичну емејл адресу."
+		}
+		Required	
+	}
+	brojTelefona{
+		Label "Број телефона"
+		Data type String
+		TelInput {
+			Note  "Унесите број телефона са ознаком регије којој припадате. Нпр. Нови Сад 021, Београд 011"
+		}
+		Required
+	}
+	imeIPrezimeAdminstratora{
+		Label "Име и презиме"
+		Data type String
+		TextInput{
+			Place holder "Петар Петровић"
+		}
+		Required
+	}
+	brojIdentifikacioneOznake{
+		Label "Број идентификационе ознаке"
+		Data type String
+		TextInput{
+			Note "Унесите број ваше личне карте."
+		}
+		Required
+		StringPattern  "[0-9]{9}"
+	}
+	brojTelefonaAdministratoraa{
+		Label "Број телефона"
+		Data type String
+		TextInput{
+			Note "Унесите број телефона са позивним бројем. Нпр. Нови Сад 021, Београд 011"
+		}
+		Required
+	}
+	adresaElektronskePosteAdministratora{
+		Label "Адреса електронске поште"
+		Data type String
+		EmailInput{
+			Note "Унесите емејл адресу одговорног администратора."
+		}
+		Required
+		MinLength 10
+		MaxLength 254
+	}
+	brojOrganizacioneJedinice{
+		Label "Број организационе јединице"
+		Data type organizacionaJedinica
+		AutocompleteComponent {}
+		Required
+	}
+	nn{
+		Data type Number
+	}
+	mm{
+		Data type Number
+	}
+	
+	NotEquals{
+		attributes (adresaElektronskePoste, adresaElektronskePosteAdministratora)
+	}
+	Equals{
+		attributes (adresaElektronskePoste, adresaSedista)
+	}
+	
+	GreaterThan{
+		nn
+		{
+			attributes (mm)
+		}
+	}
+	
+	FieldSet podaciOPravnomLicuOrganu{
+		
+			Grid grid11{
+				attributes (jedinstvenBrojKorisnikaJavnihSredstava)
+			}
+			Grid grid12{
+				attributes (nazicPravnogLica)
+			}
+			Grid grid13{
+				attributes (jedinstveniMaticniBrojGradjanina, poreskiIdentifikacioniBroj)
+			}
+			Grid grid14{ 
+				attributes (adresaSedista)
+			}
+			Grid grid15{
+				attributes (adresaElektronskePoste,brojTelefona)
+			}
+	}
+	FieldSet podaciOAdministratoru{
+		attributes (imeIPrezimeAdminstratora,brojIdentifikacioneOznake)
+		
+			Grid grid21{
+				attributes (adresaElektronskePosteAdministratora, brojTelefonaAdministratoraa)
+				FieldSet aa{
+					
+				}
+			}
+	}
+	
+	FieldSet podaciOOrganizacionojJediniciUpraveZaTrezor{
+		attributes (brojOrganizacioneJedinice)
+	}
+	ErrorMessageSettings{
+		Position Below
+		Color  (255,50,50) 
+	}
+	AttributeSettings{
+		Presentation Asterix
+	}
+	OverviewSettings {
+		TableOverview aa{
+			Height 400
+			Width 600
+			Title ""
+			Pagination {
+				Possible number of shown rows {10, 20, 50}
+			}
+		}
+	}
+}

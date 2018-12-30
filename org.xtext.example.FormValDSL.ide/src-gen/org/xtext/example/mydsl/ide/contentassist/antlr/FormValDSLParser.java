@@ -156,8 +156,8 @@ public class FormValDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLessThanAccess().getGroup_5(), "rule__LessThan__Group_5__0");
 					put(grammarAccess.getLessThanAccess().getGroup_5_2(), "rule__LessThan__Group_5_2__0");
 					put(grammarAccess.getAttributeArrayAccess().getGroup(), "rule__AttributeArray__Group__0");
-					put(grammarAccess.getAttributeArrayAccess().getGroup_2(), "rule__AttributeArray__Group_2__0");
-					put(grammarAccess.getAttributeArrayAccess().getGroup_2_3(), "rule__AttributeArray__Group_2_3__0");
+					put(grammarAccess.getAttributeArrayAccess().getGroup_1(), "rule__AttributeArray__Group_1__0");
+					put(grammarAccess.getAttributeArrayAccess().getGroup_1_3(), "rule__AttributeArray__Group_1_3__0");
 					put(grammarAccess.getFieldSetAccess().getGroup(), "rule__FieldSet__Group__0");
 					put(grammarAccess.getFieldSetAccess().getGroup_4(), "rule__FieldSet__Group_4__0");
 					put(grammarAccess.getFieldSetAccess().getGroup_6(), "rule__FieldSet__Group_6__0");
@@ -300,8 +300,8 @@ public class FormValDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLessThanAccess().getClassRuleErrorMessageAssignment_4(), "rule__LessThan__ClassRuleErrorMessageAssignment_4");
 					put(grammarAccess.getLessThanAccess().getAttributearrayAssignment_5_1(), "rule__LessThan__AttributearrayAssignment_5_1");
 					put(grammarAccess.getLessThanAccess().getAttributearrayAssignment_5_2_1(), "rule__LessThan__AttributearrayAssignment_5_2_1");
-					put(grammarAccess.getAttributeArrayAccess().getAttributesAssignment_2_2(), "rule__AttributeArray__AttributesAssignment_2_2");
-					put(grammarAccess.getAttributeArrayAccess().getAttributesAssignment_2_3_1(), "rule__AttributeArray__AttributesAssignment_2_3_1");
+					put(grammarAccess.getAttributeArrayAccess().getAttributesAssignment_1_2(), "rule__AttributeArray__AttributesAssignment_1_2");
+					put(grammarAccess.getAttributeArrayAccess().getAttributesAssignment_1_3_1(), "rule__AttributeArray__AttributesAssignment_1_3_1");
 					put(grammarAccess.getFieldSetAccess().getNameAssignment_2(), "rule__FieldSet__NameAssignment_2");
 					put(grammarAccess.getFieldSetAccess().getLegendAssignment_4_1(), "rule__FieldSet__LegendAssignment_4_1");
 					put(grammarAccess.getFieldSetAccess().getAttributearrayAssignment_5(), "rule__FieldSet__AttributearrayAssignment_5");

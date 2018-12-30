@@ -3,6 +3,10 @@
  */
 package org.xtext.example.mydsl.validation
 
+import formValidation.ValidationClass
+import formValidation.FormValidationPackage
+import formValidation.ClassAttribute
+import formValidation.FormLayout
 
 /**
  * This class contains custom validation rules. 
@@ -11,15 +15,48 @@ package org.xtext.example.mydsl.validation
  */
 class FormValDSLValidator extends AbstractFormValDSLValidator {
 	
-//  public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					FormValDSLPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
+     public static val INVALID_NAME = 'invalidName'
+     
+	 public static val keyWords = newArrayList("LessThan", "GreaterThan", "NotEquals", "Equals", "OverviewSettings", "LabelSettings", "AttributeSettings",
+			"ErrorMessageSettings", "FormSettings", "NoteSettings", "Required", "MinNumber", "MaxNumber", "MinDate", "MaxDate",
+			"StringPattern", "DatePattern", "AcceptableValuesString", "AcceptableValuesDate", "MaxLength", "MinLength",
+			"Length", "FieldSet", "Grid", "Tab", "TextInput", "TextArea", "Password", "TelInput", "EmailInput",
+			"NumericUIComponent", "FileInput", "RadioButton", "DropDownList", "CheckBox", "LoadValues",
+			"AutocompleteComponent")
+	 
+	def doesClassContainAtLastOneAttribute(ValidationClass validationClass){
+		if(validationClass.classattribute.length == 0){
+			error("Class must contains at last one attribute", FormValidationPackage.Literals.VALIDATION_CLASS__NAME, URI_ATTRIBUTE);
+		}
+	}
+	
+	
+	def isAppropriateName(ValidationClass validationClass){
+			for(ClassAttribute attr : validationClass.classattribute){
+		
+				if(keyWords.contains(attr.name)){
+					error("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+				}
+				
+				if(keyWords.contains(attr.label)){
+					warning("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+				}
+				
+			}	
+			
+			if(keyWords.contains(validationClass.name)){
+				error("Class name is key word", FormValidationPackage.Literals.VALIDATION_CLASS__NAME);
+			}
+			
+			if(keyWords.contains(validationClass.label)){
+				warning("Class label is key word", FormValidationPackage.Literals.VALIDATION_CLASS__LABEL);
+			}
+			
+			for(FormLayout layout : validationClass.formlayout){
+				if(keyWords.contains(layout.name)){
+					warning("Layout name is key word.", FormValidationPackage.Literals.FORM_LAYOUT__NAME);
+				}
+			}
+	}
 	
 }

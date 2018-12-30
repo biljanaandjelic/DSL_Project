@@ -400,10 +400,10 @@ LessThan returns LessThan:
 
 AttributeArray returns AttributeArray:
 	{AttributeArray}
-	/*'AttributeArray'*/
-	'{'
-		('attributes' '(' attributes+=[ClassAttribute|EString] ( "," attributes+=[ClassAttribute|EString])* ')' )?
-	'}';
+	/*'{'*/
+		('attributes' '(' attributes+=[ClassAttribute|EString] ( "," attributes+=[ClassAttribute|EString])* ')' ) /* ?*/
+	/*'}'*/
+	;
 
 FieldSet returns FieldSet:
 	{FieldSet}

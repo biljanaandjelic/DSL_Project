@@ -70,6 +70,10 @@
                 <styles xmi:type="notation:FontStyle" xmi:id="_qMb3ke23EeituIUKwdkxfg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_qMb3ku23EeituIUKwdkxfg"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_nv99QAayEemHdLIbe973MQ" type="3010" element="_nuWMoAayEemHdLIbe973MQ">
+                <styles xmi:type="notation:FontStyle" xmi:id="_nv99QQayEemHdLIbe973MQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_nv99QgayEemHdLIbe973MQ"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_2PBu0Uf3EeikVYSKqkXlJQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_2PBu0kf3EeikVYSKqkXlJQ"/>
             </children>
@@ -2077,6 +2081,14 @@
           <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//ValidationClass/label"/>
           <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//ValidationClass/label"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_sL7qIO23EeituIUKwdkxfg" labelAlignment="LEFT">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nuWMoAayEemHdLIbe973MQ" name="attr : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//ValidationClass/attr"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//ValidationClass/attr"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_nuYB0AayEemHdLIbe973MQ" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

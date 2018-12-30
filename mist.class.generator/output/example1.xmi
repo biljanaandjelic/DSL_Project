@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation">
+  <validationclasses name="organizacionaJedinica" label="&#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x430; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x430;">
+    <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:NumericUIComponent"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required">
+        <attributeRuleErrorMessage message="&#x411;&#x440;&#x43e;&#x458; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x455;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x435; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x435; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x455;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
+      </attributerule>
+    </classattribute>
+    <classattribute name="naziv" label="&#x41d;&#x430;&#x437;&#x438;&#x432;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x43d;&#x430;&#x437;&#x438;&#x432; &#x442;&#x430;&#x43a;&#x43e; &#x434;&#x430; &#x43f;&#x43e;&#x447;&#x438;&#x45a;&#x435; &#x432;&#x435;&#x43b;&#x438;&#x43a;&#x43e;&#x43c; &#x441;&#x43b;&#x43e;&#x432;&#x43e;&#x43c;."/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="validationClass">
+    <classattribute name="jedinstvenBrojKorisnikaJavnihSredstava" label="&#x408;&#x411;&#x41a;&#x408;&#x421;" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required">
+        <attributeRuleErrorMessage message="&#x408;&#x435;&#x434;&#x438;&#x43d;&#x441;&#x442;&#x432;&#x435;&#x43d; &#x431;&#x440;&#x43e;&#x458; &#x43a;&#x43e;&#x440;&#x438;&#x441;&#x43d;&#x438;&#x43a;&#x430; &#x458;&#x430;&#x432;&#x43d;&#x438;&#x445; &#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x430; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x437;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
+      </attributerule>
+    </classattribute>
+    <classattribute name="nazicPravnogLica" label="&#x41d;&#x430;&#x437;&#x438;&#x432; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x433; &#x43b;&#x438;&#x446;&#x430;" isClassRepresenting="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required">
+        <attributeRuleErrorMessage message="&#x41d;&#x430;&#x437;&#x438;&#x432; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x433; &#x43b;&#x438;&#x446;&#x430; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x437;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
+      </attributerule>
+    </classattribute>
+    <classattribute name="jedinstveniMaticniBrojGradjanina" label="&#x41c;&#x430;&#x442;&#x438;&#x447;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput" placeHolder="0000000000000"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:StringPattern" value="[0-9]{13}"/>
+    </classattribute>
+    <classattribute name="poreskiIdentifikacioniBroj" label="&#x41f;&#x43e;&#x440;&#x435;&#x441;&#x43a;&#x438; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:NumericUIComponent"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="adresaSedista" label="&#x410;&#x434;&#x440;&#x435;&#x441;&#x430; &#x441;&#x458;&#x435;&#x434;&#x438;&#x448;&#x442;&#x430;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextArea"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="adresaElektronskePoste" label="&#x410;&#x434;&#x440;&#x435;&#x441;&#x430; &#x435;&#x43b;&#x435;&#x43a;&#x442;&#x440;&#x43e;&#x43d;&#x441;&#x43a;&#x435; &#x43f;&#x43e;&#x448;&#x442;&#x435;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:EmailInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x437;&#x432;&#x430;&#x43d;&#x438;&#x447;&#x43d;&#x443; &#x435;&#x43c;&#x435;&#x458;&#x43b; &#x430;&#x434;&#x440;&#x435;&#x441;&#x443;."/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="brojTelefona" label="&#x411;&#x440;&#x43e;&#x458; &#x442;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&#x430;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TelInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x431;&#x440;&#x43e;&#x458; &#x442;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&#x430; &#x441;&#x430; &#x43e;&#x437;&#x43d;&#x430;&#x43a;&#x43e;&#x43c; &#x440;&#x435;&#x433;&#x438;&#x458;&#x435; &#x43a;&#x43e;&#x458;&#x43e;&#x458; &#x43f;&#x440;&#x438;&#x43f;&#x430;&#x434;&#x430;&#x442;&#x435;. &#x41d;&#x43f;&#x440;. &#x41d;&#x43e;&#x432;&#x438; &#x421;&#x430;&#x434; 021, &#x411;&#x435;&#x43e;&#x433;&#x440;&#x430;&#x434; 011"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="imeIPrezimeAdminstratora" label="&#x418;&#x43c;&#x435; &#x438; &#x43f;&#x440;&#x435;&#x437;&#x438;&#x43c;&#x435;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput" placeHolder="&#x41f;&#x435;&#x442;&#x430;&#x440; &#x41f;&#x435;&#x442;&#x440;&#x43e;&#x432;&#x438;&#x45b;"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="brojIdentifikacioneOznake" label="&#x411;&#x440;&#x43e;&#x458; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x435; &#x43e;&#x437;&#x43d;&#x430;&#x43a;&#x435;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x431;&#x440;&#x43e;&#x458; &#x432;&#x430;&#x448;&#x435; &#x43b;&#x438;&#x447;&#x43d;&#x435; &#x43a;&#x430;&#x440;&#x442;&#x435;."/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:StringPattern" value="[0-9]{9}"/>
+    </classattribute>
+    <classattribute name="brojTelefonaAdministratoraa" label="&#x411;&#x440;&#x43e;&#x458; &#x442;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&#x430;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x431;&#x440;&#x43e;&#x458; &#x442;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&#x430; &#x441;&#x430; &#x43f;&#x43e;&#x437;&#x438;&#x432;&#x43d;&#x438;&#x43c; &#x431;&#x440;&#x43e;&#x458;&#x435;&#x43c;. &#x41d;&#x43f;&#x440;. &#x41d;&#x43e;&#x432;&#x438; &#x421;&#x430;&#x434; 021, &#x411;&#x435;&#x43e;&#x433;&#x440;&#x430;&#x434; 011"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="adresaElektronskePosteAdministratora" label="&#x410;&#x434;&#x440;&#x435;&#x441;&#x430; &#x435;&#x43b;&#x435;&#x43a;&#x442;&#x440;&#x43e;&#x43d;&#x441;&#x43a;&#x435; &#x43f;&#x43e;&#x448;&#x442;&#x435;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:EmailInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x435;&#x43c;&#x435;&#x458;&#x43b; &#x430;&#x434;&#x440;&#x435;&#x441;&#x443; &#x43e;&#x434;&#x433;&#x43e;&#x432;&#x43e;&#x440;&#x43d;&#x43e;&#x433; &#x430;&#x434;&#x43c;&#x438;&#x43d;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43e;&#x440;&#x430;."/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:MinLength" value="10"/>
+      <attributerule xsi:type="formValidation:MaxLength" value="254"/>
+    </classattribute>
+    <classattribute name="brojOrganizacioneJedinice" label="&#x411;&#x440;&#x43e;&#x458; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x435; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x435;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:AutocompleteComponent"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.0"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="nn">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="mm">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+    </classattribute>
+    <classrule xsi:type="formValidation:NotEquals">
+      <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.10"/>
+    </classrule>
+    <classrule xsi:type="formValidation:Equals">
+      <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.4"/>
+    </classrule>
+    <classrule xsi:type="formValidation:GreaterThan" classattribute="//@validationclasses.1/@classattribute.12">
+      <attributearray attributes="//@validationclasses.1/@classattribute.13"/>
+    </classrule>
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOPravnomLicuOrganu">
+      <layouts xsi:type="formValidation:Grid" name="grid11">
+        <attributearray attributes="//@validationclasses.1/@classattribute.0"/>
+      </layouts>
+      <layouts xsi:type="formValidation:Grid" name="grid12">
+        <attributearray attributes="//@validationclasses.1/@classattribute.1"/>
+      </layouts>
+      <layouts xsi:type="formValidation:Grid" name="grid13">
+        <attributearray attributes="//@validationclasses.1/@classattribute.2 //@validationclasses.1/@classattribute.3"/>
+      </layouts>
+      <layouts xsi:type="formValidation:Grid" name="grid14">
+        <attributearray attributes="//@validationclasses.1/@classattribute.4"/>
+      </layouts>
+      <layouts xsi:type="formValidation:Grid" name="grid15">
+        <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.6"/>
+      </layouts>
+    </formlayout>
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOAdministratoru">
+      <attributearray attributes="//@validationclasses.1/@classattribute.7 //@validationclasses.1/@classattribute.8"/>
+      <layouts xsi:type="formValidation:Grid" name="grid21">
+        <attributearray attributes="//@validationclasses.1/@classattribute.10 //@validationclasses.1/@classattribute.9"/>
+        <layouts xsi:type="formValidation:FieldSet" name="aa"/>
+      </layouts>
+    </formlayout>
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor">
+      <attributearray attributes="//@validationclasses.1/@classattribute.11"/>
+    </formlayout>
+    <additionalSettings xsi:type="formValidation:ErrorMessageSettings" position="Below">
+      <color red="255" green="50" blue="50"/>
+    </additionalSettings>
+    <additionalSettings xsi:type="formValidation:AttributeSettings"/>
+    <overviewsettings>
+      <tableoverview name="aa" height="400" width="600" title="">
+        <paging>
+          <possibleNumberOfShownRows>10</possibleNumberOfShownRows>
+          <possibleNumberOfShownRows>20</possibleNumberOfShownRows>
+          <possibleNumberOfShownRows>50</possibleNumberOfShownRows>
+        </paging>
+      </tableoverview>
+    </overviewsettings>
+  </validationclasses>
+</formValidation:BusinessModel>

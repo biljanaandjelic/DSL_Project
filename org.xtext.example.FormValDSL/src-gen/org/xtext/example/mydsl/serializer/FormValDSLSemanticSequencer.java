@@ -265,7 +265,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     AttributeArray returns AttributeArray
 	 *
 	 * Constraint:
-	 *     (attributes+=[ClassAttribute|EString] attributes+=[ClassAttribute|EString]*)?
+	 *     (attributes+=[ClassAttribute|EString] attributes+=[ClassAttribute|EString]*)
 	 */
 	protected void sequence_AttributeArray(ISerializationContext context, AttributeArray semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

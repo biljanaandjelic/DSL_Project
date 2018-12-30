@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import classDiagram.ClassDiagramPackage;
 import classDiagram.ClassModel;
 import classDiagram.ModelingConcept;
+import formValidation.BusinessModel;
 import formValidation.FormValidationPackage;
 import formValidation.ValidationClass;
 
@@ -39,11 +40,12 @@ public class ClassMMGenerator {
 		if (outputDirectory != null) {
 			ValidationClass cm = loadValidationClassModel(inputPath);
 			JavaGenerator java = new JavaGenerator();
+			BusinessModel businessModel = loadBusinessModel(inputPath);
 
 			//for (classDiagram.Package pkg : cm.getPackages()) {
 			//for (ModelingConcept mc : pkg.getElements()) {
 					if (cm instanceof ValidationClass) {
-						CharSequence cs = java.generateHTML(cm, cm.getName().toLowerCase());
+						CharSequence cs = java.generateHTML(businessModel);
 						//CharSequence cs1 ="<!DOCTYPE html> <html><head><meta charset=\"UTF-8\"><title>Title of the document</title></head><body>Content of the document......</body></html>";
 						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".html", cs);
 						
@@ -59,7 +61,31 @@ public class ClassMMGenerator {
 		}
 
 	}
+	private static BusinessModel loadBusinessModel(String modulePath) {
+		// Initialize the model
+		FormValidationPackage.eINSTANCE.eClass();
 
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> m = reg.getExtensionToFactoryMap();
+		m.put("xmi", new XMIResourceFactoryImpl());
+		m.put("ecore", new EcoreResourceFactoryImpl());
+
+		// Obtain a new resource set
+		ResourceSet resSet = new ResourceSetImpl();
+
+		// Get the resource
+		Resource resource = resSet.getResource(URI.createFileURI(modulePath), true);
+		//Resource resource = resSet.getResource(URI.createURI("class/ClassModel.xmi"), true);
+
+		// Get the first model element and cast it to the right type, in my
+		// example everything is included in this first node
+		//ValidationClass pkg = (ValidationClass) resource.getContents().get(0);
+		BusinessModel businessModel = (BusinessModel) resource.getContents().get(0);
+       
+        
+		return businessModel;
+	}
+	
 	private static ValidationClass loadValidationClassModel(String modulePath) {
 		// Initialize the model
 		FormValidationPackage.eINSTANCE.eClass();
@@ -78,8 +104,10 @@ public class ClassMMGenerator {
 
 		// Get the first model element and cast it to the right type, in my
 		// example everything is included in this first node
-		ValidationClass pkg = (ValidationClass) resource.getContents().get(0);
-
+		//ValidationClass pkg = (ValidationClass) resource.getContents().get(0);
+		BusinessModel businessModel = (BusinessModel) resource.getContents().get(0);
+        ValidationClass pkg = businessModel.getValidationclasses().get(1);
+        
 		return pkg;
 	}
 
@@ -109,7 +137,7 @@ public class ClassMMGenerator {
 	}
 	
 	public static void main(String[]  args){
-		FVALToXMIConverter.convertFVALtoXMI("input/person.fval", "output/person.xmi");
-		generateAll("output/person.xmi", "output");
+		FVALToXMIConverter.convertFVALtoXMI("input/example1.fvalDSL", "output/example1.xmi");
+		generateAll("output/example1.xmi", "output");
 	}
 }

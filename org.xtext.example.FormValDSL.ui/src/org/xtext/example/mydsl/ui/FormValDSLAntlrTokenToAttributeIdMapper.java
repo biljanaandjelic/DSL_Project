@@ -8,10 +8,13 @@ DefaultAntlrTokenToAttributeIdMapper{
 
 	@Override
 	protected String calculateId(String tokenName, int tokenType) {
-
+		
 		if(tokenName.equals("RULE_ID")){
-			return "attr_name";
+			return "name";
 		}else
+		if(tokenName.equals("'FieldSet'") || tokenName.equals("'Grid'") || tokenName.equals("'Tab'")){
+			return "layout";
+		}else 
 		if( "'Relationship'".equals(tokenName) || "'relationships'".equals(tokenName) || "'attributeSet'".equals(tokenName)) {
 			return "Relationship";
 		} else

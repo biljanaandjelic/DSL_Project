@@ -4490,18 +4490,14 @@ ruleAttributeArray returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getAttributeArrayAccess().getLeftCurlyBracketKeyword_1());
-		}
 		(
-			otherlv_2='attributes'
+			otherlv_1='attributes'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getAttributeArrayAccess().getAttributesKeyword_2_0());
+				newLeafNode(otherlv_1, grammarAccess.getAttributeArrayAccess().getAttributesKeyword_1_0());
 			}
-			otherlv_3='('
+			otherlv_2='('
 			{
-				newLeafNode(otherlv_3, grammarAccess.getAttributeArrayAccess().getLeftParenthesisKeyword_2_1());
+				newLeafNode(otherlv_2, grammarAccess.getAttributeArrayAccess().getLeftParenthesisKeyword_1_1());
 			}
 			(
 				(
@@ -4511,7 +4507,7 @@ ruleAttributeArray returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getAttributeArrayAccess().getAttributesClassAttributeCrossReference_2_2_0());
+						newCompositeNode(grammarAccess.getAttributeArrayAccess().getAttributesClassAttributeCrossReference_1_2_0());
 					}
 					ruleEString
 					{
@@ -4520,9 +4516,9 @@ ruleAttributeArray returns [EObject current=null]
 				)
 			)
 			(
-				otherlv_5=','
+				otherlv_4=','
 				{
-					newLeafNode(otherlv_5, grammarAccess.getAttributeArrayAccess().getCommaKeyword_2_3_0());
+					newLeafNode(otherlv_4, grammarAccess.getAttributeArrayAccess().getCommaKeyword_1_3_0());
 				}
 				(
 					(
@@ -4532,7 +4528,7 @@ ruleAttributeArray returns [EObject current=null]
 							}
 						}
 						{
-							newCompositeNode(grammarAccess.getAttributeArrayAccess().getAttributesClassAttributeCrossReference_2_3_1_0());
+							newCompositeNode(grammarAccess.getAttributeArrayAccess().getAttributesClassAttributeCrossReference_1_3_1_0());
 						}
 						ruleEString
 						{
@@ -4541,15 +4537,11 @@ ruleAttributeArray returns [EObject current=null]
 					)
 				)
 			)*
-			otherlv_7=')'
+			otherlv_6=')'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getAttributeArrayAccess().getRightParenthesisKeyword_2_4());
+				newLeafNode(otherlv_6, grammarAccess.getAttributeArrayAccess().getRightParenthesisKeyword_1_4());
 			}
-		)?
-		otherlv_8='}'
-		{
-			newLeafNode(otherlv_8, grammarAccess.getAttributeArrayAccess().getRightCurlyBracketKeyword_3());
-		}
+		)
 	)
 ;
 

@@ -6,6 +6,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.resource.XtextResourceSet;
+import org.xtext.example.mydsl.FormValDSLStandaloneSetup;
 //import org.xtext.example.domij.ErDslStandaloneSetup;
 import org.xtext.example.mydsl.FormValidationStandaloneSetup;
 
@@ -17,7 +18,7 @@ public class FVALToXMIConverter {
 	//dodati ErPackageImpl.init(); u public Injector createInjectorAndDoEMFRegistration() {	
 
 	public static void convertFVALtoXMI(String inputM, String outputM) {
-		Injector injector = new FormValidationStandaloneSetup().createInjectorAndDoEMFRegistration();
+		Injector injector = new FormValDSLStandaloneSetup().createInjectorAndDoEMFRegistration();
 
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 

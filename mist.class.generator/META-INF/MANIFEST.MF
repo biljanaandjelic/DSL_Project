@@ -18,7 +18,8 @@ Require-Bundle: org.eclipse.ui,
  FormValidation,
  FormValidation.edit;bundle-version="1.0.0",
  FormValidation.editor;bundle-version="1.0.0",
- FormValidation.tests;bundle-version="1.0.0"
+ FormValidation.tests;bundle-version="1.0.0",
+ org.xtext.example.FormValDSL;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: ACS

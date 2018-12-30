@@ -14,7 +14,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
-import org.xtext.example.mydsl.FormValidationRuntimeModule;
+//import org.xtext.example.mydsl.FormValidationRuntimeModule;
 import org.xtext.example.mydsl.ui.FormValidationUiModule;
 
 /**
@@ -74,7 +74,7 @@ public class FormValidationActivator extends AbstractUIPlugin {
 	
 	protected Module getRuntimeModule(String grammar) {
 		if (ORG_XTEXT_EXAMPLE_MYDSL_FORMVALIDATION.equals(grammar)) {
-			return new FormValidationRuntimeModule();
+			//return new FormValidationRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
