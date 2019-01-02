@@ -620,7 +620,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_g5Kmg-3lEeiD46mTv_jzkA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_g5J_ce3lEeiD46mTv_jzkA" fontName="Segoe UI" fontHeight="8" fillColor="8047085"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5J_cu3lEeiD46mTv_jzkA" x="-2424" y="-168" width="120" height="100"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g5J_cu3lEeiD46mTv_jzkA" x="-2412" y="-168" width="120" height="100"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_jPchYO3lEeiD46mTv_jzkA" type="2003" element="_jOgtQO3lEeiD46mTv_jzkA">
             <children xmi:type="notation:Node" xmi:id="_jPdIcO3lEeiD46mTv_jzkA" type="5007"/>

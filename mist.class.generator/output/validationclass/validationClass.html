@@ -46,174 +46,269 @@
 	      </ul>
 	    </div>
 	  </nav>
-	  <div id="addorganizacionaJedinica" class="panel">
-	  <form>
-	  <div class="form-row">
-	  <div class="form-group col-md-1">
-	  	<label>
-	  		    	Број 
-	  	 </label>
-	  		<input id="brojid" class="form-control" type="number" />
-	  		    		
-	  		
-	  </div>
-	  <div class="form-group col-md-1">
-	  	<label>
-	  		    	Назив 
-	  	 </label>
-	  		<input id="nazivid" class="form-control" type="text" />
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  </form>
-	  </div>
-	  <div id="addvalidationClass" class="panel">
-	  <form>
-	  
-	   <fieldset class="border p-2">
-	  <legend class="w-auto"></legend>
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-12">
-	  	<label>
-	  		    	ЈБКЈС 
-	  	 </label>
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-12">
-	  	<label>
-	  		    	Назив правног лица 
-	  	 </label>
-	  		<input id="nazicPravnogLicaid" class="form-control" type="text" />
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Матични број 
-	  	 </label>
-	  		<input id="jedinstveniMaticniBrojGradjaninaid" class="form-control" type="text" />
-	  		    		
-	  		
-	  </div>
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Порески идентификациони број 
-	  	 </label>
-	  		<input id="poreskiIdentifikacioniBrojid" class="form-control" type="number" />
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-12">
-	  	<label>
-	  		    	Адреса сједишта 
-	  	 </label>
-	  		 <textarea class="form-control" rows="1" id="adresaSedista" placeholder=""></textarea>
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Адреса електронске поште 
-	  	 </label>
-	  		<input id="adresaElektronskePosteid" class="form-control" type="email" />
-	  		    		
-	  		
-	  </div>
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Број телефона 
-	  	 </label>
-	  		<input id="brojTelefonaid" class="form-control" type="tel" />
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	  </fieldSet>
-	   <fieldset class="border p-2">
-	  <legend class="w-auto"></legend>
-	  <label>
-	  	    	Име и презиме 
-	   </label>
-	  	<input id="imeIPrezimeAdminstratoraid" class="form-control" type="text" />
-	  	    		
-	  	
-	  <label>
-	  	    	Број идентификационе ознаке 
-	   </label>
-	  	<input id="brojIdentifikacioneOznakeid" class="form-control" type="text" />
-	  	    		
-	  	
-	  
-	   
-	  
-	  
-	  <div class="form-row">
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Адреса електронске поште 
-	  	 </label>
-	  		<input id="adresaElektronskePosteAdministratoraid" class="form-control" type="email" />
-	  		    		
-	  		
-	  </div>
-	  <div class="form-group col-md-6">
-	  	<label>
-	  		    	Број телефона 
-	  	 </label>
-	  		<input id="brojTelefonaAdministratoraaid" class="form-control" type="text" />
-	  		    		
-	  		
-	  </div>
-	  </div>
-	  
-	  </fieldSet>
-	   <fieldset class="border p-2">
-	  <legend class="w-auto"></legend>
-	  <label>
-	  	    	Број организационе јединице 
-	   </label>
-	  		
-	  	<input class="form-control autocomplete"  id="brojOrganizacioneJedinice" placeholder="Enter A" />
-	  	
-	  	    		
-	  	
-	  
-	  </fieldSet>
-	  </form>
-	  </div>
+    			      <div id="addorganizacionaJedinica" class="panel">
+    			      <form>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-1">
+    			      	<label>
+    			      		    	Број 
+    			      	 </label>
+    			      		<input id="brojid" class="form-control" type="number" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      <div class="form-group col-md-1">
+    			      	<label>
+    			      		    	Назив 
+    			      	 </label>
+    			      		<input id="nazivid" class="form-control" type="text" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overvieworganizacionaJedinica" class="panel">
+	<table class="table table-hover">
+		  <thead>
+		  	<tr>
+		  		<th scope="col">
+		  		Број 
+		  		</th>
+		  		<th scope="col">
+		  		Назив 
+		  		</th>
+		  	</tr>
+		  </thead>
+	</table>
+	
+	<div id="linkedDataorganizacionaJedinica">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="#organizacionaJedinicadetails" data-toggle="tab">Додатне информације о ентитету</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+	<div id="organizacionaJedinicadetails" class="tab-pane active container">
+	 Додатне информације
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addvalidationClass" class="panel">
+    			      <form>
+    			      
+    			       <fieldset class="border p-2">
+    			      <legend class="w-auto"></legend>
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label>
+    			      		    	ЈБКЈС 
+    			      	 </label>
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label>
+    			      		    	Назив правног лица 
+    			      	 </label>
+    			      		<input id="nazicPravnogLicaid" class="form-control" type="text" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Матични број 
+    			      	 </label>
+    			      		<input id="jedinstveniMaticniBrojGradjaninaid" class="form-control" type="text" placeholder="0000000000000" />
+    			      		    		
+    			      		
+    			      </div>
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Порески идентификациони број 
+    			      	 </label>
+    			      		<input id="poreskiIdentifikacioniBrojid" class="form-control" type="number" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label>
+    			      		    	Адреса сједишта 
+    			      	 </label>
+    			      		 <textarea class="form-control" rows="1" id="adresaSedista" placeholder=""></textarea>
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Адреса електронске поште 
+    			      	 </label>
+    			      		<input id="adresaElektronskePosteid" class="form-control" type="email" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Број телефона 
+    			      	 </label>
+    			      		<input id="brojTelefonaid" class="form-control" type="tel" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			      </fieldSet>
+    			       <fieldset class="border p-2">
+    			      <legend class="w-auto"></legend>
+    			      <label>
+    			      	    	Име и презиме 
+    			       </label>
+    			      	<input id="imeIPrezimeAdminstratoraid" class="form-control" type="text" placeholder="Петар Петровић" />
+    			      	    		
+    			      	
+    			      <label>
+    			      	    	Број идентификационе ознаке 
+    			       </label>
+    			      	<input id="brojIdentifikacioneOznakeid" class="form-control" type="text" placeholder="" />
+    			      	    		
+    			      	
+    			      
+    			       
+    			      
+    			      
+    			      <div class="form-row">
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Адреса електронске поште 
+    			      	 </label>
+    			      		<input id="adresaElektronskePosteAdministratoraid" class="form-control" type="email" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      <div class="form-group col-md-6">
+    			      	<label>
+    			      		    	Број телефона 
+    			      	 </label>
+    			      		<input id="brojTelefonaAdministratoraaid" class="form-control" type="text" placeholder="" />
+    			      		    		
+    			      		
+    			      </div>
+    			      </div>
+    			      
+    			      </fieldSet>
+    			       <fieldset class="border p-2">
+    			      <legend class="w-auto"></legend>
+    			      <label>
+    			      	    	Број организационе јединице 
+    			       </label>
+    			      		
+    			      	<input class="form-control autocomplete"  id="brojOrganizacioneJedinice" placeholder="Enter A" />
+    			      	    		
+    			      	
+    			      
+    			      </fieldSet>
+    			      </form>
+    			      </div>
+<div id="overviewvalidationClass" class="panel">
+	<table class="table table-hover">
+		  <thead>
+		  	<tr>
+		  		<th scope="col">
+		  		ЈБКЈС 
+		  		</th>
+		  		<th scope="col">
+		  		Назив правног лица 
+		  		</th>
+		  		<th scope="col">
+		  		Матични број 
+		  		</th>
+		  		<th scope="col">
+		  		Порески идентификациони број 
+		  		</th>
+		  		<th scope="col">
+		  		Адреса сједишта 
+		  		</th>
+		  		<th scope="col">
+		  		Адреса електронске поште 
+		  		</th>
+		  		<th scope="col">
+		  		Број телефона 
+		  		</th>
+		  		<th scope="col">
+		  		Име и презиме 
+		  		</th>
+		  		<th scope="col">
+		  		Број идентификационе ознаке 
+		  		</th>
+		  		<th scope="col">
+		  		Број телефона 
+		  		</th>
+		  		<th scope="col">
+		  		Адреса електронске поште 
+		  		</th>
+		  		<th scope="col">
+		  		Број организационе јединице 
+		  		</th>
+		  		<th scope="col">
+		  		Nn 
+		  		</th>
+		  		<th scope="col">
+		  		Mm 
+		  		</th>
+		  	</tr>
+		  </thead>
+	</table>
+	
+	<div id="linkedDatavalidationClass">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="#validationClassdetails" data-toggle="tab">Додатне информације о ентитету</a>
+		</li>
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#organizacionaJedinicatab" data-toggle="tab">Додатне информације о ентитету</a>
+		  </li>
+	</ul>
+	<div class="tab-content">
+	<div id="validationClassdetails" class="tab-pane active container">
+	 Додатне информације
+	</div>
+		 <div id="organizacionaJedinicatab"  class="tab-pane container">
+			organizacionaJedinica
+		</div>
+	</div>
+	</div>
+</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
 	  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
