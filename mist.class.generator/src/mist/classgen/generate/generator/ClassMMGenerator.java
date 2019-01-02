@@ -49,7 +49,7 @@ public class ClassMMGenerator {
 						//CharSequence cs1 ="<!DOCTYPE html> <html><head><meta charset=\"UTF-8\"><title>Title of the document</title></head><body>Content of the document......</body></html>";
 						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".html", cs);
 						
-						CharSequence csJS = java.generateJS(cm);
+						CharSequence csJS = java.generateJS(businessModel);
 						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".js", csJS);
 						//saveFile("output/html",cs1);
 					}else{

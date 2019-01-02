@@ -15,7 +15,7 @@ import formValidation.Length
 import java.util.logging.Level
 import formValidation.AcceptableValuesDate
 import formValidation.Equals
-import formValidation.ClassRuleimport formValidation.NotEqualsimport formValidation.GreaterThanimport formValidation.LessThanimport formValidation.BusinessModel/**
+import formValidation.ClassRuleimport formValidation.NotEqualsimport formValidation.GreaterThanimport formValidation.LessThanimport formValidation.BusinessModelimport formValidation.FormLayoutimport formValidation.Gridimport formValidation.Tabimport formValidation.FieldSetimport formValidation.AttributeArrayimport org.eclipse.emf.common.util.EListimport formValidation.Passwordimport formValidation.EmailInputimport formValidation.TelInputimport formValidation.TextInputimport formValidation.NumericUIComponentimport formValidation.FileInputimport formValidation.RadioButtonimport formValidation.DropDownListimport formValidation.CheckBoximport formValidation.LoadValuesimport formValidation.AutocompleteComponentimport formValidation.AcceptableValuesimport formValidation.EDataTypeimport formValidation.TextAreaimport formValidation.EnumerationUIComponentimport formValidation.EUINumberComponentTypeimport formValidation.NonPrimitiveDataType/**
  * Generate Database create sql
  */
 class JavaGenerator{
@@ -26,22 +26,9 @@ class JavaGenerator{
     		<html>
     		<head>    			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">     			     			    			
     			<style>
-    			input {color: blue}
-    			input {
-    				margin-left: 10px;
-    				-webkit-box-sizing: border-box;
-    			    -moz-box-sizing:    border-box;
-    			    box-sizing:         border-box;
-    			    width:80%;
-    			    height: 25px;
-    			    border-radius: 2px;
-    			   }    			.form-control{    				width: 25%;    			}
-    			#submitButton{
-    				
-    				width: 25%;
-    			}
-    			
-    			div {margin-left: 10px}
+    				.panel{
+    						display: none;
+    					}
     			</style>
     			<sctipt>
     		
@@ -77,28 +64,28 @@ class JavaGenerator{
     			        </li>
     			      </ul>
     			    </div>
-    			  </nav>
-    			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    			  </nav>    			  «FOR valClass : businessModel.validationclasses»
+    			      «generateClass(valClass) »    			   «ENDFOR»
+    			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    			<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
     			  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
     			  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
-    			</body>
+    		      <script src="«businessModel.validationclasses.get(1).name».js"></script>    			</body>
     		</html>
     	'''
     }
-    
+    def generateClass(ValidationClass validationClass){    	'''    	 <div id="add«validationClass.name»" class="panel">    	 <form>    	 «IF validationClass.formlayout.size > 0»    	     	 «FOR layout : validationClass.formlayout»    	 	«generateLayout(layout)»    	 «ENDFOR»    	 «ELSE»    	 	«generate(validationClass.classattribute, 1)»    	 «ENDIF»    	 </form>    	 </div>    	'''    }        def generateLayout(FormLayout layout){    	'''    	«IF layout instanceof Grid» «generateGrid(layout)» «ENDIF»    	«IF layout instanceof Tab» «generateTab(layout)» «ENDIF»    	«IF layout instanceof FieldSet» «generateFieldSet(layout)» «ENDIF»    	'''    }        def generateGrid(Grid gridLayout){    	'''    	    	    	    	«generateGridRow(gridLayout.attributearray)»    	    	'''    }        def generateTab(Tab tabLayout){    	    }        def generateFieldSet(FieldSet fieldSet){    	'''    	<fieldset class="border p-2">    	<legend class="w-auto">«fieldSet.legend»</legend>    	«IF fieldSet.attributearray!= null»    	«FOR attribute : fieldSet.attributearray.attributes»    		«generate(attribute)»    	«ENDFOR»    	«ENDIF»    	    	«IF fieldSet.layouts.size>0»	    	«FOR layout : fieldSet.layouts»	    		«generateLayout(layout)»	    	«ENDFOR»	    «ENDIF»    	</fieldSet>    	'''    }        def generateGridRow(AttributeArray attributes){    	val n = attributes.attributes.size;    	val numOfCells = 12/n as int;    	generate(attributes.attributes, numOfCells);	    }        def generate(EList<ClassAttribute> attributes,int cellWidth)    {    '''    	<div class="form-row">    	«FOR attr : attributes»    	<div class="form-group col-md-«cellWidth»">    		«generate(attr)»    	</div>    	«ENDFOR»    	</div>    '''	    }    
     def generate(ClassAttribute attribute){
-    	'''<div> «generateInputLabel(attribute.name)» </div>
-    		<input id="«attribute.name»id" class="form-control" type="«IF attribute.attributetype.attributeDataType == EVrsta.STRING»text" «ELSE»«attribute.attributetype.attributeDataType»"«ENDIF»
-    		«FOR rule : attribute.attributerule  »
-    			«generateAttributeRules(rule,attribute.name)»
-    		«ENDFOR»
-    		/>
-    		«generateStringDataList(attribute)»
-    		«generateDateDataList(attribute)»
+    	'''    	<label>	    	«IF attribute.label != null && attribute.label != ""» 	    		«attribute.label» 	    	«ELSE»	    		«generateInputLabel(attribute.name)»	    	«ENDIF»    	 </label>
+    		«generateInputField(attribute)»
+    		    		
+    		
     	'''
-    }
-    
+    }        def generateInputField(ClassAttribute attribute){    	'''    	«IF attribute.attributetype.uiComponent instanceof Password»    		«generateSimpleInput(attribute, "password")»    	«ELSEIF attribute.attributetype.uiComponent instanceof EmailInput»    		«generateSimpleInput(attribute, "email")»    	«ELSEIF attribute.attributetype.uiComponent instanceof TelInput»    		«generateSimpleInput(attribute, "tel")»    	«ELSEIF attribute.attributetype.uiComponent instanceof TextInput»    		«generateSimpleInput(attribute, "text")»    	«ELSEIF attribute.attributetype.uiComponent instanceof TextArea»    		«generateTextArea(attribute)»    	«ELSEIF attribute.attributetype.uiComponent instanceof NumericUIComponent»    		«generateNumericUIComponent(attribute)»    	«ELSEIF attribute.attributetype.uiComponent instanceof FileInput»    		«generateSimpleInput(attribute, "file")»    	«ELSEIF attribute.attributetype.uiComponent instanceof RadioButton»    		«generateRadioButtons(attribute)»    	«ELSEIF attribute.attributetype.uiComponent instanceof DropDownList»    		«generateDropDownList(attribute)»    	«ELSEIF attribute.attributetype.uiComponent instanceof CheckBox»    		«generateCheckBoxes(attribute)»    	«ELSEIF attribute.attributetype.uiComponent instanceof LoadValues»    		Load values    	«ELSEIF attribute.attributetype.uiComponent instanceof AutocompleteComponent»    		    	«generateAutoComplete(attribute)»    	«»    	«ENDIF »    	'''    }        def generateAutoComplete(ClassAttribute attribute){    	'''    	    <input class="form-control autocomplete"  id="«attribute.name»" placeholder="Enter A" />    	'''    }        def generateCheckBoxes(ClassAttribute attribute){    	'''    	«IF attribute.attributetype.attributeDataType instanceof NonPrimitiveDataType»    	«ELSE»    		«FOR rule : attribute.attributerule»    			«IF rule instanceof AcceptableValuesString»    				«val stringValues = rule as AcceptableValuesString»    				«FOR value : stringValues.values»    					<label class="checkbox-inline"><input type="checkbox" value="«value»">«value»</label>    				«ENDFOR»    			«ELSEIF rule instanceof AcceptableValuesDate»    				«val dateValues = rule as AcceptableValuesString»    			    «FOR value : dateValues.values»    			    	<label class="checkbox-inline"><input type="checkbox" value="«value»">«value»</label>    			    «ENDFOR»    			«ENDIF»    		«ENDFOR»    	«ENDIF»    	<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>    	'''    }        def generateRadioButtons(ClassAttribute attribute){    	'''    	«IF attribute.attributetype.attributeDataType instanceof NonPrimitiveDataType»    	«ELSE»    		«FOR rule : attribute.attributerule»    			«IF rule instanceof AcceptableValuesString»    				«val stringValues = rule as AcceptableValuesString»    				«FOR value : stringValues.values»    					<label class="checkbox-inline"><input type="radio" value="«value»">«value»</label>    				«ENDFOR»    			«ELSEIF rule instanceof AcceptableValuesDate»    				«val dateValues = rule as AcceptableValuesString»
+    			    «FOR value : dateValues.values»    			    	<label class="checkbox-inline"><input type="radio" value="«value»">«value»</label>
+    			    «ENDFOR»    			«ENDIF»    		«ENDFOR»    	«ENDIF»    	<label class="checkbox-inline"><input type="radio" value="">Option 1</label>    	'''    }        def generateNumericUIComponent(ClassAttribute attribute){    	'''    	«val component = attribute.attributetype.uiComponent as NumericUIComponent»    	«IF component.componentType == EUINumberComponentType.SIMPLE_INPUT»    		«generateSimpleInput(attribute, "number")»    	«ELSE»	    	    <input type="range" class="form-control-range" id="«attribute.name»">    	«ENDIF»    	'''    }        def generateTextArea(ClassAttribute attribute){    	'''    	 «IF attribute.attributetype.uiComponent instanceof TextArea»    	 «val component = attribute.attributetype.uiComponent as TextArea»
+    	  <textarea class="form-control" rows="«component.numOfRows»" id="«attribute.name»" placeholder="«component.placeHolder»"></textarea>    	 «ENDIF»    	'''    }        def  generateSimpleInput(ClassAttribute attribute, String type){    	'''    	<input id="«attribute.name»id" class="form-control" type="«type»" />    	'''    	}    
+    def generateDropDownList(ClassAttribute attribute){    	'''    	<select class="form-control" id="«attribute.name»">    	«IF attribute.attributetype.attributeDataType instanceof ValidationClass»    	«ELSE»    	«FOR rule : attribute.attributerule»    		«IF rule instanceof AcceptableValuesString»    		«FOR value : rule.values»    			<option>«value»</option>    		«ENDFOR»    		«ELSEIF rule instanceof AcceptableValuesDate»	    			    		«ENDIF»    	«ENDFOR»    	«ENDIF»    	</select>    	'''    }    
     def generateAttributeRules(AttributeRule rule, String attributeName){
     	'''
 		«IF rule instanceof Required » required «ENDIF»
@@ -226,9 +213,23 @@ class JavaGenerator{
     			$("#«attr.name»id").val() ==
     		«ENDFOR»
     	'''
-    }        def generateInputLabel(String name){    	var strings = name.split("(?=[A-Z])");    	var newName ="";    	for(str : strings ){    		newName += str.toFirstUpper();    		newName +=" "    	}    	    	return newName;    }            def generateJS(ValidationClass vclass){    	'''    		$(document).ready(function() {    			$("#submitButton").click(function(e){    			 if($("form")[0].checkValidity()){    			«FOR rule : vclass.classrule»    				«genFunction(rule)»    			«ENDFOR»    			}
-    		});
-    		});    	'''    }        def genFunction(ClassRule classRule){    	'''    	«IF classRule instanceof Equals» «generateEqualsRule(classRule)»«ENDIF»    	«IF classRule instanceof NotEquals»«generateNotEqualsRule(classRule)»«ENDIF»    	«IF classRule instanceof GreaterThan»«generateGreaterRule(classRule)»«ENDIF»    	«IF classRule instanceof LessThan»«generateLessRule(classRule)»«ENDIF»    	'''    }        def generateEqualsRule(Equals equalsRule){    	'''    		if(«FOR input : equalsRule.attributearray.attributes SEPARATOR '|| '»$("#«input.name»id").val() != $("#«equalsRule.attributearray.attributes.get(0).name»id").val() «ENDFOR»)    		{    			e.preventDefault();    			alert("«FOR rule : equalsRule.attributearray.attributes SEPARATOR ' and '»«generateInputLabel(rule.name)»«ENDFOR»should be same.");    		}    	'''    }        def generateNotEqualsRule(NotEquals notEqualsRule){    	'''    	if(«FOR input : notEqualsRule.attributearray.attributes »«generateNonEqualsCondition(input,notEqualsRule)»«ENDFOR» false)    	{    			e.preventDefault();    			alert("«FOR rule : notEqualsRule.attributearray.attributes SEPARATOR 'and'» «generateInputLabel(rule.name)»«ENDFOR»should be different.");    	}    	'''    }        def generateGreaterRule(GreaterThan rule){    	'''    		if(«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR "|| "»$("#«rule.classattribute.name»id").val() > $("#«attr.name»id").val()«ENDFOR»«ENDFOR»)    		{    			e.preventDefault();    			alert("«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR 'and '»«generateInputLabel(attr.name)»«ENDFOR»«ENDFOR» should be greaterthan «generateInputLabel(rule.classattribute.name)».");    		}    	'''    }        def generateLessRule(LessThan rule){    	'''    		if(«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR "|| "»$("#«rule.classattribute.name»id").val() < $("#«attr.name»id").val()«ENDFOR»«ENDFOR»)    		{    			e.preventDefault();
+    }        def generateInputLabel(String name){    	var strings = name.split("(?=[A-Z])");    	var newName ="";    	for(str : strings ){    		newName += str.toFirstUpper();    		newName +=" "    	}    	    	return newName;    }            def generateJS(BusinessModel model){    	'''    		$(document).ready(function() {    		    		«FOR vclass : model.validationclasses»	
+    			«FOR rule : vclass.classrule»
+    			  «genFunction(rule)»
+    			«ENDFOR»
+    			«FOR attr : vclass.classattribute»    			«IF attr.attributetype != null»
+    			  «IF attr.attributetype.uiComponent instanceof AutocompleteComponent»
+    			   «generateAutoCompleteJS(attr)»
+    			 «ENDIF»    			«ENDIF»
+    		    «ENDFOR»
+    		«ENDFOR»    	'''    }      	def generateAutoCompleteJS(ClassAttribute attribute){  		'''  			  			$(function() {  			«var values =  {} as EList<String>»  			«FOR rule : attribute.attributerule»  				«IF rule instanceof AcceptableValuesString»  					«val acceptableValues  = rule as AcceptableValuesString»  					«values = acceptableValues.values»  				«ELSEIF rule instanceof AcceptableValuesDate»  					«val acceptableValues  = rule as AcceptableValuesDate»
+  					«values = acceptableValues.values»  				«ENDIF»  			«ENDFOR»  			
+  			  var «attribute.name»AvailableTags = [  			  «FOR value : values BEFORE '[' SEPARATOR ',' AFTER '];'»  			  	«value»
+  			  «ENDFOR» 
+  			  $("#«attribute.name»").autocomplete({
+  			    source: «attribute.name»AvailableTags
+  			  });
+  			});  		'''  	}  	    def genFunction(ClassRule classRule){    	'''    	«IF classRule instanceof Equals» «generateEqualsRule(classRule)»«ENDIF»    	«IF classRule instanceof NotEquals»«generateNotEqualsRule(classRule)»«ENDIF»    	«IF classRule instanceof GreaterThan»«generateGreaterRule(classRule)»«ENDIF»    	«IF classRule instanceof LessThan»«generateLessRule(classRule)»«ENDIF»    	'''    }        def generateEqualsRule(Equals equalsRule){    	'''    		if(«FOR input : equalsRule.attributearray.attributes SEPARATOR '|| '»$("#«input.name»id").val() != $("#«equalsRule.attributearray.attributes.get(0).name»id").val() «ENDFOR»)    		{    			e.preventDefault();    			alert("«FOR rule : equalsRule.attributearray.attributes SEPARATOR ' and '»«generateInputLabel(rule.name)»«ENDFOR»should be same.");    		}    	'''    }        def generateNotEqualsRule(NotEquals notEqualsRule){    	'''    	if(«FOR input : notEqualsRule.attributearray.attributes »«generateNonEqualsCondition(input,notEqualsRule)»«ENDFOR» false)    	{    			e.preventDefault();    			alert("«FOR rule : notEqualsRule.attributearray.attributes SEPARATOR 'and'» «generateInputLabel(rule.name)»«ENDFOR»should be different.");    	}    	'''    }        def generateGreaterRule(GreaterThan rule){    	'''    		if(«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR "|| "»$("#«rule.classattribute.name»id").val() > $("#«attr.name»id").val()«ENDFOR»«ENDFOR»)    		{    			e.preventDefault();    			alert("«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR 'and '»«generateInputLabel(attr.name)»«ENDFOR»«ENDFOR» should be greaterthan «generateInputLabel(rule.classattribute.name)».");    		}    	'''    }        def generateLessRule(LessThan rule){    	'''    		if(«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR "|| "»$("#«rule.classattribute.name»id").val() < $("#«attr.name»id").val()«ENDFOR»«ENDFOR»)    		{    			e.preventDefault();
     			alert("«FOR input : rule.attributearray»«FOR attr : input.attributes SEPARATOR 'and '»«generateInputLabel(attr.name)»«ENDFOR»«ENDFOR» should be less than «generateInputLabel(rule.classattribute.name)».");    		}    	'''    }        def generateNonEqualsCondition(ClassAttribute input, NotEquals notEqualsRule){    	'''    	«IF input != notEqualsRule.attributearray.attributes.get(0) »$("#«input.name»id").val()== $("#«notEqualsRule.attributearray.attributes.get(0).name»id").val() ||  «ENDIF»    	'''    }
     /*
     

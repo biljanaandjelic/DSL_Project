@@ -6,25 +6,9 @@
 	
 	
 	<style>
-	input {color: blue}
-	input {
-		margin-left: 10px;
-		-webkit-box-sizing: border-box;
-	    -moz-box-sizing:    border-box;
-	    box-sizing:         border-box;
-	    width:80%;
-	    height: 25px;
-	    border-radius: 2px;
-	   }
-	.form-control{
-		width: 25%;
-	}
-	#submitButton{
-		
-		width: 25%;
-	}
-	
-	div {margin-left: 10px}
+		.panel{
+				display: none;
+			}
 	</style>
 	<sctipt>
 
@@ -62,9 +46,177 @@
 	      </ul>
 	    </div>
 	  </nav>
+	  <div id="addorganizacionaJedinica" class="panel">
+	  <form>
+	  <div class="form-row">
+	  <div class="form-group col-md-1">
+	  	<label>
+	  		    	Број 
+	  	 </label>
+	  		<input id="brojid" class="form-control" type="number" />
+	  		    		
+	  		
+	  </div>
+	  <div class="form-group col-md-1">
+	  	<label>
+	  		    	Назив 
+	  	 </label>
+	  		<input id="nazivid" class="form-control" type="text" />
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  </form>
+	  </div>
+	  <div id="addvalidationClass" class="panel">
+	  <form>
+	  
+	   <fieldset class="border p-2">
+	  <legend class="w-auto"></legend>
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-12">
+	  	<label>
+	  		    	ЈБКЈС 
+	  	 </label>
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-12">
+	  	<label>
+	  		    	Назив правног лица 
+	  	 </label>
+	  		<input id="nazicPravnogLicaid" class="form-control" type="text" />
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Матични број 
+	  	 </label>
+	  		<input id="jedinstveniMaticniBrojGradjaninaid" class="form-control" type="text" />
+	  		    		
+	  		
+	  </div>
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Порески идентификациони број 
+	  	 </label>
+	  		<input id="poreskiIdentifikacioniBrojid" class="form-control" type="number" />
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-12">
+	  	<label>
+	  		    	Адреса сједишта 
+	  	 </label>
+	  		 <textarea class="form-control" rows="1" id="adresaSedista" placeholder=""></textarea>
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Адреса електронске поште 
+	  	 </label>
+	  		<input id="adresaElektronskePosteid" class="form-control" type="email" />
+	  		    		
+	  		
+	  </div>
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Број телефона 
+	  	 </label>
+	  		<input id="brojTelefonaid" class="form-control" type="tel" />
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	  </fieldSet>
+	   <fieldset class="border p-2">
+	  <legend class="w-auto"></legend>
+	  <label>
+	  	    	Име и презиме 
+	   </label>
+	  	<input id="imeIPrezimeAdminstratoraid" class="form-control" type="text" />
+	  	    		
+	  	
+	  <label>
+	  	    	Број идентификационе ознаке 
+	   </label>
+	  	<input id="brojIdentifikacioneOznakeid" class="form-control" type="text" />
+	  	    		
+	  	
+	  
+	   
+	  
+	  
+	  <div class="form-row">
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Адреса електронске поште 
+	  	 </label>
+	  		<input id="adresaElektronskePosteAdministratoraid" class="form-control" type="email" />
+	  		    		
+	  		
+	  </div>
+	  <div class="form-group col-md-6">
+	  	<label>
+	  		    	Број телефона 
+	  	 </label>
+	  		<input id="brojTelefonaAdministratoraaid" class="form-control" type="text" />
+	  		    		
+	  		
+	  </div>
+	  </div>
+	  
+	  </fieldSet>
+	   <fieldset class="border p-2">
+	  <legend class="w-auto"></legend>
+	  <label>
+	  	    	Број организационе јединице 
+	   </label>
+	  		
+	  	<input class="form-control autocomplete"  id="brojOrganizacioneJedinice" placeholder="Enter A" />
+	  	
+	  	    		
+	  	
+	  
+	  </fieldSet>
+	  </form>
+	  </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
 	  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
+      <script src="validationClass.js"></script>
 	</body>
 </html>
