@@ -143,7 +143,7 @@ validationClass{
 	}
 	
 	FieldSet podaciOPravnomLicuOrganu{
-		
+			Legend "Подаци о правном лицу/органу"
 			Grid grid11{
 				attributes (jedinstvenBrojKorisnikaJavnihSredstava)
 			}
@@ -161,6 +161,7 @@ validationClass{
 			}
 	}
 	FieldSet podaciOAdministratoru{
+		Legend "Подаци о администратору"
 		attributes (imeIPrezimeAdminstratora,brojIdentifikacioneOznake)
 		
 			Grid grid21{
@@ -172,15 +173,19 @@ validationClass{
 	}
 	
 	FieldSet podaciOOrganizacionojJediniciUpraveZaTrezor{
+		Legend "Подаци о организационој јединици"
 		attributes (brojOrganizacioneJedinice)
 	}
+	
 	ErrorMessageSettings{
 		Position Below
 		Color  (255,50,50) 
 	}
+	
 	AttributeSettings{
 		Presentation Asterix
 	}
+	
 	OverviewSettings {
 		TableOverview aa{
 			Height 400

@@ -51,6 +51,9 @@ public class ClassMMGenerator {
 						
 						CharSequence csJS = java.generateJS(businessModel);
 						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".js", csJS);
+						
+						CharSequence csCSS = java.generateCSS(businessModel);
+						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".css", csCSS);
 						//saveFile("output/html",cs1);
 					}else{
 						System.out.println("Nije instanca adekvatne klase");

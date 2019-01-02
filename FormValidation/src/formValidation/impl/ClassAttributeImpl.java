@@ -109,7 +109,7 @@ public class ClassAttributeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean MASTER_EDEFAULT = true;
+	protected static final boolean MASTER_EDEFAULT = false;
 
 	/**
 	 * The cached value of the '{@link #isMaster() <em>Master</em>}' attribute.

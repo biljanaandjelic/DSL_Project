@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation">
   <validationclasses name="organizacionaJedinica" label="&#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x430; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x430;">
-    <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;">
+    <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;" master="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:NumericUIComponent"/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
@@ -18,7 +18,7 @@
     </classattribute>
   </validationclasses>
   <validationclasses name="validationClass">
-    <classattribute name="jedinstvenBrojKorisnikaJavnihSredstava" label="&#x408;&#x411;&#x41a;&#x408;&#x421;" isClassRepresenting="true">
+    <classattribute name="jedinstvenBrojKorisnikaJavnihSredstava" label="&#x408;&#x411;&#x41a;&#x408;&#x421;" master="true" isClassRepresenting="true">
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
       </attributetype>
@@ -26,7 +26,7 @@
         <attributeRuleErrorMessage message="&#x408;&#x435;&#x434;&#x438;&#x43d;&#x441;&#x442;&#x432;&#x435;&#x43d; &#x431;&#x440;&#x43e;&#x458; &#x43a;&#x43e;&#x440;&#x438;&#x441;&#x43d;&#x438;&#x43a;&#x430; &#x458;&#x430;&#x432;&#x43d;&#x438;&#x445; &#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x430; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x437;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
       </attributerule>
     </classattribute>
-    <classattribute name="nazicPravnogLica" label="&#x41d;&#x430;&#x437;&#x438;&#x432; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x433; &#x43b;&#x438;&#x446;&#x430;" isClassRepresenting="true">
+    <classattribute name="nazicPravnogLica" label="&#x41d;&#x430;&#x437;&#x438;&#x432; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x433; &#x43b;&#x438;&#x446;&#x430;" master="true" isClassRepresenting="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:TextInput"/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
@@ -35,7 +35,7 @@
         <attributeRuleErrorMessage message="&#x41d;&#x430;&#x437;&#x438;&#x432; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x433; &#x43b;&#x438;&#x446;&#x430; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x437;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
       </attributerule>
     </classattribute>
-    <classattribute name="jedinstveniMaticniBrojGradjanina" label="&#x41c;&#x430;&#x442;&#x438;&#x447;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;">
+    <classattribute name="jedinstveniMaticniBrojGradjanina" label="&#x41c;&#x430;&#x442;&#x438;&#x447;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;" master="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:TextInput" placeHolder="0000000000000"/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
@@ -43,7 +43,7 @@
       <attributerule xsi:type="formValidation:Required"/>
       <attributerule xsi:type="formValidation:StringPattern" value="[0-9]{13}"/>
     </classattribute>
-    <classattribute name="poreskiIdentifikacioniBroj" label="&#x41f;&#x43e;&#x440;&#x435;&#x441;&#x43a;&#x438; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;">
+    <classattribute name="poreskiIdentifikacioniBroj" label="&#x41f;&#x43e;&#x440;&#x435;&#x441;&#x43a;&#x438; &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x438; &#x431;&#x440;&#x43e;&#x458;" master="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:NumericUIComponent"/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
@@ -128,7 +128,7 @@
     <classrule xsi:type="formValidation:GreaterThan" classattribute="//@validationclasses.1/@classattribute.12">
       <attributearray attributes="//@validationclasses.1/@classattribute.13"/>
     </classrule>
-    <formlayout xsi:type="formValidation:FieldSet" name="podaciOPravnomLicuOrganu">
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOPravnomLicuOrganu" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x43c; &#x43b;&#x438;&#x446;&#x443;/&#x43e;&#x440;&#x433;&#x430;&#x43d;&#x443;">
       <layouts xsi:type="formValidation:Grid" name="grid11">
         <attributearray attributes="//@validationclasses.1/@classattribute.0"/>
       </layouts>
@@ -145,14 +145,14 @@
         <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.6"/>
       </layouts>
     </formlayout>
-    <formlayout xsi:type="formValidation:FieldSet" name="podaciOAdministratoru">
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOAdministratoru" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x430;&#x434;&#x43c;&#x438;&#x43d;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43e;&#x440;&#x443;">
       <attributearray attributes="//@validationclasses.1/@classattribute.7 //@validationclasses.1/@classattribute.8"/>
       <layouts xsi:type="formValidation:Grid" name="grid21">
         <attributearray attributes="//@validationclasses.1/@classattribute.10 //@validationclasses.1/@classattribute.9"/>
         <layouts xsi:type="formValidation:FieldSet" name="aa"/>
       </layouts>
     </formlayout>
-    <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor">
+    <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43e;&#x458; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x438;">
       <attributearray attributes="//@validationclasses.1/@classattribute.11"/>
     </formlayout>
     <additionalSettings xsi:type="formValidation:ErrorMessageSettings" position="Below">

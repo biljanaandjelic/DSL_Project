@@ -11,6 +11,14 @@ $(".dropdown-item").click(function(){
 		
 	});
 
+var organizacionaJedinicaMetaDataMaster =[  broj ];
+var organizacionaJedinicaMetaDataRepresenting =[  ];
+
+var organizacionaJedinicaAllAttributes =[  broj,  naziv ];
+var validationClassMetaDataMaster =[  jedinstvenBrojKorisnikaJavnihSredstava,  nazicPravnogLica,  jedinstveniMaticniBrojGradjanina,  poreskiIdentifikacioniBroj ];
+var validationClassMetaDataRepresenting =[  jedinstvenBrojKorisnikaJavnihSredstava,  nazicPravnogLica  ];
+
+var validationClassAllAttributes =[  jedinstvenBrojKorisnikaJavnihSredstava,  nazicPravnogLica,  jedinstveniMaticniBrojGradjanina,  poreskiIdentifikacioniBroj,  adresaSedista,  adresaElektronskePoste,  brojTelefona,  imeIPrezimeAdminstratora,  brojIdentifikacioneOznake,  brojTelefonaAdministratoraa,  adresaElektronskePosteAdministratora,  brojOrganizacioneJedinice,  nn,  mm ];
 
 $(function() {
 var brojOrganizacioneJediniceAvailableTags = [];
