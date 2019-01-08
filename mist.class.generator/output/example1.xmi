@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation">
   <validationclasses name="organizacionaJedinica" label="&#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x430; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x430;">
-    <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;" master="true">
+    <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;" master="true" isClassRepresenting="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:NumericUIComponent"/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>

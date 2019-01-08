@@ -10,9 +10,7 @@
 				display: none;
 			}
 	</style>
-	<sctipt>
 
-	</script>
 	<meta charset=\"UTF-8\">
 	<title></title>
 </head>
@@ -26,12 +24,10 @@
 	      <ul class="navbar-nav">
 	    
 	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	        Add 
-	        </a>
+	          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	        <a class="dropdown-item" href="#addorganizacionaJedinica">organizacionaJedinica</a>
-	        <a class="dropdown-item" href="#addvalidationClass">validationClass</a>
+	        <a class="dropdown-item" href="#addorganizacionaJedinica">Организациона јединица</a>
+	        <a class="dropdown-item" href="#addvalidationClass">Validation Class </a>
 	        </div>
 	        </li>
 			<li class="nav-item dropdown">
@@ -39,38 +35,43 @@
 	        Overview 
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	            <a class="dropdown-item" href="#overvieworganizacionaJedinica">organizacionaJedinica</a>
-	            <a class="dropdown-item" href="#overviewvalidationClass">validationClass</a>
+	            <a class="dropdown-item" href="#overvieworganizacionaJedinica">Организациона јединица</a>
+	            <a class="dropdown-item" href="#overviewvalidationClass">Validation Class </a>
 	        </div>
 	        </li>
 	      </ul>
 	    </div>
 	  </nav>
     			      <div id="addorganizacionaJedinica" class="panel">
-    			      <form>
+    			      <form id="organizacionaJedinicaForm">
     			      <div class="form-row">
-    			      <div class="form-group col-md-1">
+    			      <div class="form-group col-md-12">
     			      	<label> Број </label>
-    			      	<input id="brojid" class="form-control" type="number" placeholder="" />
+    			      	<input id="brojId" class="form-control" type="number" placeholder="" name="broj"/>
     			      </div>
-    			      <div class="form-group col-md-1">
+    			      
+    			      <div class="form-group col-md-12">
     			      	<label> Назив </label>
-    			      	<input id="nazivid" class="form-control" type="text" placeholder="" />
+    			      	<input id="nazivId" class="form-control" type="text" placeholder="" name="naziv"/>
     			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success" id="organizacionaJedinicaSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="organizacionaJedinicacancelButton"/>
     			      </div>
     			      </form>
     			      </div>
 <div id="overvieworganizacionaJedinica" class="panel">
 	<table class="table table-hover" id="organizacionaJedinicaTable">
-		  <thead>
-		  	<tr>
-		  		<th scope="col">
-		  		Број 
-		  		</th>
-		  		
-		  	</tr>
-		  </thead>
-	</table>
+		<thead>
+	    <tr>
+	    <th scope="col" name="broj"> Број </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
 	
 	<div id="linkedDataorganizacionaJedinica">
 	<ul class="nav nav-tabs">
@@ -81,12 +82,24 @@
 	<div class="tab-content">
 	<div id="organizacionaJedinicadetails" class="tab-pane active container">
 	 Додатне информације
+	 <table class="table table-hover" id="organizacionaJedinicaTableDetails">
+	 <thead>
+				 <tr>
+ <th scope="col" name="naziv">
+ Назив 
+</th>
+ 				  			
+	     </tr>
+	     </thead>
+	     <tbody>
+	     </tbody>
+	     </table>
 	</div>
 	</div>
 	</div>
 </div>
     			      <div id="addvalidationClass" class="panel">
-    			      <form>
+    			      <form id="validationClassForm">
     			      
     			       <fieldset class="border p-2">
     			      <legend class="w-auto">Подаци о правном лицу/органу</legend>
@@ -100,8 +113,9 @@
     			      	
     			      	
     			      	
-    			      	 <input id="jedinstvenBrojKorisnikaJavnihSredstavaid" class="form-control" type="text" placeholder="" />
+    			      	 <input id="jedinstvenBrojKorisnikaJavnihSredstavaId" class="form-control" type="text" placeholder="" name="jedinstvenBrojKorisnikaJavnihSredstava"/>
     			      </div>
+    			      
     			      </div>
     			      
     			       
@@ -110,8 +124,9 @@
     			      <div class="form-row">
     			      <div class="form-group col-md-12">
     			      	<label> Назив правног лица </label>
-    			      	<input id="nazicPravnogLicaid" class="form-control" type="text" placeholder="" />
+    			      	<input id="nazicPravnogLicaId" class="form-control" type="text" placeholder="" name="nazicPravnogLica"/>
     			      </div>
+    			      
     			      </div>
     			      
     			       
@@ -120,12 +135,14 @@
     			      <div class="form-row">
     			      <div class="form-group col-md-6">
     			      	<label> Матични број </label>
-    			      	<input id="jedinstveniMaticniBrojGradjaninaid" class="form-control" type="text" placeholder="0000000000000" />
+    			      	<input id="jedinstveniMaticniBrojGradjaninaId" class="form-control" type="text" placeholder="0000000000000" name="jedinstveniMaticniBrojGradjanina"/>
     			      </div>
+    			      
     			      <div class="form-group col-md-6">
     			      	<label> Порески идентификациони број </label>
-    			      	<input id="poreskiIdentifikacioniBrojid" class="form-control" type="number" placeholder="" />
+    			      	<input id="poreskiIdentifikacioniBrojId" class="form-control" type="number" placeholder="" name="poreskiIdentifikacioniBroj"/>
     			      </div>
+    			      
     			      </div>
     			      
     			       
@@ -134,8 +151,9 @@
     			      <div class="form-row">
     			      <div class="form-group col-md-12">
     			      	<label> Адреса сједишта </label>
-    			      	 <textarea class="form-control" rows="1" id="adresaSedista" placeholder=""></textarea>
+    			      	 <textarea class="form-control" rows="1" id="adresaSedistaId" name="adresaSedista" placeholder=""></textarea>
     			      </div>
+    			      
     			      </div>
     			      
     			       
@@ -144,21 +162,23 @@
     			      <div class="form-row">
     			      <div class="form-group col-md-6">
     			      	<label> Адреса електронске поште </label>
-    			      	<input id="adresaElektronskePosteid" class="form-control" type="email" placeholder="" />
+    			      	<input id="adresaElektronskePosteId" class="form-control" type="email" placeholder="" name="adresaElektronskePoste"/>
     			      </div>
+    			      
     			      <div class="form-group col-md-6">
     			      	<label> Број телефона </label>
-    			      	<input id="brojTelefonaid" class="form-control" type="tel" placeholder="" />
+    			      	<input id="brojTelefonaId" class="form-control" type="tel" placeholder="" name="brojTelefona"/>
     			      </div>
+    			      
     			      </div>
     			      
     			      </fieldSet>
     			       <fieldset class="border p-2">
     			      <legend class="w-auto">Подаци о администратору</legend>
     			      <label> Име и презиме </label>
-    			      <input id="imeIPrezimeAdminstratoraid" class="form-control" type="text" placeholder="Петар Петровић" />
+    			      <input id="imeIPrezimeAdminstratoraId" class="form-control" type="text" placeholder="Петар Петровић" name="imeIPrezimeAdminstratora"/>
     			      <label> Број идентификационе ознаке </label>
-    			      <input id="brojIdentifikacioneOznakeid" class="form-control" type="text" placeholder="" />
+    			      <input id="brojIdentifikacioneOznakeId" class="form-control" type="text" placeholder="" name="brojIdentifikacioneOznake"/>
     			      
     			       
     			      
@@ -166,12 +186,14 @@
     			      <div class="form-row">
     			      <div class="form-group col-md-6">
     			      	<label> Адреса електронске поште </label>
-    			      	<input id="adresaElektronskePosteAdministratoraid" class="form-control" type="email" placeholder="" />
+    			      	<input id="adresaElektronskePosteAdministratoraId" class="form-control" type="email" placeholder="" name="adresaElektronskePosteAdministratora"/>
     			      </div>
+    			      
     			      <div class="form-group col-md-6">
     			      	<label> Број телефона </label>
-    			      	<input id="brojTelefonaAdministratoraaid" class="form-control" type="text" placeholder="" />
+    			      	<input id="brojTelefonaAdministratoraaId" class="form-control" type="text" placeholder="" name="brojTelefonaAdministratoraa"/>
     			      </div>
+    			      
     			      </div>
     			      
     			      </fieldSet>
@@ -179,34 +201,29 @@
     			      <legend class="w-auto">Подаци о организационој јединици</legend>
     			      <label> Број организационе јединице </label>
     			      
-    			      <input class="form-control autocomplete"  id="brojOrganizacioneJedinice" placeholder="Enter A" />
+    			       <input class="form-control autocomplete"  id="brojOrganizacioneJedinice"Id name="brojOrganizacioneJedinice" placeholder="Enter A" data-class="organizacionaJedinica" />
+    			          	   
     			      
     			      </fieldSet>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success" id="validationClassSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="validationClasscancelButton"/>
+    			      </div>
     			      </form>
     			      </div>
 <div id="overviewvalidationClass" class="panel">
 	<table class="table table-hover" id="validationClassTable">
-		  <thead>
-		  	<tr>
-		  		<th scope="col">
-		  		ЈБКЈС 
-		  		</th>
-		  		
-		  		<th scope="col">
-		  		Назив правног лица 
-		  		</th>
-		  		
-		  		<th scope="col">
-		  		Матични број 
-		  		</th>
-		  		
-		  		<th scope="col">
-		  		Порески идентификациони број 
-		  		</th>
-		  		
-		  	</tr>
-		  </thead>
-	</table>
+		<thead>
+	    <tr>
+	    <th scope="col" name="jedinstvenBrojKorisnikaJavnihSredstava"> ЈБКЈС </th>
+	    <th scope="col" name="nazicPravnogLica"> Назив правног лица </th>
+	    <th scope="col" name="jedinstveniMaticniBrojGradjanina"> Матични број </th>
+	    <th scope="col" name="poreskiIdentifikacioniBroj"> Порески идентификациони број </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
 	
 	<div id="linkedDatavalidationClass">
 	<ul class="nav nav-tabs">
@@ -221,16 +238,79 @@
 	<div class="tab-content">
 	<div id="validationClassdetails" class="tab-pane active container">
 	 Додатне информације
+	 <table class="table table-hover" id="validationClassTableDetails">
+	 <thead>
+				 <tr>
+ <th scope="col" name="adresaSedista">
+ Адреса сједишта 
+</th>
+ 				  			
+ <th scope="col" name="adresaElektronskePoste">
+ Адреса електронске поште 
+</th>
+ 				  			
+ <th scope="col" name="brojTelefona">
+ Број телефона 
+</th>
+ 				  			
+ <th scope="col" name="imeIPrezimeAdminstratora">
+ Име и презиме 
+</th>
+ 				  			
+ <th scope="col" name="brojIdentifikacioneOznake">
+ Број идентификационе ознаке 
+</th>
+ 				  			
+ <th scope="col" name="brojTelefonaAdministratoraa">
+ Број телефона 
+</th>
+ 				  			
+ <th scope="col" name="adresaElektronskePosteAdministratora">
+ Адреса електронске поште 
+</th>
+ 				  			
+ <th scope="col" name="brojOrganizacioneJedinice">
+ Број организационе јединице 
+</th>
+ 				  			
+ <th scope="col" name="nn">
+ Nn 
+</th>
+ 				  			
+ <th scope="col" name="mm">
+ Mm 
+</th>
+ 				  			
+	     </tr>
+	     </thead>
+	     <tbody>
+	     </tbody>
+	     </table>
 	</div>
 		 <div id="organizacionaJedinicatab"  class="tab-pane container">
 			organizacionaJedinica
+			<table class="table table-hover" id="organizacionaJedinicaTable">
+				<thead>
+			    <tr>
+			    <th scope="col" name="broj"> Број </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
 		</div>
 	</div>
 	</div>
 </div>
 	<link rel="stylesheet" href="validationClass.css">
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+	
 	  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	

@@ -5,6 +5,7 @@ organizacionaJedinica{
 		Data type Number
 		NumericUIComponent {}
 		Master
+		ClassRepresenting
 		Required
 		{
 			Error message "Број органиѕационе јединице је обавеѕно поље."
