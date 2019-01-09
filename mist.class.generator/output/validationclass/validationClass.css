@@ -61,11 +61,14 @@ div form{
 .formButtons{
 	float: right;
 	}
-	
+table{
+	margin: 0 auto;
+	}
 	     #addorganizacionaJedinica{
  	align: center;
  }
  
+
 	     #addvalidationClass{
  	align: center;
  }
@@ -76,6 +79,7 @@ div form{
 #validationClassForm label.error{
    	color : #FF0000;
    }
-"#validationClassTable"{
-	width: 600px;
-}
+
+		#validationClassTable{
+			width: 600px;
+		}

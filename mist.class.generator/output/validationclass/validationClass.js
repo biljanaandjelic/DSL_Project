@@ -52,14 +52,36 @@
 	$("body").on("mouseenter", ".Master", function(){
 				$this = $(this);
 				$parentTable = $this.parent().parent();
+				$divParent = $parentTable.parent();
+				$divElements = $divParent.find("div .referenced");
 				var tableName = $parentTable.attr("id").split("Table")[0];
 				var index = $this.attr("data-index");
 				var record = collections[tableName][index];
+				$.each($divElements, function(key, value){
+					var divId = value.id;
+					var attrName = value.id.split("Tab")[0];
+					var refValues = record[attrName]
+					var tableReferenced = $("#"+divId + " Table").attr("id");
+					$("#" + tableReferenced + " tbody").empty();
+					if(Object.prototype.toString.call(refValues) == '[object String]'){
+											
+					$("#" + tableReferenced).hide();
+					var noContentDiv = "<div class=\"noContent\"> There is no referenced records. </div>"
+					$("#"+divId).append(noContentDiv);
+					}else if(Object.prototype.toString.call(refValues) == '[object Array]' && refValues.length > 0){
+					$("#" + divId +" .noContent").remove();
+					$("#" + tableReferenced).show();
+					$.each(refValues, function(index, val){
+						addRecordInTable(val, tableReferenced, index, "Referenced");
+						
+						});
+					}
+					});
 				var attributes = tableName + "MetaDataMaster";
 				var metaDataMaster = metaData[attributes];
 				var id = $this.attr("id");
 				var additionalInfo = "#" + tableName + "details";
-				$(additonalInfo).html(id);
+				
 			
 			});
 
@@ -83,20 +105,31 @@
 	   			{
 	   				var values = $("#organizacionaJedinicaForm").serialize();
 	   				var record = recordInput(values);
-	   				var referencingAttribute = metaData["organizacionaJedinicaReferencingAttributes"];
+	   				var referencingAttributes = metaData["organizacionaJedinicaReferencingAttributes"];
 	   				var referencedClasses = metaData["organizacionaJedinicaReferencedClasses"];
-	   				$.each(record,function(key,value){
+	   				
 	   					$.each(referencingAttributes, function(index, val){
 	   						var classRef = referencedClasses[index];
 	   						var referencedCollection = collections[classRef];
 	   						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-	   						$.each(referencedCollection, function(elKey, elValue){
-	   							if(val == representingAttribute && elValue == value){
-	   								record[key] = elValue;
+	   						var arrayOfValues = [];
+	   						var isFound = false;
+	   						referencedCollection.forEach(function(elValue, elIndex){
+	   						
+	   							if(elValue[representingAttribute] == record[val]){
+	   								isFound = true;
+	   								arrayOfValues.push(elValue);
+	   								record[val] = elValue;
 	   								}
 	   							});
+	   							
+	   							if(isFound){
+	   							    record[val] = arrayOfValues;
+	   							}
 	   						});
-	   					});
+	   						
+	   						
+	   					
 	   				var index = organizacionaJedinicaCollection.length;
 	   				collections["organizacionaJedinica"].push(record);
 	   				addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
@@ -186,20 +219,31 @@
 	   			{
 	   				var values = $("#validationClassForm").serialize();
 	   				var record = recordInput(values);
-	   				var referencingAttribute = metaData["validationClassReferencingAttributes"];
+	   				var referencingAttributes = metaData["validationClassReferencingAttributes"];
 	   				var referencedClasses = metaData["validationClassReferencedClasses"];
-	   				$.each(record,function(key,value){
+	   				
 	   					$.each(referencingAttributes, function(index, val){
 	   						var classRef = referencedClasses[index];
 	   						var referencedCollection = collections[classRef];
 	   						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-	   						$.each(referencedCollection, function(elKey, elValue){
-	   							if(val == representingAttribute && elValue == value){
-	   								record[key] = elValue;
+	   						var arrayOfValues = [];
+	   						var isFound = false;
+	   						referencedCollection.forEach(function(elValue, elIndex){
+	   						
+	   							if(elValue[representingAttribute] == record[val]){
+	   								isFound = true;
+	   								arrayOfValues.push(elValue);
+	   								record[val] = elValue;
 	   								}
 	   							});
+	   							
+	   							if(isFound){
+	   							    record[val] = arrayOfValues;
+	   							}
 	   						});
-	   					});
+	   						
+	   						
+	   					
 	   				var index = validationClassCollection.length;
 	   				collections["validationClass"].push(record);
 	   				addRecordInTable(record, "validationClassTable", index, "Master");

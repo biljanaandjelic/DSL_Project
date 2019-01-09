@@ -71,7 +71,7 @@ class JavaGenerator{
     		      <script src="«businessModel.validationclasses.get(1).name».js"></script>    			</body>
     		</html>
     	'''
-    }    def generateCSS(BusinessModel businessModel){    	'''    	«generateAutocompleteCSS()»    	form{    		width: 80%;    		margin: 0 auto;    		}    		    	div form{    		align: center;    		}    		    	.formButtons{    		float: right;    		}    		    	 «FOR valClass : businessModel.validationclasses»	     #add«valClass.name»{    	 	align: center;    	 }    	     	«generateAdditionlSettings(valClass)»    	«generateTableStyle(valClass)»	    	«ENDFOR»    	'''    }        def generateAutocompleteCSS(){    	'''    	.ui-autocomplete {
+    }    def generateCSS(BusinessModel businessModel){    	'''    	«generateAutocompleteCSS()»    	form{    		width: 80%;    		margin: 0 auto;    		}    		    	div form{    		align: center;    		}    		    	.formButtons{    		float: right;    		}    	table{    		margin: 0 auto;    		}    	 «FOR valClass : businessModel.validationclasses»	     #add«valClass.name»{    	 	align: center;    	 }    	     	«generateAdditionlSettings(valClass)»    	«generateTableStyle(valClass)»	    	«ENDFOR»    	'''    }        def generateAutocompleteCSS(){    	'''    	.ui-autocomplete {
     	  position: absolute;
     	  top: 100%;
     	  left: 0;
@@ -124,11 +124,11 @@ class JavaGenerator{
     	}    	'''    }        def generateAdditionlSettings(ValidationClass vClass){   		'''   		    	«FOR classSetting : vClass.additionalSettings»	   		    		«IF classSetting instanceof ErrorMessageSettings»   		    			#«vClass.name»Form label.error{   		    				color : («classSetting.color.red», «classSetting.color.green», «classSetting.color.blue»)   		    				}   		    		«ELSE»   		    		#«vClass.name»Form label.error{
    		    		   	color : #FF0000;
    		    		   }   		    		«ENDIF»
-   		    	«ENDFOR»   		'''    }        def generateTableStyle(ValidationClass vClass){    	'''    			«IF vClass.overviewsettings != null && vClass.overviewsettings.tableoverview!= null && vClass.overviewsettings.tableoverview.width>0»    			"#«vClass.name»Table"{    				width: «vClass.overviewsettings.tableoverview.width»px;    			}    			«ENDIF»    	'''    }        def generateClassOverview(ValidationClass validationClass){    	'''    		<div id="overview«validationClass.name»" class="panel">    			«generateTable(validationClass)»    			    			<div id="linkedData«validationClass.name»">    			<ul class="nav nav-tabs">
+   		    	«ENDFOR»   		'''    }        def generateTableStyle(ValidationClass vClass){    	'''    	    			«IF vClass.overviewsettings != null && vClass.overviewsettings.tableoverview!= null && vClass.overviewsettings.tableoverview.width>0»    			#«vClass.name»Table{    				width: «vClass.overviewsettings.tableoverview.width»px;    			}    			«ENDIF»    	'''    }        def generateClassOverview(ValidationClass validationClass){    	'''    		<div id="overview«validationClass.name»" class="panel">    			«generateTable(validationClass,"")»    			    			<div id="linkedData«validationClass.name»">    			<ul class="nav nav-tabs">
     				<li class="nav-item">
     					<a class="nav-link active" href="#«validationClass.name»details" data-toggle="tab">Додатне информације о ентитету</a>
     				</li>    				«FOR attr : validationClass.classattribute»    					«IF attr.attributetype.attributeDataType instanceof NonPrimitiveDataType»    					«var refClass = attr.attributetype.attributeDataType as NonPrimitiveDataType»    					    					 <li class="nav-item">
-    					     	<a class="nav-link" href="#«refClass.type.name»tab" data-toggle="tab">«refClass.type.name»</a>
+    					     	<a class="nav-link" href="#«attr.name»Tab" data-toggle="tab">«generateInputLabel(refClass.type.name, refClass.type.label)»</a>
     					  </li>    					«ENDIF»    				«ENDFOR»    			</ul>    			<div class="tab-content">    			<div id="«validationClass.name»details" class="tab-pane active container">    			 Додатне информације    			 <table class="table table-hover" id="«validationClass.name»TableDetails">
     			 <thead>
 				 <tr>
@@ -151,12 +151,10 @@ class JavaGenerator{
     			     </table>    			</div>    			«FOR attr : validationClass.classattribute»
     			   «IF attr.attributetype.attributeDataType instanceof NonPrimitiveDataType»
     			    «var refClass = attr.attributetype.attributeDataType as NonPrimitiveDataType»
-    			    	«var refClassName = refClass.type.name»
-    			    	 <div id="«refClassName»tab"  class="tab-pane container">
-    			    		«refClassName»    			    		«var referencedClass = refClass.type as ValidationClass»    			    		«generateTable(referencedClass)»
+    			    	 <div id="«attr.name»Tab"  class="tab-pane container referenced">    			    		«var referencedClass = refClass.type as ValidationClass»    			    		«generateTable(referencedClass,"Ref")»
     			    	</div>
     			   «ENDIF»
-    			«ENDFOR»    			</div>    			</div>    		</div>    	'''    }        def generateTable(ValidationClass validationClass){    	'''    	<table class="table table-hover" id="«validationClass.name»Table">
+    			«ENDFOR»    			</div>    			</div>    		</div>    	'''    }        def generateTable(ValidationClass validationClass, String kind){    	'''    	<table class="table table-hover" id="«IF kind.empty»«validationClass.name»Table">«ELSE»«validationClass.name»Table«kind»">«ENDIF»
     		<thead>
     	    <tr>
     	    «FOR attr : validationClass.classattribute»
@@ -191,15 +189,32 @@ class JavaGenerator{
 		«IF rule instanceof StringPattern»«stringPattern(rule)»«ENDIF»
 		«IF rule instanceof MinLength»«minLengthRule(rule)»«ENDIF»
 		«IF rule instanceof MaxLength»«maxLengthRule(rule)»«ENDIF»
-		«««IF rule instanceof MinNumber»«minNumberRule(rule)»«ENDIF»
-		«««IF rule instanceof MaxNumber»«maxNumberRule(rule)»«ENDIF»
+		«IF rule instanceof MinNumber»«minNumberRule(rule)»«ENDIF»
+		«IF rule instanceof MaxNumber»«maxNumberRule(rule)»«ENDIF»
 		«««IF rule instanceof MinDate»«minDateRule(rule)»«ENDIF»
 		«««IF rule instanceof MaxDate»«maxDateRule(rule)»«ENDIF»
 		«««IF rule instanceof AcceptableValuesString»list="«attributeName»"«ENDIF»
 		«IF rule instanceof Length»«setLengthRule(rule)»«ENDIF»
 		«««IF rule instanceof AcceptableValuesDate»list="«attributeName»"«ENDIF»
     	'''
-    }                def generateAttributeRulesMessage(AttributeRule rule, String attributeName){		'''			«IF rule instanceof Required»			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»			required: "«rule.attributeRuleErrorMessage.message»"			«ENDIF»			«ENDIF»		'''    }
+    }                def generateAttributeRulesMessage(AttributeRule rule, String attributeName){		'''			«IF rule instanceof Required»			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»			required: "«rule.attributeRuleErrorMessage.message»"			«ENDIF»			«ELSEIF rule instanceof StringPattern»			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			pattern: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ELSEIF rule instanceof Length»
+			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			length: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ELSEIF rule instanceof MaxLength»
+			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			maxlength: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ELSEIF rule instanceof MinLength»
+			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			minlength: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ELSEIF rule instanceof MinNumber»
+			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			min: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ELSEIF rule instanceof MaxNumber»
+			«IF rule.attributeRuleErrorMessage!= null && rule.attributeRuleErrorMessage.message!=""»
+			max: "«rule.attributeRuleErrorMessage.message»"
+			«ENDIF»			«ENDIF»		'''    }
     
     def stringPattern(StringPattern pattern){
     	'''
@@ -221,13 +236,13 @@ class JavaGenerator{
     
     def minNumberRule(MinNumber minNumber){
     	'''
-    		min="«minNumber.value»"
+    		min: "«minNumber.value»"
     	'''
     }
     
     def maxNumberRule(MaxNumber maxNumber){
     	'''
-    		max="«maxNumber.value»"
+    		max: "«maxNumber.value»"
     	'''
     }
     
@@ -341,9 +356,17 @@ class JavaGenerator{
     	'''      /* 	'''    	var refAttrClass = [];    	«FOR attr : vClass.classattribute»    		«IF attr.attributetype.attributeDataType instanceof NonPrimitiveDataType»    		«var dataType = attr.attributetype.attributeDataType as NonPrimitiveDataType »    		refAttrClass[«attr.name»] = «dataType.type.name»    		«ENDIF»    	«ENDFOR»    	metaData["«vClass.name»ReferencingAttributes"] = refAttrClass;    	''' */        }        def generateGlobalCollection(ValidationClass vClass){    	'''    	var «vClass.name»Collection = [];    	collections["«vClass.name»"] = «vClass.name»Collection;     	'''    }        def generateValidationRules(ValidationClass vClass){    	''' $("#«vClass.name»Form").validate({    			rules:{    			«FOR attr : vClass.classattribute»    				«generateAttributeRule(attr)»    			«ENDFOR»    			},    			messages: {				«FOR attr : vClass.classattribute»
 					 «generateAttributeRuleMessage(attr)»
 				«ENDFOR»    				}    		});    		    		$("#«vClass.name»SubmitButton").click(function(){    			    			if($("#«vClass.name»Form").valid())    			{
-    				var values = $("#«vClass.name»Form").serialize();    				var record = recordInput(values);    				var referencingAttribute = metaData["«vClass.name»ReferencingAttributes"];    				var referencedClasses = metaData["«vClass.name»ReferencedClasses"];    				$.each(record,function(key,value){    					$.each(referencingAttributes, function(index, val){    						var classRef = referencedClasses[index];    						var referencedCollection = collections[classRef];    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];    						$.each(referencedCollection, function(elKey, elValue){    							if(val == representingAttribute && elValue == value){    								record[key] = elValue;    								}    							});    						});    					});    				var index = «vClass.name»Collection.length;    				collections["«vClass.name»"].push(record);    				addRecordInTable(record, "«vClass.name»Table", index, "Master");    			}    			else    			{    				return false;    			}    		});    		    	'''	    }        def getReferencedClass(ValidationClass vclass){    	'''    	'''    }        def addRecord(){    	'''    	addRecordInTable = function(record, tableIdentifier, index, className){    		var identifier = "#" + tableIdentifier;    		var newRow = "<tr class="+className+" data-index="+index+">";    		$(identifier + " th").each(function(){    			newRow += "<td>" + record[$(this).attr("name")] + "</td>"    		});    		newRow += "</tr>"
+    				var values = $("#«vClass.name»Form").serialize();    				var record = recordInput(values);    				var referencingAttributes = metaData["«vClass.name»ReferencingAttributes"];    				var referencedClasses = metaData["«vClass.name»ReferencedClasses"];    				    					$.each(referencingAttributes, function(index, val){    						var classRef = referencedClasses[index];    						var referencedCollection = collections[classRef];    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];    						var arrayOfValues = [];    						var isFound = false;    						referencedCollection.forEach(function(elValue, elIndex){    						    							if(elValue[representingAttribute] == record[val]){    								isFound = true;    								arrayOfValues.push(elValue);    								record[val] = elValue;    								}    							});    							    							if(isFound){
+    							    record[val] = arrayOfValues;
+    							}    						});    						    						    					    				var index = «vClass.name»Collection.length;    				collections["«vClass.name»"].push(record);    				addRecordInTable(record, "«vClass.name»Table", index, "Master");    			}    			else    			{    				return false;    			}    		});    		    	'''	    }        def getReferencedClass(ValidationClass vclass){    	'''    	'''    }        def addRecord(){    	'''    	addRecordInTable = function(record, tableIdentifier, index, className){    		var identifier = "#" + tableIdentifier;    		var newRow = "<tr class="+className+" data-index="+index+">";    		$(identifier + " th").each(function(){    			newRow += "<td>" + record[$(this).attr("name")] + "</td>"    		});    		newRow += "</tr>"
     		$(identifier +" tbody").append(newRow);
-    	}    	'''    }        def selectRecord(){    	'''$("body").on("mouseenter", ".Master", function(){			$this = $(this);			$parentTable = $this.parent().parent();			var tableName = $parentTable.attr("id").split("Table")[0];			var index = $this.attr("data-index");			var record = collections[tableName][index];			var attributes = tableName + "MetaDataMaster";			var metaDataMaster = metaData[attributes];			var id = $this.attr("id");			var additionalInfo = "#" + tableName + "details";			$(additonalInfo).html(id);				});	'''    }    	def recordInput(){		'''		recordInput = function(inputValues){		var values = inputValues.split("&");		var record = [];		values.forEach(function(value){			var velAux = value.split("=");					record[velAux[0]]= velAux[1];		});				return record;		}		'''	}        def generateAttributeRule(ClassAttribute attribute){    	'''    		«IF attribute.attributerule.size>0»    		«attribute.name»: {    			«FOR rule : attribute.attributerule SEPARATOR ',' AFTER ''»
+    	}    	'''    }        def selectRecord(){    	'''$("body").on("mouseenter", ".Master", function(){			$this = $(this);			$parentTable = $this.parent().parent();			$divParent = $parentTable.parent();			$divElements = $divParent.find("div .referenced");			var tableName = $parentTable.attr("id").split("Table")[0];			var index = $this.attr("data-index");			var record = collections[tableName][index];			$.each($divElements, function(key, value){				var divId = value.id;				var attrName = value.id.split("Tab")[0];				var refValues = record[attrName]				var tableReferenced = $("#"+divId + " Table").attr("id");				$("#" + tableReferenced + " tbody").empty();				if(Object.prototype.toString.call(refValues) == '[object String]'){
+										
+				$("#" + tableReferenced).hide();
+				var noContentDiv = "<div class=\"noContent\"> There is no referenced records. </div>"
+				$("#"+divId).append(noContentDiv);
+				}else if(Object.prototype.toString.call(refValues) == '[object Array]' && refValues.length > 0){				$("#" + divId +" .noContent").remove();
+				$("#" + tableReferenced).show();				$.each(refValues, function(index, val){					addRecordInTable(val, tableReferenced, index, "Referenced");										});				}				});			var attributes = tableName + "MetaDataMaster";			var metaDataMaster = metaData[attributes];			var id = $this.attr("id");			var additionalInfo = "#" + tableName + "details";							});	'''    }    	def recordInput(){		'''		recordInput = function(inputValues){		var values = inputValues.split("&");		var record = [];		values.forEach(function(value){			var velAux = value.split("=");					record[velAux[0]]= velAux[1];		});				return record;		}		'''	}        def generateAttributeRule(ClassAttribute attribute){    	'''    		«IF attribute.attributerule.size>0»    		«attribute.name»: {    			«FOR rule : attribute.attributerule SEPARATOR ',' AFTER ''»
     			    «generateAttributeRules(rule, attribute.name)»
     			«ENDFOR»    		},    		«ENDIF»    	'''    }        def generateAttributeRuleMessage(ClassAttribute attribute){    	'''    		«IF attribute.attributerule.size>0»
     	    	«attribute.name»: {
