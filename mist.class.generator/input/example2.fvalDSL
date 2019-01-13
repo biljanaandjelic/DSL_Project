@@ -1,0 +1,51 @@
+{
+	label "Example2"
+	description "Description of site"
+	
+	class1{
+		label "Class1"
+		
+		classAttr{
+			Data type String
+			Master 
+			ClassRepresenting
+		}
+		
+		classBbbb{
+			Data type String
+			CheckBox{}
+			Master
+			Required
+			AcceptableValuesString { "aaa", "www"}
+		}
+		
+		classCcc{
+			Data type String
+			RadioButton {}
+			Required
+			AcceptableValuesString { "aaa", "www"}
+		}
+		
+		aaa{
+			Data type String	
+		}
+		
+		classYYa{
+			Data type Number
+		}
+		
+		Tab aa{
+			attributes (classAttr, classBbbb)
+		}
+		Tab bb{
+			{
+				Grid aww{
+					row(classCcc, aaa, classYYa)
+					
+				}
+			}
+			
+		}
+		
+	}
+}

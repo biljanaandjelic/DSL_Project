@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="Example2" description="Description of site">
+  <validationclasses name="class1" label="Class1">
+    <classattribute name="classAttr" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="classBbbb" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:CheckBox"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>aaa</values>
+        <values>www</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="classCcc">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:RadioButton"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>aaa</values>
+        <values>www</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="aaa">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="classYYa">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+    </classattribute>
+    <formlayout xsi:type="formValidation:Tab" name="aa">
+      <attributearray attributes="//@validationclasses.0/@classattribute.0 //@validationclasses.0/@classattribute.1"/>
+    </formlayout>
+    <formlayout xsi:type="formValidation:Tab" name="bb">
+      <layouts xsi:type="formValidation:Grid" name="aww">
+        <attributearray attributes="//@validationclasses.0/@classattribute.2 //@validationclasses.0/@classattribute.3 //@validationclasses.0/@classattribute.4"/>
+      </layouts>
+    </formlayout>
+  </validationclasses>
+</formValidation:BusinessModel>

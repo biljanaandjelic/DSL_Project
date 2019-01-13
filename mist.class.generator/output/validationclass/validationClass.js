@@ -5,7 +5,7 @@
 	
 	var organizacionaJedinicaMetaDataMaster =[  "broj"];
 	metaData["organizacionaJedinicaMetaDataMaster"] = organizacionaJedinicaMetaDataMaster;
-	var organizacionaJedinicaMetaDataRepresenting =[ "broj" ];
+	var organizacionaJedinicaMetaDataRepresenting =[  ];
 	metaData["organizacionaJedinicaMetaDataRepresenting"] = organizacionaJedinicaMetaDataRepresenting;
 	var organizacionaJedinicaAllAttributes =[  "broj" , "naziv" ];
 	metaData["organizacionaJedinicaAllAttributes"] = organizacionaJedinicaAllAttributes;
@@ -20,7 +20,7 @@
 	metaData["validationClassMetaDataMaster"] = validationClassMetaDataMaster;
 	var validationClassMetaDataRepresenting =[ "jedinstvenBrojKorisnikaJavnihSredstava","nazicPravnogLica" ];
 	metaData["validationClassMetaDataRepresenting"] = validationClassMetaDataRepresenting;
-	var validationClassAllAttributes =[  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" , "nn" , "mm" ];
+	var validationClassAllAttributes =[  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" , "vv" , "nn" , "mm" ];
 	metaData["validationClassAllAttributes"] = validationClassAllAttributes;
 	var validationClassCollection = [];
 	collections["validationClass"] = validationClassCollection; 

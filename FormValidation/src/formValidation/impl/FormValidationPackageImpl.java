@@ -1482,42 +1482,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGrid_NumOfColumns() {
-		return (EAttribute)gridEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGrid_NumOfRows() {
-		return (EAttribute)gridEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGrid_Order() {
-		return (EAttribute)gridEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGrid_ExpandLast() {
-		return (EAttribute)gridEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAttributeSettings() {
 		return attributeSettingsEClass;
 	}
@@ -1718,6 +1682,24 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 */
 	public EReference getBusinessModel_Validationclasses() {
 		return (EReference)businessModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusinessModel_Label() {
+		return (EAttribute)businessModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusinessModel_Description() {
+		return (EAttribute)businessModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2175,10 +2157,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(tabEClass, TAB__LABEL);
 
 		gridEClass = createEClass(GRID);
-		createEAttribute(gridEClass, GRID__NUM_OF_COLUMNS);
-		createEAttribute(gridEClass, GRID__NUM_OF_ROWS);
-		createEAttribute(gridEClass, GRID__ORDER);
-		createEAttribute(gridEClass, GRID__EXPAND_LAST);
 
 		attributeSettingsEClass = createEClass(ATTRIBUTE_SETTINGS);
 		createEAttribute(attributeSettingsEClass, ATTRIBUTE_SETTINGS__PRESENTATION);
@@ -2215,6 +2193,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 
 		businessModelEClass = createEClass(BUSINESS_MODEL);
 		createEReference(businessModelEClass, BUSINESS_MODEL__VALIDATIONCLASSES);
+		createEAttribute(businessModelEClass, BUSINESS_MODEL__LABEL);
+		createEAttribute(businessModelEClass, BUSINESS_MODEL__DESCRIPTION);
 
 		errorMessageSettingsEClass = createEClass(ERROR_MESSAGE_SETTINGS);
 		createEAttribute(errorMessageSettingsEClass, ERROR_MESSAGE_SETTINGS__POSITION);
@@ -2461,7 +2441,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getTextArea_NumOfRows(), ecorePackage.getEInt(), "numOfRows", "1", 0, 1, TextArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(formLayoutEClass, FormLayout.class, "FormLayout", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFormLayout_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, 1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFormLayout_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, -1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFormLayout_Layouts(), this.getFormLayout(), null, "layouts", null, 0, -1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormLayout_Name(), ecorePackage.getEString(), "name", null, 0, 1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2472,10 +2452,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getTab_Label(), ecorePackage.getEString(), "label", null, 0, 1, Tab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGrid_NumOfColumns(), ecorePackage.getEInt(), "numOfColumns", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGrid_NumOfRows(), ecorePackage.getEInt(), "numOfRows", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGrid_Order(), this.getEGridOrder(), "order", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGrid_ExpandLast(), ecorePackage.getEBoolean(), "expandLast", "true", 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeSettingsEClass, AttributeSettings.class, "AttributeSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttributeSettings_Presentation(), this.getERequiredField(), "presentation", null, 0, 1, AttributeSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2512,6 +2488,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 
 		initEClass(businessModelEClass, BusinessModel.class, "BusinessModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusinessModel_Validationclasses(), this.getValidationClass(), null, "validationclasses", null, 0, -1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusinessModel_Label(), ecorePackage.getEString(), "label", null, 0, 1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusinessModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(errorMessageSettingsEClass, ErrorMessageSettings.class, "ErrorMessageSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getErrorMessageSettings_Position(), this.getEPosition(), "position", null, 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2700,7 +2678,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (formLayoutEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "checkFormLayout uniqueFormLayoutName nameFormat"
+			 "constraints", "checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat"
 		   });	
 		addAnnotation
 		  (businessModelEClass, 
@@ -2815,6 +2793,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		   new String[] {
 			 "checkFormLayout", "Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status",
 			 "uniqueFormLayoutName", "Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status",
+			 "numOfAttributeArraysFieldSet", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
+			 "numOfAttributeArrayTab", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
 			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')"
 		   });	
 		addAnnotation

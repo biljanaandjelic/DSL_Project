@@ -46,8 +46,26 @@ public class FormValDSLHighlightingCalculator implements ISemanticHighlightingCa
 		while (it.hasNext()) {
 			leaf = it.next();
 			String leafString = leaf.getText();
+			if(leaf.getText().trim().equals("{")){
+				highlightBusinessModel(leaf, it, acceptor, context);
+			}
+			/*if(!leaf.getText().trim().equals("") && !leaf.getText().equals("}")){
+				highlightClass(leaf, it, acceptor, context);
+			} */
 			
-			if(!leaf.getText().trim().equals("") && !leaf.getText().equals("}")){
+		}
+	}
+	
+	protected void highlightBusinessModel(INode leaf, Iterator<ILeafNode> it,
+			IHighlightedPositionAcceptor acceptor, String context){
+		while (it.hasNext()) {
+			leaf = it.next();
+			String leafString = leaf.getText();
+			if(leaf.getText().trim().toLowerCase().equals("label")){
+				highlightLabel(leaf, it, acceptor, context);
+			}else if(leaf.getText().trim().toLowerCase().equals("description")){
+				highlightLabel(leaf, it, acceptor, context);
+			}else if(!leaf.getText().trim().equals("") && !leaf.getText().equals("}")){
 				highlightClass(leaf, it, acceptor, context);
 			}
 			
@@ -267,9 +285,6 @@ public class FormValDSLHighlightingCalculator implements ISemanticHighlightingCa
 			String context){
 		int numOfOpenCurlyBraces = 0;
 		int numOfClosedCurlyBraces = 0;
-		System.out.println("###############");
-		System.out.println("ClassRules");
-		System.out.println("###############");
 		
 		while(it.hasNext()){
 			leaf = it.next();

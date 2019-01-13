@@ -35,14 +35,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implements FormLayout {
 	/**
-	 * The cached value of the '{@link #getAttributearray() <em>Attributearray</em>}' containment reference.
+	 * The cached value of the '{@link #getAttributearray() <em>Attributearray</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAttributearray()
 	 * @generated
 	 * @ordered
 	 */
-	protected AttributeArray attributearray;
+	protected EList<AttributeArray> attributearray;
 	/**
 	 * The cached value of the '{@link #getLayouts() <em>Layouts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -94,42 +94,11 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttributeArray getAttributearray() {
+	public EList<AttributeArray> getAttributearray() {
+		if (attributearray == null) {
+			attributearray = new EObjectContainmentEList<AttributeArray>(AttributeArray.class, this, FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY);
+		}
 		return attributearray;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAttributearray(AttributeArray newAttributearray, NotificationChain msgs) {
-		AttributeArray oldAttributearray = attributearray;
-		attributearray = newAttributearray;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY, oldAttributearray, newAttributearray);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAttributearray(AttributeArray newAttributearray) {
-		if (newAttributearray != attributearray) {
-			NotificationChain msgs = null;
-			if (attributearray != null)
-				msgs = ((InternalEObject)attributearray).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY, null, msgs);
-			if (newAttributearray != null)
-				msgs = ((InternalEObject)newAttributearray).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY, null, msgs);
-			msgs = basicSetAttributearray(newAttributearray, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY, newAttributearray, newAttributearray));
 	}
 
 	/**
@@ -174,7 +143,7 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
-				return basicSetAttributearray(null, msgs);
+				return ((InternalEList<?>)getAttributearray()).basicRemove(otherEnd, msgs);
 			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
 				return ((InternalEList<?>)getLayouts()).basicRemove(otherEnd, msgs);
 		}
@@ -209,7 +178,8 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
-				setAttributearray((AttributeArray)newValue);
+				getAttributearray().clear();
+				getAttributearray().addAll((Collection<? extends AttributeArray>)newValue);
 				return;
 			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
 				getLayouts().clear();
@@ -231,7 +201,7 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
-				setAttributearray((AttributeArray)null);
+				getAttributearray().clear();
 				return;
 			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
 				getLayouts().clear();
@@ -252,7 +222,7 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
-				return attributearray != null;
+				return attributearray != null && !attributearray.isEmpty();
 			case FormValidationPackage.FORM_LAYOUT__LAYOUTS:
 				return layouts != null && !layouts.isEmpty();
 			case FormValidationPackage.FORM_LAYOUT__NAME:

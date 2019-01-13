@@ -62,7 +62,7 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 		var isLength = false;
 		var isMaxOrMin = false;		
 		
-		if(classAttribute.attributetype.vrsta == EVrsta.STRING){
+	/*if(classAttribute.attributetype.vrsta == EVrsta.STRING){
 			
 			for(AttributeRule attrRule : classAttribute.attributerule){
 				if(attrRule instanceof Length){
@@ -78,7 +78,7 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 					error("It must not be set length rule at same time as minlength or maxlength. Please chose suitable rule.",
 						FormValidationPackage.Literals.CLASS_ATTRIBUTE__ATTRIBUTERULE);
 				}
-		}
+		}   */	
 	}
 	
 	@Check
@@ -87,7 +87,7 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 		var minLength=-1;
 		var maxLength=-1;
 		
-		if(classAttribute.attributetype.vrsta == EVrsta.STRING){
+		/*if(classAttribute.attributetype.vrsta == EVrsta.STRING){
 			for(AttributeRule rule : classAttribute.attributerule){
 				if(rule instanceof Length){
 					length=rule.value;
@@ -97,7 +97,7 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 					maxLength = rule.value;
 				}
 			}
-		}
+		} */
 		if(length!=-1){
 			for(AttributeRule rule : classAttribute.attributerule){
 				if(rule instanceof AcceptableValuesString){
@@ -220,10 +220,10 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 	def boolean isDateType(ClassAttribute attribute){
 		var flag = false;
 		
-		if(attribute.attributetype.vrsta == EVrsta.DATE){
+	/*if(attribute.attributetype.attributeDataType == EVrsta.DATE){
 			flag = true;
 		}
-		
+		  */	
 		return flag;
 	}
 	
@@ -332,11 +332,12 @@ class FormValidationDslValidator extends AbstractFormValidationDslValidator {
 	}
 	
 	def boolean isStrngType(ClassAttribute attr){
-		if(attr.attributetype.vrsta == EVrsta.STRING){
+		/*if(attr.attributetype.vrsta == EVrsta.STRING){
 			return true;
 		}else{
 			return false;
-		}
+		} */
+		return false;
 	}
 	
 	def boolean containsStringPattern(ClassAttribute attr){

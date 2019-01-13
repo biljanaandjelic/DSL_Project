@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.FormValDSLStandaloneSetup;
 //import org.xtext.example.domij.ErDslStandaloneSetup;
-import org.xtext.example.mydsl.FormValidationStandaloneSetup;
+
 
 import com.google.inject.Injector;
 

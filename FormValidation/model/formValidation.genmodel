@@ -161,12 +161,7 @@
     <genClasses ecoreClass="formValidation.ecore#//Tab">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Tab/label"/>
     </genClasses>
-    <genClasses ecoreClass="formValidation.ecore#//Grid">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/numOfColumns"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/numOfRows"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/order"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//Grid/expandLast"/>
-    </genClasses>
+    <genClasses ecoreClass="formValidation.ecore#//Grid"/>
     <genClasses ecoreClass="formValidation.ecore#//AttributeSettings">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//AttributeSettings/presentation"/>
     </genClasses>
@@ -199,6 +194,8 @@
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//BusinessModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference formValidation.ecore#//BusinessModel/validationclasses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//BusinessModel/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//BusinessModel/description"/>
     </genClasses>
     <genClasses ecoreClass="formValidation.ecore#//ErrorMessageSettings">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute formValidation.ecore#//ErrorMessageSettings/position"/>

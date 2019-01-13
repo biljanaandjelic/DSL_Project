@@ -20,9 +20,8 @@ public class FormValDSLStandaloneSetupGenerated implements ISetup {
 
 	@Override
 	public Injector createInjectorAndDoEMFRegistration() {
-		FormValidationPackageImpl.init();
 		TerminalsStandaloneSetup.doSetup();
-
+		FormValidationPackageImpl.init();
 		Injector injector = createInjector();
 		register(injector);
 		return injector;

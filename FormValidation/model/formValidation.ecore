@@ -248,15 +248,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="checkFormLayout uniqueFormLayoutName nameFormat"/>
+      <details key="constraints" value="checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="checkFormLayout" value="Tuple {&#xA;&#x9;message : String = 'Attribute could appear only in one layout',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  &#xA;&#x9;&#x9;&#x9;if fL1 &lt;> fL2 and fL1.attributearray &lt;> null and fL2.attributearray &lt;> null&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;fL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
       <details key="uniqueFormLayoutName" value="Tuple {&#xA;&#x9;message : String = 'Layout name should be unique',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 &lt;> fL2 then&#xA;&#x9;&#x9;&#x9;fL1.name &lt;> fL2.name&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="numOfAttributeArraysFieldSet" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="numOfAttributeArrayTab" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsKindOf(Tab) then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
       <details key="nameFormat" value="name.matches('[a-z][a-zA-Z0-9.]*')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
+        eType="#//AttributeArray" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layouts" upperBound="-1"
         eType="#//FormLayout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -267,13 +269,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tab" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//EGridOrder"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expandLast" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout"/>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"/>
   </eClassifiers>
@@ -327,6 +323,8 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validationclasses" upperBound="-1"
         eType="#//ValidationClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EGridOrder">
     <eLiterals name="FirstRow"/>

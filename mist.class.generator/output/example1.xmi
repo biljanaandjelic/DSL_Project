@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation">
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="dasa" description="dfsd">
   <validationclasses name="organizacionaJedinica" label="&#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x430; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x430;">
     <classattribute name="broj" label="&#x411;&#x440;&#x43e;&#x458;" master="true" isClassRepresenting="true">
       <attributetype>
@@ -109,6 +109,11 @@
       </attributetype>
       <attributerule xsi:type="formValidation:Required"/>
     </classattribute>
+    <classattribute name="vv">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+    </classattribute>
     <classattribute name="nn">
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
@@ -125,8 +130,8 @@
     <classrule xsi:type="formValidation:Equals">
       <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.4"/>
     </classrule>
-    <classrule xsi:type="formValidation:GreaterThan" classattribute="//@validationclasses.1/@classattribute.12">
-      <attributearray attributes="//@validationclasses.1/@classattribute.13"/>
+    <classrule xsi:type="formValidation:GreaterThan" classattribute="//@validationclasses.1/@classattribute.13">
+      <attributearray attributes="//@validationclasses.1/@classattribute.14"/>
     </classrule>
     <formlayout xsi:type="formValidation:FieldSet" name="podaciOPravnomLicuOrganu" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x43c; &#x43b;&#x438;&#x446;&#x443;/&#x43e;&#x440;&#x433;&#x430;&#x43d;&#x443;">
       <layouts xsi:type="formValidation:Grid" name="grid11">
@@ -149,7 +154,9 @@
       <attributearray attributes="//@validationclasses.1/@classattribute.7 //@validationclasses.1/@classattribute.8"/>
       <layouts xsi:type="formValidation:Grid" name="grid21">
         <attributearray attributes="//@validationclasses.1/@classattribute.10 //@validationclasses.1/@classattribute.9"/>
-        <layouts xsi:type="formValidation:FieldSet" name="aa"/>
+        <layouts xsi:type="formValidation:FieldSet" name="aa">
+          <attributearray attributes="//@validationclasses.1/@classattribute.13"/>
+        </layouts>
       </layouts>
     </formlayout>
     <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43e;&#x458; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x438;">

@@ -1750,6 +1750,8 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(formLayout, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(formLayout, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(formLayout, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(formLayout, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(formLayout, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(formLayout, diagnostics, context);
 		return result;
 	}
@@ -1831,6 +1833,78 @@ public class FormValidationValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the numOfAttributeArraysFieldSet constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FORM_LAYOUT__NUM_OF_ATTRIBUTE_ARRAYS_FIELD_SET__EEXPRESSION = "Tuple {\n" +
+		"\tmessage : String = 'Number of attribute arrays is not appropriate.',\n" +
+		"\tstatus : Boolean = \n" +
+		"\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n" +
+		"\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n" +
+		"\t\t\tendif\n" +
+		"\t\t)\n" +
+		"}.status";
+
+	/**
+	 * Validates the numOfAttributeArraysFieldSet constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFormLayout_numOfAttributeArraysFieldSet(FormLayout formLayout, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.FORM_LAYOUT,
+				 formLayout,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "numOfAttributeArraysFieldSet",
+				 FORM_LAYOUT__NUM_OF_ATTRIBUTE_ARRAYS_FIELD_SET__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the numOfAttributeArrayTab constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FORM_LAYOUT__NUM_OF_ATTRIBUTE_ARRAY_TAB__EEXPRESSION = "Tuple {\n" +
+		"\tmessage : String = 'Number of attribute arrays is not appropriate.',\n" +
+		"\tstatus : Boolean = \n" +
+		"\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n" +
+		"\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n" +
+		"\t\t\tendif\n" +
+		"\t\t)\n" +
+		"}.status";
+
+	/**
+	 * Validates the numOfAttributeArrayTab constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFormLayout_numOfAttributeArrayTab(FormLayout formLayout, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.FORM_LAYOUT,
+				 formLayout,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "numOfAttributeArrayTab",
+				 FORM_LAYOUT__NUM_OF_ATTRIBUTE_ARRAY_TAB__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
 	 * The cached validation expression for the nameFormat constraint of '<em>Form Layout</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1876,6 +1950,8 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(fieldSet, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(fieldSet, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(fieldSet, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(fieldSet, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(fieldSet, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(fieldSet, diagnostics, context);
 		return result;
 	}
@@ -1897,6 +1973,8 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tab, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(tab, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(tab, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(tab, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(tab, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(tab, diagnostics, context);
 		return result;
 	}
@@ -1918,6 +1996,8 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(grid, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(grid, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(grid, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(grid, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(grid, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(grid, diagnostics, context);
 		return result;
 	}

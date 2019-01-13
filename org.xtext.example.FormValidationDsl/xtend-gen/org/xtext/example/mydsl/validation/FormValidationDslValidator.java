@@ -55,16 +55,90 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   
   @Check
   public void checkStringRule(final ClassAttribute classAttribute) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field vrsta is undefined for the type AttributeType"
-      + "\n== cannot be resolved");
+    boolean isLength = false;
+    boolean isMaxOrMin = false;
   }
   
   @Check
   public void checkStringAcceptableValuse(final ClassAttribute classAttribute) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field vrsta is undefined for the type AttributeType"
-      + "\n== cannot be resolved");
+    int length = (-1);
+    int minLength = (-1);
+    int maxLength = (-1);
+    if ((length != (-1))) {
+      EList<AttributeRule> _attributerule = classAttribute.getAttributerule();
+      for (final AttributeRule rule : _attributerule) {
+        if ((rule instanceof AcceptableValuesString)) {
+          final AcceptableValuesString accValues = ((AcceptableValuesString) rule);
+          EList<String> _values = accValues.getValues();
+          for (final String value : _values) {
+            int _length = value.length();
+            boolean _notEquals = (_length != length);
+            if (_notEquals) {
+              this.error("Values from acceptable values must be specific length", rule, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
+            }
+          }
+        }
+      }
+    } else {
+      if (((minLength != (-1)) && (maxLength != (-1)))) {
+        EList<AttributeRule> _attributerule_1 = classAttribute.getAttributerule();
+        for (final AttributeRule rule_1 : _attributerule_1) {
+          if ((rule_1 instanceof AcceptableValuesString)) {
+            final AcceptableValuesString accValues_1 = ((AcceptableValuesString) rule_1);
+            EList<String> _values_1 = accValues_1.getValues();
+            for (final String value_1 : _values_1) {
+              boolean _or = false;
+              int _length_1 = value_1.length();
+              boolean _greaterThan = (_length_1 > maxLength);
+              if (_greaterThan) {
+                _or = true;
+              } else {
+                int _length_2 = value_1.length();
+                boolean _lessThan = (_length_2 < minLength);
+                _or = _lessThan;
+              }
+              if (_or) {
+                this.error("Length of value from acceptable values must be between specific min length and max length", rule_1, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
+              }
+            }
+          }
+        }
+      } else {
+        if ((minLength != (-1))) {
+          EList<AttributeRule> _attributerule_2 = classAttribute.getAttributerule();
+          for (final AttributeRule rule_2 : _attributerule_2) {
+            if ((rule_2 instanceof AcceptableValuesString)) {
+              final AcceptableValuesString accValues_2 = ((AcceptableValuesString) rule_2);
+              EList<String> _values_2 = accValues_2.getValues();
+              for (final String value_2 : _values_2) {
+                int _length_3 = value_2.length();
+                boolean _lessThan_1 = (_length_3 < minLength);
+                if (_lessThan_1) {
+                  this.error("Length of value from acceptable values must be longer.", rule_2, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
+                }
+              }
+            }
+          }
+        } else {
+          if ((maxLength != (-1))) {
+            EList<AttributeRule> _attributerule_3 = classAttribute.getAttributerule();
+            for (final AttributeRule rule_3 : _attributerule_3) {
+              if ((rule_3 instanceof AcceptableValuesString)) {
+                final AcceptableValuesString accValues_3 = ((AcceptableValuesString) rule_3);
+                EList<String> _values_3 = accValues_3.getValues();
+                for (final String value_3 : _values_3) {
+                  int _length_4 = value_3.length();
+                  boolean _lessThan_2 = (_length_4 < minLength);
+                  if (_lessThan_2) {
+                    this.error("Length of values from acceptable values must be shorter", accValues_3, FormValidationPackage.Literals.ACCEPTABLE_VALUES_STRING__VALUES);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   
   @Check
@@ -180,9 +254,8 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   }
   
   public boolean isDateType(final ClassAttribute attribute) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field vrsta is undefined for the type AttributeType"
-      + "\n== cannot be resolved");
+    boolean flag = false;
+    return flag;
   }
   
   public String getMaxDate(final ClassAttribute attribute) {
@@ -284,9 +357,7 @@ public class FormValidationDslValidator extends AbstractFormValidationDslValidat
   }
   
   public boolean isStrngType(final ClassAttribute attr) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field vrsta is undefined for the type AttributeType"
-      + "\n== cannot be resolved");
+    return false;
   }
   
   public boolean containsStringPattern(final ClassAttribute attr) {

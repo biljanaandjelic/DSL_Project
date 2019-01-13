@@ -1,5 +1,12 @@
+{
+label "dasa"
+
+description "dfsd"
+
 organizacionaJedinica{
+	
 	label "Организациона јединица"
+	
 	broj{
 		Label "Број"
 		Data type Number
@@ -11,6 +18,7 @@ organizacionaJedinica{
 			Error message "Број органиѕационе јединице је обавеѕно поље."
 		}
 	}
+	
 	naziv{
 		Label "Назив"
 		Data type String
@@ -122,6 +130,9 @@ validationClass{
 		AutocompleteComponent {}
 		Required
 	}
+	vv {
+		Data type Number
+	}
 	nn{
 		Data type Number
 	}
@@ -138,37 +149,39 @@ validationClass{
 	
 	GreaterThan{
 		nn
-		{
-			attributes (mm)
-		}
+		attributes (mm)
 	}
-	
+	 
+
 	FieldSet podaciOPravnomLicuOrganu{
 			Legend "Подаци о правном лицу/органу"
 			Grid grid11{
-				attributes (jedinstvenBrojKorisnikaJavnihSredstava)
+				row (jedinstvenBrojKorisnikaJavnihSredstava)
+				
+				 
 			}
 			Grid grid12{
-				attributes (nazicPravnogLica)
+				row (nazicPravnogLica)
 			}
 			Grid grid13{
-				attributes (jedinstveniMaticniBrojGradjanina, poreskiIdentifikacioniBroj)
+				row (jedinstveniMaticniBrojGradjanina, poreskiIdentifikacioniBroj)
 			}
 			Grid grid14{ 
-				attributes (adresaSedista)
+				row (adresaSedista)
 			}
 			Grid grid15{
-				attributes (adresaElektronskePoste,brojTelefona)
+				row (adresaElektronskePoste,brojTelefona)
 			}
 	}
+	
 	FieldSet podaciOAdministratoru{
 		Legend "Подаци о администратору"
 		attributes (imeIPrezimeAdminstratora,brojIdentifikacioneOznake)
 		
 			Grid grid21{
-				attributes (adresaElektronskePosteAdministratora, brojTelefonaAdministratoraa)
+				row (adresaElektronskePosteAdministratora, brojTelefonaAdministratoraa)
 				FieldSet aa{
-					
+					attributes(nn)
 				}
 			}
 	}
@@ -197,4 +210,5 @@ validationClass{
 			}
 		}
 	}
+}
 }

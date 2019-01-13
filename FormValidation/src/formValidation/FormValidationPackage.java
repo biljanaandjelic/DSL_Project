@@ -1898,7 +1898,7 @@ public interface FormValidationPackage extends EPackage {
 	int FORM_LAYOUT = 36;
 
 	/**
-	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1953,7 +1953,7 @@ public interface FormValidationPackage extends EPackage {
 	int FIELD_SET = 37;
 
 	/**
-	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2017,7 +2017,7 @@ public interface FormValidationPackage extends EPackage {
 	int TAB = 38;
 
 	/**
-	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2081,7 +2081,7 @@ public interface FormValidationPackage extends EPackage {
 	int GRID = 39;
 
 	/**
-	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributearray</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2108,49 +2108,13 @@ public interface FormValidationPackage extends EPackage {
 	int GRID__NAME = FORM_LAYOUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Num Of Columns</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRID__NUM_OF_COLUMNS = FORM_LAYOUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Num Of Rows</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRID__NUM_OF_ROWS = FORM_LAYOUT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Order</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRID__ORDER = FORM_LAYOUT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Expand Last</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRID__EXPAND_LAST = FORM_LAYOUT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Grid</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRID_FEATURE_COUNT = FORM_LAYOUT_FEATURE_COUNT + 4;
+	int GRID_FEATURE_COUNT = FORM_LAYOUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Grid</em>' class.
@@ -2733,13 +2697,31 @@ public interface FormValidationPackage extends EPackage {
 	int BUSINESS_MODEL__VALIDATIONCLASSES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_MODEL__LABEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_MODEL__DESCRIPTION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Business Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_MODEL_FEATURE_COUNT = 1;
+	int BUSINESS_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Business Model</em>' class.
@@ -4131,10 +4113,10 @@ public interface FormValidationPackage extends EPackage {
 	EClass getFormLayout();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link formValidation.FormLayout#getAttributearray <em>Attributearray</em>}'.
+	 * Returns the meta object for the containment reference list '{@link formValidation.FormLayout#getAttributearray <em>Attributearray</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Attributearray</em>'.
+	 * @return the meta object for the containment reference list '<em>Attributearray</em>'.
 	 * @see formValidation.FormLayout#getAttributearray()
 	 * @see #getFormLayout()
 	 * @generated
@@ -4214,50 +4196,6 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGrid();
-
-	/**
-	 * Returns the meta object for the attribute '{@link formValidation.Grid#getNumOfColumns <em>Num Of Columns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Num Of Columns</em>'.
-	 * @see formValidation.Grid#getNumOfColumns()
-	 * @see #getGrid()
-	 * @generated
-	 */
-	EAttribute getGrid_NumOfColumns();
-
-	/**
-	 * Returns the meta object for the attribute '{@link formValidation.Grid#getNumOfRows <em>Num Of Rows</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Num Of Rows</em>'.
-	 * @see formValidation.Grid#getNumOfRows()
-	 * @see #getGrid()
-	 * @generated
-	 */
-	EAttribute getGrid_NumOfRows();
-
-	/**
-	 * Returns the meta object for the attribute '{@link formValidation.Grid#getOrder <em>Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Order</em>'.
-	 * @see formValidation.Grid#getOrder()
-	 * @see #getGrid()
-	 * @generated
-	 */
-	EAttribute getGrid_Order();
-
-	/**
-	 * Returns the meta object for the attribute '{@link formValidation.Grid#isExpandLast <em>Expand Last</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expand Last</em>'.
-	 * @see formValidation.Grid#isExpandLast()
-	 * @see #getGrid()
-	 * @generated
-	 */
-	EAttribute getGrid_ExpandLast();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.AttributeSettings <em>Attribute Settings</em>}'.
@@ -4498,6 +4436,28 @@ public interface FormValidationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBusinessModel_Validationclasses();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.BusinessModel#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see formValidation.BusinessModel#getLabel()
+	 * @see #getBusinessModel()
+	 * @generated
+	 */
+	EAttribute getBusinessModel_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link formValidation.BusinessModel#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see formValidation.BusinessModel#getDescription()
+	 * @see #getBusinessModel()
+	 * @generated
+	 */
+	EAttribute getBusinessModel_Description();
 
 	/**
 	 * Returns the meta object for class '{@link formValidation.ErrorMessageSettings <em>Error Message Settings</em>}'.
@@ -5607,7 +5567,7 @@ public interface FormValidationPackage extends EPackage {
 		EClass FORM_LAYOUT = eINSTANCE.getFormLayout();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributearray</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Attributearray</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5675,38 +5635,6 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GRID = eINSTANCE.getGrid();
-
-		/**
-		 * The meta object literal for the '<em><b>Num Of Columns</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GRID__NUM_OF_COLUMNS = eINSTANCE.getGrid_NumOfColumns();
-
-		/**
-		 * The meta object literal for the '<em><b>Num Of Rows</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GRID__NUM_OF_ROWS = eINSTANCE.getGrid_NumOfRows();
-
-		/**
-		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GRID__ORDER = eINSTANCE.getGrid_Order();
-
-		/**
-		 * The meta object literal for the '<em><b>Expand Last</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GRID__EXPAND_LAST = eINSTANCE.getGrid_ExpandLast();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.AttributeSettingsImpl <em>Attribute Settings</em>}' class.
@@ -5917,6 +5845,22 @@ public interface FormValidationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BUSINESS_MODEL__VALIDATIONCLASSES = eINSTANCE.getBusinessModel_Validationclasses();
+
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUSINESS_MODEL__LABEL = eINSTANCE.getBusinessModel_Label();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUSINESS_MODEL__DESCRIPTION = eINSTANCE.getBusinessModel_Description();
 
 		/**
 		 * The meta object literal for the '{@link formValidation.impl.ErrorMessageSettingsImpl <em>Error Message Settings</em>}' class.

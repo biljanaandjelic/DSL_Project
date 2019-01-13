@@ -21,37 +21,27 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see formValidation.FormValidationPackage#getFormLayout()
  * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='checkFormLayout uniqueFormLayoutName nameFormat'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArraysFieldSet='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArrayTab='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')'"
  * @generated
  */
 public interface FormLayout extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>Attributearray</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Attributearray</b></em>' containment reference list.
+	 * The list contents are of type {@link formValidation.AttributeArray}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Attributearray</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attributearray</em>' containment reference.
-	 * @see #setAttributearray(AttributeArray)
+	 * @return the value of the '<em>Attributearray</em>' containment reference list.
 	 * @see formValidation.FormValidationPackage#getFormLayout_Attributearray()
 	 * @model containment="true"
 	 * @generated
 	 */
-	AttributeArray getAttributearray();
-
-	/**
-	 * Sets the value of the '{@link formValidation.FormLayout#getAttributearray <em>Attributearray</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attributearray</em>' containment reference.
-	 * @see #getAttributearray()
-	 * @generated
-	 */
-	void setAttributearray(AttributeArray value);
+	EList<AttributeArray> getAttributearray();
 
 	/**
 	 * Returns the value of the '<em><b>Layouts</b></em>' containment reference list.

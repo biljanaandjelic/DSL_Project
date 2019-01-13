@@ -315,7 +315,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     BusinessModel returns BusinessModel
 	 *
 	 * Constraint:
-	 *     (validationclasses+=ValidationClass validationclasses+=ValidationClass*)?
+	 *     (label=EString description=EString (validationclasses+=ValidationClass validationclasses+=ValidationClass*)?)
 	 */
 	protected void sequence_BusinessModel(ISerializationContext context, BusinessModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -462,7 +462,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     FieldSet returns FieldSet
 	 *
 	 * Constraint:
-	 *     (name=EString legend=EString? attributearray=AttributeArray? (layouts+=FormLayout layouts+=FormLayout*)?)
+	 *     (name=EString legend=EString? (attributearray+=AttributeArray attributearray+=AttributeArray*)? (layouts+=FormLayout layouts+=FormLayout*)?)
 	 */
 	protected void sequence_FieldSet(ISerializationContext context, FieldSet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -514,15 +514,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Grid returns Grid
 	 *
 	 * Constraint:
-	 *     (
-	 *         name=EString 
-	 *         numOfColumns=EInt? 
-	 *         numOfRows=EInt? 
-	 *         order=EGridOrder? 
-	 *         expandLast?='Expand last'? 
-	 *         attributearray=AttributeArray? 
-	 *         (layouts+=FormLayout layouts+=FormLayout*)?
-	 *     )
+	 *     (name=EString (attributearray+=AttributeArray attributearray+=AttributeArray*)? (layouts+=FormLayout layouts+=FormLayout*)?)
 	 */
 	protected void sequence_Grid(ISerializationContext context, Grid semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -819,7 +811,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Tab returns Tab
 	 *
 	 * Constraint:
-	 *     (name=EString label=EString? attributearray=AttributeArray? (layouts+=FormLayout layouts+=FormLayout*)?)
+	 *     (name=EString label=EString? (attributearray+=AttributeArray attributearray+=AttributeArray*)? (layouts+=FormLayout layouts+=FormLayout*)?)
 	 */
 	protected void sequence_Tab(ISerializationContext context, Tab semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

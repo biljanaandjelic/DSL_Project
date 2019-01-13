@@ -7,9 +7,14 @@ import "http://www.eclipse.org/emf/2003/XMLType" as type
 
 BusinessModel returns BusinessModel:
 	{BusinessModel} 
+	'{'
+		('label' label=EString)
+		('description' description=EString)
+	
 	/*'BusinessModel'*/
 	/*'{'*/
 		(/*'validationclasses' '{'*/ validationclasses+=ValidationClass ( /*","*/ validationclasses+=ValidationClass)* /*'}'*/ )?
+	'}'
 	/*'}'*/;
 
 
@@ -330,7 +335,7 @@ AcceptableValuesString returns AcceptableValuesString:
 	{AcceptableValuesString}
 	'AcceptableValuesString'
 	'{'
-		('values' '{' values+=EString ( "," values+=EString)* '}' )?
+		(/*'values' '{'*/ values+=EString ( "," values+=EString)* /*'}'*/ )?
 		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
 	'}';
 
@@ -338,7 +343,7 @@ AcceptableValuesDate returns AcceptableValuesDate:
 	{AcceptableValuesDate}
 	'AcceptableValuesDate'
 	'{'
-		('values' '{' values+=EString ( "," values+=EString)* '}' )?
+		(/*'values' '{'*/ values+=EString ( "," values+=EString)* /*'}'*/ )?
 		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
 	'}';
 
@@ -369,7 +374,7 @@ NotEquals returns NotEquals:
 	'NotEquals'
 	'{'
 		('Error message' classRuleErrorMessage=ErrorMessage)?
-		(/*'attributearray'*/ attributearray=AttributeArray)?
+		('attributes' attributearray=AttributeArray)?
 	'}';
 
 GreaterThan returns GreaterThan:
@@ -378,7 +383,7 @@ GreaterThan returns GreaterThan:
 	'{'
 		(/*'classattribute'*/ classattribute=[ClassAttribute|EString])?
 		(/*'Error message'*/ classRuleErrorMessage=ErrorMessage)?
-		(/*'attributearray'*/ '{' attributearray+=AttributeArray ( /*","*/ attributearray+=AttributeArray)* '}' )?
+		('attributes' /*'{'*/ attributearray+=AttributeArray ( /*","*/ attributearray+=AttributeArray)* /*'}'*/ )?
 	'}';
 
 Equals returns Equals:
@@ -386,7 +391,7 @@ Equals returns Equals:
 	'Equals'
 	'{'
 		('Error message' classRuleErrorMessage=ErrorMessage)?
-		(/*'attributearray'*/ attributearray=AttributeArray)?
+		('attributes' attributearray=AttributeArray)?
 	'}';
 
 LessThan returns LessThan:
@@ -401,7 +406,7 @@ LessThan returns LessThan:
 AttributeArray returns AttributeArray:
 	{AttributeArray}
 	/*'{'*/
-		('attributes' '(' attributes+=[ClassAttribute|EString] ( "," attributes+=[ClassAttribute|EString])* ')' ) /* ?*/
+		(/*'attributes'*/'(' attributes+=[ClassAttribute|EString] ( "," attributes+=[ClassAttribute|EString])* ')' ) /* ?*/
 	/*'}'*/
 	;
 
@@ -411,7 +416,9 @@ FieldSet returns FieldSet:
 	name=EString
 	'{'
 		('Legend' legend=EString)?
-		(/*'attributearray'*/ attributearray=AttributeArray)?
+		/* */
+		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
+	
 		(/*'layouts'*/ /*'{'*/ layouts+=FormLayout ( /*","*/ layouts+=FormLayout)* /*'}'*/ )?
 	'}';
 
@@ -421,7 +428,8 @@ Tab returns Tab:
 	name=EString
 	'{'
 		('Label' label=EString)?
-		(/*'attributearray'*/ attributearray=AttributeArray)?
+		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
+	
 		(/*'layouts'*/ '{' layouts+=FormLayout ( "," layouts+=FormLayout)* '}' )?
 	'}';
 
@@ -430,12 +438,12 @@ Grid returns Grid:
 	'Grid'
 	name=EString
 	'{'
-		('Number of columns' numOfColumns=EInt)?
+		/*('Number of columns' numOfColumns=EInt)?
 		('Number of rows' numOfRows=EInt)?
 		('Order' order=EGridOrder)?
 		/*('ExpandLast' expandLast=EBoolean)?*/
-		(expandLast?='Expand last')?
-		(/*'attributearray'*/ attributearray=AttributeArray)?
+	/*(expandLast?='Expand last')?  */	
+		('row' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
 		(/*'layouts' '{'*/ layouts+=FormLayout (/*"," */  layouts+=FormLayout)* /*'}'*/ )?
 	'}';
 

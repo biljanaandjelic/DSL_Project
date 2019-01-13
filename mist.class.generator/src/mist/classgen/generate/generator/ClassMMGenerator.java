@@ -38,22 +38,22 @@ public class ClassMMGenerator {
 		//saveFile(outputDirectory + "/" + pkg.getName().toLowerCase() + "/" + mc.getName()+ ".java", cs);
 		//saveFile("output/mainPage.html",cs1);
 		if (outputDirectory != null) {
-			ValidationClass cm = loadValidationClassModel(inputPath);
+		//	ValidationClass cm = loadValidationClassModel(inputPath);
 			JavaGenerator java = new JavaGenerator();
 			BusinessModel businessModel = loadBusinessModel(inputPath);
 
 			//for (classDiagram.Package pkg : cm.getPackages()) {
 			//for (ModelingConcept mc : pkg.getElements()) {
-					if (cm instanceof ValidationClass) {
+					if (businessModel instanceof BusinessModel) {
 						CharSequence cs = java.generateHTML(businessModel);
 						//CharSequence cs1 ="<!DOCTYPE html> <html><head><meta charset=\"UTF-8\"><title>Title of the document</title></head><body>Content of the document......</body></html>";
-						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".html", cs);
+						saveFile(outputDirectory + "/" + businessModel.getLabel().toLowerCase() + "/" + businessModel.getLabel().toLowerCase()+ ".html", cs);
 						
 						CharSequence csJS = java.generateJS(businessModel);
-						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".js", csJS);
+						saveFile(outputDirectory + "/" + businessModel.getLabel().toLowerCase() + "/" + businessModel.getLabel().toLowerCase()+ ".js", csJS);
 						
 						CharSequence csCSS = java.generateCSS(businessModel);
-						saveFile(outputDirectory + "/" + cm.getName().toLowerCase() + "/" + cm.getName()+ ".css", csCSS);
+						saveFile(outputDirectory + "/" + businessModel.getLabel().toLowerCase() + "/" + businessModel.getLabel().toLowerCase()+ ".css", csCSS);
 						//saveFile("output/html",cs1);
 					}else{
 						System.out.println("Nije instanca adekvatne klase");
@@ -140,7 +140,7 @@ public class ClassMMGenerator {
 	}
 	
 	public static void main(String[]  args){
-		FVALToXMIConverter.convertFVALtoXMI("input/example1.fvalDSL", "output/example1.xmi");
-		generateAll("output/example1.xmi", "output");
+		FVALToXMIConverter.convertFVALtoXMI("input/example2.fvalDSL", "output/example2.xmi");
+		generateAll("output/example2.xmi", "output");
 	}
 }
