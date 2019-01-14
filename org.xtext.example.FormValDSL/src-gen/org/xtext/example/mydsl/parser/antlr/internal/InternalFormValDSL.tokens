@@ -25,7 +25,7 @@
 'DateUIComponent'=32
 'Default number of shown rows'=100
 'Default value'=25
-'DropDownList'=30
+'DropDownList'=29
 'E'=53
 'EmailInput'=39
 'Equals'=76
@@ -55,7 +55,7 @@
 'MinDate'=62
 'MinLength'=58
 'MinNumber'=61
-'MultiSelectable'=29
+'MultiSelectable'=30
 'NotEquals'=73
 'Note'=24
 'NoteSettings'=93

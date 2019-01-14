@@ -140,7 +140,7 @@ public class ClassMMGenerator {
 	}
 	
 	public static void main(String[]  args){
-		FVALToXMIConverter.convertFVALtoXMI("input/example2.fvalDSL", "output/example2.xmi");
-		generateAll("output/example2.xmi", "output");
+		FVALToXMIConverter.convertFVALtoXMI("input/example1.fvalDSL", "output/example1.xmi");
+		generateAll("output/example1.xmi", "output");
 	}
 }

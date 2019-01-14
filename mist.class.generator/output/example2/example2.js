@@ -3,12 +3,10 @@
 	var collections = [];
 	var metaData = [];
 	
-	var class1MetaDataMaster =[  "classAttr", "classBbbb"];
-	metaData["class1MetaDataMaster"] = class1MetaDataMaster;
-	var class1MetaDataRepresenting =[ "classAttr" ];
-	metaData["class1MetaDataRepresenting"] = class1MetaDataRepresenting;
-	var class1AllAttributes =[  "classAttr" , "classBbbb" , "classCcc" , "aaa" , "classYYa" ];
-	metaData["class1AllAttributes"] = class1AllAttributes;
+	metaData["class1MetaDataMaster"] = [  "classAttr", "classBbbb"];
+	metaData["class1MetaDataCollection"] = [ ];
+	metaData["class1MetaDataRepresenting"] = [ "classAttr" ];
+	metaData["class1AllAttributes"] = [  "classAttr" , "classBbbb" , "classCcc" , "aaa" , "classYYa" ];;
 	var class1Collection = [];
 	collections["class1"] = class1Collection; 
 	var class1ReferencingAttributes = [ ];
@@ -129,15 +127,33 @@
 	   							    record[val] = arrayOfValues;
 	   							}
 	   						});
-	   						
-	   						
+	   				var areClassRulesOk = true;		
+	   				 if(record["classAttr"] != record["classAttr"] || record["classBbbb"] != record["classAttr"] )
+	   				{
 	   					
+	   					toastr.error("Class Attr  and Class Bbbb should be same.");
+	   					areClassRulesOk = false;
+	   				}
+	   				if(record["aaa"]== record["classCcc"] ||  
+	   				 false)
+	   				{
+	   						
+	   						toastr.error(" Class Ccc and Aaa should be different.");
+	   						areClassRulesOk = false;
+	   				}
+	   				if(areClassRulesOk){
 	   				var index = class1Collection.length;
 	   				collections["class1"].push(record);
 	   				addRecordInTable(record, "class1Table", index, "Master");
+	   				toastr.success("Object is saved!");
+	   				}else{
+	   					toastr.error("There are some errors. Please fix errors and try again.");
+	   					return false;
+	   				}
 	   			}
 	   			else
 	   			{
+	   				toastr.error("There are some errors. Please fix errors and try again.");
 	   				return false;
 	   			}
 	   		});
@@ -146,10 +162,13 @@
 	recordInput = function(inputValues){
 	var values = inputValues.split("&");
 	var record = [];
+	
 	values.forEach(function(value){
+		
 		var velAux = value.split("=");
 	
 		record[velAux[0]]= velAux[1];
+		
 	});
 	
 	return record;

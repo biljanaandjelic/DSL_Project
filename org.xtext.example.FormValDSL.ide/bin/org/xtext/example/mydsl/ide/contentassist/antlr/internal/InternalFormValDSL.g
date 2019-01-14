@@ -4440,9 +4440,9 @@ rule__DropDownList__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_1()); }
-	(rule__DropDownList__IsMultiSelectAssignment_1)?
-	{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_1()); }
+	{ before(grammarAccess.getDropDownListAccess().getDropDownListKeyword_1()); }
+	'DropDownList'
+	{ after(grammarAccess.getDropDownListAccess().getDropDownListKeyword_1()); }
 )
 ;
 finally {
@@ -4467,9 +4467,9 @@ rule__DropDownList__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDropDownListAccess().getDropDownListKeyword_2()); }
-	'DropDownList'
-	{ after(grammarAccess.getDropDownListAccess().getDropDownListKeyword_2()); }
+	{ before(grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_2()); }
+	'{'
+	{ after(grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_2()); }
 )
 ;
 finally {
@@ -4494,9 +4494,9 @@ rule__DropDownList__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_3()); }
-	'{'
-	{ after(grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_3()); }
+	{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_3()); }
+	(rule__DropDownList__IsMultiSelectAssignment_3)?
+	{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_3()); }
 )
 ;
 finally {
@@ -13619,9 +13619,63 @@ rule__Grid__Group_4__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2()); }
-	(rule__Grid__AttributearrayAssignment_4_2)*
-	{ after(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2()); }
+	{ before(grammarAccess.getGridAccess().getGroup_4_2()); }
+	(rule__Grid__Group_4_2__0)*
+	{ after(grammarAccess.getGridAccess().getGroup_4_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Grid__Group_4_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Grid__Group_4_2__0__Impl
+	rule__Grid__Group_4_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Grid__Group_4_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGridAccess().getRowKeyword_4_2_0()); }
+	'row'
+	{ after(grammarAccess.getGridAccess().getRowKeyword_4_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Grid__Group_4_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Grid__Group_4_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Grid__Group_4_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2_1()); }
+	(rule__Grid__AttributearrayAssignment_4_2_1)
+	{ after(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2_1()); }
 )
 ;
 finally {
@@ -16169,19 +16223,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DropDownList__IsMultiSelectAssignment_1
+rule__DropDownList__IsMultiSelectAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_1_0()); }
+		{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_3_0()); }
 		(
-			{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_1_0()); }
+			{ before(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_3_0()); }
 			'MultiSelectable'
-			{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_1_0()); }
+			{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_3_0()); }
 		)
-		{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_1_0()); }
+		{ after(grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_3_0()); }
 	)
 ;
 finally {
@@ -17630,15 +17684,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Grid__AttributearrayAssignment_4_2
+rule__Grid__AttributearrayAssignment_4_2_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_0()); }
+		{ before(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_1_0()); }
 		ruleAttributeArray
-		{ after(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_0()); }
+		{ after(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_1_0()); }
 	)
 ;
 finally {

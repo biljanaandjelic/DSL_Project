@@ -116,9 +116,10 @@ RadioButton returns RadioButton:
 
 DropDownList returns DropDownList:
 	{DropDownList}
-	(isMultiSelect?='MultiSelectable')?
+	
 	'DropDownList'
 	'{'
+		(isMultiSelect?='MultiSelectable')?
 		('Tooltip' tooltip=EString)?
 		('Note' note=EString)?
 	'}';
@@ -443,7 +444,7 @@ Grid returns Grid:
 		('Order' order=EGridOrder)?
 		/*('ExpandLast' expandLast=EBoolean)?*/
 	/*(expandLast?='Expand last')?  */	
-		('row' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
+		('row' attributearray += AttributeArray ('row' attributearray+=AttributeArray)*)?
 		(/*'layouts' '{'*/ layouts+=FormLayout (/*"," */  layouts+=FormLayout)* /*'}'*/ )?
 	'}';
 

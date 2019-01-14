@@ -875,10 +875,10 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.FormValDSL.DropDownList");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cDropDownListAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cIsMultiSelectAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cIsMultiSelectMultiSelectableKeyword_1_0 = (Keyword)cIsMultiSelectAssignment_1.eContents().get(0);
-		private final Keyword cDropDownListKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cDropDownListKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIsMultiSelectAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Keyword cIsMultiSelectMultiSelectableKeyword_3_0 = (Keyword)cIsMultiSelectAssignment_3.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cTooltipKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cTooltipAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
@@ -890,30 +890,31 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DropDownList:
-		//	{DropDownList} isMultiSelect?='MultiSelectable'?
+		//	{DropDownList}
 		//	'DropDownList'
-		//	'{' ('Tooltip' tooltip=EString)? ('Note' note=EString)?
+		//	'{'
+		//	isMultiSelect?='MultiSelectable'? ('Tooltip' tooltip=EString)? ('Note' note=EString)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{DropDownList} isMultiSelect?='MultiSelectable'? 'DropDownList' '{' ('Tooltip' tooltip=EString)? ('Note' note=EString)?
+		//{DropDownList} 'DropDownList' '{' isMultiSelect?='MultiSelectable'? ('Tooltip' tooltip=EString)? ('Note' note=EString)?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//{DropDownList}
 		public Action getDropDownListAction_0() { return cDropDownListAction_0; }
 		
-		//isMultiSelect?='MultiSelectable'?
-		public Assignment getIsMultiSelectAssignment_1() { return cIsMultiSelectAssignment_1; }
-		
-		//'MultiSelectable'
-		public Keyword getIsMultiSelectMultiSelectableKeyword_1_0() { return cIsMultiSelectMultiSelectableKeyword_1_0; }
-		
 		//'DropDownList'
-		public Keyword getDropDownListKeyword_2() { return cDropDownListKeyword_2; }
+		public Keyword getDropDownListKeyword_1() { return cDropDownListKeyword_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//isMultiSelect?='MultiSelectable'?
+		public Assignment getIsMultiSelectAssignment_3() { return cIsMultiSelectAssignment_3; }
+		
+		//'MultiSelectable'
+		public Keyword getIsMultiSelectMultiSelectableKeyword_3_0() { return cIsMultiSelectMultiSelectableKeyword_3_0; }
 		
 		//('Tooltip' tooltip=EString)?
 		public Group getGroup_4() { return cGroup_4; }
@@ -3174,8 +3175,10 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRowKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cAttributearrayAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cAttributearrayAttributeArrayParserRuleCall_4_1_0 = (RuleCall)cAttributearrayAssignment_4_1.eContents().get(0);
-		private final Assignment cAttributearrayAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cAttributearrayAttributeArrayParserRuleCall_4_2_0 = (RuleCall)cAttributearrayAssignment_4_2.eContents().get(0);
+		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
+		private final Keyword cRowKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Assignment cAttributearrayAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
+		private final RuleCall cAttributearrayAttributeArrayParserRuleCall_4_2_1_0 = (RuleCall)cAttributearrayAssignment_4_2_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cLayoutsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final RuleCall cLayoutsFormLayoutParserRuleCall_5_0_0 = (RuleCall)cLayoutsAssignment_5_0.eContents().get(0);
@@ -3187,12 +3190,12 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//	{Grid}
 		//	'Grid'
 		//	name=EString
-		//	'{' ('row' attributearray+=AttributeArray attributearray+=AttributeArray*)? (layouts+=FormLayout layouts+=FormLayout*
-		//	/ *'}'* /)?
+		//	'{' ('row' attributearray+=AttributeArray ('row' attributearray+=AttributeArray)*)? (layouts+=FormLayout
+		//	layouts+=FormLayout* / *'}'* /)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Grid} 'Grid' name=EString '{' ('row' attributearray+=AttributeArray attributearray+=AttributeArray*)?
+		//{Grid} 'Grid' name=EString '{' ('row' attributearray+=AttributeArray ('row' attributearray+=AttributeArray)*)?
 		//(layouts+=FormLayout layouts+=FormLayout* / *'}'* /)? '}'
 		public Group getGroup() { return cGroup; }
 		
@@ -3211,7 +3214,7 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//('row' attributearray+=AttributeArray attributearray+=AttributeArray*)?
+		//('row' attributearray+=AttributeArray ('row' attributearray+=AttributeArray)*)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'row'
@@ -3223,11 +3226,17 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//AttributeArray
 		public RuleCall getAttributearrayAttributeArrayParserRuleCall_4_1_0() { return cAttributearrayAttributeArrayParserRuleCall_4_1_0; }
 		
-		//attributearray+=AttributeArray*
-		public Assignment getAttributearrayAssignment_4_2() { return cAttributearrayAssignment_4_2; }
+		//('row' attributearray+=AttributeArray)*
+		public Group getGroup_4_2() { return cGroup_4_2; }
+		
+		//'row'
+		public Keyword getRowKeyword_4_2_0() { return cRowKeyword_4_2_0; }
+		
+		//attributearray+=AttributeArray
+		public Assignment getAttributearrayAssignment_4_2_1() { return cAttributearrayAssignment_4_2_1; }
 		
 		//AttributeArray
-		public RuleCall getAttributearrayAttributeArrayParserRuleCall_4_2_0() { return cAttributearrayAttributeArrayParserRuleCall_4_2_0; }
+		public RuleCall getAttributearrayAttributeArrayParserRuleCall_4_2_1_0() { return cAttributearrayAttributeArrayParserRuleCall_4_2_1_0; }
 		
 		//(layouts+=FormLayout layouts+=FormLayout* / *'}'* /)?
 		public Group getGroup_5() { return cGroup_5; }
@@ -4323,9 +4332,10 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DropDownList:
-	//	{DropDownList} isMultiSelect?='MultiSelectable'?
+	//	{DropDownList}
 	//	'DropDownList'
-	//	'{' ('Tooltip' tooltip=EString)? ('Note' note=EString)?
+	//	'{'
+	//	isMultiSelect?='MultiSelectable'? ('Tooltip' tooltip=EString)? ('Note' note=EString)?
 	//	'}';
 	public DropDownListElements getDropDownListAccess() {
 		return pDropDownList;
@@ -4880,8 +4890,8 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	//	{Grid}
 	//	'Grid'
 	//	name=EString
-	//	'{' ('row' attributearray+=AttributeArray attributearray+=AttributeArray*)? (layouts+=FormLayout layouts+=FormLayout*
-	//	/ *'}'* /)?
+	//	'{' ('row' attributearray+=AttributeArray ('row' attributearray+=AttributeArray)*)? (layouts+=FormLayout
+	//	layouts+=FormLayout* / *'}'* /)?
 	//	'}';
 	public GridElements getGridAccess() {
 		return pGrid;

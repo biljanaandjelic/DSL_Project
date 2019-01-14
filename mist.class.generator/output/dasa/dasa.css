@@ -52,26 +52,64 @@
 form{
 	width: 80%;
 	margin: 0 auto;
-	}
+}
 	
-div form{
+div form
+{
 	align: center;
-	}
+}
 	
-.formButtons{
+.formButtons
+{
 	float: right;
-	}
-table{
+}
+	
+table
+{
 	margin: 0 auto;
-	}
-	     #addorganizacionaJedinica{
+}
+
+.sideBar
+{
+	
+	width: 10%;
+	float: left;
+}
+
+.content
+{
+	floar: right;
+}
+.classOverview
+{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.panel
+{
+	margin-top: 90px;
+}
+
+.classOverview-content
+{
+	margin-left: 70px;
+}
+
+	
+ 
+#addorganizacionaJedinica
+{
  	align: center;
- }
+}
  
 
-	     #addvalidationClass{
+ 
+#addvalidationClass
+{
  	align: center;
- }
+}
  
 #validationClassForm label.error{
 	color : (255, 50, 50)

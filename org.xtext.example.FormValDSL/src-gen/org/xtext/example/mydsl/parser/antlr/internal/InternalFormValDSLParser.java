@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'label'", "'description'", "'}'", "'Label'", "'Master'", "'ClassRepresenting'", "'OverviewSettings'", "'Data type'", "'true'", "'false'", "'NumericUIComponent'", "'Tooltip'", "'Note'", "'Default value'", "'Component type'", "'RadioButton'", "'Orientation'", "'MultiSelectable'", "'DropDownList'", "'CheckBox'", "'DateUIComponent'", "'Type'", "'TextInput'", "'Place holder'", "'TextArea'", "'Number of rows'", "'TelInput'", "'EmailInput'", "'Password'", "'Visible'", "'FileInput'", "'Button position'", "'RefEntity'", "'tooltip'", "'note'", "'isSingeValue'", "'isMultiSelect'", "'LoadValues'", "'AutocompleteComponent'", "'-'", "'.'", "'E'", "'e'", "'Collection'", "'Error message'", "'Required'", "'MinLength'", "'MaxLength'", "'Length'", "'MinNumber'", "'MinDate'", "'MaxNumber'", "'value'", "'MaxDate'", "'AcceptableValuesString'", "','", "'AcceptableValuesDate'", "'StringPattern'", "'DatePattern'", "'Int'", "'Float'", "'NotEquals'", "'attributes'", "'GreaterThan'", "'Equals'", "'LessThan'", "'('", "')'", "'FieldSet'", "'Legend'", "'Tab'", "'Grid'", "'row'", "'AttributeSettings'", "'Presentation'", "'LabelSettings'", "'Position'", "'ErrorMessageSettings'", "'Color'", "'Auto Complete'", "'FormSettings'", "'NoteSettings'", "'TableOverview'", "'Height'", "'Width'", "'Title'", "'Pagination'", "'Possible number of shown rows'", "'Default number of shown rows'", "'NumberScroller'", "'SimpleInput'", "'Vertical'", "'Horizontal'", "'OnlyDate'", "'OnlyTime'", "'DateTime'", "'Above'", "'Left'", "'Right'", "'Below'", "'String'", "'Number'", "'Date'", "'Blob'", "'Asterix'", "'Highlighting'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'label'", "'description'", "'}'", "'Label'", "'Master'", "'ClassRepresenting'", "'OverviewSettings'", "'Data type'", "'true'", "'false'", "'NumericUIComponent'", "'Tooltip'", "'Note'", "'Default value'", "'Component type'", "'RadioButton'", "'Orientation'", "'DropDownList'", "'MultiSelectable'", "'CheckBox'", "'DateUIComponent'", "'Type'", "'TextInput'", "'Place holder'", "'TextArea'", "'Number of rows'", "'TelInput'", "'EmailInput'", "'Password'", "'Visible'", "'FileInput'", "'Button position'", "'RefEntity'", "'tooltip'", "'note'", "'isSingeValue'", "'isMultiSelect'", "'LoadValues'", "'AutocompleteComponent'", "'-'", "'.'", "'E'", "'e'", "'Collection'", "'Error message'", "'Required'", "'MinLength'", "'MaxLength'", "'Length'", "'MinNumber'", "'MinDate'", "'MaxNumber'", "'value'", "'MaxDate'", "'AcceptableValuesString'", "','", "'AcceptableValuesDate'", "'StringPattern'", "'DatePattern'", "'Int'", "'Float'", "'NotEquals'", "'attributes'", "'GreaterThan'", "'Equals'", "'LessThan'", "'('", "')'", "'FieldSet'", "'Legend'", "'Tab'", "'Grid'", "'row'", "'AttributeSettings'", "'Presentation'", "'LabelSettings'", "'Position'", "'ErrorMessageSettings'", "'Color'", "'Auto Complete'", "'FormSettings'", "'NoteSettings'", "'TableOverview'", "'Height'", "'Width'", "'Title'", "'Pagination'", "'Possible number of shown rows'", "'Default number of shown rows'", "'NumberScroller'", "'SimpleInput'", "'Vertical'", "'Horizontal'", "'OnlyDate'", "'OnlyTime'", "'DateTime'", "'Above'", "'Left'", "'Right'", "'Below'", "'String'", "'Number'", "'Date'", "'Blob'", "'Asterix'", "'Highlighting'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -1483,7 +1483,6 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 29:
-            case 30:
                 {
                 alt7=3;
                 }
@@ -1883,7 +1882,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==EOF||LA8_0==14||(LA8_0>=16 && LA8_0<=17)||LA8_0==22||LA8_0==27||(LA8_0>=29 && LA8_0<=32)||LA8_0==34||LA8_0==36||(LA8_0>=38 && LA8_0<=40)||LA8_0==42||LA8_0==44||(LA8_0>=48 && LA8_0<=50)||LA8_0==55||(LA8_0>=57 && LA8_0<=63)||(LA8_0>=65 && LA8_0<=66)||(LA8_0>=68 && LA8_0<=70)||(LA8_0>=112 && LA8_0<=115)) ) {
+            if ( (LA8_0==EOF||LA8_0==14||(LA8_0>=16 && LA8_0<=17)||LA8_0==22||LA8_0==27||LA8_0==29||(LA8_0>=31 && LA8_0<=32)||LA8_0==34||LA8_0==36||(LA8_0>=38 && LA8_0<=40)||LA8_0==42||LA8_0==44||(LA8_0>=48 && LA8_0<=50)||LA8_0==55||(LA8_0>=57 && LA8_0<=63)||(LA8_0>=65 && LA8_0<=66)||(LA8_0>=68 && LA8_0<=70)||(LA8_0>=112 && LA8_0<=115)) ) {
                 alt8=1;
             }
             else if ( ((LA8_0>=RULE_STRING && LA8_0<=RULE_ID)) ) {
@@ -3315,7 +3314,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==22||LA26_0==27||(LA26_0>=29 && LA26_0<=32)||LA26_0==34||LA26_0==36||(LA26_0>=38 && LA26_0<=40)||LA26_0==42||LA26_0==44||(LA26_0>=48 && LA26_0<=50)) ) {
+            if ( (LA26_0==22||LA26_0==27||LA26_0==29||(LA26_0>=31 && LA26_0<=32)||LA26_0==34||LA26_0==36||(LA26_0>=38 && LA26_0<=40)||LA26_0==42||LA26_0==44||(LA26_0>=48 && LA26_0<=50)) ) {
                 alt26=1;
             }
             switch (alt26) {
@@ -4108,13 +4107,13 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDropDownList"
-    // InternalFormValDSL.g:1512:1: ruleDropDownList returns [EObject current=null] : ( () ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )? otherlv_2= 'DropDownList' otherlv_3= '{' (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' ) ;
+    // InternalFormValDSL.g:1512:1: ruleDropDownList returns [EObject current=null] : ( () otherlv_1= 'DropDownList' otherlv_2= '{' ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )? (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' ) ;
     public final EObject ruleDropDownList() throws RecognitionException {
         EObject current = null;
 
-        Token lv_isMultiSelect_1_0=null;
+        Token otherlv_1=null;
         Token otherlv_2=null;
-        Token otherlv_3=null;
+        Token lv_isMultiSelect_3_0=null;
         Token otherlv_4=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
@@ -4127,11 +4126,11 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:1518:2: ( ( () ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )? otherlv_2= 'DropDownList' otherlv_3= '{' (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' ) )
-            // InternalFormValDSL.g:1519:2: ( () ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )? otherlv_2= 'DropDownList' otherlv_3= '{' (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' )
+            // InternalFormValDSL.g:1518:2: ( ( () otherlv_1= 'DropDownList' otherlv_2= '{' ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )? (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' ) )
+            // InternalFormValDSL.g:1519:2: ( () otherlv_1= 'DropDownList' otherlv_2= '{' ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )? (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' )
             {
-            // InternalFormValDSL.g:1519:2: ( () ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )? otherlv_2= 'DropDownList' otherlv_3= '{' (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' )
-            // InternalFormValDSL.g:1520:3: () ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )? otherlv_2= 'DropDownList' otherlv_3= '{' (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}'
+            // InternalFormValDSL.g:1519:2: ( () otherlv_1= 'DropDownList' otherlv_2= '{' ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )? (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}' )
+            // InternalFormValDSL.g:1520:3: () otherlv_1= 'DropDownList' otherlv_2= '{' ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )? (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )? (otherlv_6= 'Note' ( (lv_note_7_0= ruleEString ) ) )? otherlv_8= '}'
             {
             // InternalFormValDSL.g:1520:3: ()
             // InternalFormValDSL.g:1521:4: 
@@ -4144,23 +4143,31 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:1527:3: ( (lv_isMultiSelect_1_0= 'MultiSelectable' ) )?
+            otherlv_1=(Token)match(input,29,FOLLOW_7); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getDropDownListAccess().getDropDownListKeyword_1());
+            		
+            otherlv_2=(Token)match(input,11,FOLLOW_31); 
+
+            			newLeafNode(otherlv_2, grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_2());
+            		
+            // InternalFormValDSL.g:1535:3: ( (lv_isMultiSelect_3_0= 'MultiSelectable' ) )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
-            if ( (LA35_0==29) ) {
+            if ( (LA35_0==30) ) {
                 alt35=1;
             }
             switch (alt35) {
                 case 1 :
-                    // InternalFormValDSL.g:1528:4: (lv_isMultiSelect_1_0= 'MultiSelectable' )
+                    // InternalFormValDSL.g:1536:4: (lv_isMultiSelect_3_0= 'MultiSelectable' )
                     {
-                    // InternalFormValDSL.g:1528:4: (lv_isMultiSelect_1_0= 'MultiSelectable' )
-                    // InternalFormValDSL.g:1529:5: lv_isMultiSelect_1_0= 'MultiSelectable'
+                    // InternalFormValDSL.g:1536:4: (lv_isMultiSelect_3_0= 'MultiSelectable' )
+                    // InternalFormValDSL.g:1537:5: lv_isMultiSelect_3_0= 'MultiSelectable'
                     {
-                    lv_isMultiSelect_1_0=(Token)match(input,29,FOLLOW_31); 
+                    lv_isMultiSelect_3_0=(Token)match(input,30,FOLLOW_32); 
 
-                    					newLeafNode(lv_isMultiSelect_1_0, grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_1_0());
+                    					newLeafNode(lv_isMultiSelect_3_0, grammarAccess.getDropDownListAccess().getIsMultiSelectMultiSelectableKeyword_3_0());
                     				
 
                     					if (current==null) {
@@ -4177,14 +4184,6 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,30,FOLLOW_7); 
-
-            			newLeafNode(otherlv_2, grammarAccess.getDropDownListAccess().getDropDownListKeyword_2());
-            		
-            otherlv_3=(Token)match(input,11,FOLLOW_32); 
-
-            			newLeafNode(otherlv_3, grammarAccess.getDropDownListAccess().getLeftCurlyBracketKeyword_3());
-            		
             // InternalFormValDSL.g:1549:3: (otherlv_4= 'Tooltip' ( (lv_tooltip_5_0= ruleEString ) ) )?
             int alt36=2;
             int LA36_0 = input.LA(1);
@@ -12553,34 +12552,35 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGrid"
-    // InternalFormValDSL.g:4940:1: ruleGrid returns [EObject current=null] : ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )? ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )? otherlv_9= '}' ) ;
+    // InternalFormValDSL.g:4940:1: ruleGrid returns [EObject current=null] : ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )? ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )? otherlv_10= '}' ) ;
     public final EObject ruleGrid() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
         Token otherlv_4=null;
-        Token otherlv_9=null;
+        Token otherlv_6=null;
+        Token otherlv_10=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
 
         EObject lv_attributearray_5_0 = null;
 
-        EObject lv_attributearray_6_0 = null;
-
-        EObject lv_layouts_7_0 = null;
+        EObject lv_attributearray_7_0 = null;
 
         EObject lv_layouts_8_0 = null;
+
+        EObject lv_layouts_9_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:4946:2: ( ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )? ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )? otherlv_9= '}' ) )
-            // InternalFormValDSL.g:4947:2: ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )? ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )? otherlv_9= '}' )
+            // InternalFormValDSL.g:4946:2: ( ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )? ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )? otherlv_10= '}' ) )
+            // InternalFormValDSL.g:4947:2: ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )? ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )? otherlv_10= '}' )
             {
-            // InternalFormValDSL.g:4947:2: ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )? ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )? otherlv_9= '}' )
-            // InternalFormValDSL.g:4948:3: () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )? ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )? otherlv_9= '}'
+            // InternalFormValDSL.g:4947:2: ( () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )? ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )? otherlv_10= '}' )
+            // InternalFormValDSL.g:4948:3: () otherlv_1= 'Grid' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )? ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )? otherlv_10= '}'
             {
             // InternalFormValDSL.g:4948:3: ()
             // InternalFormValDSL.g:4949:4: 
@@ -12632,7 +12632,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getGridAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalFormValDSL.g:4982:3: (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )* )?
+            // InternalFormValDSL.g:4982:3: (otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )* )?
             int alt131=2;
             int LA131_0 = input.LA(1);
 
@@ -12641,7 +12641,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt131) {
                 case 1 :
-                    // InternalFormValDSL.g:4983:4: otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) ( (lv_attributearray_6_0= ruleAttributeArray ) )*
+                    // InternalFormValDSL.g:4983:4: otherlv_4= 'row' ( (lv_attributearray_5_0= ruleAttributeArray ) ) (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )*
                     {
                     otherlv_4=(Token)match(input,84,FOLLOW_79); 
 
@@ -12656,7 +12656,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_1_0());
                     					
-                    pushFollow(FOLLOW_87);
+                    pushFollow(FOLLOW_92);
                     lv_attributearray_5_0=ruleAttributeArray();
 
                     state._fsp--;
@@ -12678,43 +12678,53 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalFormValDSL.g:5006:4: ( (lv_attributearray_6_0= ruleAttributeArray ) )*
+                    // InternalFormValDSL.g:5006:4: (otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) ) )*
                     loop130:
                     do {
                         int alt130=2;
                         int LA130_0 = input.LA(1);
 
-                        if ( (LA130_0==78) ) {
+                        if ( (LA130_0==84) ) {
                             alt130=1;
                         }
 
 
                         switch (alt130) {
                     	case 1 :
-                    	    // InternalFormValDSL.g:5007:5: (lv_attributearray_6_0= ruleAttributeArray )
+                    	    // InternalFormValDSL.g:5007:5: otherlv_6= 'row' ( (lv_attributearray_7_0= ruleAttributeArray ) )
                     	    {
-                    	    // InternalFormValDSL.g:5007:5: (lv_attributearray_6_0= ruleAttributeArray )
-                    	    // InternalFormValDSL.g:5008:6: lv_attributearray_6_0= ruleAttributeArray
+                    	    otherlv_6=(Token)match(input,84,FOLLOW_79); 
+
+                    	    					newLeafNode(otherlv_6, grammarAccess.getGridAccess().getRowKeyword_4_2_0());
+                    	    				
+                    	    // InternalFormValDSL.g:5011:5: ( (lv_attributearray_7_0= ruleAttributeArray ) )
+                    	    // InternalFormValDSL.g:5012:6: (lv_attributearray_7_0= ruleAttributeArray )
+                    	    {
+                    	    // InternalFormValDSL.g:5012:6: (lv_attributearray_7_0= ruleAttributeArray )
+                    	    // InternalFormValDSL.g:5013:7: lv_attributearray_7_0= ruleAttributeArray
                     	    {
 
-                    	    						newCompositeNode(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_0());
-                    	    					
-                    	    pushFollow(FOLLOW_87);
-                    	    lv_attributearray_6_0=ruleAttributeArray();
+                    	    							newCompositeNode(grammarAccess.getGridAccess().getAttributearrayAttributeArrayParserRuleCall_4_2_1_0());
+                    	    						
+                    	    pushFollow(FOLLOW_92);
+                    	    lv_attributearray_7_0=ruleAttributeArray();
 
                     	    state._fsp--;
 
 
-                    	    						if (current==null) {
-                    	    							current = createModelElementForParent(grammarAccess.getGridRule());
-                    	    						}
-                    	    						add(
-                    	    							current,
-                    	    							"attributearray",
-                    	    							lv_attributearray_6_0,
-                    	    							"org.xtext.example.mydsl.FormValDSL.AttributeArray");
-                    	    						afterParserOrEnumRuleCall();
-                    	    					
+                    	    							if (current==null) {
+                    	    								current = createModelElementForParent(grammarAccess.getGridRule());
+                    	    							}
+                    	    							add(
+                    	    								current,
+                    	    								"attributearray",
+                    	    								lv_attributearray_7_0,
+                    	    								"org.xtext.example.mydsl.FormValDSL.AttributeArray");
+                    	    							afterParserOrEnumRuleCall();
+                    	    						
+
+                    	    }
+
 
                     	    }
 
@@ -12733,7 +12743,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5026:3: ( ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )* )?
+            // InternalFormValDSL.g:5032:3: ( ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )* )?
             int alt133=2;
             int LA133_0 = input.LA(1);
 
@@ -12742,19 +12752,19 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt133) {
                 case 1 :
-                    // InternalFormValDSL.g:5027:4: ( (lv_layouts_7_0= ruleFormLayout ) ) ( (lv_layouts_8_0= ruleFormLayout ) )*
+                    // InternalFormValDSL.g:5033:4: ( (lv_layouts_8_0= ruleFormLayout ) ) ( (lv_layouts_9_0= ruleFormLayout ) )*
                     {
-                    // InternalFormValDSL.g:5027:4: ( (lv_layouts_7_0= ruleFormLayout ) )
-                    // InternalFormValDSL.g:5028:5: (lv_layouts_7_0= ruleFormLayout )
+                    // InternalFormValDSL.g:5033:4: ( (lv_layouts_8_0= ruleFormLayout ) )
+                    // InternalFormValDSL.g:5034:5: (lv_layouts_8_0= ruleFormLayout )
                     {
-                    // InternalFormValDSL.g:5028:5: (lv_layouts_7_0= ruleFormLayout )
-                    // InternalFormValDSL.g:5029:6: lv_layouts_7_0= ruleFormLayout
+                    // InternalFormValDSL.g:5034:5: (lv_layouts_8_0= ruleFormLayout )
+                    // InternalFormValDSL.g:5035:6: lv_layouts_8_0= ruleFormLayout
                     {
 
                     						newCompositeNode(grammarAccess.getGridAccess().getLayoutsFormLayoutParserRuleCall_5_0_0());
                     					
                     pushFollow(FOLLOW_88);
-                    lv_layouts_7_0=ruleFormLayout();
+                    lv_layouts_8_0=ruleFormLayout();
 
                     state._fsp--;
 
@@ -12765,7 +12775,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     						add(
                     							current,
                     							"layouts",
-                    							lv_layouts_7_0,
+                    							lv_layouts_8_0,
                     							"org.xtext.example.mydsl.FormValDSL.FormLayout");
                     						afterParserOrEnumRuleCall();
                     					
@@ -12775,7 +12785,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalFormValDSL.g:5046:4: ( (lv_layouts_8_0= ruleFormLayout ) )*
+                    // InternalFormValDSL.g:5052:4: ( (lv_layouts_9_0= ruleFormLayout ) )*
                     loop132:
                     do {
                         int alt132=2;
@@ -12788,16 +12798,16 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                         switch (alt132) {
                     	case 1 :
-                    	    // InternalFormValDSL.g:5047:5: (lv_layouts_8_0= ruleFormLayout )
+                    	    // InternalFormValDSL.g:5053:5: (lv_layouts_9_0= ruleFormLayout )
                     	    {
-                    	    // InternalFormValDSL.g:5047:5: (lv_layouts_8_0= ruleFormLayout )
-                    	    // InternalFormValDSL.g:5048:6: lv_layouts_8_0= ruleFormLayout
+                    	    // InternalFormValDSL.g:5053:5: (lv_layouts_9_0= ruleFormLayout )
+                    	    // InternalFormValDSL.g:5054:6: lv_layouts_9_0= ruleFormLayout
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getGridAccess().getLayoutsFormLayoutParserRuleCall_5_1_0());
                     	    					
                     	    pushFollow(FOLLOW_88);
-                    	    lv_layouts_8_0=ruleFormLayout();
+                    	    lv_layouts_9_0=ruleFormLayout();
 
                     	    state._fsp--;
 
@@ -12808,7 +12818,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     	    						add(
                     	    							current,
                     	    							"layouts",
-                    	    							lv_layouts_8_0,
+                    	    							lv_layouts_9_0,
                     	    							"org.xtext.example.mydsl.FormValDSL.FormLayout");
                     	    						afterParserOrEnumRuleCall();
                     	    					
@@ -12830,9 +12840,9 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FOLLOW_2); 
+            otherlv_10=(Token)match(input,14,FOLLOW_2); 
 
-            			newLeafNode(otherlv_9, grammarAccess.getGridAccess().getRightCurlyBracketKeyword_6());
+            			newLeafNode(otherlv_10, grammarAccess.getGridAccess().getRightCurlyBracketKeyword_6());
             		
 
             }
@@ -12857,7 +12867,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAttributeSettings"
-    // InternalFormValDSL.g:5074:1: entryRuleAttributeSettings returns [EObject current=null] : iv_ruleAttributeSettings= ruleAttributeSettings EOF ;
+    // InternalFormValDSL.g:5080:1: entryRuleAttributeSettings returns [EObject current=null] : iv_ruleAttributeSettings= ruleAttributeSettings EOF ;
     public final EObject entryRuleAttributeSettings() throws RecognitionException {
         EObject current = null;
 
@@ -12865,8 +12875,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5074:58: (iv_ruleAttributeSettings= ruleAttributeSettings EOF )
-            // InternalFormValDSL.g:5075:2: iv_ruleAttributeSettings= ruleAttributeSettings EOF
+            // InternalFormValDSL.g:5080:58: (iv_ruleAttributeSettings= ruleAttributeSettings EOF )
+            // InternalFormValDSL.g:5081:2: iv_ruleAttributeSettings= ruleAttributeSettings EOF
             {
              newCompositeNode(grammarAccess.getAttributeSettingsRule()); 
             pushFollow(FOLLOW_1);
@@ -12893,7 +12903,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttributeSettings"
-    // InternalFormValDSL.g:5081:1: ruleAttributeSettings returns [EObject current=null] : ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' ) ;
+    // InternalFormValDSL.g:5087:1: ruleAttributeSettings returns [EObject current=null] : ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' ) ;
     public final EObject ruleAttributeSettings() throws RecognitionException {
         EObject current = null;
 
@@ -12908,14 +12918,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5087:2: ( ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' ) )
-            // InternalFormValDSL.g:5088:2: ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5093:2: ( ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' ) )
+            // InternalFormValDSL.g:5094:2: ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' )
             {
-            // InternalFormValDSL.g:5088:2: ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' )
-            // InternalFormValDSL.g:5089:3: () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}'
+            // InternalFormValDSL.g:5094:2: ( () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5095:3: () otherlv_1= 'AttributeSettings' otherlv_2= '{' (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )? otherlv_5= '}'
             {
-            // InternalFormValDSL.g:5089:3: ()
-            // InternalFormValDSL.g:5090:4: 
+            // InternalFormValDSL.g:5095:3: ()
+            // InternalFormValDSL.g:5096:4: 
             {
 
             				current = forceCreateModelElement(
@@ -12933,7 +12943,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getAttributeSettingsAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFormValDSL.g:5104:3: (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )?
+            // InternalFormValDSL.g:5110:3: (otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) ) )?
             int alt134=2;
             int LA134_0 = input.LA(1);
 
@@ -12942,17 +12952,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt134) {
                 case 1 :
-                    // InternalFormValDSL.g:5105:4: otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) )
+                    // InternalFormValDSL.g:5111:4: otherlv_3= 'Presentation' ( (lv_presentation_4_0= ruleERequiredField ) )
                     {
                     otherlv_3=(Token)match(input,86,FOLLOW_94); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getAttributeSettingsAccess().getPresentationKeyword_3_0());
                     			
-                    // InternalFormValDSL.g:5109:4: ( (lv_presentation_4_0= ruleERequiredField ) )
-                    // InternalFormValDSL.g:5110:5: (lv_presentation_4_0= ruleERequiredField )
+                    // InternalFormValDSL.g:5115:4: ( (lv_presentation_4_0= ruleERequiredField ) )
+                    // InternalFormValDSL.g:5116:5: (lv_presentation_4_0= ruleERequiredField )
                     {
-                    // InternalFormValDSL.g:5110:5: (lv_presentation_4_0= ruleERequiredField )
-                    // InternalFormValDSL.g:5111:6: lv_presentation_4_0= ruleERequiredField
+                    // InternalFormValDSL.g:5116:5: (lv_presentation_4_0= ruleERequiredField )
+                    // InternalFormValDSL.g:5117:6: lv_presentation_4_0= ruleERequiredField
                     {
 
                     						newCompositeNode(grammarAccess.getAttributeSettingsAccess().getPresentationERequiredFieldEnumRuleCall_3_1_0());
@@ -13012,7 +13022,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelSettings"
-    // InternalFormValDSL.g:5137:1: entryRuleLabelSettings returns [EObject current=null] : iv_ruleLabelSettings= ruleLabelSettings EOF ;
+    // InternalFormValDSL.g:5143:1: entryRuleLabelSettings returns [EObject current=null] : iv_ruleLabelSettings= ruleLabelSettings EOF ;
     public final EObject entryRuleLabelSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13020,8 +13030,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5137:54: (iv_ruleLabelSettings= ruleLabelSettings EOF )
-            // InternalFormValDSL.g:5138:2: iv_ruleLabelSettings= ruleLabelSettings EOF
+            // InternalFormValDSL.g:5143:54: (iv_ruleLabelSettings= ruleLabelSettings EOF )
+            // InternalFormValDSL.g:5144:2: iv_ruleLabelSettings= ruleLabelSettings EOF
             {
              newCompositeNode(grammarAccess.getLabelSettingsRule()); 
             pushFollow(FOLLOW_1);
@@ -13048,7 +13058,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelSettings"
-    // InternalFormValDSL.g:5144:1: ruleLabelSettings returns [EObject current=null] : ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) ;
+    // InternalFormValDSL.g:5150:1: ruleLabelSettings returns [EObject current=null] : ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) ;
     public final EObject ruleLabelSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13063,14 +13073,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5150:2: ( ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) )
-            // InternalFormValDSL.g:5151:2: ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5156:2: ( ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) )
+            // InternalFormValDSL.g:5157:2: ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
             {
-            // InternalFormValDSL.g:5151:2: ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
-            // InternalFormValDSL.g:5152:3: () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}'
+            // InternalFormValDSL.g:5157:2: ( () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5158:3: () otherlv_1= 'LabelSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}'
             {
-            // InternalFormValDSL.g:5152:3: ()
-            // InternalFormValDSL.g:5153:4: 
+            // InternalFormValDSL.g:5158:3: ()
+            // InternalFormValDSL.g:5159:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13088,7 +13098,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getLabelSettingsAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFormValDSL.g:5167:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
+            // InternalFormValDSL.g:5173:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
             int alt135=2;
             int LA135_0 = input.LA(1);
 
@@ -13097,17 +13107,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt135) {
                 case 1 :
-                    // InternalFormValDSL.g:5168:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5174:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
                     {
                     otherlv_3=(Token)match(input,88,FOLLOW_54); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getLabelSettingsAccess().getPositionKeyword_3_0());
                     			
-                    // InternalFormValDSL.g:5172:4: ( (lv_position_4_0= ruleEPosition ) )
-                    // InternalFormValDSL.g:5173:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5178:4: ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5179:5: (lv_position_4_0= ruleEPosition )
                     {
-                    // InternalFormValDSL.g:5173:5: (lv_position_4_0= ruleEPosition )
-                    // InternalFormValDSL.g:5174:6: lv_position_4_0= ruleEPosition
+                    // InternalFormValDSL.g:5179:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5180:6: lv_position_4_0= ruleEPosition
                     {
 
                     						newCompositeNode(grammarAccess.getLabelSettingsAccess().getPositionEPositionEnumRuleCall_3_1_0());
@@ -13167,7 +13177,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleErrorMessageSettings"
-    // InternalFormValDSL.g:5200:1: entryRuleErrorMessageSettings returns [EObject current=null] : iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF ;
+    // InternalFormValDSL.g:5206:1: entryRuleErrorMessageSettings returns [EObject current=null] : iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF ;
     public final EObject entryRuleErrorMessageSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13175,8 +13185,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5200:61: (iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF )
-            // InternalFormValDSL.g:5201:2: iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF
+            // InternalFormValDSL.g:5206:61: (iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF )
+            // InternalFormValDSL.g:5207:2: iv_ruleErrorMessageSettings= ruleErrorMessageSettings EOF
             {
              newCompositeNode(grammarAccess.getErrorMessageSettingsRule()); 
             pushFollow(FOLLOW_1);
@@ -13203,7 +13213,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleErrorMessageSettings"
-    // InternalFormValDSL.g:5207:1: ruleErrorMessageSettings returns [EObject current=null] : ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' ) ;
+    // InternalFormValDSL.g:5213:1: ruleErrorMessageSettings returns [EObject current=null] : ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' ) ;
     public final EObject ruleErrorMessageSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13221,14 +13231,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5213:2: ( ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' ) )
-            // InternalFormValDSL.g:5214:2: ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' )
+            // InternalFormValDSL.g:5219:2: ( ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' ) )
+            // InternalFormValDSL.g:5220:2: ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' )
             {
-            // InternalFormValDSL.g:5214:2: ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' )
-            // InternalFormValDSL.g:5215:3: () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}'
+            // InternalFormValDSL.g:5220:2: ( () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}' )
+            // InternalFormValDSL.g:5221:3: () otherlv_1= 'ErrorMessageSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )? otherlv_7= '}'
             {
-            // InternalFormValDSL.g:5215:3: ()
-            // InternalFormValDSL.g:5216:4: 
+            // InternalFormValDSL.g:5221:3: ()
+            // InternalFormValDSL.g:5222:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13246,7 +13256,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getErrorMessageSettingsAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFormValDSL.g:5230:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
+            // InternalFormValDSL.g:5236:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
             int alt136=2;
             int LA136_0 = input.LA(1);
 
@@ -13255,17 +13265,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt136) {
                 case 1 :
-                    // InternalFormValDSL.g:5231:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5237:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
                     {
                     otherlv_3=(Token)match(input,88,FOLLOW_54); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getErrorMessageSettingsAccess().getPositionKeyword_3_0());
                     			
-                    // InternalFormValDSL.g:5235:4: ( (lv_position_4_0= ruleEPosition ) )
-                    // InternalFormValDSL.g:5236:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5241:4: ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5242:5: (lv_position_4_0= ruleEPosition )
                     {
-                    // InternalFormValDSL.g:5236:5: (lv_position_4_0= ruleEPosition )
-                    // InternalFormValDSL.g:5237:6: lv_position_4_0= ruleEPosition
+                    // InternalFormValDSL.g:5242:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5243:6: lv_position_4_0= ruleEPosition
                     {
 
                     						newCompositeNode(grammarAccess.getErrorMessageSettingsAccess().getPositionEPositionEnumRuleCall_3_1_0());
@@ -13298,7 +13308,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5255:3: (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )?
+            // InternalFormValDSL.g:5261:3: (otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) ) )?
             int alt137=2;
             int LA137_0 = input.LA(1);
 
@@ -13307,17 +13317,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt137) {
                 case 1 :
-                    // InternalFormValDSL.g:5256:4: otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) )
+                    // InternalFormValDSL.g:5262:4: otherlv_5= 'Color' ( (lv_color_6_0= ruleColor ) )
                     {
                     otherlv_5=(Token)match(input,90,FOLLOW_79); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getErrorMessageSettingsAccess().getColorKeyword_4_0());
                     			
-                    // InternalFormValDSL.g:5260:4: ( (lv_color_6_0= ruleColor ) )
-                    // InternalFormValDSL.g:5261:5: (lv_color_6_0= ruleColor )
+                    // InternalFormValDSL.g:5266:4: ( (lv_color_6_0= ruleColor ) )
+                    // InternalFormValDSL.g:5267:5: (lv_color_6_0= ruleColor )
                     {
-                    // InternalFormValDSL.g:5261:5: (lv_color_6_0= ruleColor )
-                    // InternalFormValDSL.g:5262:6: lv_color_6_0= ruleColor
+                    // InternalFormValDSL.g:5267:5: (lv_color_6_0= ruleColor )
+                    // InternalFormValDSL.g:5268:6: lv_color_6_0= ruleColor
                     {
 
                     						newCompositeNode(grammarAccess.getErrorMessageSettingsAccess().getColorColorParserRuleCall_4_1_0());
@@ -13377,7 +13387,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFormSettings"
-    // InternalFormValDSL.g:5288:1: entryRuleFormSettings returns [EObject current=null] : iv_ruleFormSettings= ruleFormSettings EOF ;
+    // InternalFormValDSL.g:5294:1: entryRuleFormSettings returns [EObject current=null] : iv_ruleFormSettings= ruleFormSettings EOF ;
     public final EObject entryRuleFormSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13385,8 +13395,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5288:53: (iv_ruleFormSettings= ruleFormSettings EOF )
-            // InternalFormValDSL.g:5289:2: iv_ruleFormSettings= ruleFormSettings EOF
+            // InternalFormValDSL.g:5294:53: (iv_ruleFormSettings= ruleFormSettings EOF )
+            // InternalFormValDSL.g:5295:2: iv_ruleFormSettings= ruleFormSettings EOF
             {
              newCompositeNode(grammarAccess.getFormSettingsRule()); 
             pushFollow(FOLLOW_1);
@@ -13413,7 +13423,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFormSettings"
-    // InternalFormValDSL.g:5295:1: ruleFormSettings returns [EObject current=null] : ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' ) ;
+    // InternalFormValDSL.g:5301:1: ruleFormSettings returns [EObject current=null] : ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' ) ;
     public final EObject ruleFormSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13424,14 +13434,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5301:2: ( ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' ) )
-            // InternalFormValDSL.g:5302:2: ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' )
+            // InternalFormValDSL.g:5307:2: ( ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' ) )
+            // InternalFormValDSL.g:5308:2: ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' )
             {
-            // InternalFormValDSL.g:5302:2: ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' )
-            // InternalFormValDSL.g:5303:3: () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings'
+            // InternalFormValDSL.g:5308:2: ( () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings' )
+            // InternalFormValDSL.g:5309:3: () ( (lv_autoComplete_1_0= 'Auto Complete' ) )? otherlv_2= 'FormSettings'
             {
-            // InternalFormValDSL.g:5303:3: ()
-            // InternalFormValDSL.g:5304:4: 
+            // InternalFormValDSL.g:5309:3: ()
+            // InternalFormValDSL.g:5310:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13441,7 +13451,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5310:3: ( (lv_autoComplete_1_0= 'Auto Complete' ) )?
+            // InternalFormValDSL.g:5316:3: ( (lv_autoComplete_1_0= 'Auto Complete' ) )?
             int alt138=2;
             int LA138_0 = input.LA(1);
 
@@ -13450,10 +13460,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt138) {
                 case 1 :
-                    // InternalFormValDSL.g:5311:4: (lv_autoComplete_1_0= 'Auto Complete' )
+                    // InternalFormValDSL.g:5317:4: (lv_autoComplete_1_0= 'Auto Complete' )
                     {
-                    // InternalFormValDSL.g:5311:4: (lv_autoComplete_1_0= 'Auto Complete' )
-                    // InternalFormValDSL.g:5312:5: lv_autoComplete_1_0= 'Auto Complete'
+                    // InternalFormValDSL.g:5317:4: (lv_autoComplete_1_0= 'Auto Complete' )
+                    // InternalFormValDSL.g:5318:5: lv_autoComplete_1_0= 'Auto Complete'
                     {
                     lv_autoComplete_1_0=(Token)match(input,91,FOLLOW_98); 
 
@@ -13501,7 +13511,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNoteSettings"
-    // InternalFormValDSL.g:5332:1: entryRuleNoteSettings returns [EObject current=null] : iv_ruleNoteSettings= ruleNoteSettings EOF ;
+    // InternalFormValDSL.g:5338:1: entryRuleNoteSettings returns [EObject current=null] : iv_ruleNoteSettings= ruleNoteSettings EOF ;
     public final EObject entryRuleNoteSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13509,8 +13519,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5332:53: (iv_ruleNoteSettings= ruleNoteSettings EOF )
-            // InternalFormValDSL.g:5333:2: iv_ruleNoteSettings= ruleNoteSettings EOF
+            // InternalFormValDSL.g:5338:53: (iv_ruleNoteSettings= ruleNoteSettings EOF )
+            // InternalFormValDSL.g:5339:2: iv_ruleNoteSettings= ruleNoteSettings EOF
             {
              newCompositeNode(grammarAccess.getNoteSettingsRule()); 
             pushFollow(FOLLOW_1);
@@ -13537,7 +13547,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNoteSettings"
-    // InternalFormValDSL.g:5339:1: ruleNoteSettings returns [EObject current=null] : ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) ;
+    // InternalFormValDSL.g:5345:1: ruleNoteSettings returns [EObject current=null] : ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) ;
     public final EObject ruleNoteSettings() throws RecognitionException {
         EObject current = null;
 
@@ -13552,14 +13562,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5345:2: ( ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) )
-            // InternalFormValDSL.g:5346:2: ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5351:2: ( ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' ) )
+            // InternalFormValDSL.g:5352:2: ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
             {
-            // InternalFormValDSL.g:5346:2: ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
-            // InternalFormValDSL.g:5347:3: () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}'
+            // InternalFormValDSL.g:5352:2: ( () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}' )
+            // InternalFormValDSL.g:5353:3: () otherlv_1= 'NoteSettings' otherlv_2= '{' (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )? otherlv_5= '}'
             {
-            // InternalFormValDSL.g:5347:3: ()
-            // InternalFormValDSL.g:5348:4: 
+            // InternalFormValDSL.g:5353:3: ()
+            // InternalFormValDSL.g:5354:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13577,7 +13587,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getNoteSettingsAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFormValDSL.g:5362:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
+            // InternalFormValDSL.g:5368:3: (otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) ) )?
             int alt139=2;
             int LA139_0 = input.LA(1);
 
@@ -13586,17 +13596,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt139) {
                 case 1 :
-                    // InternalFormValDSL.g:5363:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5369:4: otherlv_3= 'Position' ( (lv_position_4_0= ruleEPosition ) )
                     {
                     otherlv_3=(Token)match(input,88,FOLLOW_54); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getNoteSettingsAccess().getPositionKeyword_3_0());
                     			
-                    // InternalFormValDSL.g:5367:4: ( (lv_position_4_0= ruleEPosition ) )
-                    // InternalFormValDSL.g:5368:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5373:4: ( (lv_position_4_0= ruleEPosition ) )
+                    // InternalFormValDSL.g:5374:5: (lv_position_4_0= ruleEPosition )
                     {
-                    // InternalFormValDSL.g:5368:5: (lv_position_4_0= ruleEPosition )
-                    // InternalFormValDSL.g:5369:6: lv_position_4_0= ruleEPosition
+                    // InternalFormValDSL.g:5374:5: (lv_position_4_0= ruleEPosition )
+                    // InternalFormValDSL.g:5375:6: lv_position_4_0= ruleEPosition
                     {
 
                     						newCompositeNode(grammarAccess.getNoteSettingsAccess().getPositionEPositionEnumRuleCall_3_1_0());
@@ -13656,7 +13666,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColor"
-    // InternalFormValDSL.g:5395:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
+    // InternalFormValDSL.g:5401:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
     public final EObject entryRuleColor() throws RecognitionException {
         EObject current = null;
 
@@ -13664,8 +13674,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5395:46: (iv_ruleColor= ruleColor EOF )
-            // InternalFormValDSL.g:5396:2: iv_ruleColor= ruleColor EOF
+            // InternalFormValDSL.g:5401:46: (iv_ruleColor= ruleColor EOF )
+            // InternalFormValDSL.g:5402:2: iv_ruleColor= ruleColor EOF
             {
              newCompositeNode(grammarAccess.getColorRule()); 
             pushFollow(FOLLOW_1);
@@ -13692,7 +13702,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // InternalFormValDSL.g:5402:1: ruleColor returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' ) ;
+    // InternalFormValDSL.g:5408:1: ruleColor returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' ) ;
     public final EObject ruleColor() throws RecognitionException {
         EObject current = null;
 
@@ -13711,14 +13721,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5408:2: ( ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' ) )
-            // InternalFormValDSL.g:5409:2: ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' )
+            // InternalFormValDSL.g:5414:2: ( ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' ) )
+            // InternalFormValDSL.g:5415:2: ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' )
             {
-            // InternalFormValDSL.g:5409:2: ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' )
-            // InternalFormValDSL.g:5410:3: () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')'
+            // InternalFormValDSL.g:5415:2: ( () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')' )
+            // InternalFormValDSL.g:5416:3: () otherlv_1= '(' ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )? ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )? ( (lv_blue_6_0= ruleEInt ) )? otherlv_7= ')'
             {
-            // InternalFormValDSL.g:5410:3: ()
-            // InternalFormValDSL.g:5411:4: 
+            // InternalFormValDSL.g:5416:3: ()
+            // InternalFormValDSL.g:5417:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13732,7 +13742,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getColorAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalFormValDSL.g:5421:3: ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )?
+            // InternalFormValDSL.g:5427:3: ( ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ',' )?
             int alt140=2;
             int LA140_0 = input.LA(1);
 
@@ -13756,13 +13766,13 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt140) {
                 case 1 :
-                    // InternalFormValDSL.g:5422:4: ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ','
+                    // InternalFormValDSL.g:5428:4: ( (lv_red_2_0= ruleEInt ) ) otherlv_3= ','
                     {
-                    // InternalFormValDSL.g:5422:4: ( (lv_red_2_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5423:5: (lv_red_2_0= ruleEInt )
+                    // InternalFormValDSL.g:5428:4: ( (lv_red_2_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5429:5: (lv_red_2_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5423:5: (lv_red_2_0= ruleEInt )
-                    // InternalFormValDSL.g:5424:6: lv_red_2_0= ruleEInt
+                    // InternalFormValDSL.g:5429:5: (lv_red_2_0= ruleEInt )
+                    // InternalFormValDSL.g:5430:6: lv_red_2_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getColorAccess().getRedEIntParserRuleCall_2_0_0());
@@ -13799,7 +13809,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5446:3: ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )?
+            // InternalFormValDSL.g:5452:3: ( ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ',' )?
             int alt141=2;
             int LA141_0 = input.LA(1);
 
@@ -13823,13 +13833,13 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt141) {
                 case 1 :
-                    // InternalFormValDSL.g:5447:4: ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ','
+                    // InternalFormValDSL.g:5453:4: ( (lv_green_4_0= ruleEInt ) ) otherlv_5= ','
                     {
-                    // InternalFormValDSL.g:5447:4: ( (lv_green_4_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5448:5: (lv_green_4_0= ruleEInt )
+                    // InternalFormValDSL.g:5453:4: ( (lv_green_4_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5454:5: (lv_green_4_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5448:5: (lv_green_4_0= ruleEInt )
-                    // InternalFormValDSL.g:5449:6: lv_green_4_0= ruleEInt
+                    // InternalFormValDSL.g:5454:5: (lv_green_4_0= ruleEInt )
+                    // InternalFormValDSL.g:5455:6: lv_green_4_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getColorAccess().getGreenEIntParserRuleCall_3_0_0());
@@ -13866,7 +13876,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5471:3: ( (lv_blue_6_0= ruleEInt ) )?
+            // InternalFormValDSL.g:5477:3: ( (lv_blue_6_0= ruleEInt ) )?
             int alt142=2;
             int LA142_0 = input.LA(1);
 
@@ -13875,10 +13885,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt142) {
                 case 1 :
-                    // InternalFormValDSL.g:5472:4: (lv_blue_6_0= ruleEInt )
+                    // InternalFormValDSL.g:5478:4: (lv_blue_6_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5472:4: (lv_blue_6_0= ruleEInt )
-                    // InternalFormValDSL.g:5473:5: lv_blue_6_0= ruleEInt
+                    // InternalFormValDSL.g:5478:4: (lv_blue_6_0= ruleEInt )
+                    // InternalFormValDSL.g:5479:5: lv_blue_6_0= ruleEInt
                     {
 
                     					newCompositeNode(grammarAccess.getColorAccess().getBlueEIntParserRuleCall_4_0());
@@ -13935,7 +13945,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTableOverview"
-    // InternalFormValDSL.g:5498:1: entryRuleTableOverview returns [EObject current=null] : iv_ruleTableOverview= ruleTableOverview EOF ;
+    // InternalFormValDSL.g:5504:1: entryRuleTableOverview returns [EObject current=null] : iv_ruleTableOverview= ruleTableOverview EOF ;
     public final EObject entryRuleTableOverview() throws RecognitionException {
         EObject current = null;
 
@@ -13943,8 +13953,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5498:54: (iv_ruleTableOverview= ruleTableOverview EOF )
-            // InternalFormValDSL.g:5499:2: iv_ruleTableOverview= ruleTableOverview EOF
+            // InternalFormValDSL.g:5504:54: (iv_ruleTableOverview= ruleTableOverview EOF )
+            // InternalFormValDSL.g:5505:2: iv_ruleTableOverview= ruleTableOverview EOF
             {
              newCompositeNode(grammarAccess.getTableOverviewRule()); 
             pushFollow(FOLLOW_1);
@@ -13971,7 +13981,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTableOverview"
-    // InternalFormValDSL.g:5505:1: ruleTableOverview returns [EObject current=null] : ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' ) ;
+    // InternalFormValDSL.g:5511:1: ruleTableOverview returns [EObject current=null] : ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' ) ;
     public final EObject ruleTableOverview() throws RecognitionException {
         EObject current = null;
 
@@ -13996,14 +14006,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5511:2: ( ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' ) )
-            // InternalFormValDSL.g:5512:2: ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' )
+            // InternalFormValDSL.g:5517:2: ( ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' ) )
+            // InternalFormValDSL.g:5518:2: ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' )
             {
-            // InternalFormValDSL.g:5512:2: ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' )
-            // InternalFormValDSL.g:5513:3: () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}'
+            // InternalFormValDSL.g:5518:2: ( () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}' )
+            // InternalFormValDSL.g:5519:3: () otherlv_1= 'TableOverview' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )? (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )? (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )? ( (lv_paging_10_0= rulePagination ) )? otherlv_11= '}'
             {
-            // InternalFormValDSL.g:5513:3: ()
-            // InternalFormValDSL.g:5514:4: 
+            // InternalFormValDSL.g:5519:3: ()
+            // InternalFormValDSL.g:5520:4: 
             {
 
             				current = forceCreateModelElement(
@@ -14017,11 +14027,11 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getTableOverviewAccess().getTableOverviewKeyword_1());
             		
-            // InternalFormValDSL.g:5524:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalFormValDSL.g:5525:4: (lv_name_2_0= ruleEString )
+            // InternalFormValDSL.g:5530:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalFormValDSL.g:5531:4: (lv_name_2_0= ruleEString )
             {
-            // InternalFormValDSL.g:5525:4: (lv_name_2_0= ruleEString )
-            // InternalFormValDSL.g:5526:5: lv_name_2_0= ruleEString
+            // InternalFormValDSL.g:5531:4: (lv_name_2_0= ruleEString )
+            // InternalFormValDSL.g:5532:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getTableOverviewAccess().getNameEStringParserRuleCall_2_0());
@@ -14052,7 +14062,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getTableOverviewAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalFormValDSL.g:5547:3: (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )?
+            // InternalFormValDSL.g:5553:3: (otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) ) )?
             int alt143=2;
             int LA143_0 = input.LA(1);
 
@@ -14061,17 +14071,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt143) {
                 case 1 :
-                    // InternalFormValDSL.g:5548:4: otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5554:4: otherlv_4= 'Height' ( (lv_height_5_0= ruleEInt ) )
                     {
                     otherlv_4=(Token)match(input,95,FOLLOW_45); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getTableOverviewAccess().getHeightKeyword_4_0());
                     			
-                    // InternalFormValDSL.g:5552:4: ( (lv_height_5_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5553:5: (lv_height_5_0= ruleEInt )
+                    // InternalFormValDSL.g:5558:4: ( (lv_height_5_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5559:5: (lv_height_5_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5553:5: (lv_height_5_0= ruleEInt )
-                    // InternalFormValDSL.g:5554:6: lv_height_5_0= ruleEInt
+                    // InternalFormValDSL.g:5559:5: (lv_height_5_0= ruleEInt )
+                    // InternalFormValDSL.g:5560:6: lv_height_5_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getTableOverviewAccess().getHeightEIntParserRuleCall_4_1_0());
@@ -14104,7 +14114,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5572:3: (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )?
+            // InternalFormValDSL.g:5578:3: (otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) ) )?
             int alt144=2;
             int LA144_0 = input.LA(1);
 
@@ -14113,17 +14123,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt144) {
                 case 1 :
-                    // InternalFormValDSL.g:5573:4: otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5579:4: otherlv_6= 'Width' ( (lv_width_7_0= ruleEInt ) )
                     {
                     otherlv_6=(Token)match(input,96,FOLLOW_45); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getTableOverviewAccess().getWidthKeyword_5_0());
                     			
-                    // InternalFormValDSL.g:5577:4: ( (lv_width_7_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5578:5: (lv_width_7_0= ruleEInt )
+                    // InternalFormValDSL.g:5583:4: ( (lv_width_7_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5584:5: (lv_width_7_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5578:5: (lv_width_7_0= ruleEInt )
-                    // InternalFormValDSL.g:5579:6: lv_width_7_0= ruleEInt
+                    // InternalFormValDSL.g:5584:5: (lv_width_7_0= ruleEInt )
+                    // InternalFormValDSL.g:5585:6: lv_width_7_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getTableOverviewAccess().getWidthEIntParserRuleCall_5_1_0());
@@ -14156,7 +14166,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5597:3: (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )?
+            // InternalFormValDSL.g:5603:3: (otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) ) )?
             int alt145=2;
             int LA145_0 = input.LA(1);
 
@@ -14165,17 +14175,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt145) {
                 case 1 :
-                    // InternalFormValDSL.g:5598:4: otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) )
+                    // InternalFormValDSL.g:5604:4: otherlv_8= 'Title' ( (lv_title_9_0= ruleEString ) )
                     {
                     otherlv_8=(Token)match(input,97,FOLLOW_4); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getTableOverviewAccess().getTitleKeyword_6_0());
                     			
-                    // InternalFormValDSL.g:5602:4: ( (lv_title_9_0= ruleEString ) )
-                    // InternalFormValDSL.g:5603:5: (lv_title_9_0= ruleEString )
+                    // InternalFormValDSL.g:5608:4: ( (lv_title_9_0= ruleEString ) )
+                    // InternalFormValDSL.g:5609:5: (lv_title_9_0= ruleEString )
                     {
-                    // InternalFormValDSL.g:5603:5: (lv_title_9_0= ruleEString )
-                    // InternalFormValDSL.g:5604:6: lv_title_9_0= ruleEString
+                    // InternalFormValDSL.g:5609:5: (lv_title_9_0= ruleEString )
+                    // InternalFormValDSL.g:5610:6: lv_title_9_0= ruleEString
                     {
 
                     						newCompositeNode(grammarAccess.getTableOverviewAccess().getTitleEStringParserRuleCall_6_1_0());
@@ -14208,7 +14218,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5622:3: ( (lv_paging_10_0= rulePagination ) )?
+            // InternalFormValDSL.g:5628:3: ( (lv_paging_10_0= rulePagination ) )?
             int alt146=2;
             int LA146_0 = input.LA(1);
 
@@ -14217,10 +14227,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt146) {
                 case 1 :
-                    // InternalFormValDSL.g:5623:4: (lv_paging_10_0= rulePagination )
+                    // InternalFormValDSL.g:5629:4: (lv_paging_10_0= rulePagination )
                     {
-                    // InternalFormValDSL.g:5623:4: (lv_paging_10_0= rulePagination )
-                    // InternalFormValDSL.g:5624:5: lv_paging_10_0= rulePagination
+                    // InternalFormValDSL.g:5629:4: (lv_paging_10_0= rulePagination )
+                    // InternalFormValDSL.g:5630:5: lv_paging_10_0= rulePagination
                     {
 
                     					newCompositeNode(grammarAccess.getTableOverviewAccess().getPagingPaginationParserRuleCall_7_0());
@@ -14277,7 +14287,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePagination"
-    // InternalFormValDSL.g:5649:1: entryRulePagination returns [EObject current=null] : iv_rulePagination= rulePagination EOF ;
+    // InternalFormValDSL.g:5655:1: entryRulePagination returns [EObject current=null] : iv_rulePagination= rulePagination EOF ;
     public final EObject entryRulePagination() throws RecognitionException {
         EObject current = null;
 
@@ -14285,8 +14295,8 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFormValDSL.g:5649:51: (iv_rulePagination= rulePagination EOF )
-            // InternalFormValDSL.g:5650:2: iv_rulePagination= rulePagination EOF
+            // InternalFormValDSL.g:5655:51: (iv_rulePagination= rulePagination EOF )
+            // InternalFormValDSL.g:5656:2: iv_rulePagination= rulePagination EOF
             {
              newCompositeNode(grammarAccess.getPaginationRule()); 
             pushFollow(FOLLOW_1);
@@ -14313,7 +14323,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePagination"
-    // InternalFormValDSL.g:5656:1: rulePagination returns [EObject current=null] : ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' ) ;
+    // InternalFormValDSL.g:5662:1: rulePagination returns [EObject current=null] : ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' ) ;
     public final EObject rulePagination() throws RecognitionException {
         EObject current = null;
 
@@ -14336,14 +14346,14 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5662:2: ( ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' ) )
-            // InternalFormValDSL.g:5663:2: ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' )
+            // InternalFormValDSL.g:5668:2: ( ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' ) )
+            // InternalFormValDSL.g:5669:2: ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' )
             {
-            // InternalFormValDSL.g:5663:2: ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' )
-            // InternalFormValDSL.g:5664:3: () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}'
+            // InternalFormValDSL.g:5669:2: ( () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}' )
+            // InternalFormValDSL.g:5670:3: () otherlv_1= 'Pagination' otherlv_2= '{' (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )? (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )? otherlv_11= '}'
             {
-            // InternalFormValDSL.g:5664:3: ()
-            // InternalFormValDSL.g:5665:4: 
+            // InternalFormValDSL.g:5670:3: ()
+            // InternalFormValDSL.g:5671:4: 
             {
 
             				current = forceCreateModelElement(
@@ -14361,7 +14371,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getPaginationAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFormValDSL.g:5679:3: (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )?
+            // InternalFormValDSL.g:5685:3: (otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}' )?
             int alt148=2;
             int LA148_0 = input.LA(1);
 
@@ -14370,7 +14380,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt148) {
                 case 1 :
-                    // InternalFormValDSL.g:5680:4: otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}'
+                    // InternalFormValDSL.g:5686:4: otherlv_3= 'Possible number of shown rows' otherlv_4= '{' ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) ) (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )* otherlv_8= '}'
                     {
                     otherlv_3=(Token)match(input,99,FOLLOW_7); 
 
@@ -14380,11 +14390,11 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_4, grammarAccess.getPaginationAccess().getLeftCurlyBracketKeyword_3_1());
                     			
-                    // InternalFormValDSL.g:5688:4: ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5689:5: (lv_possibleNumberOfShownRows_5_0= ruleEInt )
+                    // InternalFormValDSL.g:5694:4: ( (lv_possibleNumberOfShownRows_5_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5695:5: (lv_possibleNumberOfShownRows_5_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5689:5: (lv_possibleNumberOfShownRows_5_0= ruleEInt )
-                    // InternalFormValDSL.g:5690:6: lv_possibleNumberOfShownRows_5_0= ruleEInt
+                    // InternalFormValDSL.g:5695:5: (lv_possibleNumberOfShownRows_5_0= ruleEInt )
+                    // InternalFormValDSL.g:5696:6: lv_possibleNumberOfShownRows_5_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getPaginationAccess().getPossibleNumberOfShownRowsEIntParserRuleCall_3_2_0());
@@ -14411,7 +14421,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalFormValDSL.g:5707:4: (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )*
+                    // InternalFormValDSL.g:5713:4: (otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) ) )*
                     loop147:
                     do {
                         int alt147=2;
@@ -14424,17 +14434,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
                         switch (alt147) {
                     	case 1 :
-                    	    // InternalFormValDSL.g:5708:5: otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) )
+                    	    // InternalFormValDSL.g:5714:5: otherlv_6= ',' ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) )
                     	    {
                     	    otherlv_6=(Token)match(input,67,FOLLOW_45); 
 
                     	    					newLeafNode(otherlv_6, grammarAccess.getPaginationAccess().getCommaKeyword_3_3_0());
                     	    				
-                    	    // InternalFormValDSL.g:5712:5: ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) )
-                    	    // InternalFormValDSL.g:5713:6: (lv_possibleNumberOfShownRows_7_0= ruleEInt )
+                    	    // InternalFormValDSL.g:5718:5: ( (lv_possibleNumberOfShownRows_7_0= ruleEInt ) )
+                    	    // InternalFormValDSL.g:5719:6: (lv_possibleNumberOfShownRows_7_0= ruleEInt )
                     	    {
-                    	    // InternalFormValDSL.g:5713:6: (lv_possibleNumberOfShownRows_7_0= ruleEInt )
-                    	    // InternalFormValDSL.g:5714:7: lv_possibleNumberOfShownRows_7_0= ruleEInt
+                    	    // InternalFormValDSL.g:5719:6: (lv_possibleNumberOfShownRows_7_0= ruleEInt )
+                    	    // InternalFormValDSL.g:5720:7: lv_possibleNumberOfShownRows_7_0= ruleEInt
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getPaginationAccess().getPossibleNumberOfShownRowsEIntParserRuleCall_3_3_1_0());
@@ -14480,7 +14490,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFormValDSL.g:5737:3: (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )?
+            // InternalFormValDSL.g:5743:3: (otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) ) )?
             int alt149=2;
             int LA149_0 = input.LA(1);
 
@@ -14489,17 +14499,17 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt149) {
                 case 1 :
-                    // InternalFormValDSL.g:5738:4: otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5744:4: otherlv_9= 'Default number of shown rows' ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) )
                     {
                     otherlv_9=(Token)match(input,100,FOLLOW_45); 
 
                     				newLeafNode(otherlv_9, grammarAccess.getPaginationAccess().getDefaultNumberOfShownRowsKeyword_4_0());
                     			
-                    // InternalFormValDSL.g:5742:4: ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) )
-                    // InternalFormValDSL.g:5743:5: (lv_defaultNumOfShownRows_10_0= ruleEInt )
+                    // InternalFormValDSL.g:5748:4: ( (lv_defaultNumOfShownRows_10_0= ruleEInt ) )
+                    // InternalFormValDSL.g:5749:5: (lv_defaultNumOfShownRows_10_0= ruleEInt )
                     {
-                    // InternalFormValDSL.g:5743:5: (lv_defaultNumOfShownRows_10_0= ruleEInt )
-                    // InternalFormValDSL.g:5744:6: lv_defaultNumOfShownRows_10_0= ruleEInt
+                    // InternalFormValDSL.g:5749:5: (lv_defaultNumOfShownRows_10_0= ruleEInt )
+                    // InternalFormValDSL.g:5750:6: lv_defaultNumOfShownRows_10_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getPaginationAccess().getDefaultNumOfShownRowsEIntParserRuleCall_4_1_0());
@@ -14559,7 +14569,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEUINumberComponentType"
-    // InternalFormValDSL.g:5770:1: ruleEUINumberComponentType returns [Enumerator current=null] : ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) ) ;
+    // InternalFormValDSL.g:5776:1: ruleEUINumberComponentType returns [Enumerator current=null] : ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) ) ;
     public final Enumerator ruleEUINumberComponentType() throws RecognitionException {
         Enumerator current = null;
 
@@ -14570,10 +14580,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5776:2: ( ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) ) )
-            // InternalFormValDSL.g:5777:2: ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) )
+            // InternalFormValDSL.g:5782:2: ( ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) ) )
+            // InternalFormValDSL.g:5783:2: ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) )
             {
-            // InternalFormValDSL.g:5777:2: ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) )
+            // InternalFormValDSL.g:5783:2: ( (enumLiteral_0= 'NumberScroller' ) | (enumLiteral_1= 'SimpleInput' ) )
             int alt150=2;
             int LA150_0 = input.LA(1);
 
@@ -14591,10 +14601,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt150) {
                 case 1 :
-                    // InternalFormValDSL.g:5778:3: (enumLiteral_0= 'NumberScroller' )
+                    // InternalFormValDSL.g:5784:3: (enumLiteral_0= 'NumberScroller' )
                     {
-                    // InternalFormValDSL.g:5778:3: (enumLiteral_0= 'NumberScroller' )
-                    // InternalFormValDSL.g:5779:4: enumLiteral_0= 'NumberScroller'
+                    // InternalFormValDSL.g:5784:3: (enumLiteral_0= 'NumberScroller' )
+                    // InternalFormValDSL.g:5785:4: enumLiteral_0= 'NumberScroller'
                     {
                     enumLiteral_0=(Token)match(input,101,FOLLOW_2); 
 
@@ -14608,10 +14618,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5786:3: (enumLiteral_1= 'SimpleInput' )
+                    // InternalFormValDSL.g:5792:3: (enumLiteral_1= 'SimpleInput' )
                     {
-                    // InternalFormValDSL.g:5786:3: (enumLiteral_1= 'SimpleInput' )
-                    // InternalFormValDSL.g:5787:4: enumLiteral_1= 'SimpleInput'
+                    // InternalFormValDSL.g:5792:3: (enumLiteral_1= 'SimpleInput' )
+                    // InternalFormValDSL.g:5793:4: enumLiteral_1= 'SimpleInput'
                     {
                     enumLiteral_1=(Token)match(input,102,FOLLOW_2); 
 
@@ -14647,7 +14657,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEOrientation"
-    // InternalFormValDSL.g:5797:1: ruleEOrientation returns [Enumerator current=null] : ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) ) ;
+    // InternalFormValDSL.g:5803:1: ruleEOrientation returns [Enumerator current=null] : ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) ) ;
     public final Enumerator ruleEOrientation() throws RecognitionException {
         Enumerator current = null;
 
@@ -14658,10 +14668,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5803:2: ( ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) ) )
-            // InternalFormValDSL.g:5804:2: ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) )
+            // InternalFormValDSL.g:5809:2: ( ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) ) )
+            // InternalFormValDSL.g:5810:2: ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) )
             {
-            // InternalFormValDSL.g:5804:2: ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) )
+            // InternalFormValDSL.g:5810:2: ( (enumLiteral_0= 'Vertical' ) | (enumLiteral_1= 'Horizontal' ) )
             int alt151=2;
             int LA151_0 = input.LA(1);
 
@@ -14679,10 +14689,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt151) {
                 case 1 :
-                    // InternalFormValDSL.g:5805:3: (enumLiteral_0= 'Vertical' )
+                    // InternalFormValDSL.g:5811:3: (enumLiteral_0= 'Vertical' )
                     {
-                    // InternalFormValDSL.g:5805:3: (enumLiteral_0= 'Vertical' )
-                    // InternalFormValDSL.g:5806:4: enumLiteral_0= 'Vertical'
+                    // InternalFormValDSL.g:5811:3: (enumLiteral_0= 'Vertical' )
+                    // InternalFormValDSL.g:5812:4: enumLiteral_0= 'Vertical'
                     {
                     enumLiteral_0=(Token)match(input,103,FOLLOW_2); 
 
@@ -14696,10 +14706,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5813:3: (enumLiteral_1= 'Horizontal' )
+                    // InternalFormValDSL.g:5819:3: (enumLiteral_1= 'Horizontal' )
                     {
-                    // InternalFormValDSL.g:5813:3: (enumLiteral_1= 'Horizontal' )
-                    // InternalFormValDSL.g:5814:4: enumLiteral_1= 'Horizontal'
+                    // InternalFormValDSL.g:5819:3: (enumLiteral_1= 'Horizontal' )
+                    // InternalFormValDSL.g:5820:4: enumLiteral_1= 'Horizontal'
                     {
                     enumLiteral_1=(Token)match(input,104,FOLLOW_2); 
 
@@ -14735,7 +14745,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDateUIType"
-    // InternalFormValDSL.g:5824:1: ruleEDateUIType returns [Enumerator current=null] : ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) ) ;
+    // InternalFormValDSL.g:5830:1: ruleEDateUIType returns [Enumerator current=null] : ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) ) ;
     public final Enumerator ruleEDateUIType() throws RecognitionException {
         Enumerator current = null;
 
@@ -14747,10 +14757,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5830:2: ( ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) ) )
-            // InternalFormValDSL.g:5831:2: ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) )
+            // InternalFormValDSL.g:5836:2: ( ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) ) )
+            // InternalFormValDSL.g:5837:2: ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) )
             {
-            // InternalFormValDSL.g:5831:2: ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) )
+            // InternalFormValDSL.g:5837:2: ( (enumLiteral_0= 'OnlyDate' ) | (enumLiteral_1= 'OnlyTime' ) | (enumLiteral_2= 'DateTime' ) )
             int alt152=3;
             switch ( input.LA(1) ) {
             case 105:
@@ -14777,10 +14787,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             switch (alt152) {
                 case 1 :
-                    // InternalFormValDSL.g:5832:3: (enumLiteral_0= 'OnlyDate' )
+                    // InternalFormValDSL.g:5838:3: (enumLiteral_0= 'OnlyDate' )
                     {
-                    // InternalFormValDSL.g:5832:3: (enumLiteral_0= 'OnlyDate' )
-                    // InternalFormValDSL.g:5833:4: enumLiteral_0= 'OnlyDate'
+                    // InternalFormValDSL.g:5838:3: (enumLiteral_0= 'OnlyDate' )
+                    // InternalFormValDSL.g:5839:4: enumLiteral_0= 'OnlyDate'
                     {
                     enumLiteral_0=(Token)match(input,105,FOLLOW_2); 
 
@@ -14794,10 +14804,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5840:3: (enumLiteral_1= 'OnlyTime' )
+                    // InternalFormValDSL.g:5846:3: (enumLiteral_1= 'OnlyTime' )
                     {
-                    // InternalFormValDSL.g:5840:3: (enumLiteral_1= 'OnlyTime' )
-                    // InternalFormValDSL.g:5841:4: enumLiteral_1= 'OnlyTime'
+                    // InternalFormValDSL.g:5846:3: (enumLiteral_1= 'OnlyTime' )
+                    // InternalFormValDSL.g:5847:4: enumLiteral_1= 'OnlyTime'
                     {
                     enumLiteral_1=(Token)match(input,106,FOLLOW_2); 
 
@@ -14811,10 +14821,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFormValDSL.g:5848:3: (enumLiteral_2= 'DateTime' )
+                    // InternalFormValDSL.g:5854:3: (enumLiteral_2= 'DateTime' )
                     {
-                    // InternalFormValDSL.g:5848:3: (enumLiteral_2= 'DateTime' )
-                    // InternalFormValDSL.g:5849:4: enumLiteral_2= 'DateTime'
+                    // InternalFormValDSL.g:5854:3: (enumLiteral_2= 'DateTime' )
+                    // InternalFormValDSL.g:5855:4: enumLiteral_2= 'DateTime'
                     {
                     enumLiteral_2=(Token)match(input,107,FOLLOW_2); 
 
@@ -14850,7 +14860,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEPosition"
-    // InternalFormValDSL.g:5859:1: ruleEPosition returns [Enumerator current=null] : ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) ) ;
+    // InternalFormValDSL.g:5865:1: ruleEPosition returns [Enumerator current=null] : ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) ) ;
     public final Enumerator ruleEPosition() throws RecognitionException {
         Enumerator current = null;
 
@@ -14863,10 +14873,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5865:2: ( ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) ) )
-            // InternalFormValDSL.g:5866:2: ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) )
+            // InternalFormValDSL.g:5871:2: ( ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) ) )
+            // InternalFormValDSL.g:5872:2: ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) )
             {
-            // InternalFormValDSL.g:5866:2: ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) )
+            // InternalFormValDSL.g:5872:2: ( (enumLiteral_0= 'Above' ) | (enumLiteral_1= 'Left' ) | (enumLiteral_2= 'Right' ) | (enumLiteral_3= 'Below' ) )
             int alt153=4;
             switch ( input.LA(1) ) {
             case 108:
@@ -14898,10 +14908,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             switch (alt153) {
                 case 1 :
-                    // InternalFormValDSL.g:5867:3: (enumLiteral_0= 'Above' )
+                    // InternalFormValDSL.g:5873:3: (enumLiteral_0= 'Above' )
                     {
-                    // InternalFormValDSL.g:5867:3: (enumLiteral_0= 'Above' )
-                    // InternalFormValDSL.g:5868:4: enumLiteral_0= 'Above'
+                    // InternalFormValDSL.g:5873:3: (enumLiteral_0= 'Above' )
+                    // InternalFormValDSL.g:5874:4: enumLiteral_0= 'Above'
                     {
                     enumLiteral_0=(Token)match(input,108,FOLLOW_2); 
 
@@ -14915,10 +14925,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5875:3: (enumLiteral_1= 'Left' )
+                    // InternalFormValDSL.g:5881:3: (enumLiteral_1= 'Left' )
                     {
-                    // InternalFormValDSL.g:5875:3: (enumLiteral_1= 'Left' )
-                    // InternalFormValDSL.g:5876:4: enumLiteral_1= 'Left'
+                    // InternalFormValDSL.g:5881:3: (enumLiteral_1= 'Left' )
+                    // InternalFormValDSL.g:5882:4: enumLiteral_1= 'Left'
                     {
                     enumLiteral_1=(Token)match(input,109,FOLLOW_2); 
 
@@ -14932,10 +14942,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFormValDSL.g:5883:3: (enumLiteral_2= 'Right' )
+                    // InternalFormValDSL.g:5889:3: (enumLiteral_2= 'Right' )
                     {
-                    // InternalFormValDSL.g:5883:3: (enumLiteral_2= 'Right' )
-                    // InternalFormValDSL.g:5884:4: enumLiteral_2= 'Right'
+                    // InternalFormValDSL.g:5889:3: (enumLiteral_2= 'Right' )
+                    // InternalFormValDSL.g:5890:4: enumLiteral_2= 'Right'
                     {
                     enumLiteral_2=(Token)match(input,110,FOLLOW_2); 
 
@@ -14949,10 +14959,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFormValDSL.g:5891:3: (enumLiteral_3= 'Below' )
+                    // InternalFormValDSL.g:5897:3: (enumLiteral_3= 'Below' )
                     {
-                    // InternalFormValDSL.g:5891:3: (enumLiteral_3= 'Below' )
-                    // InternalFormValDSL.g:5892:4: enumLiteral_3= 'Below'
+                    // InternalFormValDSL.g:5897:3: (enumLiteral_3= 'Below' )
+                    // InternalFormValDSL.g:5898:4: enumLiteral_3= 'Below'
                     {
                     enumLiteral_3=(Token)match(input,111,FOLLOW_2); 
 
@@ -14988,7 +14998,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDataType"
-    // InternalFormValDSL.g:5902:1: ruleEDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) ) ;
+    // InternalFormValDSL.g:5908:1: ruleEDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) ) ;
     public final Enumerator ruleEDataType() throws RecognitionException {
         Enumerator current = null;
 
@@ -15001,10 +15011,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5908:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) ) )
-            // InternalFormValDSL.g:5909:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) )
+            // InternalFormValDSL.g:5914:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) ) )
+            // InternalFormValDSL.g:5915:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) )
             {
-            // InternalFormValDSL.g:5909:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) )
+            // InternalFormValDSL.g:5915:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Number' ) | (enumLiteral_2= 'Date' ) | (enumLiteral_3= 'Blob' ) )
             int alt154=4;
             switch ( input.LA(1) ) {
             case 112:
@@ -15036,10 +15046,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
             switch (alt154) {
                 case 1 :
-                    // InternalFormValDSL.g:5910:3: (enumLiteral_0= 'String' )
+                    // InternalFormValDSL.g:5916:3: (enumLiteral_0= 'String' )
                     {
-                    // InternalFormValDSL.g:5910:3: (enumLiteral_0= 'String' )
-                    // InternalFormValDSL.g:5911:4: enumLiteral_0= 'String'
+                    // InternalFormValDSL.g:5916:3: (enumLiteral_0= 'String' )
+                    // InternalFormValDSL.g:5917:4: enumLiteral_0= 'String'
                     {
                     enumLiteral_0=(Token)match(input,112,FOLLOW_2); 
 
@@ -15053,10 +15063,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5918:3: (enumLiteral_1= 'Number' )
+                    // InternalFormValDSL.g:5924:3: (enumLiteral_1= 'Number' )
                     {
-                    // InternalFormValDSL.g:5918:3: (enumLiteral_1= 'Number' )
-                    // InternalFormValDSL.g:5919:4: enumLiteral_1= 'Number'
+                    // InternalFormValDSL.g:5924:3: (enumLiteral_1= 'Number' )
+                    // InternalFormValDSL.g:5925:4: enumLiteral_1= 'Number'
                     {
                     enumLiteral_1=(Token)match(input,113,FOLLOW_2); 
 
@@ -15070,10 +15080,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFormValDSL.g:5926:3: (enumLiteral_2= 'Date' )
+                    // InternalFormValDSL.g:5932:3: (enumLiteral_2= 'Date' )
                     {
-                    // InternalFormValDSL.g:5926:3: (enumLiteral_2= 'Date' )
-                    // InternalFormValDSL.g:5927:4: enumLiteral_2= 'Date'
+                    // InternalFormValDSL.g:5932:3: (enumLiteral_2= 'Date' )
+                    // InternalFormValDSL.g:5933:4: enumLiteral_2= 'Date'
                     {
                     enumLiteral_2=(Token)match(input,114,FOLLOW_2); 
 
@@ -15087,10 +15097,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFormValDSL.g:5934:3: (enumLiteral_3= 'Blob' )
+                    // InternalFormValDSL.g:5940:3: (enumLiteral_3= 'Blob' )
                     {
-                    // InternalFormValDSL.g:5934:3: (enumLiteral_3= 'Blob' )
-                    // InternalFormValDSL.g:5935:4: enumLiteral_3= 'Blob'
+                    // InternalFormValDSL.g:5940:3: (enumLiteral_3= 'Blob' )
+                    // InternalFormValDSL.g:5941:4: enumLiteral_3= 'Blob'
                     {
                     enumLiteral_3=(Token)match(input,115,FOLLOW_2); 
 
@@ -15126,7 +15136,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleERequiredField"
-    // InternalFormValDSL.g:5945:1: ruleERequiredField returns [Enumerator current=null] : ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) ) ;
+    // InternalFormValDSL.g:5951:1: ruleERequiredField returns [Enumerator current=null] : ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) ) ;
     public final Enumerator ruleERequiredField() throws RecognitionException {
         Enumerator current = null;
 
@@ -15137,10 +15147,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFormValDSL.g:5951:2: ( ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) ) )
-            // InternalFormValDSL.g:5952:2: ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) )
+            // InternalFormValDSL.g:5957:2: ( ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) ) )
+            // InternalFormValDSL.g:5958:2: ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) )
             {
-            // InternalFormValDSL.g:5952:2: ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) )
+            // InternalFormValDSL.g:5958:2: ( (enumLiteral_0= 'Asterix' ) | (enumLiteral_1= 'Highlighting' ) )
             int alt155=2;
             int LA155_0 = input.LA(1);
 
@@ -15158,10 +15168,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
             }
             switch (alt155) {
                 case 1 :
-                    // InternalFormValDSL.g:5953:3: (enumLiteral_0= 'Asterix' )
+                    // InternalFormValDSL.g:5959:3: (enumLiteral_0= 'Asterix' )
                     {
-                    // InternalFormValDSL.g:5953:3: (enumLiteral_0= 'Asterix' )
-                    // InternalFormValDSL.g:5954:4: enumLiteral_0= 'Asterix'
+                    // InternalFormValDSL.g:5959:3: (enumLiteral_0= 'Asterix' )
+                    // InternalFormValDSL.g:5960:4: enumLiteral_0= 'Asterix'
                     {
                     enumLiteral_0=(Token)match(input,116,FOLLOW_2); 
 
@@ -15175,10 +15185,10 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFormValDSL.g:5961:3: (enumLiteral_1= 'Highlighting' )
+                    // InternalFormValDSL.g:5967:3: (enumLiteral_1= 'Highlighting' )
                     {
-                    // InternalFormValDSL.g:5961:3: (enumLiteral_1= 'Highlighting' )
-                    // InternalFormValDSL.g:5962:4: enumLiteral_1= 'Highlighting'
+                    // InternalFormValDSL.g:5967:3: (enumLiteral_1= 'Highlighting' )
+                    // InternalFormValDSL.g:5968:4: enumLiteral_1= 'Highlighting'
                     {
                     enumLiteral_1=(Token)match(input,117,FOLLOW_2); 
 
@@ -15236,7 +15246,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0xFE00000000004000L,0x0000000000000076L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000004000L,0x0000000040000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0080000000000030L,0x000F000000000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000715D5E8400002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000715D5A8400002L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000007804000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000007004000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000006004000L});
@@ -15247,7 +15257,7 @@ public class InternalFormValDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000011004000L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000010004000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000018000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000041804000L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000001804000L});
     public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000001004000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000201804000L});

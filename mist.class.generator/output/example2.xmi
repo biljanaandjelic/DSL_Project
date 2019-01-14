@@ -38,6 +38,12 @@
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
       </attributetype>
     </classattribute>
+    <classrule xsi:type="formValidation:Equals">
+      <attributearray attributes="//@validationclasses.0/@classattribute.0 //@validationclasses.0/@classattribute.1"/>
+    </classrule>
+    <classrule xsi:type="formValidation:NotEquals">
+      <attributearray attributes="//@validationclasses.0/@classattribute.2 //@validationclasses.0/@classattribute.3"/>
+    </classrule>
     <formlayout xsi:type="formValidation:Tab" name="aa">
       <attributearray attributes="//@validationclasses.0/@classattribute.0 //@validationclasses.0/@classattribute.1"/>
     </formlayout>

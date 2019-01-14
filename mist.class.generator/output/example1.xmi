@@ -10,7 +10,7 @@
         <attributeRuleErrorMessage message="&#x411;&#x440;&#x43e;&#x458; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x455;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x435; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x435; &#x458;&#x435; &#x43e;&#x431;&#x430;&#x432;&#x435;&#x455;&#x43d;&#x43e; &#x43f;&#x43e;&#x459;&#x435;."/>
       </attributerule>
     </classattribute>
-    <classattribute name="naziv" label="&#x41d;&#x430;&#x437;&#x438;&#x432;">
+    <classattribute name="naziv" label="&#x41d;&#x430;&#x437;&#x438;&#x432;" master="true">
       <attributetype>
         <uiComponent xsi:type="formValidation:TextInput" note="&#x423;&#x43d;&#x435;&#x441;&#x438;&#x442;&#x435; &#x43d;&#x430;&#x437;&#x438;&#x432; &#x442;&#x430;&#x43a;&#x43e; &#x434;&#x430; &#x43f;&#x43e;&#x447;&#x438;&#x45a;&#x435; &#x432;&#x435;&#x43b;&#x438;&#x43a;&#x43e;&#x43c; &#x441;&#x43b;&#x43e;&#x432;&#x43e;&#x43c;."/>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
@@ -124,6 +124,26 @@
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
       </attributetype>
     </classattribute>
+    <classattribute name="gggg" label="&#x413;&#x413;&#x413;&#x413;">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:CheckBox"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" isCollection="true"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>ssasa</values>
+        <values>wwww</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="ggg" label="ttre">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList" isMultiSelect="true"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" isCollection="true"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>sdada</values>
+        <values>saarrrr</values>
+      </attributerule>
+    </classattribute>
     <classrule xsi:type="formValidation:NotEquals">
       <attributearray attributes="//@validationclasses.1/@classattribute.5 //@validationclasses.1/@classattribute.10"/>
     </classrule>
@@ -136,6 +156,7 @@
     <formlayout xsi:type="formValidation:FieldSet" name="podaciOPravnomLicuOrganu" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43f;&#x440;&#x430;&#x432;&#x43d;&#x43e;&#x43c; &#x43b;&#x438;&#x446;&#x443;/&#x43e;&#x440;&#x433;&#x430;&#x43d;&#x443;">
       <layouts xsi:type="formValidation:Grid" name="grid11">
         <attributearray attributes="//@validationclasses.1/@classattribute.0"/>
+        <attributearray attributes="//@validationclasses.1/@classattribute.16 //@validationclasses.1/@classattribute.15"/>
       </layouts>
       <layouts xsi:type="formValidation:Grid" name="grid12">
         <attributearray attributes="//@validationclasses.1/@classattribute.1"/>
@@ -162,6 +183,7 @@
     <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43e;&#x458; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x438;">
       <attributearray attributes="//@validationclasses.1/@classattribute.11"/>
     </formlayout>
+    <formlayout xsi:type="formValidation:Tab" name="sasa"/>
     <additionalSettings xsi:type="formValidation:ErrorMessageSettings" position="Below">
       <color red="255" green="50" blue="50"/>
     </additionalSettings>

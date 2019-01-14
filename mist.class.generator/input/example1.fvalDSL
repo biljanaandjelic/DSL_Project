@@ -25,6 +25,7 @@ organizacionaJedinica{
 		TextInput{
 			Note "Унесите назив тако да почиње великом словом."
 		}
+		Master
 	}
 }
 
@@ -139,7 +140,23 @@ validationClass{
 	mm{
 		Data type Number
 	}
+	gggg{
+		Label "ГГГГ"
+		Data type String
+		Collection
+		CheckBox {}
+		AcceptableValuesString {"ssasa", "wwww"}
+	}
 	
+	ggg{
+		Label "ttre"
+		Data type String 
+		Collection
+		DropDownList {
+			MultiSelectable
+		}
+		AcceptableValuesString {"sdada", "saarrrr"}
+	}
 	NotEquals{
 		attributes (adresaElektronskePoste, adresaElektronskePosteAdministratora)
 	}
@@ -157,7 +174,7 @@ validationClass{
 			Legend "Подаци о правном лицу/органу"
 			Grid grid11{
 				row (jedinstvenBrojKorisnikaJavnihSredstava)
-				
+				row (ggg, gggg)
 				 
 			}
 			Grid grid12{
@@ -171,6 +188,7 @@ validationClass{
 			}
 			Grid grid15{
 				row (adresaElektronskePoste,brojTelefona)
+			
 			}
 	}
 	
@@ -189,6 +207,10 @@ validationClass{
 	FieldSet podaciOOrganizacionojJediniciUpraveZaTrezor{
 		Legend "Подаци о организационој јединици"
 		attributes (brojOrganizacioneJedinice)
+	}
+	
+	Tab sasa{
+		
 	}
 	
 	ErrorMessageSettings{

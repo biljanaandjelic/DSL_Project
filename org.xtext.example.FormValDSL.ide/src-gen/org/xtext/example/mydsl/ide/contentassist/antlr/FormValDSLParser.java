@@ -173,6 +173,7 @@ public class FormValDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTabAccess().getGroup_6_2(), "rule__Tab__Group_6_2__0");
 					put(grammarAccess.getGridAccess().getGroup(), "rule__Grid__Group__0");
 					put(grammarAccess.getGridAccess().getGroup_4(), "rule__Grid__Group_4__0");
+					put(grammarAccess.getGridAccess().getGroup_4_2(), "rule__Grid__Group_4_2__0");
 					put(grammarAccess.getGridAccess().getGroup_5(), "rule__Grid__Group_5__0");
 					put(grammarAccess.getAttributeSettingsAccess().getGroup(), "rule__AttributeSettings__Group__0");
 					put(grammarAccess.getAttributeSettingsAccess().getGroup_3(), "rule__AttributeSettings__Group_3__0");
@@ -227,7 +228,7 @@ public class FormValDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRadioButtonAccess().getTooltipAssignment_3_1(), "rule__RadioButton__TooltipAssignment_3_1");
 					put(grammarAccess.getRadioButtonAccess().getNoteAssignment_4_1(), "rule__RadioButton__NoteAssignment_4_1");
 					put(grammarAccess.getRadioButtonAccess().getOrientationAssignment_5_1(), "rule__RadioButton__OrientationAssignment_5_1");
-					put(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_1(), "rule__DropDownList__IsMultiSelectAssignment_1");
+					put(grammarAccess.getDropDownListAccess().getIsMultiSelectAssignment_3(), "rule__DropDownList__IsMultiSelectAssignment_3");
 					put(grammarAccess.getDropDownListAccess().getTooltipAssignment_4_1(), "rule__DropDownList__TooltipAssignment_4_1");
 					put(grammarAccess.getDropDownListAccess().getNoteAssignment_5_1(), "rule__DropDownList__NoteAssignment_5_1");
 					put(grammarAccess.getCheckBoxAccess().getTooltipAssignment_3_1(), "rule__CheckBox__TooltipAssignment_3_1");
@@ -322,7 +323,7 @@ public class FormValDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTabAccess().getLayoutsAssignment_6_2_1(), "rule__Tab__LayoutsAssignment_6_2_1");
 					put(grammarAccess.getGridAccess().getNameAssignment_2(), "rule__Grid__NameAssignment_2");
 					put(grammarAccess.getGridAccess().getAttributearrayAssignment_4_1(), "rule__Grid__AttributearrayAssignment_4_1");
-					put(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2(), "rule__Grid__AttributearrayAssignment_4_2");
+					put(grammarAccess.getGridAccess().getAttributearrayAssignment_4_2_1(), "rule__Grid__AttributearrayAssignment_4_2_1");
 					put(grammarAccess.getGridAccess().getLayoutsAssignment_5_0(), "rule__Grid__LayoutsAssignment_5_0");
 					put(grammarAccess.getGridAccess().getLayoutsAssignment_5_1(), "rule__Grid__LayoutsAssignment_5_1");
 					put(grammarAccess.getAttributeSettingsAccess().getPresentationAssignment_3_1(), "rule__AttributeSettings__PresentationAssignment_3_1");
