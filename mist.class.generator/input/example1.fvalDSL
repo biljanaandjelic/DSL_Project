@@ -155,6 +155,7 @@ validationClass{
 		DropDownList {
 			MultiSelectable
 		}
+		
 		AcceptableValuesString {"sdada", "saarrrr"}
 	}
 	NotEquals{
@@ -209,9 +210,7 @@ validationClass{
 		attributes (brojOrganizacioneJedinice)
 	}
 	
-	Tab sasa{
-		
-	}
+
 	
 	ErrorMessageSettings{
 		Position Below

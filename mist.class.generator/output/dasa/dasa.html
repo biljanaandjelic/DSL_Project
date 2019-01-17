@@ -63,24 +63,27 @@
     			      </form>
     			      </div>
 <div id="overvieworganizacionaJedinica" class="panel classOverview">
-	<div class="sideBar">
-	<button type="button" class="btn btn-default btn-sm">
-		<span class="fa fa-trash"></span>
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn btn-default btn-lg delete-mode"  style='background-color:transparent;'>
+		<i class="fa fa trash"></i> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<button>Delete selected </button>
-		<button>Delete all </button>
-		<button>Cancel</button>
+		<div class="sidebar-item"><button class="delete-selected"> <i class="fa fa-trash"></i> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="delete-all"> <i class="fa fa-trash"></i> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn btn-default btn-bg cancel-delete-mode"><i class="fas fa-times-circle"></i> Cancel</button></div>
 	</div>
 	</div>
-	<div class="content">
+	<div class="col-11 content">
 	<div class="no-content-message classOverview-content" ></div>
 	<div class="classOverview-content">
 	<table class="table table-hover" id="organizacionaJedinicaTable">
 		<thead>
 	    <tr>
-	    <th scope="col" name="broj"> Број </th>
-	    <th scope="col" name="naziv"> Назив </th>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="broj"> Број </th>
+	    <th scope="col" class="column-name" name="naziv"> Назив </th>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -90,11 +93,9 @@
 	
 	<div id="linkedDataorganizacionaJedinica" class="classOverview-content">
 	<ul class="nav nav-tabs">
-		<li class="nav-item">
-			<a class="nav-link active" href="#organizacionaJedinicadetails" data-toggle="tab">Додатне информације о ентитету</a>
-		</li>
 	</ul>
 	<div class="tab-content">
+	</div>
 	</div>
 	</div>
 	</div>
@@ -222,7 +223,6 @@
     			      
     			      </fieldSet>
     			      
-    			      
     			      <div class="formButtons">
     			      <input type="button"  class="btn btn-success" id="validationClassSubmitButton" value="Submit"/>
     			      <input type="button"  class="btn btn-success" value="Cancel" id="validationClasscancelButton"/>
@@ -230,26 +230,29 @@
     			      </form>
     			      </div>
 <div id="overviewvalidationClass" class="panel classOverview">
-	<div class="sideBar">
-	<button type="button" class="btn btn-default btn-sm">
-		<span class="fa fa-trash"></span>
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn btn-default btn-lg delete-mode"  style='background-color:transparent;'>
+		<i class="fa fa trash"></i> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<button>Delete selected </button>
-		<button>Delete all </button>
-		<button>Cancel</button>
+		<div class="sidebar-item"><button class="delete-selected"> <i class="fa fa-trash"></i> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="delete-all"> <i class="fa fa-trash"></i> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn btn-default btn-bg cancel-delete-mode"><i class="fas fa-times-circle"></i> Cancel</button></div>
 	</div>
 	</div>
-	<div class="content">
+	<div class="col-11 content">
 	<div class="no-content-message classOverview-content" ></div>
 	<div class="classOverview-content">
 	<table class="table table-hover" id="validationClassTable">
 		<thead>
 	    <tr>
-	    <th scope="col" name="jedinstvenBrojKorisnikaJavnihSredstava"> ЈБКЈС </th>
-	    <th scope="col" name="nazicPravnogLica"> Назив правног лица </th>
-	    <th scope="col" name="jedinstveniMaticniBrojGradjanina"> Матични број </th>
-	    <th scope="col" name="poreskiIdentifikacioniBroj"> Порески идентификациони број </th>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="jedinstvenBrojKorisnikaJavnihSredstava"> ЈБКЈС </th>
+	    <th scope="col" class="column-name" name="nazicPravnogLica"> Назив правног лица </th>
+	    <th scope="col" class="column-name" name="jedinstveniMaticniBrojGradjanina"> Матични број </th>
+	    <th scope="col" class="column-name" name="poreskiIdentifikacioniBroj"> Порески идентификациони број </th>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -259,85 +262,110 @@
 	
 	<div id="linkedDatavalidationClass" class="classOverview-content">
 	<ul class="nav nav-tabs">
-		<li class="nav-item">
-			<a class="nav-link active" href="#validationClassdetails" data-toggle="tab">Додатне информације о ентитету</a>
-		</li>
+	<li class="nav-item">
+		<a class="nav-link active" href="#validationClassdetails" data-toggle="tab">Додатне информације о ентитету</a>
+	</li>
 		
 		 <li class="nav-item">
 		     	<a class="nav-link" href="#brojOrganizacioneJediniceTab" data-toggle="tab">Организациона јединица</a>
 		  </li>
 	</ul>
 	<div class="tab-content">
-	<div id="validationClassdetails" class="tab-pane active container">
-	 Додатне информације
-	 <table class="table table-hover" id="validationClassTableDetails">
-	 <thead>
-				 <tr>
- <th scope="col" name="adresaSedista">
- Адреса сједишта 
-</th>
- 				  			
- <th scope="col" name="adresaElektronskePoste">
- Адреса електронске поште 
-</th>
- 				  			
- <th scope="col" name="brojTelefona">
- Број телефона 
-</th>
- 				  			
- <th scope="col" name="imeIPrezimeAdminstratora">
- Име и презиме 
-</th>
- 				  			
- <th scope="col" name="brojIdentifikacioneOznake">
- Број идентификационе ознаке 
-</th>
- 				  			
- <th scope="col" name="brojTelefonaAdministratoraa">
- Број телефона 
-</th>
- 				  			
- <th scope="col" name="adresaElektronskePosteAdministratora">
- Адреса електронске поште 
-</th>
- 				  			
- <th scope="col" name="brojOrganizacioneJedinice">
- Број организационе јединице 
-</th>
- 				  			
- <th scope="col" name="vv">
- Vv 
-</th>
- 				  			
- <th scope="col" name="nn">
- Nn 
-</th>
- 				  			
- <th scope="col" name="mm">
- Mm 
-</th>
- 				  			
- <th scope="col" name="gggg">
- ГГГГ 
-</th>
- 				  			
- <th scope="col" name="ggg">
- ttre 
-</th>
- 				  			
-	     </tr>
-	     </thead>
-	     <tbody>
-	     </tbody>
-	     </table>
+	<div id="validationClassdetails" class="tab-pane active">
+	 
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> Адреса сједишта </label>
+	    <div  class="additionalInfo" name="adresaSedista"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> Адреса електронске поште </label>
+		   <div class="additionalInfo" name = "adresaElektronskePoste"> </div>
+	    	  	</div>
+	    	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> Број телефона </label>
+	    <div  class="additionalInfo" name="brojTelefona"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> Име и презиме </label>
+		   <div class="additionalInfo" name = "imeIPrezimeAdminstratora"> </div>
+	    	  	</div>
+	    	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> Број идентификационе ознаке </label>
+	    <div  class="additionalInfo" name="brojIdentifikacioneOznake"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> Број телефона </label>
+		   <div class="additionalInfo" name = "brojTelefonaAdministratoraa"> </div>
+	    	  	</div>
+	    	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> Адреса електронске поште </label>
+	    <div  class="additionalInfo" name="adresaElektronskePosteAdministratora"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> Vv  </label>
+		   <div class="additionalInfo" name = "vv"> </div>
+	    	  	</div>
+	    	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> Nn  </label>
+	    <div  class="additionalInfo" name="nn"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> Mm  </label>
+		   <div class="additionalInfo" name = "mm"> </div>
+	    	  	</div>
+	    	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6">
+	    <label> ГГГГ </label>
+	    <div  class="additionalInfo" name="gggg"> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6">
+		  <label> ttre </label>
+		   <div class="additionalInfo" name = "ggg"> </div>
+	    	  	</div>
+	    	</div>
+	
 	</div>
-		 <div id="brojOrganizacioneJediniceTab"  class="tab-pane container referenced">
+		 <div id="brojOrganizacioneJediniceTab"  class="tab-pane referenced">
 			<div class="classOverview-content">
 			<table class="table table-hover" id="organizacionaJedinicaTableRef">
 				<thead>
 			    <tr>
-			    <th scope="col" name="broj"> Број </th>
-			    <th scope="col" name="naziv"> Назив </th>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="broj"> Број </th>
+			    <th scope="col" class="column-name" name="naziv"> Назив </th>
 			    </tr>
 			    </thead>
 			    <tbody>
@@ -345,6 +373,7 @@
 			 </table>
 			 </div>
 		</div>
+	</div>
 	</div>
 	</div>
 	</div>

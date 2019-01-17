@@ -13,7 +13,7 @@
         label="Naziv">
       <attributetype>
         <attributeDataType
-            xsi:type="formValidation:PrimitiveDataType"/>
+            xsi:type="formValidation:PrimitiveDataType" type="String"/>
       </attributetype>
     </classattribute>
     <classattribute

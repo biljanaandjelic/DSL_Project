@@ -248,6 +248,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(validationClass, diagnostics, context);
 		if (result || diagnostics != null) result &= validateValidationClass_differentClassAttributes(validationClass, diagnostics, context);
 		if (result || diagnostics != null) result &= validateValidationClass_nameFormat(validationClass, diagnostics, context);
+		if (result || diagnostics != null) result &= validateValidationClass_allLayoutsSameType(validationClass, diagnostics, context);
 		return result;
 	}
 
@@ -316,6 +317,40 @@ public class FormValidationValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the allLayoutsSameType constraint of '<em>Validation Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String VALIDATION_CLASS__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION = "Tuple {\n" +
+		"\tmessage : String = 'At one level all attributes must be same type',\n" +
+		"\tstatus : Boolean = \n" +
+		"\t\tformlayout -> forAll(fL1: FormLayout, fL2: FormLayout | \n" +
+		"\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )\n" +
+		"}.status";
+
+	/**
+	 * Validates the allLayoutsSameType constraint of '<em>Validation Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateValidationClass_allLayoutsSameType(ValidationClass validationClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.VALIDATION_CLASS,
+				 validationClass,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "allLayoutsSameType",
+				 VALIDATION_CLASS__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -352,6 +387,8 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleMaxCanAppearJustOnce(classAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleAcceptableValuesCanAppearJustOnce(classAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateClassAttribute_attributeRulePatternCanAppearJustOnce(classAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeMaster(classAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeRepresenting(classAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -783,6 +820,66 @@ public class FormValidationValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRulePatternCanAppearJustOnce",
 				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_PATTERN_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the collectionCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION = "\n" +
+		"\t\tif attributetype.attributeDataType.isCollection then master = false else true endif";
+
+	/**
+	 * Validates the collectionCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateClassAttribute_collectionCannotBeMaster(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
+				 classAttribute,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "collectionCannotBeMaster",
+				 CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the collectionCannotBeRepresenting constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION = "\n" +
+		"\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif";
+
+	/**
+	 * Validates the collectionCannotBeRepresenting constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateClassAttribute_collectionCannotBeRepresenting(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
+				 classAttribute,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "collectionCannotBeRepresenting",
+				 CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -1753,6 +1850,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(formLayout, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(formLayout, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(formLayout, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(formLayout, diagnostics, context);
 		return result;
 	}
 
@@ -1934,6 +2032,38 @@ public class FormValidationValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the allLayoutsOnOneLevelMustBeSameType constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FORM_LAYOUT__ALL_LAYOUTS_ON_ONE_LEVEL_MUST_BE_SAME_TYPE__EEXPRESSION = "\n" +
+		"\t\tlayouts -> forAll(fL1: FormLayout, fL2: FormLayout |\n" +
+		"\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif\n" +
+		"\t\t)";
+
+	/**
+	 * Validates the allLayoutsOnOneLevelMustBeSameType constraint of '<em>Form Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFormLayout_allLayoutsOnOneLevelMustBeSameType(FormLayout formLayout, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.FORM_LAYOUT,
+				 formLayout,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "allLayoutsOnOneLevelMustBeSameType",
+				 FORM_LAYOUT__ALL_LAYOUTS_ON_ONE_LEVEL_MUST_BE_SAME_TYPE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1953,6 +2083,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(fieldSet, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(fieldSet, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(fieldSet, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(fieldSet, diagnostics, context);
 		return result;
 	}
 
@@ -1976,6 +2107,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(tab, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(tab, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(tab, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(tab, diagnostics, context);
 		return result;
 	}
 
@@ -1999,6 +2131,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(grid, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(grid, diagnostics, context);
 		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(grid, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(grid, diagnostics, context);
 		return result;
 	}
 

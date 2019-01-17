@@ -183,7 +183,6 @@
     <formlayout xsi:type="formValidation:FieldSet" name="podaciOOrganizacionojJediniciUpraveZaTrezor" legend="&#x41f;&#x43e;&#x434;&#x430;&#x446;&#x438; &#x43e; &#x43e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43e;&#x458; &#x458;&#x435;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x438;">
       <attributearray attributes="//@validationclasses.1/@classattribute.11"/>
     </formlayout>
-    <formlayout xsi:type="formValidation:Tab" name="sasa"/>
     <additionalSettings xsi:type="formValidation:ErrorMessageSettings" position="Below">
       <color red="255" green="50" blue="50"/>
     </additionalSettings>

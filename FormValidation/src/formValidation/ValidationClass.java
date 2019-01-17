@@ -26,8 +26,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getValidationClass()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='differentClassAttributes nameFormat'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot differentClassAttributes='Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='differentClassAttributes nameFormat allLayoutsSameType'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot differentClassAttributes='Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')' allLayoutsSameType='Tuple {\n\tmessage : String = \'At one level all attributes must be same type\',\n\tstatus : Boolean = \n\t\tformlayout -> forAll(fL1: FormLayout, fL2: FormLayout | \n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )\n}.status'"
  * @generated
  */
 public interface ValidationClass extends EObject {

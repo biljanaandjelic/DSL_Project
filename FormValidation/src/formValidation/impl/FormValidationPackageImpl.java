@@ -2612,13 +2612,13 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (validationClassEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "differentClassAttributes nameFormat"
+			 "constraints", "differentClassAttributes nameFormat allLayoutsSameType"
 		   });	
 		addAnnotation
 		  (classAttributeEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce"
+			 "constraints", "appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting"
 		   });	
 		addAnnotation
 		  (minLengthEClass, 
@@ -2678,7 +2678,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (formLayoutEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat"
+			 "constraints", "checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat allLayoutsOnOneLevelMustBeSameType"
 		   });	
 		addAnnotation
 		  (businessModelEClass, 
@@ -2707,7 +2707,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		   source, 
 		   new String[] {
 			 "differentClassAttributes", "Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status",
-			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')"
+			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
+			 "allLayoutsSameType", "Tuple {\n\tmessage : String = \'At one level all attributes must be same type\',\n\tstatus : Boolean = \n\t\tformlayout -> forAll(fL1: FormLayout, fL2: FormLayout | \n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )\n}.status"
 		   });	
 		addAnnotation
 		  (classAttributeEClass, 
@@ -2725,7 +2726,9 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 			 "attributeRuleMinCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Min))->size() <=1",
 			 "attributeRuleMaxCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Max))->size() <=1",
 			 "attributeRuleAcceptableValuesCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1",
-			 "attributeRulePatternCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1"
+			 "attributeRulePatternCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1",
+			 "collectionCannotBeMaster", "\n\t\tif attributetype.attributeDataType.isCollection then master = false else true endif",
+			 "collectionCannotBeRepresenting", "\n\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif"
 		   });	
 		addAnnotation
 		  (minLengthEClass, 
@@ -2795,7 +2798,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 			 "uniqueFormLayoutName", "Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status",
 			 "numOfAttributeArraysFieldSet", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
 			 "numOfAttributeArrayTab", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
-			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')"
+			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
+			 "allLayoutsOnOneLevelMustBeSameType", "\n\t\tlayouts -> forAll(fL1: FormLayout, fL2: FormLayout |\n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif\n\t\t)"
 		   });	
 		addAnnotation
 		  (businessModelEClass, 

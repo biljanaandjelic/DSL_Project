@@ -71,14 +71,15 @@ table
 
 .sideBar
 {
-	
-	width: 10%;
-	float: left;
+padding-top: 90px;
+text-align: center;
+background-color: #e6ffe6;
+border-right: 1px solid gray;
 }
 
 .content
 {
-	floar: right;
+	padding-top: 90px;
 }
 .classOverview
 {
@@ -89,28 +90,46 @@ table
 
 .panel
 {
-	margin-top: 90px;
+	padding-top: 90px;
 }
 
 .classOverview-content
 {
-	margin-left: 70px;
+	
 }
 
+.delete-sidebar-items
+{
+	display: none;
+}
 	
  
 #addorganizacionaJedinica
 {
  	align: center;
 }
- 
+
+.select-box{
+	display: none;
+}
+
+.sidebar-item{
+	margin-bottom: 50px;
+}
 
  
 #addvalidationClass
 {
  	align: center;
 }
- 
+
+.select-box{
+	display: none;
+}
+
+.sidebar-item{
+	margin-bottom: 50px;
+}
 #validationClassForm label.error{
 	color : (255, 50, 50)
 	}
