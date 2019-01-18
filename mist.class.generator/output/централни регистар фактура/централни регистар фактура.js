@@ -14,17 +14,17 @@ metaData["organizacionaJedinicaReferencingAttributes"] = organizacionaJedinicaRe
 
  var organizacionaJedinicaReferencedClasses = [ ];
  metaData["organizacionaJedinicaReferencedClasses"] =  organizacionaJedinicaReferencedClasses;
-metaData["validationClassMetaDataMaster"] = [  "jedinstvenBrojKorisnikaJavnihSredstava", "nazicPravnogLica", "jedinstveniMaticniBrojGradjanina", "poreskiIdentifikacioniBroj"];
-metaData["validationClassMetaDataCollection"] = [  "gggg", "ggg"];
-metaData["validationClassMetaDataRepresenting"] = [ "jedinstvenBrojKorisnikaJavnihSredstava","nazicPravnogLica" ];
-metaData["validationClassAllAttributes"] = [  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" , "vv" , "nn" , "mm" , "gggg" , "ggg" ];;
-var validationClassCollection = [];
-collections["validationClass"] = validationClassCollection;
-var validationClassReferencingAttributes = [  "brojOrganizacioneJedinice"];
-metaData["validationClassReferencingAttributes"] = validationClassReferencingAttributes;
+metaData["pravnoLiceMetaDataMaster"] = [  "jedinstvenBrojKorisnikaJavnihSredstava", "nazicPravnogLica", "jedinstveniMaticniBrojGradjanina", "poreskiIdentifikacioniBroj"];
+metaData["pravnoLiceMetaDataCollection"] = [ ];
+metaData["pravnoLiceMetaDataRepresenting"] = [ "jedinstvenBrojKorisnikaJavnihSredstava","nazicPravnogLica" ];
+metaData["pravnoLiceAllAttributes"] = [  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" ];;
+var pravnoLiceCollection = [];
+collections["pravnoLice"] = pravnoLiceCollection;
+var pravnoLiceReferencingAttributes = [  "brojOrganizacioneJedinice"];
+metaData["pravnoLiceReferencingAttributes"] = pravnoLiceReferencingAttributes;
 
- var validationClassReferencedClasses = [  "organizacionaJedinica"];
- metaData["validationClassReferencedClasses"] =  validationClassReferencedClasses;
+ var pravnoLiceReferencedClasses = [  "organizacionaJedinica"];
+ metaData["pravnoLiceReferencedClasses"] =  pravnoLiceReferencedClasses;
     		
 $(".dropdown-item").click(function(){
 	var $this = $(this);
@@ -149,6 +149,28 @@ $(".delete-selected").click(function(){
 		});
 		deleteRecords(className, idList);
 	});
+changeRecordInTable = function(record, tableIdentifier, index, className){
+	var identifierRow = "#" + tableIdentifier + " tr[data-id='"+record["id"]+"']";
+	var newRow ="<td class=\"select-box\"><input type=\"checkbox\"/></td>"
+	var identifier = "#" + tableIdentifier;
+	$(identifierRow).empty();
+	$(identifier + " th.column-name").each(function(){
+	    	newRow += "<td>" + record[$(this).attr("name")] + "</td>"
+	  });
+	$(identifierRow).append(newRow);
+	
+}
+saveChanges = function(className, record){
+	var indexElement =-1;
+	$.each(collections[className], function(index, value){
+		if(value["id"]==record["id"]){
+			indexElement = index;
+			}
+		});
+		
+		collections[className].splice(indexElement,1);
+		collections[className].push(record);
+	}
 setFormInputValues = function(formSelector, record){
 	var keys = Object.keys(record);
 	for(i = 0; i < keys.length; i++){
@@ -265,12 +287,15 @@ $("#organizacionaJedinicaForm").validate({
    				var index = organizacionaJedinicaCollection.length;
    				if(record["id"]==-1){
    					record["id"] = idSeed++;
-   				collections["organizacionaJedinica"].push(record);
+   					collections["organizacionaJedinica"].push(record);
+   					addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
+   				  	toastr.success("Object is saved!");
    				}else{
-   					toastr.error("Implement function for update");
+   					saveChanges("organizacionaJedinica", record);
+   					changeRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
+   					toastr.success("Object is saved!");
    				}
-   				addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
-   				toastr.success("Object is saved!");
+   				
    				}else{
    					toastr.error("There are some errors. Please fix errors and try again.");
    					return false;
@@ -283,7 +308,7 @@ $("#organizacionaJedinicaForm").validate({
    			}
    		});
    		
-$("#validationClassForm").validate({
+$("#pravnoLiceForm").validate({
    			rules:{
    			jedinstvenBrojKorisnikaJavnihSredstava: {
    				 required: true 
@@ -325,10 +350,6 @@ $("#validationClassForm").validate({
    			brojOrganizacioneJedinice: {
    				 required: true 
    			},
-   			gggg: {
-   			},
-   			ggg: {
-   			},
    			},
    			messages: {
 					jedinstvenBrojKorisnikaJavnihSredstava: {
@@ -357,21 +378,17 @@ $("#validationClassForm").validate({
 				},
 					brojOrganizacioneJedinice: {
 				},
-					gggg: {
-				},
-					ggg: {
-				},
    				}
    		});
    		
-   		$("#validationClassSubmitButton").click(function(){
+   		$("#pravnoLiceSubmitButton").click(function(){
    			
-   			if($("#validationClassForm").valid())
+   			if($("#pravnoLiceForm").valid())
    			{
-   				var values = $("#validationClassForm").serialize();
-   				var record = recordInput(values, "validationClass");
-   				var referencingAttributes = metaData["validationClassReferencingAttributes"];
-   				var referencedClasses = metaData["validationClassReferencedClasses"];
+   				var values = $("#pravnoLiceForm").serialize();
+   				var record = recordInput(values, "pravnoLice");
+   				var referencingAttributes = metaData["pravnoLiceReferencingAttributes"];
+   				var referencedClasses = metaData["pravnoLiceReferencedClasses"];
    				
    					$.each(referencingAttributes, function(index, val){
    						var classRef = referencedClasses[index];
@@ -406,22 +423,19 @@ $("#validationClassForm").validate({
    					toastr.error("Adresa Elektronske Poste  and Adresa Sedista should be same.");
    					areClassRulesOk = false;
    				}
-   				if($("#nnid").val() > $("#mmid").val())
-   				{
-   					
-   					toastr.error("Mm  should be greaterthan Nn .");
-   					areClassRulesOk = false;
-   				}
    				if(areClassRulesOk){
-   				var index = validationClassCollection.length;
+   				var index = pravnoLiceCollection.length;
    				if(record["id"]==-1){
    					record["id"] = idSeed++;
-   				collections["validationClass"].push(record);
+   					collections["pravnoLice"].push(record);
+   					addRecordInTable(record, "pravnoLiceTable", index, "Master");
+   				  	toastr.success("Object is saved!");
    				}else{
-   					toastr.error("Implement function for update");
+   					saveChanges("pravnoLice", record);
+   					changeRecordInTable(record, "pravnoLiceTable", index, "Master");
+   					toastr.success("Object is saved!");
    				}
-   				addRecordInTable(record, "validationClassTable", index, "Master");
-   				toastr.success("Object is saved!");
+   				
    				}else{
    					toastr.error("There are some errors. Please fix errors and try again.");
    					return false;

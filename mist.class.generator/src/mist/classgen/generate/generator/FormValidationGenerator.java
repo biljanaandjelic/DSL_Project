@@ -24,7 +24,7 @@ import formValidation.BusinessModel;
 import formValidation.FormValidationPackage;
 import formValidation.ValidationClass;
 
-public class ClassMMGenerator {
+public class FormValidationGenerator {
 
 	public static void generateAll(String inputPath, String outputDirectory) {
 

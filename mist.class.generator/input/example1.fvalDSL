@@ -1,5 +1,5 @@
 {
-label "dasa"
+label "Централни регистар фактура"
 
 description "dfsd"
 
@@ -29,7 +29,8 @@ organizacionaJedinica{
 	}
 }
 
-validationClass{
+pravnoLice{
+	label "Правно лице"
 	jedinstvenBrojKorisnikaJavnihSredstava{
 		Label "ЈБКЈС"
 		Data type String
@@ -131,33 +132,7 @@ validationClass{
 		AutocompleteComponent {}
 		Required
 	}
-	vv {
-		Data type Number
-	}
-	nn{
-		Data type Number
-	}
-	mm{
-		Data type Number
-	}
-	gggg{
-		Label "ГГГГ"
-		Data type String
-		Collection
-		CheckBox {}
-		AcceptableValuesString {"ssasa", "wwww"}
-	}
-	
-	ggg{
-		Label "ttre"
-		Data type String 
-		Collection
-		DropDownList {
-			MultiSelectable
-		}
-		
-		AcceptableValuesString {"sdada", "saarrrr"}
-	}
+
 	NotEquals{
 		attributes (adresaElektronskePoste, adresaElektronskePosteAdministratora)
 	}
@@ -165,18 +140,10 @@ validationClass{
 		attributes (adresaElektronskePoste, adresaSedista)
 	}
 	
-	GreaterThan{
-		nn
-		attributes (mm)
-	}
-	 
-
 	FieldSet podaciOPravnomLicuOrganu{
 			Legend "Подаци о правном лицу/органу"
 			Grid grid11{
-				row (jedinstvenBrojKorisnikaJavnihSredstava)
-				row (ggg, gggg)
-				 
+				row (jedinstvenBrojKorisnikaJavnihSredstava)				 
 			}
 			Grid grid12{
 				row (nazicPravnogLica)
@@ -199,9 +166,6 @@ validationClass{
 		
 			Grid grid21{
 				row (adresaElektronskePosteAdministratora, brojTelefonaAdministratoraa)
-				FieldSet aa{
-					attributes(nn)
-				}
 			}
 	}
 	

@@ -49,8 +49,28 @@
   position: absolute;
   width: 1px;
 }
+.delete-mode{
+	margin-bottom: 50px;
+}
+.btn {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
 .additonalInfo-field{
 	display: inline-block;
+}
+
+.delete-sidebar-items"{
+	background-color: #c2d6d6
 }
 	
 form{
@@ -122,7 +142,7 @@ border-right: 1px solid gray;
 }
 
  
-#addvalidationClass
+#addpravnoLice
 {
  	align: center;
 }
@@ -134,13 +154,13 @@ border-right: 1px solid gray;
 .sidebar-item{
 	margin-bottom: 50px;
 }
-#validationClassForm label.error{
+#pravnoLiceForm label.error{
 	color : (255, 50, 50)
 	}
-#validationClassForm label.error{
+#pravnoLiceForm label.error{
    	color : #FF0000;
    }
 
-		#validationClassTable{
+		#pravnoLiceTable{
 			width: 600px;
 		}

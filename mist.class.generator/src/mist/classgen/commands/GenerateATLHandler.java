@@ -1,6 +1,6 @@
 package mist.classgen.commands;
 
-import mist.classgen.generate.generator.ClassMMGenerator;
+import mist.classgen.generate.generator.FormValidationGenerator;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -29,7 +29,7 @@ public class GenerateATLHandler extends AbstractHandler {
             
             try {
             	//TODO fix this
-				ClassMMGenerator.generateAll(path.toOSString(), path.toOSString());
+				FormValidationGenerator.generateAll(path.toOSString(), path.toOSString());
 				MessageDialog.openInformation(shell, "Success", "Code was generated successfully");
 			} catch (Exception e) {
 				//MessageDialog.openError(shell, "Error", e.getMessage());

@@ -16,7 +16,7 @@
 </head>
 	<body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-	    <a class="navbar-brand" href="#">dasa</a>
+	    <a class="navbar-brand" href="#">Централни регистар фактура</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -27,7 +27,7 @@
 	          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	        <a class="dropdown-item" href="#addorganizacionaJedinica">Организациона јединица</a>
-	        <a class="dropdown-item" href="#addvalidationClass">Validation Class </a>
+	        <a class="dropdown-item" href="#addpravnoLice">Правно лице</a>
 	        </div>
 	        </li>
 			<li class="nav-item dropdown">
@@ -36,7 +36,7 @@
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	            <a class="dropdown-item" href="#overvieworganizacionaJedinica">Организациона јединица</a>
-	            <a class="dropdown-item" href="#overviewvalidationClass">Validation Class </a>
+	            <a class="dropdown-item" href="#overviewpravnoLice">Правно лице</a>
 	        </div>
 	        </li>
 	      </ul>
@@ -66,14 +66,14 @@
 <div id="overvieworganizacionaJedinica" class="panel classOverview">
 	<div class="row">
 	<div class="col-1 sideBar">
-	<button type="button" class="btn btn-default btn-lg delete-mode"  style='background-color:transparent;'>
-		<i class="fa fa trash"></i> Delete mode
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash"></i><br/> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<div class="sidebar-item"><button class="delete-selected"> <i class="fa fa-trash"></i> Delete selected </button></div>
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash"></i> <br/> Delete selected </button></div>
 		
-		<div class="sidebar-item"><button class="delete-all"> <i class="fa fa-trash"></i> Delete all </button></div>
-		<div class="sidebar-item"><button class="btn btn-default btn-bg cancel-delete-mode"><i class="fas fa-times-circle"></i> Cancel</button></div>
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fas fa-close"></i> <br/> Cancel</button></div>
 	</div>
 	</div>
 	<div class="col-11 content">
@@ -101,8 +101,8 @@
 	</div>
 	</div>
 </div>
-    			      <div id="addvalidationClass" class="panel">
-    			      <form id="validationClassForm">
+    			      <div id="addpravnoLice" class="panel">
+    			      <form id="pravnoLiceForm">
     			      <input type="hidden" name="id" value="-1"/>
     			      
     			      
@@ -120,23 +120,6 @@
     			      	
     			      	
     			      	 <input id="jedinstvenBrojKorisnikaJavnihSredstavaId" class="form-control" type="text" placeholder="" name="jedinstvenBrojKorisnikaJavnihSredstava"/>
-    			      </div>
-    			      
-    			      </div>
-    			      <div class="form-row">
-    			      <div class="form-group col-md-6">
-    			      	<label> ttre </label>
-    			      	<select class="form-control" id="gggId" name="ggg">
-    			      	<option>sdada</option>
-    			      	<option>saarrrr</option>
-    			      	</select>
-    			      </div>
-    			      
-    			      <div class="form-group col-md-6">
-    			      	<label> ГГГГ </label>
-    			      	<label class="checkbox-inline"><input type="checkbox" value="ssasa" name="gggg">ssasa</label>
-    			      	<label class="checkbox-inline"><input type="checkbox" value="wwww" name="gggg">wwww</label>
-    			      	
     			      </div>
     			      
     			      </div>
@@ -226,28 +209,28 @@
     			      </fieldSet>
     			      
     			      <div class="formButtons">
-    			      <input type="button"  class="btn btn-success" id="validationClassSubmitButton" value="Submit"/>
-    			      <input type="button"  class="btn btn-success" value="Cancel" id="validationClasscancelButton"/>
+    			      <input type="button"  class="btn btn-success" id="pravnoLiceSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="pravnoLicecancelButton"/>
     			      </div>
     			      </form>
     			      </div>
-<div id="overviewvalidationClass" class="panel classOverview">
+<div id="overviewpravnoLice" class="panel classOverview">
 	<div class="row">
 	<div class="col-1 sideBar">
-	<button type="button" class="btn btn-default btn-lg delete-mode"  style='background-color:transparent;'>
-		<i class="fa fa trash"></i> Delete mode
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash"></i><br/> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<div class="sidebar-item"><button class="delete-selected"> <i class="fa fa-trash"></i> Delete selected </button></div>
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash"></i> <br/> Delete selected </button></div>
 		
-		<div class="sidebar-item"><button class="delete-all"> <i class="fa fa-trash"></i> Delete all </button></div>
-		<div class="sidebar-item"><button class="btn btn-default btn-bg cancel-delete-mode"><i class="fas fa-times-circle"></i> Cancel</button></div>
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fas fa-close"></i> <br/> Cancel</button></div>
 	</div>
 	</div>
 	<div class="col-11 content">
 	<div class="no-content-message classOverview-content" ></div>
 	<div class="classOverview-content">
-	<table class="table table-hover" id="validationClassTable">
+	<table class="table table-hover" id="pravnoLiceTable">
 		<thead>
 	    <tr>
 	    <th class="select-box"></th>
@@ -262,10 +245,10 @@
 	 </table>
 	 </div>
 	
-	<div id="linkedDatavalidationClass" class="classOverview-content">
+	<div id="linkedDatapravnoLice" class="classOverview-content">
 	<ul class="nav nav-tabs">
 	<li class="nav-item">
-		<a class="nav-link active" href="#validationClassdetails" data-toggle="tab">Додатне информације о ентитету</a>
+		<a class="nav-link active" href="#pravnoLicedetails" data-toggle="tab">Додатне информације о ентитету</a>
 	</li>
 		
 		 <li class="nav-item">
@@ -273,7 +256,7 @@
 		  </li>
 	</ul>
 	<div class="tab-content">
-	<div id="validationClassdetails" class="tab-pane active">
+	<div id="pravnoLicedetails" class="tab-pane active">
 	 
 	
 	<div class="form-row">
@@ -323,41 +306,7 @@
 	    <label> Адреса електронске поште :</label>
 	    <div  class="additionalInfo" name="adresaElektronskePosteAdministratora"> </div>
 	 	</div>
-	
-	
-	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> Vv  :</label>
-		   <div class="additionalInfo" name = "vv"> </div>
-	    	  	</div>
-	    	</div>
-	
-	
-	<div class="form-row">
-	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> Nn  :</label>
-	    <div  class="additionalInfo" name="nn"> </div>
-	 	</div>
-	
-	
-	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> Mm  :</label>
-		   <div class="additionalInfo" name = "mm"> </div>
-	    	  	</div>
-	    	</div>
-	
-	
-	<div class="form-row">
-	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> ГГГГ :</label>
-	    <div  class="additionalInfo" name="gggg"> </div>
-	 	</div>
-	
-	
-	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> ttre :</label>
-		   <div class="additionalInfo" name = "ggg"> </div>
-	    	  	</div>
-	    	</div>
+	  </div>
 	
 	</div>
 		 <div id="brojOrganizacioneJediniceTab"  class="tab-pane referenced">
@@ -383,7 +332,7 @@
 	
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="dasa.css">
+	<link rel="stylesheet" href="Централни регистар фактура.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
 	<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
@@ -395,6 +344,6 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-      <script src="dasa.js"></script>
+      <script src="Централни регистар фактура.js"></script>
 	</body>
 </html>
