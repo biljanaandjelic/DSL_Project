@@ -15,9 +15,9 @@ metaData["organizacionaJedinicaReferencingAttributes"] = organizacionaJedinicaRe
  var organizacionaJedinicaReferencedClasses = [ ];
  metaData["organizacionaJedinicaReferencedClasses"] =  organizacionaJedinicaReferencedClasses;
 metaData["pravnoLiceMetaDataMaster"] = [  "jedinstvenBrojKorisnikaJavnihSredstava", "nazicPravnogLica", "jedinstveniMaticniBrojGradjanina", "poreskiIdentifikacioniBroj"];
-metaData["pravnoLiceMetaDataCollection"] = [ ];
+metaData["pravnoLiceMetaDataCollection"] = [  "nnnn", "mmmm"];
 metaData["pravnoLiceMetaDataRepresenting"] = [ "jedinstvenBrojKorisnikaJavnihSredstava","nazicPravnogLica" ];
-metaData["pravnoLiceAllAttributes"] = [  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" ];;
+metaData["pravnoLiceAllAttributes"] = [  "jedinstvenBrojKorisnikaJavnihSredstava" , "nazicPravnogLica" , "jedinstveniMaticniBrojGradjanina" , "poreskiIdentifikacioniBroj" , "adresaSedista" , "adresaElektronskePoste" , "brojTelefona" , "imeIPrezimeAdminstratora" , "brojIdentifikacioneOznake" , "brojTelefonaAdministratoraa" , "adresaElektronskePosteAdministratora" , "brojOrganizacioneJedinice" , "nnnn" , "mmmm" ];;
 var pravnoLiceCollection = [];
 collections["pravnoLice"] = pravnoLiceCollection;
 var pravnoLiceReferencingAttributes = [  "brojOrganizacioneJedinice"];
@@ -178,6 +178,16 @@ setFormInputValues = function(formSelector, record){
 	    var selector = formSelector +" [name=\'"+keys[i]+"\']";
 	    $(selector).val(value);
 	}
+	
+	for(i = 0; i < keys.length; i++){
+		if(keys[i].indexOf("_")>-1){
+			 var value = record[keys[i]];
+			 var selector = formSelector +" [name=\'"+keys[i].split("_")[0]+"\']";
+			 $(selector).val(value);
+		}
+	   
+	}
+	
 toastr.success("Data are shown in form. Please open form to see data.");
 }
 $(".delete-all").click(function(){
@@ -188,8 +198,12 @@ $(".delete-all").click(function(){
 $(".delete-mode").click(function(e){
 	var $this = $(this);
 	var $divParent = $this.parent();
+	var $rootPanel = $this.parent().parent().parent();
+	var rootId = $rootPanel.attr("id");
+	var tableName = rootId.split("overview")[1]+"Table";
 	$divParent.find(".delete-sidebar-items").show();
-	$(".select-box").show();
+	var tableSelector = "#"+tableName+ " .select-box";
+	$(tableSelector).show();
 	});
 $(".cancel-delete-mode").click(function(e){
 	$(this).parent().parent().hide();
@@ -259,6 +273,8 @@ $("#organizacionaJedinicaForm").validate({
    			if($("#organizacionaJedinicaForm").valid())
    			{
    				var values = $("#organizacionaJedinicaForm").serialize();
+   				var values = unescape(values.replace(/\+/g, ' '));
+   				
    				var record = recordInput(values, "organizacionaJedinica");
    				var referencingAttributes = metaData["organizacionaJedinicaReferencingAttributes"];
    				var referencedClasses = metaData["organizacionaJedinicaReferencedClasses"];
@@ -269,11 +285,13 @@ $("#organizacionaJedinicaForm").validate({
    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
    						var arrayOfValues = [];
    						var isFound = false;
-   						referencedCollection.forEach(function(elValue, elIndex){
    						
+   						referencedCollection.forEach(function(elValue, elIndex){
+   							
    							if(elValue[representingAttribute] == record[val]){
    								isFound = true;
    								arrayOfValues.push(elValue);
+   								record[val+"_representing"] = elValue[representingAttribute];
    								record[val] = elValue;
    								}
    							});
@@ -290,10 +308,14 @@ $("#organizacionaJedinicaForm").validate({
    					collections["organizacionaJedinica"].push(record);
    					addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
    				  	toastr.success("Object is saved!");
+   				  	$("#organizacionaJedinicaForm [name='id']").val(-1);
+   				  	$("#organizacionaJedinicaForm")[0].reset();
    				}else{
    					saveChanges("organizacionaJedinica", record);
    					changeRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
    					toastr.success("Object is saved!");
+   					$("#organizacionaJedinicaForm [name='id']").val(-1);
+   					$("#organizacionaJedinicaForm")[0].reset();
    				}
    				
    				}else{
@@ -350,6 +372,10 @@ $("#pravnoLiceForm").validate({
    			brojOrganizacioneJedinice: {
    				 required: true 
    			},
+   			nnnn: {
+   			},
+   			mmmm: {
+   			},
    			},
    			messages: {
 					jedinstvenBrojKorisnikaJavnihSredstava: {
@@ -378,6 +404,10 @@ $("#pravnoLiceForm").validate({
 				},
 					brojOrganizacioneJedinice: {
 				},
+					nnnn: {
+				},
+					mmmm: {
+				},
    				}
    		});
    		
@@ -386,6 +416,8 @@ $("#pravnoLiceForm").validate({
    			if($("#pravnoLiceForm").valid())
    			{
    				var values = $("#pravnoLiceForm").serialize();
+   				var values = unescape(values.replace(/\+/g, ' '));
+   				
    				var record = recordInput(values, "pravnoLice");
    				var referencingAttributes = metaData["pravnoLiceReferencingAttributes"];
    				var referencedClasses = metaData["pravnoLiceReferencedClasses"];
@@ -396,11 +428,13 @@ $("#pravnoLiceForm").validate({
    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
    						var arrayOfValues = [];
    						var isFound = false;
-   						referencedCollection.forEach(function(elValue, elIndex){
    						
+   						referencedCollection.forEach(function(elValue, elIndex){
+   							
    							if(elValue[representingAttribute] == record[val]){
    								isFound = true;
    								arrayOfValues.push(elValue);
+   								record[val+"_representing"] = elValue[representingAttribute];
    								record[val] = elValue;
    								}
    							});
@@ -417,12 +451,6 @@ $("#pravnoLiceForm").validate({
    						toastr.error(" Adresa Elektronske Poste and Adresa Elektronske Poste Administratora should be different.");
    						areClassRulesOk = false;
    				}
-   				 if(record["adresaElektronskePoste"] != record["adresaElektronskePoste"] || record["adresaSedista"] != record["adresaElektronskePoste"] )
-   				{
-   					
-   					toastr.error("Adresa Elektronske Poste  and Adresa Sedista should be same.");
-   					areClassRulesOk = false;
-   				}
    				if(areClassRulesOk){
    				var index = pravnoLiceCollection.length;
    				if(record["id"]==-1){
@@ -430,10 +458,14 @@ $("#pravnoLiceForm").validate({
    					collections["pravnoLice"].push(record);
    					addRecordInTable(record, "pravnoLiceTable", index, "Master");
    				  	toastr.success("Object is saved!");
+   				  	$("#pravnoLiceForm [name='id']").val(-1);
+   				  	$("#pravnoLiceForm")[0].reset();
    				}else{
    					saveChanges("pravnoLice", record);
    					changeRecordInTable(record, "pravnoLiceTable", index, "Master");
    					toastr.success("Object is saved!");
+   					$("#pravnoLiceForm [name='id']").val(-1);
+   					$("#pravnoLiceForm")[0].reset();
    				}
    				
    				}else{

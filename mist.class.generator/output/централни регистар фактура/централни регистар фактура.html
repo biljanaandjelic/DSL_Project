@@ -11,7 +11,7 @@
 			}
 	</style>
 
-	<meta charset=\"UTF-8\">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title></title>
 </head>
 	<body>
@@ -42,18 +42,18 @@
 	      </ul>
 	    </div>
 	  </nav>
-    			      <div id="addorganizacionaJedinica" class="panel">
+    			      <div id="addorganizacionaJedinica" class="panel content">
     			      <form id="organizacionaJedinicaForm">
     			      <input type="hidden" name="id" value="-1"/>
     			      <div class="form-row">
     			      <div class="form-group col-md-12">
-    			      	<label> Број </label>
-    			      	<input id="brojId" class="form-control" type="number" placeholder="" name="broj"/>
+    			      	<label> Број <span class="required">*</span></label>
+    			      	<input id="brojId" class="form-control" type="number" placeholder="" name="broj" class="form-control "/>
     			      </div>
     			      
     			      <div class="form-group col-md-12">
     			      	<label> Назив </label>
-    			      	<input id="nazivId" class="form-control" type="text" placeholder="" name="naziv"/>
+    			      	<input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
     			      </div>
     			      
     			      </div>
@@ -67,13 +67,13 @@
 	<div class="row">
 	<div class="col-1 sideBar">
 	<button type="button" class="btn delete-mode" >
-		<i class="fa fa-trash"></i><br/> Delete mode
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash"></i> <br/> Delete selected </button></div>
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
 		
-		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash"></i> <br/> Delete all </button></div>
-		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fas fa-close"></i> <br/> Cancel</button></div>
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
 	</div>
 	</div>
 	<div class="col-11 content">
@@ -101,112 +101,133 @@
 	</div>
 	</div>
 </div>
-    			      <div id="addpravnoLice" class="panel">
+    			      <div id="addpravnoLice" class="panel content">
     			      <form id="pravnoLiceForm">
     			      <input type="hidden" name="id" value="-1"/>
     			      
     			      
     			      
     			      
-    			       <fieldset class="border p-2">
-    			      <legend class="w-auto">Подаци о правном лицу/органу</legend>
+    			          	      <fieldset class="border p-2">
+    			          	     <legend class="w-auto">Подаци о правном лицу/органу</legend>
+    			          	     
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-12">
+    			          	     	<label> ЈБКЈС <span class="required">*</span></label>
+    			          	     	
+    			          	     	
+    			          	     	
+    			          	     	 <input id="jedinstvenBrojKorisnikaJavnihSredstavaId" class="form-control" type="text" placeholder="" name="jedinstvenBrojKorisnikaJavnihSredstava" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-12">
+    			          	     	<label> Назив правног лица <span class="required">*</span></label>
+    			          	     	<input id="nazicPravnogLicaId" class="form-control" type="text" placeholder="" name="nazicPravnogLica" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Матични број <span class="required">*</span></label>
+    			          	     	<input id="jedinstveniMaticniBrojGradjaninaId" class="form-control" type="text" placeholder="0000000000000" name="jedinstveniMaticniBrojGradjanina" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Порески идентификациони број <span class="required">*</span></label>
+    			          	     	<input id="poreskiIdentifikacioniBrojId" class="form-control" type="number" placeholder="" name="poreskiIdentifikacioniBroj" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-12">
+    			          	     	<label> Адреса сједишта <span class="required">*</span></label>
+    			          	     	 <textarea class="form-control" rows="1" id="adresaSedistaId" name="adresaSedista" placeholder=""></textarea>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Адреса електронске поште <span class="required">*</span></label>
+    			          	     	<input id="adresaElektronskePosteId" class="form-control" type="email" placeholder="" name="adresaElektronskePoste" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Број телефона <span class="required">*</span></label>
+    			          	     	<input id="brojTelefonaId" class="form-control" type="tel" placeholder="" name="brojTelefona" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	     </fieldSet>
     			      
-    			       
+    			          	      <fieldset class="border p-2">
+    			          	     <legend class="w-auto">Подаци о администратору</legend>
+    			          	     <label> Име и презиме <span class="required">*</span></label>
+    			          	     <input id="imeIPrezimeAdminstratoraId" class="form-control" type="text" placeholder="Петар Петровић" name="imeIPrezimeAdminstratora" class="form-control "/>
+    			          	     <label> Број идентификационе ознаке <span class="required">*</span></label>
+    			          	     <input id="brojIdentifikacioneOznakeId" class="form-control" type="text" placeholder="" name="brojIdentifikacioneOznake" class="form-control "/>
+    			          	     
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Адреса електронске поште <span class="required">*</span></label>
+    			          	     	<input id="adresaElektronskePosteAdministratoraId" class="form-control" type="email" placeholder="" name="adresaElektronskePosteAdministratora" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> Број телефона <span class="required">*</span></label>
+    			          	     	<input id="brojTelefonaAdministratoraaId" class="form-control" type="text" placeholder="" name="brojTelefonaAdministratoraa" class="form-control "/>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	     </fieldSet>
     			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-12">
-    			      	<label> ЈБКЈС </label>
-    			      	
-    			      	
-    			      	
-    			      	 <input id="jedinstvenBrojKorisnikaJavnihSredstavaId" class="form-control" type="text" placeholder="" name="jedinstvenBrojKorisnikaJavnihSredstava"/>
-    			      </div>
+    			          	      <fieldset class="border p-2">
+    			          	     <legend class="w-auto">Подаци о организационој јединици</legend>
+    			          	     <label> Број организационе јединице <span class="required">*</span></label>
+    			          	     
+    			          	      <input class="form-control autocomplete"  id="brojOrganizacioneJedinice"Id name="brojOrganizacioneJedinice" placeholder="Enter A" data-class="organizacionaJedinica" />
+    			          	     
+    			          	     </fieldSet>
     			      
-    			      </div>
-    			      
-    			       
-    			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-12">
-    			      	<label> Назив правног лица </label>
-    			      	<input id="nazicPravnogLicaId" class="form-control" type="text" placeholder="" name="nazicPravnogLica"/>
-    			      </div>
-    			      
-    			      </div>
-    			      
-    			       
-    			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-6">
-    			      	<label> Матични број </label>
-    			      	<input id="jedinstveniMaticniBrojGradjaninaId" class="form-control" type="text" placeholder="0000000000000" name="jedinstveniMaticniBrojGradjanina"/>
-    			      </div>
-    			      
-    			      <div class="form-group col-md-6">
-    			      	<label> Порески идентификациони број </label>
-    			      	<input id="poreskiIdentifikacioniBrojId" class="form-control" type="number" placeholder="" name="poreskiIdentifikacioniBroj"/>
-    			      </div>
-    			      
-    			      </div>
-    			      
-    			       
-    			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-12">
-    			      	<label> Адреса сједишта </label>
-    			      	 <textarea class="form-control" rows="1" id="adresaSedistaId" name="adresaSedista" placeholder=""></textarea>
-    			      </div>
-    			      
-    			      </div>
-    			      
-    			       
-    			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-6">
-    			      	<label> Адреса електронске поште </label>
-    			      	<input id="adresaElektronskePosteId" class="form-control" type="email" placeholder="" name="adresaElektronskePoste"/>
-    			      </div>
-    			      
-    			      <div class="form-group col-md-6">
-    			      	<label> Број телефона </label>
-    			      	<input id="brojTelefonaId" class="form-control" type="tel" placeholder="" name="brojTelefona"/>
-    			      </div>
-    			      
-    			      </div>
-    			      
-    			      </fieldSet>
-    			      
-    			       <fieldset class="border p-2">
-    			      <legend class="w-auto">Подаци о администратору</legend>
-    			      <label> Име и презиме </label>
-    			      <input id="imeIPrezimeAdminstratoraId" class="form-control" type="text" placeholder="Петар Петровић" name="imeIPrezimeAdminstratora"/>
-    			      <label> Број идентификационе ознаке </label>
-    			      <input id="brojIdentifikacioneOznakeId" class="form-control" type="text" placeholder="" name="brojIdentifikacioneOznake"/>
-    			      
-    			       
-    			      
-    			      <div class="form-row">
-    			      <div class="form-group col-md-6">
-    			      	<label> Адреса електронске поште </label>
-    			      	<input id="adresaElektronskePosteAdministratoraId" class="form-control" type="email" placeholder="" name="adresaElektronskePosteAdministratora"/>
-    			      </div>
-    			      
-    			      <div class="form-group col-md-6">
-    			      	<label> Број телефона </label>
-    			      	<input id="brojTelefonaAdministratoraaId" class="form-control" type="text" placeholder="" name="brojTelefonaAdministratoraa"/>
-    			      </div>
-    			      
-    			      </div>
-    			      
-    			      </fieldSet>
-    			      
-    			       <fieldset class="border p-2">
-    			      <legend class="w-auto">Подаци о организационој јединици</legend>
-    			      <label> Број организационе јединице </label>
-    			      
-    			       <input class="form-control autocomplete"  id="brojOrganizacioneJedinice"Id name="brojOrganizacioneJedinice" placeholder="Enter A" data-class="organizacionaJedinica" />
-    			      
-    			      </fieldSet>
+    			          	      <fieldset class="border p-2">
+    			          	     <legend class="w-auto">Just to show</legend>
+    			          	     
+    			          	      
+    			          	     
+    			          	     <div class="form-row">
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> NNN </label>
+    			          	     	<select class="form-control" id="nnnnId" name="nnnn"  multiple >
+    			          	     	<option>aaa</option>
+    			          	     	<option>bbb</option>
+    			          	     	<option>ccc</option>
+    			          	     	</select>
+    			          	     </div>
+    			          	     
+    			          	     <div class="form-group col-md-6">
+    			          	     	<label> MMM </label>
+    			          	     	<select class="form-control" id="mmmmId" name="mmmm"  multiple >
+    			          	     	<option>aaa</option>
+    			          	     	<option>bbb</option>
+    			          	     	<option>ccc</option>
+    			          	     	</select>
+    			          	     </div>
+    			          	     
+    			          	     </div>
+    			          	     </fieldSet>
     			      
     			      <div class="formButtons">
     			      <input type="button"  class="btn btn-success" id="pravnoLiceSubmitButton" value="Submit"/>
@@ -218,13 +239,13 @@
 	<div class="row">
 	<div class="col-1 sideBar">
 	<button type="button" class="btn delete-mode" >
-		<i class="fa fa-trash"></i><br/> Delete mode
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
 	</button>
 	<div class="delete-sidebar-items">
-		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash"></i> <br/> Delete selected </button></div>
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
 		
-		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash"></i> <br/> Delete all </button></div>
-		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fas fa-close"></i> <br/> Cancel</button></div>
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
 	</div>
 	</div>
 	<div class="col-11 content">
@@ -261,50 +282,60 @@
 	
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> Адреса сједишта :</label>
-	    <div  class="additionalInfo" name="adresaSedista"> </div>
+	    
+	    <div><span><label> Адреса сједишта :</label></span><span class="additionalInfo" name="adresaSedista"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> Адреса електронске поште :</label>
-		   <div class="additionalInfo" name = "adresaElektronskePoste"> </div>
-	    	  	</div>
-	    	</div>
+	 <div><span><label> Адреса електронске поште : </label></span><span class="additionalInfo" name="adresaElektronskePoste"></span> </div>
+	</div>
+	</div>
 	
 	
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> Број телефона :</label>
-	    <div  class="additionalInfo" name="brojTelefona"> </div>
+	    
+	    <div><span><label> Број телефона :</label></span><span class="additionalInfo" name="brojTelefona"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> Име и презиме :</label>
-		   <div class="additionalInfo" name = "imeIPrezimeAdminstratora"> </div>
-	    	  	</div>
-	    	</div>
+	 <div><span><label> Име и презиме : </label></span><span class="additionalInfo" name="imeIPrezimeAdminstratora"></span> </div>
+	</div>
+	</div>
 	
 	
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> Број идентификационе ознаке :</label>
-	    <div  class="additionalInfo" name="brojIdentifikacioneOznake"> </div>
+	    
+	    <div><span><label> Број идентификационе ознаке :</label></span><span class="additionalInfo" name="brojIdentifikacioneOznake"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-		  <label> Број телефона :</label>
-		   <div class="additionalInfo" name = "brojTelefonaAdministratoraa"> </div>
-	    	  	</div>
-	    	</div>
+	 <div><span><label> Број телефона : </label></span><span class="additionalInfo" name="brojTelefonaAdministratoraa"></span> </div>
+	</div>
+	</div>
 	
 	
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
-	    <label> Адреса електронске поште :</label>
-	    <div  class="additionalInfo" name="adresaElektronskePosteAdministratora"> </div>
+	    
+	    <div><span><label> Адреса електронске поште :</label></span><span class="additionalInfo" name="adresaElektronskePosteAdministratora"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label> NNN : </label></span><span class="additionalInfo" name="nnnn"></span> </div>
+	</div>
+	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label> MMM :</label></span><span class="additionalInfo" name="mmmm"></span> </div>
 	 	</div>
 	  </div>
 	

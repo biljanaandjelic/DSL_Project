@@ -1,7 +1,7 @@
 {
 label "Централни регистар фактура"
 
-description "dfsd"
+description "Opis"
 
 organizacionaJedinica{
 	
@@ -132,12 +132,30 @@ pravnoLice{
 		AutocompleteComponent {}
 		Required
 	}
-
+	nnnn{
+		Label "NNN"
+		Data type String
+		Collection
+		DropDownList {
+			MultiSelectable
+		}
+		
+		AcceptableValuesString { "aaa", "bbb", "ccc"}
+	}
+	
+	mmmm{
+		Label "MMM"
+		Data type String
+		Collection
+		DropDownList {
+	
+		}
+		
+		AcceptableValuesString { "aaa", "bbb", "ccc"}
+	}
+	
 	NotEquals{
 		attributes (adresaElektronskePoste, adresaElektronskePosteAdministratora)
-	}
-	Equals{
-		attributes (adresaElektronskePoste, adresaSedista)
 	}
 	
 	FieldSet podaciOPravnomLicuOrganu{
@@ -174,7 +192,12 @@ pravnoLice{
 		attributes (brojOrganizacioneJedinice)
 	}
 	
-
+	FieldSet addData{
+		Legend "Just to show"
+		Grid grid22{
+			row(nnnn, mmmm)
+		}
+	}
 	
 	ErrorMessageSettings{
 		Position Below

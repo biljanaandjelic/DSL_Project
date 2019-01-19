@@ -17,9 +17,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import classDiagram.ClassDiagramPackage;
-import classDiagram.ClassModel;
-import classDiagram.ModelingConcept;
+
 import formValidation.BusinessModel;
 import formValidation.FormValidationPackage;
 import formValidation.ValidationClass;

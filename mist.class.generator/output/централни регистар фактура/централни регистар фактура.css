@@ -60,6 +60,13 @@
   font-size: 16px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
+span.required{
+	color: red;
+}
+
+input.required-field{
+	background-color: #ffffe6;
+}
 
 .btn:hover {
   background-color: RoyalBlue;
@@ -69,8 +76,9 @@
 	display: inline-block;
 }
 
-.delete-sidebar-items"{
-	background-color: #c2d6d6
+.delete-sidebar-items{
+	background-color: #c2d6d6;
+	width: 100%;
 }
 	
 form{
@@ -114,7 +122,6 @@ border-right: 1px solid gray;
 
 .panel
 {
-	padding-top: 90px;
 }
 
 .classOverview-content
