@@ -1,0 +1,257 @@
+   	.ui-autocomplete {
+   	  position: absolute;
+   	  top: 100%;
+   	  left: 0;
+   	  z-index: 1000;
+   	  display: none;
+   	  float: left;
+   	  min-width: 160px;
+   	  padding: 5px 0;
+   	  margin: 2px 0 0;
+   	  list-style: none;
+   	  font-size: 14px;
+   	  text-align: left;
+   	  background-color: #ffffff;
+   	  border: 1px solid #cccccc;
+   	  border: 1px solid rgba(0, 0, 0, 0.15);
+   	  border-radius: 4px;
+   	  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+   	  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+   	  background-clip: padding-box;
+   	}
+   	
+   	.ui-autocomplete > li > div {
+   	  display: block;
+   	  padding: 3px 20px;
+   	  clear: both;
+   	  font-weight: normal;
+   	  line-height: 1.42857143;
+   	  color: #333333;
+   	  white-space: nowrap;
+   	}
+   	
+   	.ui-state-hover,
+   	.ui-state-active,
+   	.ui-state-focus {
+   	  text-decoration: none;
+   	  color: #262626;
+   	  background-color: #f5f5f5;
+   	  cursor: pointer;
+   	}
+   	
+   	.ui-helper-hidden-accessible {
+   	  border: 0;
+   	  clip: rect(0 0 0 0);
+   	  height: 1px;
+   	  margin: -1px;
+   	  overflow: hidden;
+   	  padding: 0;
+   	  position: absolute;
+   	  width: 1px;
+   	}
+   	.delete-mode{
+   		margin-bottom: 50px;
+   	}
+   	
+   	.additional-info-label{
+   		font-weight: bold;
+   	}
+
+		.error{
+			color: #FF0000;
+		}
+			
+   	.btn {
+   	  background-color: DodgerBlue; /* Blue background */
+   	  border: none; /* Remove borders */
+   	  color: white; /* White text */
+   	  padding: 12px 16px; /* Some padding */
+   	  font-size: 16px; /* Set a font size */
+   	  cursor: pointer; /* Mouse pointer on hover */
+   	}
+   	span.required{
+   		color: red;
+   	}
+   	
+   	input.required-field{
+   		background-color: #ffffe6;
+   	}
+   	
+   	.btn:hover {
+   	  background-color: RoyalBlue;
+   	}
+   	
+   	.additonalInfo-field{
+   		display: inline-block;
+   	}
+   	
+   	.delete-sidebar-items{
+   		background-color: #c2d6d6;
+   		width: 100%;
+   	}
+   		
+   	form{
+   		width: 80%;
+   		margin: 0 auto;
+   	}
+   		
+   	div form
+   	{
+   		align: center;
+   	}
+   		
+   	.formButtons
+   	{
+   		float: right;
+   	}
+   		
+   	table
+   	{
+   		margin: 0 auto;
+   	}
+   	
+   	.sideBar
+   	{
+   	padding-top: 90px;
+   	text-align: center;
+   	background-color: #e6ffe6;
+   	border-right: 1px solid gray;
+   	}
+   	
+   	.content
+   	{
+   		padding-top: 90px;
+   	}
+   	.classOverview
+   	{
+   		overflow: hidden;
+   		position: relative;
+   		width: 100%;
+   	}
+   	
+   	.panel
+   	{
+   	}
+   	
+   	.classOverview-content
+   	{
+   		
+   	}
+   	
+   	.delete-sidebar-items
+   	{
+   		display: none;
+   	}
+   		
+   	 
+   	#addopstina
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#adddrzavljanstvo
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#addsrednjaskola
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#addtipSednjeSkole
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#adddrzava
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#addmesto
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#addnacionalnost
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	
+   	 
+   	#addsObrazac
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	

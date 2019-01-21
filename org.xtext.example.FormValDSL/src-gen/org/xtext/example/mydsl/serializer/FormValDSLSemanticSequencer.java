@@ -540,7 +540,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Length returns Length
 	 *
 	 * Constraint:
-	 *     (value=Int0? attributeRuleErrorMessage=ErrorMessage?)
+	 *     (value=EInt? attributeRuleErrorMessage=ErrorMessage?)
 	 */
 	protected void sequence_Length(ISerializationContext context, Length semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

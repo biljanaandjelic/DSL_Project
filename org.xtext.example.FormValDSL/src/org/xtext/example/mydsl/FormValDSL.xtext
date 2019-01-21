@@ -296,7 +296,7 @@ Length returns Length:
 	{Length}
 	'Length'
 	
-		(/*'value'*/ value=Int0)?
+		(/*'value'*/ value=EInt)?
 		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
 	;
 

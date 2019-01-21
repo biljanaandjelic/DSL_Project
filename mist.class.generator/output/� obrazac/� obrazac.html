@@ -1,0 +1,1023 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+	 
+	
+	
+	<style>
+		.panel{
+				display: none;
+			}
+	</style>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+</head>
+	<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+	    <a class="navbar-brand" href="#">� obrazac</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	      <ul class="navbar-nav">
+	    
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	        <a class="dropdown-item" href="#addopstina">Opstina</a>
+	        <a class="dropdown-item" href="#adddrzavljanstvo">Drzavljanstvo </a>
+	        <a class="dropdown-item" href="#addsrednjaskola">Srednja �kola</a>
+	        <a class="dropdown-item" href="#addtipSednjeSkole">Tip Sednje Skole </a>
+	        <a class="dropdown-item" href="#adddrzava">Drzava </a>
+	        <a class="dropdown-item" href="#addmesto">Mesto </a>
+	        <a class="dropdown-item" href="#addnacionalnost">Nacionalnost </a>
+	        <a class="dropdown-item" href="#addsObrazac">� obrazac</a>
+	        </div>
+	        </li>
+			<li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        Overview 
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#overviewopstina">Opstina</a>
+	            <a class="dropdown-item" href="#overviewdrzavljanstvo">Drzavljanstvo </a>
+	            <a class="dropdown-item" href="#overviewsrednjaskola">Srednja �kola</a>
+	            <a class="dropdown-item" href="#overviewtipSednjeSkole">Tip Sednje Skole </a>
+	            <a class="dropdown-item" href="#overviewdrzava">Drzava </a>
+	            <a class="dropdown-item" href="#overviewmesto">Mesto </a>
+	            <a class="dropdown-item" href="#overviewnacionalnost">Nacionalnost </a>
+	            <a class="dropdown-item" href="#overviewsObrazac">� obrazac</a>
+	        </div>
+	        </li>
+	      </ul>
+	    </div>
+	  </nav>
+    			      <div id="addopstina" class="panel content">
+    			      <form id="opstinaForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Kod <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="kodId" class="form-control" type="text" placeholder="" name="kod" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success opstinaSubmitButton" id="opstinaSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="opstinacancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewopstina" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="opstinaTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="kod"> Kod </th>
+	    <th scope="col" class="column-name" name="naziv"> Naziv </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDataopstina" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="adddrzavljanstvo" class="panel content">
+    			      <form id="drzavljanstvoForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success drzavljanstvoSubmitButton" id="drzavljanstvoSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="drzavljanstvocancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewdrzavljanstvo" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="drzavljanstvoTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatadrzavljanstvo" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addsrednjaskola" class="panel content">
+    			      <form id="srednjaskolaForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success srednjaskolaSubmitButton" id="srednjaskolaSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="srednjaskolacancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewsrednjaskola" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="srednjaskolaTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatasrednjaskola" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addtipSednjeSkole" class="panel content">
+    			      <form id="tipSednjeSkoleForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success tipSednjeSkoleSubmitButton" id="tipSednjeSkoleSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="tipSednjeSkolecancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewtipSednjeSkole" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="tipSednjeSkoleTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatatipSednjeSkole" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="adddrzava" class="panel content">
+    			      <form id="drzavaForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Kod <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="kodId" class="form-control" type="text" placeholder="" name="kod" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success drzavaSubmitButton" id="drzavaSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="drzavacancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewdrzava" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="drzavaTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    <th scope="col" class="column-name" name="kod">Kod </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatadrzava" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addmesto" class="panel content">
+    			      <form id="mestoForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Postanski Broj </label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="postanskiBrojId" class="form-control" type="text" placeholder="" name="postanskiBroj" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Kod <span class="required">*</span></label>
+    			      	
+    			      	 <input id="kodId" class="form-control" type="number" placeholder="" name="kod" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success mestoSubmitButton" id="mestoSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="mestocancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewmesto" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="mestoTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    <th scope="col" class="column-name" name="postanskiBroj">Postanski Broj </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatamesto" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" href="#mestodetails" data-toggle="tab">Додатне информације о ентитету</a>
+	</li>
+	</ul>
+	<div class="tab-content">
+	<div id="mestodetails" class="tab-pane active">
+	 
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Kod  :</label></span><span class="additionalInfo" name="kod"></span> </div>
+	 	</div>
+	  </div>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addnacionalnost" class="panel content">
+    			      <form id="nacionalnostForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Naziv <span class="required">*</span></label>
+    			      	
+    			      	
+    			      	
+    			      	 <input id="nazivId" class="form-control" type="text" placeholder="" name="naziv" class="form-control "/>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success nacionalnostSubmitButton" id="nacionalnostSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="nacionalnostcancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewnacionalnost" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="nacionalnostTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="naziv">Naziv </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatanacionalnost" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	</ul>
+	<div class="tab-content">
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+    			      <div id="addsObrazac" class="panel content">
+    			      <form id="sObrazacForm">
+    			      <input type="hidden" name="id" value="-1"/>
+    			      <div class="form-row">
+    			      <div class="form-group col-md-12">
+    			      	<label> Datum Rodjenja <span class="required">*</span></label>
+    			      	
+    			      	 <input id="datumRodjenjaId" class="form-control" type="date" placeholder="" name="datumRodjenja" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Mesto Rodjena <span class="required">*</span></label>
+    			      	<select class="form-control" id="mestoRodjenaId" name="mestoRodjena" 
+    			      	data-kind="ValidationClass" data-class="mesto">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Opstina Rodjena <span class="required">*</span></label>
+    			      	<select class="form-control" id="opstinaRodjenaId" name="opstinaRodjena" 
+    			      	data-kind="ValidationClass" data-class="opstina">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Drzava Rodjenja <span class="required">*</span></label>
+    			      	<select class="form-control" id="drzavaRodjenjaId" name="drzavaRodjenja" 
+    			      	data-kind="ValidationClass" data-class="drzava">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Adresa Stanovanja Stalog <span class="required">*</span></label>
+    			      	<input id="adresaStanovanjaStalogId" class="form-control" type="text" placeholder="" name="adresaStanovanjaStalog" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Opstina Stalnog Stanovanja <span class="required">*</span></label>
+    			      	<select class="form-control" id="opstinaStalnogStanovanjaId" name="opstinaStalnogStanovanja" 
+    			      	data-kind="ValidationClass" data-class="opstina">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Mesto stanovanja (stalnog stanovanja) <span class="required">*</span></label>
+    			      	<select class="form-control" id="mestoStalnogStanovanjeId" name="mestoStalnogStanovanje" 
+    			      	data-kind="ValidationClass" data-class="mesto">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Telefon (stalnog stanovanja) <span class="required">*</span></label>
+    			      	<input id="telefonId" class="form-control" type="tel" placeholder="" name="telefon" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Adresa stanovanja (za vrijeme studija) <span class="required">*</span></label>
+    			      	<select class="form-control" id="adresaStanovanjaZaVrijemeStudijaId" name="adresaStanovanjaZaVrijemeStudija" 
+    			      	data-kind="ValidationClass" data-class="mesto">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Opstina stanovanja (za vrijeme studija) <span class="required">*</span></label>
+    			      	<select class="form-control" id="opstinaStanovanjaZaVrijemeStudijaId" name="opstinaStanovanjaZaVrijemeStudija" 
+    			      	data-kind="ValidationClass" data-class="opstina">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Mjesto stanovanje (za vrijeme studija) <span class="required">*</span></label>
+    			      	<select class="form-control" id="mestoStanovanjeZaVrijemeStudijaId" name="mestoStanovanjeZaVrijemeStudija" 
+    			      	data-kind="ValidationClass" data-class="mesto">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Mobilni telefonn (za vrijeme studija) <span class="required">*</span></label>
+    			      	<input id="mobilniTelefonZaVrijeStudijaId" class="form-control" type="tel" placeholder="" name="mobilniTelefonZaVrijeStudija" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Drzavljanstvo <span class="required">*</span></label>
+    			      	<select class="form-control" id="drzavljanstvoId" name="drzavljanstvo" 
+    			      	data-kind="ValidationClass" data-class="drzavljanstvo">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Nacionalnost <span class="required">*</span></label>
+    			      	<select class="form-control" id="nacionalnostId" name="nacionalnost" 
+    			      	data-kind="ValidationClass" data-class="nacionalnost">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Srednja Skola <span class="required">*</span></label>
+    			      	<select class="form-control" id="srednjaSkolaId" name="srednjaSkola" 
+    			      	data-kind="ValidationClass" data-class="srednjaskola">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Profil Srednje Skole <span class="required">*</span></label>
+    			      	<select class="form-control" id="profilSrednjeSkoleId" name="profilSrednjeSkole" 
+    			      	data-kind="ValidationClass" data-class="tipSednjeSkole">
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Glavni Radni Status Studenta <span class="required">*</span></label>
+    			      	<select class="form-control" id="glavniRadniStatusStudentaId" name="glavniRadniStatusStudenta" 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Nezaposlen</option>
+    			      	<option>Zaposlen krace od punog radnog vremea</option>
+    			      	<option>Zaposlen puno radno vreme</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Zanimanje Studenta </label>
+    			      	<input id="zanimanjeStudentaId" class="form-control" type="text" placeholder="" name="zanimanjeStudenta" class="form-control "/>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Bracni Status <span class="required">*</span></label>
+    			      	<select class="form-control" id="bracniStatusId" name="bracniStatus" 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Neozenjen/Neudata</option>
+    			      	<option>Ozenjen/Udata, zivi u vanbracnoj zajednici</option>
+    			      	<option>Razveden/Razvedena</option>
+    			      	<option>Udovac/Udovica</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Tip Smjestaja </label>
+    			      	<select class="form-control" id="tipSmjestajaId" name="tipSmjestaja" 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Studentski dom</option>
+    			      	<option>Kod roditelja</option>
+    			      	<option>Kod rodjaka</option>
+    			      	<option>Iznajmljen stan</option>
+    			      	<option>Sopstveni stan</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Nacin Izdrazavanja Tokom Studija </label>
+    			      	<select class="form-control" id="nacinIzdrazavanjaTokomStudijaId" name="nacinIzdrazavanjaTokomStudija"  multiple 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Izdrzavanje od strane roditelja</option>
+    			      	<option>Samostalno</option>
+    			      	<option>Stipendija koju daje javna ustanova</option>
+    			      	<option>Kredit koji daje javna ustanova</option>
+    			      	<option>Stipendija koju daje kompanija</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Koji od nacina izdrzavanja je glavni? </label>
+    			      	<select class="form-control" id="glavniNacinIzdrzavanjaId" name="glavniNacinIzdrzavanja" 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Izdrzavanje od strane roditelja</option>
+    			      	<option>Samostalno</option>
+    			      	<option>Stipendija koju daje javna ustanova</option>
+    			      	<option>Kredit koji daje javna ustanova</option>
+    			      	<option>Stipendija koju daje kompanija</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Da li student izdrzava druga lica? </label>
+    			      	<select class="form-control" id="izdrzavanjeDrugihLicaId" name="izdrzavanjeDrugihLica"  multiple 
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>Ne</option>
+    			      	<option>Da, svoju decu</option>
+    			      	<option>Da, supruga/suprugu partnera/partnerku</option>
+    			      	<option>Da, roditelje</option>
+    			      	<option>Da, rodjake</option>
+    			      	<option>Da, druga lica</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      </div>
+    			      <div class="formButtons">
+    			      <input type="button"  class="btn btn-success sObrazacSubmitButton" id="sObrazacSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success" value="Cancel" id="sObrazaccancelButton"/>
+    			      </div>
+    			      </form>
+    			      </div>
+<div id="overviewsObrazac" class="panel classOverview">
+	<div class="row">
+	<div class="col-1 sideBar">
+	<button type="button" class="btn delete-mode" >
+		<i class="fa fa-trash fa-2x"></i><br/> Delete mode
+	</button>
+	<div class="delete-sidebar-items">
+		<div class="sidebar-item"><button class="btn delete-selected"> <i class="fa fa-trash fa-2x"></i> <br/> Delete selected </button></div>
+		
+		<div class="sidebar-item"><button class="btn delete-all"> <i class="fa fa-trash fa-2x"></i> <br/> Delete all </button></div>
+		<div class="sidebar-item"><button class="btn cancel-delete-mode"><i class="fa fa-close fa-2x"></i> <br/> Cancel</button></div>
+	</div>
+	</div>
+	<div class="col-11 content">
+	<div class="no-content-message classOverview-content" ></div>
+	<div class="classOverview-content">
+	<table class="table table-hover" id="sObrazacTable">
+		<thead>
+	    <tr>
+	    <th class="select-box"></th>
+	    <th scope="col" class="column-name" name="datumRodjenja">Datum Rodjenja </th>
+	    <th scope="col" class="column-name" name="drzavaRodjenja">Drzava Rodjenja </th>
+	    <th scope="col" class="column-name" name="adresaStanovanjaStalog">Adresa Stanovanja Stalog </th>
+	    <th scope="col" class="column-name" name="telefon"> Telefon (stalnog stanovanja) </th>
+	    <th scope="col" class="column-name" name="opstinaStanovanjaZaVrijemeStudija"> Opstina stanovanja (za vrijeme studija) </th>
+	    <th scope="col" class="column-name" name="mobilniTelefonZaVrijeStudija"> Mobilni telefonn (za vrijeme studija) </th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	 </table>
+	 </div>
+	
+	<div id="linkedDatasObrazac" class="classOverview-content">
+	<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" href="#sObrazacdetails" data-toggle="tab">Додатне информације о ентитету</a>
+	</li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#mestoRodjenaTab" data-toggle="tab">Mesto Rodjena </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#opstinaRodjenaTab" data-toggle="tab">Opstina Rodjena </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#drzavaRodjenjaTab" data-toggle="tab">Drzava Rodjenja </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#opstinaStalnogStanovanjaTab" data-toggle="tab">Opstina Stalnog Stanovanja </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#mestoStalnogStanovanjeTab" data-toggle="tab">Mesto stanovanja (stalnog stanovanja)</a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#adresaStanovanjaZaVrijemeStudijaTab" data-toggle="tab">Adresa stanovanja (za vrijeme studija)</a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#opstinaStanovanjaZaVrijemeStudijaTab" data-toggle="tab">Opstina stanovanja (za vrijeme studija)</a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#mestoStanovanjeZaVrijemeStudijaTab" data-toggle="tab">Mjesto stanovanje (za vrijeme studija)</a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#drzavljanstvoTab" data-toggle="tab">Drzavljanstvo </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#nacionalnostTab" data-toggle="tab">Nacionalnost </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#srednjaSkolaTab" data-toggle="tab">Srednja Skola </a>
+		  </li>
+		
+		 <li class="nav-item">
+		     	<a class="nav-link" href="#profilSrednjeSkoleTab" data-toggle="tab">Profil Srednje Skole </a>
+		  </li>
+	</ul>
+	<div class="tab-content">
+	<div id="sObrazacdetails" class="tab-pane active">
+	 
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Glavni Radni Status Studenta  :</label></span><span class="additionalInfo" name="glavniRadniStatusStudenta"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label class="additional-info-label"> Zanimanje Studenta  : </label></span><span class="additionalInfo" name="zanimanjeStudenta"></span> </div>
+	</div>
+	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Bracni Status  :</label></span><span class="additionalInfo" name="bracniStatus"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label class="additional-info-label"> Tip Smjestaja  : </label></span><span class="additionalInfo" name="tipSmjestaja"></span> </div>
+	</div>
+	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Nacin Izdrazavanja Tokom Studija  :</label></span><span class="additionalInfo" name="nacinIzdrazavanjaTokomStudija"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label class="additional-info-label"> Koji od nacina izdrzavanja je glavni? : </label></span><span class="additionalInfo" name="glavniNacinIzdrzavanja"></span> </div>
+	</div>
+	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Da li student izdrzava druga lica? :</label></span><span class="additionalInfo" name="izdrzavanjeDrugihLica"></span> </div>
+	 	</div>
+	  </div>
+	
+	</div>
+		 <div id="mestoRodjenaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="mestoTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    <th scope="col" class="column-name" name="postanskiBroj">Postanski Broj </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="opstinaRodjenaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="opstinaTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="kod"> Kod </th>
+			    <th scope="col" class="column-name" name="naziv"> Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="drzavaRodjenjaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="drzavaTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    <th scope="col" class="column-name" name="kod">Kod </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="opstinaStalnogStanovanjaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="opstinaTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="kod"> Kod </th>
+			    <th scope="col" class="column-name" name="naziv"> Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="mestoStalnogStanovanjeTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="mestoTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    <th scope="col" class="column-name" name="postanskiBroj">Postanski Broj </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="adresaStanovanjaZaVrijemeStudijaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="mestoTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    <th scope="col" class="column-name" name="postanskiBroj">Postanski Broj </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="opstinaStanovanjaZaVrijemeStudijaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="opstinaTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="kod"> Kod </th>
+			    <th scope="col" class="column-name" name="naziv"> Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="mestoStanovanjeZaVrijemeStudijaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="mestoTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    <th scope="col" class="column-name" name="postanskiBroj">Postanski Broj </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="drzavljanstvoTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="drzavljanstvoTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="nacionalnostTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="nacionalnostTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="srednjaSkolaTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="srednjaskolaTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+		 <div id="profilSrednjeSkoleTab"  class="tab-pane referenced">
+			<div class="classOverview-content">
+			<table class="table table-hover" id="tipSednjeSkoleTableRef">
+				<thead>
+			    <tr>
+			    <th class="select-box"></th>
+			    <th scope="col" class="column-name" name="naziv">Naziv </th>
+			    </tr>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			 </table>
+			 </div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="� obrazac.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+	
+	  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+      <script src="� obrazac.js"></script>
+	</body>
+</html>

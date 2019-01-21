@@ -629,7 +629,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_jPdIc-3lEeiD46mTv_jzkA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_jPchYe3lEeiD46mTv_jzkA" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jPchYu3lEeiD46mTv_jzkA" x="-2112" y="96" width="120" height="100"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jPchYu3lEeiD46mTv_jzkA" x="-2105" y="96" width="120" height="100"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_cJ1XQO6uEeiSDZ3NHS_Tbg" type="2003" element="_cGfIUO6uEeiSDZ3NHS_Tbg">
             <children xmi:type="notation:Node" xmi:id="_cKQ1EO6uEeiSDZ3NHS_Tbg" type="5007"/>
@@ -3348,7 +3348,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_xW9OoO3lEeiD46mTv_jzkA" name="Invalid feature as name" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_xW9OoO3lEeiD46mTv_jzkA" name="position : EPosition = Above" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//LabelSettings/position"/>
           <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//LabelSettings/position"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zJMBQO3lEeiD46mTv_jzkA" labelAlignment="LEFT">
@@ -3811,7 +3811,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_qzuB4PY6EeiPL5jBGOVPnQ" name="Invalid feature as name" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_qzuB4PY6EeiPL5jBGOVPnQ" name="position : EPosition = Below" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="formValidation.ecore#//ErrorMessageSettings/position"/>
           <semanticElements xmi:type="ecore:EAttribute" href="formValidation.ecore#//ErrorMessageSettings/position"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_tSDskPY6EeiPL5jBGOVPnQ" labelAlignment="LEFT">

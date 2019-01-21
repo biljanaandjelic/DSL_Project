@@ -118,6 +118,7 @@
         <uiComponent xsi:type="formValidation:TelInput"/>
         <datatype xsi:type="formValidation:PrimitiveDataType"/>
       </attributetype>
+      
     </classattribute>
     <classattribute name="adresaStanovanjaZaVremeStudija" label="Adresa stanovanja (za vreme studija)">
       <attributetype>

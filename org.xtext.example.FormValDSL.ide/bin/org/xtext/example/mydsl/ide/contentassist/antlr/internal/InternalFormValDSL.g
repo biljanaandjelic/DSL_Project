@@ -1149,31 +1149,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleInt0
-entryRuleInt0
-:
-{ before(grammarAccess.getInt0Rule()); }
-	 ruleInt0
-{ after(grammarAccess.getInt0Rule()); } 
-	 EOF 
-;
-
-// Rule Int0
-ruleInt0 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getInt0Access().getIntKeyword()); }
-		'Int'
-		{ after(grammarAccess.getInt0Access().getIntKeyword()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleFloat
 entryRuleFloat
 :
@@ -16954,9 +16929,9 @@ rule__Length__ValueAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getLengthAccess().getValueInt0ParserRuleCall_2_0()); }
-		ruleInt0
-		{ after(grammarAccess.getLengthAccess().getValueInt0ParserRuleCall_2_0()); }
+		{ before(grammarAccess.getLengthAccess().getValueEIntParserRuleCall_2_0()); }
+		ruleEInt
+		{ after(grammarAccess.getLengthAccess().getValueEIntParserRuleCall_2_0()); }
 	)
 ;
 finally {

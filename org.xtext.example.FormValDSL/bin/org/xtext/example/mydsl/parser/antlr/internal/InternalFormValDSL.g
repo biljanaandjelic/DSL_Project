@@ -3351,9 +3351,9 @@ ruleLength returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getLengthAccess().getValueInt0ParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getLengthAccess().getValueEIntParserRuleCall_2_0());
 				}
-				lv_value_2_0=ruleInt0
+				lv_value_2_0=ruleEInt
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getLengthRule());
@@ -3362,7 +3362,7 @@ ruleLength returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_2_0,
-						"org.xtext.example.mydsl.FormValDSL.Int0");
+						"org.xtext.example.mydsl.FormValDSL.EInt");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4043,28 +4043,6 @@ ruleDatePattern returns [EObject current=null]
 			newLeafNode(otherlv_6, grammarAccess.getDatePatternAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
-;
-
-// Entry rule entryRuleInt0
-entryRuleInt0 returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getInt0Rule()); }
-	iv_ruleInt0=ruleInt0
-	{ $current=$iv_ruleInt0.current.getText(); }
-	EOF;
-
-// Rule Int0
-ruleInt0 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	kw='Int'
-	{
-		$current.merge(kw);
-		newLeafNode(kw, grammarAccess.getInt0Access().getIntKeyword());
-	}
 ;
 
 // Entry rule entryRuleFloat

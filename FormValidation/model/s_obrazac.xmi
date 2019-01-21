@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="&#xfffd; obrazac" description="Opis">
+  <validationclasses name="opstina" label="Opstina">
+    <classattribute name="kod" label="Kod" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="naziv" label="Naziv" master="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="drzavljanstvo">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="srednjaskola" label="Srednja &#xfffd;kola">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="tipSednjeSkole">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="drzava">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="kod" master="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:Length" value="3"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="mesto">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="postanskiBroj" master="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:StringPattern" value="[0-9]{5}"/>
+    </classattribute>
+    <classattribute name="kod">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="nacionalnost">
+    <classattribute name="naziv" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="sObrazac" label="&#xfffd; obrazac">
+    <classattribute name="datumRodjenja" master="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Date"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="mestoRodjena">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.5"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="opstinaRodjena">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.0"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="drzavaRodjenja" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.4"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="adresaStanovanjaStalog" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="opstinaStalnogStanovanja">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.0"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="mestoStalnogStanovanje" label="Mesto stanovanja (stalnog stanovanja)">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.5"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="telefon" label="Telefon (stalnog stanovanja)" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TelInput"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="adresaStanovanjaZaVrijemeStudija" label="Adresa stanovanja (za vrijeme studija)">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.5"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="opstinaStanovanjaZaVrijemeStudija" label="Opstina stanovanja (za vrijeme studija)" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.0"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="mestoStanovanjeZaVrijemeStudija" label="Mjesto stanovanje (za vrijeme studija)">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.5"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="mobilniTelefonZaVrijeStudija" label="Mobilni telefonn (za vrijeme studija)" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TelInput"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="drzavljanstvo">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.1"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="nacionalnost">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.6"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="srednjaSkola">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.2"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="profilSrednjeSkole">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" type="//@validationclasses.3"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="glavniRadniStatusStudenta">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Nezaposlen</values>
+        <values>Zaposlen krace od punog radnog vremea</values>
+        <values>Zaposlen puno radno vreme</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="zanimanjeStudenta">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:TextInput"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="bracniStatus">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Neozenjen/Neudata</values>
+        <values>Ozenjen/Udata, zivi u vanbracnoj zajednici</values>
+        <values>Razveden/Razvedena</values>
+        <values>Udovac/Udovica</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="tipSmjestaja">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Studentski dom</values>
+        <values>Kod roditelja</values>
+        <values>Kod rodjaka</values>
+        <values>Iznajmljen stan</values>
+        <values>Sopstveni stan</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="nacinIzdrazavanjaTokomStudija">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList" isMultiSelect="true"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" isCollection="true"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Izdrzavanje od strane roditelja</values>
+        <values>Samostalno</values>
+        <values>Stipendija koju daje javna ustanova</values>
+        <values>Kredit koji daje javna ustanova</values>
+        <values>Stipendija koju daje kompanija</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="glavniNacinIzdrzavanja" label="Koji od nacina izdrzavanja je glavni?">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Izdrzavanje od strane roditelja</values>
+        <values>Samostalno</values>
+        <values>Stipendija koju daje javna ustanova</values>
+        <values>Kredit koji daje javna ustanova</values>
+        <values>Stipendija koju daje kompanija</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="izdrzavanjeDrugihLica" label="Da li student izdrzava druga lica?">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList" isMultiSelect="true"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" isCollection="true"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>Ne</values>
+        <values>Da, svoju decu</values>
+        <values>Da, supruga/suprugu partnera/partnerku</values>
+        <values>Da, roditelje</values>
+        <values>Da, rodjake</values>
+        <values>Da, druga lica</values>
+      </attributerule>
+    </classattribute>
+  </validationclasses>
+</formValidation:BusinessModel>

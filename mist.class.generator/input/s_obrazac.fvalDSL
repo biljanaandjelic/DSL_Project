@@ -1,0 +1,247 @@
+{
+	label "Š obrazac"
+	description "Opis"
+	opstina{
+		label "Opstina"
+		kod{
+			Label "Kod"
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}
+		naziv{
+			Label "Naziv"
+			Data type String
+			Master
+			Required
+		}
+	}
+	
+	drzavljanstvo{
+		naziv{
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}
+	}
+	
+	srednjaskola{
+	 	label "Srednja škola"
+	 	naziv{
+	 		Data type String
+	 		Master
+	 		ClassRepresenting
+	 		Required
+	 	}
+	}
+	
+	tipSednjeSkole{
+		naziv{
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}
+	}
+	
+	drzava{
+		naziv{
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}	
+		kod{
+			Data type String
+			Master
+			Required
+			Length 3
+			 
+			
+		}
+	}
+	
+	mesto{
+		naziv{
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}
+		
+		postanskiBroj{
+			Data type String
+			Master
+			StringPattern '[0-9]{5}'
+		}
+		kod{
+			Data type Number
+			Required
+		}
+	}
+	nacionalnost{
+		naziv{
+			Data type String
+			Master
+			ClassRepresenting
+			Required
+		}
+	}
+	sObrazac{
+		label "Š obrazac"
+		datumRodjenja{
+			Data type Date
+			Master
+			Required
+		}
+		
+		mestoRodjena{
+			Data type mesto
+			DropDownList {}
+			Required	
+		}
+		
+		opstinaRodjena{
+			Data type opstina
+			DropDownList {}
+			Required
+		}
+		
+		drzavaRodjenja{
+			Data type drzava
+			DropDownList {}
+			Master 
+			Required
+		}
+		adresaStanovanjaStalog{
+			Data type String
+			TextInput{}
+			Master
+			Required
+		}
+		opstinaStalnogStanovanja{
+			Data type opstina
+			DropDownList {}
+			Required
+		}
+		mestoStalnogStanovanje{
+			Label "Mesto stanovanja (stalnog stanovanja)"
+			Data type mesto
+			DropDownList {}
+			Required
+		}
+		telefon{
+			Label "Telefon (stalnog stanovanja)"
+			Data type String
+			TelInput {}
+			Master
+			Required	
+		}
+		
+		adresaStanovanjaZaVrijemeStudija{
+			Label "Adresa stanovanja (za vrijeme studija)"
+			Data type mesto
+			DropDownList {}
+			
+			Required
+		}
+		
+		opstinaStanovanjaZaVrijemeStudija{
+			Label "Opstina stanovanja (za vrijeme studija)"
+			Data type opstina
+			DropDownList {}
+			Master
+			Required
+		}
+		
+		mestoStanovanjeZaVrijemeStudija{
+			Label "Mjesto stanovanje (za vrijeme studija)"
+			Data type mesto
+			DropDownList {}
+			Required
+		}
+		mobilniTelefonZaVrijeStudija{
+			Label "Mobilni telefonn (za vrijeme studija)"
+			Data type String
+			TelInput {}
+			Master
+			Required
+		}
+		drzavljanstvo{
+			Data type drzavljanstvo
+			DropDownList {}
+			Required
+		}
+		nacionalnost{
+			Data type nacionalnost
+			DropDownList {}
+			Required
+			
+		}
+		
+		srednjaSkola{
+			Data type srednjaskola
+			DropDownList {}
+			Required
+		}
+	
+		profilSrednjeSkole{
+			Data type tipSednjeSkole
+			DropDownList {}
+			Required
+		}	
+		
+		glavniRadniStatusStudenta{
+			Data type String
+			DropDownList {}
+			Required
+			AcceptableValuesString {"Nezaposlen", "Zaposlen krace od punog radnog vremea", "Zaposlen puno radno vreme"}
+		}
+		
+		zanimanjeStudenta{
+			Data type String
+			TextInput {}
+		}
+		
+		bracniStatus{
+			Data type String
+			DropDownList {}
+			Required
+			AcceptableValuesString {"Neozenjen/Neudata", "Ozenjen/Udata, zivi u vanbracnoj zajednici", "Razveden/Razvedena", "Udovac/Udovica"}	
+		}
+		
+		tipSmjestaja{
+			Data type String
+			DropDownList {}
+			AcceptableValuesString {"Studentski dom", "Kod roditelja", "Kod rodjaka", "Iznajmljen stan", "Sopstveni stan"}
+		}
+		
+		nacinIzdrazavanjaTokomStudija{
+			Data type String
+			Collection
+			DropDownList { MultiSelectable}
+			AcceptableValuesString {"Izdrzavanje od strane roditelja", "Samostalno", "Stipendija koju daje javna ustanova", "Kredit koji daje javna ustanova", "Stipendija koju daje kompanija"}
+		}
+		glavniNacinIzdrzavanja{
+			Label "Koji od nacina izdrzavanja je glavni?"
+			Data type String
+			DropDownList {}
+			AcceptableValuesString {"Izdrzavanje od strane roditelja", "Samostalno", "Stipendija koju daje javna ustanova", "Kredit koji daje javna ustanova", "Stipendija koju daje kompanija"}
+		}
+		
+		izdrzavanjeDrugihLica{
+			Label "Da li student izdrzava druga lica?"
+			Data type String
+			Collection
+			DropDownList {MultiSelectable}
+			AcceptableValuesString {"Ne", "Da, svoju decu", "Da, supruga/suprugu partnera/partnerku", "Da, roditelje", "Da, rodjake", "Da, druga lica"}
+		}
+		
+		
+	}
+	
+	
+	
+}

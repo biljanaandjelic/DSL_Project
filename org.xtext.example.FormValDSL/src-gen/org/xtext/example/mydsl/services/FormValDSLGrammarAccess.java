@@ -2115,18 +2115,18 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cLengthAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLengthKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueInt0ParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final RuleCall cValueEIntParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		private final Assignment cAttributeRuleErrorMessageAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cAttributeRuleErrorMessageErrorMessageParserRuleCall_3_0 = (RuleCall)cAttributeRuleErrorMessageAssignment_3.eContents().get(0);
 		
 		//Length:
 		//	{Length}
 		//	'Length'
-		//	value=Int0?
+		//	value=EInt?
 		//	attributeRuleErrorMessage=ErrorMessage?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Length} 'Length' value=Int0? attributeRuleErrorMessage=ErrorMessage?
+		//{Length} 'Length' value=EInt? attributeRuleErrorMessage=ErrorMessage?
 		public Group getGroup() { return cGroup; }
 		
 		//{Length}
@@ -2135,11 +2135,11 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'Length'
 		public Keyword getLengthKeyword_1() { return cLengthKeyword_1; }
 		
-		//value=Int0?
+		//value=EInt?
 		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 		
-		//Int0
-		public RuleCall getValueInt0ParserRuleCall_2_0() { return cValueInt0ParserRuleCall_2_0; }
+		//EInt
+		public RuleCall getValueEIntParserRuleCall_2_0() { return cValueEIntParserRuleCall_2_0; }
 		
 		//attributeRuleErrorMessage=ErrorMessage?
 		public Assignment getAttributeRuleErrorMessageAssignment_3() { return cAttributeRuleErrorMessageAssignment_3; }
@@ -4642,7 +4642,7 @@ public class FormValDSLGrammarAccess extends AbstractGrammarElementFinder {
 	//Length:
 	//	{Length}
 	//	'Length'
-	//	value=Int0?
+	//	value=EInt?
 	//	attributeRuleErrorMessage=ErrorMessage?;
 	public LengthElements getLengthAccess() {
 		return pLength;

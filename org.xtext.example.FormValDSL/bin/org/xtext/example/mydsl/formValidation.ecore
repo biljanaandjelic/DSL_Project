@@ -40,7 +40,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting"/>
+      <details key="constraints" value="appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting nonPrimitiveAttributeCannotBeMaster"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="appropriateAttributeRules" value="Tuple {&#xA;&#x9;message : String = 'Each data type has appropriate rulles that can be applay to it.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; if attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9; &#x9;  then if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::Number&#xA;&#x9;&#x9; &#x9;  &#x9;    then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))&#xA;&#x9;&#x9; &#x9;        else if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::_'String'  &#xA;&#x9;&#x9; &#x9;             then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;a1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))&#xA;&#x9;&#x9;                 endif&#xA;&#x9;&#x9;           endif&#xA;&#x9;&#x9;else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))&#xA;&#x9;&#x9;endif&#xA;}.status"/>
@@ -58,6 +58,7 @@
       <details key="attributeRulePatternCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() &lt;=1"/>
       <details key="collectionCannotBeMaster" value="&#xA;&#x9;&#x9;if attributetype.attributeDataType.isCollection then master = false else true endif"/>
       <details key="collectionCannotBeRepresenting" value="&#xA;&#x9;&#x9;if attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif"/>
+      <details key="nonPrimitiveAttributeCannotBeMaster" value="Tuple {&#xA;&#x9;message : String = 'Non primitive data type cannot be master attribute.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;if attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributetype" lowerBound="1"
@@ -282,7 +283,8 @@
     <eLiterals name="Highlighting" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LabelSettings" eSuperTypes="#//AdditionalSettings">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"
+        defaultValueLiteral="Above"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
     <eLiterals name="Above"/>
@@ -335,7 +337,8 @@
     <eLiterals name="FirstColumn" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessageSettings" eSuperTypes="#//AdditionalSettings">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"
+        defaultValueLiteral="Below"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//Color"
         containment="true"/>
   </eClassifiers>

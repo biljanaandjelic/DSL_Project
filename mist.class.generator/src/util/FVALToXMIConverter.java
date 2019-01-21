@@ -19,7 +19,7 @@ public class FVALToXMIConverter {
 
 	public static void convertFVALtoXMI(String inputM, String outputM) {
 		Injector injector = new FormValDSLStandaloneSetup().createInjectorAndDoEMFRegistration();
-
+		
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 
 
