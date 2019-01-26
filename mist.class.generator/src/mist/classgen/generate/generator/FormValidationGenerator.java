@@ -138,7 +138,7 @@ public class FormValidationGenerator {
 	}
 	
 	public static void main(String[]  args){
-		FVALToXMIConverter.convertFVALtoXMI("input/s_obrazac.fvalDSL", "output/s_obrazac.xmi");
-		generateAll("output/s_obrazac.xmi", "output");
+		FVALToXMIConverter.convertFVALtoXMI("input/example1.fvalDSL", "output/example1.xmi");
+		generateAll("output/example1.xmi", "output");
 	}
 }

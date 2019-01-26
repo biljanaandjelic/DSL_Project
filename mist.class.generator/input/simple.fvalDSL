@@ -1,0 +1,38 @@
+{
+	label "SIM"
+	description "Description"
+	class1{
+		attr{
+			Data type String
+			Master 
+			ClassRepresenting
+		}
+		
+		attrr{
+			Data type String
+			Master
+		}
+	}
+	
+	class2{
+		attr{
+			Data type String
+			Master
+			ClassRepresenting
+		}
+	}
+	
+	class3{
+		bb{
+			Data type String
+			Master
+			ClassRepresenting
+		}
+		
+		attr{
+			Data type class2
+			Collection
+			DropDownList {MultiSelectable}
+		}
+	}
+}

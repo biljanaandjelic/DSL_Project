@@ -49,6 +49,10 @@
    	  position: absolute;
    	  width: 1px;
    	}
+   	#tabPanel{
+   		margin-top: 90px;
+   	}
+   	
    	.delete-mode{
    		margin-bottom: 50px;
    	}

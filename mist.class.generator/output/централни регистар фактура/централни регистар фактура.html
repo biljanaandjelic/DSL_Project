@@ -42,6 +42,14 @@
 	      </ul>
 	    </div>
 	  </nav>
+	  
+	  <div id="tabPanel" class="classOverview-content">
+	  	<ul class="nav nav-tabs tabPanel-li" >
+	  		
+	  	</ul>
+	  <div class="tab-content" id="tabPanelContainer">
+	  </div>
+	  </div>
     			      <div id="addorganizacionaJedinica" class="panel content">
     			      <form id="organizacionaJedinicaForm">
     			      <input type="hidden" name="id" value="-1"/>
@@ -58,7 +66,7 @@
     			      
     			      </div>
     			      <div class="formButtons">
-    			      <input type="button"  class="btn btn-success" id="organizacionaJedinicaSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success organizacionaJedinicaSubmitButton" id="organizacionaJedinicaSubmitButton" value="Submit"/>
     			      <input type="button"  class="btn btn-success" value="Cancel" id="organizacionaJedinicacancelButton"/>
     			      </div>
     			      </form>
@@ -210,7 +218,8 @@
     			          	     <div class="form-row">
     			          	     <div class="form-group col-md-6">
     			          	     	<label> NNN </label>
-    			          	     	<select class="form-control" id="nnnnId" name="nnnn"  multiple >
+    			          	     	<select class="form-control" id="nnnnId" name="nnnn"  multiple 
+    			          	     		data-kind="PrimitiveDatatype">
     			          	     	<option>aaa</option>
     			          	     	<option>bbb</option>
     			          	     	<option>ccc</option>
@@ -219,7 +228,8 @@
     			          	     
     			          	     <div class="form-group col-md-6">
     			          	     	<label> MMM </label>
-    			          	     	<select class="form-control" id="mmmmId" name="mmmm"  multiple >
+    			          	     	<select class="form-control" id="mmmmId" name="mmmm"  multiple 
+    			          	     		data-kind="PrimitiveDatatype">
     			          	     	<option>aaa</option>
     			          	     	<option>bbb</option>
     			          	     	<option>ccc</option>
@@ -230,7 +240,7 @@
     			          	     </fieldSet>
     			      
     			      <div class="formButtons">
-    			      <input type="button"  class="btn btn-success" id="pravnoLiceSubmitButton" value="Submit"/>
+    			      <input type="button"  class="btn btn-success pravnoLiceSubmitButton" id="pravnoLiceSubmitButton" value="Submit"/>
     			      <input type="button"  class="btn btn-success" value="Cancel" id="pravnoLicecancelButton"/>
     			      </div>
     			      </form>
@@ -273,7 +283,7 @@
 	</li>
 		
 		 <li class="nav-item">
-		     	<a class="nav-link" href="#brojOrganizacioneJediniceTab" data-toggle="tab">Организациона јединица</a>
+		     	<a class="nav-link" href="#brojOrganizacioneJediniceTab" data-toggle="tab">Број организационе јединице</a>
 		  </li>
 	</ul>
 	<div class="tab-content">
@@ -283,12 +293,12 @@
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
 	    
-	    <div><span><label> Адреса сједишта :</label></span><span class="additionalInfo" name="adresaSedista"></span> </div>
+	    <div><span><label class="additional-info-label"> Адреса сједишта :</label></span><span class="additionalInfo" name="adresaSedista"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-	 <div><span><label> Адреса електронске поште : </label></span><span class="additionalInfo" name="adresaElektronskePoste"></span> </div>
+	 <div><span><label class="additional-info-label"> Адреса електронске поште : </label></span><span class="additionalInfo" name="adresaElektronskePoste"></span> </div>
 	</div>
 	</div>
 	
@@ -296,12 +306,12 @@
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
 	    
-	    <div><span><label> Број телефона :</label></span><span class="additionalInfo" name="brojTelefona"></span> </div>
+	    <div><span><label class="additional-info-label"> Број телефона :</label></span><span class="additionalInfo" name="brojTelefona"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-	 <div><span><label> Име и презиме : </label></span><span class="additionalInfo" name="imeIPrezimeAdminstratora"></span> </div>
+	 <div><span><label class="additional-info-label"> Име и презиме : </label></span><span class="additionalInfo" name="imeIPrezimeAdminstratora"></span> </div>
 	</div>
 	</div>
 	
@@ -309,12 +319,12 @@
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
 	    
-	    <div><span><label> Број идентификационе ознаке :</label></span><span class="additionalInfo" name="brojIdentifikacioneOznake"></span> </div>
+	    <div><span><label class="additional-info-label"> Број идентификационе ознаке :</label></span><span class="additionalInfo" name="brojIdentifikacioneOznake"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-	 <div><span><label> Број телефона : </label></span><span class="additionalInfo" name="brojTelefonaAdministratoraa"></span> </div>
+	 <div><span><label class="additional-info-label"> Број телефона : </label></span><span class="additionalInfo" name="brojTelefonaAdministratoraa"></span> </div>
 	</div>
 	</div>
 	
@@ -322,12 +332,12 @@
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
 	    
-	    <div><span><label> Адреса електронске поште :</label></span><span class="additionalInfo" name="adresaElektronskePosteAdministratora"></span> </div>
+	    <div><span><label class="additional-info-label"> Адреса електронске поште :</label></span><span class="additionalInfo" name="adresaElektronskePosteAdministratora"></span> </div>
 	 	</div>
 	
 	
 	<div class="form-group col-md-6 additonalInfo-field">
-	 <div><span><label> NNN : </label></span><span class="additionalInfo" name="nnnn"></span> </div>
+	 <div><span><label class="additional-info-label"> NNN : </label></span><span class="additionalInfo" name="nnnn"></span> </div>
 	</div>
 	</div>
 	
@@ -335,7 +345,7 @@
 	<div class="form-row">
 	    <div class="form-group col-md-6  additonalInfo-field">
 	    
-	    <div><span><label> MMM :</label></span><span class="additionalInfo" name="mmmm"></span> </div>
+	    <div><span><label class="additional-info-label"> MMM :</label></span><span class="additionalInfo" name="mmmm"></span> </div>
 	 	</div>
 	  </div>
 	

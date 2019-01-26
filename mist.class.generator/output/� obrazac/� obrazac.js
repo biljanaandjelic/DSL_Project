@@ -97,7 +97,18 @@ $(".dropdown-item").click(function(){
 	var panelSelector = $this.attr("href");
 	var $panelToShow = $(panelSelector);			
 	$(".panel").hide();
+	//$(".panel").find("form").attr("id",$(".panel").find("form").attr("id")+"_")
+	var aText = $this.text();
 	$panelToShow.show();
+	var ahref = $this.attr("href");
+	var id = $panelToShow.attr("id");
+	/*if(typeof($panelToShow.find("form").attr("id")) != 'undefined'){
+		$panelToShow.find("form").attr("id",$panelToShow.find("form").attr("id").split("_")[0]);
+	} */
+	$(".tabPanel-li").find("a").attr("class","nav-link");
+	var newTabHeader = "<li class=\"nav-item\" data-id=\"\"><a class=\"nav-link active\" href=\"#"+id+"\" data-toggle=\"tab\"><button class=\"close closeTab\" type=\"button\" >×</button>"+aText+"</a></li>";
+	$(".tabPanel-li").append(newTabHeader);
+	$("#tabPanelContainer").append($panelToShow);
 	
 	if(panelSelector.indexOf("overview")>=0){
 		var className = panelSelector.split("overview")[1];
@@ -112,6 +123,41 @@ $(".dropdown-item").click(function(){
 		}
 	}else{
 	}
+});
+openTab = function(panelSelector, id){
+	var selector = "#add" + panelSelector;
+	var $panelToShow = $(selector);
+	//var id = $panelToShow.attr("id");
+	$(".tabPanel-li").find("a").attr("class","nav-link");
+	var newTabHeader = "<li class=\"nav-item\" data-id=\"\"><a class=\"nav-link active\" href=\""+selector+id+"\" data-toggle=\"tab\"><button class=\"close closeTab\" type=\"button\" >×</button>"+panelSelector+"_"+id+"</a></li>";
+	$(".tabPanel-li").append(newTabHeader);
+	$(".panel").hide();
+//	$(".panel").find("form").attr("id",$(".panel").find("form").attr("id")+"_")
+	   
+	/*if(typeof($panelToShow.find("form").attr("id")) != 'undefined'){
+	    	$panelToShow.find("form").attr("id",$panelToShow.find("form").attr("id").split("_")[0]);
+	 } */
+	$panelToShow.show();
+	var $newPanel = $panelToShow.clone();
+	$panelToShow.hide();
+	$newPanel.show();
+	$newPanel.attr("id", "add"+panelSelector+id);
+	$("#tabPanelContainer").append($newPanel);
+	
+	
+}
+$("body").on("click", "#tabPanel a", function(e){
+    		 $("#tabPanel a").attr("class","nav-link");
+    		 $(this).attr("class", "nav-link active");
+    		 $(".panel").hide();
+    		 var panelSelector = $(this).attr("href");
+    		 var $panelToShow = $(panelSelector);
+    		// $(".panel").find("form").attr("id",$(".panel").find("form").attr("id")+"_")
+    		     		   
+    		 /* if(typeof($panelToShow.find("form").attr("id")) != 'undefined'){
+    		     $panelToShow.find("form").attr("id",$panelToShow.find("form").attr("id").split("_")[0]);
+    		    } */
+    		 $panelToShow.show();
 });
 addRecordInTable = function(record, tableIdentifier, index, className){
 	var identifier = "#" + tableIdentifier;
@@ -175,7 +221,9 @@ $("body").on('dblclick',"tbody tr",function(){
 	var $table = $(this).parent().parent();
 	var tableName = $table.attr("id").split("Table")[0];
 	record = getRecord(tableName, rowId);
-	var formSelector = "#" + tableName + "Form";
+	//var formSelector = "#" + tableName + "Form";
+	openTab(tableName, rowId);
+	var formSelector = "#add"+tableName+rowId+" #" + tableName + "Form";
 	setFormInputValues(formSelector, record); 	
 	});
 addAttributesCollection = function(className, record, values){
@@ -354,6 +402,13 @@ $("select").click(function(e){
 	  }
 	
 });
+$("body").on("click",".closeTab", function(){
+	
+	var $li = $(this).parent().parent();
+	var tabId = $(this).parent().attr("href");
+	$li.remove();
+	$(tabId).remove();
+});
 $("#opstinaForm").validate({
    			rules:{
    			kod: {
@@ -371,11 +426,12 @@ $("#opstinaForm").validate({
    				}
    		});
    		
-   		$(".opstinaSubmitButton").click(function(){
-   			
+   		$("body").on("click",".opstinaSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#opstinaForm").valid())
    			{
-   				var values = $("#opstinaForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "opstina");
@@ -411,13 +467,13 @@ $("#opstinaForm").validate({
    					collections["opstina"].push(record);
    					addRecordInTable(record, "opstinaTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#opstinaForm [name='id']").val(-1);
+   				  	//$("#opstinaForm [name='id']").val(-1);
    				  	//$("#opstinaForm")[0].reset();
    				}else{
    					saveChanges("opstina", record);
    					changeRecordInTable(record, "opstinaTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#opstinaForm [name='id']").val(-1);
+   					//$("#opstinaForm [name='id']").val(-1);
    					//$("#opstinaForm")[0].reset();
    				}
    				
@@ -445,11 +501,12 @@ $("#drzavljanstvoForm").validate({
    				}
    		});
    		
-   		$(".drzavljanstvoSubmitButton").click(function(){
-   			
+   		$("body").on("click",".drzavljanstvoSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#drzavljanstvoForm").valid())
    			{
-   				var values = $("#drzavljanstvoForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "drzavljanstvo");
@@ -485,13 +542,13 @@ $("#drzavljanstvoForm").validate({
    					collections["drzavljanstvo"].push(record);
    					addRecordInTable(record, "drzavljanstvoTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#drzavljanstvoForm [name='id']").val(-1);
+   				  	//$("#drzavljanstvoForm [name='id']").val(-1);
    				  	//$("#drzavljanstvoForm")[0].reset();
    				}else{
    					saveChanges("drzavljanstvo", record);
    					changeRecordInTable(record, "drzavljanstvoTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#drzavljanstvoForm [name='id']").val(-1);
+   					//$("#drzavljanstvoForm [name='id']").val(-1);
    					//$("#drzavljanstvoForm")[0].reset();
    				}
    				
@@ -519,11 +576,12 @@ $("#srednjaskolaForm").validate({
    				}
    		});
    		
-   		$(".srednjaskolaSubmitButton").click(function(){
-   			
+   		$("body").on("click",".srednjaskolaSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#srednjaskolaForm").valid())
    			{
-   				var values = $("#srednjaskolaForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "srednjaskola");
@@ -559,13 +617,13 @@ $("#srednjaskolaForm").validate({
    					collections["srednjaskola"].push(record);
    					addRecordInTable(record, "srednjaskolaTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#srednjaskolaForm [name='id']").val(-1);
+   				  	//$("#srednjaskolaForm [name='id']").val(-1);
    				  	//$("#srednjaskolaForm")[0].reset();
    				}else{
    					saveChanges("srednjaskola", record);
    					changeRecordInTable(record, "srednjaskolaTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#srednjaskolaForm [name='id']").val(-1);
+   					//$("#srednjaskolaForm [name='id']").val(-1);
    					//$("#srednjaskolaForm")[0].reset();
    				}
    				
@@ -593,11 +651,12 @@ $("#tipSednjeSkoleForm").validate({
    				}
    		});
    		
-   		$(".tipSednjeSkoleSubmitButton").click(function(){
-   			
+   		$("body").on("click",".tipSednjeSkoleSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#tipSednjeSkoleForm").valid())
    			{
-   				var values = $("#tipSednjeSkoleForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "tipSednjeSkole");
@@ -633,13 +692,13 @@ $("#tipSednjeSkoleForm").validate({
    					collections["tipSednjeSkole"].push(record);
    					addRecordInTable(record, "tipSednjeSkoleTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#tipSednjeSkoleForm [name='id']").val(-1);
+   				  	//$("#tipSednjeSkoleForm [name='id']").val(-1);
    				  	//$("#tipSednjeSkoleForm")[0].reset();
    				}else{
    					saveChanges("tipSednjeSkole", record);
    					changeRecordInTable(record, "tipSednjeSkoleTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#tipSednjeSkoleForm [name='id']").val(-1);
+   					//$("#tipSednjeSkoleForm [name='id']").val(-1);
    					//$("#tipSednjeSkoleForm")[0].reset();
    				}
    				
@@ -674,11 +733,12 @@ $("#drzavaForm").validate({
    				}
    		});
    		
-   		$(".drzavaSubmitButton").click(function(){
-   			
+   		$("body").on("click",".drzavaSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#drzavaForm").valid())
    			{
-   				var values = $("#drzavaForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "drzava");
@@ -714,13 +774,13 @@ $("#drzavaForm").validate({
    					collections["drzava"].push(record);
    					addRecordInTable(record, "drzavaTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#drzavaForm [name='id']").val(-1);
+   				  	//$("#drzavaForm [name='id']").val(-1);
    				  	//$("#drzavaForm")[0].reset();
    				}else{
    					saveChanges("drzava", record);
    					changeRecordInTable(record, "drzavaTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#drzavaForm [name='id']").val(-1);
+   					//$("#drzavaForm [name='id']").val(-1);
    					//$("#drzavaForm")[0].reset();
    				}
    				
@@ -758,11 +818,12 @@ $("#mestoForm").validate({
    				}
    		});
    		
-   		$(".mestoSubmitButton").click(function(){
-   			
+   		$("body").on("click",".mestoSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#mestoForm").valid())
    			{
-   				var values = $("#mestoForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "mesto");
@@ -798,13 +859,13 @@ $("#mestoForm").validate({
    					collections["mesto"].push(record);
    					addRecordInTable(record, "mestoTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#mestoForm [name='id']").val(-1);
+   				  	//$("#mestoForm [name='id']").val(-1);
    				  	//$("#mestoForm")[0].reset();
    				}else{
    					saveChanges("mesto", record);
    					changeRecordInTable(record, "mestoTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#mestoForm [name='id']").val(-1);
+   					//$("#mestoForm [name='id']").val(-1);
    					//$("#mestoForm")[0].reset();
    				}
    				
@@ -832,11 +893,12 @@ $("#nacionalnostForm").validate({
    				}
    		});
    		
-   		$(".nacionalnostSubmitButton").click(function(){
-   			
+   		$("body").on("click",".nacionalnostSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#nacionalnostForm").valid())
    			{
-   				var values = $("#nacionalnostForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "nacionalnost");
@@ -872,13 +934,13 @@ $("#nacionalnostForm").validate({
    					collections["nacionalnost"].push(record);
    					addRecordInTable(record, "nacionalnostTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#nacionalnostForm [name='id']").val(-1);
+   				  	//$("#nacionalnostForm [name='id']").val(-1);
    				  	//$("#nacionalnostForm")[0].reset();
    				}else{
    					saveChanges("nacionalnost", record);
    					changeRecordInTable(record, "nacionalnostTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#nacionalnostForm [name='id']").val(-1);
+   					//$("#nacionalnostForm [name='id']").val(-1);
    					//$("#nacionalnostForm")[0].reset();
    				}
    				
@@ -1007,11 +1069,12 @@ $("#sObrazacForm").validate({
    				}
    		});
    		
-   		$(".sObrazacSubmitButton").click(function(){
-   			
+   		$("body").on("click",".sObrazacSubmitButton",function(){
+   			var $form = $(this).parent().parent();
+   			var formId = $form.attr("id");
    			if($("#sObrazacForm").valid())
    			{
-   				var values = $("#sObrazacForm").serialize();
+   				var values = $form.serialize();
    				var values = unescape(values.replace(/\+/g, ' '));
    				
    				var record = recordInput(values, "sObrazac");
@@ -1047,13 +1110,13 @@ $("#sObrazacForm").validate({
    					collections["sObrazac"].push(record);
    					addRecordInTable(record, "sObrazacTable", index, "Master");
    				  	toastr.success("Object is saved!");
-   				  	$("#sObrazacForm [name='id']").val(-1);
+   				  	//$("#sObrazacForm [name='id']").val(-1);
    				  	//$("#sObrazacForm")[0].reset();
    				}else{
    					saveChanges("sObrazac", record);
    					changeRecordInTable(record, "sObrazacTable", index, "Master");
    					toastr.success("Object is saved!");
-   					$("#sObrazacForm [name='id']").val(-1);
+   					//$("#sObrazacForm [name='id']").val(-1);
    					//$("#sObrazacForm")[0].reset();
    				}
    				

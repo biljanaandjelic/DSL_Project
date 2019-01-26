@@ -61,10 +61,6 @@
    		font-weight: bold;
    	}
 
-		.no-content-message{
-			text-align: center;
-		}
-		
 		.error{
 			color: #FF0000;
 		}
@@ -152,7 +148,7 @@
    	}
    		
    	 
-   	#addorganizacionaJedinica
+   	#addclass1
    	{
    	 	align: center;
    	}
@@ -166,7 +162,7 @@
    	}
    	
    	 
-   	#addpravnoLice
+   	#addclass2
    	{
    	 	align: center;
    	}
@@ -178,13 +174,18 @@
    	.sidebar-item{
    		margin-bottom: 50px;
    	}
-   	#pravnoLiceForm label.error{
-   		color : rgb(255, 50, 50)
-   		}
-   	#pravnoLiceForm label.error{
-   	   	color : #FF0000;
-   	   }
    	
-   			#pravnoLiceTable{
-   				width: 600px;
-   			}
+   	 
+   	#addclass3
+   	{
+   	 	align: center;
+   	}
+   	
+   	.select-box{
+   		display: none;
+   	}
+   	
+   	.sidebar-item{
+   		margin-bottom: 50px;
+   	}
+   	

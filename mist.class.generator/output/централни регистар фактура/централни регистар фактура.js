@@ -3,6 +3,7 @@ var variables=[];
 var collections = [];
 var metaData = [];
 var idSeed = 0;
+var validators = [];
 metaData["organizacionaJedinicaMetaDataMaster"] = [  "broj", "naziv"];
 metaData["organizacionaJedinicaMetaDataCollection"] = [ ];
 metaData["organizacionaJedinicaMetaDataRepresenting"] = [ "broj" ];
@@ -26,27 +27,150 @@ metaData["pravnoLiceReferencingAttributes"] = pravnoLiceReferencingAttributes;
  var pravnoLiceReferencedClasses = [  "organizacionaJedinica"];
  metaData["pravnoLiceReferencedClasses"] =  pravnoLiceReferencedClasses;
     		
-$(".dropdown-item").click(function(){
-	var $this = $(this);
-	var panelSelector = $this.attr("href");
-	var $panelToShow = $(panelSelector);			
+    	$(".dropdown-item").click(function(){
+    		var $this = $(this);
+    		var panelSelector = $this.attr("href");
+
+    		var aText = $this.text();
+var validatorDynamic;
+var formId;
+    		var ahref = $this.attr("href");
+    		if(ahref.indexOf("add")>-1){
+    			aText = aText +" Add"
+    			var $panelToShow = $(panelSelector);
+    			
+    			$panelToShow.show();
+    			var $form = $panelToShow.find("form");
+    			formId = $form.attr("id");
+    			var el1=$(panelSelector + " " + formId);
+    			$(panelSelector + " #" + formId).attr("id", formId +"_");
+    			var el2= $("#tabPanel " + panelSelector + " #" + formId + "_");
+    			$("#tabPanel " + panelSelector + " #" + formId + "_").attr("id", formId);
+    			var $newPanelToShow = $(panelSelector).clone();
+    			
+    			$(".panel").hide();
+    			$newPanelToShow.show();
+    			$newPanelToShow.find("form").attr("id", formId);
+    			var newForm = $("#"+formId);
+    			validatorDynamic = validators[formId.split("Form")[0]];
+    			var validator2 = $("#"+formId).validate(validatorDynamic);
+    		}else{
+    			aText = aText + " Overview"
+    			var $panelToShow = $(panelSelector);
+    			$(".panel").hide();
+    			 $panelToShow.show();
+    			 var $newPanelToShow = $(panelSelector);
+    			 
+    		}
+    		var id = $panelToShow.attr("id");
+    	
+    		$(".tabPanel-li").find("a").attr("class","nav-link");
+    		var sel = "a[href=\"#" +id+"\"]";
+    		
+    		var $samecomponent = $(".tabPanel-li").find(sel);
+    		if($samecomponent.length>0){
+    			$samecomponent.attr("class","nav-link active");
+    		}else{
+    		var newTabHeader = "<li class=\"nav-item\" data-id=\"\"><a class=\"nav-link active\" href=\"#"+id+"\" data-toggle=\"tab\"><button class=\"close closeTabbb\" type=\"button\" >×</button>"+aText+"</a></li>";
+    		$(".tabPanel-li").append(newTabHeader);
+    		$("#tabPanelContainer").append($newPanelToShow);
+    		if(formId !== undefined){
+    			var validator2 = $("#"+formId).validate(validatorDynamic);
+    			}
+    		}
+
+    		var $ddLists = $(panelSelector).find("select");
+    		$ddLists.each(function(index){
+    			loadValuesInDropDownList($(this));
+    		});
+    		if(panelSelector.indexOf("overview")>=0){
+    			var className = panelSelector.split("overview")[1];
+    			if(collections[className]=="undefined" || collections[className].length == 0){
+    				$("#linkedData"+className).hide();
+    				$(panelSelector + " .no-content-message").text("There is no records.");
+    				$(panelSelector + " table").hide();
+    				$(panelSelector + " .sideBar").hide();
+    			}else{
+    				$("#linkedData"+className).show();
+    				$(panelSelector + " .no-content-message").empty();
+    				$(panelSelector +" table").show();
+    				$(panelSelector + " .sideBar").show();
+    			}
+    		}else{
+    		}
+    	});
+openTab = function(panelSelector, id){
+	alert("open tab");
+	var selector = "#add" + panelSelector;
+	var $panelToShow = $(selector);
+    
+	$(".tabPanel-li").find("a").attr("class","nav-link");
+	var newTabHeader = "<li class=\"nav-item\" data-id=\"\"><a class=\"nav-link active\" href=\""+selector+id+"\" data-toggle=\"tab\"><button class=\"close closeTabbb\" type=\"button\" >×</button>"+panelSelector+"_"+id+"</a></li>";
+
 	$(".panel").hide();
-	$panelToShow.show();
+    
+
 	
-	if(panelSelector.indexOf("overview")>=0){
-		var className = panelSelector.split("overview")[1];
-		if(collections[className]=="undefined" || collections[className].length == 0){
-			$("#linkedData"+className).hide();
-			$(panelSelector + " .no-content-message").text("There is no records.");
-			$(panelSelector + " table").hide();
-		}else{
-			$("#linkedData"+className).show();
-			$(panelSelector + " .no-content-message").empty();
-			$(panelSelector +" table").show();
-		}
+	var sel = "a[href=\"#add" +panelSelector+id+"\"]";
+	    		
+	var $samecomponent = $(".tabPanel-li").find(sel);
+	if($samecomponent.length>0){
+	    $samecomponent.attr("class","nav-link active");
 	}else{
+		$panelToShow.show();
+		var $newPanel = $panelToShow.clone();
+		$panelToShow.hide();
+		$newPanel.attr("id", "add"+panelSelector+id);
+		$newPanel.find("form").attr("id","edit"+panelSelector+id);
+
+		$(".tabPanel-li").find("a").attr("class","nav-link");
+		$(".tabPanel-li").append(newTabHeader);
+		$("#tabPanelContainer").append($newPanel);
+		var elll = $("#edit"+panelSelector+id+ "[name='id']");
+		$("#edit"+panelSelector+id+ " [name='id']").val(id);
+		var validator = validators[panelSelector];
+		$("#edit"+panelSelector+id).validate(validator);
+		
+		$newPanel.show();
 	}
+}
+$("body").on("click", "#tabPanel .tabPanel-li a", function(e){
+    		 $("#tabPanel a").attr("class","nav-link");
+    		 $(this).attr("class", "nav-link active");
+    		 $(".panel").hide();
+    		 var panelSelector = $(this).attr("href");
+    		 var $panelToShow = $(panelSelector);
+    		// $(".panel").find("form").attr("id",$(".panel").find("form").attr("id")+"_")
+    		     		   
+    		 /* if(typeof($panelToShow.find("form").attr("id")) != 'undefined'){
+    		     $panelToShow.find("form").attr("id",$panelToShow.find("form").attr("id").split("_")[0]);
+    		    } */
+    		    var $ddLists = $(panelSelector).find("select");
+    		        $ddLists.each(function(index){
+    		        		//alert(index);
+    		        		loadValuesInDropDownList($(this));
+    		        });
+    		 $panelToShow.show();
 });
+contains = function(attrFromCol, field){
+	if(Object.prototype.toString.call(field) == '[object Array]'){
+		var contain = false;
+		$.each(field, function(index, val){
+				if(val == attrFromCol){
+					contain = true;
+				}
+							
+		});
+		
+		return contain;
+	}else{
+		if(attrFromCol == field){
+			return true;
+		}else{
+			return false;
+		}
+	}
+}
 addRecordInTable = function(record, tableIdentifier, index, className){
 	var identifier = "#" + tableIdentifier;
 	var newRow = "<tr class="+className+" data-index="+index+" data-id="+record["id"]+">";
@@ -71,17 +195,18 @@ $("body").on("mouseenter", ".Master", function(){
 				var attrName = value.id.split("Tab")[0];
 				var refValues = record[attrName]
 				var tableReferenced = $("#"+divId + " Table").attr("id");
-				$("#" + tableReferenced + " tbody").empty();
+				var tableSelector = divId + " #" + tableReferenced;
+				$("#" + tableSelector + " tbody").empty();
 				if(Object.prototype.toString.call(refValues) == '[object String]'){
 										
-				$("#" + tableReferenced).hide();
+				$("#" + tableSelector).hide();
 				var noContentDiv = "<div class=\"noContent\"> There is no referenced records. </div>"
 				$("#"+divId).append(noContentDiv);
 				}else if(Object.prototype.toString.call(refValues) == '[object Array]' && refValues.length > 0){
 				$("#" + divId +" .noContent").remove();
-				$("#" + tableReferenced).show();
+				$("#" + tableSelector).show();
 				$.each(refValues, function(index, val){
-					addRecordInTable(val, tableReferenced, index, "Referenced");
+					addRecordInTable(val, tableSelector, index, "Referenced");
 					
 					});
 				}
@@ -108,7 +233,9 @@ $("body").on('dblclick',"tbody tr",function(){
 	var $table = $(this).parent().parent();
 	var tableName = $table.attr("id").split("Table")[0];
 	record = getRecord(tableName, rowId);
-	var formSelector = "#" + tableName + "Form";
+	//var formSelector = "#" + tableName + "Form";
+	openTab(tableName, rowId);
+	var formSelector = "#add"+tableName+rowId+" #" + tableName + "Form";
 	setFormInputValues(formSelector, record); 	
 	});
 addAttributesCollection = function(className, record, values){
@@ -134,21 +261,35 @@ isDataTypeCollection = function(className, attributeName){
 	
 	return retVal;
 }
-$(".delete-selected").click(function(){
+$("body").on("click",".delete-selected",function(){
 	var $divContainingTable = $(this).parent().parent().parent().parent();
 	var className = $divContainingTable.parent().attr("id").split("overview")[1];
 	var $table = $divContainingTable.find("table");
 	var selectedRows = $table.find("input[type='checkbox']:checked");
 	var idList = [];
+	
 	$.each(selectedRows, function(){
 		var cellElement = $(this).parent();
 		var rowElement = $(this).parent().parent();
 		idList.push(rowElement.attr("data-id"));
-		rowElement.remove();
-		
 		});
-		deleteRecords(className, idList);
-	});
+		
+	
+	if(deleteRecords(className, idList)){
+		$.each(selectedRows, function(){
+		   var cellElement = $(this).parent();
+		   var rowElement = $(this).parent().parent();
+		    	rowElement.remove();
+		    			
+		    });
+	}
+	var panelSelector = "#overview" + className;		
+	if($table.find("tr").length<2){
+		$(panelSelector + " .no-content-message").text("There is no records.");
+		$(panelSelector + " table").hide();
+		$(panelSelector + " .sideBar").hide();
+	}
+});
 changeRecordInTable = function(record, tableIdentifier, index, className){
 	var identifierRow = "#" + tableIdentifier + " tr[data-id='"+record["id"]+"']";
 	var newRow ="<td class=\"select-box\"><input type=\"checkbox\"/></td>"
@@ -192,10 +333,30 @@ toastr.success("Data are shown in form. Please open form to see data.");
 }
 $(".delete-all").click(function(){
     	var $divContainingTable = $(this).parent().parent().parent().parent();
+    	var className = $divContainingTable.parent().attr("id").split("overview")[1];
     	var $tbody = $divContainingTable.find("tbody");
+    	var rows = $tbody.find("tr");
+    	var idList = [];
+    	$.each(rows, function(){
+    		idList.push($(this).attr("data-id"));
+    	});
+    	
+    	if(deleteRecords(className, idList)){
+    	   $.each(rows, function(){
+    	    $(this).remove();
+    	    			    			
+    	    });
+    	 }
+    
+    	var panelSelector = "#overview" + className;
+    	if($tbody.find("tr").length==0){
+    		$(panelSelector + " .no-content-message").text("There is no records.");
+    		$(panelSelector + " table").hide();
+    		$(panelSelector + " .sideBar").hide();
+    	}
     
     });
-$(".delete-mode").click(function(e){
+$("body").on("click", ".delete-mode",function(e){
 	var $this = $(this);
 	var $divParent = $this.parent();
 	var $rootPanel = $this.parent().parent().parent();
@@ -205,24 +366,36 @@ $(".delete-mode").click(function(e){
 	var tableSelector = "#"+tableName+ " .select-box";
 	$(tableSelector).show();
 	});
-$(".cancel-delete-mode").click(function(e){
+$("body").on("click", ".cancel-delete-mode",function(e){
 	$(this).parent().parent().hide();
 	var table = $(this).parent().parent().parent().parent().find("table")[0];
 	$("#"+table.id+" .select-box").hide();
 });
 deleteRecords = function(className, ids){
-	
+	var isDeletingPossible = true;
+	$.each(ids, function(key, val){
+		if(!checkIfDeletingIsPossible(val)){
+			isDeletingPossible = false;
+		}
+	});
+	if(isDeletingPossible){
 	$.each(ids, function(key,val){
-		//if(checkIfDeletingIsPosible(val)){
+		
+		var index = -1;
 		$.each(collections[className], function(keyCol, value){
 			if(value["id"] == val){
-				collections[className].splice(keyCol,1);
+				
+				index = keyCol;
 			}
 		});
-	//	}else{
-		//	toastr.error("Not posible to remove.");
-		//	}
+		collections[className].splice(index,1);
+			
 	});
+	}else{
+		toastr.error("Not posible to remove.");
+	}
+	
+	return isDeletingPossible;
 }
 showDetailsForSelectedRecords = function(tableName, record){
 	var nonMasterAttributes = $("#"+tableName+"details .additionalInfo");
@@ -236,15 +409,75 @@ showDetailsForSelectedRecords = function(tableName, record){
 		$(this).text(value);
 	});
 }
-checkIfDeletingIsPosible = function(id){
+checkIfDeletingIsPossible = function(id){
 	var counter = 0;
 	var collectionKeys = Object.keys(collections);
 	for(i = 0; i < collectionKeys.length; i++){
-		var keys = Objects.keys(collections[collectionKeys[i]]);
-		for(j = 0; j < keys.length; j++){
-			if(collections[collectionKeys[i]][keys[j]]["id"]==id){
+		var keys1 = Object.keys(collections[collectionKeys[i]]);
+		for(j = 0; j < keys1.length; j++){
+			var el = collections[collectionKeys[i]][keys1[j]];
+			if(el["id"] == id){
 				counter++;
 			}
+			
+			if(el instanceof jQuery){
+				var itIsObject = true;
+				var objValues = el.values();
+			}
+			
+			if(!$.isEmptyObject(el)){
+			var keyValues = el.keys();
+			for(k = 0; k < keyValues.length; k++){
+				var element = el[keyValues[k]]
+				if(element !== undefined && element["id"] == id){
+				    	counter++;
+				}
+			}
+			
+				   	
+				$.each(el,function(k,v){
+					if($.isArray(v)){
+						var succ = true;
+					}
+				});
+				
+					var keyValues2 = Object.keys(el);
+				    for(k = 0; k < keyValues2.length; k++){
+				    	var element = el[keyValues2[k]]
+				    	if($.isArray(element)){
+				    		var arrayKeys = Object.keys(element);
+				    		for(l = 0; l< arrayKeys.length; l++){
+				    			var refObj = element[l];
+				    			if(!$.isEmptyObject(refObj)){
+				    				var refObjKeys = Object.keys(refObj);
+				    				if (refObj!=undefined && refObj["id"]==id){
+				    					counter++;
+				    				}
+				    				
+				    				for(m = 0; m < refObjKeys.length; m++){
+				    					var attrVal =  refObj[m];
+				    					if(refObj[m] !==undefined && refObj[m]==id){
+				    						counter++;
+				    						}
+				    				}
+				    			}
+				    		}
+				    	}
+				    	if(element !== undefined && element["id"] == id){
+				    		counter++;
+				    	 }
+				  	}
+			}
+			
+			/*if(Object.prototype.toString.call(el) == '[object Array]'){
+			var keyValues = Object.keys(collectionKeys[i][keys[j]]);
+			for(k = 0; k < keyValues.length; k++){
+				var element = el[keyValues[k]]
+				if(element !== undefined && element["id"] == id){
+				    		counter++;
+				    }
+				}
+			} */
 		}
 	}
 	
@@ -255,233 +488,386 @@ checkIfDeletingIsPosible = function(id){
 	}
 }
 
-$("#organizacionaJedinicaForm").validate({
-   			rules:{
-   			broj: {
-   				 required: true 
-   			},
-   			},
-   			messages: {
-					broj: {
-					required: "Број органиѕационе јединице је обавеѕно поље."
-				},
-   				}
-   		});
-   		
-   		$("#organizacionaJedinicaSubmitButton").click(function(){
-   			
-   			if($("#organizacionaJedinicaForm").valid())
-   			{
-   				var values = $("#organizacionaJedinicaForm").serialize();
-   				var values = unescape(values.replace(/\+/g, ' '));
-   				
-   				var record = recordInput(values, "organizacionaJedinica");
-   				var referencingAttributes = metaData["organizacionaJedinicaReferencingAttributes"];
-   				var referencedClasses = metaData["organizacionaJedinicaReferencedClasses"];
-   				
-   					$.each(referencingAttributes, function(index, val){
-   						var classRef = referencedClasses[index];
-   						var referencedCollection = collections[classRef];
-   						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-   						var arrayOfValues = [];
-   						var isFound = false;
-   						
-   						referencedCollection.forEach(function(elValue, elIndex){
-   							
-   							if(elValue[representingAttribute] == record[val]){
-   								isFound = true;
-   								arrayOfValues.push(elValue);
-   								record[val+"_representing"] = elValue[representingAttribute];
-   								record[val] = elValue;
-   								}
-   							});
-   							
-   							if(isFound){
-   							    record[val] = arrayOfValues;
-   							}
-   						});
-   				var areClassRulesOk = true;		
-   				if(areClassRulesOk){
-   				var index = organizacionaJedinicaCollection.length;
-   				if(record["id"]==-1){
-   					record["id"] = idSeed++;
-   					collections["organizacionaJedinica"].push(record);
-   					addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
-   				  	toastr.success("Object is saved!");
-   				  	$("#organizacionaJedinicaForm [name='id']").val(-1);
-   				  	$("#organizacionaJedinicaForm")[0].reset();
-   				}else{
-   					saveChanges("organizacionaJedinica", record);
-   					changeRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
-   					toastr.success("Object is saved!");
-   					$("#organizacionaJedinicaForm [name='id']").val(-1);
-   					$("#organizacionaJedinicaForm")[0].reset();
-   				}
-   				
-   				}else{
-   					toastr.error("There are some errors. Please fix errors and try again.");
-   					return false;
-   				}
-   			}
-   			else
-   			{
-   				toastr.error("There are some errors. Please fix errors and try again.");
-   				return false;
-   			}
-   		});
-   		
-$("#pravnoLiceForm").validate({
-   			rules:{
-   			jedinstvenBrojKorisnikaJavnihSredstava: {
-   				 required: true 
-   			},
-   			nazicPravnogLica: {
-   				 required: true 
-   			},
-   			jedinstveniMaticniBrojGradjanina: {
-   				 required: true ,
-   				pattern: /[0-9]{13}/
-   			},
-   			poreskiIdentifikacioniBroj: {
-   				 required: true 
-   			},
-   			adresaSedista: {
-   				 required: true 
-   			},
-   			adresaElektronskePoste: {
-   				 required: true 
-   			},
-   			brojTelefona: {
-   				 required: true 
-   			},
-   			imeIPrezimeAdminstratora: {
-   				 required: true 
-   			},
-   			brojIdentifikacioneOznake: {
-   				 required: true ,
-   				pattern: /[0-9]{9}/
-   			},
-   			brojTelefonaAdministratoraa: {
-   				 required: true 
-   			},
-   			adresaElektronskePosteAdministratora: {
-   				 required: true ,
-   				minlength: 10,
-   				maxlength: 254
-   			},
-   			brojOrganizacioneJedinice: {
-   				 required: true 
-   			},
-   			nnnn: {
-   			},
-   			mmmm: {
-   			},
-   			},
-   			messages: {
-					jedinstvenBrojKorisnikaJavnihSredstava: {
-					required: "Јединствен број корисника јавних средстава је обавезно поље."
-				},
-					nazicPravnogLica: {
-					required: "Назив правног лица је обавезно поље."
-				},
-					jedinstveniMaticniBrojGradjanina: {
-				},
-					poreskiIdentifikacioniBroj: {
-				},
-					adresaSedista: {
-				},
-					adresaElektronskePoste: {
-				},
-					brojTelefona: {
-				},
-					imeIPrezimeAdminstratora: {
-				},
-					brojIdentifikacioneOznake: {
-				},
-					brojTelefonaAdministratoraa: {
-				},
-					adresaElektronskePosteAdministratora: {
-				},
-					brojOrganizacioneJedinice: {
-				},
-					nnnn: {
-				},
-					mmmm: {
-				},
-   				}
-   		});
-   		
-   		$("#pravnoLiceSubmitButton").click(function(){
-   			
-   			if($("#pravnoLiceForm").valid())
-   			{
-   				var values = $("#pravnoLiceForm").serialize();
-   				var values = unescape(values.replace(/\+/g, ' '));
-   				
-   				var record = recordInput(values, "pravnoLice");
-   				var referencingAttributes = metaData["pravnoLiceReferencingAttributes"];
-   				var referencedClasses = metaData["pravnoLiceReferencedClasses"];
-   				
-   					$.each(referencingAttributes, function(index, val){
-   						var classRef = referencedClasses[index];
-   						var referencedCollection = collections[classRef];
-   						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-   						var arrayOfValues = [];
-   						var isFound = false;
-   						
-   						referencedCollection.forEach(function(elValue, elIndex){
-   							
-   							if(elValue[representingAttribute] == record[val]){
-   								isFound = true;
-   								arrayOfValues.push(elValue);
-   								record[val+"_representing"] = elValue[representingAttribute];
-   								record[val] = elValue;
-   								}
-   							});
-   							
-   							if(isFound){
-   							    record[val] = arrayOfValues;
-   							}
-   						});
-   				var areClassRulesOk = true;		
-   				if(record["adresaElektronskePosteAdministratora"]== record["adresaElektronskePoste"] ||  
-   				 false)
-   				{
-   						
-   						toastr.error(" Adresa Elektronske Poste and Adresa Elektronske Poste Administratora should be different.");
-   						areClassRulesOk = false;
-   				}
-   				if(areClassRulesOk){
-   				var index = pravnoLiceCollection.length;
-   				if(record["id"]==-1){
-   					record["id"] = idSeed++;
-   					collections["pravnoLice"].push(record);
-   					addRecordInTable(record, "pravnoLiceTable", index, "Master");
-   				  	toastr.success("Object is saved!");
-   				  	$("#pravnoLiceForm [name='id']").val(-1);
-   				  	$("#pravnoLiceForm")[0].reset();
-   				}else{
-   					saveChanges("pravnoLice", record);
-   					changeRecordInTable(record, "pravnoLiceTable", index, "Master");
-   					toastr.success("Object is saved!");
-   					$("#pravnoLiceForm [name='id']").val(-1);
-   					$("#pravnoLiceForm")[0].reset();
-   				}
-   				
-   				}else{
-   					toastr.error("There are some errors. Please fix errors and try again.");
-   					return false;
-   				}
-   			}
-   			else
-   			{
-   				toastr.error("There are some errors. Please fix errors and try again.");
-   				return false;
-   			}
-   		});
-   		
-
-$(".autocomplete").click(function() {
+loadValuesInDropDownList = function(component){
+	    $this = component;
+	    var name = $this.attr("name");
+	    var alertBoxContent = "Get focus "+ name;  
+	    var kind = $this.attr("data-kind");
+	    if(kind == "ValidationClass"){
+	    	$this.empty();
+	    		var dataClass = $this.attr("data-class");
+	    	 	
+	    	 			var values = collections[dataClass];
+	    	  			var optionValues = [];
+	    	  			var attrName = dataClass + "MetaDataRepresenting";
+	    	  			var metaDateRepresenting = metaData[attrName];
+	    	  			var options ="";
+	    	  			$.each(values, function(index, val){
+	    	  				
+	    	  				var element = val;
+	    	  				var value = "";
+	    	  				$.each(metaDateRepresenting, function(index, vall){
+	    	  					value += element[vall];
+	    	  					options+="<option>"+element[vall]+"</option>"
+	    	  					});
+	    	  				optionValues.push(value);
+	    	  			});
+	    	  			
+	    	  			$this.append(options);
+	    }else{
+	    }
+	}
+$(".tabPanel-li").on("click",".closeTabbb", function(e){
+	e.preventDefault();
+	var $li = $(this).parent().parent();
+	var tabId = $(this).parent().attr("href");
+	$li.remove();
+	$(tabId).hide();
+	var $items = $(".tabPanel-li").find("a");
+	if($items.length>0){
+		var element = $items[0];
+		var el = $items.get(0);
+		var $element =$(el);
+		$(el).attr("class", "nav-link active");
+		var $element1 = $(el);
+		var panelSelector = $(el).attr("href");
+		$(".panel").hide();
+		$(panelSelector).show();
+		event.stopImmediatePropagation();
+	}else{
+	}
+});
+    	
+    	var organizacionaJedinicaValidateObject = {
+    	    			rules:{
+    	    			broj: {
+    	    				 required: true 
+    	    			},
+    	    			},
+    	    			messages: {
+    						broj: {
+    						required: "Број органиѕационе јединице је обавеѕно поље."
+    					},
+    	    				}
+    	    		};
+    	validators["organizacionaJedinica"]=organizacionaJedinicaValidateObject;		
+ 		$("#organizacionaJedinicaForm").validate({
+    			rules:{
+    			broj: {
+    				 required: true 
+    			},
+    			},
+    			messages: {
+	broj: {
+	required: "Број органиѕационе јединице је обавеѕно поље."
+},
+    				}
+    		});
+    		
+    		$("body").on("click",".organizacionaJedinicaSubmitButton",function(){
+    			var $form = $(this).parent().parent();
+    			var formId = $form.attr("id");
+    			if($("#"+formId).valid())
+    			{
+    				var values = $form.serialize();
+    				var values = unescape(values.replace(/\+/g, ' '));
+    				
+    				var record = recordInput(values, "organizacionaJedinica");
+    				var referencingAttributes = metaData["organizacionaJedinicaReferencingAttributes"];
+    				var referencedClasses = metaData["organizacionaJedinicaReferencedClasses"];
+    				
+    				var arrayOfValues = [];
+    				var isFound = false;
+    					$.each(referencingAttributes, function(index, val){
+    						var classRef = referencedClasses[index];
+    						var referencedCollection = collections[classRef];
+    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
+    						
+    						
+    						referencedCollection.forEach(function(elValue, elIndex){
+    							
+    							if(contains(elValue[representingAttribute], record[val])){
+    								isFound = true;
+    								arrayOfValues.push(elValue);
+    								record[val+"_representing"] = elValue[representingAttribute];
+    								//record[val] = elValue;
+    								}
+    							});
+    							
+    							if(isFound){
+    							    	record[val] = arrayOfValues;
+    							  }
+    							
+    						});
+    				
+    				var areClassRulesOk = true;		
+    				if(areClassRulesOk){
+    				var index = organizacionaJedinicaCollection.length;
+    				if(record["id"]==-1){
+    					record["id"] = idSeed++;
+    					collections["organizacionaJedinica"].push(record);
+    					addRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
+    				  	toastr.success("Object is saved!");
+    				  	//$("#organizacionaJedinicaForm [name='id']").val(-1);
+    				  	//$("#organizacionaJedinicaForm")[0].reset();
+    				}else{
+    					saveChanges("organizacionaJedinica", record);
+    					changeRecordInTable(record, "organizacionaJedinicaTable", index, "Master");
+    					toastr.success("Object is saved!");
+    					//$("#organizacionaJedinicaForm [name='id']").val(-1);
+    					//$("#organizacionaJedinicaForm")[0].reset();
+    				}
+    				
+    				}else{
+    					toastr.error("There are some errors. Please fix errors and try again.");
+    					return false;
+    				}
+    			}
+    			else
+    			{
+    				toastr.error("There are some errors. Please fix errors and try again.");
+    				return false;
+    			}
+    		});
+    		
+    	
+    	var pravnoLiceValidateObject = {
+    	    			rules:{
+    	    			jedinstvenBrojKorisnikaJavnihSredstava: {
+    	    				 required: true 
+    	    			},
+    	    			nazicPravnogLica: {
+    	    				 required: true 
+    	    			},
+    	    			jedinstveniMaticniBrojGradjanina: {
+    	    				 required: true ,
+    	    				pattern: /[0-9]{13}/
+    	    			},
+    	    			poreskiIdentifikacioniBroj: {
+    	    				 required: true 
+    	    			},
+    	    			adresaSedista: {
+    	    				 required: true 
+    	    			},
+    	    			adresaElektronskePoste: {
+    	    				 required: true 
+    	    			},
+    	    			brojTelefona: {
+    	    				 required: true 
+    	    			},
+    	    			imeIPrezimeAdminstratora: {
+    	    				 required: true 
+    	    			},
+    	    			brojIdentifikacioneOznake: {
+    	    				 required: true ,
+    	    				pattern: /[0-9]{9}/
+    	    			},
+    	    			brojTelefonaAdministratoraa: {
+    	    				 required: true 
+    	    			},
+    	    			adresaElektronskePosteAdministratora: {
+    	    				 required: true ,
+    	    				minlength: 10,
+    	    				maxlength: 254
+    	    			},
+    	    			brojOrganizacioneJedinice: {
+    	    				 required: true 
+    	    			},
+    	    			nnnn: {
+    	    			},
+    	    			mmmm: {
+    	    			},
+    	    			},
+    	    			messages: {
+    						jedinstvenBrojKorisnikaJavnihSredstava: {
+    						required: "Јединствен број корисника јавних средстава је обавезно поље."
+    					},
+    						nazicPravnogLica: {
+    						required: "Назив правног лица је обавезно поље."
+    					},
+    						jedinstveniMaticniBrojGradjanina: {
+    					},
+    						poreskiIdentifikacioniBroj: {
+    					},
+    						adresaSedista: {
+    					},
+    						adresaElektronskePoste: {
+    					},
+    						brojTelefona: {
+    					},
+    						imeIPrezimeAdminstratora: {
+    					},
+    						brojIdentifikacioneOznake: {
+    					},
+    						brojTelefonaAdministratoraa: {
+    					},
+    						adresaElektronskePosteAdministratora: {
+    					},
+    						brojOrganizacioneJedinice: {
+    					},
+    						nnnn: {
+    					},
+    						mmmm: {
+    					},
+    	    				}
+    	    		};
+    	validators["pravnoLice"]=pravnoLiceValidateObject;		
+ 		$("#pravnoLiceForm").validate({
+    			rules:{
+    			jedinstvenBrojKorisnikaJavnihSredstava: {
+    				 required: true 
+    			},
+    			nazicPravnogLica: {
+    				 required: true 
+    			},
+    			jedinstveniMaticniBrojGradjanina: {
+    				 required: true ,
+    				pattern: /[0-9]{13}/
+    			},
+    			poreskiIdentifikacioniBroj: {
+    				 required: true 
+    			},
+    			adresaSedista: {
+    				 required: true 
+    			},
+    			adresaElektronskePoste: {
+    				 required: true 
+    			},
+    			brojTelefona: {
+    				 required: true 
+    			},
+    			imeIPrezimeAdminstratora: {
+    				 required: true 
+    			},
+    			brojIdentifikacioneOznake: {
+    				 required: true ,
+    				pattern: /[0-9]{9}/
+    			},
+    			brojTelefonaAdministratoraa: {
+    				 required: true 
+    			},
+    			adresaElektronskePosteAdministratora: {
+    				 required: true ,
+    				minlength: 10,
+    				maxlength: 254
+    			},
+    			brojOrganizacioneJedinice: {
+    				 required: true 
+    			},
+    			nnnn: {
+    			},
+    			mmmm: {
+    			},
+    			},
+    			messages: {
+	jedinstvenBrojKorisnikaJavnihSredstava: {
+	required: "Јединствен број корисника јавних средстава је обавезно поље."
+},
+	nazicPravnogLica: {
+	required: "Назив правног лица је обавезно поље."
+},
+	jedinstveniMaticniBrojGradjanina: {
+},
+	poreskiIdentifikacioniBroj: {
+},
+	adresaSedista: {
+},
+	adresaElektronskePoste: {
+},
+	brojTelefona: {
+},
+	imeIPrezimeAdminstratora: {
+},
+	brojIdentifikacioneOznake: {
+},
+	brojTelefonaAdministratoraa: {
+},
+	adresaElektronskePosteAdministratora: {
+},
+	brojOrganizacioneJedinice: {
+},
+	nnnn: {
+},
+	mmmm: {
+},
+    				}
+    		});
+    		
+    		$("body").on("click",".pravnoLiceSubmitButton",function(){
+    			var $form = $(this).parent().parent();
+    			var formId = $form.attr("id");
+    			if($("#"+formId).valid())
+    			{
+    				var values = $form.serialize();
+    				var values = unescape(values.replace(/\+/g, ' '));
+    				
+    				var record = recordInput(values, "pravnoLice");
+    				var referencingAttributes = metaData["pravnoLiceReferencingAttributes"];
+    				var referencedClasses = metaData["pravnoLiceReferencedClasses"];
+    				
+    				var arrayOfValues = [];
+    				var isFound = false;
+    					$.each(referencingAttributes, function(index, val){
+    						var classRef = referencedClasses[index];
+    						var referencedCollection = collections[classRef];
+    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
+    						
+    						
+    						referencedCollection.forEach(function(elValue, elIndex){
+    							
+    							if(contains(elValue[representingAttribute], record[val])){
+    								isFound = true;
+    								arrayOfValues.push(elValue);
+    								record[val+"_representing"] = elValue[representingAttribute];
+    								//record[val] = elValue;
+    								}
+    							});
+    							
+    							if(isFound){
+    							    	record[val] = arrayOfValues;
+    							  }
+    							
+    						});
+    				
+    				var areClassRulesOk = true;		
+    				if(record["adresaElektronskePosteAdministratora"]== record["adresaElektronskePoste"] ||  
+    				 false)
+    				{
+    						
+    						toastr.error(" Adresa Elektronske Poste and Adresa Elektronske Poste Administratora should be different.");
+    						areClassRulesOk = false;
+    				}
+    				if(areClassRulesOk){
+    				var index = pravnoLiceCollection.length;
+    				if(record["id"]==-1){
+    					record["id"] = idSeed++;
+    					collections["pravnoLice"].push(record);
+    					addRecordInTable(record, "pravnoLiceTable", index, "Master");
+    				  	toastr.success("Object is saved!");
+    				  	//$("#pravnoLiceForm [name='id']").val(-1);
+    				  	//$("#pravnoLiceForm")[0].reset();
+    				}else{
+    					saveChanges("pravnoLice", record);
+    					changeRecordInTable(record, "pravnoLiceTable", index, "Master");
+    					toastr.success("Object is saved!");
+    					//$("#pravnoLiceForm [name='id']").val(-1);
+    					//$("#pravnoLiceForm")[0].reset();
+    				}
+    				
+    				}else{
+    					toastr.error("There are some errors. Please fix errors and try again.");
+    					return false;
+    				}
+    			}
+    			else
+    			{
+    				toastr.error("There are some errors. Please fix errors and try again.");
+    				return false;
+    			}
+    		});
+    		
+//click
+$("body").on("click", ".autocomplete", function() {
   			var dataClass = $(this).attr("data-class");
 var values = collections[dataClass];
   			var brojOrganizacioneJediniceAvailableTags = [];

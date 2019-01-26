@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="SIM" description="Description">
+  <validationclasses name="class1">
+    <classattribute name="attr" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="attrr" master="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="class2">
+    <classattribute name="attr" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+  <validationclasses name="class3">
+    <classattribute name="bb" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="attr">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList" isMultiSelect="true"/>
+        <attributeDataType xsi:type="formValidation:NonPrimitiveDataType" isCollection="true" type="//@validationclasses.1"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+</formValidation:BusinessModel>
