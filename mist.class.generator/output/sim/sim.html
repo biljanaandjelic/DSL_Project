@@ -47,9 +47,11 @@
 	  
 	  <div id="tabPanel" class="classOverview-content">
 	  	<ul class="nav nav-tabs tabPanel-li" >
-	  		
+	  	<li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab">Description</a></li>
 	  	</ul>
 	  <div class="tab-content" id="tabPanelContainer">
+	  <div id="description" class="panel description">Description</div>
+					
 	  </div>
 	  </div>
     			      <div id="addclass1" class="panel content">
@@ -60,16 +62,14 @@
     			      	<label> Attr </label>
     			      	
     			      	
-    			      	
-    			      	 <input id="attrId" class="form-control" type="text" placeholder="" name="attr" class="form-control "/>
+    			      	<input id="attrId" class="form-control" type="text" placeholder="" name="attr" class="form-control "/>
     			      </div>
     			      
     			      <div class="form-group col-md-12">
     			      	<label> Attrr </label>
     			      	
     			      	
-    			      	
-    			      	 <input id="attrrId" class="form-control" type="text" placeholder="" name="attrr" class="form-control "/>
+    			      	<input id="attrrId" class="form-control" type="text" placeholder="" name="attrr" class="form-control "/>
     			      </div>
     			      
     			      </div>
@@ -125,8 +125,7 @@
     			      	<label> Attr </label>
     			      	
     			      	
-    			      	
-    			      	 <input id="attrId" class="form-control" type="text" placeholder="" name="attr" class="form-control "/>
+    			      	<input id="attrId" class="form-control" type="text" placeholder="" name="attr" class="form-control "/>
     			      </div>
     			      
     			      </div>
@@ -181,15 +180,69 @@
     			      	<label> Bb </label>
     			      	
     			      	
-    			      	
-    			      	 <input id="bbId" class="form-control" type="text" placeholder="" name="bb" class="form-control "/>
+    			      	<input id="bbId" class="form-control" type="text" placeholder="" name="bb" class="form-control "/>
     			      </div>
     			      
     			      <div class="form-group col-md-12">
     			      	<label> Attr </label>
-    			      	<select class="form-control" id="attrId" name="attr"  multiple 
+    			      	<select class="form-control" id="attrId" name="attr"  multiple
     			      	data-kind="ValidationClass" data-class="class2">
     			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Attr3 </label>
+    			      	
+    			      	
+    			      	<div><label class="checkbox-inline"><input type="radio" value="val1" name="attr3" >val1</label></div>
+    			      	<div><label class="checkbox-inline"><input type="radio" value="val2" name="attr3" >val2</label></div>
+    			      	<div><label class="checkbox-inline"><input type="radio" value="val3" name="attr3" >val3</label></div>
+    			      	<div><label class="checkbox-inline"><input type="radio" value="val4" name="attr3" >val4</label></div>
+    			      	
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Attr4 </label>
+    			      	
+    			      	
+    			      	<select class="form-control" id="attr4Id" name="attr4" 
+    			      		data-kind="PrimitiveDatatype">
+    			      		<option selected disabled>Choose here</option>
+    			      	<option>val1</option>
+    			      	<option>val2</option>
+    			      	<option>val3</option>
+    			      	<option>val4</option>
+    			      	<option>val50</option>
+    			      	<option>val6</option>
+    			      	</select>
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Attr5 </label>
+    			      	
+    			      	
+    			      	<select class="form-control" id="attr5Id" name="attr5"  multiple
+    			      		data-kind="PrimitiveDatatype">
+    			      	<option>val1</option>
+    			      	<option>val2</option>
+    			      	<option>val3</option>
+    			      	<option>val4</option>
+    			      	<option>val50</option>
+    			      	<option>val6</option>
+    			      	</select>
+    			      	
+    			      </div>
+    			      
+    			      <div class="form-group col-md-12">
+    			      	<label> Attr6 </label>
+    			      	
+    			      	
+    			      	<div><label ><input type="checkbox" value="val1" name="attr6">val1</label></div>
+    			      	<div><label ><input type="checkbox" value="val2" name="attr6">val2</label></div>
+    			      	<div><label ><input type="checkbox" value="val3" name="attr6">val3</label></div>
+    			      	<div><label ><input type="checkbox" value="val4" name="attr6">val4</label></div>
+    			      	
+    			      	
     			      </div>
     			      
     			      </div>
@@ -229,12 +282,44 @@
 	
 	<div id="linkedDataclass3" class="classOverview-content">
 	<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" href="#class3details" data-toggle="tab">Додатне информације о ентитету</a>
+	</li>
 		
 		 <li class="nav-item">
 		     	<a class="nav-link" href="#attrTab" data-toggle="tab">Attr </a>
 		  </li>
 	</ul>
 	<div class="tab-content">
+	<div id="class3details" class="tab-pane active">
+	 
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Attr3  :</label></span><span class="additionalInfo" name="attr3"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label class="additional-info-label"> Attr4  : </label></span><span class="additionalInfo" name="attr4"></span> </div>
+	</div>
+	</div>
+	
+	
+	<div class="form-row">
+	    <div class="form-group col-md-6  additonalInfo-field">
+	    
+	    <div><span><label class="additional-info-label"> Attr5  :</label></span><span class="additionalInfo" name="attr5"></span> </div>
+	 	</div>
+	
+	
+	<div class="form-group col-md-6 additonalInfo-field">
+	 <div><span><label class="additional-info-label"> Attr6  : </label></span><span class="additionalInfo" name="attr6"></span> </div>
+	</div>
+	</div>
+	
+	</div>
 		 <div id="attrTab"  class="tab-pane referenced">
 			<div class="classOverview-content">
 			<table class="table table-hover" id="class2TableRef">

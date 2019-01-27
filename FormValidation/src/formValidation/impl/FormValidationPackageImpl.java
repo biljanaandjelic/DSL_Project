@@ -2457,7 +2457,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getAttributeSettings_Presentation(), this.getERequiredField(), "presentation", null, 0, 1, AttributeSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labelSettingsEClass, LabelSettings.class, "LabelSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLabelSettings_Position(), this.getEPosition(), "position", null, 0, 1, LabelSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLabelSettings_Position(), this.getEPosition(), "position", "Above", 0, 1, LabelSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(errorMessageEClass, ErrorMessage.class, "ErrorMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getErrorMessage_Message(), ecorePackage.getEString(), "message", null, 0, 1, ErrorMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2492,7 +2492,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getBusinessModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(errorMessageSettingsEClass, ErrorMessageSettings.class, "ErrorMessageSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getErrorMessageSettings_Position(), this.getEPosition(), "position", null, 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getErrorMessageSettings_Position(), this.getEPosition(), "position", "Below", 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getErrorMessageSettings_Color(), this.getColor(), null, "color", null, 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(formSettingsEClass, FormSettings.class, "FormSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2618,7 +2618,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (classAttributeEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting"
+			 "constraints", "appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting nonPrimitiveAttributeCannotBeMaster"
 		   });	
 		addAnnotation
 		  (minLengthEClass, 
@@ -2718,7 +2718,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 			 "compareMinMaxLength", "Tuple {\n\tmessage : String = \'Maxlength value should be greater than mainlength\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
 			 "compareMinMaxNumber", "Tuple {\n\tmessage : String = \'Check if max value is greater then min value\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
 			 "compareMinMaxDate", "Tuple {\n\tmessage : String = \'Check id max date is greater then min date\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
-			 "nameFormat", "name.matches(\'[a-z][a-zA-Z]*\')",
+			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
 			 "attributeRuleRequiredCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Required))->size() <=1",
 			 "attributeRuleMinLengthCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(MinLength))->size() <=1",
 			 "attributeRuleMaxLengthCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(MaxLength))->size() <=1",
@@ -2728,7 +2728,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 			 "attributeRuleAcceptableValuesCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1",
 			 "attributeRulePatternCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1",
 			 "collectionCannotBeMaster", "\n\t\tif attributetype.attributeDataType.isCollection then master = false else true endif",
-			 "collectionCannotBeRepresenting", "\n\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif"
+			 "collectionCannotBeRepresenting", "\n\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif",
+			 "nonPrimitiveAttributeCannotBeMaster", "Tuple {\n\tmessage : String = \'Non primitive data type cannot be master attribute.\',\n\tstatus : Boolean = \n\t\tif attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n}.status"
 		   });	
 		addAnnotation
 		  (minLengthEClass, 

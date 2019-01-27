@@ -1,0 +1,36 @@
+{
+	label "SWNS"
+	description "Example with number range"
+	
+	class1{
+		attr1{
+			Data type Number
+			NumericUIComponent { Component type NumberScroller}
+			Master
+			Required
+		}
+		
+		attr2{
+			Data type String
+			Master
+			ClassRepresenting
+		}
+		attr3{
+			Data type String
+			DropDownList {}
+			Required
+			AcceptableValuesString {"vla2", "val2", "val3"}
+		}
+		
+		attr4{
+			Data type String
+			Collection
+			DropDownList {MultiSelectable} 
+			Required
+			AcceptableValuesString {"nval1", "nval2", "nval3", "nval4"}
+		}
+		LabelSettings{
+			Position Left
+		}
+	}
+}

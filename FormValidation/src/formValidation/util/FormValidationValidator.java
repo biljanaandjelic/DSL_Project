@@ -389,6 +389,7 @@ public class FormValidationValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateClassAttribute_attributeRulePatternCanAppearJustOnce(classAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeMaster(classAttribute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeRepresenting(classAttribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateClassAttribute_nonPrimitiveAttributeCannotBeMaster(classAttribute, diagnostics, context);
 		return result;
 	}
 
@@ -562,7 +563,7 @@ public class FormValidationValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z]*')";
+	protected static final String CLASS_ATTRIBUTE__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z0-9.]*')";
 
 	/**
 	 * Validates the nameFormat constraint of '<em>Class Attribute</em>'.
@@ -880,6 +881,39 @@ public class FormValidationValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "collectionCannotBeRepresenting",
 				 CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CLASS_ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION = "Tuple {\n" +
+		"\tmessage : String = 'Non primitive data type cannot be master attribute.',\n" +
+		"\tstatus : Boolean = \n" +
+		"\t\tif attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n" +
+		"}.status";
+
+	/**
+	 * Validates the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateClassAttribute_nonPrimitiveAttributeCannotBeMaster(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
+				 classAttribute,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "nonPrimitiveAttributeCannotBeMaster",
+				 CLASS_ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);

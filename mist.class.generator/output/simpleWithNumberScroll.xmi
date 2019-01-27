@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="SWNS" description="Example with number range">
+  <validationclasses name="class1">
+    <classattribute name="attr1" master="true">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:NumericUIComponent" componentType="NumberScroller"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Number"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute name="attr2" master="true" isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+    <classattribute name="attr3">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>vla2</values>
+        <values>val2</values>
+        <values>val3</values>
+      </attributerule>
+    </classattribute>
+    <classattribute name="attr4">
+      <attributetype>
+        <uiComponent xsi:type="formValidation:DropDownList" isMultiSelect="true"/>
+        <attributeDataType xsi:type="formValidation:PrimitiveDataType" isCollection="true"/>
+      </attributetype>
+      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:AcceptableValuesString">
+        <values>nval1</values>
+        <values>nval2</values>
+        <values>nval3</values>
+        <values>nval4</values>
+      </attributerule>
+    </classattribute>
+    <additionalSettings xsi:type="formValidation:LabelSettings" position="Left"/>
+  </validationclasses>
+</formValidation:BusinessModel>

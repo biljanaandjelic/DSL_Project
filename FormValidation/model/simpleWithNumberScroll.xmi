@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<formValidation:BusinessModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:formValidation="http://www.example.org/formValidation"
+    label="SWNS"
+    description="Example with number range">
+  <validationclasses
+      name="class1">
+    <classattribute
+        name="attr"
+        master="true">
+      <attributetype>
+        <uiComponent
+            xsi:type="formValidation:NumericUIComponent"
+            componentType="NumberScroller"/>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"
+            type="Number"/>
+      </attributetype>
+      <attributerule
+          xsi:type="formValidation:Required"/>
+    </classattribute>
+    <classattribute
+        name="attrr"
+        master="true"
+        isClassRepresenting="true">
+      <attributetype>
+        <attributeDataType
+            xsi:type="formValidation:PrimitiveDataType"/>
+      </attributetype>
+    </classattribute>
+  </validationclasses>
+</formValidation:BusinessModel>

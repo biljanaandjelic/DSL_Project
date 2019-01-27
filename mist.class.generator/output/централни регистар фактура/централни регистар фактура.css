@@ -53,6 +53,10 @@
    		margin-top: 90px;
    	}
    	
+   	.description{
+   		text-align: center;
+   		padding-top: 120;
+   	}
    	.delete-mode{
    		margin-bottom: 50px;
    	}
@@ -61,8 +65,15 @@
    		font-weight: bold;
    	}
 
+		input{
+			margin-bottom: 10px;
+		}
 		.no-content-message{
 			text-align: center;
+		}
+		
+		fieldSet{
+			margin-bottom: 40px;
 		}
 		
 		.error{
@@ -94,7 +105,6 @@
    	}
    	
    	.delete-sidebar-items{
-   		background-color: #c2d6d6;
    		width: 100%;
    	}
    		
@@ -181,9 +191,6 @@
    	#pravnoLiceForm label.error{
    		color : rgb(255, 50, 50)
    		}
-   	#pravnoLiceForm label.error{
-   	   	color : #FF0000;
-   	   }
    	
    			#pravnoLiceTable{
    				width: 600px;

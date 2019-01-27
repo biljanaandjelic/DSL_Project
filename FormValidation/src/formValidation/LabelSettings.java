@@ -22,6 +22,7 @@ package formValidation;
 public interface LabelSettings extends AdditionalSettings {
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
+	 * The default value is <code>"Above"</code>.
 	 * The literals are from the enumeration {@link formValidation.EPosition}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,7 +34,7 @@ public interface LabelSettings extends AdditionalSettings {
 	 * @see formValidation.EPosition
 	 * @see #setPosition(EPosition)
 	 * @see formValidation.FormValidationPackage#getLabelSettings_Position()
-	 * @model
+	 * @model default="Above"
 	 * @generated
 	 */
 	EPosition getPosition();

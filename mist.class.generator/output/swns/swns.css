@@ -53,10 +53,6 @@
    		margin-top: 90px;
    	}
    	
-   	.description{
-   		text-align: center;
-   		padding-top: 120;
-   	}
    	.delete-mode{
    		margin-bottom: 50px;
    	}
@@ -65,15 +61,8 @@
    		font-weight: bold;
    	}
 
-		input{
-			margin-bottom: 10px;
-		}
 		.no-content-message{
 			text-align: center;
-		}
-		
-		fieldSet{
-			margin-bottom: 40px;
 		}
 		
 		.error{
@@ -105,6 +94,7 @@
    	}
    	
    	.delete-sidebar-items{
+   		background-color: #c2d6d6;
    		width: 100%;
    	}
    		
@@ -162,7 +152,7 @@
    	}
    		
    	 
-   	#addopstina
+   	#addclass1
    	{
    	 	align: center;
    	}
@@ -174,109 +164,11 @@
    	.sidebar-item{
    		margin-bottom: 50px;
    	}
-   	
-   	 
-   	#adddrzavljanstvo
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#addsrednjaskola
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#addtipSednjeSkole
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#adddrzava
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#addmesto
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#addnacionalnost
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	
-   	 
-   	#addsObrazac
-   	{
-   	 	align: center;
-   	}
-   	
-   	.select-box{
-   		display: none;
-   	}
-   	
-   	.sidebar-item{
-   		margin-bottom: 50px;
-   	}
-   	"#add"sObrazac label{
+   	"#add"class1 label{
    		display: inline-block;
    	}
    	
-   	"#add"sObrazac input{
+   	"#add"class1 input{
    		display: inline-block;
    	}
    	

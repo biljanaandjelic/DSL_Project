@@ -23,6 +23,7 @@ package formValidation;
 public interface ErrorMessageSettings extends AdditionalSettings {
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
+	 * The default value is <code>"Below"</code>.
 	 * The literals are from the enumeration {@link formValidation.EPosition}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -34,7 +35,7 @@ public interface ErrorMessageSettings extends AdditionalSettings {
 	 * @see formValidation.EPosition
 	 * @see #setPosition(EPosition)
 	 * @see formValidation.FormValidationPackage#getErrorMessageSettings_Position()
-	 * @model
+	 * @model default="Below"
 	 * @generated
 	 */
 	EPosition getPosition();

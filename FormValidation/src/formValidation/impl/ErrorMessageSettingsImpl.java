@@ -38,7 +38,7 @@ public class ErrorMessageSettingsImpl extends AdditionalSettingsImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EPosition POSITION_EDEFAULT = EPosition.ABOVE;
+	protected static final EPosition POSITION_EDEFAULT = EPosition.BELOW;
 
 	/**
 	 * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.

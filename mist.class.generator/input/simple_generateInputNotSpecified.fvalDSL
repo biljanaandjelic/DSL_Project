@@ -1,0 +1,60 @@
+{
+	label "SIM"
+	description "Description"
+	class1{
+		attr{
+			Data type String
+			Master 
+			ClassRepresenting
+		}
+		
+		attrr{
+			Data type String
+			Master
+		}
+	}
+	
+	class2{
+		attr{
+			Data type String
+			Master
+			ClassRepresenting
+		}
+	}
+	
+	class3{
+		bb{
+			Data type String
+			Master
+			ClassRepresenting
+		}
+		
+		attr{
+			Data type class2
+			Collection
+			DropDownList {MultiSelectable}
+		}
+		
+		attr3{
+			Data type String
+			AcceptableValuesString {"val1", "val2", "val3", "val4"}
+		}
+		
+		attr4{
+			Data type String
+			AcceptableValuesString {"val1", "val2", "val3", "val4", "val50", "val6"}
+		}
+		
+		attr5{
+			Data type String
+			Collection
+			AcceptableValuesString {"val1", "val2", "val3", "val4", "val50", "val6"}
+		}
+		
+		attr6{
+			Data type String
+			Collection
+			AcceptableValuesString {"val1", "val2", "val3", "val4"}
+		}
+	}
+}

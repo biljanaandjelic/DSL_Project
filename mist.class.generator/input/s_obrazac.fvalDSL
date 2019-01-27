@@ -112,9 +112,9 @@
 		drzavaRodjenja{
 			Data type drzava
 			DropDownList {}
-			Master 
 			Required
 		}
+		
 		adresaStanovanjaStalog{
 			Data type String
 			TextInput{}
@@ -152,7 +152,6 @@
 			Label "Opstina stanovanja (za vrijeme studija)"
 			Data type opstina
 			DropDownList {}
-			Master
 			Required
 		}
 		
@@ -239,7 +238,29 @@
 			AcceptableValuesString {"Ne", "Da, svoju decu", "Da, supruga/suprugu partnera/partnerku", "Da, roditelje", "Da, rodjake", "Da, druga lica"}
 		}
 		
+		FieldSet rodjenje{
+			attributes ( datumRodjenja, mestoRodjena,  drzavaRodjenja, opstinaRodjena)
+		}
 		
+		FieldSet stalnoStanovanje{
+			attributes  (adresaStanovanjaStalog, opstinaStalnogStanovanja, mestoStalnogStanovanje, telefon)
+		}
+		
+		FieldSet zaVremeStudiranja{
+			attributes (adresaStanovanjaZaVrijemeStudija, opstinaStanovanjaZaVrijemeStudija, mestoStanovanjeZaVrijemeStudija, mobilniTelefonZaVrijeStudija)
+		}
+		
+		FieldSet nacionalnost{
+			attributes (drzavljanstvo, nacionalnost, srednjaSkola, profilSrednjeSkole, zanimanjeStudenta, glavniRadniStatusStudenta)
+		}
+		
+		FieldSet others{
+			attributes (bracniStatus, tipSmjestaja, nacinIzdrazavanjaTokomStudija, glavniNacinIzdrzavanja, izdrzavanjeDrugihLica)
+		}
+		
+		LabelSettings{
+			Position Left
+		}
 	}
 	
 	

@@ -4,10 +4,10 @@ var collections = [];
 var metaData = [];
 var idSeed = 0;
 var validators = [];
-metaData["class1MetaDataMaster"] = [  "attr", "attrr"];
-metaData["class1MetaDataCollection"] = [ ];
-metaData["class1MetaDataRepresenting"] = [ "attr" ];
-metaData["class1AllAttributes"] = [  "attr" , "attrr" ];;
+metaData["class1MetaDataMaster"] = [  "attr1", "attr2"];
+metaData["class1MetaDataCollection"] = [  "attr4"];
+metaData["class1MetaDataRepresenting"] = [ "attr2" ];
+metaData["class1AllAttributes"] = [  "attr1" , "attr2" , "attr3" , "attr4" ];;
 var class1Collection = [];
 collections["class1"] = class1Collection;
 var class1ReferencingAttributes = [ ];
@@ -15,28 +15,6 @@ metaData["class1ReferencingAttributes"] = class1ReferencingAttributes;
 
  var class1ReferencedClasses = [ ];
  metaData["class1ReferencedClasses"] =  class1ReferencedClasses;
-metaData["class2MetaDataMaster"] = [  "attr"];
-metaData["class2MetaDataCollection"] = [ ];
-metaData["class2MetaDataRepresenting"] = [ "attr" ];
-metaData["class2AllAttributes"] = [  "attr" ];;
-var class2Collection = [];
-collections["class2"] = class2Collection;
-var class2ReferencingAttributes = [ ];
-metaData["class2ReferencingAttributes"] = class2ReferencingAttributes;
-
- var class2ReferencedClasses = [ ];
- metaData["class2ReferencedClasses"] =  class2ReferencedClasses;
-metaData["class3MetaDataMaster"] = [  "bb"];
-metaData["class3MetaDataCollection"] = [  "attr", "attr5", "attr6"];
-metaData["class3MetaDataRepresenting"] = [ "bb" ];
-metaData["class3AllAttributes"] = [  "bb" , "attr" , "attr3" , "attr4" , "attr5" , "attr6" ];;
-var class3Collection = [];
-collections["class3"] = class3Collection;
-var class3ReferencingAttributes = [  "attr"];
-metaData["class3ReferencingAttributes"] = class3ReferencingAttributes;
-
- var class3ReferencedClasses = [  "class2"];
- metaData["class3ReferencedClasses"] =  class3ReferencedClasses;
     		
     	$(".dropdown-item").click(function(){
     		var $this = $(this);
@@ -551,15 +529,45 @@ $(".tabPanel-li").on("click",".closeTabbb", function(e){
     	
     	var class1ValidateObject = {
     	    			rules:{
+    	    			attr1: {
+    	    				 required: true 
+    	    			},
+    	    			attr3: {
+    	    				 required: true ,
+    	    			},
+    	    			attr4: {
+    	    				 required: true ,
+    	    			},
     	    			},
     	    			messages: {
+    						attr1: {
+    					},
+    						attr3: {
+    					},
+    						attr4: {
+    					},
     	    				}
     	    		};
     	validators["class1"]=class1ValidateObject;		
  		$("#class1Form").validate({
     			rules:{
+    			attr1: {
+    				 required: true 
+    			},
+    			attr3: {
+    				 required: true ,
+    			},
+    			attr4: {
+    				 required: true ,
+    			},
     			},
     			messages: {
+	attr1: {
+},
+	attr3: {
+},
+	attr4: {
+},
     				}
     		});
     		
@@ -615,200 +623,6 @@ $(".tabPanel-li").on("click",".closeTabbb", function(e){
     					toastr.success("Object is saved!");
     					//$("#class1Form [name='id']").val(-1);
     					//$("#class1Form")[0].reset();
-    				}
-    				
-    				}else{
-    					toastr.error("There are some errors. Please fix errors and try again.");
-    					return false;
-    				}
-    			}
-    			else
-    			{
-    				toastr.error("There are some errors. Please fix errors and try again.");
-    				return false;
-    			}
-    		});
-    		
-    	
-    	var class2ValidateObject = {
-    	    			rules:{
-    	    			},
-    	    			messages: {
-    	    				}
-    	    		};
-    	validators["class2"]=class2ValidateObject;		
- 		$("#class2Form").validate({
-    			rules:{
-    			},
-    			messages: {
-    				}
-    		});
-    		
-    		$("body").on("click",".class2SubmitButton",function(){
-    			var $form = $(this).parent().parent();
-    			var formId = $form.attr("id");
-    			if($("#"+formId).valid())
-    			{
-    				var values = $form.serialize();
-    				var values = unescape(values.replace(/\+/g, ' '));
-    				
-    				var record = recordInput(values, "class2");
-    				var referencingAttributes = metaData["class2ReferencingAttributes"];
-    				var referencedClasses = metaData["class2ReferencedClasses"];
-    				
-    				var arrayOfValues = [];
-    				var isFound = false;
-    					$.each(referencingAttributes, function(index, val){
-    						var classRef = referencedClasses[index];
-    						var referencedCollection = collections[classRef];
-    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-    						
-    						
-    						referencedCollection.forEach(function(elValue, elIndex){
-    							
-    							if(contains(elValue[representingAttribute], record[val])){
-    								isFound = true;
-    								arrayOfValues.push(elValue);
-    								record[val+"_representing"] = elValue[representingAttribute];
-    								//record[val] = elValue;
-    								}
-    							});
-    							
-    							if(isFound){
-    							    	record[val] = arrayOfValues;
-    							  }
-    							
-    						});
-    				
-    				var areClassRulesOk = true;		
-    				if(areClassRulesOk){
-    				var index = class2Collection.length;
-    				if(record["id"]==-1){
-    					record["id"] = idSeed++;
-    					collections["class2"].push(record);
-    					addRecordInTable(record, "class2Table", index, "Master");
-    				  	toastr.success("Object is saved!");
-    				  	//$("#class2Form [name='id']").val(-1);
-    				  	//$("#class2Form")[0].reset();
-    				}else{
-    					saveChanges("class2", record);
-    					changeRecordInTable(record, "class2Table", index, "Master");
-    					toastr.success("Object is saved!");
-    					//$("#class2Form [name='id']").val(-1);
-    					//$("#class2Form")[0].reset();
-    				}
-    				
-    				}else{
-    					toastr.error("There are some errors. Please fix errors and try again.");
-    					return false;
-    				}
-    			}
-    			else
-    			{
-    				toastr.error("There are some errors. Please fix errors and try again.");
-    				return false;
-    			}
-    		});
-    		
-    	
-    	var class3ValidateObject = {
-    	    			rules:{
-    	    			attr3: {
-    	    			},
-    	    			attr4: {
-    	    			},
-    	    			attr5: {
-    	    			},
-    	    			attr6: {
-    	    			},
-    	    			},
-    	    			messages: {
-    						attr3: {
-    					},
-    						attr4: {
-    					},
-    						attr5: {
-    					},
-    						attr6: {
-    					},
-    	    				}
-    	    		};
-    	validators["class3"]=class3ValidateObject;		
- 		$("#class3Form").validate({
-    			rules:{
-    			attr3: {
-    			},
-    			attr4: {
-    			},
-    			attr5: {
-    			},
-    			attr6: {
-    			},
-    			},
-    			messages: {
-	attr3: {
-},
-	attr4: {
-},
-	attr5: {
-},
-	attr6: {
-},
-    				}
-    		});
-    		
-    		$("body").on("click",".class3SubmitButton",function(){
-    			var $form = $(this).parent().parent();
-    			var formId = $form.attr("id");
-    			if($("#"+formId).valid())
-    			{
-    				var values = $form.serialize();
-    				var values = unescape(values.replace(/\+/g, ' '));
-    				
-    				var record = recordInput(values, "class3");
-    				var referencingAttributes = metaData["class3ReferencingAttributes"];
-    				var referencedClasses = metaData["class3ReferencedClasses"];
-    				
-    				var arrayOfValues = [];
-    				var isFound = false;
-    					$.each(referencingAttributes, function(index, val){
-    						var classRef = referencedClasses[index];
-    						var referencedCollection = collections[classRef];
-    						var representingAttribute = metaData[classRef+"MetaDataRepresenting"][0];
-    						
-    						
-    						referencedCollection.forEach(function(elValue, elIndex){
-    							
-    							if(contains(elValue[representingAttribute], record[val])){
-    								isFound = true;
-    								arrayOfValues.push(elValue);
-    								record[val+"_representing"] = elValue[representingAttribute];
-    								//record[val] = elValue;
-    								}
-    							});
-    							
-    							if(isFound){
-    							    	record[val] = arrayOfValues;
-    							  }
-    							
-    						});
-    				
-    				var areClassRulesOk = true;		
-    				if(areClassRulesOk){
-    				var index = class3Collection.length;
-    				if(record["id"]==-1){
-    					record["id"] = idSeed++;
-    					collections["class3"].push(record);
-    					addRecordInTable(record, "class3Table", index, "Master");
-    				  	toastr.success("Object is saved!");
-    				  	//$("#class3Form [name='id']").val(-1);
-    				  	//$("#class3Form")[0].reset();
-    				}else{
-    					saveChanges("class3", record);
-    					changeRecordInTable(record, "class3Table", index, "Master");
-    					toastr.success("Object is saved!");
-    					//$("#class3Form [name='id']").val(-1);
-    					//$("#class3Form")[0].reset();
     				}
     				
     				}else{
