@@ -21,7 +21,7 @@
       <details key="allLayoutsSameType" value="Tuple {&#xA;&#x9;message : String = 'At one level all attributes must be same type',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;formlayout -> forAll(fL1: FormLayout, fL2: FormLayout | &#xA;&#x9;&#x9;&#x9;if fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//ClassAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
         eType="#//ClassRule" containment="true"/>
@@ -35,8 +35,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeRule" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeRuleErrorMessage"
-        eType="#//ErrorMessage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorMessage" eType="#//ErrorMessage"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -63,7 +63,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributetype" lowerBound="1"
         eType="#//AttributeType" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributerule" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
         eType="#//AttributeRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="master" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -74,7 +74,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uiComponent" eType="#//UIComponent"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeDataType" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataTzpe" lowerBound="1"
         eType="#//AttributeDataType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EDataType">
@@ -196,7 +196,7 @@
       <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In less then rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)&#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif)&#xA;}.status"/>
       <details key="differentAttributes" value="&#xA;&#x9;&#x9;&#x9;attributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name &lt;> a1.name)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" eType="#//ClassAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//ClassAttribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
         eType="#//AttributeArray" containment="true"/>
   </eClassifiers>
@@ -267,14 +267,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="layouts" upperBound="-1"
         eType="#//FormLayout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldSet" eSuperTypes="#//FormLayout">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="legend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tab" eSuperTypes="#//FormLayout">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ELayout"
+        defaultValueLiteral="Grid"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Grid" eSuperTypes="#//FormLayout"/>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"/>
   </eClassifiers>
@@ -401,5 +397,10 @@
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="blue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ELayout">
+    <eLiterals name="Grid"/>
+    <eLiterals name="FieldSet" value="1"/>
+    <eLiterals name="Tab" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

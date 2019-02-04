@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="&#xfffd; obrazac" description="Opis">
+<formValidation:BusinessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formValidation="http://www.example.org/formValidation" label="S obrazac" description="Opis">
   <validationclasses name="opstina" label="Opstina">
     <classattribute name="kod" label="Kod" master="true" isClassRepresenting="true">
       <attributetype>
@@ -22,7 +22,7 @@
       <attributerule xsi:type="formValidation:Required"/>
     </classattribute>
   </validationclasses>
-  <validationclasses name="srednjaskola" label="Srednja &#xfffd;kola">
+  <validationclasses name="srednjaskola" label="Srednja skola">
     <classattribute name="naziv" master="true" isClassRepresenting="true">
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
@@ -43,14 +43,20 @@
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
       </attributetype>
-      <attributerule xsi:type="formValidation:Required"/>
+      <attributerule xsi:type="formValidation:Required">
+        <attributeRuleErrorMessage message="Naziv drzave je obavezno polje"/>
+      </attributerule>
     </classattribute>
     <classattribute name="kod" master="true">
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType"/>
       </attributetype>
-      <attributerule xsi:type="formValidation:Required"/>
-      <attributerule xsi:type="formValidation:Length" value="3"/>
+      <attributerule xsi:type="formValidation:Required">
+        <attributeRuleErrorMessage message="Kod drzave je obavezno polje. "/>
+      </attributerule>
+      <attributerule xsi:type="formValidation:Length" value="3">
+        <attributeRuleErrorMessage message="Duzina koda treba da bude 3 karaktera."/>
+      </attributerule>
     </classattribute>
   </validationclasses>
   <validationclasses name="mesto">
@@ -81,7 +87,7 @@
       <attributerule xsi:type="formValidation:Required"/>
     </classattribute>
   </validationclasses>
-  <validationclasses name="sObrazac" label="&#xfffd; obrazac">
+  <validationclasses name="sObrazac" label="S obrazac">
     <classattribute name="datumRodjenja" master="true">
       <attributetype>
         <attributeDataType xsi:type="formValidation:PrimitiveDataType" type="Date"/>

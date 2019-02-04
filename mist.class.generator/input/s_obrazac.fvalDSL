@@ -1,5 +1,5 @@
 {
-	label "Š obrazac"
+	label "S obrazac"
 	description "Opis"
 	opstina{
 		label "Opstina"
@@ -28,7 +28,7 @@
 	}
 	
 	srednjaskola{
-	 	label "Srednja škola"
+	 	label "Srednja skola"
 	 	naziv{
 	 		Data type String
 	 		Master
@@ -51,15 +51,13 @@
 			Data type String
 			Master
 			ClassRepresenting
-			Required
+			Required {Error message "Naziv drzave je obavezno polje"}
 		}	
 		kod{
 			Data type String
 			Master
-			Required
-			Length 3
-			 
-			
+			Required {Error message "Kod drzave je obavezno polje. "}
+			Length 3 { Error message "Duzina koda treba da bude 3 karaktera." }
 		}
 	}
 	
@@ -90,7 +88,7 @@
 		}
 	}
 	sObrazac{
-		label "Š obrazac"
+		label "S obrazac"
 		datumRodjenja{
 			Data type Date
 			Master
