@@ -17,12 +17,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link formValidation.FormLayout#getAttributearray <em>Attributearray</em>}</li>
  *   <li>{@link formValidation.FormLayout#getLayouts <em>Layouts</em>}</li>
  *   <li>{@link formValidation.FormLayout#getName <em>Name</em>}</li>
+ *   <li>{@link formValidation.FormLayout#getLabel <em>Label</em>}</li>
+ *   <li>{@link formValidation.FormLayout#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getFormLayout()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat allLayoutsOnOneLevelMustBeSameType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArraysFieldSet='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArrayTab='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')' allLayoutsOnOneLevelMustBeSameType='\n\t\tlayouts -> forAll(fL1: FormLayout, fL2: FormLayout |\n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif\n\t\t)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkFormLayout='Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' uniqueFormLayoutName='Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArraysFieldSet='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.type = ELayout.FieldSet then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' numOfAttributeArrayTab='Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.type = ELayout.Tab then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status' nameFormat='name.matches(\'[a-z][a-zA-Z0-9.]*\')' allLayoutsOnOneLevelMustBeSameType='\n\t\tlayouts -> forAll(fL1: FormLayout, fL2: FormLayout |\n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif\n\t\t)'"
  * @generated
  */
 public interface FormLayout extends EObject {
@@ -84,4 +86,60 @@ public interface FormLayout extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Label</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see #setLabel(String)
+	 * @see formValidation.FormValidationPackage#getFormLayout_Label()
+	 * @model
+	 * @generated
+	 */
+	String getLabel();
+
+	/**
+	 * Sets the value of the '{@link formValidation.FormLayout#getLabel <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Label</em>' attribute.
+	 * @see #getLabel()
+	 * @generated
+	 */
+	void setLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>"Grid"</code>.
+	 * The literals are from the enumeration {@link formValidation.ELayout}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see formValidation.ELayout
+	 * @see #setType(ELayout)
+	 * @see formValidation.FormValidationPackage#getFormLayout_Type()
+	 * @model default="Grid"
+	 * @generated
+	 */
+	ELayout getType();
+
+	/**
+	 * Sets the value of the '{@link formValidation.FormLayout#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see formValidation.ELayout
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(ELayout value);
 } // FormLayout

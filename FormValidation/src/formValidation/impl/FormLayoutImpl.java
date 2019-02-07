@@ -3,6 +3,7 @@
 package formValidation.impl;
 
 import formValidation.AttributeArray;
+import formValidation.ELayout;
 import formValidation.FormLayout;
 import formValidation.FormValidationPackage;
 
@@ -29,6 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link formValidation.impl.FormLayoutImpl#getAttributearray <em>Attributearray</em>}</li>
  *   <li>{@link formValidation.impl.FormLayoutImpl#getLayouts <em>Layouts</em>}</li>
  *   <li>{@link formValidation.impl.FormLayoutImpl#getName <em>Name</em>}</li>
+ *   <li>{@link formValidation.impl.FormLayoutImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link formValidation.impl.FormLayoutImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,6 +73,42 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LABEL_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String label = LABEL_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ELayout TYPE_EDEFAULT = ELayout.GRID;
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected ELayout type = TYPE_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,6 +178,48 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLabel() {
+		return label;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.FORM_LAYOUT__LABEL, oldLabel, label));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ELayout getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(ELayout newType) {
+		ELayout oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.FORM_LAYOUT__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -164,6 +245,10 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 				return getLayouts();
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				return getName();
+			case FormValidationPackage.FORM_LAYOUT__LABEL:
+				return getLabel();
+			case FormValidationPackage.FORM_LAYOUT__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,6 +273,12 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				setName((String)newValue);
 				return;
+			case FormValidationPackage.FORM_LAYOUT__LABEL:
+				setLabel((String)newValue);
+				return;
+			case FormValidationPackage.FORM_LAYOUT__TYPE:
+				setType((ELayout)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -209,6 +300,12 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case FormValidationPackage.FORM_LAYOUT__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case FormValidationPackage.FORM_LAYOUT__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -227,6 +324,10 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 				return layouts != null && !layouts.isEmpty();
 			case FormValidationPackage.FORM_LAYOUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case FormValidationPackage.FORM_LAYOUT__LABEL:
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case FormValidationPackage.FORM_LAYOUT__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -243,6 +344,10 @@ public abstract class FormLayoutImpl extends MinimalEObjectImpl.Container implem
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", label: ");
+		result.append(label);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

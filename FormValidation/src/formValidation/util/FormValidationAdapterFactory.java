@@ -68,16 +68,16 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	protected FormValidationSwitch<Adapter> modelSwitch =
 		new FormValidationSwitch<Adapter>() {
 			@Override
-			public Adapter caseValidationClass(ValidationClass object) {
-				return createValidationClassAdapter();
+			public Adapter caseEntity(Entity object) {
+				return createEntityAdapter();
 			}
 			@Override
 			public Adapter caseAttributeRule(AttributeRule object) {
 				return createAttributeRuleAdapter();
 			}
 			@Override
-			public Adapter caseClassAttribute(ClassAttribute object) {
-				return createClassAttributeAdapter();
+			public Adapter caseAttribute(Attribute object) {
+				return createAttributeAdapter();
 			}
 			@Override
 			public Adapter caseAttributeType(AttributeType object) {
@@ -216,18 +216,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createFormLayoutAdapter();
 			}
 			@Override
-			public Adapter caseFieldSet(FieldSet object) {
-				return createFieldSetAdapter();
-			}
-			@Override
-			public Adapter caseTab(Tab object) {
-				return createTabAdapter();
-			}
-			@Override
-			public Adapter caseGrid(Grid object) {
-				return createGridAdapter();
-			}
-			@Override
 			public Adapter caseAttributeSettings(AttributeSettings object) {
 				return createAttributeSettingsAdapter();
 			}
@@ -284,10 +272,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 				return createErrorMessageSettingsAdapter();
 			}
 			@Override
-			public Adapter caseFormSettings(FormSettings object) {
-				return createFormSettingsAdapter();
-			}
-			@Override
 			public Adapter casePagination(Pagination object) {
 				return createPaginationAdapter();
 			}
@@ -340,16 +324,16 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.ValidationClass <em>Validation Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link formValidation.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see formValidation.ValidationClass
+	 * @see formValidation.Entity
 	 * @generated
 	 */
-	public Adapter createValidationClassAdapter() {
+	public Adapter createEntityAdapter() {
 		return null;
 	}
 
@@ -368,16 +352,16 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.ClassAttribute <em>Class Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link formValidation.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see formValidation.ClassAttribute
+	 * @see formValidation.Attribute
 	 * @generated
 	 */
-	public Adapter createClassAttributeAdapter() {
+	public Adapter createAttributeAdapter() {
 		return null;
 	}
 
@@ -858,48 +842,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.FieldSet <em>Field Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.FieldSet
-	 * @generated
-	 */
-	public Adapter createFieldSetAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.Tab <em>Tab</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.Tab
-	 * @generated
-	 */
-	public Adapter createTabAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.Grid <em>Grid</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.Grid
-	 * @generated
-	 */
-	public Adapter createGridAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link formValidation.AttributeSettings <em>Attribute Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1092,20 +1034,6 @@ public class FormValidationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createErrorMessageSettingsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link formValidation.FormSettings <em>Form Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see formValidation.FormSettings
-	 * @generated
-	 */
-	public Adapter createFormSettingsAdapter() {
 		return null;
 	}
 

@@ -22,21 +22,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.AttributeRuleImpl#getAttributeRuleErrorMessage <em>Attribute Rule Error Message</em>}</li>
+ *   <li>{@link formValidation.impl.AttributeRuleImpl#getErrorMessage <em>Error Message</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container implements AttributeRule {
 	/**
-	 * The cached value of the '{@link #getAttributeRuleErrorMessage() <em>Attribute Rule Error Message</em>}' containment reference.
+	 * The cached value of the '{@link #getErrorMessage() <em>Error Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttributeRuleErrorMessage()
+	 * @see #getErrorMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected ErrorMessage attributeRuleErrorMessage;
+	protected ErrorMessage errorMessage;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,8 +61,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErrorMessage getAttributeRuleErrorMessage() {
-		return attributeRuleErrorMessage;
+	public ErrorMessage getErrorMessage() {
+		return errorMessage;
 	}
 
 	/**
@@ -70,11 +70,11 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttributeRuleErrorMessage(ErrorMessage newAttributeRuleErrorMessage, NotificationChain msgs) {
-		ErrorMessage oldAttributeRuleErrorMessage = attributeRuleErrorMessage;
-		attributeRuleErrorMessage = newAttributeRuleErrorMessage;
+	public NotificationChain basicSetErrorMessage(ErrorMessage newErrorMessage, NotificationChain msgs) {
+		ErrorMessage oldErrorMessage = errorMessage;
+		errorMessage = newErrorMessage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE, oldAttributeRuleErrorMessage, newAttributeRuleErrorMessage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE, oldErrorMessage, newErrorMessage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -85,18 +85,18 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttributeRuleErrorMessage(ErrorMessage newAttributeRuleErrorMessage) {
-		if (newAttributeRuleErrorMessage != attributeRuleErrorMessage) {
+	public void setErrorMessage(ErrorMessage newErrorMessage) {
+		if (newErrorMessage != errorMessage) {
 			NotificationChain msgs = null;
-			if (attributeRuleErrorMessage != null)
-				msgs = ((InternalEObject)attributeRuleErrorMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE, null, msgs);
-			if (newAttributeRuleErrorMessage != null)
-				msgs = ((InternalEObject)newAttributeRuleErrorMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE, null, msgs);
-			msgs = basicSetAttributeRuleErrorMessage(newAttributeRuleErrorMessage, msgs);
+			if (errorMessage != null)
+				msgs = ((InternalEObject)errorMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE, null, msgs);
+			if (newErrorMessage != null)
+				msgs = ((InternalEObject)newErrorMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE, null, msgs);
+			msgs = basicSetErrorMessage(newErrorMessage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE, newAttributeRuleErrorMessage, newAttributeRuleErrorMessage));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE, newErrorMessage, newErrorMessage));
 	}
 
 	/**
@@ -107,8 +107,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
-				return basicSetAttributeRuleErrorMessage(null, msgs);
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
+				return basicSetErrorMessage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -121,8 +121,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
-				return getAttributeRuleErrorMessage();
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
+				return getErrorMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -135,8 +135,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
-				setAttributeRuleErrorMessage((ErrorMessage)newValue);
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
+				setErrorMessage((ErrorMessage)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -150,8 +150,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
-				setAttributeRuleErrorMessage((ErrorMessage)null);
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
+				setErrorMessage((ErrorMessage)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -165,8 +165,8 @@ public abstract class AttributeRuleImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
-				return attributeRuleErrorMessage != null;
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
+				return errorMessage != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link formValidation.AttributeType#getUiComponent <em>Ui Component</em>}</li>
- *   <li>{@link formValidation.AttributeType#getAttributeDataType <em>Attribute Data Type</em>}</li>
+ *   <li>{@link formValidation.AttributeType#getDataType <em>Data Type</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getAttributeType()
@@ -49,29 +49,29 @@ public interface AttributeType extends EObject {
 	void setUiComponent(UIComponent value);
 
 	/**
-	 * Returns the value of the '<em><b>Attribute Data Type</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Data Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attribute Data Type</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Data Type</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attribute Data Type</em>' containment reference.
-	 * @see #setAttributeDataType(AttributeDataType)
-	 * @see formValidation.FormValidationPackage#getAttributeType_AttributeDataType()
+	 * @return the value of the '<em>Data Type</em>' containment reference.
+	 * @see #setDataType(AttributeDataType)
+	 * @see formValidation.FormValidationPackage#getAttributeType_DataType()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	AttributeDataType getAttributeDataType();
+	AttributeDataType getDataType();
 
 	/**
-	 * Sets the value of the '{@link formValidation.AttributeType#getAttributeDataType <em>Attribute Data Type</em>}' containment reference.
+	 * Sets the value of the '{@link formValidation.AttributeType#getDataType <em>Data Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attribute Data Type</em>' containment reference.
-	 * @see #getAttributeDataType()
+	 * @param value the new value of the '<em>Data Type</em>' containment reference.
+	 * @see #getDataType()
 	 * @generated
 	 */
-	void setAttributeDataType(AttributeDataType value);
+	void setDataType(AttributeDataType value);
 
 } // AttributeType

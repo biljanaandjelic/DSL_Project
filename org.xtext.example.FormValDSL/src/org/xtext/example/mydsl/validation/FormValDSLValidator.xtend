@@ -26,7 +26,7 @@ class FormValDSLValidator extends AbstractFormValDSLValidator {
 	 
 	def doesClassContainAtLastOneAttribute(ValidationClass validationClass){
 		if(validationClass.classattribute.length == 0){
-			error("Class must contains at last one attribute", FormValidationPackage.Literals.VALIDATION_CLASS__NAME, URI_ATTRIBUTE);
+			error("Class must contains at last one attribute", FormValidationPackage.Literals.ENTITY__NAME, URI_ATTRIBUTE);
 		}
 	}
 	
@@ -35,21 +35,21 @@ class FormValDSLValidator extends AbstractFormValDSLValidator {
 			for(ClassAttribute attr : validationClass.classattribute){
 		
 				if(keyWords.contains(attr.name)){
-					error("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+					error("Attribute name is key word", FormValidationPackage.Literals.ATTRIBUTE__NAME);
 				}
 				
 				if(keyWords.contains(attr.label)){
-					warning("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+					warning("Attribute name is key word", FormValidationPackage.Literals.ATTRIBUTE__NAME);
 				}
 				
 			}	
 			
 			if(keyWords.contains(validationClass.name)){
-				error("Class name is key word", FormValidationPackage.Literals.VALIDATION_CLASS__NAME);
+				error("Class name is key word", FormValidationPackage.Literals.ENTITY__NAME);
 			}
 			
 			if(keyWords.contains(validationClass.label)){
-				warning("Class label is key word", FormValidationPackage.Literals.VALIDATION_CLASS__LABEL);
+				warning("Class label is key word", FormValidationPackage.Literals.ENTITY__LABEL);
 			}
 			
 			for(FormLayout layout : validationClass.formlayout){

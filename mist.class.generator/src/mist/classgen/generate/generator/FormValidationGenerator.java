@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 
 import formValidation.BusinessModel;
+import formValidation.Entity;
 import formValidation.FormValidationPackage;
 import formValidation.ValidationClass;
 
@@ -87,7 +88,7 @@ public class FormValidationGenerator {
 		return businessModel;
 	}
 	
-	private static ValidationClass loadValidationClassModel(String modulePath) {
+	private static Entity loadValidationClassModel(String modulePath) {
 		// Initialize the model
 		FormValidationPackage.eINSTANCE.eClass();
 
@@ -107,7 +108,7 @@ public class FormValidationGenerator {
 		// example everything is included in this first node
 		//ValidationClass pkg = (ValidationClass) resource.getContents().get(0);
 		BusinessModel businessModel = (BusinessModel) resource.getContents().get(0);
-        ValidationClass pkg = businessModel.getValidationclasses().get(1);
+        Entity pkg = businessModel.getValidationclasses().get(1);
         
 		return pkg;
 	}

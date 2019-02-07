@@ -6,6 +6,7 @@ import formValidation.AcceptableValues;
 import formValidation.AcceptableValuesDate;
 import formValidation.AcceptableValuesString;
 import formValidation.AdditionalSettings;
+import formValidation.Attribute;
 import formValidation.AttributeArray;
 import formValidation.AttributeDataType;
 import formValidation.AttributeRule;
@@ -14,7 +15,6 @@ import formValidation.AttributeType;
 import formValidation.AutocompleteComponent;
 import formValidation.BusinessModel;
 import formValidation.CheckBox;
-import formValidation.ClassAttribute;
 import formValidation.ClassRule;
 import formValidation.Color;
 import formValidation.DatePattern;
@@ -23,23 +23,22 @@ import formValidation.DropDownList;
 import formValidation.EDataType;
 import formValidation.EDateUIType;
 import formValidation.EGridOrder;
+import formValidation.ELayout;
 import formValidation.EOrientation;
 import formValidation.EPosition;
 import formValidation.ERequiredField;
 import formValidation.EUINumberComponentType;
 import formValidation.EmailInput;
+import formValidation.Entity;
 import formValidation.EnumerationUIComponent;
 import formValidation.Equals;
 import formValidation.ErrorMessage;
 import formValidation.ErrorMessageSettings;
-import formValidation.FieldSet;
 import formValidation.FileInput;
 import formValidation.FormLayout;
-import formValidation.FormSettings;
 import formValidation.FormValidationFactory;
 import formValidation.FormValidationPackage;
 import formValidation.GreaterThan;
-import formValidation.Grid;
 import formValidation.LabelSettings;
 import formValidation.Length;
 import formValidation.LessThan;
@@ -66,15 +65,12 @@ import formValidation.RefEntity;
 import formValidation.Required;
 import formValidation.SelectingUIComponent;
 import formValidation.StringPattern;
-import formValidation.Tab;
 import formValidation.TableOverview;
 import formValidation.TelInput;
 import formValidation.TextArea;
 import formValidation.TextInput;
 import formValidation.TextUIComponent;
 import formValidation.UIComponent;
-import formValidation.ValidationClass;
-
 import formValidation.util.FormValidationValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -100,7 +96,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass validationClassEClass = null;
+	private EClass entityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +110,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass classAttributeEClass = null;
+	private EClass attributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -359,27 +355,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fieldSetEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tabEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gridEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass attributeSettingsEClass = null;
 
 	/**
@@ -478,13 +453,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass formSettingsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass paginationEClass = null;
 
 	/**
@@ -549,6 +517,13 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * @generated
 	 */
 	private EEnum eOrientationEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eLayoutEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -663,8 +638,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getValidationClass() {
-		return validationClassEClass;
+	public EClass getEntity() {
+		return entityEClass;
 	}
 
 	/**
@@ -672,8 +647,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getValidationClass_Name() {
-		return (EAttribute)validationClassEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEntity_Name() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -681,8 +656,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValidationClass_Classattribute() {
-		return (EReference)validationClassEClass.getEStructuralFeatures().get(1);
+	public EReference getEntity_Attributes() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -690,8 +665,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValidationClass_Classrule() {
-		return (EReference)validationClassEClass.getEStructuralFeatures().get(2);
+	public EReference getEntity_Classrule() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -699,8 +674,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getValidationClass_Label() {
-		return (EAttribute)validationClassEClass.getEStructuralFeatures().get(3);
+	public EAttribute getEntity_Label() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -708,8 +683,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValidationClass_Formlayout() {
-		return (EReference)validationClassEClass.getEStructuralFeatures().get(4);
+	public EReference getEntity_Formlayout() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -717,8 +692,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValidationClass_AdditionalSettings() {
-		return (EReference)validationClassEClass.getEStructuralFeatures().get(5);
+	public EReference getEntity_AdditionalSettings() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -726,8 +701,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValidationClass_Overviewsettings() {
-		return (EReference)validationClassEClass.getEStructuralFeatures().get(6);
+	public EReference getEntity_Overviewsettings() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -735,8 +710,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getValidationClass_Attr() {
-		return (EAttribute)validationClassEClass.getEStructuralFeatures().get(7);
+	public EAttribute getEntity_Attr() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -753,7 +728,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttributeRule_AttributeRuleErrorMessage() {
+	public EReference getAttributeRule_ErrorMessage() {
 		return (EReference)attributeRuleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -762,8 +737,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getClassAttribute() {
-		return classAttributeEClass;
+	public EClass getAttribute() {
+		return attributeEClass;
 	}
 
 	/**
@@ -771,8 +746,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassAttribute_Name() {
-		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAttribute_Name() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -780,8 +755,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClassAttribute_Attributetype() {
-		return (EReference)classAttributeEClass.getEStructuralFeatures().get(1);
+	public EReference getAttribute_Attributetype() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -789,8 +764,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClassAttribute_Attributerule() {
-		return (EReference)classAttributeEClass.getEStructuralFeatures().get(2);
+	public EReference getAttribute_Rules() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -798,8 +773,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassAttribute_Label() {
-		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAttribute_Label() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -807,8 +782,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassAttribute_Master() {
-		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(4);
+	public EAttribute getAttribute_Master() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -816,8 +791,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassAttribute_IsClassRepresenting() {
-		return (EAttribute)classAttributeEClass.getEStructuralFeatures().get(5);
+	public EAttribute getAttribute_IsClassRepresenting() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -843,7 +818,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttributeType_AttributeDataType() {
+	public EReference getAttributeType_DataType() {
 		return (EReference)attributeTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1104,7 +1079,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClassRule_ClassRuleErrorMessage() {
+	public EReference getClassRule_ErrorMessage() {
 		return (EReference)classRuleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1140,7 +1115,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGreaterThan_Classattribute() {
+	public EReference getGreaterThan_Attribute() {
 		return (EReference)greaterThanEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1185,7 +1160,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLessThan_Classattribute() {
+	public EReference getLessThan_Attribute() {
 		return (EReference)lessThanEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1437,8 +1412,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFieldSet() {
-		return fieldSetEClass;
+	public EAttribute getFormLayout_Label() {
+		return (EAttribute)formLayoutEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1446,35 +1421,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFieldSet_Legend() {
-		return (EAttribute)fieldSetEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTab() {
-		return tabEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTab_Label() {
-		return (EAttribute)tabEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGrid() {
-		return gridEClass;
+	public EAttribute getFormLayout_Type() {
+		return (EAttribute)formLayoutEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1734,24 +1682,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFormSettings() {
-		return formSettingsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFormSettings_AutoComplete() {
-		return (EAttribute)formSettingsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPagination() {
 		return paginationEClass;
 	}
@@ -1770,7 +1700,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPagination_DefaultNumOfShownRows() {
+	public EAttribute getPagination_DefaultNumberOfShownRows() {
 		return (EAttribute)paginationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1959,6 +1889,15 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getELayout() {
+		return eLayoutEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getERequiredField() {
 		return eRequiredFieldEEnum;
 	}
@@ -2027,30 +1966,30 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		isCreated = true;
 
 		// Create classes and their features
-		validationClassEClass = createEClass(VALIDATION_CLASS);
-		createEAttribute(validationClassEClass, VALIDATION_CLASS__NAME);
-		createEReference(validationClassEClass, VALIDATION_CLASS__CLASSATTRIBUTE);
-		createEReference(validationClassEClass, VALIDATION_CLASS__CLASSRULE);
-		createEAttribute(validationClassEClass, VALIDATION_CLASS__LABEL);
-		createEReference(validationClassEClass, VALIDATION_CLASS__FORMLAYOUT);
-		createEReference(validationClassEClass, VALIDATION_CLASS__ADDITIONAL_SETTINGS);
-		createEReference(validationClassEClass, VALIDATION_CLASS__OVERVIEWSETTINGS);
-		createEAttribute(validationClassEClass, VALIDATION_CLASS__ATTR);
+		entityEClass = createEClass(ENTITY);
+		createEAttribute(entityEClass, ENTITY__NAME);
+		createEReference(entityEClass, ENTITY__ATTRIBUTES);
+		createEReference(entityEClass, ENTITY__CLASSRULE);
+		createEAttribute(entityEClass, ENTITY__LABEL);
+		createEReference(entityEClass, ENTITY__FORMLAYOUT);
+		createEReference(entityEClass, ENTITY__ADDITIONAL_SETTINGS);
+		createEReference(entityEClass, ENTITY__OVERVIEWSETTINGS);
+		createEAttribute(entityEClass, ENTITY__ATTR);
 
 		attributeRuleEClass = createEClass(ATTRIBUTE_RULE);
-		createEReference(attributeRuleEClass, ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE);
+		createEReference(attributeRuleEClass, ATTRIBUTE_RULE__ERROR_MESSAGE);
 
-		classAttributeEClass = createEClass(CLASS_ATTRIBUTE);
-		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__NAME);
-		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTETYPE);
-		createEReference(classAttributeEClass, CLASS_ATTRIBUTE__ATTRIBUTERULE);
-		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__LABEL);
-		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__MASTER);
-		createEAttribute(classAttributeEClass, CLASS_ATTRIBUTE__IS_CLASS_REPRESENTING);
+		attributeEClass = createEClass(ATTRIBUTE);
+		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
+		createEReference(attributeEClass, ATTRIBUTE__ATTRIBUTETYPE);
+		createEReference(attributeEClass, ATTRIBUTE__RULES);
+		createEAttribute(attributeEClass, ATTRIBUTE__LABEL);
+		createEAttribute(attributeEClass, ATTRIBUTE__MASTER);
+		createEAttribute(attributeEClass, ATTRIBUTE__IS_CLASS_REPRESENTING);
 
 		attributeTypeEClass = createEClass(ATTRIBUTE_TYPE);
 		createEReference(attributeTypeEClass, ATTRIBUTE_TYPE__UI_COMPONENT);
-		createEReference(attributeTypeEClass, ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE);
+		createEReference(attributeTypeEClass, ATTRIBUTE_TYPE__DATA_TYPE);
 
 		minEClass = createEClass(MIN);
 
@@ -2096,20 +2035,20 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(datePatternEClass, DATE_PATTERN__VALUE);
 
 		classRuleEClass = createEClass(CLASS_RULE);
-		createEReference(classRuleEClass, CLASS_RULE__CLASS_RULE_ERROR_MESSAGE);
+		createEReference(classRuleEClass, CLASS_RULE__ERROR_MESSAGE);
 
 		notEqualsEClass = createEClass(NOT_EQUALS);
 		createEReference(notEqualsEClass, NOT_EQUALS__ATTRIBUTEARRAY);
 
 		greaterThanEClass = createEClass(GREATER_THAN);
-		createEReference(greaterThanEClass, GREATER_THAN__CLASSATTRIBUTE);
+		createEReference(greaterThanEClass, GREATER_THAN__ATTRIBUTE);
 		createEReference(greaterThanEClass, GREATER_THAN__ATTRIBUTEARRAY);
 
 		equalsEClass = createEClass(EQUALS);
 		createEReference(equalsEClass, EQUALS__ATTRIBUTEARRAY);
 
 		lessThanEClass = createEClass(LESS_THAN);
-		createEReference(lessThanEClass, LESS_THAN__CLASSATTRIBUTE);
+		createEReference(lessThanEClass, LESS_THAN__ATTRIBUTE);
 		createEReference(lessThanEClass, LESS_THAN__ATTRIBUTEARRAY);
 
 		attributeArrayEClass = createEClass(ATTRIBUTE_ARRAY);
@@ -2149,14 +2088,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEReference(formLayoutEClass, FORM_LAYOUT__ATTRIBUTEARRAY);
 		createEReference(formLayoutEClass, FORM_LAYOUT__LAYOUTS);
 		createEAttribute(formLayoutEClass, FORM_LAYOUT__NAME);
-
-		fieldSetEClass = createEClass(FIELD_SET);
-		createEAttribute(fieldSetEClass, FIELD_SET__LEGEND);
-
-		tabEClass = createEClass(TAB);
-		createEAttribute(tabEClass, TAB__LABEL);
-
-		gridEClass = createEClass(GRID);
+		createEAttribute(formLayoutEClass, FORM_LAYOUT__LABEL);
+		createEAttribute(formLayoutEClass, FORM_LAYOUT__TYPE);
 
 		attributeSettingsEClass = createEClass(ATTRIBUTE_SETTINGS);
 		createEAttribute(attributeSettingsEClass, ATTRIBUTE_SETTINGS__PRESENTATION);
@@ -2200,12 +2133,9 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(errorMessageSettingsEClass, ERROR_MESSAGE_SETTINGS__POSITION);
 		createEReference(errorMessageSettingsEClass, ERROR_MESSAGE_SETTINGS__COLOR);
 
-		formSettingsEClass = createEClass(FORM_SETTINGS);
-		createEAttribute(formSettingsEClass, FORM_SETTINGS__AUTO_COMPLETE);
-
 		paginationEClass = createEClass(PAGINATION);
 		createEAttribute(paginationEClass, PAGINATION__POSSIBLE_NUMBER_OF_SHOWN_ROWS);
-		createEAttribute(paginationEClass, PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS);
+		createEAttribute(paginationEClass, PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS);
 
 		tableOverviewEClass = createEClass(TABLE_OVERVIEW);
 		createEAttribute(tableOverviewEClass, TABLE_OVERVIEW__NAME);
@@ -2233,13 +2163,14 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		createEAttribute(colorEClass, COLOR__BLUE);
 
 		// Create enums
-		eDataTypeEEnum = createEEnum(EDATA_TYPE);
-		eOrientationEEnum = createEEnum(EORIENTATION);
-		eRequiredFieldEEnum = createEEnum(EREQUIRED_FIELD);
-		ePositionEEnum = createEEnum(EPOSITION);
-		eGridOrderEEnum = createEEnum(EGRID_ORDER);
-		euiNumberComponentTypeEEnum = createEEnum(EUI_NUMBER_COMPONENT_TYPE);
 		eDateUITypeEEnum = createEEnum(EDATE_UI_TYPE);
+		eRequiredFieldEEnum = createEEnum(EREQUIRED_FIELD);
+		eOrientationEEnum = createEEnum(EORIENTATION);
+		eLayoutEEnum = createEEnum(ELAYOUT);
+		euiNumberComponentTypeEEnum = createEEnum(EUI_NUMBER_COMPONENT_TYPE);
+		eGridOrderEEnum = createEEnum(EGRID_ORDER);
+		ePositionEEnum = createEEnum(EPOSITION);
+		eDataTypeEEnum = createEEnum(EDATA_TYPE);
 	}
 
 	/**
@@ -2302,9 +2233,6 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		textUIComponentEClass.getESuperTypes().add(this.getUIComponent());
 		textInputEClass.getESuperTypes().add(this.getTextUIComponent());
 		textAreaEClass.getESuperTypes().add(this.getTextUIComponent());
-		fieldSetEClass.getESuperTypes().add(this.getFormLayout());
-		tabEClass.getESuperTypes().add(this.getFormLayout());
-		gridEClass.getESuperTypes().add(this.getFormLayout());
 		attributeSettingsEClass.getESuperTypes().add(this.getAdditionalSettings());
 		labelSettingsEClass.getESuperTypes().add(this.getAdditionalSettings());
 		telInputEClass.getESuperTypes().add(this.getTextUIComponent());
@@ -2315,37 +2243,36 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		nonPrimitiveDataTypeEClass.getESuperTypes().add(this.getAttributeDataType());
 		refEntityEClass.getESuperTypes().add(this.getUIComponent());
 		errorMessageSettingsEClass.getESuperTypes().add(this.getAdditionalSettings());
-		formSettingsEClass.getESuperTypes().add(this.getAdditionalSettings());
 		noteSettingsEClass.getESuperTypes().add(this.getAdditionalSettings());
 		selectingUIComponentEClass.getESuperTypes().add(this.getUIComponent());
 		loadValuesEClass.getESuperTypes().add(this.getSelectingUIComponent());
 		autocompleteComponentEClass.getESuperTypes().add(this.getUIComponent());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(validationClassEClass, ValidationClass.class, "ValidationClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getValidationClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_Classrule(), this.getClassRule(), null, "classrule", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getValidationClass_Label(), ecorePackage.getEString(), "label", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_Formlayout(), this.getFormLayout(), null, "formlayout", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_AdditionalSettings(), this.getAdditionalSettings(), null, "additionalSettings", null, 0, -1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getValidationClass_Overviewsettings(), this.getOverviewSettings(), null, "overviewsettings", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getValidationClass_Attr(), ecorePackage.getEString(), "attr", null, 0, 1, ValidationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Classrule(), this.getClassRule(), null, "classrule", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_Label(), ecorePackage.getEString(), "label", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Formlayout(), this.getFormLayout(), null, "formlayout", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_AdditionalSettings(), this.getAdditionalSettings(), null, "additionalSettings", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Overviewsettings(), this.getOverviewSettings(), null, "overviewsettings", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_Attr(), ecorePackage.getEString(), "attr", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeRuleEClass, AttributeRule.class, "AttributeRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttributeRule_AttributeRuleErrorMessage(), this.getErrorMessage(), null, "attributeRuleErrorMessage", null, 0, 1, AttributeRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeRule_ErrorMessage(), this.getErrorMessage(), null, "errorMessage", null, 0, 1, AttributeRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(classAttributeEClass, ClassAttribute.class, "ClassAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClassAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassAttribute_Attributetype(), this.getAttributeType(), null, "attributetype", null, 1, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassAttribute_Attributerule(), this.getAttributeRule(), null, "attributerule", null, 0, -1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassAttribute_Label(), ecorePackage.getEString(), "label", null, 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassAttribute_Master(), ecorePackage.getEBoolean(), "master", "false", 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassAttribute_IsClassRepresenting(), ecorePackage.getEBoolean(), "isClassRepresenting", "false", 0, 1, ClassAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Attributetype(), this.getAttributeType(), null, "attributetype", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Rules(), this.getAttributeRule(), null, "rules", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_Label(), ecorePackage.getEString(), "label", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_Master(), ecorePackage.getEBoolean(), "master", "false", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_IsClassRepresenting(), ecorePackage.getEBoolean(), "isClassRepresenting", "false", 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeTypeEClass, AttributeType.class, "AttributeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttributeType_UiComponent(), this.getUIComponent(), null, "uiComponent", null, 0, 1, AttributeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttributeType_AttributeDataType(), this.getAttributeDataType(), null, "attributeDataType", null, 1, 1, AttributeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeType_DataType(), this.getAttributeDataType(), null, "dataType", null, 1, 1, AttributeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(minEClass, Min.class, "Min", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2391,24 +2318,24 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getDatePattern_Value(), ecorePackage.getEString(), "value", "dd/MM/yyyy", 0, 1, DatePattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classRuleEClass, ClassRule.class, "ClassRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassRule_ClassRuleErrorMessage(), this.getErrorMessage(), null, "classRuleErrorMessage", null, 0, 1, ClassRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassRule_ErrorMessage(), this.getErrorMessage(), null, "errorMessage", null, 0, 1, ClassRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(notEqualsEClass, NotEquals.class, "NotEquals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNotEquals_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, 1, NotEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(greaterThanEClass, GreaterThan.class, "GreaterThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGreaterThan_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, 1, GreaterThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGreaterThan_Attribute(), this.getAttribute(), null, "attribute", null, 0, 1, GreaterThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGreaterThan_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, -1, GreaterThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(equalsEClass, Equals.class, "Equals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEquals_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, 1, Equals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lessThanEClass, LessThan.class, "LessThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLessThan_Classattribute(), this.getClassAttribute(), null, "classattribute", null, 0, 1, LessThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLessThan_Attribute(), this.getAttribute(), null, "attribute", null, 0, 1, LessThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLessThan_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, -1, LessThan.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeArrayEClass, AttributeArray.class, "AttributeArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttributeArray_Attributes(), this.getClassAttribute(), null, "attributes", null, 0, -1, AttributeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeArray_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, AttributeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(uiComponentEClass, UIComponent.class, "UIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUIComponent_Tooltip(), ecorePackage.getEString(), "tooltip", null, 0, 1, UIComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2421,7 +2348,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEClass(enumerationUIComponentEClass, EnumerationUIComponent.class, "EnumerationUIComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRadioButton_Orientation(), this.getEOrientation(), "orientation", null, 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRadioButton_Orientation(), this.getEOrientation(), "orientation", "Vertical", 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dropDownListEClass, DropDownList.class, "DropDownList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDropDownList_IsMultiSelect(), ecorePackage.getEBoolean(), "isMultiSelect", "false", 0, 1, DropDownList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2444,17 +2371,11 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEReference(getFormLayout_Attributearray(), this.getAttributeArray(), null, "attributearray", null, 0, -1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFormLayout_Layouts(), this.getFormLayout(), null, "layouts", null, 0, -1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormLayout_Name(), ecorePackage.getEString(), "name", null, 0, 1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fieldSetEClass, FieldSet.class, "FieldSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFieldSet_Legend(), ecorePackage.getEString(), "legend", null, 0, 1, FieldSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tabEClass, Tab.class, "Tab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTab_Label(), ecorePackage.getEString(), "label", null, 0, 1, Tab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFormLayout_Label(), ecorePackage.getEString(), "label", null, 0, 1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFormLayout_Type(), this.getELayout(), "type", "Grid", 0, 1, FormLayout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeSettingsEClass, AttributeSettings.class, "AttributeSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttributeSettings_Presentation(), this.getERequiredField(), "presentation", null, 0, 1, AttributeSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttributeSettings_Presentation(), this.getERequiredField(), "presentation", "Asterix", 0, 1, AttributeSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labelSettingsEClass, LabelSettings.class, "LabelSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLabelSettings_Position(), this.getEPosition(), "position", "Above", 0, 1, LabelSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2478,16 +2399,16 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getAttributeDataType_IsCollection(), ecorePackage.getEBoolean(), "isCollection", "false", 0, 1, AttributeDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitiveDataTypeEClass, PrimitiveDataType.class, "PrimitiveDataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrimitiveDataType_Type(), this.getEDataType(), "type", null, 0, 1, PrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrimitiveDataType_Type(), this.getEDataType(), "type", "String", 0, 1, PrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nonPrimitiveDataTypeEClass, NonPrimitiveDataType.class, "NonPrimitiveDataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNonPrimitiveDataType_Type(), this.getValidationClass(), null, "type", null, 1, 1, NonPrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNonPrimitiveDataType_Type(), this.getEntity(), null, "type", null, 1, 1, NonPrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(refEntityEClass, RefEntity.class, "RefEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRefEntity_IsSingeValue(), ecorePackage.getEBoolean(), "isSingeValue", "true", 0, 1, RefEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(businessModelEClass, BusinessModel.class, "BusinessModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusinessModel_Validationclasses(), this.getValidationClass(), null, "validationclasses", null, 0, -1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusinessModel_Validationclasses(), this.getEntity(), null, "validationclasses", null, 0, -1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessModel_Label(), ecorePackage.getEString(), "label", null, 0, 1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessModel_Description(), ecorePackage.getEString(), "description", null, 0, 1, BusinessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2495,12 +2416,9 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getErrorMessageSettings_Position(), this.getEPosition(), "position", "Below", 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getErrorMessageSettings_Color(), this.getColor(), null, "color", null, 0, 1, ErrorMessageSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(formSettingsEClass, FormSettings.class, "FormSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFormSettings_AutoComplete(), ecorePackage.getEBoolean(), "autoComplete", null, 0, 1, FormSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(paginationEClass, Pagination.class, "Pagination", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPagination_PossibleNumberOfShownRows(), ecorePackage.getEInt(), "possibleNumberOfShownRows", null, 0, -1, Pagination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPagination_DefaultNumOfShownRows(), ecorePackage.getEInt(), "defaultNumOfShownRows", null, 0, 1, Pagination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPagination_DefaultNumberOfShownRows(), ecorePackage.getEInt(), "defaultNumberOfShownRows", null, 0, 1, Pagination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableOverviewEClass, TableOverview.class, "TableOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTableOverview_Name(), ecorePackage.getEString(), "name", null, 0, 1, TableOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2528,19 +2446,31 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		initEAttribute(getColor_Blue(), ecorePackage.getEInt(), "blue", "0", 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(eDataTypeEEnum, EDataType.class, "EDataType");
-		addEEnumLiteral(eDataTypeEEnum, EDataType.STRING);
-		addEEnumLiteral(eDataTypeEEnum, EDataType.NUMBER);
-		addEEnumLiteral(eDataTypeEEnum, EDataType.DATE);
-		addEEnumLiteral(eDataTypeEEnum, EDataType.BLOB);
+		initEEnum(eDateUITypeEEnum, EDateUIType.class, "EDateUIType");
+		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.ONLY_DATE);
+		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.ONLY_TIME);
+		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.DATE_TIME);
+
+		initEEnum(eRequiredFieldEEnum, ERequiredField.class, "ERequiredField");
+		addEEnumLiteral(eRequiredFieldEEnum, ERequiredField.ASTERIX);
+		addEEnumLiteral(eRequiredFieldEEnum, ERequiredField.HIGHLIGHTING);
 
 		initEEnum(eOrientationEEnum, EOrientation.class, "EOrientation");
 		addEEnumLiteral(eOrientationEEnum, EOrientation.VERTICAL);
 		addEEnumLiteral(eOrientationEEnum, EOrientation.HORIZONTAL);
 
-		initEEnum(eRequiredFieldEEnum, ERequiredField.class, "ERequiredField");
-		addEEnumLiteral(eRequiredFieldEEnum, ERequiredField.ASTERIX);
-		addEEnumLiteral(eRequiredFieldEEnum, ERequiredField.HIGHLIGHTING);
+		initEEnum(eLayoutEEnum, ELayout.class, "ELayout");
+		addEEnumLiteral(eLayoutEEnum, ELayout.GRID);
+		addEEnumLiteral(eLayoutEEnum, ELayout.FIELD_SET);
+		addEEnumLiteral(eLayoutEEnum, ELayout.TAB);
+
+		initEEnum(euiNumberComponentTypeEEnum, EUINumberComponentType.class, "EUINumberComponentType");
+		addEEnumLiteral(euiNumberComponentTypeEEnum, EUINumberComponentType.NUMBER_SCROLLER);
+		addEEnumLiteral(euiNumberComponentTypeEEnum, EUINumberComponentType.SIMPLE_INPUT);
+
+		initEEnum(eGridOrderEEnum, EGridOrder.class, "EGridOrder");
+		addEEnumLiteral(eGridOrderEEnum, EGridOrder.FIRST_ROW);
+		addEEnumLiteral(eGridOrderEEnum, EGridOrder.FIRST_COLUMN);
 
 		initEEnum(ePositionEEnum, EPosition.class, "EPosition");
 		addEEnumLiteral(ePositionEEnum, EPosition.ABOVE);
@@ -2548,18 +2478,11 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		addEEnumLiteral(ePositionEEnum, EPosition.RIGHT);
 		addEEnumLiteral(ePositionEEnum, EPosition.BELOW);
 
-		initEEnum(eGridOrderEEnum, EGridOrder.class, "EGridOrder");
-		addEEnumLiteral(eGridOrderEEnum, EGridOrder.FIRST_ROW);
-		addEEnumLiteral(eGridOrderEEnum, EGridOrder.FIRST_COLUMN);
-
-		initEEnum(euiNumberComponentTypeEEnum, EUINumberComponentType.class, "EUINumberComponentType");
-		addEEnumLiteral(euiNumberComponentTypeEEnum, EUINumberComponentType.NUMBER_SCROLLER);
-		addEEnumLiteral(euiNumberComponentTypeEEnum, EUINumberComponentType.SIMPLE_INPUT);
-
-		initEEnum(eDateUITypeEEnum, EDateUIType.class, "EDateUIType");
-		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.ONLY_DATE);
-		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.ONLY_TIME);
-		addEEnumLiteral(eDateUITypeEEnum, EDateUIType.DATE_TIME);
+		initEEnum(eDataTypeEEnum, EDataType.class, "EDataType");
+		addEEnumLiteral(eDataTypeEEnum, EDataType.STRING);
+		addEEnumLiteral(eDataTypeEEnum, EDataType.NUMBER);
+		addEEnumLiteral(eDataTypeEEnum, EDataType.DATE);
+		addEEnumLiteral(eDataTypeEEnum, EDataType.BLOB);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -2609,13 +2532,13 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });	
 		addAnnotation
-		  (validationClassEClass, 
+		  (entityEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "differentClassAttributes nameFormat allLayoutsSameType"
 		   });	
 		addAnnotation
-		  (classAttributeEClass, 
+		  (attributeEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting nonPrimitiveAttributeCannotBeMaster"
@@ -2703,33 +2626,33 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
-		  (validationClassEClass, 
+		  (entityEClass, 
 		   source, 
 		   new String[] {
-			 "differentClassAttributes", "Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status",
+			 "differentClassAttributes", "Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t attributes-> forAll(a1: Attribute, a2: Attribute | \n\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n\t\t )\n}.status",
 			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
 			 "allLayoutsSameType", "Tuple {\n\tmessage : String = \'At one level all attributes must be same type\',\n\tstatus : Boolean = \n\t\tformlayout -> forAll(fL1: FormLayout, fL2: FormLayout | \n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )\n}.status"
 		   });	
 		addAnnotation
-		  (classAttributeEClass, 
+		  (attributeEClass, 
 		   source, 
 		   new String[] {
-			 "appropriateAttributeRules", "Tuple {\n\tmessage : String = \'Each data type has appropriate rulles that can be applay to it.\',\n\tstatus : Boolean = \n\t\t if attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t \t  then if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::Number\n\t\t \t  \t    then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))\n\t\t \t        else if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::_\'String\'  \n\t\t \t             then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or\n\t\t \t\t\t\t\ta1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))\n\t\t \t\t\t\t  else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)\n\t\t \t\t\t\t  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))\n\t\t                 endif\n\t\t           endif\n\t\telse attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))\n\t\tendif\n}.status",
-			 "compareMinMaxLength", "Tuple {\n\tmessage : String = \'Maxlength value should be greater than mainlength\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
-			 "compareMinMaxNumber", "Tuple {\n\tmessage : String = \'Check if max value is greater then min value\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
-			 "compareMinMaxDate", "Tuple {\n\tmessage : String = \'Check id max date is greater then min date\',\n\tstatus : Boolean = \n\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
+			 "appropriateAttributeRules", "Tuple {\n\tmessage : String = \'Each data type has appropriate rulles that can be applay to it.\',\n\tstatus : Boolean = \n\t\t if attributetype.oclIsKindOf(PrimitiveDataType) \n\t\t \t  then if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::Number\n\t\t \t  \t    then rules -> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))\n\t\t \t        else if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::_\'String\'  \n\t\t \t             then rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or\n\t\t \t\t\t\t\ta1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))\n\t\t \t\t\t\t  else rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)\n\t\t \t\t\t\t  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))\n\t\t                 endif\n\t\t           endif\n\t\telse rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))\n\t\tendif\n}.status",
+			 "compareMinMaxLength", "Tuple {\n\tmessage : String = \'Maxlength value should be greater than mainlength\',\n\tstatus : Boolean = \n\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
+			 "compareMinMaxNumber", "Tuple {\n\tmessage : String = \'Check if max value is greater then min value\',\n\tstatus : Boolean = \n\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
+			 "compareMinMaxDate", "Tuple {\n\tmessage : String = \'Check id max date is greater then min date\',\n\tstatus : Boolean = \n\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n\t\t\tif a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)\n\t\t\tthen\n\t\t\t\ta1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value\n\t\t\telse\n\t\t\t\ttrue\n\t\t\tendif\n\t\t)\n}.status",
 			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
-			 "attributeRuleRequiredCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Required))->size() <=1",
-			 "attributeRuleMinLengthCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(MinLength))->size() <=1",
-			 "attributeRuleMaxLengthCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(MaxLength))->size() <=1",
-			 "attributeRuleLengthCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Length))->size() <=1",
-			 "attributeRuleMinCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Min))->size() <=1",
-			 "attributeRuleMaxCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Max))->size() <=1",
-			 "attributeRuleAcceptableValuesCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1",
-			 "attributeRulePatternCanAppearJustOnce", "\n\t\tattributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1",
-			 "collectionCannotBeMaster", "\n\t\tif attributetype.attributeDataType.isCollection then master = false else true endif",
-			 "collectionCannotBeRepresenting", "\n\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif",
-			 "nonPrimitiveAttributeCannotBeMaster", "Tuple {\n\tmessage : String = \'Non primitive data type cannot be master attribute.\',\n\tstatus : Boolean = \n\t\tif attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n}.status"
+			 "attributeRuleRequiredCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(Required))->size() <=1",
+			 "attributeRuleMinLengthCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(MinLength))->size() <=1",
+			 "attributeRuleMaxLengthCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(MaxLength))->size() <=1",
+			 "attributeRuleLengthCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(Length))->size() <=1",
+			 "attributeRuleMinCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(Min))->size() <=1",
+			 "attributeRuleMaxCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(Max))->size() <=1",
+			 "attributeRuleAcceptableValuesCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1",
+			 "attributeRulePatternCanAppearJustOnce", "\n\t\trules -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1",
+			 "collectionCannotBeMaster", "\n\t\tif attributetype.dataType.isCollection then master = false else true endif",
+			 "collectionCannotBeRepresenting", "\n\t\tif attributetype.dataType.isCollection then isClassRepresenting = false else true endif",
+			 "nonPrimitiveAttributeCannotBeMaster", "Tuple {\n\tmessage : String = \'Non primitive data type cannot be master attribute.\',\n\tstatus : Boolean = \n\t\tif attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n}.status"
 		   });	
 		addAnnotation
 		  (minLengthEClass, 
@@ -2759,37 +2682,37 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (notEqualsEClass, 
 		   source, 
 		   new String[] {
-			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In notequal rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t then\n\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif\n\t\t  )\n}.status",
-			 "differentDataInArray", "Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n\t\t \tif a1<>a2 then\n\t\t \ta1.name <> a2.name\n\t\t \telse true\n\t\t \tendif\n\t\t )\n}.status"
+			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In notequal rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t then\n\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif\n\t\t  )\n}.status",
+			 "differentDataInArray", "Tuple {\n\tmessage : String = \'All attributes should be different\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n\t\t \tif a1<>a2 then\n\t\t \ta1.name <> a2.name\n\t\t \telse true\n\t\t \tendif\n\t\t )\n}.status"
 		   });	
 		addAnnotation
 		  (greaterThanEClass, 
 		   source, 
 		   new String[] {
-			 "differentAttributes", "Tuple {\n\tmessage : String = \'First attribute and attributes from array should be different\',\n\tstatus : Boolean = \n\t\t\tattributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name <> a1.name)\n}.status",
-			 "differentAttributesInArray", "Tuple {\n\tmessage : String = \'Attributes in array must be different\',\n\tstatus : Boolean = \n\t\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | if a1<>a2 then\n\t\t\t \ta1.name <> a2.name\n\t\t\t \telse true\n\t\t\t \tendif\n\t\t\t )\n}.status",
-			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In greater then rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)\n\t\t\t then\n\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif)\n}.status"
+			 "differentAttributes", "Tuple {\n\tmessage : String = \'First attribute and attributes from array should be different\',\n\tstatus : Boolean = \n\t\t\tattributearray.attributes -> forAll(a1: Attribute | attribute.name <> a1.name)\n}.status",
+			 "differentAttributesInArray", "Tuple {\n\tmessage : String = \'Attributes in array must be different\',\n\tstatus : Boolean = \n\t\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute | if a1<>a2 then\n\t\t\t \ta1.name <> a2.name\n\t\t\t \telse true\n\t\t\t \tendif\n\t\t\t )\n}.status",
+			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In greater then rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)\n\t\t\t then\n\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif)\n}.status"
 		   });	
 		addAnnotation
 		  (equalsEClass, 
 		   source, 
 		   new String[] {
 			 "collectionSize", "\n\t\t\tattributearray.attributes -> size() >= 2",
-			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In equal rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t then\n\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t  if (a1.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType))\n\t\t\t  or (a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType))\n\t\t\t  then false\n\t\t\t  else\n\t\t\t  a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t  endif\n\t\t\t endif\n\t\t else true\n\t\t endif\n\t\t  )\n}.status"
+			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In equal rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t then\n\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t  if (a1.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType))\n\t\t\t  or (a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType))\n\t\t\t  then false\n\t\t\t  else\n\t\t\t  a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t  endif\n\t\t\t endif\n\t\t else true\n\t\t endif\n\t\t  )\n}.status"
 		   });	
 		addAnnotation
 		  (lessThanEClass, 
 		   source, 
 		   new String[] {
-			 "acceptbleDataType", "Tuple {\n\tmessage : String = \'It is possible to compare just attibutes type of date or type of number.\',\n\tstatus : Boolean = \n\t\t  classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Number \n\t\t  or classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Date\n}.status",
-			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In less then rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)\n\t\t\t then\n\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif)\n}.status",
-			 "differentAttributes", "\n\t\t\tattributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name <> a1.name)"
+			 "acceptbleDataType", "Tuple {\n\tmessage : String = \'It is possible to compare just attibutes type of date or type of number.\',\n\tstatus : Boolean = \n\t\t  attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Number \n\t\t  or attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Date\n}.status",
+			 "areEqualTypes", "Tuple {\n\tmessage : String = \'In less then rule all data types should be same.\',\n\tstatus : Boolean = \n\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n\t\t if a1<>a2  then \n\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n\t\t\t and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)\n\t\t\t then\n\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type\n\t\t\t else \n\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n\t\t\t endif\n\t\t else true\n\t\t endif)\n}.status",
+			 "differentAttributes", "\n\t\t\tattributearray.attributes -> forAll(a1: Attribute | attribute.name <> a1.name)"
 		   });	
 		addAnnotation
 		  (attributeArrayEClass, 
 		   source, 
 		   new String[] {
-			 "containDifferentAttributes", "\n\t\tattributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t\tif a1 <> a2 \n\t\t\tthen a1.name <> a2.name\n\t\t\telse true \n\t\t\tendif\n\t\t)"
+			 "containDifferentAttributes", "\n\t\tattributes -> forAll(a1: Attribute, a2: Attribute | \n\t\t\tif a1 <> a2 \n\t\t\tthen a1.name <> a2.name\n\t\t\telse true \n\t\t\tendif\n\t\t)"
 		   });	
 		addAnnotation
 		  (formLayoutEClass, 
@@ -2797,8 +2720,8 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		   new String[] {
 			 "checkFormLayout", "Tuple {\n\tmessage : String = \'Attribute could appear only in one layout\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  \n\t\t\tif fL1 <> fL2 and fL1.attributearray <> null and fL2.attributearray <> null\n\t\t\tthen\n\t\t\tfL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status",
 			 "uniqueFormLayoutName", "Tuple {\n\tmessage : String = \'Layout name should be unique\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 <> fL2 then\n\t\t\tfL1.name <> fL2.name\n\t\t\telse true\n\t\t\tendif\n\t\t)\n}.status",
-			 "numOfAttributeArraysFieldSet", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
-			 "numOfAttributeArrayTab", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
+			 "numOfAttributeArraysFieldSet", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.type = ELayout.FieldSet then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
+			 "numOfAttributeArrayTab", "Tuple {\n\tmessage : String = \'Number of attribute arrays is not appropriate.\',\n\tstatus : Boolean = \n\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n\t\t\tif fL1.type = ELayout.Tab then fL1.attributearray->size() <= 1 else true\n\t\t\tendif\n\t\t)\n}.status",
 			 "nameFormat", "name.matches(\'[a-z][a-zA-Z0-9.]*\')",
 			 "allLayoutsOnOneLevelMustBeSameType", "\n\t\tlayouts -> forAll(fL1: FormLayout, fL2: FormLayout |\n\t\t\tif fL1.oclIsTypeOf(fL2.oclType()) then true else false endif\n\t\t)"
 		   });	
@@ -2806,7 +2729,7 @@ public class FormValidationPackageImpl extends EPackageImpl implements FormValid
 		  (businessModelEClass, 
 		   source, 
 		   new String[] {
-			 "uniqueClassName", "Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclasses -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status"
+			 "uniqueClassName", "Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclasses -> forAll(vC1: Entity, vC2: Entity | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status"
 		   });	
 		addAnnotation
 		  (colorEClass, 

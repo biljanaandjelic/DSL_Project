@@ -3,9 +3,8 @@
 package formValidation.impl;
 
 import formValidation.BusinessModel;
+import formValidation.Entity;
 import formValidation.FormValidationPackage;
-import formValidation.ValidationClass;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -46,7 +45,7 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ValidationClass> validationclasses;
+	protected EList<Entity> validationclasses;
 	/**
 	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -107,9 +106,9 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ValidationClass> getValidationclasses() {
+	public EList<Entity> getValidationclasses() {
 		if (validationclasses == null) {
-			validationclasses = new EObjectContainmentEList<ValidationClass>(ValidationClass.class, this, FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES);
+			validationclasses = new EObjectContainmentEList<Entity>(Entity.class, this, FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES);
 		}
 		return validationclasses;
 	}
@@ -199,7 +198,7 @@ public class BusinessModelImpl extends MinimalEObjectImpl.Container implements B
 		switch (featureID) {
 			case FormValidationPackage.BUSINESS_MODEL__VALIDATIONCLASSES:
 				getValidationclasses().clear();
-				getValidationclasses().addAll((Collection<? extends ValidationClass>)newValue);
+				getValidationclasses().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case FormValidationPackage.BUSINESS_MODEL__LABEL:
 				setLabel((String)newValue);

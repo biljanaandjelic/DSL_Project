@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link formValidation.impl.PaginationImpl#getPossibleNumberOfShownRows <em>Possible Number Of Shown Rows</em>}</li>
- *   <li>{@link formValidation.impl.PaginationImpl#getDefaultNumOfShownRows <em>Default Num Of Shown Rows</em>}</li>
+ *   <li>{@link formValidation.impl.PaginationImpl#getDefaultNumberOfShownRows <em>Default Number Of Shown Rows</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,24 +44,24 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 	protected EList<Integer> possibleNumberOfShownRows;
 
 	/**
-	 * The default value of the '{@link #getDefaultNumOfShownRows() <em>Default Num Of Shown Rows</em>}' attribute.
+	 * The default value of the '{@link #getDefaultNumberOfShownRows() <em>Default Number Of Shown Rows</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultNumOfShownRows()
+	 * @see #getDefaultNumberOfShownRows()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int DEFAULT_NUM_OF_SHOWN_ROWS_EDEFAULT = 0;
+	protected static final int DEFAULT_NUMBER_OF_SHOWN_ROWS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getDefaultNumOfShownRows() <em>Default Num Of Shown Rows</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultNumberOfShownRows() <em>Default Number Of Shown Rows</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultNumOfShownRows()
+	 * @see #getDefaultNumberOfShownRows()
 	 * @generated
 	 * @ordered
 	 */
-	protected int defaultNumOfShownRows = DEFAULT_NUM_OF_SHOWN_ROWS_EDEFAULT;
+	protected int defaultNumberOfShownRows = DEFAULT_NUMBER_OF_SHOWN_ROWS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,8 +99,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDefaultNumOfShownRows() {
-		return defaultNumOfShownRows;
+	public int getDefaultNumberOfShownRows() {
+		return defaultNumberOfShownRows;
 	}
 
 	/**
@@ -108,11 +108,11 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultNumOfShownRows(int newDefaultNumOfShownRows) {
-		int oldDefaultNumOfShownRows = defaultNumOfShownRows;
-		defaultNumOfShownRows = newDefaultNumOfShownRows;
+	public void setDefaultNumberOfShownRows(int newDefaultNumberOfShownRows) {
+		int oldDefaultNumberOfShownRows = defaultNumberOfShownRows;
+		defaultNumberOfShownRows = newDefaultNumberOfShownRows;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS, oldDefaultNumOfShownRows, defaultNumOfShownRows));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS, oldDefaultNumberOfShownRows, defaultNumberOfShownRows));
 	}
 
 	/**
@@ -125,8 +125,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 		switch (featureID) {
 			case FormValidationPackage.PAGINATION__POSSIBLE_NUMBER_OF_SHOWN_ROWS:
 				return getPossibleNumberOfShownRows();
-			case FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS:
-				return getDefaultNumOfShownRows();
+			case FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS:
+				return getDefaultNumberOfShownRows();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,8 +144,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 				getPossibleNumberOfShownRows().clear();
 				getPossibleNumberOfShownRows().addAll((Collection<? extends Integer>)newValue);
 				return;
-			case FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS:
-				setDefaultNumOfShownRows((Integer)newValue);
+			case FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS:
+				setDefaultNumberOfShownRows((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,8 +162,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 			case FormValidationPackage.PAGINATION__POSSIBLE_NUMBER_OF_SHOWN_ROWS:
 				getPossibleNumberOfShownRows().clear();
 				return;
-			case FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS:
-				setDefaultNumOfShownRows(DEFAULT_NUM_OF_SHOWN_ROWS_EDEFAULT);
+			case FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS:
+				setDefaultNumberOfShownRows(DEFAULT_NUMBER_OF_SHOWN_ROWS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -179,8 +179,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 		switch (featureID) {
 			case FormValidationPackage.PAGINATION__POSSIBLE_NUMBER_OF_SHOWN_ROWS:
 				return possibleNumberOfShownRows != null && !possibleNumberOfShownRows.isEmpty();
-			case FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS:
-				return defaultNumOfShownRows != DEFAULT_NUM_OF_SHOWN_ROWS_EDEFAULT;
+			case FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS:
+				return defaultNumberOfShownRows != DEFAULT_NUMBER_OF_SHOWN_ROWS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -197,8 +197,8 @@ public class PaginationImpl extends MinimalEObjectImpl.Container implements Pagi
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (possibleNumberOfShownRows: ");
 		result.append(possibleNumberOfShownRows);
-		result.append(", defaultNumOfShownRows: ");
-		result.append(defaultNumOfShownRows);
+		result.append(", defaultNumberOfShownRows: ");
+		result.append(defaultNumberOfShownRows);
 		result.append(')');
 		return result.toString();
 	}

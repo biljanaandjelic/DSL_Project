@@ -77,7 +77,7 @@ public class AttributeTypeItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_TYPE__UI_COMPONENT);
-			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE);
+			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_TYPE__DATA_TYPE);
 		}
 		return childrenFeatures;
 	}
@@ -131,7 +131,7 @@ public class AttributeTypeItemProvider
 
 		switch (notification.getFeatureID(AttributeType.class)) {
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -221,12 +221,12 @@ public class AttributeTypeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE,
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__DATA_TYPE,
 				 FormValidationFactory.eINSTANCE.createPrimitiveDataType()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE,
+				(FormValidationPackage.Literals.ATTRIBUTE_TYPE__DATA_TYPE,
 				 FormValidationFactory.eINSTANCE.createNonPrimitiveDataType()));
 	}
 

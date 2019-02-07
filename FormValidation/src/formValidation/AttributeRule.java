@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link formValidation.AttributeRule#getAttributeRuleErrorMessage <em>Attribute Rule Error Message</em>}</li>
+ *   <li>{@link formValidation.AttributeRule#getErrorMessage <em>Error Message</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getAttributeRule()
@@ -23,28 +23,28 @@ import org.eclipse.emf.ecore.EObject;
 public interface AttributeRule extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>Attribute Rule Error Message</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Error Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attribute Rule Error Message</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Error Message</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attribute Rule Error Message</em>' containment reference.
-	 * @see #setAttributeRuleErrorMessage(ErrorMessage)
-	 * @see formValidation.FormValidationPackage#getAttributeRule_AttributeRuleErrorMessage()
+	 * @return the value of the '<em>Error Message</em>' containment reference.
+	 * @see #setErrorMessage(ErrorMessage)
+	 * @see formValidation.FormValidationPackage#getAttributeRule_ErrorMessage()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ErrorMessage getAttributeRuleErrorMessage();
+	ErrorMessage getErrorMessage();
 
 	/**
-	 * Sets the value of the '{@link formValidation.AttributeRule#getAttributeRuleErrorMessage <em>Attribute Rule Error Message</em>}' containment reference.
+	 * Sets the value of the '{@link formValidation.AttributeRule#getErrorMessage <em>Error Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attribute Rule Error Message</em>' containment reference.
-	 * @see #getAttributeRuleErrorMessage()
+	 * @param value the new value of the '<em>Error Message</em>' containment reference.
+	 * @see #getErrorMessage()
 	 * @generated
 	 */
-	void setAttributeRuleErrorMessage(ErrorMessage value);
+	void setErrorMessage(ErrorMessage value);
 } // AttributeRule

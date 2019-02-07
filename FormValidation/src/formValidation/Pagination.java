@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link formValidation.Pagination#getPossibleNumberOfShownRows <em>Possible Number Of Shown Rows</em>}</li>
- *   <li>{@link formValidation.Pagination#getDefaultNumOfShownRows <em>Default Num Of Shown Rows</em>}</li>
+ *   <li>{@link formValidation.Pagination#getDefaultNumberOfShownRows <em>Default Number Of Shown Rows</em>}</li>
  * </ul>
  *
  * @see formValidation.FormValidationPackage#getPagination()
@@ -41,29 +41,29 @@ public interface Pagination extends EObject {
 	EList<Integer> getPossibleNumberOfShownRows();
 
 	/**
-	 * Returns the value of the '<em><b>Default Num Of Shown Rows</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Number Of Shown Rows</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Default Num Of Shown Rows</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Default Number Of Shown Rows</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Num Of Shown Rows</em>' attribute.
-	 * @see #setDefaultNumOfShownRows(int)
-	 * @see formValidation.FormValidationPackage#getPagination_DefaultNumOfShownRows()
+	 * @return the value of the '<em>Default Number Of Shown Rows</em>' attribute.
+	 * @see #setDefaultNumberOfShownRows(int)
+	 * @see formValidation.FormValidationPackage#getPagination_DefaultNumberOfShownRows()
 	 * @model
 	 * @generated
 	 */
-	int getDefaultNumOfShownRows();
+	int getDefaultNumberOfShownRows();
 
 	/**
-	 * Sets the value of the '{@link formValidation.Pagination#getDefaultNumOfShownRows <em>Default Num Of Shown Rows</em>}' attribute.
+	 * Sets the value of the '{@link formValidation.Pagination#getDefaultNumberOfShownRows <em>Default Number Of Shown Rows</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Num Of Shown Rows</em>' attribute.
-	 * @see #getDefaultNumOfShownRows()
+	 * @param value the new value of the '<em>Default Number Of Shown Rows</em>' attribute.
+	 * @see #getDefaultNumberOfShownRows()
 	 * @generated
 	 */
-	void setDefaultNumOfShownRows(int value);
+	void setDefaultNumberOfShownRows(int value);
 
 } // Pagination

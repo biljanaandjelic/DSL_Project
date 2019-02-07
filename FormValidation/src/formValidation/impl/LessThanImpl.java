@@ -2,8 +2,8 @@
  */
 package formValidation.impl;
 
+import formValidation.Attribute;
 import formValidation.AttributeArray;
-import formValidation.ClassAttribute;
 import formValidation.FormValidationPackage;
 import formValidation.LessThan;
 
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.LessThanImpl#getClassattribute <em>Classattribute</em>}</li>
+ *   <li>{@link formValidation.impl.LessThanImpl#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link formValidation.impl.LessThanImpl#getAttributearray <em>Attributearray</em>}</li>
  * </ul>
  *
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	/**
-	 * The cached value of the '{@link #getClassattribute() <em>Classattribute</em>}' reference.
+	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClassattribute()
+	 * @see #getAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected ClassAttribute classattribute;
+	protected Attribute attribute;
 
 	/**
 	 * The cached value of the '{@link #getAttributearray() <em>Attributearray</em>}' containment reference list.
@@ -81,16 +81,16 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ClassAttribute getClassattribute() {
-		if (classattribute != null && classattribute.eIsProxy()) {
-			InternalEObject oldClassattribute = (InternalEObject)classattribute;
-			classattribute = (ClassAttribute)eResolveProxy(oldClassattribute);
-			if (classattribute != oldClassattribute) {
+	public Attribute getAttribute() {
+		if (attribute != null && attribute.eIsProxy()) {
+			InternalEObject oldAttribute = (InternalEObject)attribute;
+			attribute = (Attribute)eResolveProxy(oldAttribute);
+			if (attribute != oldAttribute) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FormValidationPackage.LESS_THAN__CLASSATTRIBUTE, oldClassattribute, classattribute));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FormValidationPackage.LESS_THAN__ATTRIBUTE, oldAttribute, attribute));
 			}
 		}
-		return classattribute;
+		return attribute;
 	}
 
 	/**
@@ -98,8 +98,8 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ClassAttribute basicGetClassattribute() {
-		return classattribute;
+	public Attribute basicGetAttribute() {
+		return attribute;
 	}
 
 	/**
@@ -107,11 +107,11 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassattribute(ClassAttribute newClassattribute) {
-		ClassAttribute oldClassattribute = classattribute;
-		classattribute = newClassattribute;
+	public void setAttribute(Attribute newAttribute) {
+		Attribute oldAttribute = attribute;
+		attribute = newAttribute;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.LESS_THAN__CLASSATTRIBUTE, oldClassattribute, classattribute));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.LESS_THAN__ATTRIBUTE, oldAttribute, attribute));
 	}
 
 	/**
@@ -148,9 +148,9 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.LESS_THAN__CLASSATTRIBUTE:
-				if (resolve) return getClassattribute();
-				return basicGetClassattribute();
+			case FormValidationPackage.LESS_THAN__ATTRIBUTE:
+				if (resolve) return getAttribute();
+				return basicGetAttribute();
 			case FormValidationPackage.LESS_THAN__ATTRIBUTEARRAY:
 				return getAttributearray();
 		}
@@ -166,8 +166,8 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.LESS_THAN__CLASSATTRIBUTE:
-				setClassattribute((ClassAttribute)newValue);
+			case FormValidationPackage.LESS_THAN__ATTRIBUTE:
+				setAttribute((Attribute)newValue);
 				return;
 			case FormValidationPackage.LESS_THAN__ATTRIBUTEARRAY:
 				getAttributearray().clear();
@@ -185,8 +185,8 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.LESS_THAN__CLASSATTRIBUTE:
-				setClassattribute((ClassAttribute)null);
+			case FormValidationPackage.LESS_THAN__ATTRIBUTE:
+				setAttribute((Attribute)null);
 				return;
 			case FormValidationPackage.LESS_THAN__ATTRIBUTEARRAY:
 				getAttributearray().clear();
@@ -203,8 +203,8 @@ public class LessThanImpl extends ClassRuleImpl implements LessThan {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.LESS_THAN__CLASSATTRIBUTE:
-				return classattribute != null;
+			case FormValidationPackage.LESS_THAN__ATTRIBUTE:
+				return attribute != null;
 			case FormValidationPackage.LESS_THAN__ATTRIBUTEARRAY:
 				return attributearray != null && !attributearray.isEmpty();
 		}

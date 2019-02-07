@@ -2,10 +2,9 @@
  */
 package formValidation.tests;
 
+import formValidation.Entity;
 import formValidation.FormValidationFactory;
 import formValidation.FormValidationPackage;
-import formValidation.ValidationClass;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -60,7 +59,7 @@ public class FormValidationExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.formvalidation"));
-				ValidationClass root = FormValidationFactory.eINSTANCE.createValidationClass();
+				Entity root = FormValidationFactory.eINSTANCE.createEntity();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

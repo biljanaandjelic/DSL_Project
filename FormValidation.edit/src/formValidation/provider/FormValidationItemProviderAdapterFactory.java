@@ -72,49 +72,49 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.ValidationClass} instances.
+	 * This keeps track of the one adapter used for all {@link formValidation.Entity} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ValidationClassItemProvider validationClassItemProvider;
+	protected EntityItemProvider entityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link formValidation.ValidationClass}.
+	 * This creates an adapter for a {@link formValidation.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createValidationClassAdapter() {
-		if (validationClassItemProvider == null) {
-			validationClassItemProvider = new ValidationClassItemProvider(this);
+	public Adapter createEntityAdapter() {
+		if (entityItemProvider == null) {
+			entityItemProvider = new EntityItemProvider(this);
 		}
 
-		return validationClassItemProvider;
+		return entityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.ClassAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link formValidation.Attribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClassAttributeItemProvider classAttributeItemProvider;
+	protected AttributeItemProvider attributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link formValidation.ClassAttribute}.
+	 * This creates an adapter for a {@link formValidation.Attribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createClassAttributeAdapter() {
-		if (classAttributeItemProvider == null) {
-			classAttributeItemProvider = new ClassAttributeItemProvider(this);
+	public Adapter createAttributeAdapter() {
+		if (attributeItemProvider == null) {
+			attributeItemProvider = new AttributeItemProvider(this);
 		}
 
-		return classAttributeItemProvider;
+		return attributeItemProvider;
 	}
 
 	/**
@@ -693,75 +693,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.FieldSet} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FieldSetItemProvider fieldSetItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link formValidation.FieldSet}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFieldSetAdapter() {
-		if (fieldSetItemProvider == null) {
-			fieldSetItemProvider = new FieldSetItemProvider(this);
-		}
-
-		return fieldSetItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.Tab} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TabItemProvider tabItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link formValidation.Tab}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTabAdapter() {
-		if (tabItemProvider == null) {
-			tabItemProvider = new TabItemProvider(this);
-		}
-
-		return tabItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.Grid} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GridItemProvider gridItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link formValidation.Grid}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGridAdapter() {
-		if (gridItemProvider == null) {
-			gridItemProvider = new GridItemProvider(this);
-		}
-
-		return gridItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link formValidation.AttributeSettings} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1038,29 +969,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link formValidation.FormSettings} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FormSettingsItemProvider formSettingsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link formValidation.FormSettings}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFormSettingsAdapter() {
-		if (formSettingsItemProvider == null) {
-			formSettingsItemProvider = new FormSettingsItemProvider(this);
-		}
-
-		return formSettingsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link formValidation.Pagination} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1320,8 +1228,8 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 	 * @generated
 	 */
 	public void dispose() {
-		if (validationClassItemProvider != null) validationClassItemProvider.dispose();
-		if (classAttributeItemProvider != null) classAttributeItemProvider.dispose();
+		if (entityItemProvider != null) entityItemProvider.dispose();
+		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (attributeTypeItemProvider != null) attributeTypeItemProvider.dispose();
 		if (requiredItemProvider != null) requiredItemProvider.dispose();
 		if (minLengthItemProvider != null) minLengthItemProvider.dispose();
@@ -1347,9 +1255,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 		if (dateUIComponentItemProvider != null) dateUIComponentItemProvider.dispose();
 		if (textInputItemProvider != null) textInputItemProvider.dispose();
 		if (textAreaItemProvider != null) textAreaItemProvider.dispose();
-		if (fieldSetItemProvider != null) fieldSetItemProvider.dispose();
-		if (tabItemProvider != null) tabItemProvider.dispose();
-		if (gridItemProvider != null) gridItemProvider.dispose();
 		if (attributeSettingsItemProvider != null) attributeSettingsItemProvider.dispose();
 		if (labelSettingsItemProvider != null) labelSettingsItemProvider.dispose();
 		if (errorMessageItemProvider != null) errorMessageItemProvider.dispose();
@@ -1362,7 +1267,6 @@ public class FormValidationItemProviderAdapterFactory extends FormValidationAdap
 		if (refEntityItemProvider != null) refEntityItemProvider.dispose();
 		if (businessModelItemProvider != null) businessModelItemProvider.dispose();
 		if (errorMessageSettingsItemProvider != null) errorMessageSettingsItemProvider.dispose();
-		if (formSettingsItemProvider != null) formSettingsItemProvider.dispose();
 		if (paginationItemProvider != null) paginationItemProvider.dispose();
 		if (tableOverviewItemProvider != null) tableOverviewItemProvider.dispose();
 		if (overviewSettingsItemProvider != null) overviewSettingsItemProvider.dispose();

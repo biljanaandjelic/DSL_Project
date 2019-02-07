@@ -23,10 +23,14 @@ ClassRule returns ClassRule:
 	NotEquals | GreaterThan | Equals | LessThan;
 
 FormLayout returns FormLayout:
-	FieldSet | Tab | Grid;
+	{FormLayout}
+	'{'
+	
+	'}'
+	;
 
 AdditionalSettings returns AdditionalSettings:
-	AttributeSettings | LabelSettings | ErrorMessageSettings | FormSettings | NoteSettings;
+	AttributeSettings | LabelSettings | ErrorMessageSettings | NoteSettings;
 
 
 
@@ -41,13 +45,13 @@ AttributeDataType returns AttributeDataType:
 	PrimitiveDataType | NonPrimitiveDataType;
 
 
-ValidationClass returns ValidationClass:
-	{ValidationClass}
+ValidationClass returns Entity:
+	{Entity}
 	/*'ValidationClass'*/
 	name=EString
 	'{'
 		('label' label=EString)?
-		(/*'classattribute' '{'*/ classattribute+=ClassAttribute ( /*","*/ classattribute+=ClassAttribute)* /*'}'*/ )?
+		(/*'classattribute' '{'*/ attributes+= Attribute ( /*","*/ attributes+=Attribute)* /*'}'*/ )?
 		(/*'classrule' '{'*/ classrule+=ClassRule ( /*","*/ classrule+=ClassRule)* /*'}'*/ )?
 		(/*'formlayout' '{'*/ formlayout+=FormLayout ( /*","*/ formlayout+=FormLayout)* /*'}'*/ )?
 		(/*'additionalSettings' '{'*/ additionalSettings+=AdditionalSettings ( /*","*/ additionalSettings+=AdditionalSettings)* /*'}'*/ )?
@@ -60,7 +64,7 @@ ValidationClass returns ValidationClass:
 EString returns ecore::EString:
 	STRING | ID;
 
-ClassAttribute returns ClassAttribute:
+Attribute returns Attribute:
 	
 	/*'ClassAttribute'*/
 	name=EString
@@ -73,7 +77,7 @@ ClassAttribute returns ClassAttribute:
 		/*'attributetype'*/ attributetype=AttributeType
 		(master?='Master')?
 		(isClassRepresenting?='ClassRepresenting')?
-		(/*'Attribute rules' '{'*/ attributerule+=AttributeRule ( /*","*/ attributerule+=AttributeRule)* /*'}'*/ )?
+		(/*'Attribute rules' '{'*/ rules+=AttributeRule ( /*","*/ rules+=AttributeRule)* /*'}'*/ )?
 	'}';
 
 OverviewSettings returns OverviewSettings:
@@ -88,7 +92,7 @@ OverviewSettings returns OverviewSettings:
 AttributeType returns AttributeType:
 	/*'AttributeType'*/
 	/*'{'*/
-		'Data type' attributeDataType=AttributeDataType
+		'Data type' dataType=AttributeDataType
 		(/*'UI component'*/ uiComponent=UIComponent)?
 	/*'}'*/;
 
@@ -241,6 +245,9 @@ EInt returns ecore::EInt:
 
 enum EPosition returns EPosition:
 				Above = 'Above' | Left = 'Left' | Right = 'Right' | Below = 'Below';
+				
+enum ELayout returns ELayout:
+	Grid = 'Grid'| FieldSet = 'FieldSet' | Tab = 'Tab';
 
 PrimitiveDataType returns PrimitiveDataType:
 	{PrimitiveDataType}
@@ -255,7 +262,7 @@ NonPrimitiveDataType returns NonPrimitiveDataType:
 	
 	
 	/*'{'
-		'type'*/ type=[ValidationClass|EString]
+		'type'*/ type=[Entity|EString]
 		(isCollection?='Collection')?
 	/*'}'*/;
 
@@ -273,7 +280,7 @@ Required returns Required:
 	{Required}
 	'Required'
 	/*'{'*/
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 MinLength returns MinLength:
@@ -281,7 +288,7 @@ MinLength returns MinLength:
 	'MinLength'
 	/*'{'*/
 		(/*'value'*/ value=EInt)?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 MaxLength returns MaxLength:
@@ -289,7 +296,7 @@ MaxLength returns MaxLength:
 	'MaxLength'
 	/*'{'*/
 		(/*'value'*/ value=EInt)?
-		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'attributeRuleErrorMessage'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 Length returns Length:
@@ -297,7 +304,7 @@ Length returns Length:
 	'Length'
 	
 		(/*'value'*/ value=EInt)?
-		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'attributeRuleErrorMessage'*/ errorMessage=ErrorMessage)?
 	;
 
 MinNumber returns MinNumber:
@@ -305,7 +312,7 @@ MinNumber returns MinNumber:
 	'MinNumber'
 	/*'{'*/
 		(/*'value'*/ value=Float)?
-		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'attributeRuleErrorMessage'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 MinDate returns MinDate:
@@ -313,7 +320,7 @@ MinDate returns MinDate:
 	'MinDate'
 	/*'{'*/
 		(/*'value'*/ value=EString)?
-		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'attributeRuleErrorMessage'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 MaxNumber returns MaxNumber:
@@ -321,7 +328,7 @@ MaxNumber returns MaxNumber:
 	'MaxNumber'
 	'{'
 		('value' value=Float)?
-		(/*'attributeRuleErrorMessage'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'attributeRuleErrorMessage'*/ errorMessage=ErrorMessage)?
 	'}';
 
 MaxDate returns MaxDate:
@@ -329,7 +336,7 @@ MaxDate returns MaxDate:
 	'MaxDate'
 	'{'
 		('value' value=EString)?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	'}';
 
 AcceptableValuesString returns AcceptableValuesString:
@@ -337,7 +344,7 @@ AcceptableValuesString returns AcceptableValuesString:
 	'AcceptableValuesString'
 	'{'
 		(/*'values' '{'*/ values+=EString ( "," values+=EString)* /*'}'*/ )?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	'}';
 
 AcceptableValuesDate returns AcceptableValuesDate:
@@ -345,7 +352,7 @@ AcceptableValuesDate returns AcceptableValuesDate:
 	'AcceptableValuesDate'
 	'{'
 		(/*'values' '{'*/ values+=EString ( "," values+=EString)* /*'}'*/ )?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	'}';
 
 StringPattern returns StringPattern:
@@ -353,7 +360,7 @@ StringPattern returns StringPattern:
 	'StringPattern'
 	/*'{'*/
 		(/*'value'*/ value=EString)?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	/*'}'*/;
 
 DatePattern returns DatePattern:
@@ -361,7 +368,7 @@ DatePattern returns DatePattern:
 	'DatePattern'
 	'{'
 		('value' value=EString)?
-		(/*'Error message'*/ attributeRuleErrorMessage=ErrorMessage)?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 	'}';
 
 Int0 returns type::Int:
@@ -374,7 +381,7 @@ NotEquals returns NotEquals:
 	{NotEquals}
 	'NotEquals'
 	'{'
-		('Error message' classRuleErrorMessage=ErrorMessage)?
+		('Error message' errorMessage=ErrorMessage)?
 		('attributes' attributearray=AttributeArray)?
 	'}';
 
@@ -382,8 +389,8 @@ GreaterThan returns GreaterThan:
 	{GreaterThan}
 	'GreaterThan'
 	'{'
-		(/*'classattribute'*/ classattribute=[ClassAttribute|EString])?
-		(/*'Error message'*/ classRuleErrorMessage=ErrorMessage)?
+		(/*'classattribute'*/ attribute=[Attribute|EString])?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 		('attributes' /*'{'*/ attributearray+=AttributeArray ( /*","*/ attributearray+=AttributeArray)* /*'}'*/ )?
 	'}';
 
@@ -391,7 +398,7 @@ Equals returns Equals:
 	{Equals}
 	'Equals'
 	'{'
-		('Error message' classRuleErrorMessage=ErrorMessage)?
+		('Error message' errorMessage=ErrorMessage)?
 		('attributes' attributearray=AttributeArray)?
 	'}';
 
@@ -399,55 +406,55 @@ LessThan returns LessThan:
 	{LessThan}
 	'LessThan'
 	'{'
-		(/*'classattribute'*/ classattribute=[ClassAttribute|EString])?
-		(/*'Error message'*/ classRuleErrorMessage=ErrorMessage)?
+		(/*'classattribute'*/ attribute=[Attribute|EString])?
+		(/*'Error message'*/ errorMessage=ErrorMessage)?
 		(/*'attributearray'*/ '{' attributearray+=AttributeArray ( "," attributearray+=AttributeArray)* '}' )?
 	'}';
 
 AttributeArray returns AttributeArray:
 	{AttributeArray}
 	/*'{'*/
-		(/*'attributes'*/'(' attributes+=[ClassAttribute|EString] ( "," attributes+=[ClassAttribute|EString])* ')' ) /* ?*/
+		(/*'attributes'*/'(' attributes+=[Attribute|EString] ( "," attributes+=[Attribute|EString])* ')' ) /* ?*/
 	/*'}'*/
 	;
 
-FieldSet returns FieldSet:
-	{FieldSet}
-	'FieldSet'
-	name=EString
-	'{'
-		('Legend' legend=EString)?
-		/* */
-		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
-	
-		(/*'layouts'*/ /*'{'*/ layouts+=FormLayout ( /*","*/ layouts+=FormLayout)* /*'}'*/ )?
-	'}';
-
-Tab returns Tab:
-	{Tab}
-	'Tab'
-	name=EString
-	'{'
-		('Label' label=EString)?
-		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
-	
-		(/*'layouts'*/ '{' layouts+=FormLayout ( "," layouts+=FormLayout)* '}' )?
-	'}';
-
-Grid returns Grid:
-	{Grid}
-	'Grid'
-	name=EString
-	'{'
-		/*('Number of columns' numOfColumns=EInt)?
-		('Number of rows' numOfRows=EInt)?
-		('Order' order=EGridOrder)?
-		/*('ExpandLast' expandLast=EBoolean)?*/
-	/*(expandLast?='Expand last')?  */	
-		('row' attributearray += AttributeArray ('row' attributearray+=AttributeArray)*)?
-		(/*'layouts' '{'*/ layouts+=FormLayout (/*"," */  layouts+=FormLayout)* /*'}'*/ )?
-	'}';
-
+//FieldSet returns FieldSet:
+//	{FieldSet}
+//	'FieldSet'
+//	name=EString
+//	'{'
+//		('Legend' legend=EString)?
+//		/* */
+//		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
+//	
+//		(/*'layouts'*/ /*'{'*/ layouts+=FormLayout ( /*","*/ layouts+=FormLayout)* /*'}'*/ )?
+//	'}';
+//
+//Tab returns Tab:
+//	{Tab}
+//	'Tab'
+//	name=EString
+//	'{'
+//		('Label' label=EString)?
+//		('attributes' attributearray += AttributeArray (attributearray+=AttributeArray)*)?
+//	
+//		(/*'layouts'*/ '{' layouts+=FormLayout ( "," layouts+=FormLayout)* '}' )?
+//	'}';
+//
+//Grid returns Grid:
+//	{Grid}
+//	'Grid'
+//	name=EString
+//	'{'
+//		/*('Number of columns' numOfColumns=EInt)?
+//		('Number of rows' numOfRows=EInt)?
+//		('Order' order=EGridOrder)?
+//		/*('ExpandLast' expandLast=EBoolean)?*/
+//	/*(expandLast?='Expand last')?  */	
+//		('row' attributearray += AttributeArray ('row' attributearray+=AttributeArray)*)?
+//		(/*'layouts' '{'*/ layouts+=FormLayout (/*"," */  layouts+=FormLayout)* /*'}'*/ )?
+//	'}';
+// 
 enum EGridOrder returns EGridOrder:
 				FirstRow = 'FirstRow' | FirstColumn = 'FirstColumn';
 
@@ -473,11 +480,6 @@ ErrorMessageSettings returns ErrorMessageSettings:
 		('Color' color=Color)?
 	'}';
 
-FormSettings returns FormSettings:
-	{FormSettings}
-	(autoComplete?='Auto Complete')?
-	'FormSettings'
-	;
 
 NoteSettings returns NoteSettings:
 	{NoteSettings}
@@ -517,5 +519,5 @@ Pagination returns Pagination:
 	'Pagination'
 	'{'
 		('Possible number of shown rows' '{' possibleNumberOfShownRows+=EInt ( "," possibleNumberOfShownRows+=EInt)* '}' )?
-		('Default number of shown rows' defaultNumOfShownRows=EInt)?
+		('Default number of shown rows' defaultNumberOfShownRows=EInt)?
 	'}';

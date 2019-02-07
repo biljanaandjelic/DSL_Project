@@ -66,9 +66,9 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case FormValidationPackage.VALIDATION_CLASS: {
-				ValidationClass validationClass = (ValidationClass)theEObject;
-				T result = caseValidationClass(validationClass);
+			case FormValidationPackage.ENTITY: {
+				Entity entity = (Entity)theEObject;
+				T result = caseEntity(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -78,9 +78,9 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FormValidationPackage.CLASS_ATTRIBUTE: {
-				ClassAttribute classAttribute = (ClassAttribute)theEObject;
-				T result = caseClassAttribute(classAttribute);
+			case FormValidationPackage.ATTRIBUTE: {
+				Attribute attribute = (Attribute)theEObject;
+				T result = caseAttribute(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -330,27 +330,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FormValidationPackage.FIELD_SET: {
-				FieldSet fieldSet = (FieldSet)theEObject;
-				T result = caseFieldSet(fieldSet);
-				if (result == null) result = caseFormLayout(fieldSet);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FormValidationPackage.TAB: {
-				Tab tab = (Tab)theEObject;
-				T result = caseTab(tab);
-				if (result == null) result = caseFormLayout(tab);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case FormValidationPackage.GRID: {
-				Grid grid = (Grid)theEObject;
-				T result = caseGrid(grid);
-				if (result == null) result = caseFormLayout(grid);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FormValidationPackage.ATTRIBUTE_SETTINGS: {
 				AttributeSettings attributeSettings = (AttributeSettings)theEObject;
 				T result = caseAttributeSettings(attributeSettings);
@@ -448,13 +427,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FormValidationPackage.FORM_SETTINGS: {
-				FormSettings formSettings = (FormSettings)theEObject;
-				T result = caseFormSettings(formSettings);
-				if (result == null) result = caseAdditionalSettings(formSettings);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FormValidationPackage.PAGINATION: {
 				Pagination pagination = (Pagination)theEObject;
 				T result = casePagination(pagination);
@@ -513,17 +485,17 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Validation Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Validation Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValidationClass(ValidationClass object) {
+	public T caseEntity(Entity object) {
 		return null;
 	}
 
@@ -543,17 +515,17 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Class Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Class Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClassAttribute(ClassAttribute object) {
+	public T caseAttribute(Attribute object) {
 		return null;
 	}
 
@@ -1068,51 +1040,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Set</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldSet(FieldSet object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tab</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tab</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTab(Tab object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Grid</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Grid</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGrid(Grid object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Attribute Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1319,21 +1246,6 @@ public class FormValidationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseErrorMessageSettings(ErrorMessageSettings object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Form Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Form Settings</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFormSettings(FormSettings object) {
 		return null;
 	}
 

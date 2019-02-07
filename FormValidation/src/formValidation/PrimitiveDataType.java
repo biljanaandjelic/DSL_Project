@@ -22,6 +22,7 @@ package formValidation;
 public interface PrimitiveDataType extends AttributeDataType {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>"String"</code>.
 	 * The literals are from the enumeration {@link formValidation.EDataType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,7 +34,7 @@ public interface PrimitiveDataType extends AttributeDataType {
 	 * @see formValidation.EDataType
 	 * @see #setType(EDataType)
 	 * @see formValidation.FormValidationPackage#getPrimitiveDataType_Type()
-	 * @model
+	 * @model default="String"
 	 * @generated
 	 */
 	EDataType getType();

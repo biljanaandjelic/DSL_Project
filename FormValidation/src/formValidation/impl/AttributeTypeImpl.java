@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link formValidation.impl.AttributeTypeImpl#getUiComponent <em>Ui Component</em>}</li>
- *   <li>{@link formValidation.impl.AttributeTypeImpl#getAttributeDataType <em>Attribute Data Type</em>}</li>
+ *   <li>{@link formValidation.impl.AttributeTypeImpl#getDataType <em>Data Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,14 +42,14 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	protected UIComponent uiComponent;
 
 	/**
-	 * The cached value of the '{@link #getAttributeDataType() <em>Attribute Data Type</em>}' containment reference.
+	 * The cached value of the '{@link #getDataType() <em>Data Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttributeDataType()
+	 * @see #getDataType()
 	 * @generated
 	 * @ordered
 	 */
-	protected AttributeDataType attributeDataType;
+	protected AttributeDataType dataType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,8 +118,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttributeDataType getAttributeDataType() {
-		return attributeDataType;
+	public AttributeDataType getDataType() {
+		return dataType;
 	}
 
 	/**
@@ -127,11 +127,11 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttributeDataType(AttributeDataType newAttributeDataType, NotificationChain msgs) {
-		AttributeDataType oldAttributeDataType = attributeDataType;
-		attributeDataType = newAttributeDataType;
+	public NotificationChain basicSetDataType(AttributeDataType newDataType, NotificationChain msgs) {
+		AttributeDataType oldDataType = dataType;
+		dataType = newDataType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, oldAttributeDataType, newAttributeDataType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE, oldDataType, newDataType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -142,18 +142,18 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttributeDataType(AttributeDataType newAttributeDataType) {
-		if (newAttributeDataType != attributeDataType) {
+	public void setDataType(AttributeDataType newDataType) {
+		if (newDataType != dataType) {
 			NotificationChain msgs = null;
-			if (attributeDataType != null)
-				msgs = ((InternalEObject)attributeDataType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, null, msgs);
-			if (newAttributeDataType != null)
-				msgs = ((InternalEObject)newAttributeDataType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, null, msgs);
-			msgs = basicSetAttributeDataType(newAttributeDataType, msgs);
+			if (dataType != null)
+				msgs = ((InternalEObject)dataType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE, null, msgs);
+			if (newDataType != null)
+				msgs = ((InternalEObject)newDataType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE, null, msgs);
+			msgs = basicSetDataType(newDataType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE, newAttributeDataType, newAttributeDataType));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE, newDataType, newDataType));
 	}
 
 	/**
@@ -166,8 +166,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 		switch (featureID) {
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
 				return basicSetUiComponent(null, msgs);
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
-				return basicSetAttributeDataType(null, msgs);
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
+				return basicSetDataType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -182,8 +182,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 		switch (featureID) {
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
 				return getUiComponent();
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
-				return getAttributeDataType();
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
+				return getDataType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,8 +199,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
 				setUiComponent((UIComponent)newValue);
 				return;
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
-				setAttributeDataType((AttributeDataType)newValue);
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
+				setDataType((AttributeDataType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
 				setUiComponent((UIComponent)null);
 				return;
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
-				setAttributeDataType((AttributeDataType)null);
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
+				setDataType((AttributeDataType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,8 +234,8 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
 		switch (featureID) {
 			case FormValidationPackage.ATTRIBUTE_TYPE__UI_COMPONENT:
 				return uiComponent != null;
-			case FormValidationPackage.ATTRIBUTE_TYPE__ATTRIBUTE_DATA_TYPE:
-				return attributeDataType != null;
+			case FormValidationPackage.ATTRIBUTE_TYPE__DATA_TYPE:
+				return dataType != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -22,22 +22,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link formValidation.impl.ClassRuleImpl#getClassRuleErrorMessage <em>Class Rule Error Message</em>}</li>
+ *   <li>{@link formValidation.impl.ClassRuleImpl#getErrorMessage <em>Error Message</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container implements ClassRule {
 	/**
-	 * The cached value of the '{@link #getClassRuleErrorMessage() <em>Class Rule Error Message</em>}' containment reference.
+	 * The cached value of the '{@link #getErrorMessage() <em>Error Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClassRuleErrorMessage()
+	 * @see #getErrorMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected ErrorMessage classRuleErrorMessage;
-
+	protected ErrorMessage errorMessage;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,8 +61,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErrorMessage getClassRuleErrorMessage() {
-		return classRuleErrorMessage;
+	public ErrorMessage getErrorMessage() {
+		return errorMessage;
 	}
 
 	/**
@@ -71,11 +70,11 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetClassRuleErrorMessage(ErrorMessage newClassRuleErrorMessage, NotificationChain msgs) {
-		ErrorMessage oldClassRuleErrorMessage = classRuleErrorMessage;
-		classRuleErrorMessage = newClassRuleErrorMessage;
+	public NotificationChain basicSetErrorMessage(ErrorMessage newErrorMessage, NotificationChain msgs) {
+		ErrorMessage oldErrorMessage = errorMessage;
+		errorMessage = newErrorMessage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE, oldClassRuleErrorMessage, newClassRuleErrorMessage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_RULE__ERROR_MESSAGE, oldErrorMessage, newErrorMessage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -86,18 +85,18 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setClassRuleErrorMessage(ErrorMessage newClassRuleErrorMessage) {
-		if (newClassRuleErrorMessage != classRuleErrorMessage) {
+	public void setErrorMessage(ErrorMessage newErrorMessage) {
+		if (newErrorMessage != errorMessage) {
 			NotificationChain msgs = null;
-			if (classRuleErrorMessage != null)
-				msgs = ((InternalEObject)classRuleErrorMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE, null, msgs);
-			if (newClassRuleErrorMessage != null)
-				msgs = ((InternalEObject)newClassRuleErrorMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE, null, msgs);
-			msgs = basicSetClassRuleErrorMessage(newClassRuleErrorMessage, msgs);
+			if (errorMessage != null)
+				msgs = ((InternalEObject)errorMessage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_RULE__ERROR_MESSAGE, null, msgs);
+			if (newErrorMessage != null)
+				msgs = ((InternalEObject)newErrorMessage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FormValidationPackage.CLASS_RULE__ERROR_MESSAGE, null, msgs);
+			msgs = basicSetErrorMessage(newErrorMessage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE, newClassRuleErrorMessage, newClassRuleErrorMessage));
+			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.CLASS_RULE__ERROR_MESSAGE, newErrorMessage, newErrorMessage));
 	}
 
 	/**
@@ -108,8 +107,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
-				return basicSetClassRuleErrorMessage(null, msgs);
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
+				return basicSetErrorMessage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -122,8 +121,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
-				return getClassRuleErrorMessage();
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
+				return getErrorMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -136,8 +135,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
-				setClassRuleErrorMessage((ErrorMessage)newValue);
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
+				setErrorMessage((ErrorMessage)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,8 +150,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
-				setClassRuleErrorMessage((ErrorMessage)null);
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
+				setErrorMessage((ErrorMessage)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -166,8 +165,8 @@ public abstract class ClassRuleImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
-				return classRuleErrorMessage != null;
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
+				return errorMessage != null;
 		}
 		return super.eIsSet(featureID);
 	}

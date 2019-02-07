@@ -86,12 +86,12 @@ public class FormValidationValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case FormValidationPackage.VALIDATION_CLASS:
-				return validateValidationClass((ValidationClass)value, diagnostics, context);
+			case FormValidationPackage.ENTITY:
+				return validateEntity((Entity)value, diagnostics, context);
 			case FormValidationPackage.ATTRIBUTE_RULE:
 				return validateAttributeRule((AttributeRule)value, diagnostics, context);
-			case FormValidationPackage.CLASS_ATTRIBUTE:
-				return validateClassAttribute((ClassAttribute)value, diagnostics, context);
+			case FormValidationPackage.ATTRIBUTE:
+				return validateAttribute((Attribute)value, diagnostics, context);
 			case FormValidationPackage.ATTRIBUTE_TYPE:
 				return validateAttributeType((AttributeType)value, diagnostics, context);
 			case FormValidationPackage.MIN:
@@ -160,12 +160,6 @@ public class FormValidationValidator extends EObjectValidator {
 				return validateTextArea((TextArea)value, diagnostics, context);
 			case FormValidationPackage.FORM_LAYOUT:
 				return validateFormLayout((FormLayout)value, diagnostics, context);
-			case FormValidationPackage.FIELD_SET:
-				return validateFieldSet((FieldSet)value, diagnostics, context);
-			case FormValidationPackage.TAB:
-				return validateTab((Tab)value, diagnostics, context);
-			case FormValidationPackage.GRID:
-				return validateGrid((Grid)value, diagnostics, context);
 			case FormValidationPackage.ATTRIBUTE_SETTINGS:
 				return validateAttributeSettings((AttributeSettings)value, diagnostics, context);
 			case FormValidationPackage.LABEL_SETTINGS:
@@ -194,8 +188,6 @@ public class FormValidationValidator extends EObjectValidator {
 				return validateBusinessModel((BusinessModel)value, diagnostics, context);
 			case FormValidationPackage.ERROR_MESSAGE_SETTINGS:
 				return validateErrorMessageSettings((ErrorMessageSettings)value, diagnostics, context);
-			case FormValidationPackage.FORM_SETTINGS:
-				return validateFormSettings((FormSettings)value, diagnostics, context);
 			case FormValidationPackage.PAGINATION:
 				return validatePagination((Pagination)value, diagnostics, context);
 			case FormValidationPackage.TABLE_OVERVIEW:
@@ -212,20 +204,22 @@ public class FormValidationValidator extends EObjectValidator {
 				return validateAutocompleteComponent((AutocompleteComponent)value, diagnostics, context);
 			case FormValidationPackage.COLOR:
 				return validateColor((Color)value, diagnostics, context);
-			case FormValidationPackage.EDATA_TYPE:
-				return validateEDataType((EDataType)value, diagnostics, context);
-			case FormValidationPackage.EORIENTATION:
-				return validateEOrientation((EOrientation)value, diagnostics, context);
-			case FormValidationPackage.EREQUIRED_FIELD:
-				return validateERequiredField((ERequiredField)value, diagnostics, context);
-			case FormValidationPackage.EPOSITION:
-				return validateEPosition((EPosition)value, diagnostics, context);
-			case FormValidationPackage.EGRID_ORDER:
-				return validateEGridOrder((EGridOrder)value, diagnostics, context);
-			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
-				return validateEUINumberComponentType((EUINumberComponentType)value, diagnostics, context);
 			case FormValidationPackage.EDATE_UI_TYPE:
 				return validateEDateUIType((EDateUIType)value, diagnostics, context);
+			case FormValidationPackage.EREQUIRED_FIELD:
+				return validateERequiredField((ERequiredField)value, diagnostics, context);
+			case FormValidationPackage.EORIENTATION:
+				return validateEOrientation((EOrientation)value, diagnostics, context);
+			case FormValidationPackage.ELAYOUT:
+				return validateELayout((ELayout)value, diagnostics, context);
+			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
+				return validateEUINumberComponentType((EUINumberComponentType)value, diagnostics, context);
+			case FormValidationPackage.EGRID_ORDER:
+				return validateEGridOrder((EGridOrder)value, diagnostics, context);
+			case FormValidationPackage.EPOSITION:
+				return validateEPosition((EPosition)value, diagnostics, context);
+			case FormValidationPackage.EDATA_TYPE:
+				return validateEDataType((EDataType)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -236,93 +230,93 @@ public class FormValidationValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateValidationClass(ValidationClass validationClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(validationClass, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validateValidationClass_differentClassAttributes(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validateValidationClass_nameFormat(validationClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validateValidationClass_allLayoutsSameType(validationClass, diagnostics, context);
+	public boolean validateEntity(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(entity, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEntity_differentClassAttributes(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEntity_nameFormat(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEntity_allLayoutsSameType(entity, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the differentClassAttributes constraint of '<em>Validation Class</em>'.
+	 * The cached validation expression for the differentClassAttributes constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String VALIDATION_CLASS__DIFFERENT_CLASS_ATTRIBUTES__EEXPRESSION = "Tuple {\n" +
+	protected static final String ENTITY__DIFFERENT_CLASS_ATTRIBUTES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'All attributes should be different',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | \n" +
+		"\t\t attributes-> forAll(a1: Attribute, a2: Attribute | \n" +
 		"\t\t \tif a1<>a2 then a1.name <> a2.name else true endif\n" +
 		"\t\t )\n" +
 		"}.status";
 
 	/**
-	 * Validates the differentClassAttributes constraint of '<em>Validation Class</em>'.
+	 * Validates the differentClassAttributes constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateValidationClass_differentClassAttributes(ValidationClass validationClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEntity_differentClassAttributes(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.VALIDATION_CLASS,
-				 validationClass,
+				(FormValidationPackage.Literals.ENTITY,
+				 entity,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "differentClassAttributes",
-				 VALIDATION_CLASS__DIFFERENT_CLASS_ATTRIBUTES__EEXPRESSION,
+				 ENTITY__DIFFERENT_CLASS_ATTRIBUTES__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the nameFormat constraint of '<em>Validation Class</em>'.
+	 * The cached validation expression for the nameFormat constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String VALIDATION_CLASS__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z0-9.]*')";
+	protected static final String ENTITY__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z0-9.]*')";
 
 	/**
-	 * Validates the nameFormat constraint of '<em>Validation Class</em>'.
+	 * Validates the nameFormat constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateValidationClass_nameFormat(ValidationClass validationClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEntity_nameFormat(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.VALIDATION_CLASS,
-				 validationClass,
+				(FormValidationPackage.Literals.ENTITY,
+				 entity,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "nameFormat",
-				 VALIDATION_CLASS__NAME_FORMAT__EEXPRESSION,
+				 ENTITY__NAME_FORMAT__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the allLayoutsSameType constraint of '<em>Validation Class</em>'.
+	 * The cached validation expression for the allLayoutsSameType constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String VALIDATION_CLASS__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION = "Tuple {\n" +
+	protected static final String ENTITY__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'At one level all attributes must be same type',\n" +
 		"\tstatus : Boolean = \n" +
 		"\t\tformlayout -> forAll(fL1: FormLayout, fL2: FormLayout | \n" +
@@ -330,21 +324,21 @@ public class FormValidationValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the allLayoutsSameType constraint of '<em>Validation Class</em>'.
+	 * Validates the allLayoutsSameType constraint of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateValidationClass_allLayoutsSameType(ValidationClass validationClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEntity_allLayoutsSameType(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.VALIDATION_CLASS,
-				 validationClass,
+				(FormValidationPackage.Literals.ENTITY,
+				 entity,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "allLayoutsSameType",
-				 VALIDATION_CLASS__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION,
+				 ENTITY__ALL_LAYOUTS_SAME_TYPE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -364,89 +358,89 @@ public class FormValidationValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(classAttribute, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_appropriateAttributeRules(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_compareMinMaxLength(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_compareMinMaxNumber(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_compareMinMaxDate(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_nameFormat(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleRequiredCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleMinLengthCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleMaxLengthCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleLengthCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleMinCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleMaxCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRuleAcceptableValuesCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_attributeRulePatternCanAppearJustOnce(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeMaster(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_collectionCannotBeRepresenting(classAttribute, diagnostics, context);
-		if (result || diagnostics != null) result &= validateClassAttribute_nonPrimitiveAttributeCannotBeMaster(classAttribute, diagnostics, context);
+	public boolean validateAttribute(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(attribute, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_appropriateAttributeRules(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_compareMinMaxLength(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_compareMinMaxNumber(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_compareMinMaxDate(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_nameFormat(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleRequiredCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleMinLengthCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleMaxLengthCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleLengthCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleMinCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleMaxCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRuleAcceptableValuesCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_attributeRulePatternCanAppearJustOnce(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_collectionCannotBeMaster(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_collectionCannotBeRepresenting(attribute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAttribute_nonPrimitiveAttributeCannotBeMaster(attribute, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the appropriateAttributeRules constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the appropriateAttributeRules constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__APPROPRIATE_ATTRIBUTE_RULES__EEXPRESSION = "Tuple {\n" +
+	protected static final String ATTRIBUTE__APPROPRIATE_ATTRIBUTE_RULES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Each data type has appropriate rulles that can be applay to it.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t if attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t \t  then if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::Number\n" +
-		"\t\t \t  \t    then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))\n" +
-		"\t\t \t        else if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::_'String'  \n" +
-		"\t\t \t             then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or\n" +
+		"\t\t if attributetype.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t \t  then if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::Number\n" +
+		"\t\t \t  \t    then rules -> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))\n" +
+		"\t\t \t        else if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::_'String'  \n" +
+		"\t\t \t             then rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or\n" +
 		"\t\t \t\t\t\t\ta1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))\n" +
-		"\t\t \t\t\t\t  else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)\n" +
+		"\t\t \t\t\t\t  else rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)\n" +
 		"\t\t \t\t\t\t  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))\n" +
 		"\t\t                 endif\n" +
 		"\t\t           endif\n" +
-		"\t\telse attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))\n" +
+		"\t\telse rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))\n" +
 		"\t\tendif\n" +
 		"}.status";
 
 	/**
-	 * Validates the appropriateAttributeRules constraint of '<em>Class Attribute</em>'.
+	 * Validates the appropriateAttributeRules constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_appropriateAttributeRules(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_appropriateAttributeRules(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "appropriateAttributeRules",
-				 CLASS_ATTRIBUTE__APPROPRIATE_ATTRIBUTE_RULES__EEXPRESSION,
+				 ATTRIBUTE__APPROPRIATE_ATTRIBUTE_RULES__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the compareMinMaxLength constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the compareMinMaxLength constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__COMPARE_MIN_MAX_LENGTH__EEXPRESSION = "Tuple {\n" +
+	protected static final String ATTRIBUTE__COMPARE_MIN_MAX_LENGTH__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Maxlength value should be greater than mainlength',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
+		"\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
 		"\t\t\tif a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)\n" +
 		"\t\t\tthen\n" +
 		"\t\t\t\ta1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value\n" +
@@ -457,36 +451,36 @@ public class FormValidationValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the compareMinMaxLength constraint of '<em>Class Attribute</em>'.
+	 * Validates the compareMinMaxLength constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_compareMinMaxLength(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_compareMinMaxLength(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "compareMinMaxLength",
-				 CLASS_ATTRIBUTE__COMPARE_MIN_MAX_LENGTH__EEXPRESSION,
+				 ATTRIBUTE__COMPARE_MIN_MAX_LENGTH__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the compareMinMaxNumber constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the compareMinMaxNumber constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__COMPARE_MIN_MAX_NUMBER__EEXPRESSION = "Tuple {\n" +
+	protected static final String ATTRIBUTE__COMPARE_MIN_MAX_NUMBER__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Check if max value is greater then min value',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
+		"\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
 		"\t\t\tif a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)\n" +
 		"\t\t\tthen\n" +
 		"\t\t\t\ta1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value\n" +
@@ -497,36 +491,36 @@ public class FormValidationValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the compareMinMaxNumber constraint of '<em>Class Attribute</em>'.
+	 * Validates the compareMinMaxNumber constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_compareMinMaxNumber(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_compareMinMaxNumber(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "compareMinMaxNumber",
-				 CLASS_ATTRIBUTE__COMPARE_MIN_MAX_NUMBER__EEXPRESSION,
+				 ATTRIBUTE__COMPARE_MIN_MAX_NUMBER__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the compareMinMaxDate constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the compareMinMaxDate constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__COMPARE_MIN_MAX_DATE__EEXPRESSION = "Tuple {\n" +
+	protected static final String ATTRIBUTE__COMPARE_MIN_MAX_DATE__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Check id max date is greater then min date',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t\tattributerule-> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
+		"\t\t\trules -> forAll(a1: AttributeRule, a2: AttributeRule | \n" +
 		"\t\t\tif a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)\n" +
 		"\t\t\tthen\n" +
 		"\t\t\t\ta1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value\n" +
@@ -537,383 +531,383 @@ public class FormValidationValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the compareMinMaxDate constraint of '<em>Class Attribute</em>'.
+	 * Validates the compareMinMaxDate constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_compareMinMaxDate(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_compareMinMaxDate(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "compareMinMaxDate",
-				 CLASS_ATTRIBUTE__COMPARE_MIN_MAX_DATE__EEXPRESSION,
+				 ATTRIBUTE__COMPARE_MIN_MAX_DATE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the nameFormat constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the nameFormat constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z0-9.]*')";
+	protected static final String ATTRIBUTE__NAME_FORMAT__EEXPRESSION = "name.matches('[a-z][a-zA-Z0-9.]*')";
 
 	/**
-	 * Validates the nameFormat constraint of '<em>Class Attribute</em>'.
+	 * Validates the nameFormat constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_nameFormat(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_nameFormat(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "nameFormat",
-				 CLASS_ATTRIBUTE__NAME_FORMAT__EEXPRESSION,
+				 ATTRIBUTE__NAME_FORMAT__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleRequiredCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleRequiredCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_REQUIRED_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(Required))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_REQUIRED_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(Required))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleRequiredCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleRequiredCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleRequiredCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleRequiredCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleRequiredCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_REQUIRED_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_REQUIRED_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleMinLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleMinLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MIN_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(MinLength))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_MIN_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(MinLength))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleMinLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleMinLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleMinLengthCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleMinLengthCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleMinLengthCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MIN_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_MIN_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleMaxLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleMaxLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MAX_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(MaxLength))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_MAX_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(MaxLength))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleMaxLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleMaxLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleMaxLengthCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleMaxLengthCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleMaxLengthCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MAX_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_MAX_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(Length))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(Length))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleLengthCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleLengthCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleLengthCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleLengthCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleLengthCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_LENGTH_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleMinCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleMinCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MIN_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(Min))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_MIN_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(Min))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleMinCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleMinCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleMinCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleMinCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleMinCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MIN_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_MIN_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleMaxCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleMaxCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MAX_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(Max))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_MAX_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(Max))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleMaxCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleMaxCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleMaxCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleMaxCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleMaxCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_MAX_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_MAX_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRuleAcceptableValuesCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRuleAcceptableValuesCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_ACCEPTABLE_VALUES_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_ACCEPTABLE_VALUES_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() <=1";
 
 	/**
-	 * Validates the attributeRuleAcceptableValuesCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRuleAcceptableValuesCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRuleAcceptableValuesCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRuleAcceptableValuesCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRuleAcceptableValuesCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_ACCEPTABLE_VALUES_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_ACCEPTABLE_VALUES_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the attributeRulePatternCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the attributeRulePatternCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__ATTRIBUTE_RULE_PATTERN_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
-		"\t\tattributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1";
+	protected static final String ATTRIBUTE__ATTRIBUTE_RULE_PATTERN_CAN_APPEAR_JUST_ONCE__EEXPRESSION = "\n" +
+		"\t\trules -> select(aR| aR.oclIsKindOf(Pattern))->size() <=1";
 
 	/**
-	 * Validates the attributeRulePatternCanAppearJustOnce constraint of '<em>Class Attribute</em>'.
+	 * Validates the attributeRulePatternCanAppearJustOnce constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_attributeRulePatternCanAppearJustOnce(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_attributeRulePatternCanAppearJustOnce(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "attributeRulePatternCanAppearJustOnce",
-				 CLASS_ATTRIBUTE__ATTRIBUTE_RULE_PATTERN_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
+				 ATTRIBUTE__ATTRIBUTE_RULE_PATTERN_CAN_APPEAR_JUST_ONCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the collectionCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the collectionCannotBeMaster constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION = "\n" +
-		"\t\tif attributetype.attributeDataType.isCollection then master = false else true endif";
+	protected static final String ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION = "\n" +
+		"\t\tif attributetype.dataType.isCollection then master = false else true endif";
 
 	/**
-	 * Validates the collectionCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * Validates the collectionCannotBeMaster constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_collectionCannotBeMaster(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_collectionCannotBeMaster(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "collectionCannotBeMaster",
-				 CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION,
+				 ATTRIBUTE__COLLECTION_CANNOT_BE_MASTER__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the collectionCannotBeRepresenting constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the collectionCannotBeRepresenting constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION = "\n" +
-		"\t\tif attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif";
+	protected static final String ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION = "\n" +
+		"\t\tif attributetype.dataType.isCollection then isClassRepresenting = false else true endif";
 
 	/**
-	 * Validates the collectionCannotBeRepresenting constraint of '<em>Class Attribute</em>'.
+	 * Validates the collectionCannotBeRepresenting constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_collectionCannotBeRepresenting(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_collectionCannotBeRepresenting(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "collectionCannotBeRepresenting",
-				 CLASS_ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION,
+				 ATTRIBUTE__COLLECTION_CANNOT_BE_REPRESENTING__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * The cached validation expression for the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CLASS_ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION = "Tuple {\n" +
+	protected static final String ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Non primitive data type cannot be master attribute.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\tif attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n" +
+		"\t\tif attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif\n" +
 		"}.status";
 
 	/**
-	 * Validates the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Class Attribute</em>'.
+	 * Validates the nonPrimitiveAttributeCannotBeMaster constraint of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateClassAttribute_nonPrimitiveAttributeCannotBeMaster(ClassAttribute classAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAttribute_nonPrimitiveAttributeCannotBeMaster(Attribute attribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(FormValidationPackage.Literals.CLASS_ATTRIBUTE,
-				 classAttribute,
+				(FormValidationPackage.Literals.ATTRIBUTE,
+				 attribute,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "nonPrimitiveAttributeCannotBeMaster",
-				 CLASS_ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION,
+				 ATTRIBUTE__NON_PRIMITIVE_ATTRIBUTE_CANNOT_BE_MASTER__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -1280,14 +1274,14 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String NOT_EQUALS__ARE_EQUAL_TYPES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'In notequal rule all data types should be same.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n" +
+		"\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n" +
 		"\t\t if a1<>a2  then \n" +
-		"\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
 		"\t\t\t then\n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
 		"\t\t\t else \n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
 		"\t\t\t endif\n" +
 		"\t\t else true\n" +
 		"\t\t endif\n" +
@@ -1324,7 +1318,7 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String NOT_EQUALS__DIFFERENT_DATA_IN_ARRAY__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'All attributes should be different',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n" +
+		"\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n" +
 		"\t\t \tif a1<>a2 then\n" +
 		"\t\t \ta1.name <> a2.name\n" +
 		"\t\t \telse true\n" +
@@ -1383,7 +1377,7 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String GREATER_THAN__DIFFERENT_ATTRIBUTES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'First attribute and attributes from array should be different',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t\tattributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name <> a1.name)\n" +
+		"\t\t\tattributearray.attributes -> forAll(a1: Attribute | attribute.name <> a1.name)\n" +
 		"}.status";
 
 	/**
@@ -1416,7 +1410,7 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String GREATER_THAN__DIFFERENT_ATTRIBUTES_IN_ARRAY__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'Attributes in array must be different',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | if a1<>a2 then\n" +
+		"\t\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute | if a1<>a2 then\n" +
 		"\t\t\t \ta1.name <> a2.name\n" +
 		"\t\t\t \telse true\n" +
 		"\t\t\t \tendif\n" +
@@ -1453,17 +1447,17 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String GREATER_THAN__ARE_EQUAL_TYPES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'In greater then rule all data types should be same.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n" +
+		"\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n" +
 		"\t\t if a1<>a2  then \n" +
-		"\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)\n" +
+		"\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)\n" +
 		"\t\t\t then\n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
 		"\t\t\t else \n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
 		"\t\t\t endif\n" +
 		"\t\t else true\n" +
 		"\t\t endif)\n" +
@@ -1549,18 +1543,18 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String EQUALS__ARE_EQUAL_TYPES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'In equal rule all data types should be same.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n" +
+		"\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n" +
 		"\t\t if a1<>a2  then \n" +
-		"\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
 		"\t\t\t then\n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
 		"\t\t\t else \n" +
-		"\t\t\t  if (a1.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType))\n" +
-		"\t\t\t  or (a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType))\n" +
+		"\t\t\t  if (a1.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType))\n" +
+		"\t\t\t  or (a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType))\n" +
 		"\t\t\t  then false\n" +
 		"\t\t\t  else\n" +
-		"\t\t\t  a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t  a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
 		"\t\t\t  endif\n" +
 		"\t\t\t endif\n" +
 		"\t\t else true\n" +
@@ -1619,8 +1613,8 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String LESS_THAN__ACCEPTBLE_DATA_TYPE__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'It is possible to compare just attibutes type of date or type of number.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t  classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Number \n" +
-		"\t\t  or classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Date\n" +
+		"\t\t  attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Number \n" +
+		"\t\t  or attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Date\n" +
 		"}.status";
 
 	/**
@@ -1653,17 +1647,17 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String LESS_THAN__ARE_EQUAL_TYPES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'In less then rule all data types should be same.',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\t attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |\n" +
+		"\t\t attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |\n" +
 		"\t\t if a1<>a2  then \n" +
-		"\t\t\t if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) \n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)\n" +
+		"\t\t\t if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) \n" +
+		"\t\t\t and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)\n" +
 		"\t\t\t then\n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
+		"\t\t\t and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type\n" +
 		"\t\t\t else \n" +
-		"\t\t\t a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
-		"\t\t\t and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
+		"\t\t\t and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name\n" +
 		"\t\t\t endif\n" +
 		"\t\t else true\n" +
 		"\t\t endif)\n" +
@@ -1697,7 +1691,7 @@ public class FormValidationValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String LESS_THAN__DIFFERENT_ATTRIBUTES__EEXPRESSION = "\n" +
-		"\t\t\tattributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name <> a1.name)";
+		"\t\t\tattributearray.attributes -> forAll(a1: Attribute | attribute.name <> a1.name)";
 
 	/**
 	 * Validates the differentAttributes constraint of '<em>Less Than</em>'.
@@ -1746,7 +1740,7 @@ public class FormValidationValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String ATTRIBUTE_ARRAY__CONTAIN_DIFFERENT_ATTRIBUTES__EEXPRESSION = "\n" +
-		"\t\tattributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | \n" +
+		"\t\tattributes -> forAll(a1: Attribute, a2: Attribute | \n" +
 		"\t\t\tif a1 <> a2 \n" +
 		"\t\t\tthen a1.name <> a2.name\n" +
 		"\t\t\telse true \n" +
@@ -1974,7 +1968,7 @@ public class FormValidationValidator extends EObjectValidator {
 		"\tmessage : String = 'Number of attribute arrays is not appropriate.',\n" +
 		"\tstatus : Boolean = \n" +
 		"\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n" +
-		"\t\t\tif fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() <= 1 else true\n" +
+		"\t\t\tif fL1.type = ELayout.FieldSet then fL1.attributearray->size() <= 1 else true\n" +
 		"\t\t\tendif\n" +
 		"\t\t)\n" +
 		"}.status";
@@ -2010,7 +2004,7 @@ public class FormValidationValidator extends EObjectValidator {
 		"\tmessage : String = 'Number of attribute arrays is not appropriate.',\n" +
 		"\tstatus : Boolean = \n" +
 		"\t\tFormLayout.allInstances()->forAll(fL1: FormLayout |\n" +
-		"\t\t\tif fL1.oclIsKindOf(Tab) then fL1.attributearray->size() <= 1 else true\n" +
+		"\t\t\tif fL1.type = ELayout.Tab then fL1.attributearray->size() <= 1 else true\n" +
 		"\t\t\tendif\n" +
 		"\t\t)\n" +
 		"}.status";
@@ -2095,78 +2089,6 @@ public class FormValidationValidator extends EObjectValidator {
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFieldSet(FieldSet fieldSet, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(fieldSet, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(fieldSet, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(fieldSet, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTab(Tab tab, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(tab, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(tab, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(tab, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateGrid(Grid grid, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(grid, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_checkFormLayout(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_uniqueFormLayoutName(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArraysFieldSet(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_numOfAttributeArrayTab(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_nameFormat(grid, diagnostics, context);
-		if (result || diagnostics != null) result &= validateFormLayout_allLayoutsOnOneLevelMustBeSameType(grid, diagnostics, context);
-		return result;
 	}
 
 	/**
@@ -2305,7 +2227,7 @@ public class FormValidationValidator extends EObjectValidator {
 	protected static final String BUSINESS_MODEL__UNIQUE_CLASS_NAME__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = '',\n" +
 		"\tstatus : Boolean = \n" +
-		"\t\tvalidationclasses -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 <> vC2 then\n" +
+		"\t\tvalidationclasses -> forAll(vC1: Entity, vC2: Entity | if vC1 <> vC2 then\n" +
 		"\t\t\t vC1.name <> vC2.name else true endif)\n" +
 		"}.status";
 
@@ -2337,15 +2259,6 @@ public class FormValidationValidator extends EObjectValidator {
 	 */
 	public boolean validateErrorMessageSettings(ErrorMessageSettings errorMessageSettings, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(errorMessageSettings, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFormSettings(FormSettings formSettings, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(formSettings, diagnostics, context);
 	}
 
 	/**
@@ -2546,6 +2459,15 @@ public class FormValidationValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateEOrientation(EOrientation eOrientation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateELayout(ELayout eLayout, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

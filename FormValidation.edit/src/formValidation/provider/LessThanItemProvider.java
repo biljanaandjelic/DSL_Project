@@ -47,25 +47,25 @@ public class LessThanItemProvider extends ClassRuleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addClassattributePropertyDescriptor(object);
+			addAttributePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Classattribute feature.
+	 * This adds a property descriptor for the Attribute feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassattributePropertyDescriptor(Object object) {
+	protected void addAttributePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LessThan_classattribute_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LessThan_classattribute_feature", "_UI_LessThan_type"),
-				 FormValidationPackage.Literals.LESS_THAN__CLASSATTRIBUTE,
+				 getString("_UI_LessThan_attribute_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LessThan_attribute_feature", "_UI_LessThan_type"),
+				 FormValidationPackage.Literals.LESS_THAN__ATTRIBUTE,
 				 true,
 				 false,
 				 true,

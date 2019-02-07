@@ -2,10 +2,9 @@
  */
 package formValidation.impl;
 
+import formValidation.Entity;
 import formValidation.FormValidationPackage;
 import formValidation.NonPrimitiveDataType;
-import formValidation.ValidationClass;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -35,7 +34,7 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	 * @generated
 	 * @ordered
 	 */
-	protected ValidationClass type;
+	protected Entity type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,10 +60,10 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValidationClass getType() {
+	public Entity getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (ValidationClass)eResolveProxy(oldType);
+			type = (Entity)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FormValidationPackage.NON_PRIMITIVE_DATA_TYPE__TYPE, oldType, type));
@@ -78,7 +77,7 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValidationClass basicGetType() {
+	public Entity basicGetType() {
 		return type;
 	}
 
@@ -87,8 +86,8 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(ValidationClass newType) {
-		ValidationClass oldType = type;
+	public void setType(Entity newType) {
+		Entity oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FormValidationPackage.NON_PRIMITIVE_DATA_TYPE__TYPE, oldType, type));
@@ -118,7 +117,7 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FormValidationPackage.NON_PRIMITIVE_DATA_TYPE__TYPE:
-				setType((ValidationClass)newValue);
+				setType((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +132,7 @@ public class NonPrimitiveDataTypeImpl extends AttributeDataTypeImpl implements N
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FormValidationPackage.NON_PRIMITIVE_DATA_TYPE__TYPE:
-				setType((ValidationClass)null);
+				setType((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

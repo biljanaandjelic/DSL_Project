@@ -57,8 +57,8 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case FormValidationPackage.VALIDATION_CLASS: return createValidationClass();
-			case FormValidationPackage.CLASS_ATTRIBUTE: return createClassAttribute();
+			case FormValidationPackage.ENTITY: return createEntity();
+			case FormValidationPackage.ATTRIBUTE: return createAttribute();
 			case FormValidationPackage.ATTRIBUTE_TYPE: return createAttributeType();
 			case FormValidationPackage.REQUIRED: return createRequired();
 			case FormValidationPackage.MIN_LENGTH: return createMinLength();
@@ -84,9 +84,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.DATE_UI_COMPONENT: return createDateUIComponent();
 			case FormValidationPackage.TEXT_INPUT: return createTextInput();
 			case FormValidationPackage.TEXT_AREA: return createTextArea();
-			case FormValidationPackage.FIELD_SET: return createFieldSet();
-			case FormValidationPackage.TAB: return createTab();
-			case FormValidationPackage.GRID: return createGrid();
 			case FormValidationPackage.ATTRIBUTE_SETTINGS: return createAttributeSettings();
 			case FormValidationPackage.LABEL_SETTINGS: return createLabelSettings();
 			case FormValidationPackage.ERROR_MESSAGE: return createErrorMessage();
@@ -99,7 +96,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 			case FormValidationPackage.REF_ENTITY: return createRefEntity();
 			case FormValidationPackage.BUSINESS_MODEL: return createBusinessModel();
 			case FormValidationPackage.ERROR_MESSAGE_SETTINGS: return createErrorMessageSettings();
-			case FormValidationPackage.FORM_SETTINGS: return createFormSettings();
 			case FormValidationPackage.PAGINATION: return createPagination();
 			case FormValidationPackage.TABLE_OVERVIEW: return createTableOverview();
 			case FormValidationPackage.OVERVIEW_SETTINGS: return createOverviewSettings();
@@ -120,20 +116,22 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case FormValidationPackage.EDATA_TYPE:
-				return createEDataTypeFromString(eDataType, initialValue);
-			case FormValidationPackage.EORIENTATION:
-				return createEOrientationFromString(eDataType, initialValue);
-			case FormValidationPackage.EREQUIRED_FIELD:
-				return createERequiredFieldFromString(eDataType, initialValue);
-			case FormValidationPackage.EPOSITION:
-				return createEPositionFromString(eDataType, initialValue);
-			case FormValidationPackage.EGRID_ORDER:
-				return createEGridOrderFromString(eDataType, initialValue);
-			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
-				return createEUINumberComponentTypeFromString(eDataType, initialValue);
 			case FormValidationPackage.EDATE_UI_TYPE:
 				return createEDateUITypeFromString(eDataType, initialValue);
+			case FormValidationPackage.EREQUIRED_FIELD:
+				return createERequiredFieldFromString(eDataType, initialValue);
+			case FormValidationPackage.EORIENTATION:
+				return createEOrientationFromString(eDataType, initialValue);
+			case FormValidationPackage.ELAYOUT:
+				return createELayoutFromString(eDataType, initialValue);
+			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
+				return createEUINumberComponentTypeFromString(eDataType, initialValue);
+			case FormValidationPackage.EGRID_ORDER:
+				return createEGridOrderFromString(eDataType, initialValue);
+			case FormValidationPackage.EPOSITION:
+				return createEPositionFromString(eDataType, initialValue);
+			case FormValidationPackage.EDATA_TYPE:
+				return createEDataTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -147,20 +145,22 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case FormValidationPackage.EDATA_TYPE:
-				return convertEDataTypeToString(eDataType, instanceValue);
-			case FormValidationPackage.EORIENTATION:
-				return convertEOrientationToString(eDataType, instanceValue);
-			case FormValidationPackage.EREQUIRED_FIELD:
-				return convertERequiredFieldToString(eDataType, instanceValue);
-			case FormValidationPackage.EPOSITION:
-				return convertEPositionToString(eDataType, instanceValue);
-			case FormValidationPackage.EGRID_ORDER:
-				return convertEGridOrderToString(eDataType, instanceValue);
-			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
-				return convertEUINumberComponentTypeToString(eDataType, instanceValue);
 			case FormValidationPackage.EDATE_UI_TYPE:
 				return convertEDateUITypeToString(eDataType, instanceValue);
+			case FormValidationPackage.EREQUIRED_FIELD:
+				return convertERequiredFieldToString(eDataType, instanceValue);
+			case FormValidationPackage.EORIENTATION:
+				return convertEOrientationToString(eDataType, instanceValue);
+			case FormValidationPackage.ELAYOUT:
+				return convertELayoutToString(eDataType, instanceValue);
+			case FormValidationPackage.EUI_NUMBER_COMPONENT_TYPE:
+				return convertEUINumberComponentTypeToString(eDataType, instanceValue);
+			case FormValidationPackage.EGRID_ORDER:
+				return convertEGridOrderToString(eDataType, instanceValue);
+			case FormValidationPackage.EPOSITION:
+				return convertEPositionToString(eDataType, instanceValue);
+			case FormValidationPackage.EDATA_TYPE:
+				return convertEDataTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -171,9 +171,9 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValidationClass createValidationClass() {
-		ValidationClassImpl validationClass = new ValidationClassImpl();
-		return validationClass;
+	public Entity createEntity() {
+		EntityImpl entity = new EntityImpl();
+		return entity;
 	}
 
 	/**
@@ -181,9 +181,9 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ClassAttribute createClassAttribute() {
-		ClassAttributeImpl classAttribute = new ClassAttributeImpl();
-		return classAttribute;
+	public Attribute createAttribute() {
+		AttributeImpl attribute = new AttributeImpl();
+		return attribute;
 	}
 
 	/**
@@ -441,36 +441,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FieldSet createFieldSet() {
-		FieldSetImpl fieldSet = new FieldSetImpl();
-		return fieldSet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Tab createTab() {
-		TabImpl tab = new TabImpl();
-		return tab;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Grid createGrid() {
-		GridImpl grid = new GridImpl();
-		return grid;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AttributeSettings createAttributeSettings() {
 		AttributeSettingsImpl attributeSettings = new AttributeSettingsImpl();
 		return attributeSettings;
@@ -591,16 +561,6 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FormSettings createFormSettings() {
-		FormSettingsImpl formSettings = new FormSettingsImpl();
-		return formSettings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Pagination createPagination() {
 		PaginationImpl pagination = new PaginationImpl();
 		return pagination;
@@ -703,6 +663,26 @@ public class FormValidationFactoryImpl extends EFactoryImpl implements FormValid
 	 * @generated
 	 */
 	public String convertEOrientationToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ELayout createELayoutFromString(EDataType eDataType, String initialValue) {
+		ELayout result = ELayout.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertELayoutToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

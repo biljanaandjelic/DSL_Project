@@ -22,22 +22,22 @@ public interface FormValidationFactory extends EFactory {
 	FormValidationFactory eINSTANCE = formValidation.impl.FormValidationFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Validation Class</em>'.
+	 * Returns a new object of class '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Validation Class</em>'.
+	 * @return a new object of class '<em>Entity</em>'.
 	 * @generated
 	 */
-	ValidationClass createValidationClass();
+	Entity createEntity();
 
 	/**
-	 * Returns a new object of class '<em>Class Attribute</em>'.
+	 * Returns a new object of class '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Class Attribute</em>'.
+	 * @return a new object of class '<em>Attribute</em>'.
 	 * @generated
 	 */
-	ClassAttribute createClassAttribute();
+	Attribute createAttribute();
 
 	/**
 	 * Returns a new object of class '<em>Attribute Type</em>'.
@@ -265,33 +265,6 @@ public interface FormValidationFactory extends EFactory {
 	TextArea createTextArea();
 
 	/**
-	 * Returns a new object of class '<em>Field Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Set</em>'.
-	 * @generated
-	 */
-	FieldSet createFieldSet();
-
-	/**
-	 * Returns a new object of class '<em>Tab</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tab</em>'.
-	 * @generated
-	 */
-	Tab createTab();
-
-	/**
-	 * Returns a new object of class '<em>Grid</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Grid</em>'.
-	 * @generated
-	 */
-	Grid createGrid();
-
-	/**
 	 * Returns a new object of class '<em>Attribute Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -398,15 +371,6 @@ public interface FormValidationFactory extends EFactory {
 	 * @generated
 	 */
 	ErrorMessageSettings createErrorMessageSettings();
-
-	/**
-	 * Returns a new object of class '<em>Form Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Form Settings</em>'.
-	 * @generated
-	 */
-	FormSettings createFormSettings();
 
 	/**
 	 * Returns a new object of class '<em>Pagination</em>'.

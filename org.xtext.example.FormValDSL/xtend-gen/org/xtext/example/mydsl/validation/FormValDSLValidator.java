@@ -35,7 +35,7 @@ public class FormValDSLValidator extends AbstractFormValDSLValidator {
     int _length = ((Object[])Conversions.unwrapArray(_classattribute, Object.class)).length;
     boolean _equals = (_length == 0);
     if (_equals) {
-      this.error("Class must contains at last one attribute", FormValidationPackage.Literals.VALIDATION_CLASS__NAME, EValidator.URI_ATTRIBUTE);
+      this.error("Class must contains at last one attribute", FormValidationPackage.Literals.ENTITY__NAME, EValidator.URI_ATTRIBUTE);
     }
   }
   
@@ -46,24 +46,24 @@ public class FormValDSLValidator extends AbstractFormValDSLValidator {
         String _name = attr.getName();
         boolean _contains = FormValDSLValidator.keyWords.contains(_name);
         if (_contains) {
-          this.error("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+          this.error("Attribute name is key word", FormValidationPackage.Literals.ATTRIBUTE__NAME);
         }
         String _label = attr.getLabel();
         boolean _contains_1 = FormValDSLValidator.keyWords.contains(_label);
         if (_contains_1) {
-          this.warning("Attribute name is key word", FormValidationPackage.Literals.CLASS_ATTRIBUTE__NAME);
+          this.warning("Attribute name is key word", FormValidationPackage.Literals.ATTRIBUTE__NAME);
         }
       }
     }
     String _name = validationClass.getName();
     boolean _contains = FormValDSLValidator.keyWords.contains(_name);
     if (_contains) {
-      this.error("Class name is key word", FormValidationPackage.Literals.VALIDATION_CLASS__NAME);
+      this.error("Class name is key word", FormValidationPackage.Literals.ENTITY__NAME);
     }
     String _label = validationClass.getLabel();
     boolean _contains_1 = FormValDSLValidator.keyWords.contains(_label);
     if (_contains_1) {
-      this.warning("Class label is key word", FormValidationPackage.Literals.VALIDATION_CLASS__LABEL);
+      this.warning("Class label is key word", FormValidationPackage.Literals.ENTITY__LABEL);
     }
     EList<FormLayout> _formlayout = validationClass.getFormlayout();
     for (final FormLayout layout : _formlayout) {

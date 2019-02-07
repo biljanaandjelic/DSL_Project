@@ -22,6 +22,7 @@ package formValidation;
 public interface RadioButton extends SelectingUIComponent {
 	/**
 	 * Returns the value of the '<em><b>Orientation</b></em>' attribute.
+	 * The default value is <code>"Vertical"</code>.
 	 * The literals are from the enumeration {@link formValidation.EOrientation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,7 +34,7 @@ public interface RadioButton extends SelectingUIComponent {
 	 * @see formValidation.EOrientation
 	 * @see #setOrientation(EOrientation)
 	 * @see formValidation.FormValidationPackage#getRadioButton_Orientation()
-	 * @model
+	 * @model default="Vertical"
 	 * @generated
 	 */
 	EOrientation getOrientation();

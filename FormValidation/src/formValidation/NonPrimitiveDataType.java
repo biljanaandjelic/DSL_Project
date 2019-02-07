@@ -29,12 +29,12 @@ public interface NonPrimitiveDataType extends AttributeDataType {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(ValidationClass)
+	 * @see #setType(Entity)
 	 * @see formValidation.FormValidationPackage#getNonPrimitiveDataType_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	ValidationClass getType();
+	Entity getType();
 
 	/**
 	 * Sets the value of the '{@link formValidation.NonPrimitiveDataType#getType <em>Type</em>}' reference.
@@ -44,6 +44,6 @@ public interface NonPrimitiveDataType extends AttributeDataType {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(ValidationClass value);
+	void setType(Entity value);
 
 } // NonPrimitiveDataType

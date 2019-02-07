@@ -22,13 +22,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see formValidation.FormValidationPackage#getBusinessModel()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='uniqueClassName'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot uniqueClassName='Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclasses -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot uniqueClassName='Tuple {\n\tmessage : String = \'\',\n\tstatus : Boolean = \n\t\tvalidationclasses -> forAll(vC1: Entity, vC2: Entity | if vC1 <> vC2 then\n\t\t\t vC1.name <> vC2.name else true endif)\n}.status'"
  * @generated
  */
 public interface BusinessModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Validationclasses</b></em>' containment reference list.
-	 * The list contents are of type {@link formValidation.ValidationClass}.
+	 * The list contents are of type {@link formValidation.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Validationclasses</em>' containment reference list isn't clear,
@@ -40,7 +40,7 @@ public interface BusinessModel extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ValidationClass> getValidationclasses();
+	EList<Entity> getValidationclasses();
 
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.

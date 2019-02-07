@@ -61,7 +61,7 @@ public class PaginationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPossibleNumberOfShownRowsPropertyDescriptor(object);
-			addDefaultNumOfShownRowsPropertyDescriptor(object);
+			addDefaultNumberOfShownRowsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,19 +89,19 @@ public class PaginationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Num Of Shown Rows feature.
+	 * This adds a property descriptor for the Default Number Of Shown Rows feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultNumOfShownRowsPropertyDescriptor(Object object) {
+	protected void addDefaultNumberOfShownRowsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Pagination_defaultNumOfShownRows_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pagination_defaultNumOfShownRows_feature", "_UI_Pagination_type"),
-				 FormValidationPackage.Literals.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS,
+				 getString("_UI_Pagination_defaultNumberOfShownRows_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Pagination_defaultNumberOfShownRows_feature", "_UI_Pagination_type"),
+				 FormValidationPackage.Literals.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class PaginationItemProvider
 	@Override
 	public String getText(Object object) {
 		Pagination pagination = (Pagination)object;
-		return getString("_UI_Pagination_type") + " " + pagination.getDefaultNumOfShownRows();
+		return getString("_UI_Pagination_type") + " " + pagination.getDefaultNumberOfShownRows();
 	}
 	
 
@@ -147,7 +147,7 @@ public class PaginationItemProvider
 
 		switch (notification.getFeatureID(Pagination.class)) {
 			case FormValidationPackage.PAGINATION__POSSIBLE_NUMBER_OF_SHOWN_ROWS:
-			case FormValidationPackage.PAGINATION__DEFAULT_NUM_OF_SHOWN_ROWS:
+			case FormValidationPackage.PAGINATION__DEFAULT_NUMBER_OF_SHOWN_ROWS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

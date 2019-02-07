@@ -22,6 +22,7 @@ package formValidation;
 public interface AttributeSettings extends AdditionalSettings {
 	/**
 	 * Returns the value of the '<em><b>Presentation</b></em>' attribute.
+	 * The default value is <code>"Asterix"</code>.
 	 * The literals are from the enumeration {@link formValidation.ERequiredField}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,7 +34,7 @@ public interface AttributeSettings extends AdditionalSettings {
 	 * @see formValidation.ERequiredField
 	 * @see #setPresentation(ERequiredField)
 	 * @see formValidation.FormValidationPackage#getAttributeSettings_Presentation()
-	 * @model
+	 * @model default="Asterix"
 	 * @generated
 	 */
 	ERequiredField getPresentation();

@@ -103,7 +103,7 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case FormValidationPackage.CHECK_BOX:
 				sequence_CheckBox(context, (CheckBox) semanticObject); 
 				return; 
-			case FormValidationPackage.CLASS_ATTRIBUTE:
+			case FormValidationPackage.ATTRIBUTE:
 				sequence_ClassAttribute(context, (ClassAttribute) semanticObject); 
 				return; 
 			case FormValidationPackage.COLOR:
@@ -130,21 +130,21 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case FormValidationPackage.ERROR_MESSAGE_SETTINGS:
 				sequence_ErrorMessageSettings(context, (ErrorMessageSettings) semanticObject); 
 				return; 
-			case FormValidationPackage.FIELD_SET:
+			/*case FormValidationPackage.FIELD_SET:
 				sequence_FieldSet(context, (FieldSet) semanticObject); 
-				return; 
+				return;  */
 			case FormValidationPackage.FILE_INPUT:
 				sequence_FileInput(context, (FileInput) semanticObject); 
 				return; 
-			case FormValidationPackage.FORM_SETTINGS:
+			/*case FormValidationPackage.FORM_SETTINGS:
 				sequence_FormSettings(context, (FormSettings) semanticObject); 
-				return; 
+				return; */
 			case FormValidationPackage.GREATER_THAN:
 				sequence_GreaterThan(context, (GreaterThan) semanticObject); 
 				return; 
-			case FormValidationPackage.GRID:
+			/*case FormValidationPackage.GRID:
 				sequence_Grid(context, (Grid) semanticObject); 
-				return; 
+				return;  */
 			case FormValidationPackage.LABEL_SETTINGS:
 				sequence_LabelSettings(context, (LabelSettings) semanticObject); 
 				return; 
@@ -211,9 +211,9 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case FormValidationPackage.STRING_PATTERN:
 				sequence_StringPattern(context, (StringPattern) semanticObject); 
 				return; 
-			case FormValidationPackage.TAB:
+			/*case FormValidationPackage.TAB:
 				sequence_Tab(context, (Tab) semanticObject); 
-				return; 
+				return; */ 
 			case FormValidationPackage.TABLE_OVERVIEW:
 				sequence_TableOverview(context, (TableOverview) semanticObject); 
 				return; 
@@ -226,9 +226,9 @@ public class FormValDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case FormValidationPackage.TEXT_INPUT:
 				sequence_TextInput(context, (TextInput) semanticObject); 
 				return; 
-			case FormValidationPackage.VALIDATION_CLASS:
+			/*case FormValidationPackage.VALIDATION_CLASS:
 				sequence_ValidationClass(context, (ValidationClass) semanticObject); 
-				return; 
+				return;  */
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));

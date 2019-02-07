@@ -75,7 +75,7 @@ public class AttributeRuleItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE);
+			childrenFeatures.add(FormValidationPackage.Literals.ATTRIBUTE_RULE__ERROR_MESSAGE);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class AttributeRuleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AttributeRule.class)) {
-			case FormValidationPackage.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE:
+			case FormValidationPackage.ATTRIBUTE_RULE__ERROR_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,7 +137,7 @@ public class AttributeRuleItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FormValidationPackage.Literals.ATTRIBUTE_RULE__ATTRIBUTE_RULE_ERROR_MESSAGE,
+				(FormValidationPackage.Literals.ATTRIBUTE_RULE__ERROR_MESSAGE,
 				 FormValidationFactory.eINSTANCE.createErrorMessage()));
 	}
 

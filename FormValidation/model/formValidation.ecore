@@ -11,23 +11,23 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="ValidationClass">
+  <eClassifiers xsi:type="ecore:EClass" name="Entity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="differentClassAttributes nameFormat allLayoutsSameType"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="differentClassAttributes" value="Tuple {&#xA;&#x9;message : String = 'All attributes should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; classattribute-> forAll(a1: ClassAttribute, a2: ClassAttribute | &#xA;&#x9;&#x9; &#x9;if a1&lt;>a2 then a1.name &lt;> a2.name else true endif&#xA;&#x9;&#x9; )&#xA;}.status"/>
+      <details key="differentClassAttributes" value="Tuple {&#xA;&#x9;message : String = 'All attributes should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributes-> forAll(a1: Attribute, a2: Attribute | &#xA;&#x9;&#x9; &#x9;if a1&lt;>a2 then a1.name &lt;> a2.name else true endif&#xA;&#x9;&#x9; )&#xA;}.status"/>
       <details key="nameFormat" value="name.matches('[a-z][a-zA-Z0-9.]*')"/>
-      <details key="allLayoutsSameType" value="Tuple {&#xA;&#x9;message : String = 'At one level all attributes must be same type',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;formlayout -> forAll(fL1: FormLayout, fL2: FormLayout | &#xA;&#x9;&#x9;&#x9;if fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )&#xA;}.status"/>
+      <details key="allLayoutsSameType" value="Tuple {&#xA;&#x9;message : String = 'At one level all attributes must be same type',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;layouts -> forAll(fL1: Layout, fL2: Layout | &#xA;&#x9;&#x9;&#x9;if fL1.oclIsTypeOf(fL2.oclType()) then true else false endif )&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//ClassAttribute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classrule" upperBound="-1"
-        eType="#//ClassRule" containment="true"/>
+        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//EntityRule" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formlayout" upperBound="-1"
-        eType="#//FormLayout" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layouts" upperBound="-1"
+        eType="#//Layout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalSettings" upperBound="-1"
         eType="#//AdditionalSettings" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="overviewsettings" eType="#//OverviewSettings"
@@ -38,27 +38,27 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="errorMessage" eType="#//ErrorMessage"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="appropriateAttributeRules compareMinMaxLength compareMinMaxNumber compareMinMaxDate nameFormat attributeRuleRequiredCanAppearJustOnce attributeRuleMinLengthCanAppearJustOnce attributeRuleMaxLengthCanAppearJustOnce attributeRuleLengthCanAppearJustOnce attributeRuleMinCanAppearJustOnce attributeRuleMaxCanAppearJustOnce attributeRuleAcceptableValuesCanAppearJustOnce attributeRulePatternCanAppearJustOnce collectionCannotBeMaster collectionCannotBeRepresenting nonPrimitiveAttributeCannotBeMaster"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="appropriateAttributeRules" value="Tuple {&#xA;&#x9;message : String = 'Each data type has appropriate rulles that can be applay to it.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; if attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9; &#x9;  then if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::Number&#xA;&#x9;&#x9; &#x9;  &#x9;    then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))&#xA;&#x9;&#x9; &#x9;        else if attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = EDataType::_'String'  &#xA;&#x9;&#x9; &#x9;             then attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;a1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))&#xA;&#x9;&#x9;                 endif&#xA;&#x9;&#x9;           endif&#xA;&#x9;&#x9;else attributerule-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))&#xA;&#x9;&#x9;endif&#xA;}.status"/>
-      <details key="compareMinMaxLength" value="Tuple {&#xA;&#x9;message : String = 'Maxlength value should be greater than mainlength',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
-      <details key="compareMinMaxNumber" value="Tuple {&#xA;&#x9;message : String = 'Check if max value is greater then min value',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
-      <details key="compareMinMaxDate" value="Tuple {&#xA;&#x9;message : String = 'Check id max date is greater then min date',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributerule-> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="appropriateAttributeRules" value="Tuple {&#xA;&#x9;message : String = 'Each data type has appropriate rulles that can be applay to it.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; if attributetype.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9; &#x9;  then if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::Number&#xA;&#x9;&#x9; &#x9;  &#x9;    then rules -> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxNumber) or a1.oclIsKindOf(MinNumber) or a1.oclIsKindOf(Required))&#xA;&#x9;&#x9; &#x9;        else if attributetype.dataType.oclAsType(PrimitiveDataType).type = EDataType::_'String'  &#xA;&#x9;&#x9; &#x9;             then rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MinLength) or a1.oclIsKindOf(MaxLength) or&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;a1.oclIsKindOf(Length) or a1.oclIsKindOf(Required) or a1.oclIsKindOf(Pattern) or a1.oclIsKindOf(AcceptableValuesString))&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  else rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(MaxDate) or a1.oclIsKindOf(MinDate) or a1.oclIsKindOf(Required)&#xA;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;  or a1.oclIsKindOf(AcceptableValuesDate)or a1.oclIsKindOf(DatePattern))&#xA;&#x9;&#x9;                 endif&#xA;&#x9;&#x9;           endif&#xA;&#x9;&#x9;else rules-> forAll(a1: AttributeRule | a1.oclIsKindOf(Required))&#xA;&#x9;&#x9;endif&#xA;}.status"/>
+      <details key="compareMinMaxLength" value="Tuple {&#xA;&#x9;message : String = 'Maxlength value should be greater than mainlength',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;rules -> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxLength) and a2.oclIsKindOf(MinLength)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxLength).value >= a2.oclAsType(MinLength).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="compareMinMaxNumber" value="Tuple {&#xA;&#x9;message : String = 'Check if max value is greater then min value',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;rules -> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxNumber) and a2.oclIsKindOf(MinNumber)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxNumber).value >= a2.oclAsType(MinNumber).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="compareMinMaxDate" value="Tuple {&#xA;&#x9;message : String = 'Check id max date is greater then min date',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;rules -> forAll(a1: AttributeRule, a2: AttributeRule | &#xA;&#x9;&#x9;&#x9;if a1.oclIsKindOf(MaxDate) and a2.oclIsKindOf(MinDate)&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;&#x9;a1.oclAsType(MaxDate).value >= a2.oclAsType(MinDate).value&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
       <details key="nameFormat" value="name.matches('[a-z][a-zA-Z0-9.]*')"/>
-      <details key="attributeRuleRequiredCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Required))->size() &lt;=1"/>
-      <details key="attributeRuleMinLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(MinLength))->size() &lt;=1"/>
-      <details key="attributeRuleMaxLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(MaxLength))->size() &lt;=1"/>
-      <details key="attributeRuleLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Length))->size() &lt;=1"/>
-      <details key="attributeRuleMinCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Min))->size() &lt;=1"/>
-      <details key="attributeRuleMaxCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Max))->size() &lt;=1"/>
-      <details key="attributeRuleAcceptableValuesCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() &lt;=1"/>
-      <details key="attributeRulePatternCanAppearJustOnce" value="&#xA;&#x9;&#x9;attributerule -> select(aR| aR.oclIsKindOf(Pattern))->size() &lt;=1"/>
-      <details key="collectionCannotBeMaster" value="&#xA;&#x9;&#x9;if attributetype.attributeDataType.isCollection then master = false else true endif"/>
-      <details key="collectionCannotBeRepresenting" value="&#xA;&#x9;&#x9;if attributetype.attributeDataType.isCollection then isClassRepresenting = false else true endif"/>
-      <details key="nonPrimitiveAttributeCannotBeMaster" value="Tuple {&#xA;&#x9;message : String = 'Non primitive data type cannot be master attribute.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;if attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif&#xA;}.status"/>
+      <details key="attributeRuleRequiredCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(Required))->size() &lt;=1"/>
+      <details key="attributeRuleMinLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(MinLength))->size() &lt;=1"/>
+      <details key="attributeRuleMaxLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(MaxLength))->size() &lt;=1"/>
+      <details key="attributeRuleLengthCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(Length))->size() &lt;=1"/>
+      <details key="attributeRuleMinCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(Min))->size() &lt;=1"/>
+      <details key="attributeRuleMaxCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(Max))->size() &lt;=1"/>
+      <details key="attributeRuleAcceptableValuesCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(AcceptableValues))->size() &lt;=1"/>
+      <details key="attributeRulePatternCanAppearJustOnce" value="&#xA;&#x9;&#x9;rules -> select(aR| aR.oclIsKindOf(Pattern))->size() &lt;=1"/>
+      <details key="collectionCannotBeMaster" value="&#xA;&#x9;&#x9;if attributetype.dataType.isCollection then master = false else true endif"/>
+      <details key="collectionCannotBeRepresenting" value="&#xA;&#x9;&#x9;if attributetype.dataType.isCollection then isClassRepresenting = false else true endif"/>
+      <details key="nonPrimitiveAttributeCannotBeMaster" value="Tuple {&#xA;&#x9;message : String = 'Non primitive data type cannot be master attribute.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;if attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) then master = false else true endif&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributetype" lowerBound="1"
@@ -74,14 +74,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uiComponent" eType="#//UIComponent"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataTzpe" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" lowerBound="1"
         eType="#//AttributeDataType" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EDataType">
-    <eLiterals name="String"/>
-    <eLiterals name="Number" value="1"/>
-    <eLiterals name="Date" value="2"/>
-    <eLiterals name="Blob" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Min" abstract="true" eSuperTypes="#//AttributeRule"/>
   <eClassifiers xsi:type="ecore:EClass" name="Max" abstract="true" eSuperTypes="#//AttributeRule"/>
@@ -148,55 +142,55 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="dd/MM/yyyy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassRule" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classRuleErrorMessage"
-        eType="#//ErrorMessage" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityRule" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorMessage" eType="#//ErrorMessage"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NotEquals" eSuperTypes="#//ClassRule">
+  <eClassifiers xsi:type="ecore:EClass" name="NotEquals" eSuperTypes="#//EntityRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="areEqualTypes differentDataInArray"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In notequal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif&#xA;&#x9;&#x9;  )&#xA;}.status"/>
-      <details key="differentDataInArray" value="Tuple {&#xA;&#x9;message : String = 'All attributes should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; &#x9;if a1&lt;>a2 then&#xA;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9; )&#xA;}.status"/>
+      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In notequal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif&#xA;&#x9;&#x9;  )&#xA;}.status"/>
+      <details key="differentDataInArray" value="Tuple {&#xA;&#x9;message : String = 'All attributes should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |&#xA;&#x9;&#x9; &#x9;if a1&lt;>a2 then&#xA;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9; )&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//ClassRule">
+  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//EntityRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="differentAttributes differentAttributesInArray areEqualTypes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="differentAttributes" value="Tuple {&#xA;&#x9;message : String = 'First attribute and attributes from array should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name &lt;> a1.name)&#xA;}.status"/>
-      <details key="differentAttributesInArray" value="Tuple {&#xA;&#x9;message : String = 'Attributes in array must be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | if a1&lt;>a2 then&#xA;&#x9;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9;&#x9; )&#xA;}.status"/>
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In greater then rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)&#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif)&#xA;}.status"/>
+      <details key="differentAttributes" value="Tuple {&#xA;&#x9;message : String = 'First attribute and attributes from array should be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;attributearray.attributes -> forAll(a1: Attribute | attribute.name &lt;> a1.name)&#xA;}.status"/>
+      <details key="differentAttributesInArray" value="Tuple {&#xA;&#x9;message : String = 'Attributes in array must be different',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute | if a1&lt;>a2 then&#xA;&#x9;&#x9;&#x9; &#x9;a1.name &lt;> a2.name&#xA;&#x9;&#x9;&#x9; &#x9;else true&#xA;&#x9;&#x9;&#x9; &#x9;endif&#xA;&#x9;&#x9;&#x9; )&#xA;}.status"/>
+      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In greater then rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)&#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif)&#xA;}.status"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classattribute" eType="#//ClassAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
         eType="#//AttributeArray" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Equals" eSuperTypes="#//ClassRule">
+  <eClassifiers xsi:type="ecore:EClass" name="Equals" eSuperTypes="#//EntityRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="collectionSize areEqualTypes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="collectionSize" value="&#xA;&#x9;&#x9;&#x9;attributearray.attributes -> size() >= 2"/>
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In equal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9;  if (a1.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType))&#xA;&#x9;&#x9;&#x9;  or (a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.attributeDataType.oclIsKindOf(NonPrimitiveDataType))&#xA;&#x9;&#x9;&#x9;  then false&#xA;&#x9;&#x9;&#x9;  else&#xA;&#x9;&#x9;&#x9;  a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9;  endif&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif&#xA;&#x9;&#x9;  )&#xA;}.status"/>
+      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In equal rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9;  if (a1.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType))&#xA;&#x9;&#x9;&#x9;  or (a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) and a2.attributetype.dataType.oclIsKindOf(NonPrimitiveDataType))&#xA;&#x9;&#x9;&#x9;  then false&#xA;&#x9;&#x9;&#x9;  else&#xA;&#x9;&#x9;&#x9;  a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9;  endif&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif&#xA;&#x9;&#x9;  )&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" eType="#//AttributeArray"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LessThan" eSuperTypes="#//ClassRule">
+  <eClassifiers xsi:type="ecore:EClass" name="LessThan" eSuperTypes="#//EntityRule">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="acceptbleDataType areEqualTypes differentAttributes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="acceptbleDataType" value="Tuple {&#xA;&#x9;message : String = 'It is possible to compare just attibutes type of date or type of number.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;  classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Number &#xA;&#x9;&#x9;  or classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType) = EDataType::Date&#xA;}.status"/>
-      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In less then rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclIsKindOf(PrimitiveDataType)&#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a2.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type = a1.attributetype.attributeDataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; and classattribute.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.attributeDataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif)&#xA;}.status"/>
-      <details key="differentAttributes" value="&#xA;&#x9;&#x9;&#x9;attributearray.attributes -> forAll(a1: ClassAttribute | classattribute.name &lt;> a1.name)"/>
+      <details key="acceptbleDataType" value="Tuple {&#xA;&#x9;message : String = 'It is possible to compare just attibutes type of date or type of number.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;  attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Number &#xA;&#x9;&#x9;  or attribute.attributetype.dataType.oclAsType(PrimitiveDataType) = EDataType::Date&#xA;}.status"/>
+      <details key="areEqualTypes" value="Tuple {&#xA;&#x9;message : String = 'In less then rule all data types should be same.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9; attributearray.attributes -> forAll(a1: Attribute, a2: Attribute |&#xA;&#x9;&#x9; if a1&lt;>a2  then &#xA;&#x9;&#x9;&#x9; if a1.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and a2.attributetype.dataType.oclIsKindOf(PrimitiveDataType) &#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclIsKindOf(PrimitiveDataType)&#xA;&#x9;&#x9;&#x9; then&#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(PrimitiveDataType).type = a2.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclAsType(PrimitiveDataType).type = a1.attributetype.dataType.oclAsType(PrimitiveDataType).type&#xA;&#x9;&#x9;&#x9; else &#xA;&#x9;&#x9;&#x9; a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a2.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; and attribute.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name = a1.attributetype.dataType.oclAsType(NonPrimitiveDataType).type.name&#xA;&#x9;&#x9;&#x9; endif&#xA;&#x9;&#x9; else true&#xA;&#x9;&#x9; endif)&#xA;}.status"/>
+      <details key="differentAttributes" value="&#xA;&#x9;&#x9;&#x9;attributearray.attributes -> forAll(a1: Attribute | attribute.name &lt;> a1.name)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//ClassAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
         eType="#//AttributeArray" containment="true"/>
   </eClassifiers>
@@ -205,10 +199,10 @@
       <details key="constraints" value="containDifferentAttributes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="containDifferentAttributes" value="&#xA;&#x9;&#x9;attributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | &#xA;&#x9;&#x9;&#x9;if a1 &lt;> a2 &#xA;&#x9;&#x9;&#x9;then a1.name &lt;> a2.name&#xA;&#x9;&#x9;&#x9;else true &#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)"/>
+      <details key="containDifferentAttributes" value="&#xA;&#x9;&#x9;attributes -> forAll(a1: Attribute, a2: Attribute | &#xA;&#x9;&#x9;&#x9;if a1 &lt;> a2 &#xA;&#x9;&#x9;&#x9;then a1.name &lt;> a2.name&#xA;&#x9;&#x9;&#x9;else true &#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//ClassAttribute"/>
+        eType="#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UIComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tooltip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -225,11 +219,8 @@
     <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
       <details key="archetype" value="Role"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="#//EOrientation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EOrientation">
-    <eLiterals name="Vertical"/>
-    <eLiterals name="Horizontal" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orientation" eType="#//EOrientation"
+        defaultValueLiteral="Vertical"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DropDownList" eSuperTypes="#//SelectingUIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMultiSelect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -250,43 +241,34 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfRows" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FormLayout" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Layout" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="checkFormLayout uniqueFormLayoutName numOfAttributeArraysFieldSet numOfAttributeArrayTab nameFormat allLayoutsOnOneLevelMustBeSameType"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="checkFormLayout" value="Tuple {&#xA;&#x9;message : String = 'Attribute could appear only in one layout',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  &#xA;&#x9;&#x9;&#x9;if fL1 &lt;> fL2 and fL1.attributearray &lt;> null and fL2.attributearray &lt;> null&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;fL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
-      <details key="uniqueFormLayoutName" value="Tuple {&#xA;&#x9;message : String = 'Layout name should be unique',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout, fL2: FormLayout |  if fL1 &lt;> fL2 then&#xA;&#x9;&#x9;&#x9;fL1.name &lt;> fL2.name&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
-      <details key="numOfAttributeArraysFieldSet" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsKindOf(FieldSet) then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
-      <details key="numOfAttributeArrayTab" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;FormLayout.allInstances()->forAll(fL1: FormLayout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsKindOf(Tab) then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="checkFormLayout" value="Tuple {&#xA;&#x9;message : String = 'Attribute could appear only in one layout',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;Layout.allInstances()->forAll(fL1: Layout, fL2: Layout |  &#xA;&#x9;&#x9;&#x9;if fL1 &lt;> fL2 and fL1.attributearray &lt;> null and fL2.attributearray &lt;> null&#xA;&#x9;&#x9;&#x9;then&#xA;&#x9;&#x9;&#x9;fL1.attributearray.attributes.oclAsSet() -> intersection(fL2.attributearray.attributes.oclAsSet())->isEmpty()&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="uniqueFormLayoutName" value="Tuple {&#xA;&#x9;message : String = 'Layout name should be unique',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;Layout.allInstances()->forAll(fL1: Layout, fL2: Layout |  if fL1 &lt;> fL2 then&#xA;&#x9;&#x9;&#x9;fL1.name &lt;> fL2.name&#xA;&#x9;&#x9;&#x9;else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="numOfAttributeArraysFieldSet" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;Layout.allInstances()->forAll(fL1: Layout |&#xA;&#x9;&#x9;&#x9;if fL1.type = ELayout.FieldSet then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
+      <details key="numOfAttributeArrayTab" value="Tuple {&#xA;&#x9;message : String = 'Number of attribute arrays is not appropriate.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;Layout.allInstances()->forAll(fL1: Layout |&#xA;&#x9;&#x9;&#x9;if fL1.type = ELayout.Tab then fL1.attributearray->size() &lt;= 1 else true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
       <details key="nameFormat" value="name.matches('[a-z][a-zA-Z0-9.]*')"/>
-      <details key="allLayoutsOnOneLevelMustBeSameType" value="&#xA;&#x9;&#x9;layouts -> forAll(fL1: FormLayout, fL2: FormLayout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsTypeOf(fL2.oclType()) then true else false endif&#xA;&#x9;&#x9;)"/>
+      <details key="allLayoutsOnOneLevelMustBeSameType" value="Tuple {&#xA;&#x9;message : String = 'All layouts on one level must be same type.',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;layouts -> forAll(fL1: Layout, fL2: Layout |&#xA;&#x9;&#x9;&#x9;if fL1.oclIsTypeOf(fL2.oclType()) then true else false endif&#xA;&#x9;&#x9;)&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributearray" upperBound="-1"
         eType="#//AttributeArray" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layouts" upperBound="-1"
-        eType="#//FormLayout" containment="true"/>
+        eType="#//Layout" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ELayout"
         defaultValueLiteral="Grid"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeSettings" eSuperTypes="#//AdditionalSettings">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ERequiredField">
-    <eLiterals name="Asterix"/>
-    <eLiterals name="Highlighting" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="presentation" eType="#//ERequiredField"
+        defaultValueLiteral="Asterix"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LabelSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"
         defaultValueLiteral="Above"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
-    <eLiterals name="Above"/>
-    <eLiterals name="Left" value="1"/>
-    <eLiterals name="Right" value="2"/>
-    <eLiterals name="Below" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -307,30 +289,27 @@
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//AttributeDataType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EDataType"
+        defaultValueLiteral="String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NonPrimitiveDataType" eSuperTypes="#//AttributeDataType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//ValidationClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefEntity" eSuperTypes="#//UIComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSingeValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BusinessModel">
+  <eClassifiers xsi:type="ecore:EClass" name="InformationSystem">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueClassName"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="uniqueClassName" value="Tuple {&#xA;&#x9;message : String = '',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;validationclasses -> forAll(vC1: ValidationClass, vC2: ValidationClass | if vC1 &lt;> vC2 then&#xA;&#x9;&#x9;&#x9; vC1.name &lt;> vC2.name else true endif)&#xA;}.status"/>
+      <details key="uniqueClassName" value="Tuple {&#xA;&#x9;message : String = '',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;entities -> forAll(vC1: Entity, vC2: Entity | if vC1 &lt;> vC2 then&#xA;&#x9;&#x9;&#x9; vC1.name &lt;> vC2.name else true endif)&#xA;}.status"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="validationclasses" upperBound="-1"
-        eType="#//ValidationClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EGridOrder">
-    <eLiterals name="FirstRow"/>
-    <eLiterals name="FirstColumn" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ErrorMessageSettings" eSuperTypes="#//AdditionalSettings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//EPosition"
@@ -338,25 +317,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//Color"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FormSettings" eSuperTypes="#//AdditionalSettings">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoComplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EUINumberComponentType">
-    <eLiterals name="NumberScroller"/>
-    <eLiterals name="SimpleInput" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EDateUIType">
-    <eLiterals name="OnlyDate" value="1"/>
-    <eLiterals name="OnlyTime" value="2"/>
-    <eLiterals name="DateTime" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pagination">
     <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
       <details key="archetype" value="Description"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="possibleNumberOfShownRows"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultNumOfShownRows"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultNumberOfShownRows"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TableOverview">
@@ -398,9 +365,42 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="blue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EDateUIType">
+    <eLiterals name="OnlyDate" value="1"/>
+    <eLiterals name="OnlyTime" value="2"/>
+    <eLiterals name="DateTime" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ERequiredField">
+    <eLiterals name="Asterix"/>
+    <eLiterals name="Highlighting" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EOrientation">
+    <eLiterals name="Vertical"/>
+    <eLiterals name="Horizontal" value="1"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ELayout">
     <eLiterals name="Grid"/>
     <eLiterals name="FieldSet" value="1"/>
     <eLiterals name="Tab" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EUINumberComponentType">
+    <eLiterals name="NumberScroller"/>
+    <eLiterals name="SimpleInput" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EGridOrder">
+    <eLiterals name="FirstRow"/>
+    <eLiterals name="FirstColumn" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EPosition">
+    <eLiterals name="Above"/>
+    <eLiterals name="Left" value="1"/>
+    <eLiterals name="Right" value="2"/>
+    <eLiterals name="Below" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EDataType">
+    <eLiterals name="String"/>
+    <eLiterals name="Number" value="1"/>
+    <eLiterals name="Date" value="2"/>
+    <eLiterals name="Blob" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -2,8 +2,8 @@
  */
 package formValidation.impl;
 
+import formValidation.Attribute;
 import formValidation.AttributeArray;
-import formValidation.ClassAttribute;
 import formValidation.FormValidationPackage;
 
 import java.util.Collection;
@@ -38,7 +38,7 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ClassAttribute> attributes;
+	protected EList<Attribute> attributes;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,9 +63,9 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ClassAttribute> getAttributes() {
+	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<ClassAttribute>(ClassAttribute.class, this, FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES);
+			attributes = new EObjectResolvingEList<Attribute>(Attribute.class, this, FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -95,7 +95,7 @@ public class AttributeArrayImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case FormValidationPackage.ATTRIBUTE_ARRAY__ATTRIBUTES:
 				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends ClassAttribute>)newValue);
+				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

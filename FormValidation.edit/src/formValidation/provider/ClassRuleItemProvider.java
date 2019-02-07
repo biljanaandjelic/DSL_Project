@@ -75,7 +75,7 @@ public class ClassRuleItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FormValidationPackage.Literals.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE);
+			childrenFeatures.add(FormValidationPackage.Literals.CLASS_RULE__ERROR_MESSAGE);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class ClassRuleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ClassRule.class)) {
-			case FormValidationPackage.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE:
+			case FormValidationPackage.CLASS_RULE__ERROR_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,7 +137,7 @@ public class ClassRuleItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FormValidationPackage.Literals.CLASS_RULE__CLASS_RULE_ERROR_MESSAGE,
+				(FormValidationPackage.Literals.CLASS_RULE__ERROR_MESSAGE,
 				 FormValidationFactory.eINSTANCE.createErrorMessage()));
 	}
 

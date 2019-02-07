@@ -66,6 +66,8 @@ public class FormLayoutItemProvider
 			addAttributearrayPropertyDescriptor(object);
 			addLayoutsPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -128,6 +130,50 @@ public class FormLayoutItemProvider
 				 getString("_UI_FormLayout_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FormLayout_name_feature", "_UI_FormLayout_type"),
 				 FormValidationPackage.Literals.FORM_LAYOUT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FormLayout_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FormLayout_label_feature", "_UI_FormLayout_type"),
+				 FormValidationPackage.Literals.FORM_LAYOUT__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FormLayout_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FormLayout_type_feature", "_UI_FormLayout_type"),
+				 FormValidationPackage.Literals.FORM_LAYOUT__TYPE,
 				 true,
 				 false,
 				 false,
@@ -206,6 +252,8 @@ public class FormLayoutItemProvider
 
 		switch (notification.getFeatureID(FormLayout.class)) {
 			case FormValidationPackage.FORM_LAYOUT__NAME:
+			case FormValidationPackage.FORM_LAYOUT__LABEL:
+			case FormValidationPackage.FORM_LAYOUT__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FormValidationPackage.FORM_LAYOUT__ATTRIBUTEARRAY:
@@ -231,21 +279,6 @@ public class FormLayoutItemProvider
 			(createChildParameter
 				(FormValidationPackage.Literals.FORM_LAYOUT__ATTRIBUTEARRAY,
 				 FormValidationFactory.eINSTANCE.createAttributeArray()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FormValidationPackage.Literals.FORM_LAYOUT__LAYOUTS,
-				 FormValidationFactory.eINSTANCE.createFieldSet()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FormValidationPackage.Literals.FORM_LAYOUT__LAYOUTS,
-				 FormValidationFactory.eINSTANCE.createTab()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FormValidationPackage.Literals.FORM_LAYOUT__LAYOUTS,
-				 FormValidationFactory.eINSTANCE.createGrid()));
 	}
 
 	/**

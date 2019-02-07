@@ -206,7 +206,7 @@ public class BusinessModelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(FormValidationPackage.Literals.BUSINESS_MODEL__VALIDATIONCLASSES,
-				 FormValidationFactory.eINSTANCE.createValidationClass()));
+				 FormValidationFactory.eINSTANCE.createEntity()));
 	}
 
 	/**

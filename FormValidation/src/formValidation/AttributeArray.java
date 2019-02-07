@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see formValidation.FormValidationPackage#getAttributeArray()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='containDifferentAttributes'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot containDifferentAttributes='\n\t\tattributes -> forAll(a1: ClassAttribute, a2: ClassAttribute | \n\t\t\tif a1 <> a2 \n\t\t\tthen a1.name <> a2.name\n\t\t\telse true \n\t\t\tendif\n\t\t)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot containDifferentAttributes='\n\t\tattributes -> forAll(a1: Attribute, a2: Attribute | \n\t\t\tif a1 <> a2 \n\t\t\tthen a1.name <> a2.name\n\t\t\telse true \n\t\t\tendif\n\t\t)'"
  * @generated
  */
 public interface AttributeArray extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' reference list.
-	 * The list contents are of type {@link formValidation.ClassAttribute}.
+	 * The list contents are of type {@link formValidation.Attribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Attributes</em>' reference list isn't clear,
@@ -38,6 +38,6 @@ public interface AttributeArray extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<ClassAttribute> getAttributes();
+	EList<Attribute> getAttributes();
 
 } // AttributeArray
